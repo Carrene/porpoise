@@ -126,6 +126,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AF463BCB2189E59E00DC8A3E /* viewcontroller */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 			);
 			path = ui;
@@ -162,6 +163,31 @@
 			path = configuration;
 			sourceTree = "<group>";
 		};
+		AF463BCA2189E4E900DC8A3E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B582189A6A700302624 /* LaunchScreen.storyboard */,
+				AFB39B532189A6A600302624 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AF463BCB2189E59E00DC8A3E /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B512189A6A600302624 /* ViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		AF463BCC2189E5F200DC8A3E /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B562189A6A700302624 /* Assets.xcassets */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
 		AFB39B432189A6A600302624 = {
 			isa = PBXGroup;
 			children = (
@@ -187,12 +213,10 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AF463BCC2189E5F200DC8A3E /* asset */,
+				AF463BCA2189E4E900DC8A3E /* view */,
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AF463BC22189D8CF00DC8A3E /* data */,
-				AFB39B512189A6A600302624 /* ViewController.swift */,
-				AFB39B532189A6A600302624 /* Main.storyboard */,
-				AFB39B562189A6A700302624 /* Assets.xcassets */,
-				AFB39B582189A6A700302624 /* LaunchScreen.storyboard */,
 				AFB39B5B2189A6A700302624 /* Info.plist */,
 			);
 			path = MobileToken;
