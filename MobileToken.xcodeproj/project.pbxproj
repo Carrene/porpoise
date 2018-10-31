@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
+		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
+		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
+		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
+		AFB39B522189A6A600302624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B512189A6A600302624 /* ViewController.swift */; };
+		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
+		AFB39B572189A6A700302624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
+		AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
+		AFB39B652189A6A700302624 /* MobileTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B642189A6A700302624 /* MobileTokenTests.swift */; };
+		AFB39B702189A6A700302624 /* MobileTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFB39B612189A6A700302624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB39B442189A6A600302624 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFB39B4B2189A6A600302624;
+			remoteInfo = MobileToken;
+		};
+		AFB39B6C2189A6A700302624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB39B442189A6A600302624 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFB39B4B2189A6A600302624;
+			remoteInfo = MobileToken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D9306731899899C0CC5FB63 /* Pods-MobileToken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.release.xcconfig"; sourceTree = "<group>"; };
+		2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.release.xcconfig"; sourceTree = "<group>"; };
+		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB39B4F2189A6A600302624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFB39B512189A6A600302624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFB39B542189A6A600302624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFB39B562189A6A700302624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFB39B592189A6A700302624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFB39B5B2189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB39B602189A6A700302624 /* MobileTokenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTokenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB39B642189A6A700302624 /* MobileTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTokenTests.swift; sourceTree = "<group>"; };
+		AFB39B662189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTokenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTokenUITests.swift; sourceTree = "<group>"; };
+		AFB39B712189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7F43FE380B1AFF618024899 /* Pods-MobileToken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFB39B492189A6A600302624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB39B5D2189A6A700302624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB39B682189A6A700302624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		510385C2178795F3E0C5F799 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7F43FE380B1AFF618024899 /* Pods-MobileToken.debug.xcconfig */,
+				1D9306731899899C0CC5FB63 /* Pods-MobileToken.release.xcconfig */,
+				ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */,
+				2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */,
+				E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */,
+				7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0846E286139B9158EA3297A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */,
+				6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */,
+				9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFB39B432189A6A600302624 = {
+			isa = PBXGroup;
+			children = (
+				AFB39B4E2189A6A600302624 /* MobileToken */,
+				AFB39B632189A6A700302624 /* MobileTokenTests */,
+				AFB39B6E2189A6A700302624 /* MobileTokenUITests */,
+				AFB39B4D2189A6A600302624 /* Products */,
+				510385C2178795F3E0C5F799 /* Pods */,
+				A0846E286139B9158EA3297A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFB39B4D2189A6A600302624 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B4C2189A6A600302624 /* MobileToken.app */,
+				AFB39B602189A6A700302624 /* MobileTokenTests.xctest */,
+				AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFB39B4E2189A6A600302624 /* MobileToken */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B4F2189A6A600302624 /* AppDelegate.swift */,
+				AFB39B512189A6A600302624 /* ViewController.swift */,
+				AFB39B532189A6A600302624 /* Main.storyboard */,
+				AFB39B562189A6A700302624 /* Assets.xcassets */,
+				AFB39B582189A6A700302624 /* LaunchScreen.storyboard */,
+				AFB39B5B2189A6A700302624 /* Info.plist */,
+			);
+			path = MobileToken;
+			sourceTree = "<group>";
+		};
+		AFB39B632189A6A700302624 /* MobileTokenTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B642189A6A700302624 /* MobileTokenTests.swift */,
+				AFB39B662189A6A700302624 /* Info.plist */,
+			);
+			path = MobileTokenTests;
+			sourceTree = "<group>";
+		};
+		AFB39B6E2189A6A700302624 /* MobileTokenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */,
+				AFB39B712189A6A700302624 /* Info.plist */,
+			);
+			path = MobileTokenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFB39B4B2189A6A600302624 /* MobileToken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB39B742189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileToken" */;
+			buildPhases = (
+				C71206364838EA0D4F9F171E /* [CP] Check Pods Manifest.lock */,
+				AFB39B482189A6A600302624 /* Sources */,
+				AFB39B492189A6A600302624 /* Frameworks */,
+				AFB39B4A2189A6A600302624 /* Resources */,
+				42661D200674783256C627B2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileToken;
+			productName = MobileToken;
+			productReference = AFB39B4C2189A6A600302624 /* MobileToken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFB39B5F2189A6A700302624 /* MobileTokenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB39B772189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileTokenTests" */;
+			buildPhases = (
+				ACE9AACB4A470CA74FFC1A53 /* [CP] Check Pods Manifest.lock */,
+				AFB39B5C2189A6A700302624 /* Sources */,
+				AFB39B5D2189A6A700302624 /* Frameworks */,
+				AFB39B5E2189A6A700302624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFB39B622189A6A700302624 /* PBXTargetDependency */,
+			);
+			name = MobileTokenTests;
+			productName = MobileTokenTests;
+			productReference = AFB39B602189A6A700302624 /* MobileTokenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFB39B6A2189A6A700302624 /* MobileTokenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB39B7A2189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileTokenUITests" */;
+			buildPhases = (
+				3309101400A58F91E12D440A /* [CP] Check Pods Manifest.lock */,
+				AFB39B672189A6A700302624 /* Sources */,
+				AFB39B682189A6A700302624 /* Frameworks */,
+				AFB39B692189A6A700302624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFB39B6D2189A6A700302624 /* PBXTargetDependency */,
+			);
+			name = MobileTokenUITests;
+			productName = MobileTokenUITests;
+			productReference = AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFB39B442189A6A600302624 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = ba24.ir;
+				TargetAttributes = {
+					AFB39B4B2189A6A600302624 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					AFB39B5F2189A6A700302624 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = AFB39B4B2189A6A600302624;
+					};
+					AFB39B6A2189A6A700302624 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = AFB39B4B2189A6A600302624;
+					};
+				};
+			};
+			buildConfigurationList = AFB39B472189A6A600302624 /* Build configuration list for PBXProject "MobileToken" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFB39B432189A6A600302624;
+			productRefGroup = AFB39B4D2189A6A600302624 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFB39B4B2189A6A600302624 /* MobileToken */,
+				AFB39B5F2189A6A700302624 /* MobileTokenTests */,
+				AFB39B6A2189A6A700302624 /* MobileTokenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFB39B4A2189A6A600302624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
+				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
+				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB39B5E2189A6A700302624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB39B692189A6A700302624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3309101400A58F91E12D440A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileTokenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42661D200674783256C627B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE9AACB4A470CA74FFC1A53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileTokenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C71206364838EA0D4F9F171E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileToken-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFB39B482189A6A600302624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
+				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB39B5C2189A6A700302624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB39B652189A6A700302624 /* MobileTokenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB39B672189A6A700302624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB39B702189A6A700302624 /* MobileTokenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFB39B622189A6A700302624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFB39B4B2189A6A600302624 /* MobileToken */;
+			targetProxy = AFB39B612189A6A700302624 /* PBXContainerItemProxy */;
+		};
+		AFB39B6D2189A6A700302624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFB39B4B2189A6A600302624 /* MobileToken */;
+			targetProxy = AFB39B6C2189A6A700302624 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFB39B532189A6A600302624 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFB39B542189A6A600302624 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFB39B582189A6A700302624 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFB39B592189A6A700302624 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFB39B722189A6A700302624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFB39B732189A6A700302624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFB39B752189A6A700302624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7F43FE380B1AFF618024899 /* Pods-MobileToken.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = MobileToken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFB39B762189A6A700302624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D9306731899899C0CC5FB63 /* Pods-MobileToken.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = MobileToken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AFB39B782189A6A700302624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = MobileTokenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ba24.ir.MobileTokenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileToken.app/MobileToken";
+			};
+			name = Debug;
+		};
+		AFB39B792189A6A700302624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = MobileTokenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ba24.ir.MobileTokenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileToken.app/MobileToken";
+			};
+			name = Release;
+		};
+		AFB39B7B2189A6A700302624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = MobileTokenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ba24.ir.MobileTokenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileToken;
+			};
+			name = Debug;
+		};
+		AFB39B7C2189A6A700302624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = MobileTokenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ba24.ir.MobileTokenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileToken;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFB39B472189A6A600302624 /* Build configuration list for PBXProject "MobileToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB39B722189A6A700302624 /* Debug */,
+				AFB39B732189A6A700302624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB39B742189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB39B752189A6A700302624 /* Debug */,
+				AFB39B762189A6A700302624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB39B772189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileTokenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB39B782189A6A700302624 /* Debug */,
+				AFB39B792189A6A700302624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB39B7A2189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileTokenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB39B7B2189A6A700302624 /* Debug */,
+				AFB39B7C2189A6A700302624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFB39B442189A6A600302624 /* Project object */;
+}
