@@ -12,6 +12,7 @@
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
+		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AFB39B522189A6A600302624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B512189A6A600302624 /* ViewController.swift */; };
 		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B4F2189A6A600302624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB39B512189A6A600302624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AF463BCD218AD11900DC8A3E /* User.swift */,
+				AF463BCF218ADD8200DC8A3E /* Authentication.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
 				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
 				AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */,
+				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
