@@ -39,17 +39,36 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUe-jf-RRV" customClass="UIProgressView">
+                                <rect key="frame" x="0.0" y="187" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-1j-mp9">
+                                <rect key="frame" x="164" y="107" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mvg-PV-Vek"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0pK-Gb-iRA"/>
                             <constraint firstItem="ppd-Ol-T4U" firstAttribute="centerY" secondItem="PBl-6l-Cop" secondAttribute="centerY" id="31g-at-Zb1"/>
+                            <constraint firstItem="1UH-1j-mp9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="7fd-KZ-Qxu"/>
                             <constraint firstItem="ppd-Ol-T4U" firstAttribute="height" secondItem="PBl-6l-Cop" secondAttribute="height" id="CeC-bv-npU"/>
                             <constraint firstItem="AnD-A5-8jO" firstAttribute="top" secondItem="PBl-6l-Cop" secondAttribute="top" id="Eil-kW-OFJ"/>
+                            <constraint firstItem="pUe-jf-RRV" firstAttribute="width" secondItem="PBl-6l-Cop" secondAttribute="width" id="F9P-Mg-9DA"/>
+                            <constraint firstItem="pUe-jf-RRV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MJL-aF-lGb"/>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MKO-wy-Svm"/>
+                            <constraint firstItem="pUe-jf-RRV" firstAttribute="height" secondItem="PBl-6l-Cop" secondAttribute="height" id="NqA-oa-bRb"/>
                             <constraint firstItem="AnD-A5-8jO" firstAttribute="bottom" secondItem="PBl-6l-Cop" secondAttribute="bottom" id="QGu-wU-bIy"/>
                             <constraint firstItem="AnD-A5-8jO" firstAttribute="centerY" secondItem="PBl-6l-Cop" secondAttribute="centerY" id="bUE-qx-abP"/>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fbc-bu-Hj4"/>
+                            <constraint firstItem="1UH-1j-mp9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="gjN-MY-nCT"/>
+                            <constraint firstItem="PBl-6l-Cop" firstAttribute="top" secondItem="pUe-jf-RRV" secondAttribute="bottom" constant="81.5" id="pgi-3k-VrV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1UH-1j-mp9" secondAttribute="trailing" constant="165" id="qtv-fB-otk"/>
+                            <constraint firstItem="pUe-jf-RRV" firstAttribute="top" secondItem="1UH-1j-mp9" secondAttribute="bottom" constant="50" id="sWO-9f-P5e"/>
                             <constraint firstItem="ppd-Ol-T4U" firstAttribute="width" secondItem="PBl-6l-Cop" secondAttribute="width" id="v6f-Xj-9lY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AnD-A5-8jO" secondAttribute="trailing" id="wVp-Gz-czB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PBl-6l-Cop" secondAttribute="trailing" id="yiH-sS-O9u"/>
@@ -60,6 +79,7 @@
                     <connections>
                         <outlet property="animeView" destination="8bC-Xf-vdC" id="xqj-Qs-6YC"/>
                         <outlet property="lbOtp" destination="PBl-6l-Cop" id="bAg-O6-suz"/>
+                        <outlet property="progressView" destination="pUe-jf-RRV" id="4Io-7Z-Tlr"/>
                         <outlet property="width" destination="Xq9-t7-fQr" id="ZB1-zB-G8F"/>
                     </connections>
                 </viewController>
