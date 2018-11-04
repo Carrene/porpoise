@@ -22,6 +22,10 @@
 		AFB39B702189A6A700302624 /* MobileTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */; };
 		AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
 		AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
+		AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB33218F105E004F16DD /* IranSansMediumFarsi.ttf */; };
+		AFB9BB37218F105E004F16DD /* roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB34218F105E004F16DD /* roboto.ttf */; };
+		AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */; };
+		AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		AFB39B712189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB9BB27218EE0D7004F16DD /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellXibView.swift; sourceTree = "<group>"; };
+		AFB9BB33218F105E004F16DD /* IranSansMediumFarsi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansMediumFarsi.ttf; sourceTree = "<group>"; };
+		AFB9BB34218F105E004F16DD /* roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto.ttf; sourceTree = "<group>"; };
+		AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansMediumEnglish.ttf; sourceTree = "<group>"; };
+		AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansReqular.ttf; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,7 +184,7 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				AFB9BB26218EE0AB004F16DD /* nib */,
+				AFB9BB26218EE0AB004F16DD /* nibs */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
 			);
 			path = view;
@@ -190,12 +198,13 @@
 			path = viewcontroller;
 			sourceTree = "<group>";
 		};
-		AF463BCC2189E5F200DC8A3E /* asset */ = {
+		AF463BCC2189E5F200DC8A3E /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				AFB9BB2E218F0DEE004F16DD /* fonts */,
 				AFB39B562189A6A700302624 /* Assets.xcassets */,
 			);
-			path = asset;
+			path = assets;
 			sourceTree = "<group>";
 		};
 		AFB39B432189A6A600302624 = {
@@ -223,7 +232,7 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
-				AF463BCC2189E5F200DC8A3E /* asset */,
+				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BCA2189E4E900DC8A3E /* view */,
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AF463BC22189D8CF00DC8A3E /* data */,
@@ -259,13 +268,24 @@
 			path = basic;
 			sourceTree = "<group>";
 		};
-		AFB9BB26218EE0AB004F16DD /* nib */ = {
+		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
 				AFB9BB27218EE0D7004F16DD /* CardCell.xib */,
 				AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */,
 			);
-			path = nib;
+			path = nibs;
+			sourceTree = "<group>";
+		};
+		AFB9BB2E218F0DEE004F16DD /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */,
+				AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */,
+				AFB9BB33218F105E004F16DD /* IranSansMediumFarsi.ttf */,
+				AFB9BB34218F105E004F16DD /* roboto.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,8 +398,12 @@
 			files = (
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
+				AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */,
+				AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */,
+				AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
+				AFB9BB37218F105E004F16DD /* roboto.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
