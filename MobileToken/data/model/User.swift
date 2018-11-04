@@ -12,10 +12,10 @@ import ObjectMapper
 
 class User: Object, Mappable, NSCopying {
     
-    @objc private dynamic var Phone: String?
+    @objc private dynamic var PhoneNumber: String?
     public var phone: String? {
-        get { return Phone }
-        set { Phone = newValue }
+        get { return PhoneNumber }
+        set { PhoneNumber = newValue }
     }
     
     required convenience init?(map: Map) {

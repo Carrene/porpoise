@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTimer() {
-        progressView.progress += 0.01
+        progressView.progress += 1/60
         if progressView.progress >= 1 {
             progressView.progress = 0
             // generate new otp
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     func start(_ sender: Any) {
         self.view.layoutIfNeeded()
 
-        UIView.animate(withDuration: 5, animations: { () -> Void in
+        UIView.animate(withDuration: 60, animations: { () -> Void in
             self.width.constant = self.lbOtp.layer.frame.width
             self.view.layoutIfNeeded()
         }, completion: { (value: Bool) in

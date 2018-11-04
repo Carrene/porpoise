@@ -50,13 +50,23 @@
                                     <action selector="resetProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mvg-PV-Vek"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRT-cy-MAd" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="396" width="300" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="ge5-hB-gVl"/>
+                                    <constraint firstAttribute="width" constant="300" id="vep-GR-Kuf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0pK-Gb-iRA"/>
                             <constraint firstItem="ppd-Ol-T4U" firstAttribute="centerY" secondItem="PBl-6l-Cop" secondAttribute="centerY" id="31g-at-Zb1"/>
                             <constraint firstItem="1UH-1j-mp9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="7fd-KZ-Qxu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hRT-cy-MAd" secondAttribute="bottom" constant="101" id="9XC-9O-Pt5"/>
                             <constraint firstItem="ppd-Ol-T4U" firstAttribute="height" secondItem="PBl-6l-Cop" secondAttribute="height" id="CeC-bv-npU"/>
+                            <constraint firstItem="hRT-cy-MAd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ddi-f4-cdi"/>
                             <constraint firstItem="AnD-A5-8jO" firstAttribute="top" secondItem="PBl-6l-Cop" secondAttribute="top" id="Eil-kW-OFJ"/>
                             <constraint firstItem="pUe-jf-RRV" firstAttribute="width" secondItem="PBl-6l-Cop" secondAttribute="width" id="F9P-Mg-9DA"/>
                             <constraint firstItem="pUe-jf-RRV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MJL-aF-lGb"/>
@@ -85,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="252"/>
+            <point key="canvasLocation" x="321" y="251"/>
         </scene>
     </scenes>
 </document>
