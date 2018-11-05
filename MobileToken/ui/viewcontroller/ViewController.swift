@@ -11,6 +11,7 @@ import ObjectMapper
 import RealmSwift
 class ViewController: UIViewController {
 
+    @IBOutlet weak var vOtp: OtpViewDesignable!
     @IBOutlet weak var bt: MyButton!
     @IBOutlet weak var bt1: MyButton1!
     @IBOutlet weak var progressView: UIProgressView!
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var animeView: UIView!
     var timer: Timer?
     var frame: CGRect?
+    var otpView: OtpViewDesignable?
     override func viewDidLoad() {
         super.viewDidLoad()
         bt1.setTitle("Salam", for: .normal)
@@ -26,14 +28,22 @@ class ViewController: UIViewController {
         progressView.trackTintColor = .white
         progressView.progressTintColor = .red
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
-        UILabel.appearance().font = UIFont(name: "IranSansRegular", size: UILabel.appearance().font.pointSize)
+        vOtp.vProgress.progressViewStyle = .bar
+        
+//        UILabel.appearance().font = UIFont(name: "IranSansRegular", size: UILabel.appearance().font.pointSize)
+        
+        
         
     }
     
+    
+    
     @objc func updateTimer() {
+        vOtp.vProgress.progress += 1/60
         progressView.progress += 1/60
         if progressView.progress >= 1 {
             progressView.progress = 0
+            vOtp.vProgress.progress = 0
             // generate new otp
         }
     }

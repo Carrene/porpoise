@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpViewDesignable" customModule="MobileToken">
+            <connections>
+                <outlet property="btCopy" destination="jvY-MO-ltC" id="a0E-OU-vhP"/>
+                <outlet property="lbOtp" destination="Ne0-MZ-xf5" id="g3q-qR-NDo"/>
+                <outlet property="lbPassword" destination="gge-C6-Uez" id="wlq-ww-EAN"/>
+                <outlet property="vComponent" destination="jPM-xg-r5T" id="YZL-ST-MS1"/>
+                <outlet property="vProgress" destination="b1r-eL-wJl" id="r3e-iG-CxV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-MO-ltC">
+                    <rect key="frame" x="205" y="2.5" width="35" height="50"/>
+                    <color key="backgroundColor" red="0.16949376460000001" green="0.4191063344" blue="0.66955816749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="do5-PL-LrE"/>
+                        <constraint firstAttribute="width" constant="35" id="zkn-Xp-Tw3"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="copy"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPM-xg-r5T">
+                    <rect key="frame" x="2" y="2" width="198" height="51"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="b1r-eL-wJl" customClass="UIProgressView">
+                            <rect key="frame" x="0.0" y="0.0" width="198" height="51"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمزاول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gge-C6-Uez" userLabel="lbPass">
+                            <rect key="frame" x="153" y="0.0" width="45" height="51"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="tKG-9C-0FE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۲۳۴۵۶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-MZ-xf5" userLabel="lbOtp">
+                            <rect key="frame" x="0.0" y="0.0" width="148" height="51"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16949376460000001" green="0.4191063344" blue="0.66955816749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gge-C6-Uez" secondAttribute="trailing" id="4Yn-aS-rcW"/>
+                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" id="8FC-gw-GzE"/>
+                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" id="SnP-ty-tvc"/>
+                        <constraint firstItem="gge-C6-Uez" firstAttribute="leading" secondItem="Ne0-MZ-xf5" secondAttribute="trailing" constant="5" id="aIp-Vi-23H"/>
+                        <constraint firstAttribute="bottom" secondItem="Ne0-MZ-xf5" secondAttribute="bottom" id="aoP-YA-kHj"/>
+                        <constraint firstAttribute="bottom" secondItem="b1r-eL-wJl" secondAttribute="bottom" id="dZW-74-D7l"/>
+                        <constraint firstAttribute="bottom" secondItem="gge-C6-Uez" secondAttribute="bottom" id="hOr-UI-yQc"/>
+                        <constraint firstItem="b1r-eL-wJl" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" id="iE5-vn-VBP"/>
+                        <constraint firstItem="gge-C6-Uez" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" id="oPJ-PU-Wbh"/>
+                        <constraint firstItem="b1r-eL-wJl" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" id="rxM-62-atH"/>
+                        <constraint firstAttribute="trailing" secondItem="b1r-eL-wJl" secondAttribute="trailing" id="wsv-8B-hCy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jvY-MO-ltC" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="trailing" constant="5" id="3w6-Wp-6UC"/>
+                <constraint firstItem="jPM-xg-r5T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="IKw-hz-bGm"/>
+                <constraint firstItem="jvY-MO-ltC" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="JSn-pa-CS6"/>
+                <constraint firstAttribute="bottom" secondItem="jPM-xg-r5T" secondAttribute="bottom" constant="2" id="eNI-zx-KLV"/>
+                <constraint firstItem="jPM-xg-r5T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="ivg-Cj-YqS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jvY-MO-ltC" secondAttribute="trailing" constant="5" id="vgt-mM-ORx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="60" y="130.88455772113943"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="copy" width="24" height="24"/>
+    </resources>
+</document>
