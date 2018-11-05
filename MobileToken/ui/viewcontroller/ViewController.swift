@@ -11,6 +11,7 @@ import ObjectMapper
 import RealmSwift
 class ViewController: UIViewController {
 
+    @IBOutlet weak var vOtpParent: UIView!
     @IBOutlet weak var vOtp: OtpViewDesignable!
     @IBOutlet weak var bt: MyButton!
     @IBOutlet weak var bt1: MyButton1!
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         progressView.progressTintColor = .red
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
         vOtp.vProgress.progressViewStyle = .bar
-        
+       ass()
 //        UILabel.appearance().font = UIFont(name: "IranSansRegular", size: UILabel.appearance().font.pointSize)
         
         
@@ -81,5 +82,14 @@ class ViewController: UIViewController {
         self.start(self)
     }
 
+    func ass() {
+        let od = OtpViewDesignable()
+        var cv = od.loadViewFromNib()
+        vOtpParent.addSubview(cv!)
+        
+        let pv = AddPasswordViewDesignable()
+        cv = pv.loadViewFromNib()
+        vOtpParent.addSubview(cv!)
+    }
 }
 

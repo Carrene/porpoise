@@ -1,5 +1,5 @@
 //
-//  OtpViewDesignable.swift
+//  AddPasswordViewDesignable.swift
 //  MobileToken
 //
 //  Created by hamed akhlaghi on 8/14/1397 AP.
@@ -10,13 +10,10 @@ import UIKit
 
 @IBDesignable
 
-class OtpViewDesignable: UIView {
+class AddPasswordViewDesignable: UIView {
     
-    @IBOutlet weak var vComponent: UIView!
-    @IBOutlet weak var lbOtp: UILabel!
-    @IBOutlet weak var lbPassword: UILabel!
-    @IBOutlet weak var vProgress: UIProgressView!
-    @IBOutlet weak var btCopy: UIButton!
+
+    @IBOutlet weak var vBackground: UIView!
     var contentView : UIView!
     
     override init(frame: CGRect) {
@@ -31,13 +28,12 @@ class OtpViewDesignable: UIView {
     
     func xibSetup() {
         contentView = loadViewFromNib()
-        initUIComponent()
         // use bounds not frame or it'll be offset
         contentView.frame = bounds
         
         // Make the view stretch with containing view
         contentView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-        
+       
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(contentView)
     }
@@ -45,20 +41,17 @@ class OtpViewDesignable: UIView {
     func loadViewFromNib() -> UIView! {
         
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "OtpViewDesignable", bundle: bundle)
+        let nib = UINib(nibName: "AddPasswordViewDesignable", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         initUIComponent()
         return view
     }
     
     func initUIComponent() {
-        vProgress.progress = 0
-        vProgress.progressViewStyle = .bar
-        vComponent.layer.masksToBounds = true
-        vComponent.layer.cornerRadius = 5
-        btCopy.layer.masksToBounds = true
-        btCopy.layer.cornerRadius = 5
-        vProgress.progressViewStyle = .bar
+        vBackground.layer.masksToBounds = true
+        vBackground.layer.cornerRadius = 5
+       
     }
 }
+
 

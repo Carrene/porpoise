@@ -79,10 +79,19 @@
                                     <constraint firstAttribute="width" constant="245" id="VHS-MV-yWV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cd5-Bl-RlC">
+                                <rect key="frame" x="65" y="591" width="245" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="Bcj-lD-9PP"/>
+                                    <constraint firstAttribute="height" constant="55" id="U9F-0c-Pba"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0pK-Gb-iRA"/>
+                            <constraint firstItem="Cd5-Bl-RlC" firstAttribute="top" secondItem="hRT-cy-MAd" secondAttribute="bottom" constant="25" id="30e-WL-BNG"/>
                             <constraint firstItem="ppd-Ol-T4U" firstAttribute="centerY" secondItem="PBl-6l-Cop" secondAttribute="centerY" id="31g-at-Zb1"/>
                             <constraint firstItem="1UH-1j-mp9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="7fd-KZ-Qxu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hRT-cy-MAd" secondAttribute="bottom" constant="101" id="9XC-9O-Pt5"/>
@@ -101,6 +110,7 @@
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fbc-bu-Hj4"/>
                             <constraint firstItem="1UH-1j-mp9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="gjN-MY-nCT"/>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="top" secondItem="o66-pw-szh" secondAttribute="bottom" constant="18.5" id="hgZ-vz-CzY"/>
+                            <constraint firstItem="Cd5-Bl-RlC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="itK-ms-zsV"/>
                             <constraint firstItem="PBl-6l-Cop" firstAttribute="top" secondItem="pUe-jf-RRV" secondAttribute="bottom" constant="81.5" id="pgi-3k-VrV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1UH-1j-mp9" secondAttribute="trailing" constant="165" id="qtv-fB-otk"/>
                             <constraint firstItem="pUe-jf-RRV" firstAttribute="top" secondItem="1UH-1j-mp9" secondAttribute="bottom" constant="50" id="sWO-9f-P5e"/>
@@ -120,6 +130,7 @@
                         <outlet property="lbOtp" destination="PBl-6l-Cop" id="bAg-O6-suz"/>
                         <outlet property="progressView" destination="pUe-jf-RRV" id="4Io-7Z-Tlr"/>
                         <outlet property="vOtp" destination="o66-pw-szh" id="DuP-jl-bbh"/>
+                        <outlet property="vOtpParent" destination="Cd5-Bl-RlC" id="L1n-fv-Ijn"/>
                         <outlet property="width" destination="Xq9-t7-fQr" id="ZB1-zB-G8F"/>
                     </connections>
                 </viewController>
