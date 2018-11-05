@@ -51,14 +51,6 @@
                                     <action selector="resetProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mvg-PV-Vek"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRT-cy-MAd" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="396" width="300" height="170"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="ge5-hB-gVl"/>
-                                    <constraint firstAttribute="width" constant="300" id="vep-GR-Kuf"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEa-LV-D04" customClass="MyButton" customModule="MobileToken" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="61" width="100" height="34"/>
                                 <constraints>
@@ -71,7 +63,7 @@
                                     <constraint firstAttribute="width" constant="120" id="H4t-NL-UM3"/>
                                 </constraints>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o66-pw-szh" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o66-pw-szh" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
                                 <rect key="frame" x="65" y="245" width="245" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -85,6 +77,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="245" id="Bcj-lD-9PP"/>
                                     <constraint firstAttribute="height" constant="55" id="U9F-0c-Pba"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRT-cy-MAd" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="37" y="396" width="300" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="ge5-hB-gVl"/>
+                                    <constraint firstAttribute="width" constant="300" id="vep-GR-Kuf"/>
                                 </constraints>
                             </view>
                         </subviews>

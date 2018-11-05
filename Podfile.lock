@@ -3,6 +3,9 @@ PODS:
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
+  - R.swift (5.0.0.alpha.2):
+    - R.swift.Library (~> 5.0.0.alpha.2)
+  - R.swift.Library (5.0.0.alpha.2)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
   - Realm/Headers (3.11.1)
@@ -11,20 +14,25 @@ PODS:
 
 DEPENDENCIES:
   - "ObjectMapper+Realm (~> 0.6)"
+  - R.swift (~> 5.0.0.alpha.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ObjectMapper
     - "ObjectMapper+Realm"
+    - R.swift
+    - R.swift.Library
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
+  R.swift: 31fa1bd537fa81307815cc622122f33331f32174
+  R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
 
-PODFILE CHECKSUM: 8f20c2712640bb86f0331fc49d94050069bafc37
+PODFILE CHECKSUM: 4f089b6d46dbec7f57452f3b7bc1d5ba0752f9a0
 
 COCOAPODS: 1.5.3

@@ -50,7 +50,6 @@ class AddPasswordViewDesignable: UIView {
     func initUIComponent() {
         vBackground.layer.masksToBounds = true
         vBackground.layer.cornerRadius = 5
-       
     }
 }
 
