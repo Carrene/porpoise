@@ -16,6 +16,8 @@
 		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
 		AFAD230221908A9700EC00CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD230121908A9600EC00CB /* R.generated.swift */; };
+		AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
+		AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AFB39B522189A6A600302624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B512189A6A600302624 /* ViewController.swift */; };
 		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
 		AFAD230121908A9600EC00CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBankViewDesignable.xib; sourceTree = "<group>"; };
+		AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBankViewDesignable.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B4F2189A6A600302624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB39B512189A6A600302624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +238,15 @@
 			path = addpassword;
 			sourceTree = "<group>";
 		};
+		AFAD2303219092EA00EC00CB /* selectbank */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */,
+				AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */,
+			);
+			path = selectbank;
+			sourceTree = "<group>";
+		};
 		AFB39B432189A6A600302624 = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +316,7 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AFAD2303219092EA00EC00CB /* selectbank */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
 				AFE190E82190296D0023E785 /* otp */,
 				AFE190E7219029430023E785 /* card */,
@@ -451,6 +465,7 @@
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
+				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
 				AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */,
 				AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */,
 				AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */,
@@ -594,6 +609,7 @@
 				AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */,
 				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
 				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
+				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

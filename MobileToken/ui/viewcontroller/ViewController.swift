@@ -83,12 +83,12 @@ class ViewController: UIViewController {
     }
 
     func ass() {
-        let od = OtpViewDesignable()
-        var cv = od.loadViewFromNib()
-        vOtpParent.addSubview(cv!)
+//        let od = OtpViewDesignable()
+//        var cv = od.loadViewFromNib()
+//        vOtpParent.addSubview(cv!)
         
-        let pv = AddPasswordViewDesignable()
-        cv = pv.loadViewFromNib()
+        let pv = SelectBankViewDesignable()
+        let cv = pv.loadViewFromNib()
         vOtpParent.addSubview(cv!)
     }
 }
