@@ -23,13 +23,19 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
     
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return 2
+        return 3
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-
-        return FSPagerViewCell()
+        if index == 0 {
+            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: BankCardPagerViewCell.IDENTIFIER, at: index) as! BankCardPagerViewCell
+            return cell
+        }else {
             
+            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: AddCardPagerViewCell.IDENTIFIER, at: index) as! AddCardPagerViewCell
+            return cell
+            
+        }
     }
     
     

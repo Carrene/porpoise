@@ -10,6 +10,7 @@
 		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
+		AF36E38C2191C88A005CFE8E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36E38B2191C88A005CFE8E /* SampleViewController.swift */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -39,6 +40,7 @@
 		AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */; };
 		AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
 		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
+		AFBC2AEA2191BC9900D37C84 /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE92191BC9900D37C84 /* TokenViewController.swift */; };
 		AFE190E6218F33060023E785 /* MyButton1.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E5218F33050023E785 /* MyButton1.xib */; };
 		AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
@@ -67,6 +69,7 @@
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF36E38B2191C88A005CFE8E /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
+		AFBC2AE92191BC9900D37C84 /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TokenViewController.swift; path = /Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken/ui/cardlist/TokenViewController.swift; sourceTree = "<absolute>"; };
 		AFE190E5218F33050023E785 /* MyButton1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyButton1.xib; sourceTree = "<group>"; };
 		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
 		AFE190EB219049030023E785 /* OtpViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewDesignable.swift; sourceTree = "<group>"; };
@@ -349,11 +353,13 @@
 		AFBC2ADC21918E3000D37C84 /* cardlist */ = {
 			isa = PBXGroup;
 			children = (
+				AFBC2AE92191BC9900D37C84 /* TokenViewController.swift */,
 				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
 				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
 				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
 				AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */,
 				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
+				AF36E38B2191C88A005CFE8E /* SampleViewController.swift */,
 			);
 			path = cardlist;
 			sourceTree = "<group>";
@@ -626,6 +632,8 @@
 				AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */,
 				AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */,
 				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
+				AF36E38C2191C88A005CFE8E /* SampleViewController.swift in Sources */,
+				AFBC2AEA2191BC9900D37C84 /* TokenViewController.swift in Sources */,
 				AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */,
 				AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */,
 				AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */,

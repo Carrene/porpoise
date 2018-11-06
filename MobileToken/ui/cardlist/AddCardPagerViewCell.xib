@@ -12,14 +12,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddCardPagerViewCell" id="gTV-IL-0wX" userLabel="BankCardPagerViewCell" customClass="AddCardPagerViewCell" customModule="MobileToken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="289" height="293"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="289" height="293"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
-                        <rect key="frame" x="0.0" y="0.0" width="289" height="293"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <color key="backgroundColor" red="0.29900741580000001" green="0.71697646380000002" blue="0.6950702071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </subviews>
