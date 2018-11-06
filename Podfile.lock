@@ -1,4 +1,5 @@
 PODS:
+  - FSPagerView (0.8.1)
   - ObjectMapper (3.3.0)
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
@@ -13,11 +14,13 @@ PODS:
     - Realm (= 3.11.1)
 
 DEPENDENCIES:
+  - FSPagerView
   - "ObjectMapper+Realm (~> 0.6)"
   - R.swift (~> 5.0.0.alpha.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FSPagerView
     - ObjectMapper
     - "ObjectMapper+Realm"
     - R.swift
@@ -26,6 +29,7 @@ SPEC REPOS:
     - RealmSwift
 
 SPEC CHECKSUMS:
+  FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
   R.swift: 31fa1bd537fa81307815cc622122f33331f32174
@@ -33,6 +37,6 @@ SPEC CHECKSUMS:
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
 
-PODFILE CHECKSUM: 4f089b6d46dbec7f57452f3b7bc1d5ba0752f9a0
+PODFILE CHECKSUM: 6f9e07dfdb901a8c364c0febf23c488d2a905542
 
 COCOAPODS: 1.5.3

@@ -34,6 +34,11 @@
 		AFB9BB3C218F1E52004F16DD /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB3B218F1E52004F16DD /* MyButton.xib */; };
 		AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB3D218F1E8A004F16DD /* MyButton.swift */; };
 		AFB9BB42218F2B0A004F16DD /* MyButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB41218F2B0A004F16DD /* MyButton1.swift */; };
+		AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
+		AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
+		AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */; };
+		AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
+		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
 		AFE190E6218F33060023E785 /* MyButton1.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E5218F33050023E785 /* MyButton1.xib */; };
 		AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
@@ -92,6 +97,11 @@
 		AFB9BB3B218F1E52004F16DD /* MyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyButton.xib; sourceTree = "<group>"; };
 		AFB9BB3D218F1E8A004F16DD /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		AFB9BB41218F2B0A004F16DD /* MyButton1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton1.swift; sourceTree = "<group>"; };
+		AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagerViewAdapter.swift; sourceTree = "<group>"; };
+		AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardPagerViewCell.swift; sourceTree = "<group>"; };
+		AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
+		AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardPagerViewCell.swift; sourceTree = "<group>"; };
+		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFE190E5218F33050023E785 /* MyButton1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyButton1.xib; sourceTree = "<group>"; };
 		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
 		AFE190EB219049030023E785 /* OtpViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewDesignable.swift; sourceTree = "<group>"; };
@@ -164,6 +174,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AFBC2ADC21918E3000D37C84 /* cardlist */,
 				AF463BCB2189E59E00DC8A3E /* viewcontroller */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 			);
@@ -335,6 +346,18 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		AFBC2ADC21918E3000D37C84 /* cardlist */ = {
+			isa = PBXGroup;
+			children = (
+				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
+				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
+				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
+				AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */,
+				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
+			);
+			path = cardlist;
+			sourceTree = "<group>";
+		};
 		AFE190E7219029430023E785 /* card */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,8 +486,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
+				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
+				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
 				AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */,
 				AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */,
@@ -520,6 +545,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -528,6 +554,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -562,11 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -604,12 +627,15 @@
 				AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */,
 				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
 				AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */,
+				AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */,
 				AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */,
 				AFB9BB42218F2B0A004F16DD /* MyButton1.swift in Sources */,
 				AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */,
 				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
 				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
+				AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
+				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
