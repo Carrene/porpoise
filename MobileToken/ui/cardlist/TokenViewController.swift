@@ -8,47 +8,52 @@
 import UIKit
 import FSPagerView
 class TokenListViewController: UIViewController {
-    @IBOutlet weak var vStack: UIStackView!
     
     @IBOutlet weak var vScroll: UIScrollView!
     
+    var cardListPagerViewAdapter:CardPagerViewAdapter?
+    var pagerList = [CardPagerViewAdapter(), CardPagerViewAdapter(), CardPagerViewAdapter()]
+    
     
     var selectedWalletIndex: Int?
-    var cardListPagerViewAdapter:CardPagerViewAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hi")
-        vStack.translatesAutoresizingMaskIntoConstraints = false
-        vStack.axis = .vertical
-        vStack.spacing = 8
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         initCardListPagerView()
         
     }
     
     func initCardListPagerView() {
-        for i in 0...1000 {
-
-//            vStack.addArrangedSubview(view)
-            let cardListPagerView = FSPagerView()
+        var y = 0
+        for i in 0...2 {
+            
+            let screenBounds =  UIScreen.main.bounds
+            
+            let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)
+            let cardListPagerView = FSPagerView(frame: frame)
+            y += 340
+            
             let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
             cardListPagerView.register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
             
             let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
             cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
             
-            cardListPagerViewAdapter = CardPagerViewAdapter()
+            cardListPagerViewAdapter = pagerList[i]
             cardListPagerView.delegate = cardListPagerViewAdapter
             cardListPagerView.dataSource = cardListPagerViewAdapter
-            cardListPagerView.transformer = FSPagerViewTransformer(type: .linear)
             cardListPagerView.itemSize = CGSize(width: 300, height: 300)
             cardListPagerView.interitemSpacing = 10
-            cardListPagerView.reloadData()
-            let bt = UIButton()
-            bt.setTitle("GTTTT", for: .normal)
-            vStack.addArrangedSubview(bt)
             
+            vScroll.isScrollEnabled = true
+            vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
+            vScroll.addSubview(cardListPagerView)
+            cardListPagerView.reloadData()
         }
+        
     }
-
+    
     
 }

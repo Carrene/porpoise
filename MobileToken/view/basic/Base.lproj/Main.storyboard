@@ -146,20 +146,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-1u-ZPR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-1u-ZPR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Mk-y3-Avz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="4499"/>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="0Mk-y3-Avz" firstAttribute="leading" secondItem="sBY-1u-ZPR" secondAttribute="leading" id="OwW-vW-7mE"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Mk-y3-Avz" secondAttribute="trailing" id="WX0-UF-TnJ"/>
-                                    <constraint firstItem="0Mk-y3-Avz" firstAttribute="width" secondItem="sBY-1u-ZPR" secondAttribute="width" id="bgM-57-hHE"/>
-                                    <constraint firstItem="0Mk-y3-Avz" firstAttribute="top" secondItem="sBY-1u-ZPR" secondAttribute="top" id="d2d-KH-h1j"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Mk-y3-Avz" secondAttribute="bottom" id="wPa-tC-B1n"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,7 +161,6 @@
                     </view>
                     <connections>
                         <outlet property="vScroll" destination="sBY-1u-ZPR" id="UWY-69-5YZ"/>
-                        <outlet property="vStack" destination="0Mk-y3-Avz" id="19H-Kb-M3v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0B-FV-qdK" userLabel="First Responder" sceneMemberID="firstResponder"/>

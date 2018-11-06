@@ -19,7 +19,7 @@ DEPENDENCIES:
   - R.swift (~> 5.0.0.alpha.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - FSPagerView
     - ObjectMapper
     - "ObjectMapper+Realm"
@@ -39,4 +39,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 6f9e07dfdb901a8c364c0febf23c488d2a905542
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0
