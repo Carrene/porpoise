@@ -69,9 +69,9 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     
     func authenticationSucceed(authentication:Authentication) {
         if self.authentication?.id != nil {
-            self.authentication?.credentials = authentication.credentials
-            self.authentication?.authenticationType = authentication.authenticationType
-            updateAuthentication(authentication: self.authentication!)
+//            self.authentication?.credentials = authentication.credentials
+//            self.authentication?.authenticationType = authentication.authenticationType
+            updateAuthentication(authentication: authentication)
         }
         
     }
@@ -101,7 +101,6 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
                 print("\(error)")
             } else {
                 authenticationRestRepository.get(onDone: nil)
-                self?.performSegue(withIdentifier: AuthenticationDefinitionViewController.TO_Dashboard_SEGUE, sender: self)
             }
         }
         authenticationRestRepository.update(authentication, onDone: onDataResponse)

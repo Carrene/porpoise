@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ont-Lk-MDa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bIQ-4r-BhW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="roboto.ttf">
+        <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
     </customFonts>
@@ -321,6 +321,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMf-QL-XZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718" y="-1577"/>
+        </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="pBb-P2-TWy">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationViewController" id="bIQ-4r-BhW" customClass="AuthenticationViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aiL-el-URe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-XI-p9U">
+                                <rect key="frame" x="20" y="100" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-DY-994">
+                                <rect key="frame" x="0.0" y="211" width="375" height="366"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tuY-ek-Hr4" firstAttribute="bottom" secondItem="DlL-DY-994" secondAttribute="bottom" constant="90" id="BS6-YZ-zDG"/>
+                            <constraint firstItem="gRn-XI-p9U" firstAttribute="leading" secondItem="tuY-ek-Hr4" secondAttribute="leading" constant="20" id="K8q-DT-z7s"/>
+                            <constraint firstItem="DlL-DY-994" firstAttribute="leading" secondItem="tuY-ek-Hr4" secondAttribute="leading" id="Kzr-Vf-fbd"/>
+                            <constraint firstItem="DlL-DY-994" firstAttribute="top" secondItem="gRn-XI-p9U" secondAttribute="bottom" constant="90" id="cQ6-rs-gow"/>
+                            <constraint firstItem="tuY-ek-Hr4" firstAttribute="trailing" secondItem="DlL-DY-994" secondAttribute="trailing" id="huI-gv-4uc"/>
+                            <constraint firstItem="tuY-ek-Hr4" firstAttribute="trailing" secondItem="gRn-XI-p9U" secondAttribute="trailing" constant="20" id="kd9-TX-UNK"/>
+                            <constraint firstItem="gRn-XI-p9U" firstAttribute="top" secondItem="tuY-ek-Hr4" secondAttribute="top" constant="80" id="nit-q2-d5e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tuY-ek-Hr4"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbTitle" destination="gRn-XI-p9U" id="tKF-E0-8Ul"/>
+                        <outlet property="vAuthenticationContainer" destination="DlL-DY-994" id="lSJ-NL-SEJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5Z-eS-3ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="-1005"/>
+        </scene>
+        <!--Authentication Password View Controller-->
+        <scene sceneID="Nfm-2X-QBI">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationPasswordViewController" id="a18-y9-gs3" customClass="AuthenticationPasswordViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnY-EE-GwC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vi8-qi-V47" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="20" y="30" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="u1G-Yp-BeV"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="tfPasswordEditingChanged:" destination="a18-y9-gs3" eventType="editingChanged" id="15d-xg-GcY"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vi8-qi-V47" firstAttribute="top" secondItem="uKS-Sa-O3N" secondAttribute="top" constant="10" id="9ax-dg-6bV"/>
+                            <constraint firstItem="Vi8-qi-V47" firstAttribute="leading" secondItem="uKS-Sa-O3N" secondAttribute="leading" constant="20" id="r6V-Nv-ReV"/>
+                            <constraint firstItem="uKS-Sa-O3N" firstAttribute="trailing" secondItem="Vi8-qi-V47" secondAttribute="trailing" constant="20" id="ukJ-os-yfn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uKS-Sa-O3N"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfPassword" destination="Vi8-qi-V47" id="o2j-mp-Pfq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ct-SA-x8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="-887"/>
+        </scene>
+        <!--Authentication Pattern View Controller-->
+        <scene sceneID="ayK-Ja-PJH">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationPatternViewController" id="cRl-ei-Owx" customClass="AuthenticationPatternViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZm-oK-tVe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jy-tk-GuK" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
+                                <rect key="frame" x="19" y="20" width="337.5" height="337.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7jy-tk-GuK" firstAttribute="top" secondItem="v5M-KN-goH" secondAttribute="top" id="6YJ-Vj-us4"/>
+                            <constraint firstItem="7jy-tk-GuK" firstAttribute="width" secondItem="v5M-KN-goH" secondAttribute="width" multiplier="0.9" id="Bsi-gR-nfx"/>
+                            <constraint firstItem="7jy-tk-GuK" firstAttribute="centerX" secondItem="v5M-KN-goH" secondAttribute="centerX" id="MaB-f7-gMN"/>
+                            <constraint firstItem="7jy-tk-GuK" firstAttribute="height" secondItem="v5M-KN-goH" secondAttribute="width" multiplier="0.9" id="pWr-Ud-iy6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v5M-KN-goH"/>
+                    </view>
+                    <connections>
+                        <outlet property="vPattern" destination="7jy-tk-GuK" id="wP0-dF-xdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ls-Eg-jaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-1577"/>
         </scene>
     </scenes>
 </document>

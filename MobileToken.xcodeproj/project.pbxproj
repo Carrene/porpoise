@@ -63,6 +63,9 @@
 		AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */; };
 		AFE81B3C2196E11A00AA0AF2 /* MalformedURLException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B392196E11A00AA0AF2 /* MalformedURLException.swift */; };
 		AFE81B3D2196E11A00AA0AF2 /* EntityExistException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B3A2196E11A00AA0AF2 /* EntityExistException.swift */; };
+		AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B3F2196EE3400AA0AF2 /* AuthenticationViewController.swift */; };
+		AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */; };
+		AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +150,9 @@
 		AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsupportedOperationException.swift; sourceTree = "<group>"; };
 		AFE81B392196E11A00AA0AF2 /* MalformedURLException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalformedURLException.swift; sourceTree = "<group>"; };
 		AFE81B3A2196E11A00AA0AF2 /* EntityExistException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityExistException.swift; sourceTree = "<group>"; };
+		AFE81B3F2196EE3400AA0AF2 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPasswordViewController.swift; sourceTree = "<group>"; };
+		AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +222,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* loginmethod */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
 				AF463BCB2189E59E00DC8A3E /* viewcontroller */,
@@ -551,6 +558,40 @@
 			path = error;
 			sourceTree = "<group>";
 		};
+		AFE81B3E2196EE1300AA0AF2 /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AFE81B432196EE5A00AA0AF2 /* pattern */,
+				AFE81B422196EE5200AA0AF2 /* password */,
+				AFE81B412196EE4400AA0AF2 /* basic */,
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		AFE81B412196EE4400AA0AF2 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				AFE81B3F2196EE3400AA0AF2 /* AuthenticationViewController.swift */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		AFE81B422196EE5200AA0AF2 /* password */ = {
+			isa = PBXGroup;
+			children = (
+				AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */,
+			);
+			path = password;
+			sourceTree = "<group>";
+		};
+		AFE81B432196EE5A00AA0AF2 /* pattern */ = {
+			isa = PBXGroup;
+			children = (
+				AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */,
+			);
+			path = pattern;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -814,6 +855,7 @@
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepository.swift in Sources */,
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
+				AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */,
 				AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */,
 				AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */,
 				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
@@ -837,10 +879,12 @@
 				AFE81B0A2196CC6C00AA0AF2 /* AuthenticationDefinitionViewController.swift in Sources */,
 				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
+				AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */,
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
 				AFE81B212196D3CF00AA0AF2 /* Localized.swift in Sources */,
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
+				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,
