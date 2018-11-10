@@ -1,0 +1,7 @@
+//label
+"lb_enter_password" = "Enter your password";
+"lb_enter_pattern" = "Enter your pattern";
+
+// snakbar
+"sb_wrong_password" = "Wrong password";
+"sb_wrong_pattern" = "Wrong pattern";

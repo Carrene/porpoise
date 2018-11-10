@@ -66,6 +66,7 @@
 		AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B3F2196EE3400AA0AF2 /* AuthenticationViewController.swift */; };
 		AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */; };
 		AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */; };
+		AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		AFE81B3F2196EE3400AA0AF2 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPasswordViewController.swift; sourceTree = "<group>"; };
 		AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
+		AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				AFB9BB3B218F1E52004F16DD /* MyButton.xib */,
 				AFB9BB3D218F1E8A004F16DD /* MyButton.swift */,
 				AFB9BB41218F2B0A004F16DD /* MyButton1.swift */,
+				AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */,
 			);
 			path = MobileToken;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 			files = (
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
+				AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepository.swift in Sources */,
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
 				AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */,
@@ -947,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1008,6 +1013,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

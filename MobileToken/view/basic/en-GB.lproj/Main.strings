@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1UH-1j-mp9"; */
+"1UH-1j-mp9.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "4Ui-Wn-QNo"; */
+"4Ui-Wn-QNo.placeholder" = "Enter Password";
+
+/* Class = "UITextField"; placeholder = "Enter Confirm Password"; ObjectID = "63H-YJ-0dL"; */
+"63H-YJ-0dL.placeholder" = "Enter Confirm Password";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "C2A-TQ-Mrt"; */
+"C2A-TQ-Mrt.text" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "LuK-vD-uNk"; */
+"LuK-vD-uNk.text" = "Password";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PBl-6l-Cop"; */
+"PBl-6l-Cop.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Login method"; ObjectID = "S6X-Jf-UQR"; */
+"S6X-Jf-UQR.title" = "Login method";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "Vi8-qi-V47"; */
+"Vi8-qi-V47.placeholder" = "Enter Password";
+
+/* Class = "UISegmentedControl"; VlE-dD-tFq.segmentTitles[0] = "Pattern"; ObjectID = "VlE-dD-tFq"; */
+"VlE-dD-tFq.segmentTitles[0]" = "Pattern";
+
+/* Class = "UISegmentedControl"; VlE-dD-tFq.segmentTitles[1] = "Password"; ObjectID = "VlE-dD-tFq"; */
+"VlE-dD-tFq.segmentTitles[1]" = "Password";
+
+/* Class = "UILabel"; text = "Enter"; ObjectID = "gRn-XI-p9U"; */
+"gRn-XI-p9U.text" = "Enter";

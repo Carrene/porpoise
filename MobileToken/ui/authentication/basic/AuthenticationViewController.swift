@@ -9,14 +9,10 @@
 import UIKit
 
 class AuthenticationViewController: UIViewController, AuthenticationDelegate {
-    static let  STORYBOARD_ID = "Authentication_VC".localized()
-    static let TO_TAB_BAR = "AuthentiationToTabBar"
-    static let TO_REGISTRATION = "AuthenticationToRootViewController";
-    var vcPassword: AuthenticationPasswordViewController?
-    var vcPattern: AuthenticationPatternViewController?
+    
     @IBOutlet weak var vAuthenticationContainer: UIView!
     @IBOutlet weak var lbTitle: UILabel!
-    var authentication: Authentication?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getAuthentication()
@@ -28,35 +24,37 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate {
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self?.authentication = repoResponse.value
-                if self?.authentication?.authenticationType == 0 {
+                if repoResponse.value?.authenticationType == 0 {
+                    //TODO: test localize with R
                     self?.lbTitle.text = "lb_enter_password".localized()
-                    self?.embedVCPassword()
+                    self?.embedVCPassword(authentication:repoResponse.value!)
                 } else {
                     self?.lbTitle.text = "lb_enter_pattern".localized()
-                    self?.embedVCPattern()
+                    self?.embedVCPattern(authentication: repoResponse.value!)
                 }
             }
         }
         authenticationRestRepository.get(onDone: onDataResponse)
     }
     
-    func embedVCPassword() {
+    func embedVCPassword(authentication:Authentication) {
+        var vcPassword: AuthenticationPasswordViewController?
         vcPassword = R.storyboard.main.authenticationPasswordViewController()
         vcPassword?.setDelegate(authenticationDelegate: self)
-        vcPassword?.setAuthentication(authentication: authentication!)
+        vcPassword?.setAuthentication(authentication: authentication)
         vcPassword?.willMove(toParent: self)
-        self.addChild(self.vcPassword!)
+        self.addChild(vcPassword!)
         vAuthenticationContainer.addSubview((vcPassword?.view)!)
         vcPassword?.view.frame = vAuthenticationContainer.bounds
     }
     
-    func embedVCPattern() {
+    func embedVCPattern(authentication:Authentication) {
+        var vcPattern: AuthenticationPatternViewController?
         vcPattern = R.storyboard.main.authenticationPatternViewController()
         vcPattern?.setDelegate(authenticationDelegate: self)
-        vcPattern?.setAuthentication(authentication: authentication!)
+        vcPattern?.setAuthentication(authentication: authentication)
         vcPattern?.willMove(toParent: self)
-        self.addChild(self.vcPattern!)
+        self.addChild(vcPattern!)
         vAuthenticationContainer.addSubview((vcPattern?.view)!)
         vcPattern?.view.frame = vAuthenticationContainer.bounds
     }

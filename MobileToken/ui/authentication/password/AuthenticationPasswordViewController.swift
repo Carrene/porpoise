@@ -12,31 +12,38 @@ protocol AuthenticationDelegate:class {
     func authenticationSucceed()
 }
 class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegate {
-    static let STORYBOARD_ID = "Authentication_Password_VC".localized()
+    
     @IBOutlet weak var tfPassword: PasswordTextField!
     
     var authenticationDelegate: AuthenticationDelegate?
     private var authentication: Authentication?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initUIComponent()
     }
     
     func setDelegate(authenticationDelegate:AuthenticationDelegate) {
+        
         self.authenticationDelegate = authenticationDelegate
     }
     
     func initUIComponent() {
+        
         tfPassword.delegate = self
         tfPassword.becomeFirstResponder()
     }
     
     func setAuthentication(authentication:Authentication) {
+        
         self.authentication = authentication
     }
     
     @IBAction func tfPasswordEditingChanged(_ sender: UITextField) {
+        
         if tfPassword.text == authentication?.credentials {
+            
             authenticationDelegate?.authenticationSucceed()
             tfPassword.enablesReturnKeyAutomatically = true
         }else {
@@ -45,13 +52,17 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         if tfPassword.text == authentication?.credentials {
+            
             authenticationDelegate?.authenticationSucceed()
         }else {
+            
             self.dismissKeyboard()
             tfPassword.text = ""
             UIHelper.showSpecificSnackBar(message: "sb_wrong_password".localized(), color: UIColorHelper.redColor)
         }
+        
         self.dismissKeyboard()
         return true
     }
