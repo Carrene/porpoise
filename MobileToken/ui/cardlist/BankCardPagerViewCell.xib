@@ -20,7 +20,20 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-DL-HCS" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cfi-DL-HCS" secondAttribute="trailing" id="51m-s9-pAt"/>
+                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="6dx-TP-Zsw"/>
+                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="top" secondItem="k8F-ES-KrH" secondAttribute="top" id="awR-pW-kEN"/>
+                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="height" secondItem="k8F-ES-KrH" secondAttribute="height" multiplier="0.5" id="fXh-GE-1nf"/>
+                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" id="gyp-kA-CiJ"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -32,6 +45,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="289" height="293"/>
+            <connections>
+                <outlet property="vCard" destination="Cfi-DL-HCS" id="QrG-4Q-v1p"/>
+            </connections>
             <point key="canvasLocation" x="-80.799999999999997" y="65.217391304347828"/>
         </collectionViewCell>
     </objects>

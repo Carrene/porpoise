@@ -1,9 +1,14 @@
 PODS:
+  - Alamofire (4.7.3)
+  - AMPopTip (3.5.0)
+  - DropDown (2.3.12)
   - FSPagerView (0.8.1)
+  - HUIPatternLockView-Swift (2.0.1)
   - ObjectMapper (3.3.0)
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
+  - PasswordTextField (1.2.0)
   - R.swift (5.0.0.alpha.2):
     - R.swift.Library (~> 5.0.0.alpha.2)
   - R.swift.Library (5.0.0.alpha.2)
@@ -12,31 +17,50 @@ PODS:
   - Realm/Headers (3.11.1)
   - RealmSwift (3.11.1):
     - Realm (= 3.11.1)
+  - TTGSnackbar (1.7.5)
 
 DEPENDENCIES:
+  - Alamofire
+  - AMPopTip
+  - DropDown
   - FSPagerView
+  - HUIPatternLockView-Swift (~> 2.0.1)
   - "ObjectMapper+Realm (~> 0.6)"
+  - PasswordTextField
   - R.swift (~> 5.0.0.alpha.2)
+  - TTGSnackbar
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AMPopTip
+    - DropDown
     - FSPagerView
+    - HUIPatternLockView-Swift
     - ObjectMapper
     - "ObjectMapper+Realm"
+    - PasswordTextField
     - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
+    - TTGSnackbar
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AMPopTip: 871ae0570b68fe396e714922b3f7d8ed6a36bb71
+  DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
   FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
+  HUIPatternLockView-Swift: 0f72d91ff3aeb01f5cad43f6093c5361522bb472
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
+  PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
   R.swift: 31fa1bd537fa81307815cc622122f33331f32174
   R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
 
-PODFILE CHECKSUM: 6f9e07dfdb901a8c364c0febf23c488d2a905542
+PODFILE CHECKSUM: 8935068932d4567ba775764f6707a0a75a5ae2b4
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

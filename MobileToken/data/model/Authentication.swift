@@ -15,6 +15,15 @@ class Authentication: Object, Mappable, NSCopying{
     static let PASSWORD = 0;
     static let PATTERN = 1;
     
+    @objc fileprivate dynamic var Id: Int = 1
+    public var id: Int {
+        get { return Id }
+        set { Id = newValue }
+    }
+    override class func primaryKey() -> String {
+        return "Id"
+    }
+    
     fileprivate let AuthenticationType = RealmOptional<Int>()
     public var authenticationType: Int? {
         get { return AuthenticationType.value }

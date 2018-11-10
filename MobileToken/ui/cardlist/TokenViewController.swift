@@ -52,8 +52,5 @@ class TokenListViewController: UIViewController {
             vScroll.addSubview(cardListPagerView)
             cardListPagerView.reloadData()
         }
-        
     }
-    
-    
 }

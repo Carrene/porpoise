@@ -5,7 +5,13 @@ target 'MobileToken' do
     use_frameworks!
     pod "ObjectMapper+Realm", '~> 0.6'
     pod "R.swift", '~> 5.0.0.alpha.2'
-    pod 'FSPagerView'
+    pod "PasswordTextField"
+    pod "TTGSnackbar"
+    pod "DropDown"
+    pod "HUIPatternLockView-Swift", '~> 2.0.1'
+    pod "AMPopTip"
+    pod "FSPagerView"
+    pod "Alamofire", '~> 4.7.3'
     #pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.2.1'
     target 'MobileTokenTests' do
         inherit! :search_paths

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Td-qz-JIe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ont-Lk-MDa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="roboto.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -167,35 +172,155 @@
             </objects>
             <point key="canvasLocation" x="828" y="909.89505247376314"/>
         </scene>
-        <!--Sample View Controller-->
-        <scene sceneID="nLL-zg-EmN">
+        <!--Login method-->
+        <scene sceneID="AsZ-0u-1oq">
             <objects>
-                <viewController id="Grg-Wv-v5V" customClass="SampleViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dmC-VC-C3I">
+                <viewController storyboardIdentifier="AuthenticationDefinitionViewController" id="ont-Lk-MDa" customClass="AuthenticationDefinitionViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4l-eh-Wf7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt3-uT-6yJ">
-                                <rect key="frame" x="61" y="263" width="240" height="128"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VlE-dD-tFq">
+                                <rect key="frame" x="16" y="40" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Pattern"/>
+                                    <segment title="Password"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="ont-Lk-MDa" eventType="valueChanged" id="S8j-GI-jEo"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llI-EK-v0y">
+                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="llI-EK-v0y" firstAttribute="leading" secondItem="leT-p3-Br6" secondAttribute="leading" id="0Ud-a6-yCa"/>
+                            <constraint firstItem="VlE-dD-tFq" firstAttribute="leading" secondItem="leT-p3-Br6" secondAttribute="leading" constant="16" id="30s-hV-trW"/>
+                            <constraint firstItem="llI-EK-v0y" firstAttribute="top" secondItem="VlE-dD-tFq" secondAttribute="bottom" constant="20" id="4oY-6y-ixj"/>
+                            <constraint firstItem="leT-p3-Br6" firstAttribute="trailing" secondItem="llI-EK-v0y" secondAttribute="trailing" id="YNi-VG-QRe"/>
+                            <constraint firstItem="leT-p3-Br6" firstAttribute="bottom" secondItem="llI-EK-v0y" secondAttribute="bottom" id="cNV-p2-L9Y"/>
+                            <constraint firstItem="VlE-dD-tFq" firstAttribute="top" secondItem="leT-p3-Br6" secondAttribute="top" constant="20" id="oiM-mG-k6X"/>
+                            <constraint firstItem="leT-p3-Br6" firstAttribute="trailing" secondItem="VlE-dD-tFq" secondAttribute="trailing" constant="16" id="vwd-1T-5WN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="leT-p3-Br6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login method" id="S6X-Jf-UQR"/>
+                    <connections>
+                        <outlet property="authenticationTypeContainer" destination="llI-EK-v0y" id="Dwd-WA-KSw"/>
+                        <outlet property="scAuthenticationType" destination="VlE-dD-tFq" id="9B0-IZ-h4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ct-8u-efr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2402" y="-226"/>
+        </scene>
+        <!--Authentication Definition Password View Controller-->
+        <scene sceneID="qBx-Ul-jYq">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewControllerIdentifier" id="Fwo-aQ-T9y" customClass="AuthenticationDefinitionPasswordViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rrc-BX-ZdK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ui-Wn-QNo" userLabel="tfPasscode" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="38" y="80" width="299" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="NRz-vg-Dtt"/>
+                                </constraints>
+                                <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <connections>
+                                    <action selector="onEditDidBegin:" destination="Fwo-aQ-T9y" eventType="editingDidBegin" id="dvW-yQ-Fzu"/>
+                                    <action selector="onEditingDidExit:" destination="Fwo-aQ-T9y" eventType="editingDidEnd" id="jhp-63-wt3"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63H-YJ-0dL" userLabel="tfConfirmPass" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="38" y="190" width="299" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="X34-PO-qze"/>
+                                </constraints>
+                                <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuK-vD-uNk" userLabel="lbPassword">
+                                <rect key="frame" x="38" y="51" width="71" height="19"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-TQ-Mrt" userLabel="lbConfirmPassword">
+                                <rect key="frame" x="38" y="161" width="132" height="19"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="leading" secondItem="LuK-vD-uNk" secondAttribute="leading" id="3pN-uO-94e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Ui-Wn-QNo" secondAttribute="trailing" constant="38" id="K0y-P1-9iX"/>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="leading" secondItem="Rrc-BX-ZdK" secondAttribute="leadingMargin" constant="38" id="NcB-TT-e3K"/>
+                            <constraint firstItem="63H-YJ-0dL" firstAttribute="leading" secondItem="4Ui-Wn-QNo" secondAttribute="leading" id="Sp8-ye-gxk"/>
+                            <constraint firstItem="63H-YJ-0dL" firstAttribute="top" secondItem="C2A-TQ-Mrt" secondAttribute="bottom" constant="10" id="Xut-oO-6rJ"/>
+                            <constraint firstItem="63H-YJ-0dL" firstAttribute="leading" secondItem="C2A-TQ-Mrt" secondAttribute="leading" id="aLM-Pi-wjV"/>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="leading" secondItem="JnG-mf-R3b" secondAttribute="leading" constant="38" id="cu7-fP-QvY"/>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="trailing" secondItem="JnG-mf-R3b" secondAttribute="trailing" constant="-38" id="lKJ-9X-sA5"/>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="top" secondItem="Rrc-BX-ZdK" secondAttribute="top" constant="80" id="ogt-ZK-B2j"/>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="bottom" secondItem="63H-YJ-0dL" secondAttribute="top" constant="-65" id="qz1-qz-uVx"/>
+                            <constraint firstItem="4Ui-Wn-QNo" firstAttribute="top" secondItem="LuK-vD-uNk" secondAttribute="bottom" constant="10" id="rrn-S3-oNC"/>
+                            <constraint firstItem="63H-YJ-0dL" firstAttribute="trailing" secondItem="4Ui-Wn-QNo" secondAttribute="trailing" id="ryj-Nw-2n6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JnG-mf-R3b"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NcB-TT-e3K"/>
+                                <exclude reference="K0y-P1-9iX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tfConfirmPasscode" destination="63H-YJ-0dL" id="cbA-lM-bhY"/>
+                        <outlet property="tfPasscode" destination="4Ui-Wn-QNo" id="0Oo-DY-iKD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSQ-Qf-3El" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-887"/>
+        </scene>
+        <!--Authentication Definition Pattern View Controller-->
+        <scene sceneID="BZ0-z3-i1G">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationDefinitionPatternViewControllerIdentifier" id="eeZ-pg-i40" customClass="AuthenticationDefinitionPatternViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Srk-Bq-TSu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDG-an-xHM" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
+                                <rect key="frame" x="19" y="89" width="337.5" height="337.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xt3-uT-6yJ" firstAttribute="top" secondItem="W5i-Wu-aD9" secondAttribute="top" constant="243" id="3fr-tM-BZj"/>
-                            <constraint firstItem="W5i-Wu-aD9" firstAttribute="trailing" secondItem="xt3-uT-6yJ" secondAttribute="trailing" constant="74" id="H3l-V2-abC"/>
-                            <constraint firstItem="xt3-uT-6yJ" firstAttribute="leading" secondItem="W5i-Wu-aD9" secondAttribute="leading" constant="61" id="fYd-gZ-oQT"/>
-                            <constraint firstItem="W5i-Wu-aD9" firstAttribute="bottom" secondItem="xt3-uT-6yJ" secondAttribute="bottom" constant="276" id="jmv-oj-phF"/>
+                            <constraint firstItem="DDG-an-xHM" firstAttribute="centerY" secondItem="R1g-gC-hjB" secondAttribute="centerY" multiplier="0.75" id="T2T-Xz-lPn"/>
+                            <constraint firstItem="DDG-an-xHM" firstAttribute="width" secondItem="R1g-gC-hjB" secondAttribute="width" multiplier="0.9" id="fuv-S4-fdi"/>
+                            <constraint firstItem="DDG-an-xHM" firstAttribute="centerX" secondItem="R1g-gC-hjB" secondAttribute="centerX" id="oEV-cR-Rux"/>
+                            <constraint firstItem="DDG-an-xHM" firstAttribute="height" secondItem="R1g-gC-hjB" secondAttribute="width" multiplier="0.9" id="rnh-bH-uAR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="W5i-Wu-aD9"/>
+                        <viewLayoutGuide key="safeArea" id="R1g-gC-hjB"/>
                     </view>
                     <connections>
-                        <outlet property="sv" destination="xt3-uT-6yJ" id="Bd5-8p-M8o"/>
+                        <outlet property="vPattern" destination="DDG-an-xHM" id="1UZ-2C-O6N"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vyf-l3-ORh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMf-QL-XZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="975"/>
+            <point key="canvasLocation" x="718" y="-1577"/>
         </scene>
     </scenes>
 </document>
