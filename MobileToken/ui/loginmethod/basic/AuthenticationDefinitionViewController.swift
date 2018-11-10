@@ -11,16 +11,10 @@ import UIKit
 
 class AuthenticationDefinitionViewController: UIViewController, AuthenticationDefintionDelegate {
     
-    static let  STORYBOARD_ID = "AuthenticationDefinitionViewController"
-    
     @IBOutlet weak var authenticationTypeContainer: UIView!
     @IBOutlet weak var scAuthenticationType: UISegmentedControl!
     
-    var vcPassword: AuthenticationDefinitionPasswordViewController?
-    var vcPattern: AuthenticationDefinitionPatternViewController?
     var authentication: Authentication?
-    
-    public static let TO_Dashboard_SEGUE = "AuthenticationDefinitionToDashboard"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +22,10 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        authenticationTypeContainer.subviews.forEach({ $0.removeFromSuperview() })
         if sender.selectedSegmentIndex == 1 {
-            vcPattern?.removeFromParent()
-            vcPattern?.view.removeFromSuperview()
             embedVCPassword()
         } else {
-            vcPassword?.removeFromParent()
-            vcPassword?.view.removeFromSuperview()
             embedVCPattern()
         }
     }
@@ -49,28 +40,27 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     
     
     func embedVCPassword() {
-//        let storyboard = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        var vcPassword: AuthenticationDefinitionPasswordViewController?
         vcPassword = R.storyboard.main.authenticationDefinitionPasswordViewControllerIdentifier()
         vcPassword?.setDelegate(authenticationDefinitionDelegate: self)
         vcPassword?.willMove(toParent: self)
-        self.addChild(self.vcPassword!)
+        self.addChild(vcPassword!)
         authenticationTypeContainer.addSubview((vcPassword?.view)!)
         vcPassword?.view.frame = authenticationTypeContainer.bounds
     }
     
     func embedVCPattern() {
+        var vcPattern: AuthenticationDefinitionPatternViewController?
         vcPattern = R.storyboard.main.authenticationDefinitionPatternViewControllerIdentifier()
         vcPattern?.setDelegate(authenticationDefinitionDelegate: self)
         vcPattern?.willMove(toParent: self)
-        self.addChild(self.vcPattern!)
+        self.addChild(vcPattern!)
         authenticationTypeContainer.addSubview((vcPattern?.view)!)
         vcPattern?.view.frame = authenticationTypeContainer.bounds
     }
     
     func authenticationSucceed(authentication:Authentication) {
         if self.authentication?.id != nil {
-//            self.authentication?.credentials = authentication.credentials
-//            self.authentication?.authenticationType = authentication.authenticationType
             updateAuthentication(authentication: authentication)
         }
         

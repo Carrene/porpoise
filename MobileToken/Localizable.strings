@@ -5,3 +5,12 @@
 // snakbar
 "sb_wrong_password" = "Wrong password";
 "sb_wrong_pattern" = "Wrong pattern";
+"sb_try_for_second_time" = "Try for second time";
+"sb_not_match" = "Not match";
+"sb_pattern_min_point_error" = "Select at least 4 point";
+
+//passWordHint
+"enter_at_least_eight_characters" = "At least 8 characters";
+"enter_at_least_one_capital_letter" = "At least one capital letter";
+"enter_at_least_one_digit" = "At least one digit";
+"enter_at_least_one_special_character" = "At least one of (@ # $ % + * ?)";

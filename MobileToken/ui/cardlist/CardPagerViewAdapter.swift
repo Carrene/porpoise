@@ -28,12 +28,12 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         if index == 0 {
-            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: BankCardPagerViewCell.IDENTIFIER, at: index) as! BankCardPagerViewCell
+            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
             cell.vCard.backgroundColor = .green
             return cell
         }else {
             
-            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: AddCardPagerViewCell.IDENTIFIER, at: index) as! AddCardPagerViewCell
+            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
             return cell
             
         }
