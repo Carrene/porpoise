@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - AMPopTip (3.5.0)
+  - CryptoSwift (0.13.0)
   - DropDown (2.3.12)
   - FSPagerView (0.8.1)
   - HUIPatternLockView-Swift (2.0.1)
@@ -20,8 +21,9 @@ PODS:
   - TTGSnackbar (1.7.5)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.7.3)
   - AMPopTip
+  - CryptoSwift
   - DropDown
   - FSPagerView
   - HUIPatternLockView-Swift (~> 2.0.1)
@@ -34,6 +36,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AMPopTip
+    - CryptoSwift
     - DropDown
     - FSPagerView
     - HUIPatternLockView-Swift
@@ -49,6 +52,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AMPopTip: 871ae0570b68fe396e714922b3f7d8ed6a36bb71
+  CryptoSwift: 16e78bebf567bad1c87b2d58f6547f25b74c31aa
   DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
   FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
   HUIPatternLockView-Swift: 0f72d91ff3aeb01f5cad43f6093c5361522bb472
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
 
-PODFILE CHECKSUM: 8935068932d4567ba775764f6707a0a75a5ae2b4
+PODFILE CHECKSUM: 252486db61383fbab7abb9dc6ccabe90113b1e64
 
 COCOAPODS: 1.5.3

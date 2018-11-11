@@ -5,31 +5,50 @@
 //  Created by hamed akhlaghi on 8/10/1397 AP.
 //  Copyright © 1397 ba24.ir. All rights reserved.
 //
-
+import CryptoSwift
 import Foundation
 import RealmSwift
 import ObjectMapper
 
 class User: Object, Mappable, NSCopying {
-    
+
     @objc private dynamic var PhoneNumber: String?
     public var phone: String? {
         get { return PhoneNumber }
         set { PhoneNumber = newValue }
     }
+    override class func primaryKey() -> String {
+        return "PhoneNumber"
+    }
+    
+    @objc private dynamic var Secret: String?
+    public var secret: String? {
+        get { return Secret }
+        set { Secret = newValue }
+    }
+    
+    private var activationCode: String?
+    public var  udid: String { return UIDevice.current.identifierForVendor!.uuidString.sha1() }
     
     required convenience init?(map: Map) {
         self.init()
     }
     
-    convenience init( phone: String? = nil) {
+    override static func ignoredProperties() -> [String] {
+        return ["secret"]
+    }
+    
+    convenience init( phone: String? = nil, activationCode: String? = nil) {
+        
         self.init()
         self.phone = phone
+        self.activationCode = activationCode
     }
     
     func mapping(map: Map) {
         map.shouldIncludeNilValues = true
         self.phone <- map["phone"]
+        self.secret <- map["secret"]
     }
     
     func copy(with zone: NSZone? = nil) -> Any {

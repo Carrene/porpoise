@@ -56,7 +56,7 @@
 		AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE81B262196D7F200AA0AF2 /* PasswordHintTableViewCell.xib */; };
 		AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B272196D7F200AA0AF2 /* PasswordHintTableViewCell.swift */; };
 		AFE81B2B2196D7F200AA0AF2 /* PasswordHintTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B282196D7F200AA0AF2 /* PasswordHintTableAdapter.swift */; };
-		AFE81B302196DD2E00AA0AF2 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepository.swift */; };
+		AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */; };
 		AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */; };
 		AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B332196E05900AA0AF2 /* RepositoryResponse.swift */; };
 		AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B342196E05900AA0AF2 /* Repository.swift */; };
@@ -67,6 +67,7 @@
 		AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */; };
 		AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */; };
 		AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */; };
+		AFE81B4D21970C3500AA0AF2 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,7 +145,7 @@
 		AFE81B262196D7F200AA0AF2 /* PasswordHintTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordHintTableViewCell.xib; sourceTree = "<group>"; };
 		AFE81B272196D7F200AA0AF2 /* PasswordHintTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordHintTableViewCell.swift; sourceTree = "<group>"; };
 		AFE81B282196D7F200AA0AF2 /* PasswordHintTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordHintTableAdapter.swift; sourceTree = "<group>"; };
-		AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRealmRepository.swift; sourceTree = "<group>"; };
 		AFE81B332196E05900AA0AF2 /* RepositoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
 		AFE81B342196E05900AA0AF2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 		AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPasswordViewController.swift; sourceTree = "<group>"; };
 		AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
 		AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -537,7 +539,8 @@
 			isa = PBXGroup;
 			children = (
 				AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */,
-				AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepository.swift */,
+				AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */,
+				AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */,
 			);
 			path = authentication;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
@@ -782,6 +786,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
@@ -857,7 +862,7 @@
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */,
-				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepository.swift in Sources */,
+				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
 				AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */,
 				AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */,
@@ -887,6 +892,7 @@
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
 				AFE81B212196D3CF00AA0AF2 /* Localized.swift in Sources */,
+				AFE81B4D21970C3500AA0AF2 /* AuthenticationRepository.swift in Sources */,
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class AuthenticationRealmRepository: AuthenticationRepository {
+class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
     
     func get(onDone: ((RepositoryResponse<Authentication>) -> ())?) {
         get(identifier: 1) { repositoryResponse in

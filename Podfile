@@ -12,6 +12,7 @@ target 'MobileToken' do
     pod "AMPopTip"
     pod "FSPagerView"
     pod "Alamofire", '~> 4.7.3'
+    pod "CryptoSwift", '~> 0.13.0'
     #pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.2.1'
     target 'MobileTokenTests' do
         inherit! :search_paths
