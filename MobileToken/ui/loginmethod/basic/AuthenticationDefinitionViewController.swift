@@ -73,7 +73,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     }
     
     func getAuthentication() {
-        let authenticationRestRepository = AuthenticationRealmRepository()
+        let authenticationRestRepository = AuthenticationRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
             if let error = repoResponse.error {
                 print("\(error)")
@@ -85,7 +85,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     }
     
     func updateAuthentication(authentication: Authentication) {
-        let authenticationRestRepository = AuthenticationRealmRepository()
+        let authenticationRestRepository = AuthenticationRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
             if let error = repoResponse.error {
                 print("\(error)")

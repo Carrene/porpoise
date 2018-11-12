@@ -13,29 +13,9 @@ class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
     
     func get(onDone: ((RepositoryResponse<Authentication>) -> ())?) {
         get(identifier: 1) { repositoryResponse in
-//            if repositoryResponse.value != nil {
                 onDone?(repositoryResponse)
-//            } else {
-//                self.create(Authentication()) { repositoryResponse in
                     onDone?(repositoryResponse)
-//                }
-//            }
         }
-    }
-    
-    func create(_ authentication: Authentication, onDone: ((RepositoryResponse<Authentication>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration)
-        guard realm.object(ofType: Authentication.self, forPrimaryKey: authentication.id) == nil else {
-            onDone?(RepositoryResponse(error: EntityExistException()))
-            return
-        }
-        
-        do {
-            try realm.write {
-                realm.add(authentication.copy() as! Authentication, update: false)
-            }
-            onDone?(RepositoryResponse(value: authentication.copy() as? Authentication))
-        } catch { onDone?(RepositoryResponse(error: error)) }
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Authentication>) -> ())?) {
@@ -62,16 +42,5 @@ class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
             onDone?(RepositoryResponse(error: error))
         }
     }
-    
-    func update(_ authentications: [Authentication], onDone: ((RepositoryResponse<[Authentication]>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
-    }
-    
-    func delete(_ authentication: Authentication, onDone: ((RepositoryResponse<Authentication>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
-    }
-    
-    func delete(_ authentications: [Authentication], onDone: ((RepositoryResponse<[Authentication]>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
-    }
+
 }

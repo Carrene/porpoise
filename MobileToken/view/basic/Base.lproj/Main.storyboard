@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ont-Lk-MDa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bIQ-4r-BhW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
+        <array key="roboto.ttf">
             <string>Roboto-Regular</string>
         </array>
     </customFonts>
@@ -175,7 +175,7 @@
         <!--Login method-->
         <scene sceneID="AsZ-0u-1oq">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionViewController" id="ont-Lk-MDa" customClass="AuthenticationDefinitionViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationDefinitionViewController" id="ont-Lk-MDa" customClass="AuthenticationDefinitionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W4l-eh-Wf7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
         <!--Authentication Definition Password View Controller-->
         <scene sceneID="qBx-Ul-jYq">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewControllerIdentifier" id="Fwo-aQ-T9y" customClass="AuthenticationDefinitionPasswordViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewControllerIdentifier" id="Fwo-aQ-T9y" customClass="AuthenticationDefinitionPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rrc-BX-ZdK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,8 +278,8 @@
                         <viewLayoutGuide key="safeArea" id="JnG-mf-R3b"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="NcB-TT-e3K"/>
                                 <exclude reference="K0y-P1-9iX"/>
+                                <exclude reference="NcB-TT-e3K"/>
                             </mask>
                         </variation>
                     </view>
@@ -295,7 +295,7 @@
         <!--Authentication Definition Pattern View Controller-->
         <scene sceneID="BZ0-z3-i1G">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionPatternViewControllerIdentifier" id="eeZ-pg-i40" customClass="AuthenticationDefinitionPatternViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationDefinitionPatternViewControllerIdentifier" id="eeZ-pg-i40" customClass="AuthenticationDefinitionPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Srk-Bq-TSu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +325,7 @@
         <!--Authentication View Controller-->
         <scene sceneID="pBb-P2-TWy">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationViewController" id="bIQ-4r-BhW" customClass="AuthenticationViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationViewController" id="bIQ-4r-BhW" customClass="AuthenticationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aiL-el-URe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,7 +364,7 @@
         <!--Authentication Password View Controller-->
         <scene sceneID="Nfm-2X-QBI">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationPasswordViewController" id="a18-y9-gs3" customClass="AuthenticationPasswordViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationPasswordViewController" id="a18-y9-gs3" customClass="AuthenticationPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cnY-EE-GwC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,7 +401,7 @@
         <!--Authentication Pattern View Controller-->
         <scene sceneID="ayK-Ja-PJH">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationPatternViewController" id="cRl-ei-Owx" customClass="AuthenticationPatternViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationPatternViewController" id="cRl-ei-Owx" customClass="AuthenticationPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZm-oK-tVe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

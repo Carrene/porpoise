@@ -15,7 +15,15 @@
 		AF246A7E219852EA00C44E4B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A812198687E00C44E4B /* CardTypeEnum.swift */; };
 		AF246A84219948F300C44E4B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A83219948F300C44E4B /* Token.swift */; };
-		AF246A862199762700C44E4B /* AuthenticationRestRealmRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A852199762700C44E4B /* AuthenticationRestRealmRestRepository.swift */; };
+		AF246A862199762700C44E4B /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A852199762700C44E4B /* AuthenticationRepository.swift */; };
+		AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8A21999AE400C44E4B /* UserRepository.swift */; };
+		AF246A8F21999AE400C44E4B /* UserRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8B21999AE400C44E4B /* UserRestRepository.swift */; };
+		AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8C21999AE400C44E4B /* UserRealmRepository.swift */; };
+		AF246A9121999AE400C44E4B /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8D21999AE400C44E4B /* UserRepositoryProtocol.swift */; };
+		AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A932199A2CE00C44E4B /* ApiHelper.swift */; };
+		AF246A962199A2CE00C44E4B /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A942199A2CE00C44E4B /* Interceptor.swift */; };
+		AF246A982199A59100C44E4B /* JwtPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A972199A59100C44E4B /* JwtPersistable.swift */; };
+		AF246A9A2199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -72,7 +80,6 @@
 		AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */; };
 		AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */; };
 		AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */; };
-		AFE81B4D21970C3500AA0AF2 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +110,15 @@
 		AF246A7D219852EA00C44E4B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AF246A812198687E00C44E4B /* CardTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTypeEnum.swift; sourceTree = "<group>"; };
 		AF246A83219948F300C44E4B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		AF246A852199762700C44E4B /* AuthenticationRestRealmRestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRestRealmRestRepository.swift; sourceTree = "<group>"; };
+		AF246A852199762700C44E4B /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		AF246A8A21999AE400C44E4B /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		AF246A8B21999AE400C44E4B /* UserRestRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRestRepository.swift; sourceTree = "<group>"; };
+		AF246A8C21999AE400C44E4B /* UserRealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRealmRepository.swift; sourceTree = "<group>"; };
+		AF246A8D21999AE400C44E4B /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AF246A932199A2CE00C44E4B /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		AF246A942199A2CE00C44E4B /* Interceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		AF246A972199A59100C44E4B /* JwtPersistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JwtPersistable.swift; sourceTree = "<group>"; };
+		AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsJwtPersistor.swift; sourceTree = "<group>"; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -166,7 +181,6 @@
 		AFE81B442196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPasswordViewController.swift; sourceTree = "<group>"; };
 		AFE81B462196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
 		AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +238,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF246A8921999AB700C44E4B /* user */ = {
+			isa = PBXGroup;
+			children = (
+				AF246A8C21999AE400C44E4B /* UserRealmRepository.swift */,
+				AF246A8A21999AE400C44E4B /* UserRepository.swift */,
+				AF246A8D21999AE400C44E4B /* UserRepositoryProtocol.swift */,
+				AF246A8B21999AE400C44E4B /* UserRestRepository.swift */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		AF246A922199A2A700C44E4B /* network */ = {
+			isa = PBXGroup;
+			children = (
+				AF246A932199A2CE00C44E4B /* ApiHelper.swift */,
+				AF246A942199A2CE00C44E4B /* Interceptor.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +303,7 @@
 		AF463BC62189DD1500DC8A3E /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				AF246A8921999AB700C44E4B /* user */,
 				AFE81B322196E00700AA0AF2 /* base */,
 				AFE81B2D2196DD1300AA0AF2 /* authentication */,
 				AF463BC72189DD2300DC8A3E /* configuration */,
@@ -353,6 +388,7 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AF246A922199A2A700C44E4B /* network */,
 				AFE81B372196E10500AA0AF2 /* error */,
 				AFE81B162196D26C00AA0AF2 /* util */,
 				AFE81B0B2196CCDA00AA0AF2 /* extentions */,
@@ -507,6 +543,8 @@
 		AFE81B162196D26C00AA0AF2 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
+				AF246A972199A59100C44E4B /* JwtPersistable.swift */,
 				AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */,
 				AFE81B192196D31600AA0AF2 /* UIColorHelper.swift */,
 				AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */,
@@ -554,8 +592,7 @@
 			children = (
 				AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */,
 				AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */,
-				AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */,
-				AF246A852199762700C44E4B /* AuthenticationRestRealmRestRepository.swift */,
+				AF246A852199762700C44E4B /* AuthenticationRepository.swift */,
 			);
 			path = authentication;
 			sourceTree = "<group>";
@@ -785,6 +822,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
@@ -801,6 +839,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
@@ -878,7 +917,10 @@
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
+				AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */,
+				AF246A8F21999AE400C44E4B /* UserRestRepository.swift in Sources */,
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
+				AF246A9121999AE400C44E4B /* UserRepositoryProtocol.swift in Sources */,
 				AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */,
 				AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */,
 				AF246A84219948F300C44E4B /* Token.swift in Sources */,
@@ -895,23 +937,27 @@
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */,
 				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
-				AF246A862199762700C44E4B /* AuthenticationRestRealmRestRepository.swift in Sources */,
+				AF246A862199762700C44E4B /* AuthenticationRepository.swift in Sources */,
 				AFE81B242196D4E700AA0AF2 /* NetHex.swift in Sources */,
 				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
 				AFE81B2B2196D7F200AA0AF2 /* PasswordHintTableAdapter.swift in Sources */,
 				AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */,
 				AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */,
 				AFE81B3D2196E11A00AA0AF2 /* EntityExistException.swift in Sources */,
+				AF246A962199A2CE00C44E4B /* Interceptor.swift in Sources */,
 				AFE81B0A2196CC6C00AA0AF2 /* AuthenticationDefinitionViewController.swift in Sources */,
 				AF246A7C21984A5500C44E4B /* Bank.swift in Sources */,
 				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
+				AF246A9A2199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift in Sources */,
 				AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */,
 				AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */,
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
+				AF246A982199A59100C44E4B /* JwtPersistable.swift in Sources */,
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
+				AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */,
 				AFE81B212196D3CF00AA0AF2 /* Localized.swift in Sources */,
-				AFE81B4D21970C3500AA0AF2 /* AuthenticationRepository.swift in Sources */,
+				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
@@ -1032,6 +1078,10 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WEB_SERVICE_HOST = 192.168.1.57;
+				WEB_SERVICE_PORT = 443;
+				WEB_SERVICE_SCHEME = https;
+				WEB_SERVICE_VERSION = 1;
 			};
 			name = Debug;
 		};
@@ -1088,6 +1138,10 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WEB_SERVICE_HOST = 192.168.1.57;
+				WEB_SERVICE_PORT = 443;
+				WEB_SERVICE_SCHEME = https;
+				WEB_SERVICE_VERSION = 1;
 			};
 			name = Release;
 		};
