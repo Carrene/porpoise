@@ -14,6 +14,8 @@
 		AF246A7C21984A5500C44E4B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
 		AF246A7E219852EA00C44E4B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A812198687E00C44E4B /* CardTypeEnum.swift */; };
+		AF246A84219948F300C44E4B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A83219948F300C44E4B /* Token.swift */; };
+		AF246A862199762700C44E4B /* AuthenticationRestRealmRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A852199762700C44E4B /* AuthenticationRestRealmRestRepository.swift */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -100,6 +102,8 @@
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		AF246A7D219852EA00C44E4B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AF246A812198687E00C44E4B /* CardTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTypeEnum.swift; sourceTree = "<group>"; };
+		AF246A83219948F300C44E4B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		AF246A852199762700C44E4B /* AuthenticationRestRealmRestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRestRealmRestRepository.swift; sourceTree = "<group>"; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				AF463BCF218ADD8200DC8A3E /* Authentication.swift */,
 				AF246A7B21984A5500C44E4B /* Bank.swift */,
 				AF246A7D219852EA00C44E4B /* Card.swift */,
+				AF246A83219948F300C44E4B /* Token.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -550,6 +555,7 @@
 				AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */,
 				AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */,
 				AFE81B4C21970C3500AA0AF2 /* AuthenticationRepository.swift */,
+				AF246A852199762700C44E4B /* AuthenticationRestRealmRestRepository.swift */,
 			);
 			path = authentication;
 			sourceTree = "<group>";
@@ -875,6 +881,7 @@
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
 				AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */,
 				AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */,
+				AF246A84219948F300C44E4B /* Token.swift in Sources */,
 				AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */,
 				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
 				AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */,
@@ -888,6 +895,7 @@
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */,
 				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
+				AF246A862199762700C44E4B /* AuthenticationRestRealmRestRepository.swift in Sources */,
 				AFE81B242196D4E700AA0AF2 /* NetHex.swift in Sources */,
 				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
 				AFE81B2B2196D7F200AA0AF2 /* PasswordHintTableAdapter.swift in Sources */,

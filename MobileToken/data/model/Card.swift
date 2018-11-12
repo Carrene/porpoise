@@ -12,6 +12,8 @@ import ObjectMapper_Realm
 import RealmSwift
 
 class Card: Object, Mappable, NSCopying{
+    var a: List<User>?
+    var b: [User]?
     
     @objc fileprivate dynamic var CardNumber: String? = nil
     public var number: String? {
@@ -43,24 +45,8 @@ class Card: Object, Mappable, NSCopying{
         case ADD = "ADD"
     }
    
-    private let TokenList: List<User>? = nil
-    public var tokenList:[User]? {
-        get {
-            return TokenList!.map{ $0.copy() as! User }
-        }
-        set {
-            TokenList!.append(objectsIn: newValue!)
-        }
-    }
+    var TokenList = List<User>()
 
-//    private var  backgroundColor: Int?
-//
-//    private var backgroundDarkColor: Int?
-
-    
-    
-    
-    
     required convenience init?(map: Map) {
         self.init()
     }
@@ -71,13 +57,14 @@ class Card: Object, Mappable, NSCopying{
         self.bank = bank
         self.name = name
         self.type = cardType
+        
     }
     
     func mapping(map: Map) {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return ""
+        return Card(number: self.number, bank: self.bank, name: self.name, cardType: self.type)
     }
     
     public func getMaskCardNumber() -> [String] {

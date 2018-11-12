@@ -13,13 +13,13 @@ class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
     
     func get(onDone: ((RepositoryResponse<Authentication>) -> ())?) {
         get(identifier: 1) { repositoryResponse in
-            if repositoryResponse.value != nil {
+//            if repositoryResponse.value != nil {
                 onDone?(repositoryResponse)
-            } else {
-                self.create(Authentication()) { repositoryResponse in
+//            } else {
+//                self.create(Authentication()) { repositoryResponse in
                     onDone?(repositoryResponse)
-                }
-            }
+//                }
+//            }
         }
     }
     
@@ -29,6 +29,7 @@ class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
             onDone?(RepositoryResponse(error: EntityExistException()))
             return
         }
+        
         do {
             try realm.write {
                 realm.add(authentication.copy() as! Authentication, update: false)
