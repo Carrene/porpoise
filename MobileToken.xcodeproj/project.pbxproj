@@ -27,6 +27,9 @@
 		AF246A9D219AA57B00C44E4B /* BankRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9C219AA57B00C44E4B /* BankRepositoryProtocol.swift */; };
 		AF246A9F219AAA1700C44E4B /* BankRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */; };
 		AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA0219AB17F00C44E4B /* BankRepository.swift */; };
+		AF246AA4219AB91700C44E4B /* CardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */; };
+		AF246AA6219ABBA400C44E4B /* CardRelmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA5219ABBA400C44E4B /* CardRelmRepsitory.swift */; };
+		AF246AA8219ACAC700C44E4B /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA7219ACAC600C44E4B /* CardRepository.swift */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -125,6 +128,9 @@
 		AF246A9C219AA57B00C44E4B /* BankRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRealmRepository.swift; sourceTree = "<group>"; };
 		AF246AA0219AB17F00C44E4B /* BankRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRepository.swift; sourceTree = "<group>"; };
+		AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AF246AA5219ABBA400C44E4B /* CardRelmRepsitory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRelmRepsitory.swift; sourceTree = "<group>"; };
+		AF246AA7219ACAC600C44E4B /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -274,6 +280,16 @@
 			path = bank;
 			sourceTree = "<group>";
 		};
+		AF246AA2219AB8CE00C44E4B /* card */ = {
+			isa = PBXGroup;
+			children = (
+				AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */,
+				AF246AA5219ABBA400C44E4B /* CardRelmRepsitory.swift */,
+				AF246AA7219ACAC600C44E4B /* CardRepository.swift */,
+			);
+			path = card;
+			sourceTree = "<group>";
+		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +335,7 @@
 		AF463BC62189DD1500DC8A3E /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				AF246AA2219AB8CE00C44E4B /* card */,
 				AF246A9B219AA53600C44E4B /* bank */,
 				AF246A8921999AB700C44E4B /* user */,
 				AFE81B322196E00700AA0AF2 /* base */,
@@ -969,7 +986,9 @@
 				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,
+				AF246AA4219AB91700C44E4B /* CardRepositoryProtocol.swift in Sources */,
 				AF246A9A2199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift in Sources */,
+				AF246AA8219ACAC700C44E4B /* CardRepository.swift in Sources */,
 				AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */,
 				AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */,
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
@@ -983,6 +1002,7 @@
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
+				AF246AA6219ABBA400C44E4B /* CardRelmRepsitory.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,

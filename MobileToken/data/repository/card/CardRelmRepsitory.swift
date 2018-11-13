@@ -1,5 +1,5 @@
 //
-//  BankRealmRepository.swift
+//  CardRelmRepsitory.swift
 //  MobileToken
 //
 //  Created by hamed akhlaghi on 8/22/1397 AP.
@@ -8,28 +8,28 @@
 
 import Foundation
 import RealmSwift
-class BanckRealmRepository: BankRepositoryProtocol {
-    func get(identifier: Int, onDone: ((RepositoryResponse<Bank>) -> ())?) {
+class CardRealmRepository: CardRepositoryProtocol {
+    func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }
     
-    func getAll(onDone: ((RepositoryResponse<[Bank]>) -> ())?) {
+    func getAll(onDone: ((RepositoryResponse<[Card]>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration)
-        let bankRealmResult: [Bank]? = realm.objects(Bank.self).map {$0.copy() as! Bank}
-        if bankRealmResult == nil {
+        let realmCardResult: [Card]? = realm.objects(Card.self).map{$0.copy() as! Card}
+        if realmCardResult == nil {
             onDone?(RepositoryResponse(value: nil))
         } else {
-            onDone?(RepositoryResponse(value: bankRealmResult))
+            onDone?(RepositoryResponse(value: realmCardResult))
         }
     }
     
-    func update(_ bank: Bank, onDone: ((RepositoryResponse<Bank>) -> ())?) {
+    func update(_ card: Card, onDone: ((RepositoryResponse<Card>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration)
         do {
             try realm.write {
-                realm.add(bank.copy() as! Bank, update: true)
+                realm.add(card.copy() as! Card, update: true)
             }
-            onDone?(RepositoryResponse(value: bank.copy() as? Bank))
+            onDone?(RepositoryResponse(value: card, restDataResponse: nil, error: nil))
         }
         catch {
             onDone?(RepositoryResponse(error: error))
