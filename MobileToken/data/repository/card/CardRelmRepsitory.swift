@@ -25,11 +25,19 @@ class CardRealmRepository: CardRepositoryProtocol {
     
     func update(_ card: Card, onDone: ((RepositoryResponse<Card>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration)
+        var existCard = realm.objects(Card.self).filter("CardNumber = '\(card.number!)'").first
+        if existCard == nil{
+            existCard = card
+        }
+        else {
+            existCard?.TokenList.append(objectsIn: card.TokenList)
+        }
+        
         do {
             try realm.write {
-                realm.add(card.copy() as! Card, update: true)
+                realm.add(existCard?.copy() as! Card, update: true)
             }
-            onDone?(RepositoryResponse(value: card, restDataResponse: nil, error: nil))
+            onDone?(RepositoryResponse(value: (existCard?.copy() as! Card), restDataResponse: nil, error: nil))
         }
         catch {
             onDone?(RepositoryResponse(error: error))
