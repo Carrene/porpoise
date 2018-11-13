@@ -5,6 +5,7 @@ PODS:
     - ObjectMapper (~> 3.3)
   - AMPopTip (3.5.0)
   - CryptoSwift (0.13.0)
+  - DeviceKit (1.9.0)
   - DropDown (2.3.12)
   - FSPagerView (0.8.1)
   - HUIPatternLockView-Swift (2.0.1)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.0)
   - AMPopTip
   - CryptoSwift (~> 0.13.0)
+  - DeviceKit
   - DropDown
   - FSPagerView
   - HUIPatternLockView-Swift (~> 2.0.1)
@@ -42,6 +44,7 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - AMPopTip
     - CryptoSwift
+    - DeviceKit
     - DropDown
     - FSPagerView
     - HUIPatternLockView-Swift
@@ -59,6 +62,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
   AMPopTip: 871ae0570b68fe396e714922b3f7d8ed6a36bb71
   CryptoSwift: 16e78bebf567bad1c87b2d58f6547f25b74c31aa
+  DeviceKit: a376cb3d0dda0c27c81dcc0d2b7b8600b6802065
   DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
   FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
   HUIPatternLockView-Swift: 0f72d91ff3aeb01f5cad43f6093c5361522bb472
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
 
-PODFILE CHECKSUM: 9730ccf105b19b292251d3a292aafc2f2989c4cc
+PODFILE CHECKSUM: 39e0710637c13dd53305b192d81122b8298c56f7
 
 COCOAPODS: 1.5.3

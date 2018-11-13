@@ -9,6 +9,7 @@ import CryptoSwift
 import Foundation
 import RealmSwift
 import ObjectMapper
+import DeviceKit
 
 class User: Object, Mappable, NSCopying {
 
@@ -27,8 +28,10 @@ class User: Object, Mappable, NSCopying {
         set { Secret = newValue }
     }
     
-    private var activationCode: String?
+    public var activationCode: String?
+    
     public var  udid: String { return UIDevice.current.identifierForVendor!.uuidString.sha1() }
+     public var deviceName: String { return Device().description }
     
     required convenience init?(map: Map) {
         self.init()
