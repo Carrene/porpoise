@@ -42,7 +42,6 @@
 		AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
 		AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
-		AFB39B522189A6A600302624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B512189A6A600302624 /* ViewController.swift */; };
 		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
 		AFB39B572189A6A700302624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
 		AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
@@ -54,15 +53,11 @@
 		AFB9BB37218F105E004F16DD /* roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB34218F105E004F16DD /* roboto.ttf */; };
 		AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */; };
 		AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */; };
-		AFB9BB3C218F1E52004F16DD /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB3B218F1E52004F16DD /* MyButton.xib */; };
-		AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB3D218F1E8A004F16DD /* MyButton.swift */; };
-		AFB9BB42218F2B0A004F16DD /* MyButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB41218F2B0A004F16DD /* MyButton1.swift */; };
 		AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
 		AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
 		AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */; };
 		AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
 		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
-		AFE190E6218F33060023E785 /* MyButton1.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E5218F33050023E785 /* MyButton1.xib */; };
 		AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
 		AFE81B0A2196CC6C00AA0AF2 /* AuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B092196CC6C00AA0AF2 /* AuthenticationDefinitionViewController.swift */; };
@@ -147,7 +142,6 @@
 		AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBankViewDesignable.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B4F2189A6A600302624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB39B512189A6A600302624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFB39B542189A6A600302624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFB39B562189A6A700302624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB39B592189A6A700302624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -164,15 +158,11 @@
 		AFB9BB34218F105E004F16DD /* roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto.ttf; sourceTree = "<group>"; };
 		AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansMediumEnglish.ttf; sourceTree = "<group>"; };
 		AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansReqular.ttf; sourceTree = "<group>"; };
-		AFB9BB3B218F1E52004F16DD /* MyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyButton.xib; sourceTree = "<group>"; };
-		AFB9BB3D218F1E8A004F16DD /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
-		AFB9BB41218F2B0A004F16DD /* MyButton1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton1.swift; sourceTree = "<group>"; };
 		AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagerViewAdapter.swift; sourceTree = "<group>"; };
 		AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
-		AFE190E5218F33050023E785 /* MyButton1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyButton1.xib; sourceTree = "<group>"; };
 		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
 		AFE190EB219049030023E785 /* OtpViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewDesignable.swift; sourceTree = "<group>"; };
 		AFE81B092196CC6C00AA0AF2 /* AuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -321,7 +311,6 @@
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* loginmethod */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
-				AF463BCB2189E59E00DC8A3E /* viewcontroller */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 			);
 			path = ui;
@@ -377,14 +366,6 @@
 				AFB9BB25218ED9BD004F16DD /* basic */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		AF463BCB2189E59E00DC8A3E /* viewcontroller */ = {
-			isa = PBXGroup;
-			children = (
-				AFB39B512189A6A600302624 /* ViewController.swift */,
-			);
-			path = viewcontroller;
 			sourceTree = "<group>";
 		};
 		AF463BCC2189E5F200DC8A3E /* assets */ = {
@@ -449,10 +430,6 @@
 				AF463BC22189D8CF00DC8A3E /* data */,
 				AFB39B5B2189A6A700302624 /* Info.plist */,
 				AFAD230121908A9600EC00CB /* R.generated.swift */,
-				AFE190E5218F33050023E785 /* MyButton1.xib */,
-				AFB9BB3B218F1E52004F16DD /* MyButton.xib */,
-				AFB9BB3D218F1E8A004F16DD /* MyButton.swift */,
-				AFB9BB41218F2B0A004F16DD /* MyButton1.swift */,
 				AFE81B4A2196FA3400AA0AF2 /* Localizable.strings */,
 			);
 			path = MobileToken;
@@ -820,11 +797,9 @@
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */,
 				AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */,
-				AFE190E6218F33060023E785 /* MyButton1.xib in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
-				AFB9BB3C218F1E52004F16DD /* MyButton.xib in Resources */,
 				AFB9BB37218F105E004F16DD /* roboto.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,17 +950,14 @@
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
 				AF246A9121999AE400C44E4B /* UserRepositoryProtocol.swift in Sources */,
 				AFE81B402196EE3400AA0AF2 /* AuthenticationViewController.swift in Sources */,
-				AFB9BB3E218F1E8A004F16DD /* MyButton.swift in Sources */,
 				AF246A84219948F300C44E4B /* Token.swift in Sources */,
 				AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */,
-				AFB39B522189A6A600302624 /* ViewController.swift in Sources */,
 				AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */,
 				AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */,
 				AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */,
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
 				AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */,
-				AFB9BB42218F2B0A004F16DD /* MyButton1.swift in Sources */,
 				AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */,
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */,
