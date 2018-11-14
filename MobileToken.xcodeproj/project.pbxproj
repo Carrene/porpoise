@@ -33,6 +33,9 @@
 		AF246AAB219ADC3300C44E4B /* TokenRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */; };
 		AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */; };
 		AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAE219AE0A500C44E4B /* TokenRepository.swift */; };
+		AF285FF2219C46E300D8C342 /* BankPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */; };
+		AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */; };
+		AF285FF6219C4A3500D8C342 /* BankPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -132,6 +135,9 @@
 		AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRealmRepository.swift; sourceTree = "<group>"; };
 		AF246AAE219AE0A500C44E4B /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewAdapter.swift; sourceTree = "<group>"; };
+		AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankPagerViewCell.xib; sourceTree = "<group>"; };
+		AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewCell.swift; sourceTree = "<group>"; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -296,6 +302,26 @@
 			path = token;
 			sourceTree = "<group>";
 		};
+		AF285FEF219C42B500D8C342 /* registration */ = {
+			isa = PBXGroup;
+			children = (
+				AF285FF0219C42D600D8C342 /* phoneinput */,
+				AFE81B082196CC2D00AA0AF2 /* loginmethod */,
+				AFE81B3E2196EE1300AA0AF2 /* authentication */,
+			);
+			path = registration;
+			sourceTree = "<group>";
+		};
+		AF285FF0219C42D600D8C342 /* phoneinput */ = {
+			isa = PBXGroup;
+			children = (
+				AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */,
+				AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */,
+				AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */,
+			);
+			path = phoneinput;
+			sourceTree = "<group>";
+		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,8 +334,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				AFE81B3E2196EE1300AA0AF2 /* authentication */,
-				AFE81B082196CC2D00AA0AF2 /* loginmethod */,
+				AF285FEF219C42B500D8C342 /* registration */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 			);
@@ -796,6 +821,7 @@
 				AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */,
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */,
+				AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */,
 				AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
@@ -988,10 +1014,12 @@
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
 				AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */,
 				AFE81B212196D3CF00AA0AF2 /* Localized.swift in Sources */,
+				AF285FF2219C46E300D8C342 /* BankPagerViewAdapter.swift in Sources */,
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */,
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
+				AF285FF6219C4A3500D8C342 /* BankPagerViewCell.swift in Sources */,
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
 				AF246AA6219ABBA400C44E4B /* CardRelmRepsitory.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
