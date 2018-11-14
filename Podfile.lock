@@ -29,7 +29,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.0)
   - AMPopTip
   - CryptoSwift (~> 0.13.0)
-  - DeviceKit
+  - DeviceKit (~> 1.9.0)
   - DropDown
   - FSPagerView
   - HUIPatternLockView-Swift (~> 2.0.1)
@@ -75,6 +75,6 @@ SPEC CHECKSUMS:
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
 
-PODFILE CHECKSUM: 39e0710637c13dd53305b192d81122b8298c56f7
+PODFILE CHECKSUM: 783984a8ad72e09dff9f0a14c043cbabd706b4b6
 
 COCOAPODS: 1.5.3
