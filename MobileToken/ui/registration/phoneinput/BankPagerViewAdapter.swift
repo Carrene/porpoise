@@ -11,15 +11,15 @@ import Foundation
 import FSPagerView
 
 protocol BankPagerViewDelegate {
-    func selectedCard(cardIndex: Int)
+    func selectedCard(bankIndex: Int)
 }
 class BankPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource {
     
     var bankPagerViewDelegate: BankPagerViewDelegate?
     var selectedIndex = 0
     
-    func setDelegate(cardPagerViewDelegate: BankPagerViewDelegate) {
-        self.bankPagerViewDelegate = cardPagerViewDelegate
+    func setDelegate(bankPagerViewDelegate: BankPagerViewDelegate) {
+        self.bankPagerViewDelegate = bankPagerViewDelegate
     }
     
     

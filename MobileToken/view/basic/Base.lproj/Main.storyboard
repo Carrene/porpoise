@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bIQ-4r-BhW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gek-9K-QK6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
+        </array>
         <array key="roboto.ttf">
             <string>Roboto-Regular</string>
         </array>
@@ -299,5 +303,146 @@
             </objects>
             <point key="canvasLocation" x="-1" y="-1577"/>
         </scene>
+        <!--Phone Input View Controller-->
+        <scene sceneID="Gbq-jE-UxW">
+            <objects>
+                <viewController id="Gek-9K-QK6" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O4N-yI-mNh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZq-MN-bce" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="90" width="375" height="105"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="17m-zn-bzo"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-CX-96k">
+                                <rect key="frame" x="0.0" y="205" width="375" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0m-YM-yQG">
+                                <rect key="frame" x="5" y="272" width="365" height="20"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-BL-e4F">
+                                <rect key="frame" x="30" y="308" width="315" height="110"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQH-t8-Pwc" userLabel="vLine">
+                                        <rect key="frame" x="32.5" y="54" width="250" height="2"/>
+                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="5rz-yG-9tW"/>
+                                            <constraint firstAttribute="height" constant="2" id="foH-Iw-pvc"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+۴۹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSG-ju-4iV">
+                                        <rect key="frame" x="32.5" y="73" width="36" height="20"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4w-k1-bxS" userLabel="vVertivalLine">
+                                        <rect key="frame" x="88.5" y="69" width="2" height="28"/>
+                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="LfY-PY-1x5"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="919 834 4542" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JaQ-Dg-zSE">
+                                        <rect key="frame" x="100.5" y="67.5" width="182" height="30"/>
+                                        <color key="backgroundColor" name="primary"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstItem="g4w-k1-bxS" firstAttribute="top" secondItem="cQH-t8-Pwc" secondAttribute="bottom" constant="13" id="351-nH-Kkt"/>
+                                    <constraint firstItem="cQH-t8-Pwc" firstAttribute="centerY" secondItem="eCa-BL-e4F" secondAttribute="centerY" id="8Ws-Q4-WzD"/>
+                                    <constraint firstAttribute="bottom" secondItem="g4w-k1-bxS" secondAttribute="bottom" constant="13" id="GUV-g3-5Rn"/>
+                                    <constraint firstItem="cQH-t8-Pwc" firstAttribute="centerX" secondItem="eCa-BL-e4F" secondAttribute="centerX" id="IKs-5b-5Il"/>
+                                    <constraint firstAttribute="bottom" secondItem="LSG-ju-4iV" secondAttribute="bottom" constant="17" id="If7-2d-sbW"/>
+                                    <constraint firstItem="g4w-k1-bxS" firstAttribute="leading" secondItem="LSG-ju-4iV" secondAttribute="trailing" constant="20" id="Liq-IS-8LQ"/>
+                                    <constraint firstItem="JaQ-Dg-zSE" firstAttribute="centerY" secondItem="eCa-BL-e4F" secondAttribute="centerY" multiplier="1.5" id="PlE-8z-0An"/>
+                                    <constraint firstItem="JaQ-Dg-zSE" firstAttribute="trailing" secondItem="cQH-t8-Pwc" secondAttribute="trailing" id="U6A-qF-Nly"/>
+                                    <constraint firstItem="JaQ-Dg-zSE" firstAttribute="leading" secondItem="g4w-k1-bxS" secondAttribute="trailing" constant="10" id="eRp-U9-ASi"/>
+                                    <constraint firstItem="LSG-ju-4iV" firstAttribute="top" secondItem="cQH-t8-Pwc" secondAttribute="bottom" constant="17" id="fKf-cl-kW7"/>
+                                    <constraint firstAttribute="width" constant="315" id="gTn-K3-G2H"/>
+                                    <constraint firstItem="LSG-ju-4iV" firstAttribute="leading" secondItem="cQH-t8-Pwc" secondAttribute="leading" id="rBJ-aT-uqg"/>
+                                    <constraint firstAttribute="height" constant="110" id="sO1-uK-YjY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIP-OJ-uy5">
+                                <rect key="frame" x="30" y="534" width="315" height="48"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pBe-Po-qat"/>
+                                    <constraint firstAttribute="width" constant="315" id="wiW-JI-b3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <state key="normal" title="دریافت کد فعال‌سازی">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtReceiveActivationCode:" destination="Gek-9K-QK6" eventType="touchUpInside" id="aat-eZ-LDK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک مورد نظر برای ثبت‌نام را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chm-mM-4PG">
+                                <rect key="frame" x="5" y="50" width="375" height="20"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="Heu-cf-2qR" firstAttribute="trailing" secondItem="Lex-CX-96k" secondAttribute="trailing" id="5mP-Kx-RO6"/>
+                            <constraint firstItem="eCa-BL-e4F" firstAttribute="centerX" secondItem="Heu-cf-2qR" secondAttribute="centerX" id="ACK-3p-Plq"/>
+                            <constraint firstItem="chm-mM-4PG" firstAttribute="leading" secondItem="Heu-cf-2qR" secondAttribute="leading" constant="5" id="I3X-M0-fjB"/>
+                            <constraint firstItem="Lex-CX-96k" firstAttribute="leading" secondItem="Heu-cf-2qR" secondAttribute="leading" id="TKu-jH-2GF"/>
+                            <constraint firstItem="nZq-MN-bce" firstAttribute="leading" secondItem="Heu-cf-2qR" secondAttribute="leading" id="U2w-S2-fJh"/>
+                            <constraint firstItem="Heu-cf-2qR" firstAttribute="trailing" secondItem="l0m-YM-yQG" secondAttribute="trailing" constant="5" id="UNB-fl-BvU"/>
+                            <constraint firstItem="eCa-BL-e4F" firstAttribute="firstBaseline" secondItem="l0m-YM-yQG" secondAttribute="baseline" constant="20" id="UpP-1W-Huj"/>
+                            <constraint firstItem="chm-mM-4PG" firstAttribute="top" secondItem="Heu-cf-2qR" secondAttribute="top" constant="30" id="ZTN-QQ-dgX"/>
+                            <constraint firstItem="l0m-YM-yQG" firstAttribute="leading" secondItem="Heu-cf-2qR" secondAttribute="leading" constant="5" id="aHr-X4-7Aj"/>
+                            <constraint firstItem="Heu-cf-2qR" firstAttribute="bottom" secondItem="nIP-OJ-uy5" secondAttribute="bottom" constant="85" id="cSz-e0-mGT"/>
+                            <constraint firstItem="l0m-YM-yQG" firstAttribute="top" secondItem="Lex-CX-96k" secondAttribute="bottom" constant="30" id="fNG-TY-QiY"/>
+                            <constraint firstItem="chm-mM-4PG" firstAttribute="trailing" secondItem="Heu-cf-2qR" secondAttribute="trailing" constant="5" id="i5T-5X-7Wj"/>
+                            <constraint firstItem="nZq-MN-bce" firstAttribute="top" secondItem="chm-mM-4PG" secondAttribute="bottom" constant="20" id="mEH-JK-aTc"/>
+                            <constraint firstItem="nIP-OJ-uy5" firstAttribute="leading" secondItem="Heu-cf-2qR" secondAttribute="leading" constant="30" id="n22-qO-9g5"/>
+                            <constraint firstItem="Heu-cf-2qR" firstAttribute="trailing" secondItem="nIP-OJ-uy5" secondAttribute="trailing" constant="30" id="r1O-rF-yQA"/>
+                            <constraint firstItem="Lex-CX-96k" firstAttribute="top" secondItem="nZq-MN-bce" secondAttribute="bottom" constant="10" id="t7f-9N-V3i"/>
+                            <constraint firstItem="Heu-cf-2qR" firstAttribute="trailing" secondItem="nZq-MN-bce" secondAttribute="trailing" id="tYC-St-F58"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Heu-cf-2qR"/>
+                    </view>
+                    <connections>
+                        <outlet property="fpvBank" destination="nZq-MN-bce" id="vKt-hi-4Cl"/>
+                        <outlet property="lbPhoneCode" destination="LSG-ju-4iV" id="poE-UF-NW6"/>
+                        <outlet property="tfPhoneNumber" destination="JaQ-Dg-zSE" id="Sed-te-iNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yea-mU-sDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-33.733133433283363"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.094117647058823528" green="0.5725490196078431" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -36,6 +36,7 @@
 		AF285FF2219C46E300D8C342 /* BankPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */; };
 		AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */; };
 		AF285FF6219C4A3500D8C342 /* BankPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */; };
+		AF285FFA219C52F700D8C342 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -138,6 +139,7 @@
 		AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewAdapter.swift; sourceTree = "<group>"; };
 		AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankPagerViewCell.xib; sourceTree = "<group>"; };
 		AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewCell.swift; sourceTree = "<group>"; };
+		AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputViewController.swift; sourceTree = "<group>"; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */,
 				AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */,
 				AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */,
+				AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */,
 			);
 			path = phoneinput;
 			sourceTree = "<group>";
@@ -972,6 +975,7 @@
 				AFE81B4B2196FA3400AA0AF2 /* Localizable.strings in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */,
+				AF285FFA219C52F700D8C342 /* PhoneInputViewController.swift in Sources */,
 				AF246A8F21999AE400C44E4B /* UserRestRepository.swift in Sources */,
 				AFE81B1C2196D31700AA0AF2 /* UIColorHelper.swift in Sources */,
 				AF246A9121999AE400C44E4B /* UserRepositoryProtocol.swift in Sources */,
