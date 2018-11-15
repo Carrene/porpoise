@@ -10,12 +10,25 @@ import UIKit
 import TTGSnackbar
 class UIHelper {
     
-    static var robotoFont = UIFont(name: "Roboto-Regular", size:16 )!
-    static var robotoTitleFont = UIFont(name: "Roboto-Regular", size:28 )!
-    static var robotoDetailFont = UIFont(name: "Roboto-Regular", size:14 )!
-    static var robotoPlaceholderFont = UIFont(name: "Roboto-Regular", size:20 )!
-    static func setTabbarItemFont(tabBarItem:UITabBarItem) {
-        
+    
+    static func iranSanseBold(size: CGFloat) -> UIFont {
+        return UIFont(name: "IRANSansMobile-Bold", size: size)!
+    }
+    
+    static func iranSanseLight(size: CGFloat) -> UIFont {
+        return UIFont(name: "IRANSansMobile-Light", size: size)!
+    }
+    
+    static func iranSanseMedium(size: CGFloat) -> UIFont {
+        return UIFont(name: "IRANSansMobile-Medium", size: size)!
+    }
+    
+    static func iranSanseUltraLight(size: CGFloat) -> UIFont {
+        return UIFont(name: "IRANSansMobile-UltraLight", size: size)!
+    }
+    
+    static func iranSanseMobile(size: CGFloat) -> UIFont {
+        return UIFont(name: "IRANSansMobile", size: size)!
     }
     
     static func showFailedSnackBar() {

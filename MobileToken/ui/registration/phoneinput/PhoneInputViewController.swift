@@ -18,9 +18,12 @@ class PhoneInputViewController: UIViewController, BankPagerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initBankPagerView()
-
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+       
+    }
     func initBankPagerView() {
         let bankNib = UINib(resource: R.nib.bankPagerViewCell)
         fpvBank.register(bankNib, forCellWithReuseIdentifier: R.nib.bankPagerViewCell.identifier)

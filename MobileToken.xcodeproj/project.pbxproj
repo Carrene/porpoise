@@ -37,6 +37,11 @@
 		AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */; };
 		AF285FF6219C4A3500D8C342 /* BankPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */; };
 		AF285FFA219C52F700D8C342 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */; };
+		AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
+		AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
+		AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
+		AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
+		AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
 		AF463BC92189DD4900DC8A3E /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCF218ADD8200DC8A3E /* Authentication.swift */; };
@@ -53,10 +58,6 @@
 		AFB39B702189A6A700302624 /* MobileTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */; };
 		AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
 		AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
-		AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB33218F105E004F16DD /* IranSansMediumFarsi.ttf */; };
-		AFB9BB37218F105E004F16DD /* roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB34218F105E004F16DD /* roboto.ttf */; };
-		AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */; };
-		AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */; };
 		AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
 		AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
 		AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */; };
@@ -140,6 +141,11 @@
 		AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankPagerViewCell.xib; sourceTree = "<group>"; };
 		AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewCell.swift; sourceTree = "<group>"; };
 		AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputViewController.swift; sourceTree = "<group>"; };
+		AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Bold.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-UltraLight.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-UltraLight.ttf"; sourceTree = SOURCE_ROOT; };
+		AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Light.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSansMobile.ttf; path = MobileToken/assets/fonts/IRANSansMobile.ttf; sourceTree = SOURCE_ROOT; };
+		AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Medium.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Medium.ttf"; sourceTree = SOURCE_ROOT; };
 		AF463BC82189DD4900DC8A3E /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF463BCF218ADD8200DC8A3E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -162,10 +168,6 @@
 		AFB39B712189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB9BB27218EE0D7004F16DD /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellXibView.swift; sourceTree = "<group>"; };
-		AFB9BB33218F105E004F16DD /* IranSansMediumFarsi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansMediumFarsi.ttf; sourceTree = "<group>"; };
-		AFB9BB34218F105E004F16DD /* roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto.ttf; sourceTree = "<group>"; };
-		AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansMediumEnglish.ttf; sourceTree = "<group>"; };
-		AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansReqular.ttf; sourceTree = "<group>"; };
 		AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagerViewAdapter.swift; sourceTree = "<group>"; };
 		AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
@@ -325,6 +327,19 @@
 			path = phoneinput;
 			sourceTree = "<group>";
 		};
+		AF28600D219D7ADD00D8C342 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */,
+				AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */,
+				AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */,
+				AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */,
+				AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */,
+			);
+			name = fonts;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,7 +414,7 @@
 		AF463BCC2189E5F200DC8A3E /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				AFB9BB2E218F0DEE004F16DD /* fonts */,
+				AF28600D219D7ADD00D8C342 /* fonts */,
 				AFB39B562189A6A700302624 /* Assets.xcassets */,
 			);
 			path = assets;
@@ -499,17 +514,6 @@
 				AFE190E7219029430023E785 /* card */,
 			);
 			path = nibs;
-			sourceTree = "<group>";
-		};
-		AFB9BB2E218F0DEE004F16DD /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AFB9BB39218F106D004F16DD /* IranSansReqular.ttf */,
-				AFB9BB35218F105E004F16DD /* IranSansMediumEnglish.ttf */,
-				AFB9BB33218F105E004F16DD /* IranSansMediumFarsi.ttf */,
-				AFB9BB34218F105E004F16DD /* roboto.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		AFBC2ADC21918E3000D37C84 /* cardlist */ = {
@@ -817,19 +821,20 @@
 			files = (
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
+				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
+				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
-				AFB9BB3A218F106E004F16DD /* IranSansReqular.ttf in Resources */,
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
-				AFB9BB38218F105E004F16DD /* IranSansMediumEnglish.ttf in Resources */,
 				AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */,
-				AFB9BB36218F105E004F16DD /* IranSansMediumFarsi.ttf in Resources */,
+				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
+				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
+				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
-				AFB9BB37218F105E004F16DD /* roboto.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
