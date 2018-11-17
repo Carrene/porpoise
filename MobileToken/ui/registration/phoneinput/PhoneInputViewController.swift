@@ -7,38 +7,47 @@
 //
 
 import UIKit
-import FSPagerView
 import CountryPickerView
 class PhoneInputViewController: UIViewController, BankPagerViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource {
     
     
+    @IBOutlet var lbEnterPhone: UILabel!
+    @IBOutlet var lbChooseBank: UILabel!
     @IBOutlet weak var tfPhoneNumber: UITextField!
     @IBOutlet weak var lbPhoneCode: UILabel!
-    @IBOutlet weak var fpvBank: FSPagerView!
+    @IBOutlet var bankCollectionView: UICollectionView!
     @IBOutlet var vCountryPicker: CountryPickerView!
+    @IBOutlet var vPhone: UIView!
     
-    var bankPagerViewAdapter: BankPagerViewAdapter?
+    var bankCollectionViewAdapter: BankCollectionViewAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
         initBankPagerView()
         initCountryPicker()
-        lbPhoneCode.font = UIHelper.iranSanseBold(size: 16)
+        initUIComponent()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
        
     }
+    
+    func initUIComponent() {
+        lbPhoneCode.font = R.font.iranSansMobileBold(size: 16)
+        lbChooseBank.font = R.font.iranSansMobileBold(size: 16)
+        lbEnterPhone.font = R.font.iranSansMobileMedium(size: 16)
+        tfPhoneNumber.font = R.font.iranSansMobileMedium(size: 16)
+        vPhone.layer.cornerRadius = 10
+    }
+    
     func initBankPagerView() {
-        let bankNib = UINib(resource: R.nib.bankPagerViewCell)
-        fpvBank.register(bankNib, forCellWithReuseIdentifier: R.nib.bankPagerViewCell.identifier)
-        bankPagerViewAdapter = BankPagerViewAdapter()
-        bankPagerViewAdapter?.setDelegate(bankPagerViewDelegate: self)
-        fpvBank.delegate = bankPagerViewAdapter
-        fpvBank.dataSource = bankPagerViewAdapter
-        fpvBank.itemSize = CGSize(width: 140, height: 100)
-        fpvBank.interitemSpacing = 10
-        fpvBank.reloadData()
+        let bankNib = UINib(resource: R.nib.bankCollectionViewCell)
+        bankCollectionView.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
+        bankCollectionViewAdapter = BankCollectionViewAdapter()
+        bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
+        bankCollectionView.delegate = bankCollectionViewAdapter
+        bankCollectionView.dataSource = bankCollectionViewAdapter
+        bankCollectionView.reloadData()
     }
     
     func initCountryPicker() {

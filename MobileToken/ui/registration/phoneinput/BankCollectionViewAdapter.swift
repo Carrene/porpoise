@@ -1,0 +1,52 @@
+//
+//  BankPagerViewAdapter.swift
+//  MobileToken
+//
+//  Created by hamed akhlaghi on 8/23/1397 AP.
+//  Copyright © 1397 ba24.ir. All rights reserved.
+//
+
+import Foundation
+import Foundation
+import UIKit
+
+protocol BankPagerViewDelegate {
+    func selectedCard(bankIndex: Int)
+}
+class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollectionViewDelegate  {
+    
+    
+    var bankPagerViewDelegate: BankPagerViewDelegate?
+    var selectedIndex = 0
+    
+    func setDelegate(bankPagerViewDelegate: BankPagerViewDelegate) {
+        self.bankPagerViewDelegate = bankPagerViewDelegate
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
+        cell.vCell.layer.cornerRadius = 10
+        cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+        cell.vCell.layer.borderWidth = 2
+        cell.lbBankName.font = R.font.iranSansMobileBold(size: 16)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell)
+        cell.vCell.backgroundColor = R.color.ayandehColor()
+        cell.lbBankName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell).vCell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        
+    }
+    
+    
+}

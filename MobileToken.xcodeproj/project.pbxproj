@@ -34,9 +34,9 @@
 		AF246AAB219ADC3300C44E4B /* TokenRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */; };
 		AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */; };
 		AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAE219AE0A500C44E4B /* TokenRepository.swift */; };
-		AF285FF2219C46E300D8C342 /* BankPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */; };
-		AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */; };
-		AF285FF6219C4A3500D8C342 /* BankPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */; };
+		AF285FF2219C46E300D8C342 /* BankCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */; };
+		AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
+		AF285FF6219C4A3500D8C342 /* BankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */; };
 		AF285FFA219C52F700D8C342 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */; };
 		AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
 		AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
@@ -139,9 +139,9 @@
 		AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRealmRepository.swift; sourceTree = "<group>"; };
 		AF246AAE219AE0A500C44E4B /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
-		AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewAdapter.swift; sourceTree = "<group>"; };
-		AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankPagerViewCell.xib; sourceTree = "<group>"; };
-		AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPagerViewCell.swift; sourceTree = "<group>"; };
+		AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCollectionViewCell.xib; sourceTree = "<group>"; };
+		AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputViewController.swift; sourceTree = "<group>"; };
 		AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Bold.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-UltraLight.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-UltraLight.ttf"; sourceTree = SOURCE_ROOT; };
@@ -258,6 +258,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ACC902B721A0406A0072CFD5 /* registration */ = {
+			isa = PBXGroup;
+			children = (
+				AC64C168219FF9F2007BA829 /* Registration.storyboard */,
+			);
+			path = registration;
+			sourceTree = "<group>";
+		};
 		AF246A8921999AB700C44E4B /* user */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,9 +329,9 @@
 		AF285FF0219C42D600D8C342 /* phoneinput */ = {
 			isa = PBXGroup;
 			children = (
-				AF285FF1219C46E300D8C342 /* BankPagerViewAdapter.swift */,
-				AF285FF3219C498000D8C342 /* BankPagerViewCell.xib */,
-				AF285FF5219C4A3500D8C342 /* BankPagerViewCell.swift */,
+				AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */,
+				AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */,
+				AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */,
 				AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */,
 			);
 			path = phoneinput;
@@ -407,9 +415,9 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				ACC902B721A0406A0072CFD5 /* registration */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
-				AC64C168219FF9F2007BA829 /* Registration.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -831,7 +839,7 @@
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
-				AF285FF4219C498000D8C342 /* BankPagerViewCell.xib in Resources */,
+				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
 				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
@@ -1029,12 +1037,12 @@
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
 				AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */,
 				AFE81B212196D3CF00AA0AF2 /* Localized.swift in Sources */,
-				AF285FF2219C46E300D8C342 /* BankPagerViewAdapter.swift in Sources */,
+				AF285FF2219C46E300D8C342 /* BankCollectionViewAdapter.swift in Sources */,
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */,
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
-				AF285FF6219C4A3500D8C342 /* BankPagerViewCell.swift in Sources */,
+				AF285FF6219C4A3500D8C342 /* BankCollectionViewCell.swift in Sources */,
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
 				AF246AA6219ABBA400C44E4B /* CardRelmRepsitory.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
