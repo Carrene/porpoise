@@ -8,16 +8,21 @@
 
 import UIKit
 import FSPagerView
-class PhoneInputViewController: UIViewController, BankPagerViewDelegate {
+import CountryPickerView
+class PhoneInputViewController: UIViewController, BankPagerViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource {
+    
     
     @IBOutlet weak var tfPhoneNumber: UITextField!
     @IBOutlet weak var lbPhoneCode: UILabel!
     @IBOutlet weak var fpvBank: FSPagerView!
+    @IBOutlet var vCountryPicker: CountryPickerView!
     
     var bankPagerViewAdapter: BankPagerViewAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
         initBankPagerView()
+        initCountryPicker()
+        lbPhoneCode.font = UIHelper.iranSanseBold(size: 16)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +39,26 @@ class PhoneInputViewController: UIViewController, BankPagerViewDelegate {
         fpvBank.itemSize = CGSize(width: 140, height: 100)
         fpvBank.interitemSpacing = 10
         fpvBank.reloadData()
+    }
+    
+    func initCountryPicker() {
+        self.vCountryPicker.textColor = .white
+        vCountryPicker.delegate = self
+        vCountryPicker.dataSource = self
+        vCountryPicker.showPhoneCodeInView = false
+        vCountryPicker.showCountryCodeInView = true
+        vCountryPicker.setCountryByPhoneCode("+98")
+        let index = vCountryPicker.countries.index(where: { (item) -> Bool in
+            item.phoneCode == "+98" })!
+        vCountryPicker.countries[index].name = "Iran"
+    }
+    
+    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
+        self.lbPhoneCode.text = country.phoneCode
+    }
+    
+    func sectionTitleForPreferredCountries(in countryPickerView: CountryPickerView) -> String? {
+        return "country".localized().lowercased()
     }
     
     @IBAction func onBtReceiveActivationCode(_ sender: Any) {

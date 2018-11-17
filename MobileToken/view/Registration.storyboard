@@ -43,6 +43,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G">
                                 <rect key="frame" x="30" y="308" width="315" height="110"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
+                                        <rect key="frame" x="31.5" y="0.0" width="252" height="53"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDJ-ur-jjv" userLabel="vLine">
                                         <rect key="frame" x="32.5" y="54" width="250" height="2"/>
                                         <color key="backgroundColor" name="primaryDark"/>
@@ -51,7 +55,7 @@
                                             <constraint firstAttribute="height" constant="2" id="Vt9-LI-egY"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+۴۹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-9s-ljI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+۹۸" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-9s-ljI">
                                         <rect key="frame" x="32.5" y="73" width="28.5" height="20"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +68,7 @@
                                             <constraint firstAttribute="width" constant="2" id="2bN-f6-bJW"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="919 834 4542" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="۹۰۱۹۶۹۲۴۲۵" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
                                         <rect key="frame" x="93" y="67.5" width="189.5" height="30"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,14 +83,18 @@
                                     <constraint firstAttribute="width" constant="315" id="GE6-f7-lST"/>
                                     <constraint firstItem="Kql-2z-MHL" firstAttribute="trailing" secondItem="UDJ-ur-jjv" secondAttribute="trailing" id="JfV-a6-8Nm"/>
                                     <constraint firstItem="UDJ-ur-jjv" firstAttribute="centerY" secondItem="Wp6-vC-o6G" secondAttribute="centerY" id="LRL-Tx-JAz"/>
+                                    <constraint firstItem="9Rd-d6-I82" firstAttribute="height" secondItem="Wp6-vC-o6G" secondAttribute="height" multiplier="0.5" constant="-2" id="M28-lt-FlO"/>
                                     <constraint firstItem="Kql-2z-MHL" firstAttribute="centerY" secondItem="Wp6-vC-o6G" secondAttribute="centerY" multiplier="1.5" id="eEi-Zo-HxU"/>
                                     <constraint firstItem="Oxy-hb-INK" firstAttribute="top" secondItem="UDJ-ur-jjv" secondAttribute="bottom" constant="13" id="eVe-MT-50r"/>
                                     <constraint firstItem="Kql-2z-MHL" firstAttribute="leading" secondItem="Oxy-hb-INK" secondAttribute="trailing" constant="10" id="g8Z-Uh-e89"/>
+                                    <constraint firstItem="9Rd-d6-I82" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="gXq-y7-O0o"/>
                                     <constraint firstAttribute="bottom" secondItem="Oxy-hb-INK" secondAttribute="bottom" constant="13" id="gjy-uK-5Cl"/>
                                     <constraint firstItem="0X1-9s-ljI" firstAttribute="top" secondItem="UDJ-ur-jjv" secondAttribute="bottom" constant="17" id="lFT-uK-brS"/>
                                     <constraint firstItem="Oxy-hb-INK" firstAttribute="leading" secondItem="0X1-9s-ljI" secondAttribute="trailing" constant="20" id="neg-br-wfc"/>
                                     <constraint firstAttribute="bottom" secondItem="0X1-9s-ljI" secondAttribute="bottom" constant="17" id="vnV-yP-JGa"/>
                                     <constraint firstItem="0X1-9s-ljI" firstAttribute="leading" secondItem="UDJ-ur-jjv" secondAttribute="leading" id="wwD-sy-6Tb"/>
+                                    <constraint firstItem="9Rd-d6-I82" firstAttribute="width" secondItem="Wp6-vC-o6G" secondAttribute="width" multiplier="0.8" id="yBX-1p-Pah"/>
+                                    <constraint firstItem="9Rd-d6-I82" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" id="zbI-sG-RjN"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1t-o2-AJQ">
@@ -138,6 +146,7 @@
                         <outlet property="fpvBank" destination="cui-1P-fqF" id="DD5-e3-ur2"/>
                         <outlet property="lbPhoneCode" destination="0X1-9s-ljI" id="s4p-PO-snW"/>
                         <outlet property="tfPhoneNumber" destination="Kql-2z-MHL" id="la5-56-bai"/>
+                        <outlet property="vCountryPicker" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCl-9k-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
