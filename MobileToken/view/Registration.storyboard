@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2g-dI-h8H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Phone Input View Controller-->
+        <scene sceneID="fHD-NO-6OC">
+            <objects>
+                <viewController storyboardIdentifier="sb_registration" id="t2g-dI-h8H" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R7h-R6-ad1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="90" width="375" height="105"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="bMe-ev-IwE"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="B2s-5A-0ZE">
+                                <rect key="frame" x="0.0" y="205" width="375" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNf-PU-RSB">
+                                <rect key="frame" x="5" y="272" width="365" height="20"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G">
+                                <rect key="frame" x="30" y="308" width="315" height="110"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDJ-ur-jjv" userLabel="vLine">
+                                        <rect key="frame" x="32.5" y="54" width="250" height="2"/>
+                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="7kd-LU-wvU"/>
+                                            <constraint firstAttribute="height" constant="2" id="Vt9-LI-egY"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+۴۹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-9s-ljI">
+                                        <rect key="frame" x="32.5" y="73" width="28.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxy-hb-INK" userLabel="vVertivalLine">
+                                        <rect key="frame" x="81" y="69" width="2" height="28"/>
+                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="2bN-f6-bJW"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="919 834 4542" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
+                                        <rect key="frame" x="93" y="67.5" width="189.5" height="30"/>
+                                        <color key="backgroundColor" name="primaryLight"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="8UA-3B-NWa"/>
+                                    <constraint firstItem="UDJ-ur-jjv" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="BX3-to-h73"/>
+                                    <constraint firstAttribute="width" constant="315" id="GE6-f7-lST"/>
+                                    <constraint firstItem="Kql-2z-MHL" firstAttribute="trailing" secondItem="UDJ-ur-jjv" secondAttribute="trailing" id="JfV-a6-8Nm"/>
+                                    <constraint firstItem="UDJ-ur-jjv" firstAttribute="centerY" secondItem="Wp6-vC-o6G" secondAttribute="centerY" id="LRL-Tx-JAz"/>
+                                    <constraint firstItem="Kql-2z-MHL" firstAttribute="centerY" secondItem="Wp6-vC-o6G" secondAttribute="centerY" multiplier="1.5" id="eEi-Zo-HxU"/>
+                                    <constraint firstItem="Oxy-hb-INK" firstAttribute="top" secondItem="UDJ-ur-jjv" secondAttribute="bottom" constant="13" id="eVe-MT-50r"/>
+                                    <constraint firstItem="Kql-2z-MHL" firstAttribute="leading" secondItem="Oxy-hb-INK" secondAttribute="trailing" constant="10" id="g8Z-Uh-e89"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oxy-hb-INK" secondAttribute="bottom" constant="13" id="gjy-uK-5Cl"/>
+                                    <constraint firstItem="0X1-9s-ljI" firstAttribute="top" secondItem="UDJ-ur-jjv" secondAttribute="bottom" constant="17" id="lFT-uK-brS"/>
+                                    <constraint firstItem="Oxy-hb-INK" firstAttribute="leading" secondItem="0X1-9s-ljI" secondAttribute="trailing" constant="20" id="neg-br-wfc"/>
+                                    <constraint firstAttribute="bottom" secondItem="0X1-9s-ljI" secondAttribute="bottom" constant="17" id="vnV-yP-JGa"/>
+                                    <constraint firstItem="0X1-9s-ljI" firstAttribute="leading" secondItem="UDJ-ur-jjv" secondAttribute="leading" id="wwD-sy-6Tb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1t-o2-AJQ">
+                                <rect key="frame" x="30" y="534" width="315" height="48"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eAr-ar-Bf3"/>
+                                    <constraint firstAttribute="width" constant="315" id="kYl-bU-FB0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <state key="normal" title="دریافت کد فعال‌سازی">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtReceiveActivationCode:" destination="t2g-dI-h8H" eventType="touchUpInside" id="Elz-9p-U4B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک مورد نظر برای ثبت‌نام را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
+                                <rect key="frame" x="5" y="50" width="375" height="20"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="B2s-5A-0ZE" secondAttribute="trailing" id="A19-gl-I67"/>
+                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
+                            <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Y1t-o2-AJQ" secondAttribute="trailing" constant="30" id="LZC-rb-mfI"/>
+                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="firstBaseline" secondItem="DNf-PU-RSB" secondAttribute="baseline" constant="20" id="LsS-fs-8Hi"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="bottom" secondItem="Y1t-o2-AJQ" secondAttribute="bottom" constant="85" id="NXQ-iX-ym2"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="DNf-PU-RSB" secondAttribute="trailing" constant="5" id="P6T-Ih-3qt"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
+                            <constraint firstItem="DNf-PU-RSB" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="fVZ-XB-pN9"/>
+                            <constraint firstItem="Y1t-o2-AJQ" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="hLY-YB-xh8"/>
+                            <constraint firstItem="B2s-5A-0ZE" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="10" id="i2N-PE-dXs"/>
+                            <constraint firstItem="B2s-5A-0ZE" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" id="pDf-MF-fDC"/>
+                            <constraint firstItem="Olh-5b-lfG" firstAttribute="trailing" secondItem="rD3-UM-afT" secondAttribute="trailing" constant="5" id="rwN-DB-cdD"/>
+                            <constraint firstItem="cui-1P-fqF" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" id="tHQ-4x-4bc"/>
+                            <constraint firstItem="DNf-PU-RSB" firstAttribute="top" secondItem="B2s-5A-0ZE" secondAttribute="bottom" constant="30" id="wYd-qt-j6z"/>
+                            <constraint firstItem="Olh-5b-lfG" firstAttribute="top" secondItem="rD3-UM-afT" secondAttribute="top" constant="30" id="zdI-ft-Vfn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W5T-f9-KP4"/>
+                    <connections>
+                        <outlet property="fpvBank" destination="cui-1P-fqF" id="DD5-e3-ur2"/>
+                        <outlet property="lbPhoneCode" destination="0X1-9s-ljI" id="s4p-PO-snW"/>
+                        <outlet property="tfPhoneNumber" destination="Kql-2z-MHL" id="la5-56-bai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCl-9k-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryLight">
+            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.094117647058823528" green="0.5725490196078431" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
