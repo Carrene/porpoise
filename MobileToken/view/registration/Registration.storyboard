@@ -192,21 +192,106 @@
         <!--فعال سازی-->
         <scene sceneID="VtY-a8-4gS">
             <objects>
-                <viewController id="zAA-ph-Mfk" sceneMemberID="viewController">
+                <viewController id="zAA-ph-Mfk" customClass="PhoneConfirmationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oog-9L-98P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Gr-hPV" userLabel="lbTitle">
+                                <rect key="frame" x="109" y="32" width="157.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
+                                <rect key="frame" x="30" y="72" width="315" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+۹۸ ۹۰۱۲۳۴۵۶۷۸" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
+                                        <rect key="frame" x="92.5" y="20" width="130.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="buttonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
+                                        <rect key="frame" x="30" y="50" width="255" height="40"/>
+                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="255" id="jta-so-Sho"/>
+                                            <constraint firstAttribute="height" constant="40" id="rG8-s9-F8q"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="2VD-5F-1WN"/>
+                                    <constraint firstItem="frk-Zy-hGa" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="3l7-8e-SIj"/>
+                                    <constraint firstItem="G9q-D2-cf1" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="top" constant="20" id="9jY-w0-7mk"/>
+                                    <constraint firstItem="G9q-D2-cf1" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="LIP-42-pWd"/>
+                                    <constraint firstAttribute="height" constant="110" id="WEk-CA-hH6"/>
+                                    <constraint firstAttribute="bottom" secondItem="frk-Zy-hGa" secondAttribute="bottom" constant="20" id="mIs-cI-Dqx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
+                                <rect key="frame" x="30" y="192" width="315" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تغییر شماره" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
+                                        <rect key="frame" x="20" y="9.5" width="77" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="secondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(۰۵:۰۰)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNP-va-IUg" userLabel="lbCounter">
+                                        <rect key="frame" x="245.5" y="9.5" width="49.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="eyeCatching"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstItem="rNP-va-IUg" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="LYi-Nx-ITp"/>
+                                    <constraint firstAttribute="width" constant="315" id="bUc-B8-zRB"/>
+                                    <constraint firstAttribute="height" constant="40" id="hZe-wd-Q5U"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNP-va-IUg" secondAttribute="trailing" constant="20" id="rd3-Do-fEh"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="leading" secondItem="qBh-yJ-CU2" secondAttribute="leading" constant="20" id="wWM-pX-Gj8"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="xtE-0q-D6n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="aEl-Gr-hPV" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="7TS-Ji-s9B"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="8hZ-1P-GLw"/>
+                            <constraint firstItem="m28-i2-93v" firstAttribute="top" secondItem="aEl-Gr-hPV" secondAttribute="top" constant="-12" id="IvM-C8-527"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="leading" secondItem="m28-i2-93v" secondAttribute="trailing" constant="-345" id="JQG-VH-nIt"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="bottom" constant="10" id="SG3-Wh-Wmg"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="aEl-Gr-hPV" secondAttribute="bottom" constant="20" id="Ve9-km-5au"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
                     <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
-                        <barButtonItem key="leftBarButtonItem" image="leftArrowWhite" id="172-yu-Vc8">
+                        <barButtonItem key="leftBarButtonItem" image="arrow-left" id="172-yu-Vc8" userLabel="back">
                             <color key="tintColor" name="secondary"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="تایید" id="H8y-vQ-Hqx">
                             <color key="tintColor" name="secondaryLight"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barbtBack" destination="172-yu-Vc8" id="Tue-hE-3vu"/>
+                        <outlet property="barbtConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
+                        <outlet property="lbChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
+                        <outlet property="lbCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
+                        <outlet property="lbPhone" destination="G9q-D2-cf1" id="RhD-yB-pFW"/>
+                        <outlet property="lbTitle" destination="aEl-Gr-hPV" id="4Oa-mu-WZp"/>
+                        <outlet property="navigationTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
+                        <outlet property="tfCode" destination="frk-Zy-hGa" id="lPZ-p3-c4e"/>
+                        <outlet property="vChangeNumber" destination="qBh-yJ-CU2" id="FEz-5z-3Nd"/>
+                        <outlet property="vCode" destination="zi8-T5-FwR" id="Onm-en-ezx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9x-k3-vgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,9 +299,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="leftArrowWhite" width="20" height="20"/>
+        <image name="arrow-left" width="20" height="20"/>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="eyeCatching">
+            <color red="0.11400000005960464" green="1" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,13 +313,13 @@
             <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryLight">
-            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
-            <color red="0.094117647058823528" green="0.5725490196078431" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.093999996781349182" green="0.57300001382827759" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondaryLight">
-            <color red="0.33333333333333331" green="0.7686274509803922" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33300000429153442" green="0.76899999380111694" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
