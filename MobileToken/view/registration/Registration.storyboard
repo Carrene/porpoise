@@ -57,17 +57,14 @@
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" id="z2X-x8-ZxM"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="B2s-5A-0ZE">
-                                <rect key="frame" x="0.0" y="205" width="375" height="37"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNf-PU-RSB">
-                                <rect key="frame" x="5" y="272" width="365" height="20"/>
+                                <rect key="frame" x="5" y="245" width="365" height="20"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G">
-                                <rect key="frame" x="30" y="308" width="315" height="110"/>
+                                <rect key="frame" x="30" y="281" width="315" height="110"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
                                         <rect key="frame" x="31.5" y="0.0" width="252" height="53"/>
@@ -148,21 +145,18 @@
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
-                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="B2s-5A-0ZE" secondAttribute="trailing" id="A19-gl-I67"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Y1t-o2-AJQ" secondAttribute="trailing" constant="30" id="LZC-rb-mfI"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="firstBaseline" secondItem="DNf-PU-RSB" secondAttribute="baseline" constant="20" id="LsS-fs-8Hi"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="bottom" secondItem="Y1t-o2-AJQ" secondAttribute="bottom" constant="85" id="NXQ-iX-ym2"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="DNf-PU-RSB" secondAttribute="trailing" constant="5" id="P6T-Ih-3qt"/>
+                            <constraint firstItem="DNf-PU-RSB" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="50" id="X1g-OG-mfa"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
                             <constraint firstItem="DNf-PU-RSB" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="fVZ-XB-pN9"/>
                             <constraint firstItem="Y1t-o2-AJQ" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="hLY-YB-xh8"/>
-                            <constraint firstItem="B2s-5A-0ZE" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="10" id="i2N-PE-dXs"/>
-                            <constraint firstItem="B2s-5A-0ZE" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" id="pDf-MF-fDC"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="trailing" secondItem="rD3-UM-afT" secondAttribute="trailing" constant="5" id="rwN-DB-cdD"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" id="tHQ-4x-4bc"/>
-                            <constraint firstItem="DNf-PU-RSB" firstAttribute="top" secondItem="B2s-5A-0ZE" secondAttribute="bottom" constant="30" id="wYd-qt-j6z"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="top" secondItem="rD3-UM-afT" secondAttribute="top" constant="30" id="zdI-ft-Vfn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
@@ -219,7 +213,7 @@
                                             <constraint firstAttribute="width" constant="255" id="jta-so-Sho"/>
                                             <constraint firstAttribute="height" constant="40" id="rG8-s9-F8q"/>
                                         </constraints>
-                                        <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="buttonColor"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>

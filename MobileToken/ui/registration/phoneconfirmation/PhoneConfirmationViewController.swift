@@ -36,7 +36,8 @@ class PhoneConfirmationViewController: UIViewController {
         lbPhone.font = UIHelper.iranSanseMedium(size: 16)
         lbCounter.font = UIHelper.iranSanseBold(size: 16)
         lbChangeNumber.font = UIHelper.iranSanseBold(size: 16)
-        let imageView = UIImageView()
+        let imageView = UIImageView(frame: CGRect(x: 15, y: 15, width: 20, height: 20))
+        imageView.backgroundColor = R.color.primary()
         let image = R.image.key()
         imageView.image = image
         tfCode.leftViewMode = .unlessEditing
