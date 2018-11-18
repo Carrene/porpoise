@@ -96,7 +96,7 @@
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <color key="textColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>
@@ -215,7 +215,7 @@
                                         </constraints>
                                         <color key="textColor" name="buttonColor"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>
