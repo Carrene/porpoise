@@ -21,9 +21,6 @@ class Bank: Object, Mappable, NSCopying{
     
     private var logoResourceId: String?
     
-    
-    
-    
     required convenience init?(map: Map) {
         self.init()
     }
@@ -32,7 +29,6 @@ class Bank: Object, Mappable, NSCopying{
         self.init()
         self.name = name
         self.logoResourceId = logoResourceId
-        
     }
     
     func mapping(map: Map) {

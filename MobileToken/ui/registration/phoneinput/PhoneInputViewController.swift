@@ -8,8 +8,7 @@
 
 import UIKit
 import CountryPickerView
-class PhoneInputViewController: UIViewController, BankPagerViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource {
-    
+class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource {
     
     @IBOutlet var lbEnterPhone: UILabel!
     @IBOutlet var lbChooseBank: UILabel!
@@ -22,7 +21,7 @@ class PhoneInputViewController: UIViewController, BankPagerViewDelegate,CountryP
     var bankCollectionViewAdapter: BankCollectionViewAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
-        initBankPagerView()
+        initBankCollectionView()
         initCountryPicker()
         initUIComponent()
     }
@@ -40,7 +39,7 @@ class PhoneInputViewController: UIViewController, BankPagerViewDelegate,CountryP
         vPhone.layer.cornerRadius = 10
     }
     
-    func initBankPagerView() {
+    func initBankCollectionView() {
         let bankNib = UINib(resource: R.nib.bankCollectionViewCell)
         bankCollectionView.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
         bankCollectionViewAdapter = BankCollectionViewAdapter()

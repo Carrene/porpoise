@@ -10,21 +10,21 @@ import Foundation
 import Foundation
 import UIKit
 
-protocol BankPagerViewDelegate {
+protocol BankCollectionViewDelegate {
     func selectedCard(bankIndex: Int)
 }
 class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollectionViewDelegate  {
     
-    
-    var bankPagerViewDelegate: BankPagerViewDelegate?
+    var bankPagerViewDelegate: BankCollectionViewDelegate?
     var selectedIndex = 0
+    var banks : [Bank]?
     
-    func setDelegate(bankPagerViewDelegate: BankPagerViewDelegate) {
+    func setDelegate(bankPagerViewDelegate: BankCollectionViewDelegate) {
         self.bankPagerViewDelegate = bankPagerViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return banks?.count ?? 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,7 +44,8 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell).vCell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+       let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell)
+        cell.vCell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         
     }
     

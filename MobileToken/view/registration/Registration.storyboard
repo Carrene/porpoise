@@ -168,8 +168,11 @@
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
                     </view>
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
-                        <barButtonItem key="rightBarButtonItem" title="دریافت کد فعال‌سازی" id="Jpt-Ln-5fK" userLabel="ثبت نام">
+                        <barButtonItem key="rightBarButtonItem" title="ثبت نام" id="Jpt-Ln-5fK" userLabel="ثبت نام">
                             <color key="tintColor" name="secondary"/>
+                            <connections>
+                                <segue destination="zAA-ph-Mfk" kind="show" identifier="phoneInputToActivationSegue" id="qEb-Rn-zJ7"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -186,8 +189,32 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="-33.733133433283363"/>
         </scene>
+        <!--فعال سازی-->
+        <scene sceneID="VtY-a8-4gS">
+            <objects>
+                <viewController id="zAA-ph-Mfk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oog-9L-98P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
+                        <barButtonItem key="leftBarButtonItem" image="leftArrowWhite" id="172-yu-Vc8">
+                            <color key="tintColor" name="secondary"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="تایید" id="H8y-vQ-Hqx">
+                            <color key="tintColor" name="secondaryLight"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9x-k3-vgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-34"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="leftArrowWhite" width="20" height="20"/>
         <namedColor name="buttonColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -202,6 +229,9 @@
         </namedColor>
         <namedColor name="secondary">
             <color red="0.094117647058823528" green="0.5725490196078431" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryLight">
+            <color red="0.33333333333333331" green="0.7686274509803922" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
