@@ -75,4 +75,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     func selectedCard(bankIndex: Int) {
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        navigationController?.navigationBar.backIndicatorImage = R.image.arrowLeft()
+        backItem.title = ""
+        backItem.tintColor = R.color.secondary()
+        navigationItem.backBarButtonItem = backItem
+    }
 }

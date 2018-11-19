@@ -36,11 +36,15 @@ class PhoneConfirmationViewController: UIViewController {
         lbPhone.font = UIHelper.iranSanseMedium(size: 16)
         lbCounter.font = UIHelper.iranSanseBold(size: 16)
         lbChangeNumber.font = UIHelper.iranSanseBold(size: 16)
-        let imageView = UIImageView(frame: CGRect(x: 15, y: 15, width: 20, height: 20))
-        imageView.backgroundColor = R.color.primary()
+        let imageView = UIImageView(frame: CGRect(x: 20, y: 15, width: 20, height: 11))
+        imageView.backgroundColor = R.color.primaryDark()
         let image = R.image.key()
         imageView.image = image
-        tfCode.leftViewMode = .unlessEditing
+        tfCode.leftView = imageView
+        tfCode.leftViewMode = .always
+        tfCode.font = UIHelper.iranSanseBold(size: 20)
+        navigationController?.navigationBar.backIndicatorImage = R.image.arrowLeft()
+        navigationController?.navigationBar.backItem?.title = ""
         barbtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
     
         
@@ -48,7 +52,10 @@ class PhoneConfirmationViewController: UIViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let backItem = UIBarButtonItem()
+        navigationController?.navigationBar.backIndicatorImage = R.image.arrowLeft()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
     
 

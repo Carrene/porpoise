@@ -206,15 +206,16 @@
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
                                         <rect key="frame" x="30" y="50" width="255" height="40"/>
                                         <color key="backgroundColor" name="primaryDark"/>
+                                        <color key="tintColor" name="buttonColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="255" id="jta-so-Sho"/>
                                             <constraint firstAttribute="height" constant="40" id="rG8-s9-F8q"/>
                                         </constraints>
                                         <color key="textColor" name="buttonColor"/>
-                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
@@ -267,15 +268,11 @@
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
                     <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
-                        <barButtonItem key="leftBarButtonItem" image="arrow-left" id="172-yu-Vc8" userLabel="back">
-                            <color key="tintColor" name="secondary"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="تایید" id="H8y-vQ-Hqx">
                             <color key="tintColor" name="secondaryLight"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="barbtBack" destination="172-yu-Vc8" id="Tue-hE-3vu"/>
                         <outlet property="barbtConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
                         <outlet property="lbChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
                         <outlet property="lbCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
@@ -293,7 +290,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-left" width="20" height="20"/>
         <namedColor name="buttonColor">
             <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
