@@ -8,7 +8,7 @@
 
 import UIKit
 import CountryPickerView
-class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol {
+class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
     
     @IBOutlet var lbEnterPhone: UILabel!
     @IBOutlet var lbChooseBank: UILabel!
@@ -39,6 +39,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         lbEnterPhone.font = R.font.iranSansMobileMedium(size: 16)
         tfPhoneNumber.font = R.font.iranSansMobileMedium(size: 16)
         vPhone.layer.cornerRadius = 10
+        tfPhoneNumber.delegate = self
     }
     
     func initBankCollectionView() {
@@ -48,6 +49,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
         bankCollectionView.delegate = bankCollectionViewAdapter
         bankCollectionView.dataSource = bankCollectionViewAdapter
+        bankCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
         bankCollectionView.reloadData()
     }
     
@@ -65,6 +67,13 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.lbPhoneCode.text = country.phoneCode
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        return string == numberFiltered
     }
     
     func sectionTitleForPreferredCountries(in countryPickerView: CountryPickerView) -> String? {
