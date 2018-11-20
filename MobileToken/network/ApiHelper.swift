@@ -15,11 +15,10 @@ import AlamofireObjectMapper
 class ApiHelper {
     
     public static let BIND_PATH = "phones"
-    public static let CLAIM_PATH = "phones"
+    public static let CLAIM_PATH = "devices"
     public static let SESSIONS_PATH = "sessions"
     
     public static let CLIENTS_PATH = "clients"
-    
     
     public static let BIND_VERB = "BIND"
     public static let CLAIM_VERB = "CLAIM"
@@ -42,17 +41,38 @@ class ApiHelper {
         return instance
     }()
     
+    //TODO(Fateme): Remove this in release mode
+    private static var Manager : Alamofire.SessionManager = {
+        // Create the server trust policies
+        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+            "192.168.1.57": .disableEvaluation
+        ]
+        // Create custom manager
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        let man = Alamofire.SessionManager(
+            configuration: URLSessionConfiguration.default,
+            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+        )
+        return man
+    }()
+    
     private init() {
-        alamofire = Alamofire.SessionManager.default
+        alamofire = ApiHelper.Manager
         alamofire.adapter = RequestInterceptor()
     }
     
     public static func newUrlComponentsInstance() -> NSURLComponents {
+        //TODO(Fateme) Get this prarameters from bundle
         let urlComponents = NSURLComponents()
-        urlComponents.scheme = Bundle.main.infoDictionary!["Web service scheme"] as? String
-        urlComponents.host = Bundle.main.infoDictionary!["Web service host"] as? String
-//        urlComponents.port = NSNumber(value: Int(Bundle.main.infoDictionary!["Web service port"] as! String)!)
-        urlComponents.path = "/apiv\(Bundle.main.infoDictionary!["Web service version"] as! String)"
+//        urlComponents.scheme = Bundle.main.infoDictionary!["WEB_SERVICE_SCHEME"] as? String
+//        urlComponents.host = Bundle.main.infoDictionary!["WEB_SERVICE_HOST"] as? String
+//        urlComponents.port = NSNumber(value: Int(Bundle.main.infoDictionary!["WEB_SERVICE_PORT"] as! String)!)
+//        urlComponents.path = "/apiv\(Bundle.main.infoDictionary!["WEB_SERVICE_VERSION"] as! String)"
+        urlComponents.scheme = "https"
+        urlComponents.host = "192.168.1.57"
+        urlComponents.port=443
+        urlComponents.path = "/apiv1"
         return urlComponents
     }
     

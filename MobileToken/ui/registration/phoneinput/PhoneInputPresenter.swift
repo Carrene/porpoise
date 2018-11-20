@@ -10,7 +10,7 @@ import Foundation
 
 class PhoneInputPresenter : PhoneInputPresenterProtocol {
     
-    var userRestRepository:UserRestRepository?
+    var userRepostiory = UserRepository()
 
     unowned let view: PhoneInputViewProtocol
     
@@ -28,10 +28,10 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
             case 400:
                 self?.view.showBadRequestError()
             default:
-                print("not ok")
+                break
             }
         }
-        userRestRepository?.claim(user: user, onDone: onDataResponse)
+        userRepostiory.claim(user: user, onDone: onDataResponse)
     }
     
     func getBankList() {

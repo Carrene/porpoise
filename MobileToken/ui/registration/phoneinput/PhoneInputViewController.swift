@@ -80,17 +80,15 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     func navigateToPhoneConfirmation() {
-        
+        performSegue(withIdentifier: "phoneInputToActivationSegue", sender: self)
     }
+   
     
-    
-    
-    @IBAction func onBtReceiveActivationCode(_ sender: Any) {
+    @IBAction func onRegister(_ sender: UIBarButtonItem) {
         if tfPhoneNumber.text != "" {
-            self.presenter.claim(phone: tfPhoneNumber.text!)
+            self.presenter.claim(phone: lbPhoneCode.text!+tfPhoneNumber.text!)
         }
     }
-    
     func selectedCard(bankIndex: Int) {
         
     }

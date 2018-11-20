@@ -91,7 +91,7 @@
                                             <constraint firstAttribute="width" constant="2" id="2bN-f6-bJW"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="۹۰۱۹۶۹۲۴۲۵" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
                                         <rect key="frame" x="93" y="67.5" width="189.5" height="30"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <color key="textColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,9 +131,6 @@
                                 <state key="normal" title="دریافت کد فعال‌سازی">
                                     <color key="titleColor" name="buttonColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="onBtReceiveActivationCode:" destination="t2g-dI-h8H" eventType="touchUpInside" id="Elz-9p-U4B"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک مورد نظر برای ثبت‌نام را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
                                 <rect key="frame" x="5" y="50" width="375" height="20"/>
@@ -160,12 +157,17 @@
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="top" secondItem="rD3-UM-afT" secondAttribute="top" constant="30" id="zdI-ft-Vfn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Y1t-o2-AJQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
                         <barButtonItem key="rightBarButtonItem" title="ثبت نام" id="Jpt-Ln-5fK" userLabel="ثبت نام">
                             <color key="tintColor" name="secondary"/>
                             <connections>
-                                <segue destination="zAA-ph-Mfk" kind="show" identifier="phoneInputToActivationSegue" id="qEb-Rn-zJ7"/>
+                                <action selector="onRegister:" destination="t2g-dI-h8H" id="6t7-dH-Gyo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -177,6 +179,7 @@
                         <outlet property="tfPhoneNumber" destination="Kql-2z-MHL" id="la5-56-bai"/>
                         <outlet property="vCountryPicker" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
                         <outlet property="vPhone" destination="Wp6-vC-o6G" id="feT-ax-fgl"/>
+                        <segue destination="zAA-ph-Mfk" kind="show" identifier="phoneInputToActivationSegue" id="H1o-kK-OwM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCl-9k-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
