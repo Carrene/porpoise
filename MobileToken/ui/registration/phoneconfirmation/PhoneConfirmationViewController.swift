@@ -17,8 +17,7 @@ class PhoneConfirmationViewController: UIViewController {
     @IBOutlet var lbPhone: UILabel!
     @IBOutlet var lbChangeNumber: UILabel!
     @IBOutlet var lbCounter: UILabel!
-    @IBOutlet var barbtBack: UIBarButtonItem!
-    @IBOutlet var barbtConfirm: UIBarButtonItem!
+    @IBOutlet var barBtConfirm: UIBarButtonItem!
     @IBOutlet var navigationTitle: UINavigationItem!
     
     
@@ -43,9 +42,7 @@ class PhoneConfirmationViewController: UIViewController {
         tfCode.leftView = imageView
         tfCode.leftViewMode = .always
         tfCode.font = UIHelper.iranSanseBold(size: 20)
-        navigationController?.navigationBar.backIndicatorImage = R.image.arrowLeft()
-        navigationController?.navigationBar.backItem?.title = ""
-        barbtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
+        barBtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
     
         
     }

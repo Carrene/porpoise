@@ -13,6 +13,7 @@ import UIKit
 protocol BankCollectionViewDelegate {
     func selectedCard(bankIndex: Int)
 }
+
 class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollectionViewDelegate  {
     
     var bankPagerViewDelegate: BankCollectionViewDelegate?

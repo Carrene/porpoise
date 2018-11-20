@@ -8,7 +8,6 @@
 
 import Foundation
 class TokenRepository: TokenRepositoryProtocol {
-   
     let tokenRealmRepository = TokenRealmRepository()
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Token>) -> ())?) {
@@ -28,6 +27,4 @@ class TokenRepository: TokenRepositoryProtocol {
             
         }
     }
-    
-    
 }

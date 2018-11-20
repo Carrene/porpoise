@@ -273,7 +273,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="barbtConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
+                        <outlet property="barBtConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
                         <outlet property="lbChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
                         <outlet property="lbCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
                         <outlet property="lbPhone" destination="G9q-D2-cf1" id="RhD-yB-pFW"/>

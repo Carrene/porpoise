@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 class BankCollectionViewCell: UICollectionViewCell {
-    
-    
     @IBOutlet var vCell: UIView!
     @IBOutlet weak var lbBankName: UILabel!
     @IBOutlet weak var lmgLogo: UIImageView!
