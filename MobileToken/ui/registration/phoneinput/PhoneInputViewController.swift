@@ -8,7 +8,7 @@
 
 import UIKit
 import CountryPickerView
-class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource {
+class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol {
     
     @IBOutlet var lbEnterPhone: UILabel!
     @IBOutlet var lbChooseBank: UILabel!
@@ -17,10 +17,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var bankCollectionView: UICollectionView!
     @IBOutlet var vCountryPicker: CountryPickerView!
     @IBOutlet var vPhone: UIView!
-    
     var bankCollectionViewAdapter: BankCollectionViewAdapter?
+    var presenter: PhoneInputPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter = PhoneInputPresenter(view: self)
         initBankCollectionView()
         initCountryPicker()
         initUIComponent()
@@ -68,8 +70,25 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     func sectionTitleForPreferredCountries(in countryPickerView: CountryPickerView) -> String? {
         return "country".localized().lowercased()
     }
+    //TODO: CORRECT 400 AND STRINGS
+    func showBadRequestError() {
+        SnackBarHelper.init(message: "wrong phone", color: R.color.errorColor()!, duration: .middle).show()
+    }
+    
+    func setBankList(bankList: [Bank]) {
+        
+    }
+    
+    func navigateToPhoneConfirmation() {
+        
+    }
+    
+    
     
     @IBAction func onBtReceiveActivationCode(_ sender: Any) {
+        if tfPhoneNumber.text != "" {
+            self.presenter.claim(phone: tfPhoneNumber.text!)
+        }
     }
     
     func selectedCard(bankIndex: Int) {
@@ -84,3 +103,4 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         navigationItem.backBarButtonItem = backItem
     }
 }
+

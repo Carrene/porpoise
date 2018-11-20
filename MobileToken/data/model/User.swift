@@ -42,7 +42,6 @@ class User: Object, Mappable, NSCopying {
     }
     
     convenience init( phone: String? = nil, activationCode: String? = nil) {
-        
         self.init()
         self.phone = phone
         self.activationCode = activationCode
