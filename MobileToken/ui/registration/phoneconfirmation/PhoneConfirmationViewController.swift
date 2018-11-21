@@ -53,7 +53,15 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         tfCode.delegate = self
         barBtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
         lbPhone.text = phoneNumber
+        lbChangeNumber.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
+        lbChangeNumber.addGestureRecognizer(tap)
         
+        
+    }
+    
+    @objc func dismiss(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -65,6 +73,15 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
+    }
+    
+    @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
+        if tfCode.text != "" {
+            self.barBtConfirm.isEnabled = true
+        }
+        else {
+            self.barBtConfirm.isEnabled = false
+        }
     }
     
     @IBAction func onConfirm(_ sender: UIBarButtonItem) {

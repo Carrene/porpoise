@@ -97,6 +97,9 @@
                                         <color key="textColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <action selector="onTfPhoneEditDidChanged:" destination="t2g-dI-h8H" eventType="editingChanged" id="CIV-kO-5Qt"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>
@@ -173,6 +176,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bankCollectionView" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
+                        <outlet property="barBtRegister" destination="Jpt-Ln-5fK" id="l3t-Y9-Kgp"/>
                         <outlet property="lbChooseBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
                         <outlet property="lbEnterPhone" destination="DNf-PU-RSB" id="H4F-59-NED"/>
                         <outlet property="lbPhoneCode" destination="0X1-9s-ljI" id="s4p-PO-snW"/>
@@ -220,6 +224,9 @@
                                         <color key="textColor" name="buttonColor"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="onTfPhoneEditDidChanged:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="ZwU-6d-nKp"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>

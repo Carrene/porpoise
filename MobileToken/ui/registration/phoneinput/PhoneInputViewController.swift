@@ -17,6 +17,8 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var bankCollectionView: UICollectionView!
     @IBOutlet var vCountryPicker: CountryPickerView!
     @IBOutlet var vPhone: UIView!
+    @IBOutlet var barBtRegister: UIBarButtonItem!
+    
     var bankCollectionViewAdapter: BankCollectionViewAdapter?
     var presenter: PhoneInputPresenter!
     
@@ -30,7 +32,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
-       
+       barBtRegister.isEnabled = false
     }
     
     func initUIComponent() {
@@ -77,6 +79,16 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         return string == numberFiltered
     }
+    
+    @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
+        if tfPhoneNumber.text != "" {
+            self.barBtRegister.isEnabled = true
+        }
+        else {
+            self.barBtRegister.isEnabled = false
+        }
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
