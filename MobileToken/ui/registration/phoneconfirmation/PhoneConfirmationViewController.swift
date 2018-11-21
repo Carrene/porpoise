@@ -43,11 +43,13 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         lbPhone.font = UIHelper.iranSanseMedium(size: 16)
         lbCounter.font = UIHelper.iranSanseBold(size: 16)
         lbChangeNumber.font = UIHelper.iranSanseBold(size: 16)
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 11))
-        imageView.backgroundColor = R.color.primaryDark()
-        let image = R.image.key()
-        imageView.image = image
-        tfCode.leftView = imageView
+        let iconView = UIImageView(frame:
+            CGRect(x: 10, y: 10, width: 20, height: 11))
+        iconView.image = R.image.key()
+        let iconContainerView: UIView = UIView(frame:
+            CGRect(x: 20, y: 0, width: 30, height: 30))
+        iconContainerView.addSubview(iconView)
+        tfCode.leftView = iconContainerView
         tfCode.leftViewMode = .always
         tfCode.font = UIHelper.iranSanseBold(size: 20)
         tfCode.delegate = self
@@ -56,7 +58,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         lbChangeNumber.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
         lbChangeNumber.addGestureRecognizer(tap)
-        
         
     }
     
