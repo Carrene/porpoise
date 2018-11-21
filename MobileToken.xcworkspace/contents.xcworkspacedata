@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/fatemekazemi/Documents/Projects/porpoise/MobileToken/ui/registration/phoneconfirmation/PhoneConfirmationPresenter.swift">
+   </FileRef>
+   <FileRef
       location = "group:MobileToken.xcodeproj">
    </FileRef>
    <FileRef

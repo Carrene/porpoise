@@ -49,8 +49,10 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
         bankCollectionView.delegate = bankCollectionViewAdapter
         bankCollectionView.dataSource = bankCollectionViewAdapter
-        bankCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        //bankCollectionView.selectItem(at: IndexPath(row: 0, section: 2), animated: true, scrollPosition: .left)
         bankCollectionView.reloadData()
+        //bankCollectionViewAdapter?.collectionView(bankCollectionView, didSelectItemAt: IndexPath(row: 0, section: 1))
+        
     }
     
     func initCountryPicker() {
@@ -74,6 +76,10 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         let compSepByCharInSet = string.components(separatedBy: aSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         return string == numberFiltered
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
     }
     
     func sectionTitleForPreferredCountries(in countryPickerView: CountryPickerView) -> String? {

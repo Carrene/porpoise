@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PhoneConfirmationViewController: UIViewController {
-
+class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
+    
     @IBOutlet var vChangeNumber: UIView!
     @IBOutlet var tfCode: UITextField!
     @IBOutlet var vCode: UIView!
@@ -19,12 +19,13 @@ class PhoneConfirmationViewController: UIViewController {
     @IBOutlet var lbCounter: UILabel!
     @IBOutlet var barBtConfirm: UIBarButtonItem!
     @IBOutlet var navigationTitle: UINavigationItem!
-    
+    var presenter:PhoneConfirmationPresenter?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIComponent()
+        self.presenter = PhoneConfirmationPresenter(view: self)
         // Do any additional setup after loading the view.
     }
     
@@ -42,11 +43,42 @@ class PhoneConfirmationViewController: UIViewController {
         tfCode.leftView = imageView
         tfCode.leftViewMode = .always
         tfCode.font = UIHelper.iranSanseBold(size: 20)
+        tfCode.delegate = self
         barBtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
     
         
     }
-
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        return string == numberFiltered
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    @IBAction func onConfirm(_ sender: UIBarButtonItem) {
+        if tfCode.text != "" {
+            presenter?.bind(user: <#T##User#>)
+        }
+    }
+    
+    func showBadRequestError() {
+        SnackBarHelper.init(message: "Activation code is not valid", duration: .middle).show()
+    }
+    
+    func showSSMNotAvailable() {
+        SnackBarHelper.init(message: "SSM is not available", duration: .middle).show()
+        
+    }
+    
+    func segue() {
+        //performSegue
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()

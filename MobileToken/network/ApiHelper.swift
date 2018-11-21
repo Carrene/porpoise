@@ -14,7 +14,7 @@ import AlamofireObjectMapper
 
 class ApiHelper {
     
-    public static let BIND_PATH = "phones"
+    public static let BIND_PATH = "devices"
     public static let CLAIM_PATH = "devices"
     public static let SESSIONS_PATH = "sessions"
     

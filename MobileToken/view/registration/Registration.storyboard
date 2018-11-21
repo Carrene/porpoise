@@ -273,6 +273,9 @@
                     <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
                         <barButtonItem key="rightBarButtonItem" title="تایید" id="H8y-vQ-Hqx">
                             <color key="tintColor" name="secondaryLight"/>
+                            <connections>
+                                <action selector="onConfirm:" destination="zAA-ph-Mfk" id="rO4-2n-wv5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

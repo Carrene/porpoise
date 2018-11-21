@@ -41,7 +41,6 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell)
         cell.vCell.backgroundColor = R.color.ayandehColor()
         cell.lbBankName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
