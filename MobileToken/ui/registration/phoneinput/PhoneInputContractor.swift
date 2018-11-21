@@ -11,7 +11,7 @@ import Foundation
     protocol PhoneInputViewProtocol: class {
         func showBadRequestError()
         func setBankList(bankList:[Bank])
-        func navigateToPhoneConfirmation()
+        func navigateToPhoneConfirmation(phone:String)
     }
 
     protocol PhoneInputPresenterProtocol {

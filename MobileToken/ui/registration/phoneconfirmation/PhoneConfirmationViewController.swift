@@ -20,13 +20,20 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     @IBOutlet var barBtConfirm: UIBarButtonItem!
     @IBOutlet var navigationTitle: UINavigationItem!
     var presenter:PhoneConfirmationPresenter?
-    
+    var phoneNumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUIComponent()
         self.presenter = PhoneConfirmationPresenter(view: self)
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        initUIComponent()
+    }
+    
+    func setPhoneNumber(phone:String) {
+        self.phoneNumber = phone
     }
     
     func initUIComponent() {
@@ -45,7 +52,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         tfCode.font = UIHelper.iranSanseBold(size: 20)
         tfCode.delegate = self
         barBtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
-    
+        lbPhone.text = phoneNumber
         
     }
     
@@ -60,8 +67,8 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         return true
     }
     @IBAction func onConfirm(_ sender: UIBarButtonItem) {
-        if tfCode.text != "" {
-            presenter?.bind(user: <#T##User#>)
+        if tfCode.text != "" && self.phoneNumber != "" {
+            presenter?.bind(phone: self.phoneNumber, activationCode: tfCode.text!)
         }
     }
     

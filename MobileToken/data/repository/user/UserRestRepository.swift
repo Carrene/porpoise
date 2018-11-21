@@ -20,7 +20,7 @@ class UserRestRepository: UserRepositoryProtocol {
         [
             "udid": user.udid,
             "phone": user.phone,
-            "deviceName": user.deviceName,
+            "name": user.deviceName,
             "activationCode": user.activationCode
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)

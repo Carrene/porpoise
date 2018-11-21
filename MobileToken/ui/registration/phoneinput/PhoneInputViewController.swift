@@ -94,7 +94,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         
     }
     
-    func navigateToPhoneConfirmation() {
+    func navigateToPhoneConfirmation(phone:String) {
         performSegue(withIdentifier: "phoneInputToActivationSegue", sender: self)
     }
    
@@ -114,6 +114,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         backItem.title = ""
         backItem.tintColor = R.color.secondary()
         navigationItem.backBarButtonItem = backItem
+        if segue.identifier == "phoneInputToActivationSegue" {
+        (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:lbPhoneCode.text!+tfPhoneNumber.text! )
+        }
     }
 }
 

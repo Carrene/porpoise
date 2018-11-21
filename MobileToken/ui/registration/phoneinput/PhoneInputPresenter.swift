@@ -24,7 +24,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
             let statusCode = restRepoResponse.restDataResponse?.response?.statusCode
             switch statusCode {
             case 200:
-                self?.view.navigateToPhoneConfirmation()
+                self?.view.navigateToPhoneConfirmation(phone:phone)
             case 400:
                 self?.view.showBadRequestError()
             default:
