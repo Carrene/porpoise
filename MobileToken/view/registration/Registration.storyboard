@@ -91,8 +91,8 @@
                                             <constraint firstAttribute="width" constant="2" id="2bN-f6-bJW"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
-                                        <rect key="frame" x="93" y="67.5" width="189.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-2z-MHL">
+                                        <rect key="frame" x="93" y="72.5" width="189.5" height="20"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <color key="textColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
@@ -218,7 +218,7 @@
                                             <constraint firstAttribute="height" constant="40" id="rG8-s9-F8q"/>
                                         </constraints>
                                         <color key="textColor" name="buttonColor"/>
-                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>

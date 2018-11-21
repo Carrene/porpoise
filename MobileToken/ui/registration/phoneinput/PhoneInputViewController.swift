@@ -29,7 +29,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        self.hideKeyboardWhenTappedAround()
        
     }
     
@@ -72,7 +72,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let aSet = NSCharacterSet(charactersIn:"۰۱۲۳۴۵۶۷۸۹").inverted
         let compSepByCharInSet = string.components(separatedBy: aSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         return string == numberFiltered

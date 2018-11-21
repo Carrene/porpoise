@@ -27,9 +27,9 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         self.presenter = PhoneConfirmationPresenter(view: self)
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         initUIComponent()
+        self.hideKeyboardWhenTappedAround()
     }
     
     func setPhoneNumber(phone:String) {
@@ -43,7 +43,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         lbPhone.font = UIHelper.iranSanseMedium(size: 16)
         lbCounter.font = UIHelper.iranSanseBold(size: 16)
         lbChangeNumber.font = UIHelper.iranSanseBold(size: 16)
-        let imageView = UIImageView(frame: CGRect(x: 20, y: 15, width: 20, height: 11))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 11))
         imageView.backgroundColor = R.color.primaryDark()
         let image = R.image.key()
         imageView.image = image
@@ -57,7 +57,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let aSet = NSCharacterSet(charactersIn:"۰۱۲۳۴۵۶۷۸۹").inverted
         let compSepByCharInSet = string.components(separatedBy: aSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         return string == numberFiltered
@@ -66,6 +66,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
+    
     @IBAction func onConfirm(_ sender: UIBarButtonItem) {
         if tfCode.text != "" && self.phoneNumber != "" {
             presenter?.bind(phone: self.phoneNumber, activationCode: tfCode.text!)
@@ -78,14 +79,11 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     
     func showSSMNotAvailable() {
         SnackBarHelper.init(message: "SSM is not available", duration: .middle).show()
-        
     }
     
     func segue() {
         //performSegue
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
