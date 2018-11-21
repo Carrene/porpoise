@@ -27,8 +27,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF">
                                 <rect key="frame" x="0.0" y="90" width="375" height="105"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
+                                        <rect key="frame" x="15" y="0.0" width="365" height="105"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qfx-jO-6LW">
                                             <size key="itemSize" width="140" height="100"/>
@@ -50,11 +50,11 @@
                                 </subviews>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
-                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="centerX" secondItem="cui-1P-fqF" secondAttribute="centerX" id="SNA-9n-Lmh"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="centerX" secondItem="cui-1P-fqF" secondAttribute="centerX" constant="10" id="SNA-9n-Lmh"/>
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="centerY" secondItem="cui-1P-fqF" secondAttribute="centerY" id="Zac-bY-eTg"/>
                                     <constraint firstAttribute="height" constant="105" id="bMe-ev-IwE"/>
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="height" secondItem="cui-1P-fqF" secondAttribute="height" id="jHL-Ct-Bja"/>
-                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" id="z2X-x8-ZxM"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" constant="-10" id="z2X-x8-ZxM"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNf-PU-RSB">

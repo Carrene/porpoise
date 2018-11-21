@@ -27,12 +27,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.presenter = PhoneInputPresenter(view: self)
         initBankCollectionView()
         initCountryPicker()
-        initUIComponent()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        initUIComponent()
         self.hideKeyboardWhenTappedAround()
-       barBtRegister.isEnabled = false
+        barBtRegister.isEnabled = false
     }
     
     func initUIComponent() {
@@ -51,9 +51,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
         bankCollectionView.delegate = bankCollectionViewAdapter
         bankCollectionView.dataSource = bankCollectionViewAdapter
-        //bankCollectionView.selectItem(at: IndexPath(row: 0, section: 2), animated: true, scrollPosition: .left)
+        bankCollectionView.allowsMultipleSelection = false
         bankCollectionView.reloadData()
-        //bankCollectionViewAdapter?.collectionView(bankCollectionView, didSelectItemAt: IndexPath(row: 0, section: 1))
+        
         
     }
     

@@ -29,25 +29,23 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        collectionView.allowsMultipleSelection = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
         cell.vCell.layer.cornerRadius = 10
         cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
         cell.vCell.layer.borderWidth = 2
         cell.lbBankName.font = R.font.iranSansMobileBold(size: 16)
+        if selectedIndex == indexPath.row {
+            cell.vCell.backgroundColor = R.color.ayandehColor()
+            cell.lbBankName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        else {
+            cell.vCell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        }
         return cell
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell)
-        cell.vCell.backgroundColor = R.color.ayandehColor()
-        cell.lbBankName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+       self.selectedIndex = indexPath.row
+        collectionView.reloadData()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-       let cell = (collectionView.cellForItem(at: indexPath) as! BankCollectionViewCell)
-        cell.vCell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-        
-    }
-    
-    
 }
