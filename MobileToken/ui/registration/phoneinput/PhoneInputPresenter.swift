@@ -9,7 +9,7 @@
 import Foundation
 
 class PhoneInputPresenter : PhoneInputPresenterProtocol {
-    
+
     var userRepostiory = UserRepository()
 
     unowned let view: PhoneInputViewProtocol
@@ -28,14 +28,15 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
             case 400:
                 self?.view.showBadRequestError()
             default:
-                break
+                UIHelper.showFailedSnackBar()
             }
         }
         userRepostiory.claim(user: user, onDone: onDataResponse)
     }
     
-    func getBankList() {
-        
+    func getBankList() -> [Bank]{
+        var bankList = [Bank(name:"آینده"),Bank(name: "آینده"),Bank(name: "آینده"),Bank(name:"آینده" ),Bank(name: "آینده"),Bank(name: "آینده")]
+        return bankList
     }
     
 }

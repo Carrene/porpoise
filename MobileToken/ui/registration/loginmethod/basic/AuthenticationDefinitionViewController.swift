@@ -33,8 +33,10 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     func initUIComponent() {
         self.hideKeyboardWhenTappedAround()
         self.navigationItem.hidesBackButton = true
+        let attr = NSDictionary(object: R.font.iranSansMobileBold(size: 16)!, forKey: NSAttributedString.Key.font as NSCopying)
+        scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
         embedVCPattern()
-        getAuthentication()
+        //getAuthentication()
     }
     
     
@@ -68,7 +70,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "navigation_bar_back".localized()
+        backItem.title = R.string.localizable.backBarItem()
         navigationItem.backBarButtonItem = backItem
     }
     

@@ -33,10 +33,9 @@ class AuthenticationPatternViewController: UIViewController {
     func initUIComponent() {
         
         vPattern.resetDotsState()
-        vPattern.lineColor = .black
         vPattern.normalDotImage = R.image.patternDot()
         vPattern.highlightedDotImage = R.image.patternGrayDot()
-        vPattern.dotWidth = 40
+        vPattern.dotWidth = 25
         configuareLockViewWithImages()
     }
     
@@ -54,7 +53,7 @@ class AuthenticationPatternViewController: UIViewController {
                 self.authenticationDelegate?.authenticationSucceed()
             }else {
                 
-                UIHelper.showSpecificSnackBar(message: "sb_wrong_pattern".localized(), color: UIColorHelper.redColor)
+                //UIHelper.showSpecificSnackBar(message: "sb_wrong_pattern".localized(), color: UIColorHelper.redColor)
             }
         }
     }

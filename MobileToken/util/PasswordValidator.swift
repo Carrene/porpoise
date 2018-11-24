@@ -9,6 +9,7 @@
 import Foundation
 
 public class PasswordValidator{
+    
     static func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
         

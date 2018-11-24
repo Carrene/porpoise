@@ -15,7 +15,7 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAuthentication()
+        //getAuthentication()
     }
     
     func getAuthentication() {
@@ -26,10 +26,10 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate {
             } else {
                 if repoResponse.value?.authenticationType == 0 {
                     //TODO: test localize with R
-                    self?.lbTitle.text = "lb_enter_password".localized()
+                    //self?.lbTitle.text = "lb_enter_password".localized()
                     self?.embedVCPassword(authentication:repoResponse.value!)
                 } else {
-                    self?.lbTitle.text = "lb_enter_pattern".localized()
+                    //self?.lbTitle.text = "lb_enter_pattern".localized()
                     self?.embedVCPattern(authentication: repoResponse.value!)
                 }
             }

@@ -8,7 +8,9 @@
 
 import TTGSnackbar
 import Foundation
+
 class SnackBarHelper:TTGSnackbar {
+    
     override init(message: String, duration: TTGSnackbarDuration) {
         super.init(message: message, duration: duration)
     }

@@ -12,7 +12,6 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     unowned let view : PhoneConfirmationViewProtocol
     var userRepository = UserRepository()
     
-   
     required init(view: PhoneConfirmationViewProtocol) {
         self.view = view
     }
@@ -29,12 +28,9 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
             case 801:
                 self?.view.showSSMNotAvailable()
             default:
-                break
+                UIHelper.showFailedSnackBar()
             }
         }
         userRepository.bind(user: user, onDone: onDataResponse)
     }
-    
-    
-    
 }

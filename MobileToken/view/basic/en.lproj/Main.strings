@@ -1,0 +1,39 @@
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "4Ui-Wn-QNo"; */
+"4Ui-Wn-QNo.placeholder" = "Enter Password";
+
+/* Class = "UITextField"; placeholder = "Enter Confirm Password"; ObjectID = "63H-YJ-0dL"; */
+"63H-YJ-0dL.placeholder" = "Enter Confirm Password";
+
+/* Class = "UILabel"; text = "الگوی خود را وارد کنید"; ObjectID = "7ix-hZ-XG9"; */
+"7ix-hZ-XG9.text" = "الگوی خود را وارد کنید";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "C2A-TQ-Mrt"; */
+"C2A-TQ-Mrt.text" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "LuK-vD-uNk"; */
+"LuK-vD-uNk.text" = "Password";
+
+/* Class = "UINavigationItem"; title = "Login method"; ObjectID = "S6X-Jf-UQR"; */
+"S6X-Jf-UQR.title" = "Login method";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "Vi8-qi-V47"; */
+"Vi8-qi-V47.placeholder" = "Enter Password";
+
+/* Class = "UISegmentedControl"; VlE-dD-tFq.segmentTitles[0] = "الگو"; ObjectID = "VlE-dD-tFq"; */
+"VlE-dD-tFq.segmentTitles[0]" = "الگو";
+
+/* Class = "UISegmentedControl"; VlE-dD-tFq.segmentTitles[1] = "رمز"; ObjectID = "VlE-dD-tFq"; */
+"VlE-dD-tFq.segmentTitles[1]" = "رمز";
+
+/* Class = "UINavigationItem"; title = "روش احراز هویت"; ObjectID = "WN0-SV-W97"; */
+"WN0-SV-W97.title" = "روش احراز هویت";
+
+/* Class = "UILabel"; text = "Enter"; ObjectID = "gRn-XI-p9U"; */
+"gRn-XI-p9U.text" = "Enter";
+
+/* Class = "UILabel"; text = "الگوی خود را وارد کنید"; ObjectID = "rZv-zc-chD"; */
+"rZv-zc-chD.text" = "الگوی خود را وارد کنید";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "zUn-3U-Jcj"; */
+"zUn-3U-Jcj.title" = "Item";

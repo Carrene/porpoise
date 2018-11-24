@@ -10,14 +10,15 @@ import UIKit
 import CountryPickerView
 class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
     
-    @IBOutlet var lbEnterPhone: UILabel!
-    @IBOutlet var lbChooseBank: UILabel!
-    @IBOutlet weak var tfPhoneNumber: UITextField!
-    @IBOutlet weak var lbPhoneCode: UILabel!
-    @IBOutlet var bankCollectionView: UICollectionView!
-    @IBOutlet var vCountryPicker: CountryPickerView!
-    @IBOutlet var vPhone: UIView!
-    @IBOutlet var barBtRegister: UIBarButtonItem!
+    
+    @IBOutlet var labelEnterYourPhone: UILabel!
+    @IBOutlet var labelChooseYourBank: UILabel!
+    @IBOutlet var textFieldPhoneNumber: UITextField!
+    @IBOutlet var labelPhoneCode: UILabel!
+    @IBOutlet var collectionViewbank: UICollectionView!
+    @IBOutlet var countryPickerView: CountryPickerView!
+    @IBOutlet var viewPhone: UIView!
+    @IBOutlet var barButtonItemRegister: UIBarButtonItem!
     
     var bankCollectionViewAdapter: BankCollectionViewAdapter?
     var presenter: PhoneInputPresenter!
@@ -32,45 +33,44 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     override func viewDidAppear(_ animated: Bool) {
         initUIComponent()
         self.hideKeyboardWhenTappedAround()
-        barBtRegister.isEnabled = false
+        barButtonItemRegister.isEnabled = false
     }
     
     func initUIComponent() {
-        lbPhoneCode.font = R.font.iranSansMobileBold(size: 16)
-        lbChooseBank.font = R.font.iranSansMobileBold(size: 16)
-        lbEnterPhone.font = R.font.iranSansMobileMedium(size: 16)
-        tfPhoneNumber.font = R.font.iranSansMobileMedium(size: 16)
-        vPhone.layer.cornerRadius = 10
-        tfPhoneNumber.delegate = self
+        labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
+        labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
+        labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
+        textFieldPhoneNumber.font = R.font.iranSansMobileMedium(size: 16)
+        viewPhone.layer.cornerRadius = 10
+        textFieldPhoneNumber.delegate = self
     }
     
     func initBankCollectionView() {
         let bankNib = UINib(resource: R.nib.bankCollectionViewCell)
-        bankCollectionView.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
+        collectionViewbank.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
         bankCollectionViewAdapter = BankCollectionViewAdapter()
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
-        bankCollectionView.delegate = bankCollectionViewAdapter
-        bankCollectionView.dataSource = bankCollectionViewAdapter
-        bankCollectionView.allowsMultipleSelection = false
-        bankCollectionView.reloadData()
-        
-        
+        setBankList()
+        collectionViewbank.delegate = bankCollectionViewAdapter
+        collectionViewbank.dataSource = bankCollectionViewAdapter
+        collectionViewbank.allowsMultipleSelection = false
+        collectionViewbank.reloadData()
     }
     
     func initCountryPicker() {
-        self.vCountryPicker.textColor = .white
-        vCountryPicker.delegate = self
-        vCountryPicker.dataSource = self
-        vCountryPicker.showPhoneCodeInView = false
-        vCountryPicker.showCountryCodeInView = true
-        vCountryPicker.setCountryByPhoneCode("+98")
-        let index = vCountryPicker.countries.index(where: { (item) -> Bool in
+        self.countryPickerView.textColor = .white
+        countryPickerView.delegate = self
+        countryPickerView.dataSource = self
+        countryPickerView.showPhoneCodeInView = false
+        countryPickerView.showCountryCodeInView = true
+        countryPickerView.setCountryByPhoneCode("+98")
+        let index = countryPickerView.countries.index(where: { (item) -> Bool in
             item.phoneCode == "+98" })!
-        vCountryPicker.countries[index].name = "Iran"
+        countryPickerView.countries[index].name = "Iran"
     }
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
-        self.lbPhoneCode.text = country.phoneCode
+        self.labelPhoneCode.text = country.phoneCode
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -81,42 +81,35 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
-        if tfPhoneNumber.text != "" {
-            self.barBtRegister.isEnabled = true
+        if textFieldPhoneNumber.text != "" {
+            self.barButtonItemRegister.isEnabled = true
         }
         else {
-            self.barBtRegister.isEnabled = false
+            self.barButtonItemRegister.isEnabled = false
         }
     }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
     
     func sectionTitleForPreferredCountries(in countryPickerView: CountryPickerView) -> String? {
-        return "country".localized().lowercased()
+        return R.string.localizable.country()
     }
-    //TODO: CORRECT 400 AND STRINGS
+    //TODO(Fateme): CORRECT 400 AND STRINGS
     func showBadRequestError() {
         SnackBarHelper.init(message: "wrong phone", color: R.color.errorColor()!, duration: .middle).show()
     }
     
-    func setBankList(bankList: [Bank]) {
-        
+     func setBankList() {
+        bankCollectionViewAdapter?.setDataSource(banks: presenter.getBankList())
     }
     
     func navigateToPhoneConfirmation(phone:String) {
         performSegue(withIdentifier: "phoneInputToActivationSegue", sender: self)
     }
-   
     
-    @IBAction func onRegister(_ sender: UIBarButtonItem) {
-        if tfPhoneNumber.text != "" {
-            self.presenter.claim(phone: lbPhoneCode.text!+tfPhoneNumber.text!)
-        }
-    }
-    func selectedCard(bankIndex: Int) {
+    func selectedBank(bankIndex: Int) {
         
     }
     
@@ -127,8 +120,13 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         backItem.tintColor = R.color.secondary()
         navigationItem.backBarButtonItem = backItem
         if segue.identifier == "phoneInputToActivationSegue" {
-        (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:lbPhoneCode.text!+tfPhoneNumber.text! )
+        (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:labelPhoneCode.text!+textFieldPhoneNumber.text! )
+        }
+    }
+    
+    @IBAction func onRegister(_ sender: UIBarButtonItem) {
+        if textFieldPhoneNumber.text != "" {
+            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
         }
     }
 }
-

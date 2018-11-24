@@ -32,11 +32,11 @@ class UIHelper {
     }
     
     static func showFailedSnackBar() {
-        SnackBarHelper.init(message: "sb_bad_request".localized(),color:UIColorHelper.redColor, duration:TTGSnackbarDuration.long).show()
+        SnackBarHelper.init(message: R.string.localizable.sb_bad_request(),color:R.color.errorColor()!, duration:TTGSnackbarDuration.long).show()
     }
     
     static func showSuccessfulSnackBar(message:String) {
-        SnackBarHelper.init(message: message,color:UIColorHelper.greenColor, duration:TTGSnackbarDuration.long).show()
+        SnackBarHelper.init(message: message,color:R.color.eyeCatching()!, duration:TTGSnackbarDuration.long).show()
     }
     
     static func showSpecificSnackBar(message:String, color:UIColor) {

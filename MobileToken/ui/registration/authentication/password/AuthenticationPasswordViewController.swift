@@ -60,7 +60,7 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
             
             self.dismissKeyboard()
             tfPassword.text = ""
-            UIHelper.showSpecificSnackBar(message: "sb_wrong_password".localized(), color: UIColorHelper.redColor)
+            //UIHelper.showSpecificSnackBar(message: "sb_wrong_password".localized(), color: UIColorHelper.redColor)
         }
         
         self.dismissKeyboard()

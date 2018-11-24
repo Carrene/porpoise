@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2g-dI-h8H">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,16 +21,16 @@
             <objects>
                 <viewController storyboardIdentifier="sb_registration" id="t2g-dI-h8H" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R7h-R6-ad1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF">
-                                <rect key="frame" x="0.0" y="90" width="375" height="105"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="105"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
-                                        <rect key="frame" x="15" y="0.0" width="365" height="105"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="105"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qfx-jO-6LW">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Qfx-jO-6LW">
                                             <size key="itemSize" width="140" height="100"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -50,21 +50,21 @@
                                 </subviews>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
-                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="centerX" secondItem="cui-1P-fqF" secondAttribute="centerX" constant="10" id="SNA-9n-Lmh"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="centerX" secondItem="cui-1P-fqF" secondAttribute="centerX" id="SNA-9n-Lmh"/>
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="centerY" secondItem="cui-1P-fqF" secondAttribute="centerY" id="Zac-bY-eTg"/>
                                     <constraint firstAttribute="height" constant="105" id="bMe-ev-IwE"/>
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="height" secondItem="cui-1P-fqF" secondAttribute="height" id="jHL-Ct-Bja"/>
-                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" constant="-10" id="z2X-x8-ZxM"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" constant="-20" id="z2X-x8-ZxM"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNf-PU-RSB">
-                                <rect key="frame" x="5" y="245" width="365" height="20"/>
+                                <rect key="frame" x="5" y="269" width="404" height="20"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G">
-                                <rect key="frame" x="30" y="281" width="315" height="110"/>
+                                <rect key="frame" x="49.5" y="305" width="315" height="110"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
                                         <rect key="frame" x="31.5" y="0.0" width="252" height="53"/>
@@ -123,20 +123,8 @@
                                     <constraint firstItem="9Rd-d6-I82" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" id="zbI-sG-RjN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1t-o2-AJQ">
-                                <rect key="frame" x="30" y="534" width="315" height="48"/>
-                                <color key="backgroundColor" name="secondary"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="eAr-ar-Bf3"/>
-                                    <constraint firstAttribute="width" constant="315" id="kYl-bU-FB0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
-                                <state key="normal" title="دریافت کد فعال‌سازی">
-                                    <color key="titleColor" name="buttonColor"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک مورد نظر برای ثبت‌نام را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
-                                <rect key="frame" x="5" y="50" width="375" height="20"/>
+                                <rect key="frame" x="5" y="74" width="414" height="20"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,24 +135,16 @@
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
-                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Y1t-o2-AJQ" secondAttribute="trailing" constant="30" id="LZC-rb-mfI"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="firstBaseline" secondItem="DNf-PU-RSB" secondAttribute="baseline" constant="20" id="LsS-fs-8Hi"/>
-                            <constraint firstItem="rD3-UM-afT" firstAttribute="bottom" secondItem="Y1t-o2-AJQ" secondAttribute="bottom" constant="85" id="NXQ-iX-ym2"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="DNf-PU-RSB" secondAttribute="trailing" constant="5" id="P6T-Ih-3qt"/>
                             <constraint firstItem="DNf-PU-RSB" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="50" id="X1g-OG-mfa"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
                             <constraint firstItem="DNf-PU-RSB" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="fVZ-XB-pN9"/>
-                            <constraint firstItem="Y1t-o2-AJQ" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="hLY-YB-xh8"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="trailing" secondItem="rD3-UM-afT" secondAttribute="trailing" constant="5" id="rwN-DB-cdD"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" id="tHQ-4x-4bc"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="top" secondItem="rD3-UM-afT" secondAttribute="top" constant="30" id="zdI-ft-Vfn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Y1t-o2-AJQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
                         <barButtonItem key="rightBarButtonItem" title="ثبت نام" id="Jpt-Ln-5fK" userLabel="ثبت نام">
@@ -175,14 +155,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bankCollectionView" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
-                        <outlet property="barBtRegister" destination="Jpt-Ln-5fK" id="l3t-Y9-Kgp"/>
-                        <outlet property="lbChooseBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
-                        <outlet property="lbEnterPhone" destination="DNf-PU-RSB" id="H4F-59-NED"/>
-                        <outlet property="lbPhoneCode" destination="0X1-9s-ljI" id="s4p-PO-snW"/>
-                        <outlet property="tfPhoneNumber" destination="Kql-2z-MHL" id="la5-56-bai"/>
-                        <outlet property="vCountryPicker" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
-                        <outlet property="vPhone" destination="Wp6-vC-o6G" id="feT-ax-fgl"/>
+                        <outlet property="barButtonItemRegister" destination="Jpt-Ln-5fK" id="l3t-Y9-Kgp"/>
+                        <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
+                        <outlet property="countryPickerView" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
+                        <outlet property="labelChooseYourBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
+                        <outlet property="labelEnterYourPhone" destination="DNf-PU-RSB" id="H4F-59-NED"/>
+                        <outlet property="labelPhoneCode" destination="0X1-9s-ljI" id="s4p-PO-snW"/>
+                        <outlet property="textFieldPhoneNumber" destination="Kql-2z-MHL" id="la5-56-bai"/>
+                        <outlet property="viewPhone" destination="Wp6-vC-o6G" id="feT-ax-fgl"/>
                         <segue destination="zAA-ph-Mfk" kind="show" identifier="phoneInputToActivationSegue" id="H1o-kK-OwM"/>
                     </connections>
                 </viewController>
@@ -195,17 +175,17 @@
             <objects>
                 <viewController id="zAA-ph-Mfk" customClass="PhoneConfirmationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oog-9L-98P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Gr-hPV" userLabel="lbTitle">
-                                <rect key="frame" x="109" y="32" width="157.5" height="20"/>
+                                <rect key="frame" x="128.5" y="56" width="157.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
-                                <rect key="frame" x="30" y="72" width="315" height="110"/>
+                                <rect key="frame" x="69" y="96" width="315" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
                                         <rect key="frame" x="157.5" y="20" width="0.0" height="0.0"/>
@@ -213,7 +193,7 @@
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
                                         <rect key="frame" x="30" y="50" width="255" height="40"/>
                                         <color key="backgroundColor" name="primaryDark"/>
                                         <color key="tintColor" name="buttonColor"/>
@@ -240,7 +220,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
-                                <rect key="frame" x="30" y="192" width="315" height="40"/>
+                                <rect key="frame" x="69" y="216" width="315" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تغییر شماره" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
                                         <rect key="frame" x="20" y="9.5" width="77" height="21"/>
@@ -286,15 +266,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="barBtConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
-                        <outlet property="lbChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
-                        <outlet property="lbCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
-                        <outlet property="lbPhone" destination="G9q-D2-cf1" id="EIh-lD-9yS"/>
-                        <outlet property="lbTitle" destination="aEl-Gr-hPV" id="4Oa-mu-WZp"/>
-                        <outlet property="navigationTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
-                        <outlet property="tfCode" destination="frk-Zy-hGa" id="lPZ-p3-c4e"/>
-                        <outlet property="vChangeNumber" destination="qBh-yJ-CU2" id="FEz-5z-3Nd"/>
-                        <outlet property="vCode" destination="zi8-T5-FwR" id="Onm-en-ezx"/>
+                        <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
+                        <outlet property="barButtonItemConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
+                        <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
+                        <outlet property="labelCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
+                        <outlet property="labelPhone" destination="G9q-D2-cf1" id="EIh-lD-9yS"/>
+                        <outlet property="labelTitle" destination="aEl-Gr-hPV" id="4Oa-mu-WZp"/>
+                        <outlet property="textFieldCode" destination="frk-Zy-hGa" id="lPZ-p3-c4e"/>
+                        <outlet property="viewChangeNumber" destination="qBh-yJ-CU2" id="FEz-5z-3Nd"/>
+                        <outlet property="viewCode" destination="zi8-T5-FwR" id="Onm-en-ezx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9x-k3-vgA" userLabel="First Responder" sceneMemberID="firstResponder"/>

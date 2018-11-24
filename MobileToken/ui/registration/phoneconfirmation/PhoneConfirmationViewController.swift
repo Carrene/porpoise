@@ -10,15 +10,15 @@ import UIKit
 
 class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
     
-    @IBOutlet var vChangeNumber: UIView!
-    @IBOutlet var tfCode: UITextField!
-    @IBOutlet var vCode: UIView!
-    @IBOutlet var lbTitle: UILabel!
-    @IBOutlet var lbPhone: UILabel!
-    @IBOutlet var lbChangeNumber: UILabel!
-    @IBOutlet var lbCounter: UILabel!
-    @IBOutlet var barBtConfirm: UIBarButtonItem!
-    @IBOutlet var navigationTitle: UINavigationItem!
+    @IBOutlet var viewChangeNumber: UIView!
+    @IBOutlet var textFieldCode: UITextField!
+    @IBOutlet var viewCode: UIView!
+    @IBOutlet var labelTitle: UILabel!
+    @IBOutlet var labelPhone: UILabel!
+    @IBOutlet var labelChangeNumber: UILabel!
+    @IBOutlet var labelCounter: UILabel!
+    @IBOutlet var barButtonItemConfirm: UIBarButtonItem!
+    @IBOutlet var NavigationItemTitle: UINavigationItem!
     var presenter:PhoneConfirmationPresenter?
     var phoneNumber = ""
     
@@ -37,27 +37,27 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     }
     
     func initUIComponent() {
-        lbTitle.font = UIHelper.iranSanseBold(size: 16)
-        vCode.layer.cornerRadius = 10
-        vChangeNumber.layer.cornerRadius = 10
-        lbPhone.font = UIHelper.iranSanseMedium(size: 16)
-        lbCounter.font = UIHelper.iranSanseBold(size: 16)
-        lbChangeNumber.font = UIHelper.iranSanseBold(size: 16)
+        labelTitle.font = UIHelper.iranSanseBold(size: 16)
+        viewCode.layer.cornerRadius = 10
+        viewChangeNumber.layer.cornerRadius = 10
+        labelPhone.font = UIHelper.iranSanseMedium(size: 16)
+        labelCounter.font = UIHelper.iranSanseBold(size: 16)
+        labelChangeNumber.font = UIHelper.iranSanseBold(size: 16)
         let iconView = UIImageView(frame:
             CGRect(x: 10, y: 10, width: 20, height: 11))
         iconView.image = R.image.key()
         let iconContainerView: UIView = UIView(frame:
             CGRect(x: 20, y: 0, width: 30, height: 30))
         iconContainerView.addSubview(iconView)
-        tfCode.leftView = iconContainerView
-        tfCode.leftViewMode = .always
-        tfCode.font = UIHelper.iranSanseBold(size: 20)
-        tfCode.delegate = self
-        barBtConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
-        lbPhone.text = phoneNumber
-        lbChangeNumber.isUserInteractionEnabled = true
+        textFieldCode.leftView = iconContainerView
+        textFieldCode.leftViewMode = .always
+        textFieldCode.font = UIHelper.iranSanseBold(size: 20)
+        textFieldCode.delegate = self
+        barButtonItemConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
+        labelPhone.text = phoneNumber
+        labelChangeNumber.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
-        lbChangeNumber.addGestureRecognizer(tap)
+        labelChangeNumber.addGestureRecognizer(tap)
         
     }
     
@@ -77,17 +77,17 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     }
     
     @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
-        if tfCode.text != "" {
-            self.barBtConfirm.isEnabled = true
+        if textFieldCode.text != "" {
+            self.barButtonItemConfirm.isEnabled = true
         }
         else {
-            self.barBtConfirm.isEnabled = false
+            self.barButtonItemConfirm.isEnabled = false
         }
     }
     
     @IBAction func onConfirm(_ sender: UIBarButtonItem) {
-        if tfCode.text != "" && self.phoneNumber != "" {
-            presenter?.bind(phone: self.phoneNumber, activationCode: tfCode.text!)
+        if textFieldCode.text != "" && self.phoneNumber != "" {
+            presenter?.bind(phone: self.phoneNumber, activationCode: textFieldCode.text!)
         }
     }
     
@@ -109,6 +109,4 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
     }
-    
-
 }

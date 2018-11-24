@@ -27,10 +27,9 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
     func initUIComponent() {
         
         self.vPattern.resetDotsState()
-        self.vPattern.lineColor = .black
         self.vPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
         self.vPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
-        self.vPattern.dotWidth = 40
+        self.vPattern.dotWidth = 25
         
         configuareLockViewWithImages()
     }
@@ -54,10 +53,10 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
                 if count > 3 {
                     
                     self.firstAttemptPattern = password
-                    UIHelper.showSpecificSnackBar(message: "sb_try_for_second_time".localized(), color: UIColorHelper.primaryLightColor)
+                    //UIHelper.showSpecificSnackBar(message: "sb_try_for_second_time".localized(), color: UIColorHelper.primaryLightColor)
                 }else {
                     
-                    UIHelper.showSpecificSnackBar(message: "sb_pattern_min_point_error".localized(), color: UIColorHelper.redColor)
+                    //UIHelper.showSpecificSnackBar(message: "sb_pattern_min_point_error".localized(), color: UIColorHelper.redColor)
                 }
             } else {
                 
@@ -69,7 +68,7 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
                     
                     self.firstAttemptPattern = nil
                     self.secondAttemptPattern = nil
-                    UIHelper.showSpecificSnackBar(message: "sb_not_match".localized(), color: UIColorHelper.redColor)
+                    //UIHelper.showSpecificSnackBar(message: "sb_not_match".localized(), color: UIColorHelper.redColor)
                 }
             }
         }
