@@ -8,9 +8,9 @@
 
 import UIKit
 import CountryPickerView
+import IQKeyboardManager
+
 class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
-    
-    
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
     @IBOutlet var textFieldPhoneNumber: UITextField!
@@ -19,7 +19,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var countryPickerView: CountryPickerView!
     @IBOutlet var viewPhone: UIView!
     @IBOutlet var barButtonItemRegister: UIBarButtonItem!
-    
+    let x = IQKeyboardReturnKeyHandler()
     var bankCollectionViewAdapter: BankCollectionViewAdapter?
     var presenter: PhoneInputPresenter!
     
@@ -28,13 +28,16 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.presenter = PhoneInputPresenter(view: self)
         initBankCollectionView()
         initCountryPicker()
+        x.addTextFieldView(textFieldPhoneNumber)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         initUIComponent()
         self.hideKeyboardWhenTappedAround()
-        barButtonItemRegister.isEnabled = false
+        //barButtonItemRegister.isEnabled = false
     }
+    
     
     func initUIComponent() {
         labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
@@ -80,12 +83,19 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         return string == numberFiltered
     }
     
+   
+    @IBAction func onDoneKeyboard(_ sender: UITextField) {
+        if textFieldPhoneNumber.text != "" {
+            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
+        }
+    }
+    
     @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
         if textFieldPhoneNumber.text != "" {
-            self.barButtonItemRegister.isEnabled = true
+            //self.barButtonItemRegister.isEnabled = true
         }
         else {
-            self.barButtonItemRegister.isEnabled = false
+            //self.barButtonItemRegister.isEnabled = false
         }
     }
     
@@ -128,38 +138,5 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         if textFieldPhoneNumber.text != "" {
             self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
         }
-    }
-}
-extension UITextField{
-    
-    @IBInspectable var doneAccessory: Bool{
-        get{
-            return self.doneAccessory
-        }
-        set (hasDone) {
-            if hasDone{
-                addDoneButtonOnKeyboard()
-            }
-        }
-    }
-    
-    func addDoneButtonOnKeyboard()
-    {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        doneToolbar.barStyle = .black
-        
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "ثبت نام", style: .done, target: self, action: #selector(self.doneButtonAction))
-        
-        let items = [flexSpace, done]
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        self.inputAccessoryView = doneToolbar
-    }
-    
-    @objc func doneButtonAction()
-    {
-        self.resignFirstResponder()
     }
 }

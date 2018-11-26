@@ -101,6 +101,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="onDoneKeyboard:" destination="t2g-dI-h8H" eventType="editingDidEnd" id="l4m-RY-2rE"/>
                                             <action selector="onTfPhoneEditDidChanged:" destination="t2g-dI-h8H" eventType="editingChanged" id="CIV-kO-5Qt"/>
                                         </connections>
                                     </textField>
@@ -152,13 +153,9 @@
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
                         <barButtonItem key="rightBarButtonItem" title="ثبت نام" id="Jpt-Ln-5fK" userLabel="ثبت نام">
                             <color key="tintColor" name="secondary"/>
-                            <connections>
-                                <action selector="onRegister:" destination="t2g-dI-h8H" id="6t7-dH-Gyo"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="barButtonItemRegister" destination="Jpt-Ln-5fK" id="l3t-Y9-Kgp"/>
                         <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
                         <outlet property="countryPickerView" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
                         <outlet property="labelChooseYourBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
@@ -208,6 +205,7 @@
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
+                                            <action selector="onDoneKeyboard:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="VzY-0p-RgX"/>
                                             <action selector="onTfPhoneEditDidChanged:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="ZwU-6d-nKp"/>
                                         </connections>
                                     </textField>
@@ -263,14 +261,10 @@
                     <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
                         <barButtonItem key="rightBarButtonItem" title="تایید" id="H8y-vQ-Hqx">
                             <color key="tintColor" name="secondaryLight"/>
-                            <connections>
-                                <action selector="onConfirm:" destination="zAA-ph-Mfk" id="rO4-2n-wv5"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
-                        <outlet property="barButtonItemConfirm" destination="H8y-vQ-Hqx" id="XVL-PG-J5M"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
                         <outlet property="labelCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
                         <outlet property="labelPhone" destination="G9q-D2-cf1" id="EIh-lD-9yS"/>

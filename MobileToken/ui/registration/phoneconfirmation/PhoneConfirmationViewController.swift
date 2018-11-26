@@ -17,7 +17,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     @IBOutlet var labelPhone: UILabel!
     @IBOutlet var labelChangeNumber: UILabel!
     @IBOutlet var labelCounter: UILabel!
-    @IBOutlet var barButtonItemConfirm: UIBarButtonItem!
     @IBOutlet var NavigationItemTitle: UINavigationItem!
     var presenter:PhoneConfirmationPresenter?
     var phoneNumber = ""
@@ -53,7 +52,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         textFieldCode.leftViewMode = .always
         textFieldCode.font = UIHelper.iranSanseBold(size: 20)
         textFieldCode.delegate = self
-        barButtonItemConfirm.setTitleTextAttributes([ NSAttributedString.Key.font:R.font.iranSansMobileBold(size: 14)!], for: .normal)
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
@@ -78,10 +76,10 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     
     @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
         if textFieldCode.text != "" {
-            self.barButtonItemConfirm.isEnabled = true
+            //self.barButtonItemConfirm.isEnabled = true
         }
         else {
-            self.barButtonItemConfirm.isEnabled = false
+            //self.barButtonItemConfirm.isEnabled = false
         }
     }
     
@@ -102,6 +100,13 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     func segue() {
         //performSegue
     }
+    
+    @IBAction func onDoneKeyboard(_ sender: UITextField) {
+        if textFieldCode.text != "" && self.phoneNumber != "" {
+            presenter?.bind(phone: self.phoneNumber, activationCode: textFieldCode.text!)
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
