@@ -6,7 +6,7 @@
 "63H-YJ-0dL.placeholder" = "Enter Confirm Password";
 
 /* Class = "UILabel"; text = "الگوی خود را وارد کنید"; ObjectID = "7ix-hZ-XG9"; */
-"7ix-hZ-XG9.text" = "الگوی خود را وارد کنید";
+"7ix-hZ-XG9.text" = "Draw your pattern";
 
 /* Class = "UILabel"; text = "Confirm Password"; ObjectID = "C2A-TQ-Mrt"; */
 "C2A-TQ-Mrt.text" = "Confirm Password";
@@ -21,19 +21,19 @@
 "Vi8-qi-V47.placeholder" = "Enter Password";
 
 /* Class = "UISegmentedControl"; VlE-dD-tFq.segmentTitles[0] = "الگو"; ObjectID = "VlE-dD-tFq"; */
-"VlE-dD-tFq.segmentTitles[0]" = "الگو";
+"VlE-dD-tFq.segmentTitles[0]" = "Pattern";
 
 /* Class = "UISegmentedControl"; VlE-dD-tFq.segmentTitles[1] = "رمز"; ObjectID = "VlE-dD-tFq"; */
-"VlE-dD-tFq.segmentTitles[1]" = "رمز";
+"VlE-dD-tFq.segmentTitles[1]" = "Password";
 
 /* Class = "UINavigationItem"; title = "روش احراز هویت"; ObjectID = "WN0-SV-W97"; */
-"WN0-SV-W97.title" = "روش احراز هویت";
+"WN0-SV-W97.title" = "Authentication method";
 
 /* Class = "UILabel"; text = "Enter"; ObjectID = "gRn-XI-p9U"; */
 "gRn-XI-p9U.text" = "Enter";
 
 /* Class = "UILabel"; text = "الگوی خود را وارد کنید"; ObjectID = "rZv-zc-chD"; */
-"rZv-zc-chD.text" = "الگوی خود را وارد کنید";
+"rZv-zc-chD.text" = "Draw your pattern";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "zUn-3U-Jcj"; */
 "zUn-3U-Jcj.title" = "Item";
