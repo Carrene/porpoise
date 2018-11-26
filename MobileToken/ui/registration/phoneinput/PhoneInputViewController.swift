@@ -11,6 +11,7 @@ import CountryPickerView
 import IQKeyboardManager
 
 class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
+    
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
     @IBOutlet var textFieldPhoneNumber: UITextField!
@@ -18,8 +19,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var collectionViewbank: UICollectionView!
     @IBOutlet var countryPickerView: CountryPickerView!
     @IBOutlet var viewPhone: UIView!
-    @IBOutlet var barButtonItemRegister: UIBarButtonItem!
-    let x = IQKeyboardReturnKeyHandler()
+    @IBOutlet var buttonRegister: UIButton!
+    
+    
     var bankCollectionViewAdapter: BankCollectionViewAdapter?
     var presenter: PhoneInputPresenter!
     
@@ -28,16 +30,16 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.presenter = PhoneInputPresenter(view: self)
         initBankCollectionView()
         initCountryPicker()
-        x.addTextFieldView(textFieldPhoneNumber)
+        
 
     }
-    
+    //TODDO(FATEME) set button background disable state
     override func viewDidAppear(_ animated: Bool) {
         initUIComponent()
         self.hideKeyboardWhenTappedAround()
-        //barButtonItemRegister.isEnabled = false
+        buttonRegister.isEnabled = false
+        //buttonRegister.setBackgroundColor((R.color.secondary()?.withAlphaComponent(0.2))!, for: UIControl.State.disabled)
     }
-    
     
     func initUIComponent() {
         labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
@@ -46,6 +48,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         textFieldPhoneNumber.font = R.font.iranSansMobileMedium(size: 16)
         viewPhone.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
+        buttonRegister.layer.cornerRadius = 10
+        //buttonRegister.setBackgroundColor(R.color.secondary()!, for: UIControl.State.normal)
+        
     }
     
     func initBankCollectionView() {
@@ -53,10 +58,10 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         collectionViewbank.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
         bankCollectionViewAdapter = BankCollectionViewAdapter()
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
-        setBankList()
         collectionViewbank.delegate = bankCollectionViewAdapter
         collectionViewbank.dataSource = bankCollectionViewAdapter
         collectionViewbank.allowsMultipleSelection = false
+        setBankList()
         collectionViewbank.reloadData()
     }
     
@@ -92,10 +97,10 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
         if textFieldPhoneNumber.text != "" {
-            //self.barButtonItemRegister.isEnabled = true
+            buttonRegister.isEnabled = true
         }
         else {
-            //self.barButtonItemRegister.isEnabled = false
+            buttonRegister.isEnabled = false
         }
     }
     
@@ -140,3 +145,4 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         }
     }
 }
+

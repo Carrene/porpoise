@@ -45,6 +45,7 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         }
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
         collectionView.reloadData()

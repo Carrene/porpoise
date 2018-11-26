@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
         <array key="IranSansReqular.ttf">
             <string>IranianSans</string>
         </array>
@@ -133,15 +136,30 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgL-K6-xhR" userLabel="btRegister">
+                                <rect key="frame" x="30" y="794" width="354" height="48"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="U8x-Re-u1A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <state key="normal" title="دریافت کد فعال سازی">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="bottom" secondItem="LgL-K6-xhR" secondAttribute="bottom" constant="20" id="Bhd-TT-95H"/>
+                            <constraint firstItem="LgL-K6-xhR" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="Cbb-Zz-AWG"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="firstBaseline" secondItem="DNf-PU-RSB" secondAttribute="baseline" constant="20" id="LsS-fs-8Hi"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="LgL-K6-xhR" secondAttribute="trailing" constant="30" id="Om0-QB-ng4"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="DNf-PU-RSB" secondAttribute="trailing" constant="5" id="P6T-Ih-3qt"/>
                             <constraint firstItem="DNf-PU-RSB" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="50" id="X1g-OG-mfa"/>
+                            <constraint firstItem="LgL-K6-xhR" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="cim-Cm-J3i"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
                             <constraint firstItem="DNf-PU-RSB" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="fVZ-XB-pN9"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="trailing" secondItem="rD3-UM-afT" secondAttribute="trailing" constant="5" id="rwN-DB-cdD"/>
@@ -150,12 +168,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
-                        <barButtonItem key="rightBarButtonItem" title="ثبت نام" id="Jpt-Ln-5fK" userLabel="ثبت نام">
-                            <color key="tintColor" name="secondary"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg"/>
                     <connections>
+                        <outlet property="buttonRegister" destination="LgL-K6-xhR" id="fQm-Vo-GgE"/>
                         <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
                         <outlet property="countryPickerView" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
                         <outlet property="labelChooseYourBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
@@ -258,11 +273,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
-                        <barButtonItem key="rightBarButtonItem" title="تایید" id="H8y-vQ-Hqx">
-                            <color key="tintColor" name="secondaryLight"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA"/>
                     <connections>
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
@@ -297,9 +308,6 @@
         </namedColor>
         <namedColor name="secondary">
             <color red="0.093999996781349182" green="0.57300001382827759" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondaryLight">
-            <color red="0.33300000429153442" green="0.76899999380111694" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
