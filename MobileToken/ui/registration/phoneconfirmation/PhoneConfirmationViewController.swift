@@ -92,11 +92,11 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     }
     
     func showBadRequestError() {
-        SnackBarHelper.init(message: "Activation code is not valid", duration: .middle).show()
+        SnackBarHelper.init(message: R.string.localizable.sb_activation_code_is_not_valid() , duration: .middle).show()
     }
     
     func showSSMNotAvailable() {
-        SnackBarHelper.init(message: "SSM is not available", duration: .middle).show()
+        SnackBarHelper.init(message: R.string.localizable.sb_SSM_is_not_available(), duration: .middle).show()
     }
     
     func segue() {

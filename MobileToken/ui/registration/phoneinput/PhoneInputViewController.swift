@@ -98,7 +98,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     //TODO(Fateme): CORRECT 400 AND STRINGS
     func showBadRequestError() {
-        SnackBarHelper.init(message: "wrong phone", color: R.color.errorColor()!, duration: .middle).show()
+        SnackBarHelper.init(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorColor()!, duration: .middle).show()
     }
     
      func setBankList() {
@@ -106,7 +106,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     func navigateToPhoneConfirmation(phone:String) {
-        performSegue(withIdentifier: "phoneInputToActivationSegue", sender: self)
+        performSegue(withIdentifier: R.segue.phoneInputViewController.phoneInputToActivationSegue, sender: self)
     }
     
     func selectedBank(bankIndex: Int) {
@@ -119,7 +119,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         backItem.title = ""
         backItem.tintColor = R.color.secondary()
         navigationItem.backBarButtonItem = backItem
-        if segue.identifier == "phoneInputToActivationSegue" {
+        if segue.identifier == R.segue.phoneInputViewController.phoneInputToActivationSegue.identifier {
         (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:labelPhoneCode.text!+textFieldPhoneNumber.text! )
         }
     }

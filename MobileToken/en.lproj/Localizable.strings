@@ -9,6 +9,9 @@
 "sb_not_match" = "Not match";
 "sb_pattern_min_point_error" = "Select at least 4 point";
 "sb_bad_request" = "Bad Request";
+"sb_activation_code_is_not_valid" = "Activation code is not valid";
+"sb_SSM_is_not_available" = "SSM is not available";
+"sb_wrong_phone" = "Wrong phone number";
 
 //passWordHint
 "enter_at_least_eight_characters" = "At least 8 characters";
