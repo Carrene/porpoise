@@ -37,11 +37,9 @@ class CardCellXibView: UIView {
     }
     
     func loadViewFromNib() -> UIView! {
-        
 //        let bundle = Bundle(for: type(of: self))
 //        let nib = UINib(nibName: "CardCell", bundle: bundle)
         let view = R.nib.cardCell.instantiate(withOwner: self, options: nil).first as! UIView
-        
         return view
     }
 }

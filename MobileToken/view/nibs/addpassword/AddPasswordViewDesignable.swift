@@ -12,7 +12,6 @@ import UIKit
 
 class AddPasswordViewDesignable: UIView {
     
-
     @IBOutlet weak var vBackground: UIView!
     var contentView : UIView!
     
@@ -38,10 +37,11 @@ class AddPasswordViewDesignable: UIView {
         addSubview(contentView)
     }
     
+    //NOTE(HAMED) check if changes is ok
     func loadViewFromNib() -> UIView! {
-        
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "AddPasswordViewDesignable", bundle: bundle)
+        //let bundle = Bundle(for: type(of: self))
+        //let nib = UINib(nibName: "\(R.nib.addPasswordViewDesignable())" , bundle: bundle)
+        let nib = UINib(resource: R.nib.addPasswordViewDesignable)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         initUIComponent()
         return view

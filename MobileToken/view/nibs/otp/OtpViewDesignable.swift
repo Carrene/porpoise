@@ -42,10 +42,11 @@ class OtpViewDesignable: UIView {
         addSubview(contentView)
     }
     
+    //NOTE(HAMED) check if changes is ok
     func loadViewFromNib() -> UIView! {
-        
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "OtpViewDesignable", bundle: bundle)
+        //let bundle = Bundle(for: type(of: self))
+        //let nib = UINib(nibName: "OtpViewDesignable", bundle: bundle)
+        let nib = UINib(resource: R.nib.otpViewDesignable)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         initUIComponent()
         return view
