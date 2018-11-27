@@ -13,7 +13,7 @@ protocol AuthenticationDelegate:class {
 }
 class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var tfPassword: PasswordTextField!
+    @IBOutlet var textFieldPassword: UITextField!
     
     var authenticationDelegate: AuthenticationDelegate?
     private var authentication: Authentication?
@@ -31,8 +31,8 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     
     func initUIComponent() {
         
-        tfPassword.delegate = self
-        tfPassword.becomeFirstResponder()
+        textFieldPassword.delegate = self
+        textFieldPassword.becomeFirstResponder()
     }
     
     func setAuthentication(authentication:Authentication) {
@@ -40,12 +40,12 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
         self.authentication = authentication
     }
     
-    @IBAction func tfPasswordEditingChanged(_ sender: UITextField) {
+    @IBAction func textFieldPasswordEditingChanged(_ sender: UITextField) {
         
-        if tfPassword.text == authentication?.credentials {
+        if textFieldPassword.text == authentication?.credentials {
             
             authenticationDelegate?.authenticationSucceed()
-            tfPassword.enablesReturnKeyAutomatically = true
+            textFieldPassword.enablesReturnKeyAutomatically = true
         }else {
             
         }
@@ -53,14 +53,14 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if tfPassword.text == authentication?.credentials {
+        if textFieldPassword.text == authentication?.credentials {
             
             authenticationDelegate?.authenticationSucceed()
         }else {
             
             self.dismissKeyboard()
-            tfPassword.text = ""
-            //UIHelper.showSpecificSnackBar(message: "sb_wrong_password".localized(), color: UIColorHelper.redColor)
+            textFieldPassword.text = ""
+            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorColor()!)
         }
         
         self.dismissKeyboard()

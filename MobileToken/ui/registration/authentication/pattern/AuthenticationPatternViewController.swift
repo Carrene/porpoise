@@ -53,7 +53,7 @@ class AuthenticationPatternViewController: UIViewController {
                 self.authenticationDelegate?.authenticationSucceed()
             }else {
                 
-                //UIHelper.showSpecificSnackBar(message: "sb_wrong_pattern".localized(), color: UIColorHelper.redColor)
+                UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_pattern(), color: R.color.errorColor()!)
             }
         }
     }

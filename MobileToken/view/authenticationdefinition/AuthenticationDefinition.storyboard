@@ -173,7 +173,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Gm-msV" userLabel="lbTitle">
-                                <rect key="frame" x="111" y="20" width="153.5" height="164"/>
+                                <rect key="frame" x="111" y="20" width="153.5" height="29"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -186,7 +186,6 @@
                             <constraint firstItem="WrF-kF-BNt" firstAttribute="bottom" secondItem="pkl-HJ-Vyx" secondAttribute="bottom" constant="112" id="EOh-MG-bKK"/>
                             <constraint firstItem="hAK-Gm-msV" firstAttribute="centerX" secondItem="pkl-HJ-Vyx" secondAttribute="centerX" id="Y7l-cl-rLS"/>
                             <constraint firstItem="pkl-HJ-Vyx" firstAttribute="leading" secondItem="WrF-kF-BNt" secondAttribute="leading" constant="58" id="jUv-j9-5F1"/>
-                            <constraint firstItem="pkl-HJ-Vyx" firstAttribute="top" secondItem="hAK-Gm-msV" secondAttribute="bottom" constant="112" id="z21-sV-rJK"/>
                             <constraint firstItem="pkl-HJ-Vyx" firstAttribute="centerX" secondItem="WrF-kF-BNt" secondAttribute="centerX" id="zLN-J7-WEi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WrF-kF-BNt"/>
