@@ -14,8 +14,8 @@
         <array key="IRANSansMobile-Bold.ttf">
             <string>IRANSansMobile-Bold</string>
         </array>
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
         </array>
     </customFonts>
     <scenes>
@@ -78,67 +78,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3v-Nd-l5p" userLabel="tfPasscode" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="38" y="80" width="299" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFd-m3-Ox9" userLabel="lbTitle">
+                                <rect key="frame" x="120.5" y="20" width="134.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ts1-Ve-pVV" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="30" y="139" width="315" height="40"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="tintColor" name="buttonColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="cwe-PT-lVT"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZiX-qn-x2X"/>
                                 </constraints>
-                                <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNh-Td-lL9" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="30" y="69" width="315" height="40"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bfV-r4-RX8"/>
+                                </constraints>
+                                <color key="textColor" name="buttonColor"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="onEditDidBegin:" destination="rYz-AS-1bD" eventType="editingDidBegin" id="dmR-if-irO"/>
-                                    <action selector="onEditingDidExit:" destination="rYz-AS-1bD" eventType="editingDidEnd" id="LS7-gS-3bo"/>
+                                    <action selector="onEditBegin:" destination="rYz-AS-1bD" eventType="editingDidBegin" id="b8I-HR-ev5"/>
+                                    <action selector="onEndEditing:" destination="rYz-AS-1bD" eventType="editingDidEnd" id="p1x-W4-Gwc"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o93-FY-Nv4" userLabel="tfConfirmPass" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="38" y="190" width="299" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="RaS-AQ-RCd"/>
-                                </constraints>
-                                <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-Zz-vGi" userLabel="lbPassword">
-                                <rect key="frame" x="38" y="51" width="71" height="19"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-dX-GaZ" userLabel="lbConfirmPassword">
-                                <rect key="frame" x="38" y="161" width="132" height="19"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="bottom" secondItem="o93-FY-Nv4" secondAttribute="top" constant="-65" id="6f0-NC-p1y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t3v-Nd-l5p" secondAttribute="trailing" constant="38" id="8L6-r3-6ux"/>
-                            <constraint firstItem="o93-FY-Nv4" firstAttribute="trailing" secondItem="t3v-Nd-l5p" secondAttribute="trailing" id="9LV-Kb-WMw"/>
-                            <constraint firstItem="o93-FY-Nv4" firstAttribute="leading" secondItem="t3v-Nd-l5p" secondAttribute="leading" id="AXn-r9-hPa"/>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="leading" secondItem="fEu-Zz-vGi" secondAttribute="leading" id="BV4-L6-rSl"/>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="leading" secondItem="YaE-C9-K9o" secondAttribute="leadingMargin" constant="38" id="JuI-Rs-KUJ"/>
-                            <constraint firstItem="o93-FY-Nv4" firstAttribute="leading" secondItem="Ztp-dX-GaZ" secondAttribute="leading" id="OAj-1P-KQ6"/>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="trailing" secondItem="pjO-RW-Wru" secondAttribute="trailing" constant="-38" id="Vhh-Jh-BPi"/>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="leading" secondItem="pjO-RW-Wru" secondAttribute="leading" constant="38" id="YvD-Xr-hip"/>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="top" secondItem="YaE-C9-K9o" secondAttribute="top" constant="80" id="b74-BY-T26"/>
-                            <constraint firstItem="o93-FY-Nv4" firstAttribute="top" secondItem="Ztp-dX-GaZ" secondAttribute="bottom" constant="10" id="cog-0E-7JE"/>
-                            <constraint firstItem="t3v-Nd-l5p" firstAttribute="top" secondItem="fEu-Zz-vGi" secondAttribute="bottom" constant="10" id="ety-F6-kZs"/>
+                            <constraint firstItem="ts1-Ve-pVV" firstAttribute="leading" secondItem="CNh-Td-lL9" secondAttribute="leading" id="0gs-Ni-hqn"/>
+                            <constraint firstItem="iFd-m3-Ox9" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="7hV-Ab-Bla"/>
+                            <constraint firstItem="ts1-Ve-pVV" firstAttribute="top" secondItem="CNh-Td-lL9" secondAttribute="bottom" constant="30" id="7po-hb-OsO"/>
+                            <constraint firstItem="CNh-Td-lL9" firstAttribute="top" secondItem="iFd-m3-Ox9" secondAttribute="bottom" constant="20" id="DYd-87-Y74"/>
+                            <constraint firstItem="ts1-Ve-pVV" firstAttribute="trailing" secondItem="CNh-Td-lL9" secondAttribute="trailing" id="QZ4-6x-cTq"/>
+                            <constraint firstItem="CNh-Td-lL9" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="VDk-tr-ptb"/>
+                            <constraint firstItem="ts1-Ve-pVV" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="VhX-S2-Yes"/>
+                            <constraint firstItem="CNh-Td-lL9" firstAttribute="leading" secondItem="pjO-RW-Wru" secondAttribute="leading" constant="30" id="aIe-iw-6OA"/>
+                            <constraint firstItem="pjO-RW-Wru" firstAttribute="top" secondItem="iFd-m3-Ox9" secondAttribute="top" id="oan-cF-FIe"/>
+                            <constraint firstItem="pjO-RW-Wru" firstAttribute="trailing" secondItem="CNh-Td-lL9" secondAttribute="trailing" constant="30" id="y1p-Fj-6gP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pjO-RW-Wru"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8L6-r3-6ux"/>
-                                <exclude reference="JuI-Rs-KUJ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="tfConfirmPasscode" destination="o93-FY-Nv4" id="PZJ-3S-xnv"/>
-                        <outlet property="tfPasscode" destination="t3v-Nd-l5p" id="1WO-Sz-51h"/>
+                        <outlet property="textFieldConfirmPassword" destination="ts1-Ve-pVV" id="Ydc-bT-v73"/>
+                        <outlet property="textFieldPassword" destination="CNh-Td-lL9" id="kxF-J1-maG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZj-Va-ubA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +157,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Gm-msV" userLabel="lbTitle">
-                                <rect key="frame" x="111" y="50" width="153.5" height="134"/>
+                                <rect key="frame" x="111" y="20" width="153.5" height="164"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -175,7 +165,7 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="hAK-Gm-msV" firstAttribute="top" secondItem="WrF-kF-BNt" secondAttribute="top" constant="30" id="AGx-7O-hPg"/>
+                            <constraint firstItem="hAK-Gm-msV" firstAttribute="top" secondItem="WrF-kF-BNt" secondAttribute="top" id="AGx-7O-hPg"/>
                             <constraint firstItem="WrF-kF-BNt" firstAttribute="trailing" secondItem="pkl-HJ-Vyx" secondAttribute="trailing" constant="58" id="DtS-Xb-rEW"/>
                             <constraint firstItem="WrF-kF-BNt" firstAttribute="bottom" secondItem="pkl-HJ-Vyx" secondAttribute="bottom" constant="112" id="EOh-MG-bKK"/>
                             <constraint firstItem="hAK-Gm-msV" firstAttribute="centerX" secondItem="pkl-HJ-Vyx" secondAttribute="centerX" id="Y7l-cl-rLS"/>

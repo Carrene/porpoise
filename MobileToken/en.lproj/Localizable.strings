@@ -1,6 +1,5 @@
-//label
-"lb_enter_password" = "Enter your password";
-"lb_enter_pattern" = "Enter your pattern";
+"country" = "Country";
+"backBarItem" = "Back";
 
 // snakbar
 "sb_wrong_password" = "Wrong password";
@@ -14,10 +13,8 @@
 "sb_wrong_phone" = "Wrong phone number";
 
 //passWordHint
-"enter_at_least_eight_characters" = "At least 8 characters";
-"enter_at_least_one_capital_letter" = "At least one capital letter";
-"enter_at_least_one_digit" = "At least one digit";
-"enter_at_least_one_special_character" = "At least one of (@ # $ % + * ?)";
-
-"country" = "Country";
-"backBarItem" = "Back";
+"enter_at_least_eight_characters" = "شامل حداقل ۸ کاراکتر";
+"enter_at_least_one_capital_letter" = "شامل حداقل یک حرف بزرگ";
+"enter_at_least_one_digit" = "شامل حداقل یک عدد";
+"enter_at_least_one_special_character" = "شامل حداقل یکی از کاراکترهای (/#%$^*&!@؟|\)";
+"no_spaces" = "بدون فاصله";

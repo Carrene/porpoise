@@ -70,7 +70,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = R.string.localizable.backBarItem()
+        //backItem.title = R.string.localizable.backBarItem()
         navigationItem.backBarButtonItem = backItem
     }
     

@@ -35,16 +35,14 @@ class PasswordHintTableAdapter: NSObject,UITableViewDataSource,UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.passwordHintTableViewCell.identifier, for: indexPath) as! PasswordHintTableViewCell
-        tableView.rowHeight = 25
+        tableView.rowHeight = 30
         var hintArray = Array(hintDataSource!.keys)
         cell.lbHint.text = hintArray[indexPath.row]
-        
+        tableView.separatorColor = UIColor.clear
         if (Array(hintDataSource!.values)[indexPath.row]) {
-            
             cell.imgCheck.image =  R.image.passwordHintOk()
         }
         else {
-            
             cell.imgCheck.image =  R.image.passwordHintNotOk()
         }
         return cell

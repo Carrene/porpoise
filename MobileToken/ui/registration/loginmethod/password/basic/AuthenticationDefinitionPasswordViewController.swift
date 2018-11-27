@@ -17,8 +17,8 @@ import AMPopTip
 
 class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFieldDelegate {
     
-    @IBOutlet weak var tfPasscode: PasswordTextField!
-    @IBOutlet weak var tfConfirmPasscode: PasswordTextField!
+    @IBOutlet weak var textFieldPassword: PasswordTextField!
+    @IBOutlet weak var textFieldConfirmPassword: PasswordTextField!
     
     var passwordHint = PopTip()
     var passwordIsValid = false
@@ -30,45 +30,42 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initPasswordHintTable()
-        initUiComponent()
+        initUIComponent()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
     }
                  
-    func initUiComponent() {
-        
+    func initUIComponent() {
         self.hideKeyboardWhenTappedAround()
-        tfPasscode.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
-        tfConfirmPasscode.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
-        tfConfirmPasscode.isUserInteractionEnabled = false
-        tfPasscode.borderWidth = 1
-        tfConfirmPasscode.borderWidth = 1
-        tfConfirmPasscode.cornerRadius = 5
-        tfPasscode.cornerRadius = 5
-        //tfConfirmPasscode.layer.borderColor = UIColorHelper.primaryLightColor.cgColor
-        //tfPasscode.layer.borderColor = UIColorHelper.primaryLightColor.cgColor
+        textFieldPassword.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        textFieldConfirmPassword.isUserInteractionEnabled = false
+        textFieldConfirmPassword.cornerRadius = 5
+        textFieldPassword.cornerRadius = 5
         passwordHint.shouldDismissOnTapOutside = false
         passwordHint.shouldDismissOnTap = false
         passwordHint.shouldDismissOnSwipeOutside = false
-        tfPasscode.becomeFirstResponder()
+        textFieldPassword.becomeFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         dismissKeyboard()
         return true
     }
     
     func initPasswordHintTable() {
-        
-        passwordHintTableView = UITableView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-        //passwordHintTableView?.backgroundColor = UIColorHelper.primaryColor
+        passwordHintTableView = UITableView(frame: CGRect(x: 0, y: 0, width: 315, height: 119))
+        passwordHintTableView?.layer.cornerRadius = 5
+        passwordHintTableView?.backgroundColor = R.color.primary()
         self.passwordHintTableView?.register(R.nib.passwordHintTableViewCell)
         passwordHintAdapter = PasswordHintTableAdapter()
         passwordHintTableView?.delegate = passwordHintAdapter
         passwordHintTableView?.dataSource = passwordHintAdapter
         passwordHintAdapter?.setDataSource(hintDataSource: hintDataSource)
-        //passwordHint.bubbleColor = UIColorHelper.primaryLightColor
+        passwordHint.bubbleColor = R.color.primary()!
+        passwordHint.borderColor = UIColor.clear
         passwordHintTableView?.allowsSelection = false
         passwordHintTableView?.reloadData()
     }
@@ -77,40 +74,42 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         
         self.authenticationDefinitionDelegate = authenticationDefinitionDelegate
     }
+   
     
-    @IBAction func onEditDidBegin(_ sender: Any) {
-        
-        passwordHint.show(customView: passwordHintTableView!, direction: .down, in: view, from: (tfPasscode.frame))
+    @IBAction func onEditBegin(_ sender: PasswordTextField) {
+        passwordHint.show(customView: passwordHintTableView!, direction: .down, in: view, from: (textFieldPassword.frame))
     }
     
-    @IBAction func onEditingDidExit(_ sender: Any) {
-        
+   
+    
+    @IBAction func onEndEditing(_ sender: PasswordTextField) {
         passwordHint.hide()
     }
+   
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         
-        if PasswordValidator.hasPasswordMinimumLength(testStr: tfPasscode.text) != hintDataSource[R.string.localizable.enter_at_least_eight_characters()] {
+        if PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text) != hintDataSource[R.string.localizable.enter_at_least_eight_characters()] {
             
-            hintDataSource.updateValue(PasswordValidator.hasPasswordMinimumLength(testStr: tfPasscode.text), forKey: R.string.localizable.enter_at_least_eight_characters())
+            hintDataSource.updateValue(PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text), forKey: R.string.localizable.enter_at_least_eight_characters())
             passwordHintTableView?.reloadData()
         }
         
-        if PasswordValidator.hasPasswordCapitalLetter(testStr: tfPasscode.text)  != hintDataSource[R.string.localizable.enter_at_least_one_capital_letter()]{
+        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text)  != hintDataSource[R.string.localizable.enter_at_least_one_capital_letter()]{
             
-            hintDataSource.updateValue(PasswordValidator.hasPasswordCapitalLetter(testStr: tfPasscode.text), forKey: R.string.localizable.enter_at_least_one_capital_letter())
+            hintDataSource.updateValue(PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text), forKey: R.string.localizable.enter_at_least_one_capital_letter())
             passwordHintTableView?.reloadData()
         }
         
-        if PasswordValidator.hasPasswordDigit(testStr: tfPasscode.text) != hintDataSource[R.string.localizable.enter_at_least_one_digit()] {
+        if PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text) != hintDataSource[R.string.localizable.enter_at_least_one_digit()] {
             
-            hintDataSource.updateValue(PasswordValidator.hasPasswordDigit(testStr: tfPasscode.text), forKey:R.string.localizable.enter_at_least_one_digit())
+            hintDataSource.updateValue(PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text), forKey:R.string.localizable.enter_at_least_one_digit())
             passwordHintTableView?.reloadData()
         }
         
-        if PasswordValidator.hasPasswordCustomCharacters(testStr: tfPasscode.text) != hintDataSource[R.string.localizable.enter_at_least_one_special_character()] {
+        if PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text) != hintDataSource[R.string.localizable.enter_at_least_one_special_character()] {
             
-            hintDataSource.updateValue(PasswordValidator.hasPasswordCustomCharacters(testStr: tfPasscode.text), forKey:R.string.localizable.enter_at_least_one_special_character())
+            hintDataSource.updateValue(PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text), forKey:R.string.localizable.enter_at_least_one_special_character())
             passwordHintTableView?.reloadData()
         }
         
@@ -119,21 +118,21 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         
         if passwordIsValid == false {
             
-            tfConfirmPasscode.isUserInteractionEnabled = false
-            tfConfirmPasscode.text = nil
+            textFieldConfirmPassword.isUserInteractionEnabled = false
+            textFieldConfirmPassword.text = nil
         }
         else {
             
-            tfConfirmPasscode.isUserInteractionEnabled = true
-            if textField == tfConfirmPasscode {
+            textFieldConfirmPassword.isUserInteractionEnabled = true
+            if textField == textFieldConfirmPassword {
                 
-                guard (tfPasscode.text?.hasPrefix(textField.text!))! else {
+                guard (textFieldPassword.text?.hasPrefix(textField.text!))! else {
                     UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_not_match(), color: R.color.errorColor()!)
                     return
                 }
-                if tfConfirmPasscode.text == tfPasscode.text {
+                if textFieldConfirmPassword.text == textFieldPassword.text {
                     
-                    let authentication = Authentication(credentials: tfPasscode.text, authenticationType: 0)
+                    let authentication = Authentication(credentials: textFieldPassword.text, authenticationType: 0)
                     authenticationDefinitionDelegate?.authenticationSucceed(authentication: authentication)
                 }
             }

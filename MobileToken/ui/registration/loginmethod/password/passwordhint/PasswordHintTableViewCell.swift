@@ -14,6 +14,7 @@ class PasswordHintTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        lbHint.font = R.font.iranSansMobile(size: 12)
         // Initialization code
     }
 
