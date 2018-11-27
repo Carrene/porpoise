@@ -39,7 +39,7 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate {
     
     func embedVCPassword(authentication:Authentication) {
         var vcPassword: AuthenticationPasswordViewController?
-        vcPassword = R.storyboard.main.authenticationPasswordViewController()
+        vcPassword = R.storyboard.authentication.authenticationPasswordViewController()
         vcPassword?.setDelegate(authenticationDelegate: self)
         vcPassword?.setAuthentication(authentication: authentication)
         vcPassword?.willMove(toParent: self)
@@ -50,7 +50,7 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate {
     
     func embedVCPattern(authentication:Authentication) {
         var vcPattern: AuthenticationPatternViewController?
-        vcPattern = R.storyboard.main.authenticationPatternViewController()
+        vcPattern = R.storyboard.authentication.authenticationPatternViewController()
         vcPattern?.setDelegate(authenticationDelegate: self)
         vcPattern?.setAuthentication(authentication: authentication)
         vcPattern?.willMove(toParent: self)

@@ -113,7 +113,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     //TODO(Fateme): CORRECT 400 AND STRINGS
     func showBadRequestError() {
-        SnackBarHelper.init(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorColor()!, duration: .middle).show()
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorColor()!, duration: .middle)
     }
     
      func setBankList() {

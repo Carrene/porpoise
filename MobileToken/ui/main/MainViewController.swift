@@ -8,12 +8,23 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigateToAuthentication()
     }
     
+    func navigateToAuthentication() {
+        performSegue(withIdentifier: R.segue.mainViewController.navigateToAuthentication.identifier, sender: self)
+    }
+    
+    func navigatoToAuthenticationDefinition() {
+        performSegue(withIdentifier: R.segue.mainViewController.navigatoToAuthenticationDefinition.identifier, sender: self)
+    }
+    
+    func navigateToTabbar() {
+        performSegue(withIdentifier: R.segue.mainViewController.navigateToTabbar.identifier, sender: self)
+    }
 
 }

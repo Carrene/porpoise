@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let storyBoard = UIStoryboard(resource: R.storyboard.main)
+        self.window?.rootViewController = storyBoard.instantiateInitialViewController()
+        self.window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         IQKeyboardManager.shared().isEnabled = true
         return true

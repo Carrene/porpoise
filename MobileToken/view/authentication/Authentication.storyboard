@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nwx-XJ-xZQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Authentication View Controller-->
+        <scene sceneID="IKQ-bv-rU9">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nwx-XJ-xZQ" customClass="AuthenticationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dIn-PC-mRy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gax-D9-Ijw">
+                                <rect key="frame" x="20" y="100" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBk-zI-hdw">
+                                <rect key="frame" x="0.0" y="211" width="375" height="344"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="aBk-zI-hdw" firstAttribute="top" secondItem="Gax-D9-Ijw" secondAttribute="bottom" constant="90" id="6cc-JG-2lL"/>
+                            <constraint firstItem="Gmf-mF-kZ3" firstAttribute="trailing" secondItem="aBk-zI-hdw" secondAttribute="trailing" id="QaA-DB-ib1"/>
+                            <constraint firstItem="Gax-D9-Ijw" firstAttribute="top" secondItem="Gmf-mF-kZ3" secondAttribute="top" constant="80" id="SIN-a3-bpt"/>
+                            <constraint firstItem="aBk-zI-hdw" firstAttribute="leading" secondItem="Gmf-mF-kZ3" secondAttribute="leading" id="X59-4D-jTg"/>
+                            <constraint firstItem="Gmf-mF-kZ3" firstAttribute="trailing" secondItem="Gax-D9-Ijw" secondAttribute="trailing" constant="20" id="k9f-oY-ZLH"/>
+                            <constraint firstItem="Gax-D9-Ijw" firstAttribute="leading" secondItem="Gmf-mF-kZ3" secondAttribute="leading" constant="20" id="l1L-WQ-Zqf"/>
+                            <constraint firstItem="Gmf-mF-kZ3" firstAttribute="bottom" secondItem="aBk-zI-hdw" secondAttribute="bottom" constant="112" id="nra-cV-qEG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gmf-mF-kZ3"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbTitle" destination="Gax-D9-Ijw" id="EeC-kY-0NO"/>
+                        <outlet property="vAuthenticationContainer" destination="aBk-zI-hdw" id="lWk-Mi-0xX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1N-Aw-wM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="-1173"/>
+        </scene>
+        <!--Authentication Password View Controller-->
+        <scene sceneID="9Fj-x5-wqC">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationPasswordViewController" id="0aa-Db-tgo" customClass="AuthenticationPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kp1-MX-219">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zR6-lP-npY" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="20" y="30" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2x0-dO-8Cn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="tfPasswordEditingChanged:" destination="0aa-Db-tgo" eventType="editingChanged" id="SZB-es-bCc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="WGS-ot-mEr" firstAttribute="trailing" secondItem="zR6-lP-npY" secondAttribute="trailing" constant="20" id="4Bm-sn-gNG"/>
+                            <constraint firstItem="zR6-lP-npY" firstAttribute="top" secondItem="WGS-ot-mEr" secondAttribute="top" constant="10" id="Kvv-zP-UMg"/>
+                            <constraint firstItem="zR6-lP-npY" firstAttribute="leading" secondItem="WGS-ot-mEr" secondAttribute="leading" constant="20" id="TXc-q0-LeY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WGS-ot-mEr"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfPassword" destination="zR6-lP-npY" id="ukE-fN-HPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qM6-xo-ZYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="-887"/>
+        </scene>
+        <!--Authentication Pattern View Controller-->
+        <scene sceneID="tXd-dU-oh0">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationPatternViewController" id="SBb-ul-Nue" customClass="AuthenticationPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1f-Gj-eXt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEN-tL-aNT" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
+                                <rect key="frame" x="58" y="300" width="259" height="255"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" name="buttonColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hV-Mn-Ujb" userLabel="lbTitle">
+                                <rect key="frame" x="111" y="159" width="153.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="ubF-L5-S4v" firstAttribute="trailing" secondItem="LEN-tL-aNT" secondAttribute="trailing" constant="58" id="0D8-GX-M6S"/>
+                            <constraint firstItem="ubF-L5-S4v" firstAttribute="bottom" secondItem="LEN-tL-aNT" secondAttribute="bottom" constant="112" id="Fna-8f-5Ve"/>
+                            <constraint firstItem="8hV-Mn-Ujb" firstAttribute="centerX" secondItem="LEN-tL-aNT" secondAttribute="centerX" id="GZx-Az-sHa"/>
+                            <constraint firstItem="8hV-Mn-Ujb" firstAttribute="top" secondItem="ubF-L5-S4v" secondAttribute="top" constant="139" id="HIb-Qb-65L"/>
+                            <constraint firstItem="LEN-tL-aNT" firstAttribute="centerX" secondItem="ubF-L5-S4v" secondAttribute="centerX" id="JNU-qu-dKv"/>
+                            <constraint firstItem="LEN-tL-aNT" firstAttribute="leading" secondItem="ubF-L5-S4v" secondAttribute="leading" constant="58" id="SHP-s7-GB0"/>
+                            <constraint firstItem="LEN-tL-aNT" firstAttribute="top" secondItem="8hV-Mn-Ujb" secondAttribute="bottom" constant="112" id="X8N-Ha-hlD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ubF-L5-S4v"/>
+                    </view>
+                    <connections>
+                        <outlet property="vPattern" destination="LEN-tL-aNT" id="dua-d0-6K5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnE-Fo-ZRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-1577"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
