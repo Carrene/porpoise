@@ -19,6 +19,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     
     @IBOutlet weak var textFieldPassword: PasswordTextField!
     @IBOutlet weak var textFieldConfirmPassword: PasswordTextField!
+    @IBOutlet var buttonConfirm: UIButton!
     
     var passwordHint = PopTip()
     var passwordIsValid = false
@@ -48,6 +49,10 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         passwordHint.shouldDismissOnTap = false
         passwordHint.shouldDismissOnSwipeOutside = false
         textFieldPassword.becomeFirstResponder()
+        buttonConfirm.layer.cornerRadius = 5
+        buttonConfirm.isEnabled = false
+        buttonConfirm.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.2), for: .disabled)
+        buttonConfirm.backgroundColor = R.color.secondary()?.withAlphaComponent(0.2)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -131,7 +136,8 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
                     return
                 }
                 if textFieldConfirmPassword.text == textFieldPassword.text {
-                    
+                    buttonConfirm.isEnabled = true
+                    buttonConfirm.backgroundColor = R.color.secondary()
                     let authentication = Authentication(credentials: textFieldPassword.text, authenticationType: 0)
                     authenticationDefinitionDelegate?.authenticationSucceed(authentication: authentication)
                 }

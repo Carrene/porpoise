@@ -1,16 +1,17 @@
 "country" = "Country";
 "backBarItem" = "Back";
 
-// snakbar
-"sb_wrong_password" = "Wrong password";
-"sb_wrong_pattern" = "Wrong pattern";
-"sb_try_for_second_time" = "Try for second time";
-"sb_not_match" = "Not match";
-"sb_pattern_min_point_error" = "Select at least 4 point";
-"sb_bad_request" = "Bad Request";
-"sb_activation_code_is_not_valid" = "Activation code is not valid";
-"sb_SSM_is_not_available" = "SSM is not available";
-"sb_wrong_phone" = "Wrong phone number";
+// snackbar
+"sb_wrong_password" = "رمز اشتباه است";
+"sb_wrong_pattern" = "الگو اشتباه است";
+"sb_try_for_second_time" = "برای بار دوم تلاش کنید";
+"sb_not_match" = "یکسان نیستند";
+"sb_pattern_min_point_error" = "حداقل ۴ نقطه را متصل کنید";
+"sb_bad_request" = "درخواست اشتباه است";
+"sb_activation_code_is_not_valid" = "کد فعال سازی معتبر نیست";
+"sb_SSM_is_not_available" = "SSM در دسترس نیست";
+"sb_wrong_phone" = "شماره ای که وارد کردید اشتباه است";
+"sb_successfully_done" = "با موفقیت ثبت شد";
 
 //passWordHint
 "enter_at_least_eight_characters" = "شامل حداقل ۸ کاراکتر";

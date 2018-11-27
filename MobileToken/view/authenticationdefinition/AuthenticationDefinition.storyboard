@@ -110,23 +110,39 @@
                                     <action selector="onEndEditing:" destination="rYz-AS-1bD" eventType="editingDidEnd" id="p1x-W4-Gwc"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-w9-GOv" userLabel="btConfirm">
+                                <rect key="frame" x="30" y="599" width="315" height="48"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="4IZ-Hk-X2X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <state key="normal" title="تایید">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="ts1-Ve-pVV" firstAttribute="leading" secondItem="CNh-Td-lL9" secondAttribute="leading" id="0gs-Ni-hqn"/>
+                            <constraint firstItem="pjO-RW-Wru" firstAttribute="bottom" secondItem="YHe-w9-GOv" secondAttribute="bottom" constant="20" id="4vn-eM-i3Z"/>
                             <constraint firstItem="iFd-m3-Ox9" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="7hV-Ab-Bla"/>
                             <constraint firstItem="ts1-Ve-pVV" firstAttribute="top" secondItem="CNh-Td-lL9" secondAttribute="bottom" constant="30" id="7po-hb-OsO"/>
                             <constraint firstItem="CNh-Td-lL9" firstAttribute="top" secondItem="iFd-m3-Ox9" secondAttribute="bottom" constant="20" id="DYd-87-Y74"/>
+                            <constraint firstItem="YHe-w9-GOv" firstAttribute="leading" secondItem="pjO-RW-Wru" secondAttribute="leading" constant="30" id="MpW-2e-q6T"/>
                             <constraint firstItem="ts1-Ve-pVV" firstAttribute="trailing" secondItem="CNh-Td-lL9" secondAttribute="trailing" id="QZ4-6x-cTq"/>
+                            <constraint firstItem="YHe-w9-GOv" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="Qi5-rF-bsq"/>
                             <constraint firstItem="CNh-Td-lL9" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="VDk-tr-ptb"/>
                             <constraint firstItem="ts1-Ve-pVV" firstAttribute="centerX" secondItem="pjO-RW-Wru" secondAttribute="centerX" id="VhX-S2-Yes"/>
                             <constraint firstItem="CNh-Td-lL9" firstAttribute="leading" secondItem="pjO-RW-Wru" secondAttribute="leading" constant="30" id="aIe-iw-6OA"/>
+                            <constraint firstItem="pjO-RW-Wru" firstAttribute="trailing" secondItem="YHe-w9-GOv" secondAttribute="trailing" constant="30" id="bmm-az-Ggc"/>
                             <constraint firstItem="pjO-RW-Wru" firstAttribute="top" secondItem="iFd-m3-Ox9" secondAttribute="top" id="oan-cF-FIe"/>
                             <constraint firstItem="pjO-RW-Wru" firstAttribute="trailing" secondItem="CNh-Td-lL9" secondAttribute="trailing" constant="30" id="y1p-Fj-6gP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pjO-RW-Wru"/>
                     </view>
                     <connections>
+                        <outlet property="buttonConfirm" destination="YHe-w9-GOv" id="Qxk-CB-ggg"/>
                         <outlet property="textFieldConfirmPassword" destination="ts1-Ve-pVV" id="Ydc-bT-v73"/>
                         <outlet property="textFieldPassword" destination="CNh-Td-lL9" id="kxF-J1-maG"/>
                     </connections>

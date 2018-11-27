@@ -30,7 +30,6 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
         self.vPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
         self.vPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
         self.vPattern.dotWidth = 25
-        
         configuareLockViewWithImages()
     }
     
@@ -53,10 +52,10 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
                 if count > 3 {
                     
                     self.firstAttemptPattern = password
-                    //UIHelper.showSpecificSnackBar(message: "sb_try_for_second_time".localized(), color: UIColorHelper.primaryLightColor)
+                    UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.secondary()!)
                 }else {
                     
-                    //UIHelper.showSpecificSnackBar(message: "sb_pattern_min_point_error".localized(), color: UIColorHelper.redColor)
+                    UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_pattern_min_point_error(), color: R.color.errorColor()!)
                 }
             } else {
                 
@@ -64,11 +63,12 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
                 let authentication = Authentication(credentials: password, authenticationType: 1)
                 if self.secondAttemptPattern == self.firstAttemptPattern {
                     self.authenticationDefinitionDelegate?.authenticationSucceed(authentication: authentication)
+                    UIHelper.showSpecificSnackBar(message:R.string.localizable.sb_successfully_done() , color: R.color.eyeCatching()!)
                 } else {
                     
                     self.firstAttemptPattern = nil
                     self.secondAttemptPattern = nil
-                    //UIHelper.showSpecificSnackBar(message: "sb_not_match".localized(), color: UIColorHelper.redColor)
+                    UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_not_match(), color: R.color.errorColor()!)
                 }
             }
         }
