@@ -16,5 +16,5 @@
 "enter_at_least_eight_characters" = "شامل حداقل ۸ کاراکتر";
 "enter_at_least_one_capital_letter" = "شامل حداقل یک حرف بزرگ";
 "enter_at_least_one_digit" = "شامل حداقل یک عدد";
-"enter_at_least_one_special_character" = "شامل حداقل یکی از کاراکترهای (/#%$^*&!@؟|\)";
+"enter_at_least_one_special_character" = "شامل حداقل یکی از کاراکترهای (@,#,$,%,+,=,_,*,?)";
 "no_spaces" = "بدون فاصله";
