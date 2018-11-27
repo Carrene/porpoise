@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyBoard = UIStoryboard(resource: R.storyboard.main)
         self.window?.rootViewController = storyBoard.instantiateInitialViewController()
         self.window?.makeKeyAndVisible()
+        UINavigationBar.appearance().barTintColor = R.color.primary()
+        UINavigationBar.appearance().tintColor = R.color.buttonColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : R.color.buttonColor()!,NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!]
         // Override point for customization after application launch.
         IQKeyboardManager.shared().isEnabled = true
         return true

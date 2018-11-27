@@ -12,7 +12,7 @@ class MainViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigateToAuthentication()
+        navigatoToAuthenticationDefinition()
     }
     
     func navigateToAuthentication() {
