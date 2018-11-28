@@ -10,6 +10,7 @@ import UIKit
 
 class AuthenticationTypeSettingTableViewCell: UITableViewCell {
 
+    @IBOutlet var labelType: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
