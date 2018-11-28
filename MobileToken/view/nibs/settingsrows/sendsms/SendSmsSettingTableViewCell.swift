@@ -10,6 +10,7 @@ import UIKit
 
 class SendSmsSettingTableViewCell: UITableViewCell {
 
+    @IBOutlet var switchSendSms: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
