@@ -24,6 +24,7 @@
 		ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
 		ACAAD87021AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86E21AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift */; };
 		ACAAD87121AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86F21AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib */; };
+		ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */; };
 		ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
 		ACDFD89F21A4016D00839F97 /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
 		ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
@@ -142,6 +143,7 @@
 		ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationTypeTableViewCell.xib; sourceTree = "<group>"; };
 		ACAAD86E21AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSmsSettingTableViewCell.swift; sourceTree = "<group>"; };
 		ACAAD86F21AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendSmsSettingTableViewCell.xib; sourceTree = "<group>"; };
+		ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewAdapter.swift; sourceTree = "<group>"; };
 		ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationViewController.swift; sourceTree = "<group>"; };
 		ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputPresenter.swift; sourceTree = "<group>"; };
 		ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputContractor.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
+				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -1137,6 +1140,7 @@
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
 				AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */,
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
+				ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */,
 				ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */,
 				AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */,
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,

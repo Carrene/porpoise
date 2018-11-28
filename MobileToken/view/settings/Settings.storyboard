@@ -18,14 +18,29 @@
                     <view key="view" contentMode="scaleToFill" id="o4G-gG-g6c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-2g-WfX">
+                                <rect key="frame" x="0.0" y="77" width="375" height="541"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="TiY-NI-XLV" firstAttribute="bottom" secondItem="2RQ-2g-WfX" secondAttribute="bottom" id="TAR-OC-AVt"/>
+                            <constraint firstItem="2RQ-2g-WfX" firstAttribute="top" secondItem="TiY-NI-XLV" secondAttribute="top" constant="13" id="YNI-KD-QmW"/>
+                            <constraint firstItem="2RQ-2g-WfX" firstAttribute="centerX" secondItem="TiY-NI-XLV" secondAttribute="centerX" id="hCa-jj-swW"/>
+                            <constraint firstItem="2RQ-2g-WfX" firstAttribute="width" secondItem="o4G-gG-g6c" secondAttribute="width" id="hNb-lo-635"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TiY-NI-XLV"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="تنظیمات" image="setting-icon" id="IoS-Md-QM1">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="Qm1-nC-HGp"/>
+                    <navigationItem key="navigationItem" title="تنظیمات" id="Qm1-nC-HGp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="2RQ-2g-WfX" id="v1s-47-0EB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNd-bh-Sgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,6 +72,9 @@
     </scenes>
     <resources>
         <image name="setting-icon" width="20" height="20"/>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
