@@ -296,7 +296,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8Zx-HN-KSJ">
             <objects>
-                <navigationController storyboardIdentifier="mainNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HzW-7f-sZR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="registrationNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HzW-7f-sZR" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F1d-js-HOT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
