@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2g-dI-h8H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HzW-7f-sZR">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,13 +22,13 @@
         <!--ثبت نام از طریق بانک-->
         <scene sceneID="fHD-NO-6OC">
             <objects>
-                <viewController storyboardIdentifier="sb_registration" id="t2g-dI-h8H" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneInputViewController" id="t2g-dI-h8H" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R7h-R6-ad1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF">
-                                <rect key="frame" x="0.0" y="114" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="158" width="414" height="105"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
                                         <rect key="frame" x="10" y="0.0" width="394" height="105"/>
@@ -61,13 +61,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNf-PU-RSB">
-                                <rect key="frame" x="5" y="269" width="404" height="20"/>
+                                <rect key="frame" x="5" y="313" width="404" height="20"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G">
-                                <rect key="frame" x="49.5" y="305" width="315" height="110"/>
+                                <rect key="frame" x="49.5" y="349" width="315" height="110"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
                                         <rect key="frame" x="31.5" y="0.0" width="252" height="53"/>
@@ -131,13 +131,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک مورد نظر برای ثبت‌نام را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
-                                <rect key="frame" x="5" y="74" width="414" height="20"/>
+                                <rect key="frame" x="5" y="118" width="414" height="20"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgL-K6-xhR" userLabel="btRegister">
-                                <rect key="frame" x="30" y="794" width="354" height="48"/>
+                                <rect key="frame" x="30" y="745" width="354" height="48"/>
                                 <color key="backgroundColor" name="secondary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="U8x-Re-u1A"/>
@@ -168,7 +168,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="افزودن بانک" image="plus-icon" id="fIu-iE-rvY">
+                        <color key="badgeColor" name="buttonColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonRegister" destination="LgL-K6-xhR" id="fQm-Vo-GgE"/>
                         <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
@@ -194,13 +198,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Gr-hPV" userLabel="lbTitle">
-                                <rect key="frame" x="128.5" y="56" width="157.5" height="20"/>
+                                <rect key="frame" x="128.5" y="100" width="157.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
-                                <rect key="frame" x="69" y="96" width="315" height="110"/>
+                                <rect key="frame" x="69" y="140" width="315" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
                                         <rect key="frame" x="157.5" y="20" width="0.0" height="0.0"/>
@@ -236,7 +240,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
-                                <rect key="frame" x="69" y="216" width="315" height="40"/>
+                                <rect key="frame" x="69" y="260" width="315" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تغییر شماره" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
                                         <rect key="frame" x="20" y="9.5" width="77" height="21"/>
@@ -289,8 +293,35 @@
             </objects>
             <point key="canvasLocation" x="836" y="-34"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Zx-HN-KSJ">
+            <objects>
+                <navigationController storyboardIdentifier="mainNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HzW-7f-sZR" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F1d-js-HOT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="buttonColor"/>
+                        <color key="barTintColor" name="primary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                            <color key="textColor" name="buttonColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t2g-dI-h8H" kind="relationship" relationship="rootViewController" id="r2K-tz-FpH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTi-Ng-q9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910" y="-34"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="plus-icon" width="20" height="20"/>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

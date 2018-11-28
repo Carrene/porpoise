@@ -16,6 +16,8 @@
 		ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85321AC2CDC007266F4 /* AuthenticationDefinition.storyboard */; };
 		ACAAD85621AC2CF1007266F4 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85521AC2CF1007266F4 /* Authentication.storyboard */; };
 		ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
+		ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
+		ACAAD86021AE8075007266F4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */; };
 		ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
 		ACDFD89F21A4016D00839F97 /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
 		ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
@@ -126,6 +128,8 @@
 		ACAAD85321AC2CDC007266F4 /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		ACAAD85521AC2CF1007266F4 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		ACAAD85C21AE7AED007266F4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationViewController.swift; sourceTree = "<group>"; };
 		ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputPresenter.swift; sourceTree = "<group>"; };
 		ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputContractor.swift; sourceTree = "<group>"; };
@@ -293,6 +297,22 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
+		ACAAD85B21AE7AB4007266F4 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAD85C21AE7AED007266F4 /* Settings.storyboard */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		ACAAD85E21AE8058007266F4 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
 		ACC902B721A0406A0072CFD5 /* registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +438,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				ACAAD85E21AE8058007266F4 /* settings */,
 				AF285FEF219C42B500D8C342 /* registration */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
 				AF463BC42189D8EC00DC8A3E /* main */,
@@ -477,6 +498,7 @@
 				AFB9BB25218ED9BD004F16DD /* basic */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
 				ACC902B721A0406A0072CFD5 /* registration */,
+				ACAAD85B21AE7AB4007266F4 /* settings */,
 				ACAAD85821AD308A007266F4 /* tabbar */,
 			);
 			path = view;
@@ -891,6 +913,7 @@
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
+				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
 				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
@@ -1087,6 +1110,7 @@
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
 				AF246A9D219AA57B00C44E4B /* BankRepositoryProtocol.swift in Sources */,
 				AF246A9F219AAA1700C44E4B /* BankRealmRepository.swift in Sources */,
+				ACAAD86021AE8075007266F4 /* SettingsViewController.swift in Sources */,
 				AF246A982199A59100C44E4B /* JwtPersistable.swift in Sources */,
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
 				AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */,

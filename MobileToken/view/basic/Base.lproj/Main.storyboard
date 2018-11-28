@@ -13,7 +13,7 @@
         <!--Main View Controller-->
         <scene sceneID="klp-3Q-gKS">
             <objects>
-                <viewController id="xV4-uK-Pmh" customClass="MainViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="xV4-uK-Pmh" customClass="MainViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fB-kU-0BD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="828" y="909.89505247376314"/>
         </scene>
-        <!--Tabbar-->
+        <!--MainTabbar-->
         <scene sceneID="AVS-Th-jdT">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tabbar" id="RMI-LM-tRV" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="RMI-LM-tRV" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ob0-eD-pFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3109" y="-1656"/>

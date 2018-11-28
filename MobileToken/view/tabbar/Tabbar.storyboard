@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fE-Bm-JXx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TEI-L1-lQy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,14 +13,17 @@
         <!--Tab Bar Controller-->
         <scene sceneID="53Y-sl-6Mm">
             <objects>
-                <tabBarController id="TEI-L1-lQy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabbar" id="TEI-L1-lQy" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Hea-3x-wLk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="24b-fx-Uqv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="primaryDark"/>
+                        <color key="tintColor" name="buttonColor"/>
+                        <color key="barTintColor" name="primaryDark"/>
                     </tabBar>
                     <connections>
+                        <segue destination="9Rl-F6-GbH" kind="relationship" relationship="viewControllers" id="EDb-hh-ixf"/>
                         <segue destination="0uT-4r-YxP" kind="relationship" relationship="viewControllers" id="cDn-Q2-dDv"/>
                     </connections>
                 </tabBarController>
@@ -28,49 +31,38 @@
             </objects>
             <point key="canvasLocation" x="-1587" y="-1349"/>
         </scene>
-        <!--sb_registration-->
+        <!--PhoneInputViewController-->
         <scene sceneID="nBT-p2-AaH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="sb_registration" id="0uT-4r-YxP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KKF-oF-Awz"/>
+                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="PhoneInputViewController" id="0uT-4r-YxP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="افزودن بانک" image="plus-icon" id="KKF-oF-Awz">
+                        <color key="badgeColor" name="buttonColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="zJI-XY-7jL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbD-cE-FKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-810" y="-1350"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xjP-rf-OxR">
+        <!--SettingsViewController-->
+        <scene sceneID="J1l-Hz-TOr">
             <objects>
-                <navigationController id="4fE-Bm-JXx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="us5-ZY-oiy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="buttonColor"/>
-                        <color key="barTintColor" name="primary"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                            <color key="textColor" name="buttonColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="TEI-L1-lQy" kind="relationship" relationship="rootViewController" id="wm6-OY-0tN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tcT-9r-5Om" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="9Rl-F6-GbH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="تنظیمات" image="setting-icon" id="xWl-F8-qV4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkQ-E9-Ls5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2425" y="-1350"/>
+            <point key="canvasLocation" x="-777" y="-1186"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus-icon" width="20" height="20"/>
+        <image name="setting-icon" width="20" height="20"/>
         <namedColor name="buttonColor">
             <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
