@@ -11,23 +11,26 @@ import UIKit
 class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
 
     @IBOutlet var tableView: UITableView!
-    
+    var adapter : SettingsTableViewAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         initTableView()
-        
     }
     
     func initTableView() {
-        let adapter = SettingsTableViewAdapter()
         tableView?.register(UINib(nibName:R.nib.sendSmsSettingTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseSendSmsSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.authenticationTypeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier)
-        adapter.setDelegate(settingTableAdapterProtocol: self)
+        adapter = SettingsTableViewAdapter(sender: self)
+        adapter!.setDelegate(settingTableAdapterProtocol: self)
         tableView.delegate = adapter
         tableView.dataSource = adapter
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = R.color.primary()
+        tableView.reloadData()
         
     }
 

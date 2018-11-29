@@ -16,6 +16,7 @@ protocol SettingsTableAdapterProtocol {
 class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource {
     
     var settingTableAdapterProtocol : SettingsTableAdapterProtocol?
+    var sender:SettingsViewController?
     
     func setDelegate(settingTableAdapterProtocol:SettingsTableAdapterProtocol) {
         self.settingTableAdapterProtocol = settingTableAdapterProtocol
@@ -25,8 +26,13 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         return 3
     }
     
+    init(sender:SettingsViewController) {
+        self.sender = sender
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
+        cell.selectionStyle = .none
         switch indexPath.row {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
