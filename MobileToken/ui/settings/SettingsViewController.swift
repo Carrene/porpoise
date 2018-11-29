@@ -14,18 +14,20 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initTableView()
+        
     }
     
     func initTableView() {
-        let adapter : SettingsTableViewAdapter?
+        let adapter = SettingsTableViewAdapter()
         tableView?.register(UINib(nibName:R.nib.sendSmsSettingTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseSendSmsSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.authenticationTypeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier)
-        adapter?.setDelegate(settingTableAdapterProtocol: self)
+        adapter.setDelegate(settingTableAdapterProtocol: self)
         tableView.delegate = adapter
         tableView.dataSource = adapter
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = R.color.primary()
         
     }
 
