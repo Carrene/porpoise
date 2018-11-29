@@ -46,5 +46,16 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height:CGFloat?
+        switch indexPath.row {
+        case 0:
+            height = 150
+        default:
+            height = 56
+        }
+        return height!
+    }
+    
     
 }
