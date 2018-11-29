@@ -44,6 +44,9 @@
                                         <state key="normal" title="۳۰">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
                                         <rect key="frame" x="100" y="19.5" width="60" height="40"/>
@@ -55,6 +58,9 @@
                                         <state key="normal" title="۶۰">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
                                         <rect key="frame" x="180" y="19.5" width="60" height="40"/>
@@ -66,6 +72,9 @@
                                         <state key="normal" title="۹۰">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
                                         <rect key="frame" x="265" y="19.5" width="60" height="40"/>
@@ -77,6 +86,9 @@
                                         <state key="normal" title="۱۲۰">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryDark"/>
@@ -136,6 +148,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="labelSecond" destination="jBa-RC-JwO" id="PWC-3q-tff"/>
                 <outlet property="viewButtons" destination="xIl-pG-zsS" id="9Ls-wj-ZTC"/>
                 <outlet property="viewCell" destination="6ET-8m-5lP" id="ImY-Vs-m73"/>
                 <outletCollection property="collectionButtonsTime" destination="KZV-oZ-w8D" collectionClass="NSMutableArray" id="veN-Vj-RRK"/>
