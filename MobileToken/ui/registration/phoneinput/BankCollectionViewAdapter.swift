@@ -35,6 +35,7 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         collectionView.allowsMultipleSelection = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
+        cell.lbBankName.text = banks![indexPath.row].name!
         if selectedIndex == indexPath.row {
             cell.lbBankName.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             cell.vCell.backgroundColor = R.color.ayandehColor()

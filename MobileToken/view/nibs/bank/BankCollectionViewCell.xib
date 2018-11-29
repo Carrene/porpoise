@@ -29,7 +29,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک آینده" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gb-ag-wDu" userLabel="lbBank">
                                         <rect key="frame" x="33.5" y="69" width="73.5" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" name="ayandehColor"/>
+                                        <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank-ayandeh-logo" translatesAutoresizingMaskIntoConstraints="NO" id="tOZ-gV-acZ" userLabel="imgLogo">
@@ -77,8 +77,8 @@
     </objects>
     <resources>
         <image name="bank-ayandeh-logo" width="30" height="30"/>
-        <namedColor name="ayandehColor">
-            <color red="0.83099997043609619" green="0.63099998235702515" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
