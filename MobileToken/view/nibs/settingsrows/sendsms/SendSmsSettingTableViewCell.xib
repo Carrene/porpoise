@@ -36,6 +36,7 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXD-xI-KS5">
                                 <rect key="frame" x="30" y="12.5" width="51" height="31"/>
+                                <color key="tintColor" name="buttonColor"/>
                                 <color key="onTintColor" name="eyeCatching"/>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message-processing" translatesAutoresizingMaskIntoConstraints="NO" id="YYh-bv-GdB" userLabel="imageTimer">
