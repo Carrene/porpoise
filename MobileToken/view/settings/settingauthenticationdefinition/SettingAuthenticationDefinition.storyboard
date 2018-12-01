@@ -38,9 +38,6 @@
                                     <segment title="رمز"/>
                                 </segments>
                                 <color key="tintColor" name="secondary"/>
-                                <connections>
-                                    <action selector="segmentedControlValueChanged:" destination="0Wg-PL-C2c" eventType="valueChanged" id="xwT-f1-jcp"/>
-                                </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSh-bh-Z7t">
                                 <rect key="frame" x="0.0" y="93" width="375" height="574"/>
@@ -61,10 +58,6 @@
                         <viewLayoutGuide key="safeArea" id="GMb-rr-ceF"/>
                     </view>
                     <navigationItem key="navigationItem" title="روش احراز هویت" id="LHV-zY-pSe"/>
-                    <connections>
-                        <outlet property="authenticationTypeContainer" destination="pSh-bh-Z7t" id="bl6-YA-mvj"/>
-                        <outlet property="scAuthenticationType" destination="7E5-fo-Wdo" id="MUM-Er-ZqY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7O-cF-9LU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

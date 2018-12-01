@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SettingsTableAdapterProtocol {
-    
+    func selectedSegue(identifier:String)
 }
 
 class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource {
@@ -55,6 +55,12 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             height = 56
         }
         return height!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToAuthenticationDefinitionSegue.identifier)
+        }
     }
     
     
