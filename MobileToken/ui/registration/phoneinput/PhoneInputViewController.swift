@@ -129,11 +129,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
-        navigationController?.navigationBar.backIndicatorImage = R.image.arrowLeft()
-        backItem.title = ""
-        backItem.tintColor = R.color.secondary()
-        navigationItem.backBarButtonItem = backItem
         if segue.identifier == R.segue.phoneInputViewController.phoneInputToActivationSegue.identifier {
         (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:labelPhoneCode.text!+textFieldPhoneNumber.text! )
         }

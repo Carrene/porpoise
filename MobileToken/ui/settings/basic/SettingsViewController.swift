@@ -39,10 +39,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
-        navigationController?.navigationBar.backIndicatorImage = R.image.arrowLeft()
-        backItem.title = ""
-        navigationItem.backBarButtonItem = backItem
+       
     }
 
 }

@@ -171,7 +171,9 @@
                     <tabBarItem key="tabBarItem" title="افزودن بانک" image="plus-icon" id="fIu-iE-rvY">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg"/>
+                    <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xVv-zH-gB0"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonRegister" destination="LgL-K6-xhR" id="fQm-Vo-GgE"/>
@@ -277,7 +279,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA"/>
+                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xd6-RE-Mgr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
@@ -296,7 +300,6 @@
         <!--Navigation Controller-->
         <scene sceneID="8Zx-HN-KSJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rTi-Ng-q9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="registrationNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HzW-7f-sZR" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F1d-js-HOT">
@@ -313,6 +316,7 @@
                         <segue destination="t2g-dI-h8H" kind="relationship" relationship="rootViewController" id="r2K-tz-FpH"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTi-Ng-q9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-910" y="-34"/>
         </scene>

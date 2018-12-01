@@ -38,6 +38,9 @@
                                     <segment title="رمز"/>
                                 </segments>
                                 <color key="tintColor" name="secondary"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="0Wg-PL-C2c" eventType="valueChanged" id="bYW-Tc-ec5"/>
+                                </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSh-bh-Z7t">
                                 <rect key="frame" x="0.0" y="93" width="375" height="574"/>
@@ -57,16 +60,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GMb-rr-ceF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="روش احراز هویت" id="LHV-zY-pSe"/>
+                    <navigationItem key="navigationItem" title="روش احراز هویت" id="LHV-zY-pSe">
+                        <barButtonItem key="backBarButtonItem" id="Gve-Nw-g66">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authenticationTypeContainer" destination="pSh-bh-Z7t" id="XbA-NK-owa"/>
+                        <outlet property="scAuthenticationType" destination="7E5-fo-Wdo" id="Q6y-F4-0fi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7O-cF-9LU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-81" y="-1309"/>
         </scene>
-        <!--Authentication Definition Password View Controller-->
+        <!--Setting Authentication Definition Password View Controller-->
         <scene sceneID="Pn4-An-s1a">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewController" id="uiL-k5-FQr" customClass="AuthenticationDefinitionPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingAuthenticationDefinitionPasswordViewController" id="uiL-k5-FQr" customClass="SettingAuthenticationDefinitionPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tSU-tn-B5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,8 +110,8 @@
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="onEditBegin:" destination="uiL-k5-FQr" eventType="editingDidBegin" id="oKg-G1-dsF"/>
-                                    <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="mLm-P8-40Q"/>
+                                    <action selector="onEditBegin:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="lmg-9a-zHp"/>
+                                    <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="1Cu-1L-UkB"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE4-8J-QjC" userLabel="btConfirm">
@@ -135,9 +146,9 @@
                         <viewLayoutGuide key="safeArea" id="NHz-YE-YXP"/>
                     </view>
                     <connections>
-                        <outlet property="buttonConfirm" destination="rE4-8J-QjC" id="y7I-wh-95P"/>
-                        <outlet property="textFieldConfirmPassword" destination="ZCg-Os-O1H" id="GsJ-6T-9zd"/>
-                        <outlet property="textFieldPassword" destination="nhg-fN-egb" id="qLG-mT-RNt"/>
+                        <outlet property="buttonConfirm" destination="rE4-8J-QjC" id="TsX-az-PxR"/>
+                        <outlet property="textFieldConfirmPassword" destination="ZCg-Os-O1H" id="J4v-Z4-bIj"/>
+                        <outlet property="textFieldPassword" destination="nhg-fN-egb" id="pmk-po-kVk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rp-Pe-avZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -147,7 +158,7 @@
         <!--Setting Authentication Definition Pattern View Controller-->
         <scene sceneID="qDN-03-hiz">
             <objects>
-                <viewController storyboardIdentifier="ingAuthenticationDefinitionPatternViewController" id="P0F-t3-Qpc" customClass="SettingAuthenticationDefinitionPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingAuthenticationDefinitionPatternViewController" id="P0F-t3-Qpc" customClass="SettingAuthenticationDefinitionPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVn-9t-97J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="Cb6-Jc-sgg"/>
                     </view>
                     <connections>
-                        <outlet property="vPattern" destination="sNx-qd-maC" id="J1S-W1-WJC"/>
+                        <outlet property="viewPattern" destination="sNx-qd-maC" id="oz4-iT-r4P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2N-PP-Avb" userLabel="First Responder" sceneMemberID="firstResponder"/>

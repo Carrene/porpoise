@@ -10,13 +10,14 @@
 import UIKit
 import Foundation
 import HUIPatternLockView_Swift
+
 class AuthenticationDefinitionPatternViewController: UIViewController {
     
     var authenticationDefinitionDelegate: AuthenticationDefintionDelegate?
     var firstAttemptPattern: String?
     var secondAttemptPattern: String?
     
-    @IBOutlet weak var vPattern: HUIPatternLockView!
+    @IBOutlet weak var viewPattern: HUIPatternLockView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,10 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
     
     func initUIComponent() {
         
-        self.vPattern.resetDotsState()
-        self.vPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
-        self.vPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
-        self.vPattern.dotWidth = 25
+        self.viewPattern.resetDotsState()
+        self.viewPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
+        self.viewPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
+        self.viewPattern.dotWidth = 25
         configuareLockViewWithImages()
     }
     
@@ -40,12 +41,12 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
     
     private func configuareLockViewWithImages() {
         
-        vPattern.didDrawPatternPassword = { (lockView: HUIPatternLockView, count: Int, password: String?) -> Void in
+        viewPattern.didDrawPatternPassword = { (lockView: HUIPatternLockView, count: Int, password: String?) -> Void in
             guard count > 0 else {
                 return
             }
             
-            self.vPattern.resetDotsState()
+            self.viewPattern.resetDotsState()
             
             if self.firstAttemptPattern == nil {
                 
