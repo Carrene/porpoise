@@ -22,7 +22,7 @@
         <!--روش احراز هویت-->
         <scene sceneID="57k-Zk-Y08">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionViewController" id="0Wg-PL-C2c" customClass="AuthenticationDefinitionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingAuthenticationDefinitionViewController" id="0Wg-PL-C2c" customClass="SettingAuthenticationDefinitionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZMf-BW-tKA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--Authentication Definition Password View Controller-->
         <scene sceneID="Pn4-An-s1a">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewControllerIdentifier" id="uiL-k5-FQr" customClass="AuthenticationDefinitionPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewController" id="uiL-k5-FQr" customClass="AuthenticationDefinitionPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tSU-tn-B5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="718" y="-887"/>
         </scene>
-        <!--Authentication Definition Pattern View Controller-->
+        <!--Setting Authentication Definition Pattern View Controller-->
         <scene sceneID="qDN-03-hiz">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDefinitionPatternViewControllerIdentifier" id="P0F-t3-Qpc" customClass="AuthenticationDefinitionPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ingAuthenticationDefinitionPatternViewController" id="P0F-t3-Qpc" customClass="SettingAuthenticationDefinitionPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVn-9t-97J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

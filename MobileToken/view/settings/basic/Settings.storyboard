@@ -40,11 +40,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="2RQ-2g-WfX" id="v1s-47-0EB"/>
+                        <segue destination="CH3-Ix-uEq" kind="show" id="Ozs-Jd-d0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNd-bh-Sgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-798" y="-755"/>
+        </scene>
+        <!--SettingAuthenticationDefinitionViewController-->
+        <scene sceneID="RB6-gQ-8Zm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingAuthenticationDefinition" referencedIdentifier="SettingAuthenticationDefinitionViewController" id="CH3-Ix-uEq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4o-8X-Z4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-756"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vNC-v2-CLm">
