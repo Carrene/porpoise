@@ -94,10 +94,10 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
             self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
         }
     }
-    
-    @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
+    @IBAction func onButtonRegister(_ sender: UIButton) {
         if textFieldPhoneNumber.text != "" {
             buttonRegister.isEnabled = true
+            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
         }
         else {
             buttonRegister.isEnabled = false
@@ -134,10 +134,5 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         }
     }
     
-    @IBAction func onRegister(_ sender: UIBarButtonItem) {
-        if textFieldPhoneNumber.text != "" {
-            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
-        }
-    }
 }
 

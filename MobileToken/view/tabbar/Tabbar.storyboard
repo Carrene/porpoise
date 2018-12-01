@@ -14,6 +14,7 @@
         <scene sceneID="53Y-sl-6Mm">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabbar" id="TEI-L1-lQy" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="24b-fx-Uqv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +42,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbD-cE-FKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-810" y="-1350"/>
+            <point key="canvasLocation" x="-763" y="-1519"/>
         </scene>
         <!--SettingsViewController-->
         <scene sceneID="J1l-Hz-TOr">
