@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Wg-PL-C2c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--روش احراز هویت-->
+        <scene sceneID="57k-Zk-Y08">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationDefinitionViewController" id="0Wg-PL-C2c" customClass="AuthenticationDefinitionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZMf-BW-tKA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7E5-fo-Wdo">
+                                <rect key="frame" x="30" y="33" width="315" height="41"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="H2n-Y6-pxY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="الگو"/>
+                                    <segment title="رمز"/>
+                                </segments>
+                                <color key="tintColor" name="secondary"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="0Wg-PL-C2c" eventType="valueChanged" id="xwT-f1-jcp"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSh-bh-Z7t">
+                                <rect key="frame" x="0.0" y="93" width="375" height="574"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <color key="tintColor" name="buttonColor"/>
+                        <constraints>
+                            <constraint firstItem="7E5-fo-Wdo" firstAttribute="top" secondItem="GMb-rr-ceF" secondAttribute="top" constant="13" id="5da-T7-nwX"/>
+                            <constraint firstItem="pSh-bh-Z7t" firstAttribute="top" secondItem="7E5-fo-Wdo" secondAttribute="bottom" constant="20" id="CFl-uI-V3A"/>
+                            <constraint firstItem="pSh-bh-Z7t" firstAttribute="leading" secondItem="GMb-rr-ceF" secondAttribute="leading" id="Iq5-nZ-mV2"/>
+                            <constraint firstItem="GMb-rr-ceF" firstAttribute="trailing" secondItem="7E5-fo-Wdo" secondAttribute="trailing" constant="30" id="Kdn-Cu-OJm"/>
+                            <constraint firstItem="GMb-rr-ceF" firstAttribute="trailing" secondItem="pSh-bh-Z7t" secondAttribute="trailing" id="miZ-ye-tTe"/>
+                            <constraint firstItem="7E5-fo-Wdo" firstAttribute="leading" secondItem="GMb-rr-ceF" secondAttribute="leading" constant="30" id="oZL-IA-Inx"/>
+                            <constraint firstItem="GMb-rr-ceF" firstAttribute="bottom" secondItem="pSh-bh-Z7t" secondAttribute="bottom" id="owi-yr-cnE"/>
+                            <constraint firstItem="7E5-fo-Wdo" firstAttribute="centerX" secondItem="GMb-rr-ceF" secondAttribute="centerX" id="rbM-YV-5qS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GMb-rr-ceF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="روش احراز هویت" id="LHV-zY-pSe"/>
+                    <connections>
+                        <outlet property="authenticationTypeContainer" destination="pSh-bh-Z7t" id="bl6-YA-mvj"/>
+                        <outlet property="scAuthenticationType" destination="7E5-fo-Wdo" id="MUM-Er-ZqY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7O-cF-9LU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="-1309"/>
+        </scene>
+        <!--Authentication Definition Password View Controller-->
+        <scene sceneID="Pn4-An-s1a">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationDefinitionPasswordViewControllerIdentifier" id="uiL-k5-FQr" customClass="AuthenticationDefinitionPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tSU-tn-B5A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnA-qI-CRm" userLabel="lbTitle">
+                                <rect key="frame" x="120.5" y="20" width="134.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-Os-O1H" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="30" y="139" width="315" height="40"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vn1-sI-5Ao"/>
+                                </constraints>
+                                <color key="textColor" name="buttonColor"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhg-fN-egb" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="30" y="69" width="315" height="40"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eYS-FD-WuB"/>
+                                </constraints>
+                                <color key="textColor" name="buttonColor"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onEditBegin:" destination="uiL-k5-FQr" eventType="editingDidBegin" id="oKg-G1-dsF"/>
+                                    <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="mLm-P8-40Q"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE4-8J-QjC" userLabel="btConfirm">
+                                <rect key="frame" x="30" y="599" width="315" height="48"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="PMk-o4-1sN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <state key="normal" title="تایید">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="NHz-YE-YXP" firstAttribute="top" secondItem="tnA-qI-CRm" secondAttribute="top" id="1ts-Nl-CDS"/>
+                            <constraint firstItem="tnA-qI-CRm" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="5QA-ry-dy1"/>
+                            <constraint firstItem="rE4-8J-QjC" firstAttribute="leading" secondItem="NHz-YE-YXP" secondAttribute="leading" constant="30" id="F07-xl-GzB"/>
+                            <constraint firstItem="nhg-fN-egb" firstAttribute="top" secondItem="tnA-qI-CRm" secondAttribute="bottom" constant="20" id="Fli-TJ-kt2"/>
+                            <constraint firstItem="rE4-8J-QjC" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="Ibw-27-XMz"/>
+                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="NMz-DZ-ydZ"/>
+                            <constraint firstItem="nhg-fN-egb" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="OHA-op-99e"/>
+                            <constraint firstItem="NHz-YE-YXP" firstAttribute="trailing" secondItem="rE4-8J-QjC" secondAttribute="trailing" constant="30" id="W6D-lS-gsL"/>
+                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="top" secondItem="nhg-fN-egb" secondAttribute="bottom" constant="30" id="faS-jd-k60"/>
+                            <constraint firstItem="NHz-YE-YXP" firstAttribute="trailing" secondItem="nhg-fN-egb" secondAttribute="trailing" constant="30" id="izN-8L-WvG"/>
+                            <constraint firstItem="NHz-YE-YXP" firstAttribute="bottom" secondItem="rE4-8J-QjC" secondAttribute="bottom" constant="20" id="ktb-NR-MeK"/>
+                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="leading" secondItem="nhg-fN-egb" secondAttribute="leading" id="m3R-y4-wRX"/>
+                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="trailing" secondItem="nhg-fN-egb" secondAttribute="trailing" id="r1j-C9-IwA"/>
+                            <constraint firstItem="nhg-fN-egb" firstAttribute="leading" secondItem="NHz-YE-YXP" secondAttribute="leading" constant="30" id="zFz-VQ-yFx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NHz-YE-YXP"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonConfirm" destination="rE4-8J-QjC" id="y7I-wh-95P"/>
+                        <outlet property="textFieldConfirmPassword" destination="ZCg-Os-O1H" id="GsJ-6T-9zd"/>
+                        <outlet property="textFieldPassword" destination="nhg-fN-egb" id="qLG-mT-RNt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rp-Pe-avZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-887"/>
+        </scene>
+        <!--Authentication Definition Pattern View Controller-->
+        <scene sceneID="qDN-03-hiz">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationDefinitionPatternViewControllerIdentifier" id="P0F-t3-Qpc" customClass="AuthenticationDefinitionPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVn-9t-97J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNx-qd-maC" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
+                                <rect key="frame" x="58" y="296" width="259" height="259"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="MOG-x9-c70"/>
+                                    <constraint firstAttribute="height" constant="259" id="nUq-Dl-iQQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" name="buttonColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-sE-vYv" userLabel="lbTitle">
+                                <rect key="frame" x="111" y="20" width="153.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="Cb6-Jc-sgg" firstAttribute="trailing" secondItem="sNx-qd-maC" secondAttribute="trailing" constant="58" id="PoF-lX-Ql7"/>
+                            <constraint firstItem="sNx-qd-maC" firstAttribute="centerX" secondItem="Cb6-Jc-sgg" secondAttribute="centerX" id="V5D-9L-zYE"/>
+                            <constraint firstItem="Cb6-Jc-sgg" firstAttribute="bottom" secondItem="sNx-qd-maC" secondAttribute="bottom" constant="112" id="k5y-Yu-RhI"/>
+                            <constraint firstItem="sNx-qd-maC" firstAttribute="leading" secondItem="Cb6-Jc-sgg" secondAttribute="leading" constant="58" id="uyd-iv-ETV"/>
+                            <constraint firstItem="Kp7-sE-vYv" firstAttribute="centerX" secondItem="sNx-qd-maC" secondAttribute="centerX" id="vHu-6y-Rky"/>
+                            <constraint firstItem="Kp7-sE-vYv" firstAttribute="top" secondItem="Cb6-Jc-sgg" secondAttribute="top" id="z52-Tj-9ma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cb6-Jc-sgg"/>
+                    </view>
+                    <connections>
+                        <outlet property="vPattern" destination="sNx-qd-maC" id="J1S-W1-WJC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2N-PP-Avb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-1577"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.093999996781349182" green="0.57300001382827759" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

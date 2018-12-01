@@ -12,6 +12,10 @@
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
+		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
+		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
+		AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
+		AC75A4F921B270B9009441C4 /* AuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F821B270B9009441C4 /* AuthenticationDefinitionPatternViewController.swift */; };
 		ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
 		ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85321AC2CDC007266F4 /* AuthenticationDefinition.storyboard */; };
 		ACAAD85621AC2CF1007266F4 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85521AC2CF1007266F4 /* Authentication.storyboard */; };
@@ -131,6 +135,10 @@
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
+		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
+		AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
+		AC75A4F821B270B9009441C4 /* AuthenticationDefinitionPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPatternViewController.swift; sourceTree = "<group>"; };
 		ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACAAD85321AC2CDC007266F4 /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		ACAAD85521AC2CF1007266F4 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
@@ -287,6 +295,65 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
+			isa = PBXGroup;
+			children = (
+				AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */,
+			);
+			path = settingauthenticationdefinition;
+			sourceTree = "<group>";
+		};
+		AC75A4ED21B26EE7009441C4 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
+				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		AC75A4EE21B26F2C009441C4 /* settingauthenticationdefinition */ = {
+			isa = PBXGroup;
+			children = (
+				AC75A4F121B26F64009441C4 /* basic */,
+				AC75A4F021B26F5B009441C4 /* password */,
+				AC75A4EF21B26F53009441C4 /* pattern */,
+			);
+			path = settingauthenticationdefinition;
+			sourceTree = "<group>";
+		};
+		AC75A4EF21B26F53009441C4 /* pattern */ = {
+			isa = PBXGroup;
+			children = (
+				AC75A4F821B270B9009441C4 /* AuthenticationDefinitionPatternViewController.swift */,
+			);
+			path = pattern;
+			sourceTree = "<group>";
+		};
+		AC75A4F021B26F5B009441C4 /* password */ = {
+			isa = PBXGroup;
+			children = (
+				AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */,
+			);
+			path = password;
+			sourceTree = "<group>";
+		};
+		AC75A4F121B26F64009441C4 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		AC75A4FA21B270E3009441C4 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAD85C21AE7AED007266F4 /* Settings.storyboard */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
 		ACAAD85121AC2C95007266F4 /* authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +381,8 @@
 		ACAAD85B21AE7AB4007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD85C21AE7AED007266F4 /* Settings.storyboard */,
+				AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */,
+				AC75A4FA21B270E3009441C4 /* basic */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -322,8 +390,8 @@
 		ACAAD85E21AE8058007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
-				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
+				AC75A4ED21B26EE7009441C4 /* basic */,
+				AC75A4EE21B26F2C009441C4 /* settingauthenticationdefinition */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -447,7 +515,7 @@
 			children = (
 				ACC902B821A180690072CFD5 /* phoneconfirmation */,
 				AF285FF0219C42D600D8C342 /* phoneinput */,
-				AFE81B082196CC2D00AA0AF2 /* loginmethod */,
+				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 			);
 			path = registration;
@@ -490,10 +558,10 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD85E21AE8058007266F4 /* settings */,
-				AF285FEF219C42B500D8C342 /* registration */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
 				AF463BC42189D8EC00DC8A3E /* main */,
+				AF285FEF219C42B500D8C342 /* registration */,
+				ACAAD85E21AE8058007266F4 /* settings */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -693,14 +761,14 @@
 			path = otp;
 			sourceTree = "<group>";
 		};
-		AFE81B082196CC2D00AA0AF2 /* loginmethod */ = {
+		AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
-				AFE81B132196CEEC00AA0AF2 /* pattern */,
-				AFE81B102196CE6000AA0AF2 /* password */,
 				AFE81B0F2196CE5500AA0AF2 /* basic */,
+				AFE81B102196CE6000AA0AF2 /* password */,
+				AFE81B132196CEEC00AA0AF2 /* pattern */,
 			);
-			path = loginmethod;
+			path = authenticationdefinition;
 			sourceTree = "<group>";
 		};
 		AFE81B0B2196CCDA00AA0AF2 /* extentions */ = {
@@ -959,6 +1027,7 @@
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				ACAAD85621AC2CF1007266F4 /* Authentication.storyboard in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
+				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */,
@@ -1154,12 +1223,14 @@
 				ACAAD87021AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift in Sources */,
 				AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */,
 				AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */,
+				AC75A4F921B270B9009441C4 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AF246AAB219ADC3300C44E4B /* TokenRepositoryProtocol.swift in Sources */,
 				AF246A962199A2CE00C44E4B /* Interceptor.swift in Sources */,
 				AFE81B0A2196CC6C00AA0AF2 /* AuthenticationDefinitionViewController.swift in Sources */,
 				AF246A7C21984A5500C44E4B /* Bank.swift in Sources */,
 				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
+				AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,
 				AF246AA4219AB91700C44E4B /* CardRepositoryProtocol.swift in Sources */,
 				ACAAD86421AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift in Sources */,
@@ -1170,6 +1241,7 @@
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
 				AF246A9D219AA57B00C44E4B /* BankRepositoryProtocol.swift in Sources */,
 				AF246A9F219AAA1700C44E4B /* BankRealmRepository.swift in Sources */,
+				AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */,
 				ACAAD86021AE8075007266F4 /* SettingsViewController.swift in Sources */,
 				AF246A982199A59100C44E4B /* JwtPersistable.swift in Sources */,
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
