@@ -17,6 +17,8 @@ target 'MobileToken' do
     pod "DeviceKit", '~> 1.9.0'
     pod 'CountryPickerView', '~> 2.2.0'
     pod "IQKeyboardManager", '~> 6.0.4'
+    pod 'XLActionController', '~> 4.1.0'
+    pod 'XLActionController/Spotify'
     #pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.2.1'
     target 'MobileTokenTests' do
         inherit! :search_paths

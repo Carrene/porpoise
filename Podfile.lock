@@ -25,6 +25,11 @@ PODS:
   - RealmSwift (3.11.1):
     - Realm (= 3.11.1)
   - TTGSnackbar (1.7.5)
+  - XLActionController (4.1.0):
+    - XLActionController/Core (= 4.1.0)
+  - XLActionController/Core (4.1.0)
+  - XLActionController/Spotify (4.1.0):
+    - XLActionController/Core
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
@@ -41,6 +46,8 @@ DEPENDENCIES:
   - PasswordTextField
   - R.swift (~> 5.0.0.alpha.2)
   - TTGSnackbar
+  - XLActionController (~> 4.1.0)
+  - XLActionController/Spotify
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -62,6 +69,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - TTGSnackbar
+    - XLActionController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -82,7 +90,8 @@ SPEC CHECKSUMS:
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
+  XLActionController: e8a8b38d3b226a69921e412e769d8483d1794064
 
-PODFILE CHECKSUM: 97cdbb7ca4ed3a33e9dc3a25fb9000707b7fffa2
+PODFILE CHECKSUM: cd9642bf00d1d84a6f4464a5042d589a74bc6846
 
 COCOAPODS: 1.5.3

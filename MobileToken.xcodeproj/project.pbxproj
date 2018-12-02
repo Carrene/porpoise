@@ -12,6 +12,9 @@
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
+		AC2676B421B40B8B00524636 /* ActionSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetHelper.swift */; };
+		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
+		AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -136,6 +139,9 @@
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
+		AC2676B321B40B8B00524636 /* ActionSheetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetHelper.swift; sourceTree = "<group>"; };
+		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
+		AC2676B821B410DC00524636 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -295,6 +301,15 @@
 				9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC2676B521B40D8200524636 /* actionsheet */ = {
+			isa = PBXGroup;
+			children = (
+				AC2676B821B410DC00524636 /* ActionSheet.swift */,
+				AC2676B621B40E4F00524636 /* ActionSheet.xib */,
+			);
+			path = actionsheet;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -723,6 +738,7 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AC2676B521B40D8200524636 /* actionsheet */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
 				ACDFD8AE21A9836200839F97 /* bank */,
 				AFE190E7219029430023E785 /* card */,
@@ -824,6 +840,7 @@
 				AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */,
 				AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */,
 				AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */,
+				AC2676B321B40B8B00524636 /* ActionSheetHelper.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1035,6 +1052,7 @@
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
+				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
@@ -1112,6 +1130,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1132,6 +1151,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1195,6 +1215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
+				AC2676B421B40B8B00524636 /* ActionSheetHelper.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */,
@@ -1218,6 +1239,7 @@
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */,
 				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
+				AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */,
 				AF246A862199762700C44E4B /* AuthenticationRepository.swift in Sources */,
 				AFE81B242196D4E700AA0AF2 /* NetHex.swift in Sources */,
 				ACAAD86A21AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,

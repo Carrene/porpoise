@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XLActionController
 
 class ImportTokenViewController: UIViewController,UITextViewDelegate {
 
@@ -16,12 +17,12 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
     @IBOutlet var textViewSmsCode: UITextView!
     @IBOutlet var labelSmsCode: UILabel!
     @IBOutlet var buttonAddCode: UIButton!
-    
+    let actionController = SpotifyActionController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIComponent()
-        
+        initActionSheet()
         
     }
     
@@ -43,6 +44,19 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
         viewCard.labelBankName.text = "بانک آینده"
     }
     
+    func initActionSheet() {
+        actionController.addAction(Action(ActionData(title: "ویرایش نام کارت", subtitle: "", image: R.image.cardEdit()!), style: .default, handler: {
+            action in
+            print("hi")
+        }))
+        
+        
+        actionController.cancelView?.isHidden = true
+        actionController.addSection(Section())
+        //actionController.addAction(Action("Cancel", style: .cancel, handler:nil))
+        
+        
+    }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
@@ -60,32 +74,33 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
     }
 
     @IBAction func onButtonAddCode(_ sender: UIButton) {
-        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let backView = optionMenu.view.subviews.last?.subviews.last
-        backView?.layer.cornerRadius = 0
-        backView?.backgroundColor = R.color.primaryLight()
-        // 2
-        let editCardAction = UIAlertAction(title: "ویرایش نام کارت", style: .default)
-        let deleteCardAction = UIAlertAction(title: "حذف کارت", style: .default)
-        let deleteCode = UIAlertAction(title:"حذف رمز", style: .default)
-        // 3
-        //let cancelAction = UIAlertAction(title: "انصراف", style: .cancel)
-        // 4
-        optionMenu.addAction(editCardAction)
-        optionMenu.addAction(deleteCardAction)
-        //optionMenu.addAction(cancelAction)
-        
-        // 5
-        self.present(optionMenu, animated: true, completion: nil)
+        present(actionController, animated: true, completion: nil)
+//        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+//        let backView = optionMenu.view.subviews.last?.subviews.last
+//        backView?.layer.cornerRadius = 0
+//        backView?.backgroundColor = R.color.primaryLight()
+//        // 2
+//        let editCardAction = UIAlertAction(title: "ویرایش نام کارت", style: .default)
+//        let deleteCardAction = UIAlertAction(title: "حذف کارت", style: .default)
+//        let deleteCode = UIAlertAction(title:"حذف رمز", style: .default)
+//        // 3
+//        //let cancelAction = UIAlertAction(title: "انصراف", style: .cancel)
+//        // 4
+//        optionMenu.addAction(editCardAction)
+//        optionMenu.addAction(deleteCardAction)
+//        //optionMenu.addAction(cancelAction)
+//
+//        // 5
+//        self.present(optionMenu, animated: true, completion: nil)
     }
     
 }
 
-extension UIAlertController{
-    open override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.view.tintColor = R.color.primaryLight()
-        //self.view.tintColor = R.color.buttonColor()
-        
-    }
-}
+//extension UIAlertController{
+//    open override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        self.view.tintColor = R.color.primaryLight()
+//        //self.view.tintColor = R.color.buttonColor()
+//
+//    }
+//}
