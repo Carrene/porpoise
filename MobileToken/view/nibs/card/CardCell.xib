@@ -4,75 +4,86 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IRANSansMobile-Medium.ttf">
+            <string>IRANSansMobile-Medium</string>
+        </array>
         <array key="IranSansMediumFarsi.ttf">
             <string>IRANSansMobileFaNum-Medium</string>
         </array>
-        <array key="IranSansReqular.ttf">
-            <string>IranianSans</string>
-        </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
+            <connections>
+                <outlet property="imageLogo" destination="lUN-2e-ulq" id="zxQ-yg-pMD"/>
+                <outlet property="labelBankName" destination="sZ2-Dk-Vth" id="H7W-do-TsR"/>
+                <outlet property="labelTitle" destination="HJy-qy-Uvt" id="aUc-5e-pBI"/>
+                <outlet property="labelTitle2" destination="sWj-1Y-Zmx" id="Vw6-cQ-3oM"/>
+                <outlet property="stackViewCardNumber" destination="fZI-ax-72e" id="d0S-GI-Qy8"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="czo-z1-dRl">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="170"/>
+            <rect key="frame" x="0.0" y="0.0" width="315" height="140"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pN3-TI-KqC" userLabel="imgAddCard">
-                    <rect key="frame" x="0.0" y="0.0" width="300" height="170"/>
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="140"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-9I-6w2" userLabel="vCard">
-                    <rect key="frame" x="0.0" y="0.0" width="300" height="170"/>
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="140"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
                             <rect key="frame" x="20" y="10" width="40" height="40"/>
+                            <color key="backgroundColor" name="buttonColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="gDb-D0-3om"/>
                                 <constraint firstAttribute="height" constant="40" id="mVX-rh-vm4"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک‌ملی" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ2-Dk-Vth" userLabel="lbBankName">
-                            <rect key="frame" x="228" y="22" width="52" height="16.5"/>
-                            <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="14"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک‌ملی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ2-Dk-Vth" userLabel="lbBankName">
+                            <rect key="frame" x="240.5" y="17.5" width="54.5" height="25.5"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
+                            <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مصرف‌روزانه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbDayly">
-                            <rect key="frame" x="88.5" y="14.5" width="123" height="31.5"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مصرف‌روزانه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbTitle">
+                            <rect key="frame" x="125" y="19" width="65" height="22.5"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="14"/>
+                            <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-ax-72e" userLabel="svCardNumber">
-                            <rect key="frame" x="20" y="90" width="260" height="25"/>
+                            <rect key="frame" x="20" y="80" width="275" height="25"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-fa-mEH" userLabel="lb1">
-                                    <rect key="frame" x="0.0" y="0.0" width="57.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-fa-mEH" userLabel="lb1">
+                                    <rect key="frame" x="0.0" y="3" width="61.5" height="19"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9874" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-aM-HWX" userLabel="lb2">
-                                    <rect key="frame" x="67.5" y="0.0" width="57.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-aM-HWX" userLabel="lb2">
+                                    <rect key="frame" x="71.5" y="3" width="61" height="19"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2354" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-26-kOf" userLabel="lb3">
-                                    <rect key="frame" x="135" y="0.0" width="57.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-26-kOf" userLabel="lb3">
+                                    <rect key="frame" x="142.5" y="3" width="61.5" height="19"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7894" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-SU-IKq" userLabel="lb4">
-                                    <rect key="frame" x="202.5" y="0.0" width="57.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-SU-IKq" userLabel="lb4">
+                                    <rect key="frame" x="214" y="3" width="61" height="19"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -80,20 +91,19 @@
                                 <constraint firstAttribute="height" constant="25" id="Qem-K5-sLe"/>
                             </constraints>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تولید رمز یکبار‌مصرف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-1Y-Zmx">
-                            <rect key="frame" x="83" y="140" width="134.5" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دریافت رمزهای کارت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-1Y-Zmx">
+                            <rect key="frame" x="93" y="110" width="129.5" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="y4N-Uk-Jdp"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="14"/>
-                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
+                            <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="lUN-2e-ulq" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="2Er-mF-kyW"/>
-                        <constraint firstItem="fZI-ax-72e" firstAttribute="top" secondItem="lUN-2e-ulq" secondAttribute="bottom" constant="40" id="7A0-rB-2nR"/>
+                        <constraint firstItem="fZI-ax-72e" firstAttribute="top" secondItem="lUN-2e-ulq" secondAttribute="bottom" constant="30" id="7A0-rB-2nR"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="7mn-71-bf2"/>
                         <constraint firstItem="fZI-ax-72e" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="Cg7-Yv-4qM"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" constant="20" id="Ebe-cT-zrx"/>
@@ -103,24 +113,36 @@
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="bottom" secondItem="sWj-1Y-Zmx" secondAttribute="bottom" constant="10" id="Tb6-28-iRf"/>
                         <constraint firstItem="sWj-1Y-Zmx" firstAttribute="top" secondItem="fZI-ax-72e" secondAttribute="bottom" constant="25" id="YzR-Yz-jy7"/>
                         <constraint firstItem="lUN-2e-ulq" firstAttribute="top" secondItem="RsV-rx-6jy" secondAttribute="top" constant="10" id="oIC-8D-Bqt"/>
+                        <constraint firstItem="sWj-1Y-Zmx" firstAttribute="top" secondItem="fZI-ax-72e" secondAttribute="bottom" constant="35" id="xId-JK-ok3"/>
                         <constraint firstItem="sWj-1Y-Zmx" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="zPs-MO-yCF"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="RsV-rx-6jy"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="YzR-Yz-jy7"/>
+                            <exclude reference="xId-JK-ok3"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="aM0-9I-6w2" secondAttribute="bottom" id="78y-84-Rg2"/>
                 <constraint firstItem="U2J-3b-ILO" firstAttribute="trailing" secondItem="pN3-TI-KqC" secondAttribute="trailing" id="7ky-5Q-bJI"/>
                 <constraint firstItem="U2J-3b-ILO" firstAttribute="bottom" secondItem="pN3-TI-KqC" secondAttribute="bottom" id="8Zz-Qm-ffG"/>
                 <constraint firstItem="aM0-9I-6w2" firstAttribute="leading" secondItem="U2J-3b-ILO" secondAttribute="leading" id="9cp-4J-CUK"/>
                 <constraint firstItem="pN3-TI-KqC" firstAttribute="leading" secondItem="U2J-3b-ILO" secondAttribute="leading" id="EPO-76-jYm"/>
                 <constraint firstItem="aM0-9I-6w2" firstAttribute="top" secondItem="U2J-3b-ILO" secondAttribute="top" id="P7S-9q-YVw"/>
+                <constraint firstItem="aM0-9I-6w2" firstAttribute="bottom" secondItem="U2J-3b-ILO" secondAttribute="bottom" id="XmV-Jp-zZy"/>
                 <constraint firstAttribute="trailing" secondItem="aM0-9I-6w2" secondAttribute="trailing" id="ceX-32-5XB"/>
                 <constraint firstItem="pN3-TI-KqC" firstAttribute="top" secondItem="U2J-3b-ILO" secondAttribute="top" id="qMc-pX-9Bo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="U2J-3b-ILO"/>
+            <point key="canvasLocation" x="182.40000000000001" y="75.112443778110944"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

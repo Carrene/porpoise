@@ -31,15 +31,32 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
         textViewAtmCode.layer.cornerRadius = 10
         textViewSmsCode.layer.cornerRadius = 10
         textViewAtmCode.delegate = self
+        textViewSmsCode.delegate = self
         textViewSmsCode.font = R.font.iranSansMobile(size: 16)
         textViewAtmCode.font = R.font.iranSansMobile(size: 16)
-        
+        initBankCard()
+    }
+    
+    func initBankCard() {
+        viewCard.backgroundColor = R.color.ayandehColor()
+        viewCard.imageLogo.image = R.image.bankAyandehLogo()
+        viewCard.labelBankName.text = "بانک آینده"
+    }
+    
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView == textViewAtmCode {
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
         let numberOfChars = newText.count
-        return numberOfChars < 8
+        return numberOfChars < 9
+        }
+        else {
+            return true
+        }
     }
 
     @IBAction func onButtonAddCode(_ sender: UIButton) {

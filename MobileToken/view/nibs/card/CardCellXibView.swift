@@ -12,6 +12,11 @@ import UIKit
 class CardCellXibView: UIView {
     
     var contentView : UIView!
+    @IBOutlet var imageLogo: UIImageView!
+    @IBOutlet var labelBankName: UILabel!
+    @IBOutlet var labelTitle: UILabel!
+    @IBOutlet var stackViewCardNumber: UIStackView!
+    @IBOutlet var labelTitle2: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,6 +26,7 @@ class CardCellXibView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
+        initUIComponent()
     }
     
     func xibSetup() {
@@ -34,6 +40,10 @@ class CardCellXibView: UIView {
         
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(contentView)
+    }
+    
+    func initUIComponent() {
+        imageLogo.layer.cornerRadius = 10
     }
     
     func loadViewFromNib() -> UIView! {

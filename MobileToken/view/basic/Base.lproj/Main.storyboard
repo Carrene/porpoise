@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="140" id="XmY-91-LxZ"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-nM-hOl" userLabel="textViewAtmCode">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-nM-hOl" userLabel="textViewAtmCode">
                                 <rect key="frame" x="30" y="203" width="315" height="40"/>
                                 <color key="backgroundColor" name="primaryDark"/>
                                 <constraints>
@@ -62,7 +62,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* به خودپرداز مربوط به کارت خود مراجعه فرمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L4-6a-aa9" userLabel="labelAtmCode">
                                 <rect key="frame" x="30" y="248" width="315" height="19.5"/>
@@ -75,7 +75,7 @@
                                 <color key="backgroundColor" name="primaryDark"/>
                                 <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* محتوای پیامک دریافتی را کپی کنید " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifm-j7-dKp" userLabel="labelSmsCode">
                                 <rect key="frame" x="30" y="524" width="315" height="19.5"/>
