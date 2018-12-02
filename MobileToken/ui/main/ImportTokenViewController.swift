@@ -60,6 +60,32 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
     }
 
     @IBAction func onButtonAddCode(_ sender: UIButton) {
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let backView = optionMenu.view.subviews.last?.subviews.last
+        backView?.layer.cornerRadius = 0
+        backView?.backgroundColor = R.color.primaryLight()
+        // 2
+        let editCardAction = UIAlertAction(title: "ویرایش نام کارت", style: .default)
+        let deleteCardAction = UIAlertAction(title: "حذف کارت", style: .default)
+        let deleteCode = UIAlertAction(title:"حذف رمز", style: .default)
+        // 3
+        //let cancelAction = UIAlertAction(title: "انصراف", style: .cancel)
+        // 4
+        optionMenu.addAction(editCardAction)
+        optionMenu.addAction(deleteCardAction)
+        //optionMenu.addAction(cancelAction)
+        
+        // 5
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
+}
+
+extension UIAlertController{
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.tintColor = R.color.primaryLight()
+        //self.view.tintColor = R.color.buttonColor()
+        
+    }
 }
