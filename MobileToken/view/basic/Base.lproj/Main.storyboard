@@ -20,10 +20,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="i3p-k1-73G"/>
                     </view>
+                    <connections>
+                        <segue destination="YMc-y3-tqa" kind="show" identifier="navigateToAuthentication" id="wbJ-us-htK"/>
+                        <segue destination="Uz4-Om-NCj" kind="show" identifier="navigatoToAuthenticationDefinition" id="laP-Br-1Ad"/>
+                        <segue destination="RMI-LM-tRV" kind="show" identifier="navigateToTabbar" id="cQ4-e8-SS2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEP-2S-8Sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3972" y="-1943"/>
+        </scene>
+        <!--AuthenticationViewController-->
+        <scene sceneID="Vq0-ax-Ydg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm7-2t-TD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Authentication" referencedIdentifier="AuthenticationViewController" id="YMc-y3-tqa" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="-2990" y="-2231"/>
         </scene>
         <!--Token List View Controller-->
         <scene sceneID="0Lz-29-Pxf">
@@ -53,6 +66,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0B-FV-qdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828" y="909.89505247376314"/>
+        </scene>
+        <!--MainTabbar-->
+        <scene sceneID="AVS-Th-jdT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ob0-eD-pFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="RMI-LM-tRV" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="-3109" y="-1656"/>
+        </scene>
+        <!--AuthenticationDefinitionViewController-->
+        <scene sceneID="CDN-I5-iO7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r56-U1-tpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AuthenticationDefinition" referencedIdentifier="AuthenticationDefinitionViewController" id="Uz4-Om-NCj" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="-2931" y="-1944"/>
         </scene>
     </scenes>
 </document>

@@ -38,7 +38,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         initUIComponent()
         self.hideKeyboardWhenTappedAround()
         buttonRegister.isEnabled = false
-        //buttonRegister.setBackgroundColor((R.color.secondary()?.withAlphaComponent(0.2))!, for: UIControl.State.disabled)
     }
     
     func initUIComponent() {
@@ -49,7 +48,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewPhone.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         buttonRegister.layer.cornerRadius = 10
-        //buttonRegister.setBackgroundColor(R.color.secondary()!, for: UIControl.State.normal)
         
     }
     
