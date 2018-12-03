@@ -68,10 +68,9 @@ open class MobileTokenActionSheetController: ActionController<ActionSheet, Actio
         onConfigureCellForAction = { [weak self] cell, action, indexPath in
             //cell.setup(action.data?.title, detail: action.data?.subtitle, image: action.data?.image)
             cell.separatorView?.isHidden = indexPath.item == (self?.collectionView.numberOfItems(inSection: indexPath.section))! - 1
-            //cell.alpha = action.enabled ? 1.0 : 0.1
+            cell.viewDisable.backgroundColor = action.enabled ? R.color.primaryDark()?.withAlphaComponent(0.0) : R.color.primaryDark()?.withAlphaComponent(0.9)
             cell.label.text = action.data?.title
             cell.imageView.image = action.data?.image
-            cell.label.textColor = action.enabled ? R.color.buttonColor() : R.color.buttonColor()?.withAlphaComponent(0.1)
         }
         onConfigureHeader = { (header: MobileTokenActionSheetHeaderView, data: MobileTokenActionSheetHeaderData)  in
 //            header.title.text = data.title

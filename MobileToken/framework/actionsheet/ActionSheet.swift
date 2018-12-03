@@ -15,6 +15,7 @@ open class ActionSheet: ActionCell {
     @IBOutlet var viewCell: UIView!
     @IBOutlet var label: UILabel!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var viewDisable: UIView!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +32,8 @@ open class ActionSheet: ActionCell {
     }
     
     func initialize() {
-        backgroundColor = .white
+        backgroundColor = R.color.primaryDark()
+        label.textColor = R.color.buttonColor()
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor(white: 0.0, alpha: 0.15)
         selectedBackgroundView = backgroundView

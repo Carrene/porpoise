@@ -45,8 +45,9 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
     }
     
     func initActionSheet() {
-        var editCardAction = Action(ActionData(title: "ویرایش نام کارت", image: R.image.cardEdit()!), style: .default, handler: { action in })
-        var deleteCardAction = Action(ActionData(title: "حذف کارت", image: R.image.cardDelete()!), style: .default, handler: { action in })
+        let editCardAction = Action(ActionData(title: "ویرایش نام کارت", image: R.image.cardEdit()!), style: .default, handler: { action in })
+        //editCardAction.enabled = false
+        let deleteCardAction = Action(ActionData(title: "حذف کارت", image: R.image.cardDelete()!), style: .default, handler: { action in })
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
     }
