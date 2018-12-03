@@ -35,6 +35,8 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
         textViewSmsCode.delegate = self
         textViewSmsCode.font = R.font.iranSansMobile(size: 16)
         textViewAtmCode.font = R.font.iranSansMobile(size: 16)
+        textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         initBankCard()
     }
     
@@ -52,13 +54,27 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
         actionController.addAction(deleteCardAction)
     }
     
+    
     func actionSheetButtonClicked() {
-        print("oooo")
         present(actionController, animated: true, completion: nil)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
+        if textView.textColor == R.color.buttonColor()?.withAlphaComponent(0.5) {
+            textView.text = nil
+            textView.textColor = R.color.buttonColor()
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textViewSmsCode.text.isEmpty {
+            textView.text = R.string.localizable.ph_sms_code()
+            textView.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        }
+        if textViewAtmCode.text.isEmpty {
+            textView.text = R.string.localizable.ph_atm_code()
+            textView.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -73,7 +89,9 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
     }
 
     @IBAction func onButtonAddCode(_ sender: UIButton) {
-        
+        if textViewAtmCode.text.count < 9 || textViewSmsCode.text.count == 0 {
+            UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
+        }
 
     }
     

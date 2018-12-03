@@ -25,3 +25,7 @@
 "lb_enter_pattern" = "الگوی خود را وارد کنید";
 "lb_enter_password" = "رمز خود را وارد کنید";
 "lb_seconds" = "ثانیه ";
+
+//placeholder
+"ph_sms_code" = "کد دریافتی از پیامک";
+"ph_atm_code" = "کد دریافتی از دستگاه";

@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="140" id="XmY-91-LxZ"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-nM-hOl" userLabel="textViewAtmCode">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-nM-hOl" userLabel="textViewAtmCode">
                                 <rect key="frame" x="30" y="203" width="315" height="40"/>
                                 <color key="backgroundColor" name="primaryDark"/>
                                 <constraints>
