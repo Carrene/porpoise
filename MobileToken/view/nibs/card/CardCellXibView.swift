@@ -5,6 +5,9 @@
 //  Created by hamed akhlaghi on 8/13/1397 AP.
 //  Copyright © 1397 ba24.ir. All rights reserved.
 //
+protocol CardCellXibProtocol {
+    func actionSheetButtonClicked()
+}
 
 import UIKit
 @IBDesignable
@@ -17,6 +20,7 @@ class CardCellXibView: UIView {
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var stackViewCardNumber: UIStackView!
     @IBOutlet var labelTitle2: UILabel!
+    var cardCellXibProtocol:CardCellXibProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,6 +44,14 @@ class CardCellXibView: UIView {
         
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(contentView)
+    }
+    
+    func setDelegate(cardCellXibProtocol:CardCellXibProtocol) {
+        self.cardCellXibProtocol = cardCellXibProtocol
+    }
+    
+    @IBAction func onButtonActionSheet(_ sender: UIButton) {
+        self.cardCellXibProtocol?.actionSheetButtonClicked()
     }
     
     func initUIComponent() {

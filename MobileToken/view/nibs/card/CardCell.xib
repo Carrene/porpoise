@@ -53,12 +53,23 @@
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مصرف‌روزانه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbTitle">
-                            <rect key="frame" x="125" y="19" width="65" height="22.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مصرف ‌روزانه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbTitle">
+                            <rect key="frame" x="123" y="19" width="69" height="22.5"/>
                             <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="14"/>
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-WO-q3H" userLabel="buttonActionSheet">
+                            <rect key="frame" x="255" y="100" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ZVS-CB-BNf"/>
+                                <constraint firstAttribute="height" constant="40" id="hzH-0N-1vV"/>
+                            </constraints>
+                            <state key="normal" image="more-dots"/>
+                            <connections>
+                                <action selector="onButtonActionSheet:" destination="-1" eventType="touchUpInside" id="Op0-Ud-ELX"/>
+                            </connections>
+                        </button>
                         <stackView opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-ax-72e" userLabel="svCardNumber">
                             <rect key="frame" x="20" y="80" width="275" height="25"/>
                             <subviews>
@@ -105,6 +116,8 @@
                         <constraint firstItem="lUN-2e-ulq" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="2Er-mF-kyW"/>
                         <constraint firstItem="fZI-ax-72e" firstAttribute="top" secondItem="lUN-2e-ulq" secondAttribute="bottom" constant="30" id="7A0-rB-2nR"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="7mn-71-bf2"/>
+                        <constraint firstItem="i6y-WO-q3H" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" id="8Gy-BS-TI2"/>
+                        <constraint firstItem="i6y-WO-q3H" firstAttribute="centerY" secondItem="sWj-1Y-Zmx" secondAttribute="centerY" id="CKA-XI-VYT"/>
                         <constraint firstItem="fZI-ax-72e" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="Cg7-Yv-4qM"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" constant="20" id="Ebe-cT-zrx"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="sZ2-Dk-Vth" secondAttribute="trailing" constant="20" id="LCq-oY-iyA"/>
@@ -141,6 +154,7 @@
         </view>
     </objects>
     <resources>
+        <image name="more-dots" width="20" height="5"/>
         <namedColor name="buttonColor">
             <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

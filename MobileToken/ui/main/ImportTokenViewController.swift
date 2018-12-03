@@ -9,8 +9,8 @@
 import UIKit
 import XLActionController
 
-class ImportTokenViewController: UIViewController,UITextViewDelegate {
-
+class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXibProtocol {
+    
     @IBOutlet var viewCard: CardCellXibView!
     @IBOutlet var textViewAtmCode: UITextView!
     @IBOutlet var labelAtmCode: UILabel!
@@ -21,9 +21,9 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUIComponent()
+        viewCard.setDelegate(cardCellXibProtocol: self)
         initActionSheet()
-        
+        initUIComponent()
     }
     
     func initUIComponent() {
@@ -52,6 +52,11 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
         actionController.addAction(deleteCardAction)
     }
     
+    func actionSheetButtonClicked() {
+        print("oooo")
+        present(actionController, animated: true, completion: nil)
+    }
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
     }
@@ -68,7 +73,7 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate {
     }
 
     @IBAction func onButtonAddCode(_ sender: UIButton) {
-        present(actionController, animated: true, completion: nil)
+        
 
     }
     
