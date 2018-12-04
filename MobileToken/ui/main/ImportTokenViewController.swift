@@ -47,9 +47,9 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
     }
     
     func initActionSheet() {
-        let editCardAction = Action(ActionData(title: "ویرایش نام کارت", image: R.image.cardEdit()!), style: .default, handler: { action in })
+        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in })
         //editCardAction.enabled = false
-        let deleteCardAction = Action(ActionData(title: "حذف کارت", image: R.image.cardDelete()!), style: .default, handler: { action in })
+        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
     }
@@ -79,20 +79,20 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if textView == textViewAtmCode {
-        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
-        let numberOfChars = newText.count
-        return numberOfChars < 9
+            let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+            let numberOfChars = newText.count
+            return numberOfChars < 9
         }
         else {
             return true
         }
     }
-
+    
     @IBAction func onButtonAddCode(_ sender: UIButton) {
         if textViewAtmCode.text.count < 9 || textViewSmsCode.text.count == 0 {
             UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
         }
-
+        
     }
     
 }

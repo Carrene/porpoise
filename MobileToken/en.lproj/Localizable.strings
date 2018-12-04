@@ -1,5 +1,5 @@
-"country" = "Country";
-"backBarItem" = "Back";
+"country" = "کشور";
+"backBarItem" = "قبلی";
 
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است";
@@ -29,3 +29,7 @@
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
 "ph_atm_code" = "کد دریافتی از دستگاه";
+
+//actionsheet
+"ash_edit_card_name" = "ویرایش نام کارت";
+"ash_delete_card" = "حذف کارت";
