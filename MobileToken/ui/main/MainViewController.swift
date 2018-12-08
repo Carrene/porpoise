@@ -12,11 +12,23 @@ class MainViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigateToTabbar()
+        //startApplicationOnboard()
+        navigateToImportToken()
+        //navigateToTabbar()
         
 //        let vc : UIViewController = (R.storyboard.tabbar.instantiateInitialViewController()!)
 //        print(vc)
 //        present(vc, animated: false, completion: nil)
+    }
+    
+    fileprivate func startApplicationOnboard() {
+        let onIntroEnd = { [weak self] in
+            
+            UIApplication.shared.statusBarStyle = .default
+            
+        }
+        let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
+        present(introVC, animated: true, completion: nil)
     }
     
     func navigateToAuthentication() {
@@ -29,6 +41,10 @@ class MainViewController: UINavigationController {
 
     func navigateToTabbar() {
         performSegue(withIdentifier: R.segue.mainViewController.navigateToTabbar.identifier, sender: self)
+    }
+    
+    func navigateToImportToken() {
+        performSegue(withIdentifier: R.segue.mainViewController.navigatoToImportToken.identifier, sender: self)
     }
 
 }

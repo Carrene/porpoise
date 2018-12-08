@@ -18,7 +18,8 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     @IBOutlet var labelChangeNumber: UILabel!
     @IBOutlet var labelCounter: UILabel!
     @IBOutlet var NavigationItemTitle: UINavigationItem!
-    var presenter:PhoneConfirmationPresenter?
+    
+    var presenter:PhoneConfirmationPresenterProtocol?
     var phoneNumber = ""
     
     override func viewDidLoad() {
@@ -56,7 +57,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         labelChangeNumber.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
         labelChangeNumber.addGestureRecognizer(tap)
-        
     }
     
     @objc func dismiss(_ sender: Any) {

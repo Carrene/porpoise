@@ -15,6 +15,8 @@
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
 		AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
+		AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
+		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -142,6 +144,8 @@
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
 		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
 		AC2676B821B410DC00524636 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
+		AC2676BC21B695E000524636 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +323,22 @@
 				AC2676B621B40E4F00524636 /* ActionSheet.xib */,
 			);
 			path = actionsheet;
+			sourceTree = "<group>";
+		};
+		AC46685521BC050900A0B5BA /* importtoken */ = {
+			isa = PBXGroup;
+			children = (
+				AC46685621BC053300A0B5BA /* ImportToken.storyboard */,
+			);
+			path = importtoken;
+			sourceTree = "<group>";
+		};
+		AC46685821BC05DE00A0B5BA /* importtoken */ = {
+			isa = PBXGroup;
+			children = (
+				AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */,
+			);
+			path = importtoken;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -585,6 +605,7 @@
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
+				AC46685821BC05DE00A0B5BA /* importtoken */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 				AF285FEF219C42B500D8C342 /* registration */,
 				ACAAD85E21AE8058007266F4 /* settings */,
@@ -597,7 +618,7 @@
 			children = (
 				AFB39B4F2189A6A600302624 /* AppDelegate.swift */,
 				ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */,
-				AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */,
+				AC2676BC21B695E000524636 /* IntroViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -643,6 +664,7 @@
 				ACAAD85121AC2C95007266F4 /* authentication */,
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
+				AC46685521BC050900A0B5BA /* importtoken */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
 				ACC902B721A0406A0072CFD5 /* registration */,
 				ACAAD85B21AE7AB4007266F4 /* settings */,
@@ -1066,6 +1088,7 @@
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
+				AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
 				ACAAD86521AE8F24007266F4 /* LockScreenTimeTableViewCell.xib in Resources */,
 				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
@@ -1133,10 +1156,12 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 			);
@@ -1154,10 +1179,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 			);
@@ -1263,6 +1290,7 @@
 				AF246A7C21984A5500C44E4B /* Bank.swift in Sources */,
 				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
+				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
 				AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,
 				AF246AA4219AB91700C44E4B /* CardRepositoryProtocol.swift in Sources */,

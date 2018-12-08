@@ -15,6 +15,7 @@ PODS:
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
+  - Onboard (2.3.3)
   - PasswordTextField (1.2.0)
   - R.swift (5.0.0.alpha.2):
     - R.swift.Library (~> 5.0.0.alpha.2)
@@ -24,6 +25,7 @@ PODS:
   - Realm/Headers (3.11.1)
   - RealmSwift (3.11.1):
     - Realm (= 3.11.1)
+  - SwiftyGif (4.2.0)
   - TTGSnackbar (1.7.5)
   - XLActionController (4.1.0):
     - XLActionController/Core (= 4.1.0)
@@ -43,8 +45,10 @@ DEPENDENCIES:
   - HUIPatternLockView-Swift (~> 2.0.1)
   - IQKeyboardManager (~> 6.0.4)
   - "ObjectMapper+Realm (~> 0.6)"
+  - Onboard (~> 2.3.3)
   - PasswordTextField
   - R.swift (~> 5.0.0.alpha.2)
+  - SwiftyGif
   - TTGSnackbar
   - XLActionController (~> 4.1.0)
   - XLActionController/Spotify
@@ -63,11 +67,13 @@ SPEC REPOS:
     - IQKeyboardManager
     - ObjectMapper
     - "ObjectMapper+Realm"
+    - Onboard
     - PasswordTextField
     - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
+    - SwiftyGif
     - TTGSnackbar
     - XLActionController
 
@@ -84,14 +90,16 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 6b4ecd3e59cf55a26133d802d4678721d7f88499
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
   R.swift: 31fa1bd537fa81307815cc622122f33331f32174
   R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  SwiftyGif: a149bf84df23370592f3f075561ae02c8632a314
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: e8a8b38d3b226a69921e412e769d8483d1794064
 
-PODFILE CHECKSUM: cd9642bf00d1d84a6f4464a5042d589a74bc6846
+PODFILE CHECKSUM: 25a38d1fc19b5dc3beb12da21c3d4d89eb8442cb
 
 COCOAPODS: 1.5.3

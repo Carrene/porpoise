@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n0P-EJ-7RH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--دریافت رمزهای کارت-->
+        <scene sceneID="HLq-Q3-a8h">
+            <objects>
+                <viewController storyboardIdentifier="ImportTokenViewController" id="n0P-EJ-7RH" customClass="ImportTokenViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bu9-dw-9ay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlf-W8-eg8" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="30" y="33" width="315" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="SLs-O7-J4I"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-aJ-kfa" userLabel="textViewAtmCode">
+                                <rect key="frame" x="30" y="203" width="315" height="40"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="klq-pZ-S29"/>
+                                </constraints>
+                                <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* به خودپرداز مربوط به کارت خود مراجعه فرمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
+                                <rect key="frame" x="30" y="248" width="315" height="19.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
+                                <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کد دریافتی از پیامک" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkF-dm-DBr" userLabel="textViewSmsCode">
+                                <rect key="frame" x="30" y="287" width="315" height="232"/>
+                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* محتوای پیامک دریافتی را کپی کنید " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
+                                <rect key="frame" x="30" y="524" width="315" height="19.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
+                                <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ8-wZ-OrF" userLabel="buttonAddCode">
+                                <rect key="frame" x="30" y="599" width="315" height="48"/>
+                                <color key="backgroundColor" name="ayandehColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="3Bb-4v-Lnc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <state key="normal" title="افزودن رمز">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonAddCode:" destination="n0P-EJ-7RH" eventType="touchUpInside" id="Cqc-pZ-Jiw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="1ex-1N-Gxh"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="44" id="4Xq-7N-MxV"/>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="top" secondItem="nDK-RK-Yz7" secondAttribute="top" constant="13" id="6lX-pA-Npk"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="trailing" secondItem="MqB-aJ-kfa" secondAttribute="trailing" id="7em-Og-ZLb"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="XQ8-wZ-OrF" secondAttribute="trailing" constant="30" id="Cjh-Be-h1B"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="H7p-7b-vmC"/>
+                            <constraint firstItem="XQ8-wZ-OrF" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="80" id="JlO-li-LNG"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="Kcv-cg-qJ5"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="Nlf-W8-eg8" secondAttribute="trailing" constant="30" id="RtH-RS-Xld"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="PkF-dm-DBr" secondAttribute="trailing" constant="30" id="SZQ-6T-n8e"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="bottom" secondItem="XQ8-wZ-OrF" secondAttribute="bottom" constant="20" id="TRf-rG-ohr"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="trailing" secondItem="PkF-dm-DBr" secondAttribute="trailing" id="Tim-0J-2Ca"/>
+                            <constraint firstItem="XQ8-wZ-OrF" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="W2J-uN-bDR"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="top" secondItem="Nlf-W8-eg8" secondAttribute="bottom" constant="30" id="Yys-9h-G82"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="cZG-Qb-IE6"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="fP6-TX-c2B"/>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="mSo-ad-6Pk"/>
+                            <constraint firstItem="XQ8-wZ-OrF" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="mTI-Mh-rd5"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="nWI-Vb-9dQ"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="5" id="psd-ao-QZk"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="5" id="r2M-Kf-bOm"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="MqB-aJ-kfa" secondAttribute="trailing" constant="30" id="ypv-rZ-pHR"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="zNV-AR-egC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nDK-RK-Yz7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="دریافت رمزهای کارت" id="fDX-1W-pv6"/>
+                    <connections>
+                        <outlet property="buttonAddCode" destination="XQ8-wZ-OrF" id="IAs-fy-NlJ"/>
+                        <outlet property="labelAtmCode" destination="3e5-yh-neA" id="sp6-1b-aWb"/>
+                        <outlet property="labelSmsCode" destination="nAm-Ke-r4o" id="meg-9I-eWk"/>
+                        <outlet property="textViewAtmCode" destination="MqB-aJ-kfa" id="l82-lT-pvp"/>
+                        <outlet property="textViewSmsCode" destination="PkF-dm-DBr" id="gy8-1d-SvE"/>
+                        <outlet property="viewCard" destination="Nlf-W8-eg8" id="aTI-WH-KnL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20f-EK-V4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3593" y="-2858"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ayandehColor">
+            <color red="0.83099997043609619" green="0.63099998235702515" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

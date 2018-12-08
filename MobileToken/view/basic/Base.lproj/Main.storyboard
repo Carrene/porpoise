@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GEN-bY-8Sm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xV4-uK-Pmh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="IRANSansMobile-Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
-        </array>
-        <array key="IRANSansMobile.ttf">
-            <string>IRANSansMobile</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="klp-3Q-gKS">
@@ -33,118 +24,26 @@
                         <segue destination="YMc-y3-tqa" kind="show" identifier="navigateToAuthentication" id="wbJ-us-htK"/>
                         <segue destination="Uz4-Om-NCj" kind="show" identifier="navigatoToAuthenticationDefinition" id="laP-Br-1Ad"/>
                         <segue destination="RMI-LM-tRV" kind="show" identifier="navigateToTabbar" id="cQ4-e8-SS2"/>
+                        <segue destination="Ofy-a9-fJG" kind="show" identifier="navigatoToImportToken" id="Ydn-vt-sN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEP-2S-8Sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3972" y="-1943"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="b91-x7-h5j">
+        <!--ImportTokenViewController-->
+        <scene sceneID="DkB-Fg-OFJ">
             <objects>
-                <viewController id="GEN-bY-8Sm" customClass="ImportTokenViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n3I-Rl-ssn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-1v-Ju2" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="30" y="33" width="315" height="140"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="XmY-91-LxZ"/>
-                                </constraints>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-nM-hOl" userLabel="textViewAtmCode">
-                                <rect key="frame" x="30" y="203" width="315" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Ui7-wL-a4Z"/>
-                                </constraints>
-                                <color key="textColor" red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* به خودپرداز مربوط به کارت خود مراجعه فرمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L4-6a-aa9" userLabel="labelAtmCode">
-                                <rect key="frame" x="30" y="248" width="315" height="19.5"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
-                                <color key="textColor" red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کد دریافتی از پیامک" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-bI-GPl" userLabel="textViewSmsCode">
-                                <rect key="frame" x="30" y="287" width="315" height="232"/>
-                                <color key="backgroundColor" name="primaryDark"/>
-                                <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* محتوای پیامک دریافتی را کپی کنید " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifm-j7-dKp" userLabel="labelSmsCode">
-                                <rect key="frame" x="30" y="524" width="315" height="19.5"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
-                                <color key="textColor" red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLO-nG-hNZ" userLabel="buttonAddCode">
-                                <rect key="frame" x="30" y="599" width="315" height="48"/>
-                                <color key="backgroundColor" name="ayandehColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="4VH-Mp-fZU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                <state key="normal" title="افزودن رمز">
-                                    <color key="titleColor" name="buttonColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="onButtonAddCode:" destination="GEN-bY-8Sm" eventType="touchUpInside" id="yAD-go-w44"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="primary"/>
-                        <constraints>
-                            <constraint firstItem="pkE-1v-Ju2" firstAttribute="centerX" secondItem="87v-4y-Fhu" secondAttribute="centerX" id="2K2-Yh-VAE"/>
-                            <constraint firstItem="eG1-nM-hOl" firstAttribute="centerX" secondItem="87v-4y-Fhu" secondAttribute="centerX" id="3ta-8n-Liq"/>
-                            <constraint firstItem="8L4-6a-aa9" firstAttribute="trailing" secondItem="eG1-nM-hOl" secondAttribute="trailing" id="Bve-d8-2v1"/>
-                            <constraint firstItem="87v-4y-Fhu" firstAttribute="trailing" secondItem="d4K-bI-GPl" secondAttribute="trailing" constant="30" id="EpG-Gb-Gkd"/>
-                            <constraint firstItem="Ifm-j7-dKp" firstAttribute="trailing" secondItem="d4K-bI-GPl" secondAttribute="trailing" id="HJ6-ck-6Bj"/>
-                            <constraint firstItem="tLO-nG-hNZ" firstAttribute="centerX" secondItem="87v-4y-Fhu" secondAttribute="centerX" id="It8-HR-vD3"/>
-                            <constraint firstItem="87v-4y-Fhu" firstAttribute="trailing" secondItem="tLO-nG-hNZ" secondAttribute="trailing" constant="30" id="JxM-ec-udH"/>
-                            <constraint firstItem="8L4-6a-aa9" firstAttribute="top" secondItem="eG1-nM-hOl" secondAttribute="bottom" constant="5" id="KMO-5F-Rjm"/>
-                            <constraint firstItem="d4K-bI-GPl" firstAttribute="top" secondItem="eG1-nM-hOl" secondAttribute="bottom" constant="44" id="KwP-aq-VBl"/>
-                            <constraint firstItem="pkE-1v-Ju2" firstAttribute="leading" secondItem="87v-4y-Fhu" secondAttribute="leading" constant="30" id="O5m-2d-g3l"/>
-                            <constraint firstItem="d4K-bI-GPl" firstAttribute="leading" secondItem="87v-4y-Fhu" secondAttribute="leading" constant="30" id="Pw7-w4-zIq"/>
-                            <constraint firstItem="87v-4y-Fhu" firstAttribute="bottom" secondItem="tLO-nG-hNZ" secondAttribute="bottom" constant="20" id="Rp7-cT-6bP"/>
-                            <constraint firstItem="d4K-bI-GPl" firstAttribute="centerX" secondItem="87v-4y-Fhu" secondAttribute="centerX" id="SfE-Cw-l4j"/>
-                            <constraint firstItem="8L4-6a-aa9" firstAttribute="centerX" secondItem="87v-4y-Fhu" secondAttribute="centerX" id="U3P-oB-6jM"/>
-                            <constraint firstItem="tLO-nG-hNZ" firstAttribute="top" secondItem="d4K-bI-GPl" secondAttribute="bottom" constant="80" id="cXa-La-tCA"/>
-                            <constraint firstItem="87v-4y-Fhu" firstAttribute="trailing" secondItem="pkE-1v-Ju2" secondAttribute="trailing" constant="30" id="cwn-96-Axb"/>
-                            <constraint firstItem="pkE-1v-Ju2" firstAttribute="top" secondItem="87v-4y-Fhu" secondAttribute="top" constant="13" id="fAO-ZF-iXv"/>
-                            <constraint firstItem="Ifm-j7-dKp" firstAttribute="centerX" secondItem="87v-4y-Fhu" secondAttribute="centerX" id="fMK-O7-nhB"/>
-                            <constraint firstItem="eG1-nM-hOl" firstAttribute="leading" secondItem="87v-4y-Fhu" secondAttribute="leading" constant="30" id="ngS-4O-YJZ"/>
-                            <constraint firstItem="87v-4y-Fhu" firstAttribute="trailing" secondItem="eG1-nM-hOl" secondAttribute="trailing" constant="30" id="nxQ-f6-L6Q"/>
-                            <constraint firstItem="Ifm-j7-dKp" firstAttribute="top" secondItem="d4K-bI-GPl" secondAttribute="bottom" constant="5" id="pER-mq-3qn"/>
-                            <constraint firstItem="tLO-nG-hNZ" firstAttribute="leading" secondItem="87v-4y-Fhu" secondAttribute="leading" constant="30" id="qnQ-nT-ATm"/>
-                            <constraint firstItem="eG1-nM-hOl" firstAttribute="top" secondItem="pkE-1v-Ju2" secondAttribute="bottom" constant="30" id="tDQ-5a-orG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="87v-4y-Fhu"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="K7J-xQ-tZG"/>
-                    <connections>
-                        <outlet property="buttonAddCode" destination="tLO-nG-hNZ" id="59Q-Rq-Rty"/>
-                        <outlet property="labelAtmCode" destination="8L4-6a-aa9" id="Cc6-EX-QOi"/>
-                        <outlet property="labelSmsCode" destination="Ifm-j7-dKp" id="jaa-mV-KRc"/>
-                        <outlet property="textViewAtmCode" destination="eG1-nM-hOl" id="7t6-c0-pFs"/>
-                        <outlet property="textViewSmsCode" destination="d4K-bI-GPl" id="NL8-Dt-o1b"/>
-                        <outlet property="viewCard" destination="pkE-1v-Ju2" id="HPG-7G-CNb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rOX-ep-wbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="ImportTokenViewController" storyboardName="ImportToken" referencedIdentifier="ImportTokenViewController" id="Ofy-a9-fJG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBu-2F-Pys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3593" y="-2858"/>
+            <point key="canvasLocation" x="-2446" y="-1725"/>
         </scene>
         <!--AuthenticationViewController-->
         <scene sceneID="Vq0-ax-Ydg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm7-2t-TD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Authentication" referencedIdentifier="AuthenticationViewController" id="YMc-y3-tqa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm7-2t-TD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2990" y="-2231"/>
         </scene>
@@ -180,32 +79,18 @@
         <!--MainTabbar-->
         <scene sceneID="AVS-Th-jdT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ob0-eD-pFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="RMI-LM-tRV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ob0-eD-pFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3109" y="-1656"/>
         </scene>
         <!--AuthenticationDefinitionViewController-->
         <scene sceneID="CDN-I5-iO7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r56-U1-tpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="AuthenticationDefinition" referencedIdentifier="AuthenticationDefinitionViewController" id="Uz4-Om-NCj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r56-U1-tpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2931" y="-1944"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="ayandehColor">
-            <color red="0.83099997043609619" green="0.63099998235702515" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryDark">
-            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

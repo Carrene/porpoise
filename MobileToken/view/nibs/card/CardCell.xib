@@ -21,6 +21,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
             <connections>
+                <outlet property="buttonActionSheet" destination="i6y-WO-q3H" id="J7T-38-fsU"/>
                 <outlet property="imageLogo" destination="lUN-2e-ulq" id="zxQ-yg-pMD"/>
                 <outlet property="labelBankName" destination="sZ2-Dk-Vth" id="H7W-do-TsR"/>
                 <outlet property="labelTitle" destination="HJy-qy-Uvt" id="aUc-5e-pBI"/>

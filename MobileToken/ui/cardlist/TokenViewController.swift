@@ -7,6 +7,7 @@
 
 import UIKit
 import FSPagerView
+
 class TokenListViewController: UIViewController {
     
     @IBOutlet weak var vScroll: UIScrollView!

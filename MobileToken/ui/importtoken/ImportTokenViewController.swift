@@ -44,6 +44,8 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
         viewCard.backgroundColor = R.color.ayandehColor()
         viewCard.imageLogo.image = R.image.bankAyandehLogo()
         viewCard.labelBankName.text = "بانک آینده"
+        viewCard.buttonActionSheet.isEnabled = false
+        
     }
     
     func initActionSheet() {

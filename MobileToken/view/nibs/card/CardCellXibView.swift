@@ -19,6 +19,7 @@ class CardCellXibView: UIView {
     @IBOutlet var labelBankName: UILabel!
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var stackViewCardNumber: UIStackView!
+    @IBOutlet var buttonActionSheet: UIButton!
     @IBOutlet var labelTitle2: UILabel!
     var cardCellXibProtocol:CardCellXibProtocol?
     

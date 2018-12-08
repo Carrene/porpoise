@@ -6,7 +6,6 @@
 //  Copyright © 1397 ba24.ir. All rights reserved.
 //
 
-
 protocol AuthenticationDefintionDelegate:class {
     func authenticationSucceed(authentication:Authentication)
 }
