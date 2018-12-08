@@ -13,12 +13,21 @@ class MainViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //startApplicationOnboard()
-        navigateToImportToken()
         //navigateToTabbar()
         
 //        let vc : UIViewController = (R.storyboard.tabbar.instantiateInitialViewController()!)
 //        print(vc)
 //        present(vc, animated: false, completion: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let onIntroEnd = { [weak self] in
+            
+            UIApplication.shared.statusBarStyle = .default
+            
+        }
+        let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
+        present(introVC, animated: true, completion: nil)
     }
     
     fileprivate func startApplicationOnboard() {

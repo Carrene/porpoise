@@ -32,7 +32,8 @@ class IntroViewController {
         
         title = R.string.localizable.intro3Title()
         description = R.string.localizable.intro3Description()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: "security"), buttonText: nil, action: { onIntroEnd() }))
+        let buttonTitle  = R.string.localizable.next()
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: "security"), buttonText: buttonTitle, action: { onIntroEnd() }))
         
 //        title = NSLocalizedString("intro4Title", comment: "")
 //        var buttonTitle  = NSLocalizedString("btIntroEnd", comment: "")
@@ -68,7 +69,7 @@ class IntroViewController {
         onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
         onboardingVC.allowSkipping = true
         onboardingVC.fadeSkipButtonOnLastPage = true
-        onboardingVC.view.backgroundColor = UIColor.blue
+        onboardingVC.view.backgroundColor = R.color.primary()
         onboardingVC.skipHandler = { onIntroEnd() }
         return onboardingVC
     }
