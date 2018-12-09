@@ -24,16 +24,16 @@ class IntroViewController {
         
         var title = R.string.localizable.intro1Title()
         var description = R.string.localizable.intro1Description()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName:"no-internet"), buttonText: nil, action: nil))
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName:R.image.noInternetGif.name), buttonText: nil, action: nil))
         
         title = R.string.localizable.intro2Title()
         description = R.string.localizable.intro2Description()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: "forget_password"), buttonText: nil, action: nil))
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: R.image.forget_passwordGif.name), buttonText: nil, action: nil))
         
         title = R.string.localizable.intro3Title()
         description = R.string.localizable.intro3Description()
         let buttonTitle  = R.string.localizable.next()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: "security"), buttonText: buttonTitle, action: { onIntroEnd() }))
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: R.image.securityGif.name), buttonText: buttonTitle, action: { onIntroEnd() }))
         
 //        title = NSLocalizedString("intro4Title", comment: "")
 //        var buttonTitle  = NSLocalizedString("btIntroEnd", comment: "")
@@ -52,10 +52,10 @@ class IntroViewController {
                 pages[i].view.backgroundColor = UIColor(netHex: Int(pageColors[i], radix: 16)!)
             }
             let h = pages[i].iconHeight
-            pages[i].topPadding = pages[i].iconHeight * ( 0.25 )
-            pages[i].underIconPadding = pages[i].iconHeight * ( -0.15 ) - h
-            pages[i].underTitlePadding = pages[i].iconHeight * ( 0.2 ) + h
-            pages[i].bottomPadding = 0
+            pages[i].topPadding = 56
+            pages[i].underIconPadding = 70
+            pages[i].underTitlePadding = 20
+            pages[i].bottomPadding = 30
         }
         
         onboardingVC = OnboardingViewController.onboard(withBackgroundImage: nil, contents: pages)
@@ -69,7 +69,7 @@ class IntroViewController {
         onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
         onboardingVC.allowSkipping = true
         onboardingVC.fadeSkipButtonOnLastPage = true
-        onboardingVC.view.backgroundColor = R.color.primary()
+        onboardingVC.view.backgroundColor = R.color.ayandehColor()
         onboardingVC.skipHandler = { onIntroEnd() }
         return onboardingVC
     }

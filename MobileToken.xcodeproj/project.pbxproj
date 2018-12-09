@@ -17,6 +17,9 @@
 		AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
 		AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
+		AC46686121BCF27400A0B5BA /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686021BCF27400A0B5BA /* security.gif */; };
+		AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686221BCF27800A0B5BA /* no-internet.gif */; };
+		AC46686521BCF27D00A0B5BA /* forget_password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686421BCF27D00A0B5BA /* forget_password.gif */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -146,6 +149,9 @@
 		AC2676B821B410DC00524636 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		AC2676BC21B695E000524636 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
+		AC46686021BCF27400A0B5BA /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
+		AC46686221BCF27800A0B5BA /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
+		AC46686421BCF27D00A0B5BA /* forget_password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = forget_password.gif; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +345,16 @@
 				AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */,
 			);
 			path = importtoken;
+			sourceTree = "<group>";
+		};
+		AC46685921BCEC2500A0B5BA /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				AC46686021BCF27400A0B5BA /* security.gif */,
+				AC46686221BCF27800A0B5BA /* no-internet.gif */,
+				AC46686421BCF27D00A0B5BA /* forget_password.gif */,
+			);
+			path = gif;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -676,6 +692,7 @@
 		AF463BCC2189E5F200DC8A3E /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				AC46685921BCEC2500A0B5BA /* gif */,
 				AF28600D219D7ADD00D8C342 /* fonts */,
 				AFB39B562189A6A700302624 /* Assets.xcassets */,
 			);
@@ -1071,11 +1088,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */,
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				ACAAD85621AC2CF1007266F4 /* Authentication.storyboard in Resources */,
+				AC46686121BCF27400A0B5BA /* security.gif in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
@@ -1087,6 +1106,7 @@
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
+				AC46686521BCF27D00A0B5BA /* forget_password.gif in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
 				AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,

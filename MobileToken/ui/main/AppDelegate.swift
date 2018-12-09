@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSAttributedString.Key.font:R.font.iranSansMobileMedium(size: 14)]
         appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
         
-        
         UINavigationBar.appearance().barTintColor = R.color.primary()
         UINavigationBar.appearance().tintColor = R.color.buttonColor()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : R.color.buttonColor()!,NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!]
