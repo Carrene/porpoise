@@ -25,22 +25,15 @@ class IntroViewController {
         var title = R.string.localizable.intro1Title()
         var description = R.string.localizable.intro1Description()
         pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: nil, action: nil))
-        let gif0 = UIImage(gifName: R.image.noInternetGif.name)
-        pages[0].iconImageView = UIImageView(gifImage: gif0, loopCount: -1)
-        
         
         title = R.string.localizable.intro2Title()
         description = R.string.localizable.intro2Description()
         pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: nil, action: nil))
-        let gif1 = UIImage(gifName: R.image.forget_passwordGif.name)
-        pages[1].iconImageView = UIImageView(gifImage: gif1, loopCount: -1)
         
         title = R.string.localizable.intro3Title()
         description = R.string.localizable.intro3Description()
         let buttonTitle  = R.string.localizable.next()
         pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: buttonTitle, action: { onIntroEnd() }))
-        let gif2 = UIImage(gifName: R.image.securityGif.name)
-        pages[2].iconImageView = UIImageView(gifImage: gif2, loopCount: -1)
         
         pages.forEach() { element in
             element.bodyLabel.font = R.font.iranSansMobile(size: 16)
@@ -53,11 +46,28 @@ class IntroViewController {
             pages[i].viewWillAppearBlock = {
                 pages[i].view.backgroundColor = UIColor(netHex: Int(pageColors[i], radix: 16)!)
             }
-            let h = pages[i].iconHeight
             pages[i].topPadding = 56
             pages[i].underIconPadding = 70
             pages[i].underTitlePadding = 20
             pages[i].bottomPadding = 30
+            let gif : UIImage?
+            switch i {
+            case 0:
+                gif = UIImage(gifName: R.image.noInternetGif.name)
+                pages[0].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+            case 1:
+                gif = UIImage(gifName: R.image.forget_passwordGif.name)
+                pages[1].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+            case 2:
+                gif = UIImage(gifName: R.image.securityGif.name)
+                pages[2].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+            default:
+                break
+            }
+            //pages[i].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+            pages[i].iconHeight = 250
+            pages[i].iconWidth = 250
+            pages[i].view.contentMode = .center
         }
         
         onboardingVC = OnboardingViewController.onboard(withBackgroundImage: nil, contents: pages)
