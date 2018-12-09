@@ -1,6 +1,8 @@
 "country" = "کشور";
 "backBarItem" = "قبلی";
 "next" = "بعدی";
+"skip" = "رد کن";
+"lb_enter_program" = "ورود به برنامه";
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است";
 "sb_wrong_pattern" = "الگو اشتباه است";
@@ -38,6 +40,6 @@
 "intro1Title" = "بدون اینترنت";
 "intro1Description" = "بدون نیاز به اینترنت، رمز یکبار مصرف دریافت کنید";
 "intro2Title" = "امنیت بالا";
-"intro2Description" = "هر چند ثانیه رمز یکبار مصرف .جدید خواهید داشت";
+"intro2Description" = "هر چند ثانیه رمز یکبار مصرف جدید خواهید داشت";
 "intro3Title" = "نیاز به حفظ کردن نیست";
 "intro3Description" = "دیگر رمز اول، دوم و اینترنت بانک خود را حفظ نکنید، یکبار مصرف دریافت کنید";
