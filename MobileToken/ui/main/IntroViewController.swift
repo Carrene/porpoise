@@ -55,18 +55,21 @@ class IntroViewController {
             case 0:
                 gif = UIImage(gifName: R.image.noInternetGif.name)
                 pages[0].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+                pages[0].iconHeight = 110
+                pages[0].iconWidth = 140
             case 1:
                 gif = UIImage(gifName: R.image.forget_passwordGif.name)
                 pages[1].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+                pages[1].iconHeight = 170
+                pages[1].iconWidth = 140
             case 2:
                 gif = UIImage(gifName: R.image.securityGif.name)
                 pages[2].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+                pages[2].iconHeight = 140
+                pages[2].iconWidth = 140
             default:
                 break
             }
-            //pages[i].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
-            pages[i].iconHeight = 250
-            pages[i].iconWidth = 250
             pages[i].view.contentMode = .center
         }
         
