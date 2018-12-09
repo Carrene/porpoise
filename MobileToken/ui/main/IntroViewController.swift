@@ -84,7 +84,7 @@ class IntroViewController {
         onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
         onboardingVC.allowSkipping = true
         onboardingVC.fadeSkipButtonOnLastPage = true
-        onboardingVC.view.backgroundColor = R.color.ayandehColor()
+        onboardingVC.view.backgroundColor = R.color.primary()
         onboardingVC.skipHandler = { onIntroEnd() }
         return onboardingVC
     }
