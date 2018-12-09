@@ -49,11 +49,13 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     func setCounterTitleToResend() {
         
         self.labelCounter.text = R.string.localizable.lb_resend()
+        self.labelCounter.isUserInteractionEnabled = true
     }
     
     func setCounterTitleTime(time:String) {
         
         self.labelCounter.text = time
+        self.labelCounter.isUserInteractionEnabled = false
     }
     
     
