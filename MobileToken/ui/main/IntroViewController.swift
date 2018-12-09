@@ -24,21 +24,23 @@ class IntroViewController {
         
         var title = R.string.localizable.intro1Title()
         var description = R.string.localizable.intro1Description()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName:R.image.noInternetGif.name), buttonText: nil, action: nil))
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: nil, action: nil))
+        let gif0 = UIImage(gifName: R.image.noInternetGif.name)
+        pages[0].iconImageView = UIImageView(gifImage: gif0, loopCount: -1)
+        
         
         title = R.string.localizable.intro2Title()
         description = R.string.localizable.intro2Description()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: R.image.forget_passwordGif.name), buttonText: nil, action: nil))
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: nil, action: nil))
+        let gif1 = UIImage(gifName: R.image.forget_passwordGif.name)
+        pages[1].iconImageView = UIImageView(gifImage: gif1, loopCount: -1)
         
         title = R.string.localizable.intro3Title()
         description = R.string.localizable.intro3Description()
         let buttonTitle  = R.string.localizable.next()
-        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(gifName: R.image.securityGif.name), buttonText: buttonTitle, action: { onIntroEnd() }))
-        
-//        title = NSLocalizedString("intro4Title", comment: "")
-//        var buttonTitle  = NSLocalizedString("btIntroEnd", comment: "")
-//        description = NSLocalizedString("intro4Description", comment: "")
-//        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: UIImage(named: "introImage4"), buttonText: buttonTitle, action: { onIntroEnd() }))
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: buttonTitle, action: { onIntroEnd() }))
+        let gif2 = UIImage(gifName: R.image.securityGif.name)
+        pages[2].iconImageView = UIImageView(gifImage: gif2, loopCount: -1)
         
         pages.forEach() { element in
             element.bodyLabel.font = R.font.iranSansMobile(size: 16)
