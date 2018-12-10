@@ -18,6 +18,8 @@
 		AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
 		AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
 		AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */; };
+		AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
+		AC353B0A21BEB94500B80412 /* LatestUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC46686121BCF27400A0B5BA /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686021BCF27400A0B5BA /* security.gif */; };
 		AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686221BCF27800A0B5BA /* no-internet.gif */; };
@@ -153,6 +155,8 @@
 		AC2676BC21B695E000524636 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationLock.storyboard; sourceTree = "<group>"; };
 		AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLockViewController.swift; sourceTree = "<group>"; };
+		AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LatestUpdates.storyboard; sourceTree = "<group>"; };
+		AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesViewController.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC46686021BCF27400A0B5BA /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC46686221BCF27800A0B5BA /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
@@ -351,6 +355,22 @@
 				AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */,
 			);
 			path = applicationlock;
+			sourceTree = "<group>";
+		};
+		AC353B0521BEB89600B80412 /* latestupdates */ = {
+			isa = PBXGroup;
+			children = (
+				AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */,
+			);
+			path = latestupdates;
+			sourceTree = "<group>";
+		};
+		AC353B0821BEB90F00B80412 /* latestupdates */ = {
+			isa = PBXGroup;
+			children = (
+				AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */,
+			);
+			path = latestupdates;
 			sourceTree = "<group>";
 		};
 		AC46685521BC050900A0B5BA /* importtoken */ = {
@@ -648,6 +668,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AC353B0821BEB90F00B80412 /* latestupdates */,
 				AC353B0221BEB11F00B80412 /* applicationlock */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
@@ -708,6 +729,7 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				AC353B0521BEB89600B80412 /* latestupdates */,
 				AC353AFF21BEB0A900B80412 /* applicationlock */,
 				ACAAD85121AC2C95007266F4 /* authentication */,
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
@@ -1151,6 +1173,7 @@
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				ACAAD87121AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
+				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
 			);
@@ -1337,6 +1360,7 @@
 				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
 				AFE81B2B2196D7F200AA0AF2 /* PasswordHintTableAdapter.swift in Sources */,
 				ACAAD87021AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift in Sources */,
+				AC353B0A21BEB94500B80412 /* LatestUpdatesViewController.swift in Sources */,
 				AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */,
 				AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */,
 				AC75A4F921B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */,
