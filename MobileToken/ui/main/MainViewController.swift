@@ -12,20 +12,20 @@ class MainViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigateToTabbar()
+        navigateToTabbar()
         
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        let onIntroEnd = { [weak self] in
-
-            UIApplication.shared.statusBarStyle = .default
-
-        }
-        let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
-        present(introVC, animated: true, completion: nil)
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        let onIntroEnd = { [weak self] in
+//
+//            UIApplication.shared.statusBarStyle = .default
+//
+//        }
+//        let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
+//        present(introVC, animated: true, completion: nil)
+//    }
     
     
     

@@ -36,6 +36,11 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         self.hideKeyboardWhenTappedAround()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        presenter?.invalidateTimer()
+    }
+    
     func setPhoneNumber(phone:String) {
         
         self.phoneNumber = phone
