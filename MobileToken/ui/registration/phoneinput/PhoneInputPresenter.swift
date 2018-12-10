@@ -35,7 +35,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
     }
     
     func getBankList() -> [Bank]{
-        var bankList = [Bank(name:"آینده"),Bank(name: "آینده"),Bank(name: "آینده"),Bank(name:"آینده" ),Bank(name: "آینده"),Bank(name: "آینده")]
+        var bankList = [Bank(name:"آینده")]
         return bankList
     }
     
