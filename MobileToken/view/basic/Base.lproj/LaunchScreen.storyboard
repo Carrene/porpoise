@@ -4,10 +4,20 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -16,7 +26,39 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockScreen" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-EK-V84">
+                                <rect key="frame" x="62" y="77" width="251" height="250"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="غیر قابل دسترس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgQ-mG-5vg" userLabel="labelTitle">
+                                <rect key="frame" x="136" y="551" width="103.5" height="26"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="برنامه شما به دلایل امنیتی قفل شده است .لطفا به بانک خود مراجعه فرمایید" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-3o-aS1" userLabel="textViewDescription">
+                                <rect key="frame" x="58" y="597" width="259" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ILo-bC-NXr"/>
+                                </constraints>
+                                <color key="textColor" name="buttonColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OPM-EK-V84" secondAttribute="bottom" constant="340" id="0So-ah-bAf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Zd-3o-aS1" secondAttribute="bottom" constant="20" id="1VO-Kr-6ri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Zd-3o-aS1" secondAttribute="trailing" constant="58" id="Go2-h2-Cwv"/>
+                            <constraint firstItem="SgQ-mG-5vg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IMh-j1-15P"/>
+                            <constraint firstItem="8Zd-3o-aS1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="MeT-z0-HhI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OPM-EK-V84" secondAttribute="trailing" constant="62" id="NfC-J9-xTC"/>
+                            <constraint firstItem="SgQ-mG-5vg" firstAttribute="bottom" secondItem="8Zd-3o-aS1" secondAttribute="top" constant="-20" id="Zce-ux-Jcw"/>
+                            <constraint firstItem="OPM-EK-V84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="i0A-K2-DXr"/>
+                            <constraint firstItem="8Zd-3o-aS1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kWW-EO-xJJ"/>
+                            <constraint firstItem="OPM-EK-V84" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="lP8-mN-adC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,4 +67,13 @@
             <point key="canvasLocation" x="66" y="376"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lockScreen" width="79" height="105"/>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
