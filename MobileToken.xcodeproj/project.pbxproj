@@ -11,6 +11,7 @@
 		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
+		7C3D197021BEA2B30048733E /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D196F21BEA2B30048733E /* PhoneConfirmationPresenter.swift */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
@@ -44,7 +45,6 @@
 		ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
 		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
-		ACDFD8A921A5484700839F97 /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A821A5484700839F97 /* PhoneConfirmationPresenter.swift */; };
 		AF246A7C21984A5500C44E4B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
 		AF246A7E219852EA00C44E4B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A812198687E00C44E4B /* CardTypeEnum.swift */; };
@@ -143,6 +143,7 @@
 		2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.release.xcconfig"; sourceTree = "<group>"; };
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7C3D196F21BEA2B30048733E /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationPresenter.swift; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
@@ -177,7 +178,6 @@
 		ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputContractor.swift; sourceTree = "<group>"; };
 		ACDFD8A421A418BC00839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationContractor.swift; sourceTree = "<group>"; };
-		ACDFD8A821A5484700839F97 /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneConfirmationPresenter.swift; path = /Users/fatemekazemi/Documents/Projects/porpoise/MobileToken/ui/registration/phoneconfirmation/PhoneConfirmationPresenter.swift; sourceTree = "<absolute>"; };
 		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		AF246A7D219852EA00C44E4B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -516,8 +516,8 @@
 		ACC902B821A180690072CFD5 /* phoneconfirmation */ = {
 			isa = PBXGroup;
 			children = (
+				7C3D196F21BEA2B30048733E /* PhoneConfirmationPresenter.swift */,
 				ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */,
-				ACDFD8A821A5484700839F97 /* PhoneConfirmationPresenter.swift */,
 				ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */,
 			);
 			path = phoneconfirmation;
@@ -1281,6 +1281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
+				7C3D197021BEA2B30048733E /* PhoneConfirmationPresenter.swift in Sources */,
 				AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
@@ -1352,7 +1353,6 @@
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,
-				ACDFD8A921A5484700839F97 /* PhoneConfirmationPresenter.swift in Sources */,
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
 			);
