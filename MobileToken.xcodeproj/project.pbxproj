@@ -16,6 +16,8 @@
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
 		AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
 		AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
+		AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
+		AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC46686121BCF27400A0B5BA /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686021BCF27400A0B5BA /* security.gif */; };
 		AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686221BCF27800A0B5BA /* no-internet.gif */; };
@@ -149,6 +151,8 @@
 		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
 		AC2676B821B410DC00524636 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		AC2676BC21B695E000524636 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationLock.storyboard; sourceTree = "<group>"; };
+		AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLockViewController.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC46686021BCF27400A0B5BA /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC46686221BCF27800A0B5BA /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
@@ -331,6 +335,22 @@
 				AC2676B621B40E4F00524636 /* ActionSheet.xib */,
 			);
 			path = actionsheet;
+			sourceTree = "<group>";
+		};
+		AC353AFF21BEB0A900B80412 /* applicationlock */ = {
+			isa = PBXGroup;
+			children = (
+				AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */,
+			);
+			path = applicationlock;
+			sourceTree = "<group>";
+		};
+		AC353B0221BEB11F00B80412 /* applicationlock */ = {
+			isa = PBXGroup;
+			children = (
+				AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */,
+			);
+			path = applicationlock;
 			sourceTree = "<group>";
 		};
 		AC46685521BC050900A0B5BA /* importtoken */ = {
@@ -628,6 +648,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AC353B0221BEB11F00B80412 /* applicationlock */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
@@ -687,6 +708,7 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				AC353AFF21BEB0A900B80412 /* applicationlock */,
 				ACAAD85121AC2C95007266F4 /* authentication */,
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
@@ -1113,6 +1135,7 @@
 				ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
+				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
@@ -1305,6 +1328,7 @@
 				AC46686821BD4E3600A0B5BA /* StringExtension.swift in Sources */,
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */,
+				AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */,
 				AF463BD0218ADD8200DC8A3E /* Authentication.swift in Sources */,
 				AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */,
 				AF246A862199762700C44E4B /* AuthenticationRepository.swift in Sources */,
