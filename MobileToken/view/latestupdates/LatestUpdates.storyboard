@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Latest Updates View Controller-->
         <scene sceneID="8qz-3h-2r1">
@@ -18,9 +23,41 @@
                     <view key="view" contentMode="scaleToFill" id="af0-2h-Ons">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeX-8f-XqF" userLabel="vText">
+                                <rect key="frame" x="30" y="184" width="315" height="251"/>
+                                <color key="backgroundColor" name="primaryLight"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFd-li-WW5" userLabel="btEnter">
+                                <rect key="frame" x="30" y="599" width="315" height="48"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="MEH-3W-F7V"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="klx-0j-gmd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <state key="normal" title="ورود به برنامه">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="FeX-8f-XqF" firstAttribute="leading" secondItem="UcY-2C-IGD" secondAttribute="leading" constant="30" id="HGF-vX-iuw"/>
+                            <constraint firstItem="UcY-2C-IGD" firstAttribute="bottom" secondItem="FeX-8f-XqF" secondAttribute="bottom" constant="232" id="JpQ-V2-1Ck"/>
+                            <constraint firstItem="FeX-8f-XqF" firstAttribute="bottom" secondItem="IFd-li-WW5" secondAttribute="top" constant="-164" id="XmW-dC-lWH"/>
+                            <constraint firstItem="IFd-li-WW5" firstAttribute="leading" secondItem="UcY-2C-IGD" secondAttribute="leading" constant="30" id="cPk-Tb-afZ"/>
+                            <constraint firstItem="IFd-li-WW5" firstAttribute="centerX" secondItem="UcY-2C-IGD" secondAttribute="centerX" id="cX5-ra-HVA"/>
+                            <constraint firstItem="FeX-8f-XqF" firstAttribute="top" secondItem="UcY-2C-IGD" secondAttribute="top" constant="164" id="ggd-aJ-Z2r"/>
+                            <constraint firstItem="UcY-2C-IGD" firstAttribute="trailing" secondItem="FeX-8f-XqF" secondAttribute="trailing" constant="30" id="tRS-2P-GRl"/>
+                            <constraint firstItem="UcY-2C-IGD" firstAttribute="bottom" secondItem="IFd-li-WW5" secondAttribute="bottom" constant="20" id="vxv-Cc-zE6"/>
+                            <constraint firstItem="UcY-2C-IGD" firstAttribute="trailing" secondItem="IFd-li-WW5" secondAttribute="trailing" constant="30" id="y3x-rg-6fM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UcY-2C-IGD"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonEnterProgram" destination="IFd-li-WW5" id="9F8-5X-dJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiy-S8-JDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,8 +65,17 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryLight">
+            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.093999996781349182" green="0.57300001382827759" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
