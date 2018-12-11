@@ -25,12 +25,11 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             let button  = collectionButtonsTime[index]
             button.layer.cornerRadius = 10
             button.layer.borderWidth = 2
-            
             if index == selectedIndex {
                 
                 labelSecond.text =  button.currentTitle! + " " + R.string.localizable.lb_seconds()
                 button.layer.backgroundColor = R.color.buttonColor()?.cgColor
-                button.setTitleColor(R.color.primaryDark(), for: .selected)
+                button.setTitleColor(R.color.primaryDark(), for: .normal)
             }
             else {
                 
@@ -48,6 +47,7 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             let button  = collectionButtonsTime[index]
             if index == collectionButtonsTime.index(of: sender)
             {
+                selectedIndex = index
                 labelSecond.text =  button.currentTitle! + " " + R.string.localizable.lb_seconds()
                 button.layer.backgroundColor = R.color.buttonColor()?.cgColor
                 button.setTitleColor(R.color.primaryDark(), for: .normal)

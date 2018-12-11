@@ -84,7 +84,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <state key="normal" title="۶۰">
-                                            <color key="titleColor" name="buttonColor"/>
+                                            <color key="titleColor" name="primaryDark"/>
                                         </state>
                                         <connections>
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>

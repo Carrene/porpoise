@@ -14,8 +14,8 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
     
     func claim(phone: String) {
         let user = User(phone: phone)
-        let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] restRepoResponse in
-            let statusCode = restRepoResponse.restDataResponse?.response?.statusCode
+        let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
             case 200:
                 self?.view.navigateToPhoneConfirmation(phone:phone)
