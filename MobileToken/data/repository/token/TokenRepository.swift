@@ -8,6 +8,7 @@
 
 import Foundation
 class TokenRepository: TokenRepositoryProtocol {
+    
     let tokenRealmRepository = TokenRealmRepository()
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Token>) -> ())?) {
@@ -17,7 +18,6 @@ class TokenRepository: TokenRepositoryProtocol {
     func getAll(onDone: ((RepositoryResponse<[Token]>) -> ())?) {
         tokenRealmRepository.getAll() { realmRepositoryResponse in
             onDone?(realmRepositoryResponse)
-            
         }
     }
     

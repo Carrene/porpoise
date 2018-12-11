@@ -13,8 +13,8 @@ class Bank: Object, Mappable, NSCopying{
     
     @objc private dynamic var Secret:String? = nil
     var secret:String? {
-        get{return Secret}
-        set{Secret=newValue}
+        get { return Secret }
+        set { Secret=newValue }
     }
     
     var cardList : [Card]?

@@ -1,16 +1,9 @@
-//
-//  RequestInterceptor.swift
-//  alpha
-//
-//  Created by Arash Foumani on 7/11/18.
-//  Copyright © 2018 Nuesoft. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
 class RequestInterceptor: RequestAdapter {
+
     public var jwtPersistable: JwtPersistable? = UserDefaultsJwtPersistor()
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
