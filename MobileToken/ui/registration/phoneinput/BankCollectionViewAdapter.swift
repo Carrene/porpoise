@@ -31,12 +31,12 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
         cell.lbBankName.text = banks![indexPath.row].name!
         if selectedIndex == indexPath.row {
-            cell.lbBankName.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.lbBankName.textColor = R.color.buttonColor()
             cell.vCell.backgroundColor = R.color.ayandehColor()
         }
         else {
             cell.lbBankName.textColor = R.color.ayandehColor()
-            cell.vCell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+            cell.vCell.backgroundColor = .clear
         }
         return cell
     }
