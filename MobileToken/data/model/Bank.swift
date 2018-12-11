@@ -1,11 +1,3 @@
-//
-//  Bank.swift
-//  MobileToken
-//
-//  Created by hamed akhlaghi on 8/20/1397 AP.
-//  Copyright © 1397 ba24.ir. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
 import ObjectMapper_Realm
@@ -13,11 +5,19 @@ import RealmSwift
 
 class Bank: Object, Mappable, NSCopying{
     
-    @objc fileprivate dynamic var Name: String? = nil
-    public var name: String? {
+    @objc private dynamic var Name: String? = nil
+    var name: String? {
         get { return Name }
         set { Name = newValue }
     }
+    
+    @objc private dynamic var Secret:String? = nil
+    var secret:String? {
+        get{return Secret}
+        set{Secret=newValue}
+    }
+    
+    var cardList : [Card]?
     
     private var logoResourceId: String?
     

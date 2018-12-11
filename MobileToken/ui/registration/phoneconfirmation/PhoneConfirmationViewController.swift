@@ -2,8 +2,6 @@ import UIKit
 
 class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
 
-    
-    
     @IBOutlet var viewChangeNumber: UIView!
     @IBOutlet var textFieldCode: UITextField!
     @IBOutlet var viewCode: UIView!

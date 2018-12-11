@@ -16,6 +16,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     func bind(phone:String,activationCode:String) {
         
         let user = User(phone: phone, activationCode: activationCode)
+        
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {

@@ -1,15 +1,8 @@
-//
-//  ImportTokenViewController.swift
-//  MobileToken
-//
-//  Created by Fateme' Kazemi on 9/11/1397 AP.
-//  Copyright © 1397 ba24.ir. All rights reserved.
-//
-
 import UIKit
 import XLActionController
 
-class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXibProtocol {
+//TODO(Fateme) Action sheet on cards should be done on cardlist controller
+class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellXibProtocol {
     
     @IBOutlet var viewCard: CardCellXibView!
     @IBOutlet var textViewAtmCode: UITextView!
@@ -17,16 +10,16 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
     @IBOutlet var textViewSmsCode: UITextView!
     @IBOutlet var labelSmsCode: UILabel!
     @IBOutlet var buttonAddCode: UIButton!
+    
     let actionController = MobileTokenActionSheetController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewCard.setDelegate(cardCellXibProtocol: self)
         initActionSheet()
-        initUIComponent()
     }
     
-    func initUIComponent() {
+    func initUIComponents() {
         buttonAddCode.layer.cornerRadius = 10
         viewCard.layer.cornerRadius = 10
         textViewAtmCode.layer.cornerRadius = 10
@@ -40,22 +33,23 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
         initBankCard()
     }
     
+    func initListeners() {
+        
+    }
+    
     func initBankCard() {
         viewCard.backgroundColor = R.color.ayandehColor()
         viewCard.imageLogo.image = R.image.bankAyandehLogo()
         viewCard.labelBankName.text = "بانک آینده"
         viewCard.buttonActionSheet.isEnabled = false
-        
     }
     
     func initActionSheet() {
         let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in })
-        //editCardAction.enabled = false
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
     }
-    
     
     func actionSheetButtonClicked() {
         present(actionController, animated: true, completion: nil)
@@ -94,8 +88,5 @@ class ImportTokenViewController: UIViewController,UITextViewDelegate,CardCellXib
         if textViewAtmCode.text.count < 9 || textViewSmsCode.text.count == 0 {
             UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
         }
-        
     }
-    
 }
-
