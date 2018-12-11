@@ -29,7 +29,6 @@
 		AC46686121BCF27400A0B5BA /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686021BCF27400A0B5BA /* security.gif */; };
 		AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686221BCF27800A0B5BA /* no-internet.gif */; };
 		AC46686521BCF27D00A0B5BA /* forget_password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686421BCF27D00A0B5BA /* forget_password.gif */; };
-		AC46686821BD4E3600A0B5BA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46686721BD4E3600A0B5BA /* StringExtension.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -171,7 +170,6 @@
 		AC46686021BCF27400A0B5BA /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC46686221BCF27800A0B5BA /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
 		AC46686421BCF27D00A0B5BA /* forget_password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = forget_password.gif; sourceTree = "<group>"; };
-		AC46686721BD4E3600A0B5BA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -407,14 +405,6 @@
 				AC46686421BCF27D00A0B5BA /* forget_password.gif */,
 			);
 			path = gif;
-			sourceTree = "<group>";
-		};
-		AC46686621BD4E0800A0B5BA /* strings */ = {
-			isa = PBXGroup;
-			children = (
-				AC46686721BD4E3600A0B5BA /* StringExtension.swift */,
-			);
-			path = strings;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -910,7 +900,6 @@
 		AFE81B0B2196CCDA00AA0AF2 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AC46686621BD4E0800A0B5BA /* strings */,
 				AFE81B222196D4D400AA0AF2 /* uicolor */,
 				AFE81B0C2196CD1600AA0AF2 /* uiviewcontroller */,
 			);
@@ -1368,7 +1357,6 @@
 				ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */,
 				ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */,
 				AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */,
-				AC46686821BD4E3600A0B5BA /* StringExtension.swift in Sources */,
 				AFE81B122196CE7F00AA0AF2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AFE81B2A2196D7F200AA0AF2 /* PasswordHintTableViewCell.swift in Sources */,
 				AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */,

@@ -1,10 +1,4 @@
-//
-//  PhoneConfirmationViewController.swift
-//  MobileToken
-//
-//  Created by Fateme' Kazemi on 8/27/1397 AP.
-//  Copyright © 1397 ba24.ir. All rights reserved.
-//
+
 
 import UIKit
 

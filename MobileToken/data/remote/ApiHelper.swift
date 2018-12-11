@@ -1,10 +1,4 @@
-//
-//  ApiHelper.swift
-//  alpha
-//
-//  Created by Arash Foumani on 7/2/18.
-//  Copyright © 2018 Nuesoft. All rights reserved.
-//
+
 
 import Foundation
 import UIKit

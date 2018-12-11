@@ -1,9 +1,4 @@
-//
-//  TokenViewController.swift
-//  
-//
-//  Created by hamed akhlaghi on 8/15/1397 AP.
-//
+
 
 import UIKit
 import FSPagerView

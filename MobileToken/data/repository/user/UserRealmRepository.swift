@@ -1,10 +1,4 @@
-//
-//  UserRealmRepository.swift
-//  alpha
-//
-//  Created by Fateme' Kazemi on 7/12/1397 AP.
-//  Copyright © 1397 Nuesoft. All rights reserved.
-//
+
 
 import Foundation
 import RealmSwift

@@ -1,10 +1,3 @@
-//
-//  SnckbarHelper.swift
-//  alpha
-//
-//  Created by hamed akhlaghi on 4/25/1397 AP.
-//  Copyright © 1397 Nuesoft. All rights reserved.
-//
 
 import TTGSnackbar
 import Foundation

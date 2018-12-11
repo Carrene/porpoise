@@ -1,10 +1,4 @@
-//
-//  PasswordValidator.swift
-//  alpha
-//
-//  Created by Ehsan on 8/28/18.
-//  Copyright © 2018 Nuesoft. All rights reserved.
-//
+
 
 import Foundation
 
@@ -13,10 +7,6 @@ public class PasswordValidator{
     static func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
         
-        // at least one uppercase,
-        // at least one digit
-        // at least one specific char
-        // 8 characters total
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[@,#,$,%,+,=,_,*,?]).{8,}")
         return passwordTest.evaluate(with: testStr)
     }

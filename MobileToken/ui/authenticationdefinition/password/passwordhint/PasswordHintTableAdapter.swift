@@ -1,10 +1,3 @@
-//
-//  PasswordHintTableAdapter.swift
-//  alpha
-//
-//  Created by Fateme' Kazemi on 5/20/1397 AP.
-//  Copyright © 1397 Nuesoft. All rights reserved.
-//
 
 import Foundation
 import UIKit

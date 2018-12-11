@@ -1,10 +1,4 @@
-//
-//  UIHelper.swift
-//  alpha
-//
-//  Created by Fateme' Kazemi on 4/19/1397 AP.
-//  Copyright © 1397 Nuesoft. All rights reserved.
-//
+
 
 import UIKit
 import TTGSnackbar

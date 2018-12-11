@@ -1,10 +1,4 @@
-//
-//  Authentication.swift
-//  MobileToken
-//
-//  Created by hamed akhlaghi on 8/10/1397 AP.
-//  Copyright © 1397 ba24.ir. All rights reserved.
-//
+
 import Foundation
 import ObjectMapper
 import ObjectMapper_Realm
