@@ -55,7 +55,7 @@ class IntroViewController {
                 pages[0].topPadding = 147
                 pages[0].underIconPadding = 217
             case 2:
-                gif = UIImage(gifName: R.image.forget_passwordGif.name)
+                gif = UIImage(gifName: R.image.forgetPasswordGif.name)
                 pages[2].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
                 pages[2].iconHeight = 250
                 pages[2].iconWidth = 250

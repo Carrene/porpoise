@@ -3,6 +3,7 @@
 "next" = "بعدی";
 "skip" = "رد کن";
 "lb_enter_program" = "ورود به برنامه";
+"lb_version" = "نسخه";
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است";
 "sb_wrong_pattern" = "الگو اشتباه است";

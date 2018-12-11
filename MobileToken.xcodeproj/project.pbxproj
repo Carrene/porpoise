@@ -25,10 +25,10 @@
 		AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
 		AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
+		AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1721BFCB4200B80412 /* no-internet.gif */; };
+		AC353B1A21BFCB4900B80412 /* forget-password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1921BFCB4900B80412 /* forget-password.gif */; };
+		AC353B1C21BFCB5300B80412 /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1B21BFCB5300B80412 /* security.gif */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
-		AC46686121BCF27400A0B5BA /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686021BCF27400A0B5BA /* security.gif */; };
-		AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686221BCF27800A0B5BA /* no-internet.gif */; };
-		AC46686521BCF27D00A0B5BA /* forget_password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686421BCF27D00A0B5BA /* forget_password.gif */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -166,10 +166,10 @@
 		AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Medium.ttf"; sourceTree = "<group>"; };
 		AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Light.ttf"; sourceTree = "<group>"; };
 		AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_UltraLight.ttf"; sourceTree = "<group>"; };
+		AC353B1721BFCB4200B80412 /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
+		AC353B1921BFCB4900B80412 /* forget-password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "forget-password.gif"; sourceTree = "<group>"; };
+		AC353B1B21BFCB5300B80412 /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
-		AC46686021BCF27400A0B5BA /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
-		AC46686221BCF27800A0B5BA /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
-		AC46686421BCF27D00A0B5BA /* forget_password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = forget_password.gif; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -400,9 +400,9 @@
 		AC46685921BCEC2500A0B5BA /* gif */ = {
 			isa = PBXGroup;
 			children = (
-				AC46686021BCF27400A0B5BA /* security.gif */,
-				AC46686221BCF27800A0B5BA /* no-internet.gif */,
-				AC46686421BCF27D00A0B5BA /* forget_password.gif */,
+				AC353B1921BFCB4900B80412 /* forget-password.gif */,
+				AC353B1B21BFCB5300B80412 /* security.gif */,
+				AC353B1721BFCB4200B80412 /* no-internet.gif */,
 			);
 			path = gif;
 			sourceTree = "<group>";
@@ -1147,19 +1147,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */,
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
+				AC353B1A21BFCB4900B80412 /* forget-password.gif in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				ACAAD85621AC2CF1007266F4 /* Authentication.storyboard in Resources */,
-				AC46686121BCF27400A0B5BA /* security.gif in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
+				AC353B1C21BFCB5300B80412 /* security.gif in Resources */,
 				ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
@@ -1168,7 +1168,6 @@
 				AFE81B292196D7F200AA0AF2 /* PasswordHintTableViewCell.xib in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
-				AC46686521BCF27D00A0B5BA /* forget_password.gif in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
 				AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
@@ -1180,6 +1179,7 @@
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				ACAAD87121AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
+				AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
