@@ -2,7 +2,7 @@ import UIKit
 import CountryPickerView
 import IQKeyboardManager
 
-class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
+class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
     
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
@@ -26,12 +26,11 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     //TODDO(FATEME) set button background disable state
     override func viewDidAppear(_ animated: Bool) {
-        initUIComponent()
         self.hideKeyboardWhenTappedAround()
         buttonRegister.isEnabled = false
     }
     
-    func initUIComponent() {
+    func initUIComponents() {
         labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
@@ -39,6 +38,10 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewPhone.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         buttonRegister.layer.cornerRadius = 10
+    }
+    
+    func initListeners() {
+        
     }
     
     func initBankCollectionView() {
@@ -80,6 +83,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
             self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
         }
     }
+    
     @IBAction func onButtonRegister(_ sender: UIButton) {
         if textFieldPhoneNumber.text != "" {
             buttonRegister.isEnabled = true

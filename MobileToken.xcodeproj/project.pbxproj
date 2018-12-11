@@ -12,6 +12,7 @@
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
 		7C3D197021BEA2B30048733E /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D196F21BEA2B30048733E /* PhoneConfirmationPresenter.swift */; };
+		7C3D197721BFB1550048733E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D197621BFB1550048733E /* BaseViewController.swift */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
@@ -144,6 +145,7 @@
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C3D196F21BEA2B30048733E /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationPresenter.swift; sourceTree = "<group>"; };
+		7C3D197621BFB1550048733E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,14 @@
 				7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C3D197521BFB13E0048733E /* base */ = {
+			isa = PBXGroup;
+			children = (
+				7C3D197621BFB1550048733E /* BaseViewController.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		A0846E286139B9158EA3297A /* Frameworks */ = {
@@ -628,6 +638,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				7C3D197521BFB13E0048733E /* base */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
@@ -1341,6 +1352,7 @@
 				AFE81B1D2196D31700AA0AF2 /* SnackbarHelper.swift in Sources */,
 				AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */,
 				AF285FF2219C46E300D8C342 /* BankCollectionViewAdapter.swift in Sources */,
+				7C3D197721BFB1550048733E /* BaseViewController.swift in Sources */,
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */,
 				AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */,

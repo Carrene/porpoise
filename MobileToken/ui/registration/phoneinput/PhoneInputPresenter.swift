@@ -15,12 +15,12 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
-            case 200:
-                self?.view.navigateToPhoneConfirmation(phone:phone)
-            case 400:
-                self?.view.showBadRequestError()
-            default:
-                UIHelper.showFailedSnackBar()
+                case 200:
+                    self?.view.navigateToPhoneConfirmation(phone:phone)
+                case 400:
+                    self?.view.showBadRequestError()
+                default:
+                    UIHelper.showFailedSnackBar()
             }
         }
         userRepostiory.claim(user: user, onDone: onDataResponse)
