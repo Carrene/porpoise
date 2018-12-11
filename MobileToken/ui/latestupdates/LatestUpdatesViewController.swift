@@ -4,6 +4,7 @@ import UIKit
 class LatestUpdatesViewController: UIViewController {
 
     @IBOutlet var buttonEnterProgram: UIButton!
+    @IBOutlet var tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
