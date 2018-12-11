@@ -10,7 +10,7 @@ import Foundation
 
 class UserDefaultsJwtPersistor: JwtPersistable {
     
-    fileprivate var userDefaults: UserDefaults
+    private var userDefaults: UserDefaults
     public let JWT_KEY: String = "jwt"
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {

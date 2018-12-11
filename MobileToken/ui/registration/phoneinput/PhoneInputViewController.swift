@@ -41,10 +41,8 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     func initUIComponent() {
-        labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
-        textFieldPhoneNumber.font = R.font.iranSansMobileMedium(size: 16)
         viewPhone.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         buttonRegister.layer.cornerRadius = 10
@@ -77,13 +75,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let aSet = NSCharacterSet(charactersIn:"۰۱۲۳۴۵۶۷۸۹").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        return string == numberFiltered
     }
     
    

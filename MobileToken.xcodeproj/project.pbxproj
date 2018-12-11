@@ -20,6 +20,11 @@
 		AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */; };
 		AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
 		AC353B0A21BEB94500B80412 /* LatestUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */; };
+		AC353B1021BFA1CF00B80412 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */; };
+		AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0C21BFA1CE00B80412 /* IRANSansMobile(FaNum).ttf */; };
+		AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
+		AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
+		AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC46686121BCF27400A0B5BA /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686021BCF27400A0B5BA /* security.gif */; };
 		AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC46686221BCF27800A0B5BA /* no-internet.gif */; };
@@ -157,6 +162,11 @@
 		AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLockViewController.swift; sourceTree = "<group>"; };
 		AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LatestUpdates.storyboard; sourceTree = "<group>"; };
 		AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesViewController.swift; sourceTree = "<group>"; };
+		AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Bold.ttf"; sourceTree = "<group>"; };
+		AC353B0C21BFA1CE00B80412 /* IRANSansMobile(FaNum).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum).ttf"; sourceTree = "<group>"; };
+		AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Medium.ttf"; sourceTree = "<group>"; };
+		AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Light.ttf"; sourceTree = "<group>"; };
+		AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_UltraLight.ttf"; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC46686021BCF27400A0B5BA /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC46686221BCF27800A0B5BA /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
@@ -650,6 +660,11 @@
 				AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */,
 				AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */,
 				AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */,
+				AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */,
+				AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */,
+				AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */,
+				AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */,
+				AC353B0C21BFA1CE00B80412 /* IRANSansMobile(FaNum).ttf */,
 			);
 			name = fonts;
 			path = "New Group";
@@ -1145,6 +1160,7 @@
 			files = (
 				AC46686321BCF27800A0B5BA /* no-internet.gif in Resources */,
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
+				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
@@ -1154,6 +1170,7 @@
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
+				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
 				ACAAD85421AC2CDC007266F4 /* AuthenticationDefinition.storyboard in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
@@ -1168,6 +1185,7 @@
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
 				ACAAD86521AE8F24007266F4 /* LockScreenTimeTableViewCell.xib in Resources */,
 				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
+				AC353B1021BFA1CF00B80412 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
 				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
@@ -1175,6 +1193,8 @@
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
+				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
+				AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

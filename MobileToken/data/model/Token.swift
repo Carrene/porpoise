@@ -13,7 +13,7 @@ import RealmSwift
 
 class Token: Object, Mappable, NSCopying{
     
-    @objc fileprivate dynamic var TokenPaket: String? = nil
+    @objc private dynamic var TokenPaket: String? = nil
     public var tokenPaket: String? {
         get { return TokenPaket }
         set { TokenPaket = newValue }

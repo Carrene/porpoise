@@ -34,7 +34,7 @@ class ApiHelper {
     var alamofire: SessionManager!
     public var jwtPersistable: JwtPersistable = UserDefaultsJwtPersistor()
     
-    fileprivate var requestInterceptor: RequestInterceptor = RequestInterceptor()
+    private var requestInterceptor: RequestInterceptor = RequestInterceptor()
     
     static let instance: ApiHelper = {
         let instance = ApiHelper()

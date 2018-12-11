@@ -32,7 +32,7 @@ open class MobileTokenActionSheetHeaderView: UICollectionReusableView {
 
 open class MobileTokenActionSheetController: ActionController<ActionSheet, ActionData, MobileTokenActionSheetHeaderView, MobileTokenActionSheetHeaderData, UICollectionReusableView, Void> {
     
-    fileprivate lazy var blurView: UIVisualEffectView = {
+    private lazy var blurView: UIVisualEffectView = {
         let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         blurView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return blurView

@@ -13,7 +13,7 @@ import RealmSwift
 
 class Bank: Object, Mappable, NSCopying{
     
-    @objc fileprivate dynamic var Name: String? = nil
+    @objc private dynamic var Name: String? = nil
     public var name: String? {
         get { return Name }
         set { Name = newValue }

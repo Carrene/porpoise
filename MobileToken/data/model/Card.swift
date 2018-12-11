@@ -15,25 +15,25 @@ class Card: Object, Mappable, NSCopying{
     var a: List<User>?
     var b: [User]?
     
-    @objc fileprivate dynamic var CardNumber: String? = nil
+    @objc private dynamic var CardNumber: String? = nil
     public var number: String? {
         get { return CardNumber }
         set { CardNumber = newValue }
     }
     
-    @objc fileprivate dynamic var Bank: Bank? = nil
+    @objc private dynamic var Bank: Bank? = nil
     public var bank: Bank? {
         get { return Bank }
         set { Bank = newValue }
     }
     
-    @objc fileprivate dynamic var CardName: String? = nil
+    @objc private dynamic var CardName: String? = nil
     public var name: String? {
         get { return CardName }
         set { CardName = newValue }
     }
     
-    @objc fileprivate dynamic var CardType: String? = nil
+    @objc private dynamic var CardType: String? = nil
     public var type: CardTypeEnum? {
         get { return CardTypeEnum(rawValue: CardType!) }
         set { CardType = newValue?.rawValue }

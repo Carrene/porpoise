@@ -67,12 +67,10 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     
     func initUIComponent() {
         
-        labelTitle.font = UIHelper.iranSanseBold(size: 16)
+        labelTitle.font = UIHelper.iranSansBold(size: 16)
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
-        labelPhone.font = UIHelper.iranSanseMedium(size: 16)
-        labelCounter.font = UIHelper.iranSanseBold(size: 16)
-        labelChangeNumber.font = UIHelper.iranSanseBold(size: 16)
+        labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         let iconView = UIImageView(frame:
             CGRect(x: 10, y: 10, width: 20, height: 11))
         iconView.image = R.image.key()
@@ -81,7 +79,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         iconContainerView.addSubview(iconView)
         textFieldCode.leftView = iconContainerView
         textFieldCode.leftViewMode = .always
-        textFieldCode.font = UIHelper.iranSanseBold(size: 20)
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
@@ -101,13 +98,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         navigationController?.popViewController(animated: true)
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let aSet = NSCharacterSet(charactersIn:"۰۱۲۳۴۵۶۷۸۹").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        return string == numberFiltered
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

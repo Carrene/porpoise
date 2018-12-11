@@ -11,24 +11,40 @@ import TTGSnackbar
 class UIHelper {
     
     
-    static func iranSanseBold(size: CGFloat) -> UIFont {
-        return UIFont(name: "IRANSansMobile-Bold", size: size)!
+    static func iranSansBold(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileBold.fontName, size: size)!
     }
     
-    static func iranSanseLight(size: CGFloat) -> UIFont {
-        return UIFont(name: "IRANSansMobile-Light", size: size)!
+    static func iranSansLight(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileLight.fontName, size: size)!
     }
     
-    static func iranSanseMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: "IRANSansMobile-Medium", size: size)!
+    static func iranSansMedium(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileMedium.fontName, size: size)!
     }
     
-    static func iranSanseUltraLight(size: CGFloat) -> UIFont {
-        return UIFont(name: "IRANSansMobile-UltraLight", size: size)!
+    static func iranSansUltraLight(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileUltraLight.fontName, size: size)!
     }
     
-    static func iranSanseMobile(size: CGFloat) -> UIFont {
-        return UIFont(name: "IRANSansMobile", size: size)!
+    static func iranSansMobile(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobile.fontName, size: size)!
+    }
+    
+    static func iranSansMobileFaNum(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileFaNum.fontName, size: size)!
+    }
+    
+    static func iranSansMobileFaNumBold(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileFaNumBold.fontName, size: size)!
+    }
+    
+    static func iranSansMobileFaNumLight(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileFaNumLight.fontName, size: size)!
+    }
+    
+    static func iranSansMobileFaNumMedium(size: CGFloat) -> UIFont {
+        return UIFont(name: R.font.iranSansMobileFaNumMedium.fontName, size: size)!
     }
     
     static func showFailedSnackBar() {

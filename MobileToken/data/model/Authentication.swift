@@ -15,7 +15,7 @@ class Authentication: Object, Mappable, NSCopying{
     static let PASSWORD = 0;
     static let PATTERN = 1;
     
-    @objc fileprivate dynamic var Id: Int = 1
+    @objc private dynamic var Id: Int = 1
     public var id: Int {
         get { return Id }
         set { Id = newValue }
@@ -24,25 +24,25 @@ class Authentication: Object, Mappable, NSCopying{
         return "Id"
     }
     
-    fileprivate let AuthenticationType = RealmOptional<Int>()
+    private let AuthenticationType = RealmOptional<Int>()
     public var authenticationType: Int? {
         get { return AuthenticationType.value }
         set { AuthenticationType.value = newValue }
     }
     
-    @objc fileprivate dynamic var AttemptsNumber: Int = 0
-    fileprivate var attemptsNumber: Int {
+    @objc private dynamic var AttemptsNumber: Int = 0
+    private var attemptsNumber: Int {
         get { return AttemptsNumber }
         set { AttemptsNumber = newValue }
     }
     
-    @objc fileprivate dynamic var Value: String? = nil
+    @objc private dynamic var Value: String? = nil
     public var credentials: String? {
         get { return Value }
         set { Value = newValue }
     }
     
-    @objc fileprivate dynamic var MaxAttempts: Int = 5
+    @objc private dynamic var MaxAttempts: Int = 5
     public var maxAttempts: Int { return MaxAttempts }
     
     private var authentication : Authentication?

@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Latest Updates View Controller-->
+        <!--ویژگی های جدید-->
         <scene sceneID="8qz-3h-2r1">
             <objects>
                 <viewController id="6uG-yf-fWc" customClass="LatestUpdatesViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,6 +55,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UcY-2C-IGD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ویژگی های جدید" id="eMc-fg-iYi"/>
                     <connections>
                         <outlet property="buttonEnterProgram" destination="IFd-li-WW5" id="9F8-5X-dJr"/>
                     </connections>
