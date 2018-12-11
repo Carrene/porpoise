@@ -44,8 +44,6 @@
 		ACAAD86521AE8F24007266F4 /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */; };
 		ACAAD86A21AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */; };
 		ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
-		ACAAD87021AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86E21AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift */; };
-		ACAAD87121AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86F21AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib */; };
 		ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */; };
 		ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
 		ACDFD89F21A4016D00839F97 /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
@@ -185,8 +183,6 @@
 		ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockScreenTimeTableViewCell.xib; sourceTree = "<group>"; };
 		ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTypeSettingTableViewCell.swift; sourceTree = "<group>"; };
 		ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationTypeTableViewCell.xib; sourceTree = "<group>"; };
-		ACAAD86E21AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSmsSettingTableViewCell.swift; sourceTree = "<group>"; };
-		ACAAD86F21AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendSmsSettingTableViewCell.xib; sourceTree = "<group>"; };
 		ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewAdapter.swift; sourceTree = "<group>"; };
 		ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationViewController.swift; sourceTree = "<group>"; };
 		ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputPresenter.swift; sourceTree = "<group>"; };
@@ -513,7 +509,6 @@
 			children = (
 				ACAAD86721AE8F5F007266F4 /* authenticationtype */,
 				ACAAD86621AE8F36007266F4 /* lockscreentime */,
-				ACAAD86C21AE8FA7007266F4 /* sendsms */,
 			);
 			path = settingsrows;
 			sourceTree = "<group>";
@@ -534,15 +529,6 @@
 				ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */,
 			);
 			path = authenticationtype;
-			sourceTree = "<group>";
-		};
-		ACAAD86C21AE8FA7007266F4 /* sendsms */ = {
-			isa = PBXGroup;
-			children = (
-				ACAAD86E21AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift */,
-				ACAAD86F21AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib */,
-			);
-			path = sendsms;
 			sourceTree = "<group>";
 		};
 		ACC902B721A0406A0072CFD5 /* registration */ = {
@@ -1177,7 +1163,6 @@
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
 				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
-				ACAAD87121AE8FE4007266F4 /* SendSmsSettingTableViewCell.xib in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
@@ -1367,7 +1352,6 @@
 				ACAAD86A21AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,
 				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
 				AFE81B2B2196D7F200AA0AF2 /* PasswordHintTableAdapter.swift in Sources */,
-				ACAAD87021AE8FE4007266F4 /* SendSmsSettingTableViewCell.swift in Sources */,
 				AC353B0A21BEB94500B80412 /* LatestUpdatesViewController.swift in Sources */,
 				AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */,
 				AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */,

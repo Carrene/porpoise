@@ -18,7 +18,6 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
     }
     
     func initTableView() {
-        tableView?.register(UINib(nibName:R.nib.sendSmsSettingTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseSendSmsSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.authenticationTypeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier)
         adapter = SettingsTableViewAdapter(sender: self)

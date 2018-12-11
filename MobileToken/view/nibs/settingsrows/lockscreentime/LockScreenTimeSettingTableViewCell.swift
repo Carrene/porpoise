@@ -9,25 +9,42 @@
 import UIKit
 
 class LockScreenTimeSettingTableViewCell: UITableViewCell {
+    
     @IBOutlet var viewCell: UIView!
     @IBOutlet var viewButtons: UIView!
     @IBOutlet var collectionButtonsTime: [UIButton]!
     @IBOutlet var labelSecond: UILabel!
+    var selectedIndex = 1
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         viewButtons.layer.cornerRadius = 5
-        for buttonTime in collectionButtonsTime {
-            buttonTime.layer.cornerRadius = 10
-            buttonTime.layer.borderWidth = 2
-            buttonTime.layer.borderColor = R.color.buttonColor()?.cgColor
-            buttonTime.backgroundColor = R.color.primaryDark()
+        for index in collectionButtonsTime.indices {
+            
+            let button  = collectionButtonsTime[index]
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 2
+            
+            if index == selectedIndex {
+                
+                labelSecond.text =  button.currentTitle! + " " + R.string.localizable.lb_seconds()
+                button.layer.backgroundColor = R.color.buttonColor()?.cgColor
+                button.setTitleColor(R.color.primaryDark(), for: .selected)
+            }
+            else {
+                
+                button.layer.borderColor = R.color.buttonColor()?.cgColor
+                button.backgroundColor = R.color.primaryDark()
+                button.setTitleColor(R.color.buttonColor(), for: .normal)
+            }
         }
     }
 
     @IBAction func onTimeButton(_ sender: UIButton) {
         
         for index in collectionButtonsTime.indices {
+            
             let button  = collectionButtonsTime[index]
             if index == collectionButtonsTime.index(of: sender)
             {
@@ -36,6 +53,7 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
                 button.setTitleColor(R.color.primaryDark(), for: .normal)
             }
             else {
+                
                 button.layer.borderColor = R.color.buttonColor()?.cgColor
                 button.backgroundColor = R.color.primaryDark()
                 button.setTitleColor(R.color.buttonColor(), for: .normal)
@@ -44,8 +62,9 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        
         super.setSelected(selected, animated: animated)
-
+        self.selectionStyle = .none
         // Configure the view for the selected state
     }
     

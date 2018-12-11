@@ -17,7 +17,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     init(sender:SettingsViewController) {
@@ -32,8 +32,6 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
-        case 2:
-            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseSendSmsSettingRow.identifier, for: indexPath) as! SendSmsSettingTableViewCell
         default:
             break
         }
