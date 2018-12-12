@@ -11,6 +11,8 @@
 		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
+		AC04FAAE21C14D4500A41D9D /* forget-password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC04FAAD21C14D4400A41D9D /* forget-password.gif */; };
+		AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
@@ -26,7 +28,6 @@
 		AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
 		AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1721BFCB4200B80412 /* no-internet.gif */; };
-		AC353B1A21BFCB4900B80412 /* forget-password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1921BFCB4900B80412 /* forget-password.gif */; };
 		AC353B1C21BFCB5300B80412 /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1B21BFCB5300B80412 /* security.gif */; };
 		AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
@@ -51,7 +52,6 @@
 		ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
 		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
-		ACDFD8A921A5484700839F97 /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A821A5484700839F97 /* PhoneConfirmationPresenter.swift */; };
 		AF246A7C21984A5500C44E4B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
 		AF246A7E219852EA00C44E4B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A812198687E00C44E4B /* CardTypeEnum.swift */; };
@@ -151,6 +151,8 @@
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC04FAAD21C14D4400A41D9D /* forget-password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "forget-password.gif"; sourceTree = "<group>"; };
+		AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationPresenter.swift; sourceTree = "<group>"; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
 		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
@@ -166,7 +168,6 @@
 		AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Light.ttf"; sourceTree = "<group>"; };
 		AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_UltraLight.ttf"; sourceTree = "<group>"; };
 		AC353B1721BFCB4200B80412 /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
-		AC353B1921BFCB4900B80412 /* forget-password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "forget-password.gif"; sourceTree = "<group>"; };
 		AC353B1B21BFCB5300B80412 /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesTableAdapter.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
@@ -191,7 +192,6 @@
 		ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputContractor.swift; sourceTree = "<group>"; };
 		ACDFD8A421A418BC00839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationContractor.swift; sourceTree = "<group>"; };
-		ACDFD8A821A5484700839F97 /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneConfirmationPresenter.swift; path = /Users/fatemekazemi/Documents/Projects/porpoise/MobileToken/ui/registration/phoneconfirmation/PhoneConfirmationPresenter.swift; sourceTree = "<absolute>"; };
 		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		AF246A7D219852EA00C44E4B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -399,7 +399,7 @@
 		AC46685921BCEC2500A0B5BA /* gif */ = {
 			isa = PBXGroup;
 			children = (
-				AC353B1921BFCB4900B80412 /* forget-password.gif */,
+				AC04FAAD21C14D4400A41D9D /* forget-password.gif */,
 				AC353B1B21BFCB5300B80412 /* security.gif */,
 				AC353B1721BFCB4200B80412 /* no-internet.gif */,
 			);
@@ -546,7 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */,
-				ACDFD8A821A5484700839F97 /* PhoneConfirmationPresenter.swift */,
+				AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */,
 				ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */,
 			);
 			path = phoneconfirmation;
@@ -1139,7 +1139,7 @@
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
-				AC353B1A21BFCB4900B80412 /* forget-password.gif in Resources */,
+				AC04FAAE21C14D4500A41D9D /* forget-password.gif in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				ACAAD85621AC2CF1007266F4 /* Authentication.storyboard in Resources */,
@@ -1387,6 +1387,7 @@
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */,
 				AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */,
+				AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */,
 				AFE81B152196CF0500AA0AF2 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
 				AFE81B472196EF0C00AA0AF2 /* AuthenticationPatternViewController.swift in Sources */,
 				AF285FF6219C4A3500D8C342 /* BankCollectionViewCell.swift in Sources */,
@@ -1396,7 +1397,6 @@
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,
-				ACDFD8A921A5484700839F97 /* PhoneConfirmationPresenter.swift in Sources */,
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
 			);
