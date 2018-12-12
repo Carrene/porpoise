@@ -55,5 +55,4 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         }
     }
     
-    
 }

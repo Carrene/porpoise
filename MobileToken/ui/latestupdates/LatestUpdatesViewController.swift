@@ -21,8 +21,7 @@ class LatestUpdatesViewController: UIViewController {
     }
     
     func initTable() {
-        //tableview?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
-        //tableview.register(, forCellReuseIdentifier: <#T##String#>)
+
         adapter = LatestUpdatesTableAdapter(sender: self)
         tableview.delegate = adapter
         tableview.dataSource = adapter
