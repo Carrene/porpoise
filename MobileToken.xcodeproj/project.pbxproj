@@ -28,6 +28,7 @@
 		AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1721BFCB4200B80412 /* no-internet.gif */; };
 		AC353B1A21BFCB4900B80412 /* forget-password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1921BFCB4900B80412 /* forget-password.gif */; };
 		AC353B1C21BFCB5300B80412 /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1B21BFCB5300B80412 /* security.gif */; };
+		AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
@@ -167,6 +168,7 @@
 		AC353B1721BFCB4200B80412 /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
 		AC353B1921BFCB4900B80412 /* forget-password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "forget-password.gif"; sourceTree = "<group>"; };
 		AC353B1B21BFCB5300B80412 /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
+		AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesTableAdapter.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */,
+				AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */,
 			);
 			path = latestupdates;
 			sourceTree = "<group>";
@@ -1370,6 +1373,7 @@
 				AF246A9A2199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift in Sources */,
 				AF246AA8219ACAC700C44E4B /* CardRepository.swift in Sources */,
 				AFE81B452196EEC100AA0AF2 /* AuthenticationPasswordViewController.swift in Sources */,
+				AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */,
 				AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */,
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
 				AF246A9D219AA57B00C44E4B /* BankRepositoryProtocol.swift in Sources */,

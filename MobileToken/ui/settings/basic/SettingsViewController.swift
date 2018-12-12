@@ -7,12 +7,17 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var labelVersion: UILabel!
     var adapter : SettingsTableViewAdapter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         initTableView()
+        getVersion()
+    }
+    
+    func getVersion() {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         labelVersion.text =  R.string.localizable.lb_version() + " " + version!
     }

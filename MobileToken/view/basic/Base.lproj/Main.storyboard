@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boo-tP-348">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="IRANSansMobile-Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
-        </array>
-        <array key="IRANSansMobile.ttf">
-            <string>IRANSansMobile</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="klp-3Q-gKS">
@@ -101,114 +92,5 @@
             </objects>
             <point key="canvasLocation" x="-2931" y="-1944"/>
         </scene>
-        <!--ویژگی های جدید-->
-        <scene sceneID="Dqk-JQ-vL2">
-            <objects>
-                <viewController id="boo-tP-348" customClass="LatestUpdatesViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NWe-nJ-dOV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dex-JM-5th" userLabel="vText">
-                                <rect key="frame" x="30" y="184" width="315" height="251"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZqH-ep-3qG">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="251"/>
-                                        <color key="backgroundColor" name="primaryLight"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseUpdatesTableviewCell" rowHeight="32" id="gbu-7f-s6P">
-                                                <rect key="frame" x="0.0" y="28" width="315" height="32"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gbu-7f-s6P" id="ngA-XU-k1J">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="31.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-circle" translatesAutoresizingMaskIntoConstraints="NO" id="XGj-Jr-Ah8" userLabel="imageDot">
-                                                            <rect key="frame" x="287" y="12" width="8" height="8"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="8" id="B8V-UG-0nK"/>
-                                                                <constraint firstAttribute="height" constant="8" id="UDH-Jw-D1Y"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضافه شدن رمزهای دوم و اینترنتی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQQ-zA-TzQ">
-                                                            <rect key="frame" x="77" y="6.5" width="194" height="19"/>
-                                                            <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
-                                                            <color key="textColor" name="buttonColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" name="primaryLight"/>
-                                                    <constraints>
-                                                        <constraint firstItem="XGj-Jr-Ah8" firstAttribute="leading" secondItem="aQQ-zA-TzQ" secondAttribute="trailing" constant="16" id="5q5-mT-QJr"/>
-                                                        <constraint firstItem="aQQ-zA-TzQ" firstAttribute="centerY" secondItem="ngA-XU-k1J" secondAttribute="centerY" id="GsV-Zl-sFe"/>
-                                                        <constraint firstItem="XGj-Jr-Ah8" firstAttribute="centerY" secondItem="ngA-XU-k1J" secondAttribute="centerY" id="JgZ-aq-nsW"/>
-                                                        <constraint firstAttribute="trailing" secondItem="XGj-Jr-Ah8" secondAttribute="trailing" constant="20" id="Kph-tM-BAa"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" name="primaryLight"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" name="primaryLight"/>
-                                <constraints>
-                                    <constraint firstItem="ZqH-ep-3qG" firstAttribute="width" secondItem="dex-JM-5th" secondAttribute="width" id="As1-Zv-YQZ"/>
-                                    <constraint firstItem="ZqH-ep-3qG" firstAttribute="centerX" secondItem="dex-JM-5th" secondAttribute="centerX" id="d3g-mD-a78"/>
-                                    <constraint firstItem="ZqH-ep-3qG" firstAttribute="centerY" secondItem="dex-JM-5th" secondAttribute="centerY" id="fuT-Wc-ah5"/>
-                                    <constraint firstItem="ZqH-ep-3qG" firstAttribute="height" secondItem="dex-JM-5th" secondAttribute="height" id="v1u-Bz-Jn2"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-ss-Y1h" userLabel="btEnter">
-                                <rect key="frame" x="30" y="599" width="315" height="48"/>
-                                <color key="backgroundColor" name="secondary"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="IdS-TW-ufa"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="sfa-jP-2PO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                <state key="normal" title="ورود به برنامه">
-                                    <color key="titleColor" name="buttonColor"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="primary"/>
-                        <constraints>
-                            <constraint firstItem="dex-JM-5th" firstAttribute="top" secondItem="kD5-EC-AGE" secondAttribute="top" constant="164" id="01F-fp-GCB"/>
-                            <constraint firstItem="kD5-EC-AGE" firstAttribute="bottom" secondItem="dex-JM-5th" secondAttribute="bottom" constant="232" id="Hn9-TI-8SW"/>
-                            <constraint firstItem="PRq-ss-Y1h" firstAttribute="leading" secondItem="kD5-EC-AGE" secondAttribute="leading" constant="30" id="MfJ-51-PEp"/>
-                            <constraint firstItem="dex-JM-5th" firstAttribute="bottom" secondItem="PRq-ss-Y1h" secondAttribute="top" constant="-164" id="TTE-ok-niL"/>
-                            <constraint firstItem="dex-JM-5th" firstAttribute="leading" secondItem="kD5-EC-AGE" secondAttribute="leading" constant="30" id="YW7-Cm-mS0"/>
-                            <constraint firstItem="kD5-EC-AGE" firstAttribute="trailing" secondItem="PRq-ss-Y1h" secondAttribute="trailing" constant="30" id="bqe-O2-Uib"/>
-                            <constraint firstItem="kD5-EC-AGE" firstAttribute="bottom" secondItem="PRq-ss-Y1h" secondAttribute="bottom" constant="20" id="is7-On-JDB"/>
-                            <constraint firstItem="PRq-ss-Y1h" firstAttribute="centerX" secondItem="kD5-EC-AGE" secondAttribute="centerX" id="lWs-1c-Dkd"/>
-                            <constraint firstItem="kD5-EC-AGE" firstAttribute="trailing" secondItem="dex-JM-5th" secondAttribute="trailing" constant="30" id="nOf-cs-nF2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="kD5-EC-AGE"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="ویژگی های جدید" id="8Dv-CV-Aza"/>
-                    <connections>
-                        <outlet property="buttonEnterProgram" destination="PRq-ss-Y1h" id="Nbe-HE-gHt"/>
-                        <outlet property="tableview" destination="ZqH-ep-3qG" id="xSK-kW-XdQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L5W-1S-vf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="34" y="164"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="blue-circle" width="8" height="8"/>
-        <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryLight">
-            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondary">
-            <color red="0.093999996781349182" green="0.57300001382827759" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>
