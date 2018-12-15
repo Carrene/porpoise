@@ -1,5 +1,4 @@
 
-
 import Foundation
 import ObjectMapper
 import ObjectMapper_Realm
@@ -8,10 +7,19 @@ import RealmSwift
 class Bank: Object, Mappable, NSCopying{
     
     @objc private dynamic var Name: String? = nil
-    public var name: String? {
+
+    var name: String? {
         get { return Name }
         set { Name = newValue }
     }
+    
+    @objc private dynamic var Secret:String? = nil
+    var secret:String? {
+        get { return Secret }
+        set { Secret=newValue }
+    }
+    
+    var cardList : [Card]?
     
     private var logoResourceId: String?
     

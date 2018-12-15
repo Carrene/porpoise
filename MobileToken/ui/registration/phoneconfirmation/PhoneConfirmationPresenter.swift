@@ -1,22 +1,22 @@
-
-
 import Foundation
 
 class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     
-    unowned let view : PhoneConfirmationViewProtocol
-    var userRepository = UserRepository()
-    var timeCount = 30
-    var timer:Timer!
+    private unowned let view : PhoneConfirmationViewProtocol
+    private var userRepository = UserRepository()
+    private var timeCount : Int!
+    private static let SMS_TIMER = 2 * 60
+    private var timer:Timer!
     
     required init(view: PhoneConfirmationViewProtocol) {
-        
         self.view = view
     }
     
+    //TODO(Fateme) Add 500 error case
     func bind(phone:String,activationCode:String) {
         
         let user = User(phone: phone, activationCode: activationCode)
+
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
@@ -40,14 +40,14 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
             if timeCount == 0 {
                 view.setCounterTitleToResend()
             }
-            timeCount=timeCount-1
+            timeCount -= 1
         }
     }
     
     func initCodeTimer() {
         
         view.setCounterTitleToResend()
-        self.timeCount = 30
+        self.timeCount = PhoneConfirmationPresenter.SMS_TIMER
         self.timer = Timer.scheduledTimer(timeInterval:TimeInterval(1), target: self, selector: #selector(update), userInfo: nil, repeats: true)
         self.timer.fire()
     }
@@ -60,9 +60,6 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     }
     
     func invalidateTimer() {
-        
         self.timer.invalidate()
     }
-    
-    
 }

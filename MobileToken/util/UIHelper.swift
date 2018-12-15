@@ -1,9 +1,6 @@
-
-
 import UIKit
 import TTGSnackbar
 class UIHelper {
-    
     
     static func iranSansBold(size: CGFloat) -> UIFont {
         return UIFont(name: R.font.iranSansMobileBold.fontName, size: size)!

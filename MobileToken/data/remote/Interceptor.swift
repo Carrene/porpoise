@@ -1,10 +1,9 @@
-
-
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
 class RequestInterceptor: RequestAdapter {
+
     public var jwtPersistable: JwtPersistable? = UserDefaultsJwtPersistor()
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {

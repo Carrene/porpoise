@@ -1,10 +1,8 @@
-
-
 import UIKit
 import CountryPickerView
 import IQKeyboardManager
 
-class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
+class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
     
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
@@ -15,31 +13,34 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var viewPhone: UIView!
     @IBOutlet var buttonRegister: UIButton!
     
-    
-    var bankCollectionViewAdapter: BankCollectionViewAdapter?
-    var presenter: PhoneInputPresenter!
+    private var bankCollectionViewAdapter: BankCollectionViewAdapter?
+    private var presenter: PhoneInputPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PhoneInputPresenter(view: self)
         initBankCollectionView()
         initCountryPicker()
-        
-
+        presenter.getBankList()
     }
+    
     //TODDO(FATEME) set button background disable state
     override func viewDidAppear(_ animated: Bool) {
-        initUIComponent()
         self.hideKeyboardWhenTappedAround()
         buttonRegister.isEnabled = false
     }
     
-    func initUIComponent() {
+
+    func initUIComponents() {
+        labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
         viewPhone.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         buttonRegister.layer.cornerRadius = 10
+    }
+    
+    func initListeners() {
         
     }
     
@@ -51,7 +52,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         collectionViewbank.delegate = bankCollectionViewAdapter
         collectionViewbank.dataSource = bankCollectionViewAdapter
         collectionViewbank.allowsMultipleSelection = false
-        setBankList()
         collectionViewbank.reloadData()
     }
     
@@ -71,12 +71,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.labelPhoneCode.text = country.phoneCode
     }
     
-   
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
         if textFieldPhoneNumber.text != "" {
             self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
         }
     }
+    
     @IBAction func onButtonRegister(_ sender: UIButton) {
         if textFieldPhoneNumber.text != "" {
             buttonRegister.isEnabled = true
@@ -99,8 +99,8 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorColor()!, duration: .middle)
     }
     
-     func setBankList() {
-        bankCollectionViewAdapter?.setDataSource(banks: presenter.getBankList())
+    func setBankList(banks : [Bank]) {
+        bankCollectionViewAdapter?.setDataSource(banks: banks)
     }
     
     func navigateToPhoneConfirmation(phone:String) {
@@ -118,4 +118,3 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
 }
-
