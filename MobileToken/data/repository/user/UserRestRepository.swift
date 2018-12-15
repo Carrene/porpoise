@@ -32,7 +32,7 @@ class UserRestRepository: UserRepositoryProtocol {
     func claim(user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         let urlComponents = ApiHelper.newUrlComponentsInstance()
         urlComponents.path = "\(urlComponents.path ?? "")/\(ApiHelper.CLAIM_PATH)"
-        // TODO: Take care of this unwrap
+
         let url = urlComponents.url!
         let parameters: [String: Any?] =
         [

@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Web service version</key>
+	<string>$(WEB_SERVICE_VERSION)</string>
+	<key>Web service scheme</key>
+	<string>$(WEB_SERVICE_SCHEME)</string>
+	<key>Web service port</key>
+	<string>$(WEB_SERVICE_PORT)</string>
+	<key>Web service host</key>
+	<string>$(WEB_SERVICE_HOST)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

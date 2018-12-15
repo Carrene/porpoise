@@ -12,7 +12,6 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
         self.view = view
     }
     
-    //TODO(Fateme) Add 500 error case
     func bind(phone:String,activationCode:String) {
         
         let user = User(phone: phone, activationCode: activationCode)
@@ -26,6 +25,8 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
                 self?.view.showBadRequestError()
             case 801:
                 self?.view.showSSMNotAvailable()
+            case 500:
+                self?.view.showServerError()
             default:
                 UIHelper.showFailedSnackBar()
             }

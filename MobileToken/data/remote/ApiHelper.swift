@@ -20,8 +20,8 @@ class ApiHelper {
         let instance = ApiHelper()
         return instance
     }()
+    #warning("Remove server trust this in release mode")
     
-    //TODO(Fateme): Remove server trust this in release mode
     private static var Manager : Alamofire.SessionManager = {
         // Create the server trust policies
         let serverTrustPolicies: [String: ServerTrustPolicy] = [
@@ -45,14 +45,14 @@ class ApiHelper {
     public static func newUrlComponentsInstance() -> NSURLComponents {
         //TODO(Fateme) Get this prarameters from bundle
         let urlComponents = NSURLComponents()
-//        urlComponents.scheme = Bundle.main.infoDictionary!["WEB_SERVICE_SCHEME"] as? String
-//        urlComponents.host = Bundle.main.infoDictionary!["WEB_SERVICE_HOST"] as? String
-//        urlComponents.port = NSNumber(value: Int(Bundle.main.infoDictionary!["WEB_SERVICE_PORT"] as! String)!)
-//        urlComponents.path = "/apiv\(Bundle.main.infoDictionary!["WEB_SERVICE_VERSION"] as! String)"
-        urlComponents.scheme = "https"
-        urlComponents.host = "192.168.1.57"
-        urlComponents.port=443
-        urlComponents.path = "/apiv1"
+        urlComponents.scheme = Bundle.main.infoDictionary!["WEB_SERVICE_SCHEME"] as? String
+        urlComponents.host = Bundle.main.infoDictionary!["WEB_SERVICE_HOST"] as? String
+        urlComponents.port = NSNumber(value: Int(Bundle.main.infoDictionary!["WEB_SERVICE_PORT"] as! String)!)
+        urlComponents.path = "/apiv\(Bundle.main.infoDictionary!["WEB_SERVICE_VERSION"] as! String)"
+//        urlComponents.scheme = "https"
+//        urlComponents.host = "192.168.1.57"
+//        urlComponents.port=443
+//        urlComponents.path = "/apiv1"
         return urlComponents
     }
     

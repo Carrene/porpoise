@@ -4,6 +4,7 @@ protocol PhoneConfirmationViewProtocol:class {
     
     func showBadRequestError()
     func showSSMNotAvailable()
+    func showServerError()
     func segue()
     func showTimer()
     func setCounterTitleToResend()

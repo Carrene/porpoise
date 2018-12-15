@@ -9,18 +9,19 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         self.view = view
     }
     
-    //TODO(Fateme) Add 500 error case
     func claim(phone: String) {
         let user = User(phone: phone)
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
-                case 200:
-                    self?.view.navigateToPhoneConfirmation(phone:phone)
-                case 400:
-                    self?.view.showBadRequestError()
-                default:
-                    UIHelper.showFailedSnackBar()
+            case 200:
+                self?.view.navigateToPhoneConfirmation(phone:phone)
+            case 400:
+                self?.view.showBadRequestError()
+            case 500:
+                self?.view.showServerError()
+            default:
+                UIHelper.showFailedSnackBar()
             }
         }
         userRepostiory.claim(user: user, onDone: onDataResponse)

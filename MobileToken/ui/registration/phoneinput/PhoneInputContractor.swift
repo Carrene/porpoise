@@ -2,6 +2,7 @@ import Foundation
 
     protocol PhoneInputViewProtocol: class {
         func showBadRequestError()
+        func showServerError()
         func setBankList(banks: [Bank])
         func navigateToPhoneConfirmation(phone:String)
     }

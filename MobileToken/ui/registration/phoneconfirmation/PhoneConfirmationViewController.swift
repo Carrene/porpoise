@@ -126,6 +126,10 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_SSM_is_not_available(), color: R.color.errorColor()!, duration: .middle)
     }
     
+    func showServerError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorColor()!, duration: .middle)
+    }
+    
     func segue() {
         //performSegue
     }
