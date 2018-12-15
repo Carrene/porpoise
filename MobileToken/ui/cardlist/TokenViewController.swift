@@ -1,25 +1,45 @@
-
-
+import XLActionController
 import UIKit
 import FSPagerView
 
-class TokenListViewController: UIViewController {
+class TokenListViewController: BaseViewController {
     
     @IBOutlet weak var vScroll: UIScrollView!
     
     var cardListPagerViewAdapter:CardPagerViewAdapter?
     var pagerList = [CardPagerViewAdapter(), CardPagerViewAdapter(), CardPagerViewAdapter()]
-    
-    
+    let actionController = MobileTokenActionSheetController()
     var selectedWalletIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initActionSheet()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         initCardListPagerView()
         
     }
+    
+    func initActionSheet() {
+        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in })
+        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
+        actionController.addAction(editCardAction)
+        actionController.addAction(deleteCardAction)
+    }
+    
+    func actionSheetButtonClicked() {
+        present(actionController, animated: true, completion: nil)
+    }
+    
+    func initUIComponents() {
+        
+    }
+    
+    func initListeners() {
+        
+    }
+    
     
     func initCardListPagerView() {
         var y = 0

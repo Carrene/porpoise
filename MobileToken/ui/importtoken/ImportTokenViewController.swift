@@ -11,12 +11,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     @IBOutlet var labelSmsCode: UILabel!
     @IBOutlet var buttonAddCode: UIButton!
     
-    let actionController = MobileTokenActionSheetController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewCard.setDelegate(cardCellXibProtocol: self)
-        initActionSheet()
     }
     
     func initUIComponents() {
@@ -44,16 +41,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
         viewCard.buttonActionSheet.isEnabled = false
     }
     
-    func initActionSheet() {
-        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in })
-        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
-        actionController.addAction(editCardAction)
-        actionController.addAction(deleteCardAction)
-    }
-    
-    func actionSheetButtonClicked() {
-        present(actionController, animated: true, completion: nil)
-    }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == R.color.buttonColor()?.withAlphaComponent(0.5) {
@@ -89,4 +76,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
             UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
         }
     }
+    
+    func actionSheetButtonClicked() {
+        
+    }
+    
 }
