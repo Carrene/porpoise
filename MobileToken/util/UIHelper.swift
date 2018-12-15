@@ -1,5 +1,6 @@
 import UIKit
 import TTGSnackbar
+
 class UIHelper {
     
     static func iranSansBold(size: CGFloat) -> UIFont {
@@ -49,6 +50,7 @@ class UIHelper {
     static func showSpecificSnackBar(message:String, color:UIColor) {
         SnackBarHelper.init(message: message,color:color, duration: TTGSnackbarDuration.long).show()
     }
+    
     static func showSpecificSnackBar(message:String, color:UIColor, duration: TTGSnackbarDuration) {
         SnackBarHelper.init(message: message,color:color, duration: duration).show()
     }
