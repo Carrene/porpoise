@@ -3,39 +3,39 @@ import TTGSnackbar
 class UIHelper {
     
     static func iranSansBold(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileBold.fontName, size: size)!
+        return R.font.iranSansMobileBold(size:size)!
     }
     
     static func iranSansLight(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileLight.fontName, size: size)!
+        return R.font.iranSansMobileLight(size:size)!
     }
     
     static func iranSansMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileMedium.fontName, size: size)!
+        return R.font.iranSansMobileMedium(size:size)!
     }
     
     static func iranSansUltraLight(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileUltraLight.fontName, size: size)!
+        return R.font.iranSansMobileUltraLight(size:size)!
     }
     
     static func iranSansMobile(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobile.fontName, size: size)!
+        return R.font.iranSansMobile(size:size)!
     }
     
     static func iranSansMobileFaNum(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileFaNum.fontName, size: size)!
+        return R.font.iranSansMobileFaNum(size:size)!
     }
     
     static func iranSansMobileFaNumBold(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileFaNumBold.fontName, size: size)!
+        return R.font.iranSansMobileFaNumBold(size:size)!
     }
     
     static func iranSansMobileFaNumLight(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileFaNumLight.fontName, size: size)!
+        return R.font.iranSansMobileFaNumLight(size: size)!
     }
     
     static func iranSansMobileFaNumMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: R.font.iranSansMobileFaNumMedium.fontName, size: size)!
+        return R.font.iranSansMobileFaNumMedium(size: size)!
     }
     
     static func showFailedSnackBar() {
