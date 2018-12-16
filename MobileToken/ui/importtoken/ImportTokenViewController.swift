@@ -1,7 +1,6 @@
 import UIKit
 import XLActionController
 
-//TODO(Fateme) Action sheet on cards should be done on cardlist controller
 class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellXibProtocol {
     
     @IBOutlet var viewCard: CardCellXibView!

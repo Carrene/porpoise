@@ -43,16 +43,36 @@ class ApiHelper {
     }
     
     public static func newUrlComponentsInstance() -> NSURLComponents {
-        //TODO(Fateme) Get this prarameters from bundle
+        
         let urlComponents = NSURLComponents()
-        urlComponents.scheme = Bundle.main.infoDictionary!["WEB_SERVICE_SCHEME"] as? String
-        urlComponents.host = Bundle.main.infoDictionary!["WEB_SERVICE_HOST"] as? String
-        urlComponents.port = NSNumber(value: Int(Bundle.main.infoDictionary!["WEB_SERVICE_PORT"] as! String)!)
-        urlComponents.path = "/apiv\(Bundle.main.infoDictionary!["WEB_SERVICE_VERSION"] as! String)"
-//        urlComponents.scheme = "https"
-//        urlComponents.host = "192.168.1.57"
-//        urlComponents.port=443
-//        urlComponents.path = "/apiv1"
+        
+        if let scheme = Bundle.main.infoDictionary!["WEB_SERVICE_SCHEME"] as? String {
+            urlComponents.scheme = scheme
+        }
+        else {
+            urlComponents.scheme = "https"
+        }
+        
+        if let version = Bundle.main.infoDictionary!["WEB_SERVICE_VERSION"] as? String {
+            urlComponents.path = "/apiv\(version)"
+        }
+        else {
+            urlComponents.path = "/apiv1"
+        }
+        
+        if let host = Bundle.main.infoDictionary!["WEB_SERVICE_HOST"] as? String {
+            urlComponents.host = host
+        }
+        else {
+            urlComponents.host = "192.168.1.57"
+        }
+        
+        if let port = Bundle.main.infoDictionary!["WEB_SERVICE_PORT"] as? String {
+            urlComponents.port = NSNumber(value: Int(port)!)
+        }
+        else {
+            urlComponents.port = 443
+        }
         return urlComponents
     }
     

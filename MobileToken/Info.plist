@@ -2,14 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Web service version</key>
-	<string>$(WEB_SERVICE_VERSION)</string>
-	<key>Web service scheme</key>
-	<string>$(WEB_SERVICE_SCHEME)</string>
-	<key>Web service port</key>
-	<string>$(WEB_SERVICE_PORT)</string>
-	<key>Web service host</key>
-	<string>$(WEB_SERVICE_HOST)</string>
+	<key>CFBundleDisplayName</key>
+	<string>راز</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -40,14 +34,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -55,5 +41,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>Web service host</key>
+	<string>$(WEB_SERVICE_HOST)</string>
+	<key>Web service port</key>
+	<string>$(WEB_SERVICE_PORT)</string>
+	<key>Web service scheme</key>
+	<string>$(WEB_SERVICE_SCHEME)</string>
+	<key>Web service version</key>
+	<string>$(WEB_SERVICE_VERSION)</string>
 </dict>
 </plist>

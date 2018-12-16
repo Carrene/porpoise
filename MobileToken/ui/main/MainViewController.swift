@@ -6,8 +6,8 @@ class MainViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigateToTabbar()
-        navigateToImportToken()
+        navigateToTabbar()
+        //navigateToImportToken()
 
     }
     
