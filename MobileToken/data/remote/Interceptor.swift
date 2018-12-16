@@ -3,12 +3,13 @@ import Alamofire
 import AlamofireObjectMapper
 
 class RequestInterceptor: RequestAdapter {
-
+    
     public var jwtPersistable: JwtPersistable? = UserDefaultsJwtPersistor()
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0NDk2MDAwMywiZXhwIjoxNTQ3NTUyMDAzfQ.eyJwbGF0Zm9ybSI6ImlPUyIsInZlcnNpb24iOiIwLjEuMC1hMSIsImluaXRpYWwiOnRydWV9.2MyFKo6oRPqnndygd8mhVKNtcW25NgIB6DmjpERxC6Q", forHTTPHeaderField: "Authorization")
         if let jwt = ApiHelper.instance.jwtPersistable.get() {
             urlRequest.addValue("Bearer " + jwt, forHTTPHeaderField: "Authorization")
         }

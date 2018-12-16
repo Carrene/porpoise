@@ -31,8 +31,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         labelTitle.font = UIHelper.iranSansBold(size: 16)
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
-        labelPhone.font = UIHelper.iranSansMedium(size: 16)
-        labelCounter.font = UIHelper.iranSansBold(size: 16)
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         let iconView = UIImageView(frame:
             CGRect(x: 10, y: 10, width: 20, height: 11))
@@ -42,7 +40,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         iconContainerView.addSubview(iconView)
         textFieldCode.leftView = iconContainerView
         textFieldCode.leftViewMode = .always
-        textFieldCode.font = UIHelper.iranSansBold(size: 20)
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
