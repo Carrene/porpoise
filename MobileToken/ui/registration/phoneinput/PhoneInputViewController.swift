@@ -10,8 +10,10 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var labelPhoneCode: UILabel!
     @IBOutlet var collectionViewbank: UICollectionView!
     @IBOutlet var countryPickerView: CountryPickerView!
-    @IBOutlet var viewPhone: UIView!
+    @IBOutlet var viewTextfields: UIView!
     @IBOutlet var buttonRegister: UIButton!
+    @IBOutlet var labelChooseCountry: UILabel!
+    @IBOutlet var viewPhone: UIView!
     
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
@@ -24,20 +26,21 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         presenter.getBankList()
     }
     
-    //TODDO(FATEME) set button background disable state
+
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
-        buttonRegister.isEnabled = false
     }
     
 
     func initUIComponents() {
-        labelPhoneCode.font = R.font.iranSansMobileBold(size: 16)
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
-        viewPhone.layer.cornerRadius = 10
+        labelChooseCountry.font = R.font.iranSansMobileMedium(size: 16)
+        countryPickerView.layer.cornerRadius = 10
+        viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         buttonRegister.layer.cornerRadius = 10
+        viewPhone.layer.cornerRadius = 10
     }
     
     func initListeners() {
