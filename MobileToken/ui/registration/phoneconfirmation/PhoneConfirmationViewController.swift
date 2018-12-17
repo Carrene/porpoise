@@ -10,6 +10,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     @IBOutlet var labelChangeNumber: UILabel!
     @IBOutlet var labelCounter: UILabel!
     @IBOutlet var NavigationItemTitle: UINavigationItem!
+    @IBOutlet var viewTextfield: UIView!
     
     private var presenter:PhoneConfirmationPresenterProtocol?
     private var phoneNumber = ""
@@ -27,19 +28,19 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func initUIComponents() {
-    
+        viewTextfield.layer.cornerRadius = 10
         labelTitle.font = UIHelper.iranSansBold(size: 16)
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
-        let iconView = UIImageView(frame:
-            CGRect(x: 10, y: 10, width: 20, height: 11))
-        iconView.image = R.image.key()
-        let iconContainerView: UIView = UIView(frame:
-            CGRect(x: 20, y: 0, width: 30, height: 30))
-        iconContainerView.addSubview(iconView)
-        textFieldCode.leftView = iconContainerView
-        textFieldCode.leftViewMode = .always
+//        let iconView = UIImageView(frame:
+//            CGRect(x: 10, y: 10, width: 20, height: 11))
+//        iconView.image = R.image.key()
+//        let iconContainerView: UIView = UIView(frame:
+//            CGRect(x: 20, y: 0, width: 30, height: 30))
+//        iconContainerView.addSubview(iconView)
+//        textFieldCode.leftView = iconContainerView
+//        textFieldCode.leftViewMode = .always
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
