@@ -29,7 +29,7 @@
 "lb_enter_pattern" = "الگوی خود را وارد کنید";
 "lb_enter_password" = "رمز خود را وارد کنید";
 "lb_seconds" = "ثانیه ";
-"lb_resend" = "ارسال مجدد";
+"lb_resend" = "ارسال دوباره کد";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
