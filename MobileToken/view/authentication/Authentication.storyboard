@@ -52,6 +52,7 @@
                     <connections>
                         <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
                         <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>
+                        <segue destination="HTl-cV-4Gj" kind="show" identifier="AuthenticationToApplicationLock" id="tat-VG-Qao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbP-Yh-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,6 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XG-Fo-HNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718" y="-887"/>
+        </scene>
+        <!--ApplicationLockViewController-->
+        <scene sceneID="SCT-dU-z2b">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ApplicationLockViewController" storyboardName="ApplicationLock" referencedIdentifier="ApplicationLockViewController" id="HTl-cV-4Gj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWm-Ta-qyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="-1763"/>
         </scene>
         <!--Authentication Pattern View Controller-->
         <scene sceneID="g7p-MB-Twu">

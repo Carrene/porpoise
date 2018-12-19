@@ -738,14 +738,14 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				AC16D72021CA33160094FBED /* common */,
-				ACEF4CCD21C4E61100CA66A4 /* base */,
-				AC353B0821BEB90F00B80412 /* latestupdates */,
 				AC353B0221BEB11F00B80412 /* applicationlock */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
+				ACEF4CCD21C4E61100CA66A4 /* base */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
+				AC16D72021CA33160094FBED /* common */,
 				AC46685821BC05DE00A0B5BA /* importtoken */,
+				AC353B0821BEB90F00B80412 /* latestupdates */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 				AF285FEF219C42B500D8C342 /* registration */,
 				ACAAD85E21AE8058007266F4 /* settings */,
@@ -801,12 +801,12 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				AC353B0521BEB89600B80412 /* latestupdates */,
 				AC353AFF21BEB0A900B80412 /* applicationlock */,
 				ACAAD85121AC2C95007266F4 /* authentication */,
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
 				AC46685521BC050900A0B5BA /* importtoken */,
+				AC353B0521BEB89600B80412 /* latestupdates */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
 				ACC902B721A0406A0072CFD5 /* registration */,
 				ACAAD85B21AE7AB4007266F4 /* settings */,
