@@ -43,14 +43,14 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSh-bh-Z7t">
-                                <rect key="frame" x="0.0" y="93" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="103" width="375" height="564"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <color key="tintColor" name="buttonColor"/>
                         <constraints>
                             <constraint firstItem="7E5-fo-Wdo" firstAttribute="top" secondItem="GMb-rr-ceF" secondAttribute="top" constant="13" id="5da-T7-nwX"/>
-                            <constraint firstItem="pSh-bh-Z7t" firstAttribute="top" secondItem="7E5-fo-Wdo" secondAttribute="bottom" constant="20" id="CFl-uI-V3A"/>
+                            <constraint firstItem="pSh-bh-Z7t" firstAttribute="top" secondItem="7E5-fo-Wdo" secondAttribute="bottom" constant="30" id="CFl-uI-V3A"/>
                             <constraint firstItem="pSh-bh-Z7t" firstAttribute="leading" secondItem="GMb-rr-ceF" secondAttribute="leading" id="Iq5-nZ-mV2"/>
                             <constraint firstItem="GMb-rr-ceF" firstAttribute="trailing" secondItem="7E5-fo-Wdo" secondAttribute="trailing" constant="30" id="Kdn-Cu-OJm"/>
                             <constraint firstItem="GMb-rr-ceF" firstAttribute="trailing" secondItem="pSh-bh-Z7t" secondAttribute="trailing" id="miZ-ye-tTe"/>
@@ -177,7 +177,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-sE-vYv" userLabel="lbTitle">
-                                <rect key="frame" x="111" y="20" width="153.5" height="29"/>
+                                <rect key="frame" x="111" y="30" width="153.5" height="29"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -190,12 +190,12 @@
                             <constraint firstItem="Cb6-Jc-sgg" firstAttribute="bottom" secondItem="sNx-qd-maC" secondAttribute="bottom" constant="112" id="k5y-Yu-RhI"/>
                             <constraint firstItem="sNx-qd-maC" firstAttribute="leading" secondItem="Cb6-Jc-sgg" secondAttribute="leading" constant="58" id="uyd-iv-ETV"/>
                             <constraint firstItem="Kp7-sE-vYv" firstAttribute="centerX" secondItem="sNx-qd-maC" secondAttribute="centerX" id="vHu-6y-Rky"/>
-                            <constraint firstItem="Kp7-sE-vYv" firstAttribute="top" secondItem="Cb6-Jc-sgg" secondAttribute="top" id="z52-Tj-9ma"/>
+                            <constraint firstItem="Kp7-sE-vYv" firstAttribute="top" secondItem="Cb6-Jc-sgg" secondAttribute="top" constant="10" id="z52-Tj-9ma"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cb6-Jc-sgg"/>
                     </view>
                     <connections>
-                        <outlet property="viewPattern" destination="sNx-qd-maC" id="oz4-iT-r4P"/>
+                        <outlet property="viewPattern" destination="sNx-qd-maC" id="k2z-B2-yXK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2N-PP-Avb" userLabel="First Responder" sceneMemberID="firstResponder"/>

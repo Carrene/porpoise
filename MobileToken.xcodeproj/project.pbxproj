@@ -37,6 +37,11 @@
 		AC16D72A21CA36220094FBED /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72921CA36220094FBED /* CryptoUtil.swift */; };
 		AC16D72C21CA38550094FBED /* ScreenLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72B21CA38550094FBED /* ScreenLocker.swift */; };
 		AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */; };
+		AC16D73021CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */; };
+		AC16D73321CA734A0094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */; };
+		AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */; };
+		AC16D73721CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */; };
+		AC16D73821CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
@@ -191,6 +196,11 @@
 		AC16D72921CA36220094FBED /* CryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
 		AC16D72B21CA38550094FBED /* ScreenLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLocker.swift; sourceTree = "<group>"; };
 		AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmConfiguration copy.swift"; sourceTree = "<group>"; };
+		AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionContractor.swift; sourceTree = "<group>"; };
+		AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternpresenter.swift; sourceTree = "<group>"; };
+		AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternContractor.swift; sourceTree = "<group>"; };
+		AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPaswordContractor.swift; sourceTree = "<group>"; };
+		AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordPresenter.swift; sourceTree = "<group>"; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
 		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
@@ -489,6 +499,8 @@
 		AC75A4EF21B26F53009441C4 /* pattern */ = {
 			isa = PBXGroup;
 			children = (
+				AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */,
+				AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */,
 				AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */,
 			);
 			path = pattern;
@@ -497,6 +509,8 @@
 		AC75A4F021B26F5B009441C4 /* password */ = {
 			isa = PBXGroup;
 			children = (
+				AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */,
+				AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */,
 				AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */,
 			);
 			path = password;
@@ -505,6 +519,7 @@
 		AC75A4F121B26F64009441C4 /* basic */ = {
 			isa = PBXGroup;
 			children = (
+				AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */,
 				AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */,
 			);
 			path = basic;
@@ -1399,6 +1414,7 @@
 				AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */,
 				AC16D71921CA325C0094FBED /* AuthenticationDefinitionPatternpresenter.swift in Sources */,
 				AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */,
+				AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
 				AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
@@ -1434,6 +1450,7 @@
 				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
 				AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,
+				AC16D73821CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AF246AA4219AB91700C44E4B /* CardRepositoryProtocol.swift in Sources */,
 				AC16D72C21CA38550094FBED /* ScreenLocker.swift in Sources */,
 				ACAAD86421AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift in Sources */,
@@ -1443,6 +1460,7 @@
 				AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */,
 				AF246A822198687E00C44E4B /* CardTypeEnum.swift in Sources */,
 				AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */,
+				AC16D73721CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */,
 				AC16D70C21CA32130094FBED /* AuthenticationContractor.swift in Sources */,
 				AF246A9D219AA57B00C44E4B /* BankRepositoryProtocol.swift in Sources */,
 				AF246A9F219AAA1700C44E4B /* BankRealmRepository.swift in Sources */,
@@ -1458,6 +1476,7 @@
 				AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */,
 				AC16D71721CA325C0094FBED /* AuthenticationDefinitionPatternContractor.swift in Sources */,
 				AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */,
+				AC16D73321CA734A0094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */,
 				AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */,
 				AF285FF6219C4A3500D8C342 /* BankCollectionViewCell.swift in Sources */,
 				AC16D71D21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift in Sources */,
@@ -1471,6 +1490,7 @@
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
+				AC16D73021CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
