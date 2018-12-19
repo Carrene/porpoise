@@ -2,27 +2,28 @@
 import UIKit
 import Foundation
 import HUIPatternLockView_Swift
+class AuthenticationDefinitionPatternViewController: UIViewController, AuthenticationDefinitionPatternViewProtocol {
 
-class AuthenticationDefinitionPatternViewController: UIViewController {
     
+    @IBOutlet weak var vPattern: HUIPatternLockView!
+
     var authenticationDefinitionDelegate: AuthenticationDefintionDelegate?
     var firstAttemptPattern: String?
     var secondAttemptPattern: String?
-    
-    @IBOutlet weak var viewPattern: HUIPatternLockView!
+    var authenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        authenticationDefinitionPatternPresenter = AuthenticationDefinitionPatternPresenter(authenticationDefinitionPatternView: self)
         initUIComponent()
     }
     
     func initUIComponent() {
         
-        self.viewPattern.resetDotsState()
-        self.viewPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
-        self.viewPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
-        self.viewPattern.dotWidth = 25
+        self.vPattern.resetDotsState()
+        self.vPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
+        self.vPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
+        self.vPattern.dotWidth = 25
         configuareLockViewWithImages()
     }
     
@@ -33,38 +34,32 @@ class AuthenticationDefinitionPatternViewController: UIViewController {
     
     private func configuareLockViewWithImages() {
         
-        viewPattern.didDrawPatternPassword = { (lockView: HUIPatternLockView, count: Int, password: String?) -> Void in
+        vPattern.didDrawPatternPassword = { (lockView: HUIPatternLockView, count: Int, password: String?) -> Void in
             guard count > 0 else {
                 return
             }
-            
-            self.viewPattern.resetDotsState()
-            
-            if self.firstAttemptPattern == nil {
-                
-                if count > 3 {
-                    
-                    self.firstAttemptPattern = password
-                    UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.secondary()!)
-                }else {
-                    
-                    UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_pattern_min_point_error(), color: R.color.errorColor()!)
-                }
-            } else {
-                
-                self.secondAttemptPattern = password
-                let authentication = Authentication(credentials: password, authenticationType: 1)
-                if self.secondAttemptPattern == self.firstAttemptPattern {
-                    self.authenticationDefinitionDelegate?.authenticationSucceed(authentication: authentication)
-                    UIHelper.showSpecificSnackBar(message:R.string.localizable.sb_successfully_done() , color: R.color.eyeCatching()!)
-                } else {
-                    
-                    self.firstAttemptPattern = nil
-                    self.secondAttemptPattern = nil
-                    UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_not_match(), color: R.color.errorColor()!)
-                }
-            }
+            self.vPattern.resetDotsState()
+            self.authenticationDefinitionPatternPresenter?.checkPattern(count: count, password: password!)
         }
+    }
+    
+    func showNotMatchError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_not_match(), color: R.color.errorColor()!)
+
+    }
+    
+    func showTryForSecondTimeMessage() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.secondary()!)
+
+    }
+    
+    func showPatternMinPointError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_pattern_min_point_error(), color: R.color.errorColor()!)
+
+    }
+    
+    func navigateToProvisioning() {
+        self.authenticationDefinitionDelegate?.navigateToProvisioning()
     }
 }
 

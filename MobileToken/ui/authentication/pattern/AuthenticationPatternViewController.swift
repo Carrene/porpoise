@@ -1,30 +1,25 @@
 
 import UIKit
 import HUIPatternLockView_Swift
-class AuthenticationPatternViewController: UIViewController {
+class AuthenticationPatternViewController: UIViewController, AuthenticationPatternViewProtocol {
+
+    
     @IBOutlet weak var vPattern: HUIPatternLockView!
     
     var authenticationDelegate: AuthenticationDelegate?
-    var authentication: Authentication?
+    var authenticationPatternPresenter: AuthenticationPatternPresenterProtocol?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        self.authenticationPatternPresenter = AuthenticationPatternPresenter(authenticationPatternView: self)
         initUIComponent()
     }
     
     func setDelegate(authenticationDelegate:AuthenticationDelegate) {
-        
         self.authenticationDelegate = authenticationDelegate
     }
     
-    func setAuthentication(authentication: Authentication) {
-        
-        self.authentication = authentication
-    }
-    
     func initUIComponent() {
-        
         vPattern.resetDotsState()
         vPattern.normalDotImage = R.image.patternDot()
         vPattern.highlightedDotImage = R.image.patternGrayDot()
@@ -33,21 +28,28 @@ class AuthenticationPatternViewController: UIViewController {
     }
     
     private func configuareLockViewWithImages() {
-        
         vPattern.didDrawPatternPassword = { (lockView: HUIPatternLockView, count: Int, password: String?) -> Void in
             guard count > 0 else {
                 return
             }
-            
             self.vPattern.resetDotsState()
-            
-            if self.authentication?.credentials == password {
-                
-                self.authenticationDelegate?.authenticationSucceed()
-            }else {
-                
-                UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_pattern(), color: R.color.errorColor()!)
-            }
+            self.authenticationPatternPresenter?.checkPatternCorrection(pattern: password!)
         }
+    }
+    
+    func showWrongPatternError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_pattern(), color: R.color.errorColor()!)
+    }
+    
+    func navigateToCardList() {
+        self.authenticationDelegate?.navigateToCardList()
+    }
+    
+    func navigateToProvisioning() {
+        self.authenticationDelegate?.navigateToProvisioning()
+    }
+    
+    func navigateToLockView() {
+        self.authenticationDelegate?.navigateToLockView()
     }
 }

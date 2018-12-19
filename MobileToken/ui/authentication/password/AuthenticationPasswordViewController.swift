@@ -1,65 +1,56 @@
 
-
 import UIKit
 import PasswordTextField
-protocol AuthenticationDelegate:class {
-    func authenticationSucceed()
-}
-class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegate {
+
+class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegate, AuthenticationPasswordViewProtocol {
     
     @IBOutlet var textFieldPassword: UITextField!
     
     var authenticationDelegate: AuthenticationDelegate?
     private var authentication: Authentication?
+    var authenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        authenticationPasswordPresenter = AuthenticationPasswordPresenter(authenticationPasswordView: self)
         initUIComponent()
     }
     
     func setDelegate(authenticationDelegate:AuthenticationDelegate) {
-        
         self.authenticationDelegate = authenticationDelegate
     }
     
     func initUIComponent() {
-        
         textFieldPassword.delegate = self
         textFieldPassword.becomeFirstResponder()
     }
     
-    func setAuthentication(authentication:Authentication) {
-        
-        self.authentication = authentication
-    }
-    
     @IBAction func textFieldPasswordEditingChanged(_ sender: UITextField) {
-        
-        if textFieldPassword.text == authentication?.credentials {
-            
-            authenticationDelegate?.authenticationSucceed()
-            textFieldPassword.enablesReturnKeyAutomatically = true
-        }else {
-            
-        }
+//        self.authenticationPasswordPresenter?.checkPasswordCorrection(password: sender.text!)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textFieldPassword.text == authentication?.credentials {
-            
-            authenticationDelegate?.authenticationSucceed()
-        }else {
-            
-            self.dismissKeyboard()
-            textFieldPassword.text = ""
-            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorColor()!)
-        }
-        
+        //TODO for checking pass 
+        self.authenticationPasswordPresenter?.checkPasswordCorrection(password: textField.text!)
         self.dismissKeyboard()
         return true
     }
     
+    func showWrongPasswordError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorColor()!)
+    }
     
+    func navigateToCardList() {
+        self.authenticationDelegate?.navigateToCardList()
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.ayandehColor()!)
+    }
+    
+    func navigateToProvisioning() {
+        self.authenticationDelegate?.navigateToProvisioning()
+    }
+    
+    func navigateToLockView() {
+        self.authenticationDelegate?.navigateToLockView()
+    }
 }
