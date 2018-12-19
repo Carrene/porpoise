@@ -68,10 +68,11 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         
         self.authenticationDefinitionDelegate = authenticationDefinitionDelegate
     }
-    
-    @IBAction func onEditBegin(_ sender: PasswordTextField) {
-        passwordHint.show(customView: passwordHintTableView!, direction: .down, in: view, from: (textFieldPassword.frame))
+    @IBAction func editBegin(_ sender: PasswordTextField) {
+         passwordHint.show(customView: passwordHintTableView!, direction: .down, in: view, from: (textFieldPassword.frame))
     }
+    
+   
     
     @IBAction func onEndEditing(_ sender: PasswordTextField) {
         passwordHint.hide()

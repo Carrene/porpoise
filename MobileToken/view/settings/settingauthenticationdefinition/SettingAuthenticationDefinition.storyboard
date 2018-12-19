@@ -97,7 +97,7 @@
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhg-fN-egb" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="30" y="69" width="315" height="40"/>
@@ -108,10 +108,10 @@
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                 <connections>
-                                    <action selector="onEditBegin:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="lmg-9a-zHp"/>
-                                    <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="1Cu-1L-UkB"/>
+                                    <action selector="editBegin:" destination="uiL-k5-FQr" eventType="editingDidBegin" id="QgM-aJ-qGk"/>
+                                    <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="UVb-Op-tNO"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE4-8J-QjC" userLabel="btConfirm">
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rp-Pe-avZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-887"/>
+            <point key="canvasLocation" x="718" y="-884"/>
         </scene>
         <!--Setting Authentication Definition Pattern View Controller-->
         <scene sceneID="qDN-03-hiz">
