@@ -95,6 +95,7 @@ class PasswordHintTableAdapter: NSObject,UITableViewDataSource,UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.passwordHintTableViewCell.identifier, for: indexPath) as! PasswordHintTableViewCell
         tableView.rowHeight = 30
+        tableView.isScrollEnabled = false
         var hintArray = Array(hintDataSource.keys)
         cell.lbHint.text = hintArray[indexPath.row]
         tableView.separatorColor = UIColor.clear
