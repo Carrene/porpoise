@@ -46,7 +46,7 @@ class SettingAuthenticationDefinitionPatternViewController: UIViewController {
             } else {
                 
                 self.secondAttemptPattern = password!
-                let authentication = Authentication(credentials: password, authenticationType: 1)
+                //let authentication = Authentication(credentials: password, authenticationType: 1)
                 if self.secondAttemptPattern == self.firstAttemptPattern {
                     //self.authenticationDefinitionDelegate?.authenticationSucceed(authentication: authentication)
                     UIHelper.showSpecificSnackBar(message:R.string.localizable.sb_successfully_done() , color: R.color.eyeCatching()!)

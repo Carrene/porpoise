@@ -6,7 +6,7 @@ import RealmSwift
 class UserRealmRepository:UserRepositoryProtocol {
     
     func get(identifier: Int, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
         if let user = realm.object(ofType: User.self, forPrimaryKey: identifier)?.copy() as? User {
             onDone?(RepositoryResponse(value: user))
         } else {
@@ -16,7 +16,7 @@ class UserRealmRepository:UserRepositoryProtocol {
     }
     
     func update(_ user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
         do {
             try realm.write {
                 realm.add(user.copy() as! User, update: true)

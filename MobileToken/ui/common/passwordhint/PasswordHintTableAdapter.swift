@@ -14,6 +14,7 @@ class PasswordHintTableAdapter: NSObject,UITableViewDataSource,UITableViewDelega
 //    var hintDataSource : [String:Bool]?
     var tableView : UITableView?
     var hintDataSource = [R.string.localizable.enter_at_least_eight_characters():false,R.string.localizable.enter_at_least_one_capital_letter():false,R.string.localizable.enter_at_least_one_digit():false,R.string.localizable.enter_at_least_one_special_character():false]
+    
     private var i = 0
     
     override init() {

@@ -52,7 +52,7 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         passwordHintAdapter = PasswordHintTableAdapter()
         passwordHintTableView?.delegate = passwordHintAdapter
         passwordHintTableView?.dataSource = passwordHintAdapter
-        passwordHintAdapter?.setDataSource(hintDataSource: hintDataSource)
+        //passwordHintAdapter?.setDataSource(hintDataSource: hintDataSource)
         passwordHint.bubbleColor = R.color.primary()!
         passwordHint.borderColor = UIColor.clear
         passwordHintTableView?.allowsSelection = false
@@ -96,7 +96,7 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
             passwordHintTableView?.reloadData()
         }
         
-        passwordHintAdapter?.setDataSource(hintDataSource: hintDataSource)
+        //passwordHintAdapter?.setDataSource(hintDataSource: hintDataSource)
         passwordIsValid = !hintDataSource.values.contains(false)
         
         if passwordIsValid == false {
@@ -116,7 +116,7 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
                 if textFieldConfirmPassword.text == textFieldPassword.text {
                     buttonConfirm.isEnabled = true
                     buttonConfirm.backgroundColor = R.color.secondary()
-                    let authentication = Authentication(credentials: textFieldPassword.text, authenticationType: 0)
+                    //let authentication = Authentication(credentials: textFieldPassword.text, authenticationType: 0)
                     //authenticationDefinitionDelegate?.authenticationSucceed(authentication: authentication)
                 }
             }

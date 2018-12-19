@@ -8,7 +8,7 @@ class BanckRealmRepository: BankRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[Bank]>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         let bankRealmResult: [Bank]? = realm.objects(Bank.self).map {$0.copy() as! Bank}
         if bankRealmResult == nil {
             onDone?(RepositoryResponse(value: nil))
@@ -18,7 +18,7 @@ class BanckRealmRepository: BankRepositoryProtocol {
     }
     
     func update(_ bank: Bank, onDone: ((RepositoryResponse<Bank>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         do {
             try realm.write {
                 realm.add(bank.copy() as! Bank, update: true)

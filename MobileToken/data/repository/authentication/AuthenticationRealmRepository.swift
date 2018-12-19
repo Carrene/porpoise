@@ -13,19 +13,19 @@ class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Authentication>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
         let authentication = realm.object(ofType: Authentication.self, forPrimaryKey: identifier)?.copy() as? Authentication
         onDone?(RepositoryResponse(value: authentication))
     }
     
     func getAll(onDone: ((RepositoryResponse<[Authentication]>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
         let authentications: [Authentication] = realm.objects(Authentication.self).map { $0.copy() as! Authentication }
         onDone?(RepositoryResponse(value: authentications))
     }
     
     func update(_ authentication: Authentication, onDone: ((RepositoryResponse<Authentication>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration)
+        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
         do {
             
             try realm.write {
