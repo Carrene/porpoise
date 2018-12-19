@@ -23,7 +23,7 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
     
     func initUIComponent() {
         self.hideKeyboardWhenTappedAround()
-        self.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = false
         let attr = NSDictionary(object: R.font.iranSansMobileBold(size: 16)!, forKey: NSAttributedString.Key.font as NSCopying)
         scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
         embedVCPattern()
@@ -53,11 +53,6 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
         let backItem = UIBarButtonItem()
         navigationItem.backBarButtonItem = backItem
     }
-    
-    func navigateToProvisioning() {
-        
-    }
-    
     
 }
 

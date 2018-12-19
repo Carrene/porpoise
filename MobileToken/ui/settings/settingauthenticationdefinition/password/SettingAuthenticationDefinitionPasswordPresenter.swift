@@ -42,7 +42,8 @@ class SettingAuthenticationDefinitionPasswordPresenter: SettingAuthenticationDef
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self!.authenticationDefinitionPasswordView.navigateToProvisioning()
+                UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+                //self!.authenticationDefinitionPasswordView.navigateToProvisioning()
                 self!.initScreenLocker()
             }
         }

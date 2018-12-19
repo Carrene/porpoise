@@ -59,8 +59,5 @@ class SettingAuthenticationDefinitionPatternViewController: UIViewController, Se
 
     }
     
-    func navigateToProvisioning() {
-        self.authenticationDefinitionDelegate?.navigateToProvisioning()
-    }
 }
 

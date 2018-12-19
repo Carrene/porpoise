@@ -42,7 +42,8 @@ class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefi
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self!.authenticationDefinitionPatternView.navigateToProvisioning()
+                UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+                //self!.authenticationDefinitionPatternView.navigateToProvisioning()
                 self!.initScreenLocker()
             }
         }

@@ -1,9 +1,9 @@
 
 
 import Foundation
+
 protocol SettingAuthenticationDefinitionPasswordViewProtocol: class {
     func showNotMatchError()
-    func navigateToProvisioning()
     func authenticationUpdatedAction()
     
 }

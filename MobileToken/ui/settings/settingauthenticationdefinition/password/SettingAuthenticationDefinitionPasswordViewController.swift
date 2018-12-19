@@ -107,10 +107,6 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     func authenticationUpdatedAction() {
         buttonConfirm.isEnabled = true
         buttonConfirm.backgroundColor = R.color.secondary()
-    }
-    
-    func navigateToProvisioning() {
-        self.authenticationDefinitionDelegate?.navigateToProvisioning()
-    }
+    }               
 }
 
