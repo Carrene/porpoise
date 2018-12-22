@@ -37,7 +37,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ImportTokenViewController" storyboardName="ImportToken" referencedIdentifier="ImportTokenViewController" id="Ofy-a9-fJG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBu-2F-Pys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2446" y="-1725"/>
+            <point key="canvasLocation" x="-2958" y="-1787"/>
         </scene>
         <!--AuthenticationViewController-->
         <scene sceneID="Vq0-ax-Ydg">

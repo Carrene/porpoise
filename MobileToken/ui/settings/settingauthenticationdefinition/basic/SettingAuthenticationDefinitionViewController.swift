@@ -49,6 +49,10 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
         vcPattern?.view.frame = authenticationTypeContainer.bounds
     }
     
+    func backToSetting() {
+        navigationController?.popViewController(animated: false)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
         navigationItem.backBarButtonItem = backItem
