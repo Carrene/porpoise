@@ -51,7 +51,7 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
     }
     
     func initScreenLocker() {
-        ScreenLocker.instance.stop()
+        ScreenLocker.instance.resetTimer(time: 0)
         ScreenLocker.instance._init(time: 60)
         ScreenLocker.instance.start();
     }

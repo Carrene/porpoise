@@ -27,7 +27,6 @@ class AuthenticationRealmRepository: AuthenticationRepositoryProtocol {
     func update(_ authentication: Authentication, onDone: ((RepositoryResponse<Authentication>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
         do {
-            
             try realm.write {
                 realm.add(authentication.copy() as! Authentication, update: true)
             }

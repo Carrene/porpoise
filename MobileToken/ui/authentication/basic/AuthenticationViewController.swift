@@ -4,8 +4,6 @@ import UIKit
 
 class AuthenticationViewController: UIViewController, AuthenticationDelegate, AuthenticationViewProtocol {
     
-    
-    
     @IBOutlet weak var vAuthenticationContainer: UIView!
     @IBOutlet weak var lbTitle: UILabel!
     
@@ -53,8 +51,6 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate, Au
     }
 
     func navigateToLockView() {
-        //vAuthenticationContainer.subviews.forEach({ $0.removeFromSuperview() })
-        //self.lbTitle.text = "lb_recived_to_max_attempt"
         performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToApplicationLock.identifier, sender: self)
     }
 }

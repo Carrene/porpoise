@@ -129,7 +129,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func segue() {
-        //performSegue
+        performSegue(withIdentifier: R.segue.phoneConfirmationViewController.phoneConfirmationToCardList, sender: self)
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
