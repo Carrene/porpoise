@@ -14,6 +14,7 @@ class IntroViewController {
             onboardingVC.dismiss(animated: true, completion: nil)
         }
         
+        
         var pages = [OnboardingContentViewController]()
         
         var title = R.string.localizable.intro1Title()

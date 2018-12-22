@@ -1,24 +1,26 @@
-
-
 import UIKit
 
 class MainViewController: UINavigationController {
 
+    var flag = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigateToTabbar()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if flag == 0 {
         intro()
+        }
     }
     
     func intro() {
         let onIntroEnd = { [weak self] in
-            UIApplication.shared.statusBarStyle = .default
+            self!.navigatoToAuthenticationDefinition()
         }
         let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
         present(introVC, animated: true, completion: nil)
+        flag = 1
     }
     
     func navigateToAuthentication() {

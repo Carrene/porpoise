@@ -191,7 +191,7 @@
                         <viewLayoutGuide key="safeArea" id="E4Q-3N-j6Y"/>
                     </view>
                     <connections>
-                        <outlet property="viewPattern" destination="NKw-0a-F9K" id="6u7-kv-PUY"/>
+                        <outlet property="vPattern" destination="NKw-0a-F9K" id="KkC-Sx-gnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1O-kb-cYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
