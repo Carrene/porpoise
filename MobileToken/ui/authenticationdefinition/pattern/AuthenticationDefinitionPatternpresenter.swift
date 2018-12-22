@@ -23,7 +23,7 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
             self.secondAttemptPattern = password
             if self.secondAttemptPattern == self.firstAttemptPattern {
                 updateAuthentication(credential: password)
-//                #warning("key drivate")
+                #warning("key drivate")
 //                RealmConfiguration.sensitiveDataEncryptionKey = "hamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhame"
                 
             } else {
@@ -42,7 +42,8 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self!.authenticationDefinitionPatternView.navigateToProvisioning()
+                UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+                self!.authenticationDefinitionPatternView.navigateToTabbar()
                 self!.initScreenLocker()
             }
         }
@@ -50,7 +51,8 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
     }
     
     func initScreenLocker() {
-        ScreenLocker.instance._init(time: 10)
+        ScreenLocker.instance.stop()
+        ScreenLocker.instance._init(time: 60)
         ScreenLocker.instance.start();
     }
 }

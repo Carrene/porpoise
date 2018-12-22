@@ -4,7 +4,7 @@ protocol AuthenticationDefinitionPatternViewProtocol: class {
     func showNotMatchError()
     func showTryForSecondTimeMessage()
     func showPatternMinPointError()
-    func navigateToProvisioning()
+    func navigateToTabbar()
 }
 
 protocol AuthenticationDefinitionPatternPresenterProtocol {

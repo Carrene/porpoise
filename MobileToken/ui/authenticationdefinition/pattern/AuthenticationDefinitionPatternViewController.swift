@@ -3,7 +3,6 @@ import UIKit
 import Foundation
 import HUIPatternLockView_Swift
 class AuthenticationDefinitionPatternViewController: UIViewController, AuthenticationDefinitionPatternViewProtocol {
-
     
     @IBOutlet weak var vPattern: HUIPatternLockView!
 
@@ -58,8 +57,8 @@ class AuthenticationDefinitionPatternViewController: UIViewController, Authentic
 
     }
     
-    func navigateToProvisioning() {
-        self.authenticationDefinitionDelegate?.navigateToProvisioning()
+    func navigateToTabbar() {
+        self.authenticationDefinitionDelegate?.navigateToTabbar()
     }
 }
 

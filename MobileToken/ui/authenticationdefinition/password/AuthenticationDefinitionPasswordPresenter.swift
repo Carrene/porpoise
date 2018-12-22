@@ -42,7 +42,8 @@ class AuthenticationDefinitionPasswordPresenter: AuthenticationDefinitionPasswor
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self!.authenticationDefinitionPasswordView.navigateToProvisioning()
+                UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+                self!.authenticationDefinitionPasswordView.navigateToTabbar()
                 self!.initScreenLocker()
             }
         }
@@ -50,7 +51,8 @@ class AuthenticationDefinitionPasswordPresenter: AuthenticationDefinitionPasswor
     }
     
     func initScreenLocker() {
-        ScreenLocker.instance._init(time: 10)
+        ScreenLocker.instance.stop()
+        ScreenLocker.instance._init(time: 60)
         ScreenLocker.instance.start();
     }
 }

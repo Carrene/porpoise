@@ -64,6 +64,7 @@
                     <connections>
                         <outlet property="authenticationTypeContainer" destination="kMi-2b-OMT" id="mDC-eB-ddZ"/>
                         <outlet property="scAuthenticationType" destination="Hmm-D3-AaW" id="zXt-Kb-DPs"/>
+                        <segue destination="kfU-nB-LY7" kind="show" identifier="AuthenticationDefinitionToTabbar" id="DHe-5P-Wbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEd-Mc-15z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -140,9 +141,13 @@
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="leading" secondItem="mRQ-Oi-FUQ" secondAttribute="leading" constant="30" id="oW6-4R-XyZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mRQ-Oi-FUQ"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MVf-ih-ZVt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="buttonConfirm" destination="MVf-ih-ZVt" id="wxd-jP-fUv"/>
                         <outlet property="textFieldConfirmPassword" destination="6K0-Ct-2n1" id="0Ci-hB-jeF"/>
                         <outlet property="textFieldPassword" destination="G0v-Up-gtc" id="CpT-DP-mPG"/>
                     </connections>
@@ -196,7 +201,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1O-kb-cYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-1577"/>
+            <point key="canvasLocation" x="718" y="-1634"/>
+        </scene>
+        <!--MainTabbar-->
+        <scene sceneID="pXb-zA-Gkd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="kfU-nB-LY7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAN-Hb-yya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="-1310"/>
         </scene>
     </scenes>
     <resources>

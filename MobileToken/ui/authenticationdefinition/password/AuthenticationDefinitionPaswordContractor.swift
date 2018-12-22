@@ -3,7 +3,7 @@
 import Foundation
 protocol AuthenticationDefinitionPasswordViewProtocol: class {
     func showNotMatchError()
-    func navigateToProvisioning()
+    func navigateToTabbar()
     func authenticationUpdatedAction()
     
 }

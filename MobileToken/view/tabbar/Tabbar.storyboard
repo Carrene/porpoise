@@ -23,8 +23,8 @@
                         <color key="barTintColor" name="primaryDark"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9Rl-F6-GbH" kind="relationship" relationship="viewControllers" id="EDb-hh-ixf"/>
                         <segue destination="0uT-4r-YxP" kind="relationship" relationship="viewControllers" id="cDn-Q2-dDv"/>
+                        <segue destination="9Rl-F6-GbH" kind="relationship" relationship="viewControllers" id="EDb-hh-ixf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSX-dc-Zho" userLabel="First Responder" sceneMemberID="firstResponder"/>

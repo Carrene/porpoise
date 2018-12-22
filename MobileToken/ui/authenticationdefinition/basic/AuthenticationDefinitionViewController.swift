@@ -54,8 +54,8 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
         navigationItem.backBarButtonItem = backItem
     }
     
-    func navigateToProvisioning() {
-        
+    func navigateToTabbar() {
+       performSegue(withIdentifier: R.segue.authenticationDefinitionViewController.authenticationDefinitionToTabbar, sender: self)
     }
     
     

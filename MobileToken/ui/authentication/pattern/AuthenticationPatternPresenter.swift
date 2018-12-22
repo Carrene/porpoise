@@ -29,7 +29,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
             authentication?.successAttempt()
             RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: pattern.bytes, salt: (self.authentication?.salt!.bytes)!)?.toHexString())!
             updateAuthentication(authentication: self.authentication!)
-            getUser()
+            //getUser()
         } else {
             self.authentication?.failAttempt()
             updateAuthentication(authentication: self.authentication!)

@@ -2,14 +2,13 @@ import UIKit
 
 class MainViewController: UINavigationController {
 
-    var flag = 0
+    var hasWizardShown = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if flag == 0 {
+        if hasWizardShown == false {
         intro()
         }
     }
@@ -20,7 +19,7 @@ class MainViewController: UINavigationController {
         }
         let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
         present(introVC, animated: true, completion: nil)
-        flag = 1
+        hasWizardShown = true
     }
     
     func navigateToAuthentication() {

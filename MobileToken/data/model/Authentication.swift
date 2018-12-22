@@ -18,6 +18,7 @@ class Authentication: Object, Mappable, NSCopying{
         get { return Id }
         set { Id = newValue }
     }
+    
     override class func primaryKey() -> String {
         return "Id"
     }
