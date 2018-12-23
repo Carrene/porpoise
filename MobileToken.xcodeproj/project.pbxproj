@@ -64,6 +64,7 @@
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
 		AC4C4DC121CFB5D700B15B90 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC021CFB5D700B15B90 /* Setting.swift */; };
+		AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -225,6 +226,7 @@
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardList.storyboard; sourceTree = "<group>"; };
 		AC4C4DC021CFB5D700B15B90 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 		AC4C4DC221CFC81F00B15B90 /* setting */ = {
 			isa = PBXGroup;
 			children = (
+				AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -1514,6 +1517,7 @@
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
+				AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */,
 				AC16D73021CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
