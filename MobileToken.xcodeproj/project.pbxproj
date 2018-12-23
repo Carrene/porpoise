@@ -481,6 +481,13 @@
 			path = cardlist;
 			sourceTree = "<group>";
 		};
+		AC4C4DC221CFC81F00B15B90 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
@@ -792,6 +799,7 @@
 		AF463BC62189DD1500DC8A3E /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				AC4C4DC221CFC81F00B15B90 /* setting */,
 				AF246AA9219ADC0E00C44E4B /* token */,
 				AF246AA2219AB8CE00C44E4B /* card */,
 				AF246A9B219AA53600C44E4B /* bank */,
