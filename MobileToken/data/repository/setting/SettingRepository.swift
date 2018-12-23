@@ -1,9 +1,22 @@
-//
-//  SettingRepository.swift
-//  MobileToken
-//
-//  Created by Fateme' Kazemi on 10/2/1397 AP.
-//  Copyright © 1397 ba24.ir. All rights reserved.
-//
-
 import Foundation
+
+class SettingRepository:SettingRepositoryProtocol {
+    
+    func get(onDone: ((RepositoryResponse<Setting>) -> ())?) {
+        
+    }
+    
+    func get(identifier: Int, onDone: ((RepositoryResponse<Setting>) -> ())?) {
+        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+    }
+    
+    func getAll(onDone: ((RepositoryResponse<[Setting]>) -> ())?) {
+        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+    }
+    
+    func update(_: Setting, onDone: ((RepositoryResponse<Setting>) -> ())?) {
+        
+    }
+    
+    
+}
