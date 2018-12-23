@@ -2,7 +2,7 @@
 
 import Foundation
 import RealmSwift
-class BanckRealmRepository: BankRepositoryProtocol {
+class BankRealmRepository: BankRepositoryProtocol {
     func get(identifier: Int, onDone: ((RepositoryResponse<Bank>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }

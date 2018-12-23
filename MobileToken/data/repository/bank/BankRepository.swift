@@ -3,7 +3,7 @@
 import Foundation
 class BankRepository: BankRepositoryProtocol {
     
-    let bankRealmRepository = BanckRealmRepository()
+    let bankRealmRepository = BankRealmRepository()
     func get(identifier: Int, onDone: ((RepositoryResponse<Bank>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }

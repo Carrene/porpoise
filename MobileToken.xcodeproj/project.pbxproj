@@ -490,9 +490,9 @@
 		AC4C4DC221CFC81F00B15B90 /* setting */ = {
 			isa = PBXGroup;
 			children = (
-				AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */,
 				AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */,
 				AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */,
+				AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -1068,8 +1068,8 @@
 			isa = PBXGroup;
 			children = (
 				AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */,
-				AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */,
 				AF246A852199762700C44E4B /* AuthenticationRepository.swift */,
+				AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */,
 			);
 			path = authentication;
 			sourceTree = "<group>";

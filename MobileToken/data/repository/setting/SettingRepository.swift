@@ -2,6 +2,8 @@ import Foundation
 
 class SettingRepository:SettingRepositoryProtocol {
     
+    var realmRepository = SettingRealmRepository()
+    
     func get(onDone: ((RepositoryResponse<Setting>) -> ())?) {
         
     }
