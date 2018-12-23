@@ -7,7 +7,6 @@ import RealmSwift
 class Bank: Object, Mappable, NSCopying{
     
     @objc private dynamic var Name: String? = nil
-
     var name: String? {
         get { return Name }
         set { Name = newValue }

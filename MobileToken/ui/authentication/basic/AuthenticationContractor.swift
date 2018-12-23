@@ -13,6 +13,6 @@ protocol AuthenticationPresenterProtocol {
 
 protocol AuthenticationDelegate:class {
     func navigateToCardList()
-    func navigateToProvisioning()
+    func navigateToInputPhoneNumber()
     func navigateToLockView()
 }

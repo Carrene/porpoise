@@ -46,8 +46,8 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.ayandehColor()!)
     }
     
-    func navigateToProvisioning() {
-        self.authenticationDelegate?.navigateToProvisioning()
+    func navigateToInputPhoneNumber() {
+        self.authenticationDelegate?.navigateToInputPhoneNumber()
     }
     
     func navigateToLockView() {

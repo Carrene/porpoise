@@ -53,6 +53,8 @@
                         <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
                         <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>
                         <segue destination="HTl-cV-4Gj" kind="show" identifier="AuthenticationToApplicationLock" id="tat-VG-Qao"/>
+                        <segue destination="GVM-Pt-XaU" kind="show" identifier="AuthenticationToRegistration" id="OhW-wq-eiu"/>
+                        <segue destination="WHz-rC-ahz" kind="show" identifier="AuthenticationToCardList" id="2ZA-t0-htw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbP-Yh-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,7 +113,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XG-Fo-HNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-887"/>
+            <point key="canvasLocation" x="-858" y="-957"/>
+        </scene>
+        <!--PhoneInputViewController-->
+        <scene sceneID="osd-Q4-Spk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="PhoneInputViewController" id="GVM-Pt-XaU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mz8-Yg-kub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-1454"/>
+        </scene>
+        <!--TokenListViewController-->
+        <scene sceneID="tVn-vf-YgA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardList" referencedIdentifier="TokenListViewController" id="WHz-rC-ahz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kng-tA-ttj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="-1214"/>
         </scene>
         <!--ApplicationLockViewController-->
         <scene sceneID="SCT-dU-z2b">
@@ -119,7 +137,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ApplicationLockViewController" storyboardName="ApplicationLock" referencedIdentifier="ApplicationLockViewController" id="HTl-cV-4Gj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWm-Ta-qyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="-1763"/>
+            <point key="canvasLocation" x="726" y="-1032"/>
         </scene>
         <!--Authentication Pattern View Controller-->
         <scene sceneID="g7p-MB-Twu">
@@ -171,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0CG-dI-dZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-1577"/>
+            <point key="canvasLocation" x="-858" y="-1643"/>
         </scene>
     </scenes>
     <resources>

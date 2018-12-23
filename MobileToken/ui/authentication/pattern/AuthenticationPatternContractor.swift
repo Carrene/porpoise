@@ -3,7 +3,7 @@ import Foundation
 protocol AuthenticationPatternViewProtocol: class {
     func showWrongPatternError()
     func navigateToCardList()
-    func navigateToProvisioning()
+    func navigateToInputPhoneNumber()
     func navigateToLockView()
 }
 

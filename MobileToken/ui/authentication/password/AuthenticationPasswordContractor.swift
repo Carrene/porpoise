@@ -4,7 +4,7 @@ import Foundation
 protocol AuthenticationPasswordViewProtocol: class {
     func showWrongPasswordError()
     func navigateToCardList()
-    func navigateToProvisioning()
+    func navigateToInputPhoneNumber()
     func navigateToLockView()
 }
 

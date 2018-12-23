@@ -7,6 +7,7 @@ class ScreenLocker {
     private init() {
     }
     
+    static var SCREEN_LOCKER_TIME = 60
     var timer:Timer!
     var time:Int!
     

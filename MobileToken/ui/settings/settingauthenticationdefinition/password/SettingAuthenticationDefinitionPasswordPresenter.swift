@@ -51,7 +51,7 @@ class SettingAuthenticationDefinitionPasswordPresenter: SettingAuthenticationDef
     }
     
     func initScreenLocker() {
-        ScreenLocker.instance._init(time: 10)
+        ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
         ScreenLocker.instance.start();
     }
 }

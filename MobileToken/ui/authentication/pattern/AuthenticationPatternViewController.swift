@@ -45,8 +45,8 @@ class AuthenticationPatternViewController: UIViewController, AuthenticationPatte
         self.authenticationDelegate?.navigateToCardList()
     }
     
-    func navigateToProvisioning() {
-        self.authenticationDelegate?.navigateToProvisioning()
+    func navigateToInputPhoneNumber() {
+        self.authenticationDelegate?.navigateToInputPhoneNumber()
     }
     
     func navigateToLockView() {

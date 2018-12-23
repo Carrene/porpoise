@@ -41,13 +41,13 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate, Au
         vAuthenticationContainer.addSubview((vcPattern?.view)!)
         vcPattern?.view.frame = vAuthenticationContainer.bounds
     }
-    //TODO: Move to presenter
+    
     func navigateToCardList() {
-//        performSegue(withIdentifier: R.segue.mobileTokenAuthenticationViewController.authenticationToCardList.identifier, sender: self)
+        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList, sender: self)
     }
 
-    func navigateToProvisioning() {
-//        performSegue(withIdentifier:R.segue.mobileTokenAuthenticationViewController.authenticationToProvisioning.identifier, sender: self)
+    func navigateToInputPhoneNumber() {
+        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration, sender: self)
     }
 
     func navigateToLockView() {

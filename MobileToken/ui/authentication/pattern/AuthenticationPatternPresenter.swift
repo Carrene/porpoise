@@ -29,7 +29,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
             authentication?.successAttempt()
             RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: pattern.bytes, salt: (self.authentication?.salt!.bytes)!)?.toHexString())!
             updateAuthentication(authentication: self.authentication!)
-            //getUser()
+            getUser()
         } else {
             self.authentication?.failAttempt()
             updateAuthentication(authentication: self.authentication!)
@@ -64,7 +64,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
                 if repoResponse.value != nil {
                     self?.authenticationPatternView.navigateToCardList()
                 } else {
-                    self?.authenticationPatternView.navigateToProvisioning()
+                    self?.authenticationPatternView.navigateToInputPhoneNumber()
                 }
             }
         }
@@ -73,7 +73,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
     
     func initScreenLocker() {
         ScreenLocker.instance.resetTimer(time: 0)
-        ScreenLocker.instance._init(time: 10)
+        ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
         ScreenLocker.instance.start()
     }
 }
