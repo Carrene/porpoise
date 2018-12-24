@@ -67,6 +67,7 @@
 		AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */; };
 		AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */; };
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
+		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -231,6 +232,7 @@
 		AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRealmRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
+		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 			children = (
 				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
 				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
+				AC4C4DC921D114B400B15B90 /* SettingMediator.swift */,
 			);
 			path = basic;
 			sourceTree = "<group>";
@@ -1523,6 +1526,7 @@
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,
+				AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */,
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
 				AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */,
