@@ -1,11 +1,14 @@
 import Foundation
 
-class SettingRepository:SettingRepositoryProtocol {
+class SettingRepository : SettingRepositoryProtocol {
     
-    var realmRepository = SettingRealmRepository()
+    let settingRealmRepository = SettingRealmRepository()
     
     func get(onDone: ((RepositoryResponse<Setting>) -> ())?) {
-        
+        settingRealmRepository.get {
+            realmRepositoryResponse in
+            onDone?(realmRepositoryResponse)
+        }
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Setting>) -> ())?) {
@@ -16,8 +19,10 @@ class SettingRepository:SettingRepositoryProtocol {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }
     
-    func update(_: Setting, onDone: ((RepositoryResponse<Setting>) -> ())?) {
-        
+    func update(_ setting: Setting, onDone: ((RepositoryResponse<Setting>) -> ())?) {
+        settingRealmRepository.update(setting) { realmRepositoryResponse in
+            onDone?(realmRepositoryResponse)
+        }
     }
     
     

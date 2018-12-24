@@ -688,9 +688,9 @@
 		AF246A9B219AA53600C44E4B /* bank */ = {
 			isa = PBXGroup;
 			children = (
-				AF246A9C219AA57B00C44E4B /* BankRepositoryProtocol.swift */,
 				AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */,
 				AF246AA0219AB17F00C44E4B /* BankRepository.swift */,
+				AF246A9C219AA57B00C44E4B /* BankRepositoryProtocol.swift */,
 			);
 			path = bank;
 			sourceTree = "<group>";
