@@ -7,6 +7,7 @@ class SettingRealmRepository:SettingRepositoryProtocol {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         if let setting = realm.object(ofType: Setting.self, forPrimaryKey: Identifier.self)?.copy() as? Setting {
             onDone?(RepositoryResponse(value: setting))
+            
         } else {
             onDone?(RepositoryResponse(value: nil, restDataResponse: nil, error: nil))
         }
@@ -20,8 +21,16 @@ class SettingRealmRepository:SettingRepositoryProtocol {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }
     
-    func update(_: Setting, onDone: ((RepositoryResponse<Setting>) -> ())?) {
-        
+    func update(_ setting : Setting, onDone: ((RepositoryResponse<Setting>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        do {
+            try realm.write {
+                realm.add(setting.copy() as! Setting, update: true)
+            }
+            onDone?(RepositoryResponse(value: setting.copy() as? Setting))
+        } catch {
+            onDone?(RepositoryResponse(error: error))
+        }
     }
     
     
