@@ -11,6 +11,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     
     var settingTableAdapterProtocol : SettingsTableAdapterProtocol?
     var sender:SettingsViewController?
+    var settingMediator : SettingMediator?
     
     func setDelegate(settingTableAdapterProtocol:SettingsTableAdapterProtocol) {
         self.settingTableAdapterProtocol = settingTableAdapterProtocol
@@ -30,8 +31,10 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         switch indexPath.row {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
+            (cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = "\(settingMediator?.getSetting().lockTimer)"
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            cell.textLabel?.text = settingMediator?.getAuthentication().AuthenticationType
         default:
             break
         }
