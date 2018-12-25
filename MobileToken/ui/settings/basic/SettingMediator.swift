@@ -5,7 +5,7 @@ class SettingMediator {
     private var setting : Setting?
     private var authentication : Authentication?
     
-    init(setting:Setting ,  authentication:Authentication) {
+    init(setting:Setting ,authentication:Authentication) {
         self.setting = setting
         self.authentication = authentication
     }
