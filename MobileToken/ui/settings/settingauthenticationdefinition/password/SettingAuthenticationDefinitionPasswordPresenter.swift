@@ -1,6 +1,5 @@
-
-
 import Foundation
+
 class SettingAuthenticationDefinitionPasswordPresenter: SettingAuthenticationDefinitionPasswordPresenterProtocol {
     
     unowned let authenticationDefinitionPasswordView: SettingAuthenticationDefinitionPasswordViewProtocol

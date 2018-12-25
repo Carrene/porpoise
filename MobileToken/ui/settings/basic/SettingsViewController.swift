@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
