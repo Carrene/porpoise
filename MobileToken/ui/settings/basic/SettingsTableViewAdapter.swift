@@ -35,14 +35,19 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
             
             if let lockTimer = settingMediator?.getSetting().lockTimer {
-                (cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = "\(lockTimer)"
+                (cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = " \(lockTimer) " + R.string.localizable.lb_seconds()
             } else {
                 //(cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = "60"
             }
             
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
-            (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = settingMediator?.getAuthentication().AuthenticationType
+            if settingMediator?.getAuthentication().AuthenticationType == "pattern" {
+                (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = R.string.localizable.lb_pattern()
+            } else {
+                (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = R.string.localizable.lb_password()
+            }
+            
         default:
             break
         }

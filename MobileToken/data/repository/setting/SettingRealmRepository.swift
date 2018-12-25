@@ -7,9 +7,9 @@ class SettingRealmRepository:SettingRepositoryProtocol {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         if let setting = realm.object(ofType: Setting.self, forPrimaryKey: 1)?.copy() as? Setting {
             onDone?(RepositoryResponse(value: setting))
-            
         } else {
-            onDone?(RepositoryResponse(value: nil, restDataResponse: nil, error: nil))
+            let setting = Setting(lockTimer: 60)
+            onDone?(RepositoryResponse(value: setting))
         }
     }
     

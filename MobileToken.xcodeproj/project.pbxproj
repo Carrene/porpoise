@@ -817,14 +817,14 @@
 		AF463BC62189DD1500DC8A3E /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				AFE81B2D2196DD1300AA0AF2 /* authentication */,
+				AF246A9B219AA53600C44E4B /* bank */,
+				AFE81B322196E00700AA0AF2 /* base */,
+				AF246AA2219AB8CE00C44E4B /* card */,
+				AF463BC72189DD2300DC8A3E /* configuration */,
 				AC4C4DC221CFC81F00B15B90 /* setting */,
 				AF246AA9219ADC0E00C44E4B /* token */,
-				AF246AA2219AB8CE00C44E4B /* card */,
-				AF246A9B219AA53600C44E4B /* bank */,
 				AF246A8921999AB700C44E4B /* user */,
-				AFE81B322196E00700AA0AF2 /* base */,
-				AFE81B2D2196DD1300AA0AF2 /* authentication */,
-				AF463BC72189DD2300DC8A3E /* configuration */,
 			);
 			path = repository;
 			sourceTree = "<group>";
