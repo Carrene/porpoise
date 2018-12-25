@@ -1,10 +1,11 @@
 import UIKit
 
-class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
+class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,SettingViewProtocol {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var labelVersion: UILabel!
     var adapter : SettingsTableViewAdapter?
+    var settingViewProtocol:SettingViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,10 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol {
         tableView.backgroundColor = R.color.primary()
         tableView.reloadData()
         
+    }
+    
+    func getSettingMediator(settingMediator: SettingMediator) {
+        <#code#>
     }
 
     func selectedSegue(identifier: String) {
