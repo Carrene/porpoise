@@ -17,7 +17,19 @@ class SettingPresenter:SettingPresenterProtocol {
     }
     
     func updateSetting(setting: Setting) {
-        
+        let settingRepository = SettingRealmRepository()
+        let onDataResponse: ((RepositoryResponse<Setting>) -> ()) = {[weak self] repoResponse in
+            if repoResponse.error != nil {
+                UIHelper.showFailedSnackBar()
+            } else {
+                if let setting = repoResponse.value {
+                    self?.setting = setting
+                } else {
+                    UIHelper.showFailedSnackBar()
+                }
+            }
+        }
+        settingRepository.update(setting, onDone: onDataResponse)
     }
     
     func getAuthentication() -> Authentication{
