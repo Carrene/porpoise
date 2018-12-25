@@ -21,19 +21,15 @@ class SettingPresenter:SettingPresenterProtocol {
     func getAuthentication() {
         let authenticationRepository = AuthenticationRealmRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
-            if let error = repoResponse.error {
+            if repoResponse.error != nil {
                 UIHelper.showFailedSnackBar()
             } else {
-                if let authentication = repoResponse.value, !authentication.isLocked {
+                if let authentication = repoResponse.value {
                     if authentication.authenticationType == AuthenticationTypeEnum.PASSWORD {
-                        //self?.authenticationView.setAuthentication(label: R.string.localizable.lb_enter_password())
-                        //self?.authenticationView.embedVCPassword(authentication:repoResponse.value!)
+                        
                     } else {
-                        //self?.authenticationView.setAuthentication(label: R.string.localizable.lb_enter_pattern())
-                        //self?.authenticationView.embedVCPattern(authentication: repoResponse.value!)
+                        
                     }
-                } else {
-                    //self?.authenticationView.navigateToLockView()
                 }
             }
         }
@@ -43,7 +39,7 @@ class SettingPresenter:SettingPresenterProtocol {
     func getSetting() {
         let settingRepository = SettingRealmRepository()
         let onDataResponse: ((RepositoryResponse<Setting>) -> ()) = {[weak self] repoResponse in
-            if let error = repoResponse.error {
+            if repoResponse.error != nil {
                 UIHelper.showFailedSnackBar()
             } else {
                 if let setting = repoResponse.value {
