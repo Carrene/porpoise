@@ -11,9 +11,9 @@ class SettingPresenter:SettingPresenterProtocol {
         self.settingView = settingView
     }
     
-    func getAllDataSetting() {
+    func getAllDataSetting() -> SettingMediator {
         settingMediator = SettingMediator(setting: getSetting(), authentication: getAuthentication())
-        
+        return settingMediator!
     }
     
     func updateSetting(setting: Setting) {
