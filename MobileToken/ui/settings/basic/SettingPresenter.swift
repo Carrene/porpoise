@@ -1,7 +1,7 @@
 import Foundation
 
 class SettingPresenter:SettingPresenterProtocol {
-    
+
     var settingMediator : SettingMediator?
     unowned let settingView : SettingViewProtocol
     var setting:Setting?
@@ -11,9 +11,9 @@ class SettingPresenter:SettingPresenterProtocol {
         self.settingView = settingView
     }
     
-    func getAllDataSetting() -> SettingMediator {
+    func getAllDataSetting() {
         settingMediator = SettingMediator(setting: getSetting(), authentication: getAuthentication())
-        return settingMediator!
+        settingView.getSettingMediator(settingMediator: settingMediator!)
     }
     
     func updateSetting(setting: Setting) {
