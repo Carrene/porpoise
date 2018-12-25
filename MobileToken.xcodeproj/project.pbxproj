@@ -69,6 +69,7 @@
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
+		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -235,6 +236,7 @@
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
+		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -512,10 +514,11 @@
 		AC75A4ED21B26EE7009441C4 /* basic */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
-				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
-				AC4C4DC921D114B400B15B90 /* SettingMediator.swift */,
 				AC5940C321D2190C00D56840 /* SettingContractor.swift */,
+				AC4C4DC921D114B400B15B90 /* SettingMediator.swift */,
+				AC5940C521D219FC00D56840 /* SettingPresenter.swift */,
+				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
+				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
 			);
 			path = basic;
 			sourceTree = "<group>";
@@ -1489,6 +1492,7 @@
 				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
+				AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */,
 				AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,
 				AC16D73821CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */,
