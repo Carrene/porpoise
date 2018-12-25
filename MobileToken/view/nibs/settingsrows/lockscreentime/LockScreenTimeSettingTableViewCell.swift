@@ -8,7 +8,7 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     @IBOutlet var labelSecond: UILabel!
     
     var selectedIndex = 1
-    
+    //TODO: set time and buttons
     override func awakeFromNib() {
         
         super.awakeFromNib()
