@@ -5,15 +5,17 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     @IBOutlet var tableView: UITableView!
     @IBOutlet var labelVersion: UILabel!
     var adapter : SettingsTableViewAdapter?
-    var settingViewProtocol:SettingViewProtocol?
-    
+    var settingPresenter:SettingPresenterProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingPresenter = SettingPresenter(settingView: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         initTableView()
         getVersion()
+        settingPresenter?.getAllDataSetting()
     }
     
     func getVersion() {
@@ -35,7 +37,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     }
     
     func getSettingMediator(settingMediator: SettingMediator) {
-        <#code#>
+        adapter?.setSettingMediator(settingMediator: settingMediator)
     }
 
     func selectedSegue(identifier: String) {

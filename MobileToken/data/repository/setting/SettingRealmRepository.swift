@@ -5,7 +5,7 @@ class SettingRealmRepository:SettingRepositoryProtocol {
     
     func get(onDone: ((RepositoryResponse<Setting>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-        if let setting = realm.object(ofType: Setting.self, forPrimaryKey: Identifier.self)?.copy() as? Setting {
+        if let setting = realm.object(ofType: Setting.self, forPrimaryKey: 1)?.copy() as? Setting {
             onDone?(RepositoryResponse(value: setting))
             
         } else {

@@ -23,8 +23,6 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
             self.secondAttemptPattern = password
             if self.secondAttemptPattern == self.firstAttemptPattern {
                 updateAuthentication(credential: password)
-                #warning("key drivate")
-//                RealmConfiguration.sensitiveDataEncryptionKey = "hamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhame"
                 
             } else {
                 self.firstAttemptPattern = nil

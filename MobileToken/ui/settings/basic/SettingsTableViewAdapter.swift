@@ -15,6 +15,10 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         self.settingTableAdapterProtocol = settingTableAdapterProtocol
     }
     
+    func setSettingMediator(settingMediator:SettingMediator) {
+        self.settingMediator = settingMediator
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
