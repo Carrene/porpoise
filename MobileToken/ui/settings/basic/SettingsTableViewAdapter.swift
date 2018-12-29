@@ -36,6 +36,14 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             
             if let lockTimer = settingMediator?.getSetting().lockTimer {
                 (cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = " \(lockTimer) " + R.string.localizable.lb_seconds()
+                
+                for index in (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime.indices {
+                    let button  = (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime[index]
+                    if button.currentTitle == "\(lockTimer)" {
+                        button.isSelected = true
+                    }
+                }
+                
             } else {
                 //(cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = "60"
             }
