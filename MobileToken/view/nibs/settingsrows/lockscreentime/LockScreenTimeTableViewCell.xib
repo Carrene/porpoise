@@ -14,8 +14,8 @@
         <array key="IRANSansMobile(FaNum).ttf">
             <string>IRANSansMobileFaNum</string>
         </array>
-        <array key="IRANSansMobile-Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
+        <array key="IRANSansMobile(FaNum)_Bold.ttf">
+            <string>IRANSansMobileFaNum-Bold</string>
         </array>
         <array key="IRANSansMobile-Medium.ttf">
             <string>IRANSansMobile-Medium</string>
@@ -43,8 +43,8 @@
                                             <constraint firstAttribute="height" constant="40" id="GKj-mC-GyI"/>
                                             <constraint firstAttribute="width" constant="60" id="gL3-R6-abk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                        <state key="normal" title="۳۰">
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                        <state key="normal" title="30">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
@@ -57,8 +57,8 @@
                                             <constraint firstAttribute="width" constant="60" id="pjb-Mm-7W2"/>
                                             <constraint firstAttribute="height" constant="40" id="sva-7b-mPX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                        <state key="normal" title="۹۰">
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                        <state key="normal" title="90">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
@@ -71,8 +71,8 @@
                                             <constraint firstAttribute="width" constant="60" id="CQs-ho-qsa"/>
                                             <constraint firstAttribute="height" constant="40" id="e7E-a0-cUt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                        <state key="normal" title="۱۲۰">
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                        <state key="normal" title="120">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
@@ -85,8 +85,8 @@
                                             <constraint firstAttribute="width" constant="60" id="EVa-xR-3V5"/>
                                             <constraint firstAttribute="height" constant="40" id="cMk-Jw-BNJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                        <state key="normal" title="۶۰">
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                        <state key="normal" title="60">
                                             <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>

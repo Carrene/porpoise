@@ -7,8 +7,8 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     @IBOutlet var collectionButtonsTime: [UIButton]!
     @IBOutlet var labelSecond: UILabel!
     
-    var selectedIndex = 1
-    //TODO: set time and buttons
+    var selectedIndex:Int?
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
@@ -32,6 +32,11 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
         }
     }
     
+    func setSelectedIndex(selectedIndex:Int) {
+        self.selectedIndex = selectedIndex
+        setSelected(button: collectionButtonsTime[selectedIndex])
+    }
+    
     private func setSelected(button:UIButton){
         labelSecond.text =  button.currentTitle! + " " + R.string.localizable.lb_seconds()
         button.layer.backgroundColor = R.color.buttonColor()?.cgColor
@@ -48,18 +53,18 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     
     @IBAction func onTimeButton(_ sender: UIButton) {
         
-                for index in collectionButtonsTime.indices {
-                    let button  = collectionButtonsTime[index]
-                    if index == collectionButtonsTime.index(of: sender)
-                    {
-                        selectedIndex = index
-                        setSelected(button: button)
-                    }
-                    else {
-        
-                        setDeselect(button: button)
-                    }
-                }
+        for index in collectionButtonsTime.indices {
+            let button  = collectionButtonsTime[index]
+            if index == collectionButtonsTime.index(of: sender)
+            {
+                selectedIndex = index
+                setSelected(button: button)
+            }
+            else {
+                
+                setDeselect(button: button)
+            }
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

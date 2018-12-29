@@ -40,7 +40,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
                 for index in (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime.indices {
                     let button  = (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime[index]
                     if button.currentTitle == "\(lockTimer)" {
-                        button.isSelected = true
+                        (cell as! LockScreenTimeSettingTableViewCell).setSelectedIndex(selectedIndex: index)
                     }
                 }
                 

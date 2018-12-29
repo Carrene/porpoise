@@ -40,15 +40,15 @@ class UIHelper {
     }
     
     static func showFailedSnackBar() {
-        SnackBarHelper.init(message: R.string.localizable.sb_bad_request(),color:R.color.errorColor()!, duration:TTGSnackbarDuration.long).show()
+        SnackBarHelper.init(message: R.string.localizable.sb_bad_request(),color:R.color.errorColor()!, duration:TTGSnackbarDuration.middle).show()
     }
     
     static func showSuccessfulSnackBar(message:String) {
-        SnackBarHelper.init(message: message,color:R.color.eyeCatching()!, duration:TTGSnackbarDuration.long).show()
+        SnackBarHelper.init(message: message,color:R.color.eyeCatching()!, duration:TTGSnackbarDuration.middle).show()
     }
     
     static func showSpecificSnackBar(message:String, color:UIColor) {
-        SnackBarHelper.init(message: message,color:color, duration: TTGSnackbarDuration.long).show()
+        SnackBarHelper.init(message: message,color:color, duration: TTGSnackbarDuration.middle).show()
     }
     
     static func showSpecificSnackBar(message:String, color:UIColor, duration: TTGSnackbarDuration) {
