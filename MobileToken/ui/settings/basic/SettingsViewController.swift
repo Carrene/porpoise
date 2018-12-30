@@ -6,7 +6,8 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     @IBOutlet var labelVersion: UILabel!
     var adapter : SettingsTableViewAdapter?
     var settingPresenter:SettingPresenterProtocol?
-
+    var settingMediator:SettingMediator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingPresenter = SettingPresenter(settingView: self)
@@ -16,6 +17,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
         initTableView()
         getVersion()
         settingPresenter?.getAllDataSetting()
+        // = setingview.getsetingmediator
     }
     
     func getVersion() {
@@ -38,14 +40,25 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     
     func getSettingMediator(settingMediator: SettingMediator) {
         adapter?.setSettingMediator(settingMediator: settingMediator)
+        self.settingMediator = settingMediator
     }
 
     func selectedSegue(identifier: String) {
         performSegue(withIdentifier: identifier, sender: self)
     }
     
+    func updateLockTimer(lockTimer: Int) {
+        settingMediator?.setSetting(setting: Setting(lockTimer: lockTimer))
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
     }
+    
+    func changeAuthentication() {
+        
+    }
+    
 
 }

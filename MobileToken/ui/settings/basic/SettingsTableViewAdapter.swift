@@ -2,14 +2,17 @@ import Foundation
 import UIKit
 
 protocol SettingsTableAdapterProtocol {
+    func changeAuthentication()
     func selectedSegue(identifier:String)
+    func updateLockTimer(lockTimer:Int)
 }
 
-class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource {
+class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource,LockScreenTimeSettingTableViewCellProtocol {
     
     var settingTableAdapterProtocol : SettingsTableAdapterProtocol?
     var sender:SettingsViewController?
     var settingMediator : SettingMediator?
+    var lockTimer:Int?
     
     func setDelegate(settingTableAdapterProtocol:SettingsTableAdapterProtocol) {
         self.settingTableAdapterProtocol = settingTableAdapterProtocol
@@ -27,20 +30,29 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         self.sender = sender
     }
     
+    func updateLockTimer(lockTimer: Int) {
+        self.lockTimer = lockTimer
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         cell.selectionStyle = .none
         switch indexPath.row {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
+            (cell as! LockScreenTimeSettingTableViewCell).setDelegate(lockScreenTimeSettingTableViewCellProtocol: self)
             
             if let lockTimer = settingMediator?.getSetting().lockTimer {
+                
                 (cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = " \(lockTimer) " + R.string.localizable.lb_seconds()
                 
                 for index in (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime.indices {
                     let button  = (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime[index]
+                    button.isSelected = false
                     if button.currentTitle == "\(lockTimer)" {
                         (cell as! LockScreenTimeSettingTableViewCell).setSelectedIndex(selectedIndex: index)
+                        button.isSelected = true
+                        break
                     }
                 }
                 

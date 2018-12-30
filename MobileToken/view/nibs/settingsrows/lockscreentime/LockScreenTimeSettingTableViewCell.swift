@@ -1,12 +1,18 @@
 import UIKit
 
+protocol LockScreenTimeSettingTableViewCellProtocol {
+    func updateLockTimer(lockTimer:Int)
+}
+
 class LockScreenTimeSettingTableViewCell: UITableViewCell {
     
     @IBOutlet var viewCell: UIView!
     @IBOutlet var viewButtons: UIView!
     @IBOutlet var collectionButtonsTime: [UIButton]!
     @IBOutlet var labelSecond: UILabel!
+    var sender:SettingsTableViewAdapter?
     
+    var lockScreenTimeSettingTableViewCellProtocol:LockScreenTimeSettingTableViewCellProtocol?
     var selectedIndex:Int?
     
     override func awakeFromNib() {
@@ -30,6 +36,10 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
                 setDeselect(button: button)
             }
         }
+    }
+    
+    func setDelegate(lockScreenTimeSettingTableViewCellProtocol:LockScreenTimeSettingTableViewCellProtocol) {
+        self.lockScreenTimeSettingTableViewCellProtocol = lockScreenTimeSettingTableViewCellProtocol
     }
     
     func setSelectedIndex(selectedIndex:Int) {
@@ -59,9 +69,9 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             {
                 selectedIndex = index
                 setSelected(button: button)
+                lockScreenTimeSettingTableViewCellProtocol?.updateLockTimer(lockTimer: Int(button.currentTitle!)!)
             }
             else {
-                
                 setDeselect(button: button)
             }
         }
