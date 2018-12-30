@@ -6,26 +6,26 @@ import DeviceKit
 
 class User: Object, Mappable, NSCopying {
 
-    override class func primaryKey() -> String {
-        return "PhoneNumber"
-    }
-    
     @objc private dynamic var PhoneNumber: String?
     var phone: String? {
         get { return PhoneNumber }
         set { PhoneNumber = newValue }
     }
     
-    @objc private dynamic var Secret: String?
-    var secret: String? {
-        get { return Secret }
-        set { Secret = newValue }
-    }
-    
     @objc private dynamic var Bank : Bank?
     var bank : Bank?{
         get{return Bank}
         set{Bank = newValue}
+    }
+    
+    @objc dynamic var Id: Int = 1
+    public var id: Int {
+        get { return Id }
+        set { Id = newValue }
+    }
+    
+    override class func primaryKey() -> String {
+        return UUID().uuidString
     }
     
     var activationCode: String?
@@ -37,7 +37,7 @@ class User: Object, Mappable, NSCopying {
     }
     
     override static func ignoredProperties() -> [String] {
-        return ["secret"]
+        return ["activationCode"]
     }
     
     convenience init( phone: String? = nil, activationCode: String? = nil) {
@@ -49,7 +49,7 @@ class User: Object, Mappable, NSCopying {
     func mapping(map: Map) {
         map.shouldIncludeNilValues = true
         self.phone <- map["phone"]
-        self.secret <- map["secret"]
+        
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
