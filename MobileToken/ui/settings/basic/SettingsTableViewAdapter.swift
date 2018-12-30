@@ -32,6 +32,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     
     func updateLockTimer(lockTimer: Int) {
         self.lockTimer = lockTimer
+        self.settingTableAdapterProtocol?.updateLockTimer(lockTimer: lockTimer)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,7 +41,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         switch indexPath.row {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
-            (cell as! LockScreenTimeSettingTableViewCell).setDelegate(lockScreenTimeSettingTableViewCellProtocol: self)
+            (cell as! LockScreenTimeSettingTableViewCell).setDelegate(lockScreenTimeProtocol: self)
             
             if let lockTimer = settingMediator?.getSetting().lockTimer {
                 

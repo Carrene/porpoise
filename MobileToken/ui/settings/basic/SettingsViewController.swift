@@ -48,7 +48,9 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     }
     
     func updateLockTimer(lockTimer: Int) {
+        settingPresenter?.updateSetting(setting: Setting(lockTimer: lockTimer))
         settingMediator?.setSetting(setting: Setting(lockTimer: lockTimer))
+        
     }
     
     
