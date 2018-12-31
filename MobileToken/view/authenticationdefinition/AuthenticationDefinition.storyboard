@@ -64,7 +64,7 @@
                     <connections>
                         <outlet property="authenticationTypeContainer" destination="kMi-2b-OMT" id="mDC-eB-ddZ"/>
                         <outlet property="scAuthenticationType" destination="Hmm-D3-AaW" id="zXt-Kb-DPs"/>
-                        <segue destination="kfU-nB-LY7" kind="show" identifier="AuthenticationDefinitionToTabbar" id="DHe-5P-Wbd"/>
+                        <segue destination="kfU-nB-LY7" kind="showDetail" identifier="AuthenticationDefinitionToTabbar" id="DHe-5P-Wbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEd-Mc-15z" userLabel="First Responder" sceneMemberID="firstResponder"/>

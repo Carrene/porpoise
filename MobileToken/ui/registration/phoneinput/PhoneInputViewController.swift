@@ -11,7 +11,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var collectionViewbank: UICollectionView!
     @IBOutlet var countryPickerView: CountryPickerView!
     @IBOutlet var viewTextfields: UIView!
-    @IBOutlet var buttonRegister: UIButton!
     @IBOutlet var labelChooseCountry: UILabel!
     @IBOutlet var viewPhone: UIView!
     
@@ -39,7 +38,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         countryPickerView.layer.cornerRadius = 10
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
-        buttonRegister.layer.cornerRadius = 10
         viewPhone.layer.cornerRadius = 10
     }
     
@@ -81,13 +79,13 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     @IBAction func onButtonRegister(_ sender: UIButton) {
-        if textFieldPhoneNumber.text != "" {
-            buttonRegister.isEnabled = true
-            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
-        }
-        else {
-            buttonRegister.isEnabled = false
-        }
+//        if textFieldPhoneNumber.text != "" {
+//            buttonRegister.isEnabled = true
+//            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
+//        }
+//        else {
+//            buttonRegister.isEnabled = false
+//        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

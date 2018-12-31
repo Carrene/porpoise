@@ -51,7 +51,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        navigationItem.hidesBackButton = true
+        //navigationItem.hidesBackButton = true
     }
     
     func navigateToTabbar() {
