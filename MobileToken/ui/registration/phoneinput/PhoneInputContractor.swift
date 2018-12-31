@@ -11,4 +11,5 @@ import Foundation
         init(view: PhoneInputViewProtocol)
         func claim(phone: String)
         func getBankList()
+        func getUser(bank:Bank)
     }

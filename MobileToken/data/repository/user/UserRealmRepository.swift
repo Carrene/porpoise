@@ -1,17 +1,24 @@
-
-
 import Foundation
 import RealmSwift
 
 class UserRealmRepository:UserRepositoryProtocol {
     
-    func get(identifier: Int, onDone: ((RepositoryResponse<User>) -> ())?) {
+    func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
-        if let user = realm.object(ofType: User.self, forPrimaryKey: identifier)?.copy() as? User {
-            onDone?(RepositoryResponse(value: user))
-        } else {
-            onDone?(RepositoryResponse(value: nil, restDataResponse: nil, error: nil))
+        if let user = realm.objects(User.self).filter("Bank.Name='"+bank.name!+"'").first {
+            
         }
+        //print(user)
+    }
+    
+    func get(identifier: Int, onDone: ((RepositoryResponse<User>) -> ())?) {
+        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+//        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
+//        if let user = realm.object(ofType: User.self, forPrimaryKey: identifier)?.copy() as? User {
+//            onDone?(RepositoryResponse(value: user))
+//        } else {
+//            onDone?(RepositoryResponse(value: nil, restDataResponse: nil, error: nil))
+//        }
         
     }
     
@@ -36,7 +43,7 @@ class UserRealmRepository:UserRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[User]>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+        
     }
     
 }

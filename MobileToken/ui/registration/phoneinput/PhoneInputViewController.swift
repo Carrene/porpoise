@@ -13,7 +13,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var viewTextfields: UIView!
     @IBOutlet var labelChooseCountry: UILabel!
     @IBOutlet var viewPhone: UIView!
-    
+    private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
     
@@ -106,6 +106,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     
     func setBankList(banks : [Bank]) {
         bankCollectionViewAdapter?.setDataSource(banks: banks)
+        self.banks = banks
     }
     
     func navigateToPhoneConfirmation(phone:String) {
@@ -113,7 +114,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func selectedBank(bankIndex: Int) {
-        
+        presenter.getUser(bank: self.banks[bankIndex])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

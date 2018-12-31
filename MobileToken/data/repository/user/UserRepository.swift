@@ -45,5 +45,10 @@ class UserRepository: UserRepositoryProtocol {
     func update(_: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         
     }
+    
+    func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
+        userRealmRepository.get(bank: bank, onDone: onDone)
+    }
+    
 
 }

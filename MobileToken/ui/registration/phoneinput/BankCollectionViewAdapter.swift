@@ -43,6 +43,7 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
+        bankPagerViewDelegate?.selectedBank(bankIndex: self.selectedIndex)
         collectionView.reloadData()
     }
 }

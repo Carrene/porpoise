@@ -31,4 +31,16 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         let banks = [Bank(name:"آینده")]
         view.setBankList(banks: banks)
     }
+    
+    func getUser(bank: Bank) {
+        let repository = UserRepository()
+        let onDataResponse : ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            
+                print(response.value)
+            
+        }
+        repository.get(bank: bank, onDone: onDataResponse)
+    }
+    
+    
 }
