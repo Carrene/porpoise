@@ -24,8 +24,14 @@ class User: Object, Mappable, NSCopying {
         set { Id = newValue }
     }
     
+    @objc dynamic var PrimaryKey: String = NSUUID().uuidString.lowercased()
+    public var primaryKey: String {
+        get { return PrimaryKey }
+        set { PrimaryKey = newValue }
+    }
+    
     override class func primaryKey() -> String {
-        return UUID().uuidString
+        return "PrimaryKey"
     }
     
     var activationCode: String?

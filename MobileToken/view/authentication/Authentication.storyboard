@@ -52,9 +52,9 @@
                     <connections>
                         <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
                         <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>
-                        <segue destination="HTl-cV-4Gj" kind="show" identifier="AuthenticationToApplicationLock" id="tat-VG-Qao"/>
-                        <segue destination="GVM-Pt-XaU" kind="show" identifier="AuthenticationToRegistration" id="OhW-wq-eiu"/>
-                        <segue destination="WHz-rC-ahz" kind="show" identifier="AuthenticationToCardList" id="2ZA-t0-htw"/>
+                        <segue destination="HTl-cV-4Gj" kind="replace" identifier="AuthenticationToApplicationLock" splitViewControllerTargetIndex="1" id="tat-VG-Qao"/>
+                        <segue destination="GVM-Pt-XaU" kind="replace" identifier="AuthenticationToRegistration" splitViewControllerTargetIndex="1" id="OhW-wq-eiu"/>
+                        <segue destination="WHz-rC-ahz" kind="replace" identifier="AuthenticationToCardList" splitViewControllerTargetIndex="1" id="2ZA-t0-htw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbP-Yh-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>

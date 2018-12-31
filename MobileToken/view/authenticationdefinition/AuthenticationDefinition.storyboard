@@ -206,7 +206,9 @@
         <!--MainTabbar-->
         <scene sceneID="pXb-zA-Gkd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="kfU-nB-LY7" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="kfU-nB-LY7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uc8-4S-Usg"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAN-Hb-yya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1473" y="-1310"/>
