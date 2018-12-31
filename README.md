@@ -14,3 +14,7 @@ Raaz iOS version.
 # Requirement for developer
 when you added new assets, please add "Assets.xcassets" forcely to repository:    
 `/path/to/project >git add -f Assets.xcassets/`
+
+`Swift 4.2`
+
+`Xcode 10+`
