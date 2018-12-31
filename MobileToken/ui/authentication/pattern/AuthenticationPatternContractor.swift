@@ -12,6 +12,6 @@ protocol AuthenticationPatternPresenterProtocol {
     func checkPatternCorrection(pattern: String)
     func getAuthentication()
     func updateAuthentication(authentication: Authentication)
-    //func getUser()
+    func getUser()
     func initScreenLocker()
 }

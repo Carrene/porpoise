@@ -42,7 +42,7 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
             } else {
                 //UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
                 self!.authenticationDefinitionPatternView.navigateToTabbar()
-                //self!.initScreenLocker()
+                self!.initScreenLocker()
             }
         }
         authenticationRestRepository.update(authentication, onDone: onDataResponse)

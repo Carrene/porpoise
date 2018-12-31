@@ -1,9 +1,7 @@
-
-
 import UIKit
 
-class AuthenticationViewController: UIViewController, AuthenticationDelegate, AuthenticationViewProtocol {
-    
+class AuthenticationViewController: BaseViewController, AuthenticationDelegate, AuthenticationViewProtocol {
+   
     @IBOutlet weak var vAuthenticationContainer: UIView!
     @IBOutlet weak var lbTitle: UILabel!
     
@@ -15,12 +13,17 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate, Au
     }
     
     override func viewDidAppear(_ animated: Bool) {
-         authenticationPresenter?.getAuthentication()
+        authenticationPresenter?.getAuthentication()
     }
     
-    func setAuthentication(label: String) {
-        self.lbTitle.text = label
+    func initUIComponents() {
+        
     }
+    
+    func initListeners() {
+        
+    }
+    
     
     func embedVCPassword(authentication:Authentication) {
         var vcPassword: AuthenticationPasswordViewController?

@@ -2,14 +2,15 @@
 
 import UIKit
 
-class AuthenticationDefinitionViewController: UIViewController, AuthenticationDefintionDelegate {
+class AuthenticationDefinitionViewController: BaseViewController, AuthenticationDefintionDelegate {
+    
     
     @IBOutlet weak var authenticationTypeContainer: UIView!
     @IBOutlet weak var scAuthenticationType: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUIComponent()
+        initUIComponents()
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -21,13 +22,18 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
         }
     }
     
-    func initUIComponent() {
+    
+    func initUIComponents() {
         self.hideKeyboardWhenTappedAround()
         self.navigationItem.hidesBackButton = true
         let attr = NSDictionary(object: R.font.iranSansMobileBold(size: 16)!, forKey: NSAttributedString.Key.font as NSCopying)
         scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
         scAuthenticationType.layer.cornerRadius = 10
         embedVCPattern()
+    }
+    
+    func initListeners() {
+        
     }
     
     func embedVCPassword() {
@@ -51,7 +57,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //navigationItem.hidesBackButton = true
+        
     }
     
     func navigateToTabbar() {

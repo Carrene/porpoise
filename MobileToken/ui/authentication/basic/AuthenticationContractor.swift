@@ -1,9 +1,8 @@
-
 import Foundation
+
 protocol AuthenticationViewProtocol: AuthenticationDelegate {
     func embedVCPassword(authentication:Authentication)
     func embedVCPattern(authentication:Authentication)
-    func setAuthentication(label: String)
 }
 
 protocol AuthenticationPresenterProtocol {

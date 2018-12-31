@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Authentication View Controller-->
+        <!--احراز هویت-->
         <scene sceneID="d9R-Dg-sgw">
             <objects>
                 <viewController storyboardIdentifier="AuthenticationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTa-cp-iyH" customClass="AuthenticationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,14 +27,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-wi-QKW">
-                                <rect key="frame" x="20" y="100" width="335" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="احراز هویت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-wi-QKW">
+                                <rect key="frame" x="20" y="40" width="335" height="27"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCF-Lj-z7x">
-                                <rect key="frame" x="0.0" y="147" width="375" height="408"/>
+                                <rect key="frame" x="0.0" y="87" width="375" height="468"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
@@ -43,18 +43,19 @@
                             <constraint firstItem="NCF-Lj-z7x" firstAttribute="top" secondItem="LYW-wi-QKW" secondAttribute="bottom" constant="20" id="NgZ-F8-CQH"/>
                             <constraint firstItem="O5W-fZ-ZEd" firstAttribute="trailing" secondItem="LYW-wi-QKW" secondAttribute="trailing" constant="20" id="WSb-Ph-7Lv"/>
                             <constraint firstItem="O5W-fZ-ZEd" firstAttribute="bottom" secondItem="NCF-Lj-z7x" secondAttribute="bottom" constant="112" id="e16-CF-iZj"/>
-                            <constraint firstItem="LYW-wi-QKW" firstAttribute="top" secondItem="O5W-fZ-ZEd" secondAttribute="top" constant="80" id="fQp-Ni-tnv"/>
+                            <constraint firstItem="LYW-wi-QKW" firstAttribute="top" secondItem="O5W-fZ-ZEd" secondAttribute="top" constant="20" id="fQp-Ni-tnv"/>
                             <constraint firstItem="LYW-wi-QKW" firstAttribute="leading" secondItem="O5W-fZ-ZEd" secondAttribute="leading" constant="20" id="nqE-43-Tsa"/>
                             <constraint firstItem="NCF-Lj-z7x" firstAttribute="leading" secondItem="O5W-fZ-ZEd" secondAttribute="leading" id="oWd-q8-Yzr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O5W-fZ-ZEd"/>
                     </view>
+                    <navigationItem key="navigationItem" title="احراز هویت" id="zHT-dW-jVU"/>
                     <connections>
                         <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
                         <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>
-                        <segue destination="HTl-cV-4Gj" kind="replace" identifier="AuthenticationToApplicationLock" splitViewControllerTargetIndex="1" id="tat-VG-Qao"/>
-                        <segue destination="GVM-Pt-XaU" kind="replace" identifier="AuthenticationToRegistration" splitViewControllerTargetIndex="1" id="OhW-wq-eiu"/>
-                        <segue destination="WHz-rC-ahz" kind="replace" identifier="AuthenticationToCardList" splitViewControllerTargetIndex="1" id="2ZA-t0-htw"/>
+                        <segue destination="HTl-cV-4Gj" kind="push" identifier="AuthenticationToApplicationLock" splitViewControllerTargetIndex="1" id="tat-VG-Qao"/>
+                        <segue destination="GVM-Pt-XaU" kind="push" identifier="AuthenticationToRegistration" splitViewControllerTargetIndex="1" id="OhW-wq-eiu"/>
+                        <segue destination="WHz-rC-ahz" kind="push" identifier="AuthenticationToCardList" splitViewControllerTargetIndex="1" id="2ZA-t0-htw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbP-Yh-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>

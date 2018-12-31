@@ -44,7 +44,7 @@ class AuthenticationDefinitionPasswordPresenter: AuthenticationDefinitionPasswor
             } else {
                 //UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
                 self!.authenticationDefinitionPasswordView.navigateToTabbar()
-                //self!.initScreenLocker()
+                self!.initScreenLocker()
             }
         }
         authenticationRestRepository.update(authentication, onDone: onDataResponse)
