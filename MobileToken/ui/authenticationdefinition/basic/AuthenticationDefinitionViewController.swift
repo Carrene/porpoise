@@ -26,6 +26,7 @@ class AuthenticationDefinitionViewController: UIViewController, AuthenticationDe
         self.navigationItem.hidesBackButton = true
         let attr = NSDictionary(object: R.font.iranSansMobileBold(size: 16)!, forKey: NSAttributedString.Key.font as NSCopying)
         scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
+        scAuthenticationType.layer.cornerRadius = 10
         embedVCPattern()
     }
     
