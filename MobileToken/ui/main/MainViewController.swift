@@ -30,6 +30,10 @@ class MainViewController: UINavigationController {
         return true
     }
     
+    func getSetting() {
+        
+    }
+    
     func intro() {
         let onIntroEnd = { [weak self] in
             self!.navigatoToAuthenticationDefinition()
