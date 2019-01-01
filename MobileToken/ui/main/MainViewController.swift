@@ -3,31 +3,43 @@ import UIKit
 class MainViewController: UINavigationController {
 
     var hasWizardShown = false
+    var authentication : Authentication?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if hasWizardShown == false {
-        intro()
-        }
+        checkIfNewUser()
+        initPages()
     }
     
     func initPages() {
-        if(checkIfNewUser()) {
+        if authentication == nil {
+            if hasWizardShown {
+                navigatoToAuthenticationDefinition()
+            }
+            else {
+                intro()
+            }
             
         }
         else {
-            
+            navigateToAuthentication()
         }
     }
     
-    func checkIfNewUser() -> Bool {
-        let authenticationRealmRepository = AuthenticationRealmRepository()
-        let onDataResponse : ((RepositoryResponse<User>) -> ()) = { [weak self] response in
-            
+    func checkIfNewUser()  {
+        let authenticationRestRepository = AuthenticationRealmRepository()
+        let onDataResponse: ((RepositoryResponse<Authentication>) -> ())  = {[weak self] repoResponse in
+            if let error = repoResponse.error {
+                print("error")
+            } else {
+                self?.authentication = repoResponse.value
+            }
         }
-        return true
+        authenticationRestRepository.get(onDone: onDataResponse)
     }
     
     func getSetting() {
@@ -36,7 +48,7 @@ class MainViewController: UINavigationController {
     
     func intro() {
         let onIntroEnd = { [weak self] in
-            self!.navigatoToAuthenticationDefinition()
+            //self!.navigationController?.popViewController(animated: true)
         }
         let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
         present(introVC, animated: true, completion: nil)
