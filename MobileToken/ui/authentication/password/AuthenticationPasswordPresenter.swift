@@ -71,8 +71,7 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
     }
     
     func initScreenLocker() {
-        ScreenLocker.instance.resetTimer(time: 0)
         ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
-        ScreenLocker.instance.start();
+        ScreenLocker.instance.start()
     }
 }

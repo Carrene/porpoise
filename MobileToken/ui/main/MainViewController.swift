@@ -13,6 +13,23 @@ class MainViewController: UINavigationController {
         }
     }
     
+    func initPages() {
+        if(checkIfNewUser()) {
+            
+        }
+        else {
+            
+        }
+    }
+    
+    func checkIfNewUser() -> Bool {
+        let authenticationRealmRepository = AuthenticationRealmRepository()
+        let onDataResponse : ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            
+        }
+        return true
+    }
+    
     func intro() {
         let onIntroEnd = { [weak self] in
             self!.navigatoToAuthenticationDefinition()

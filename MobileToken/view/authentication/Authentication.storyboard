@@ -53,9 +53,9 @@
                     <connections>
                         <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
                         <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>
-                        <segue destination="HTl-cV-4Gj" kind="push" identifier="AuthenticationToApplicationLock" splitViewControllerTargetIndex="1" id="tat-VG-Qao"/>
-                        <segue destination="GVM-Pt-XaU" kind="push" identifier="AuthenticationToRegistration" splitViewControllerTargetIndex="1" id="OhW-wq-eiu"/>
-                        <segue destination="WHz-rC-ahz" kind="push" identifier="AuthenticationToCardList" splitViewControllerTargetIndex="1" id="2ZA-t0-htw"/>
+                        <segue destination="HTl-cV-4Gj" kind="showDetail" identifier="AuthenticationToApplicationLock" id="tat-VG-Qao"/>
+                        <segue destination="GVM-Pt-XaU" kind="showDetail" identifier="AuthenticationToRegistration" id="OhW-wq-eiu"/>
+                        <segue destination="WHz-rC-ahz" kind="showDetail" identifier="AuthenticationToCardList" id="2ZA-t0-htw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbP-Yh-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="-858" y="-957"/>
         </scene>
-        <!--PhoneInputViewController-->
+        <!--registrationMain-->
         <scene sceneID="osd-Q4-Spk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="PhoneInputViewController" id="GVM-Pt-XaU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="registrationMain" id="GVM-Pt-XaU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz8-Yg-kub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704" y="-1454"/>

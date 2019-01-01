@@ -56,5 +56,7 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     func navigateToLockView() {
         performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToApplicationLock.identifier, sender: self)
     }
+    
+    
 }
 

@@ -3,16 +3,16 @@ import Foundation
 import UIKit
 
 class ScreenLocker {
-    static let instance = ScreenLocker()
-    private init() {
-    }
+    static let instance : ScreenLocker = {
+        let instance = ScreenLocker()
+        return instance
+    }()
     
-    static var SCREEN_LOCKER_TIME = 6000000
+    static var SCREEN_LOCKER_TIME = 60
     var timer:Timer!
     var time:Int!
     
     func _init(time:Int){
-        
         self.time = time
     }
     
@@ -46,30 +46,4 @@ class ScreenLocker {
         let vc = R.storyboard.authentication.authenticationViewController()
         UIApplication.shared.keyWindow?.rootViewController = vc
     }
-    
-//    func getAuthentication() {
-//        let authenticationRestRepository = AuthenticationRealmRepository()
-//        let onDataResponse: ((RepositoryResponse<Authentication>) -> ())  = {[weak self] repoResponse in
-//            if repoResponse.error != nil {
-//                self?.presentAuthenticationDefinition()
-//            } else {
-//                if repoResponse.value != nil {
-//                    self?.presentAuthentication()
-//                } else {
-//                    self?.presentAuthenticationDefinition()
-//                }
-//            }
-//        }
-//        authenticationRestRepository.get(onDone: onDataResponse)
-//    }
-//    
-//    func presentAuthentication() {
-//       let vc = R.storyboard.authentication.authenticationViewController()
-//        UIApplication.shared.keyWindow?.rootViewController = vc
-//    }
-//    
-//    func presentAuthenticationDefinition() {
-//        let vc = R.storyboard.authenticationDefinition.authenticationDefinitionViewController()
-//        UIApplication.shared.keyWindow?.rootViewController = vc
-//    }
 }
