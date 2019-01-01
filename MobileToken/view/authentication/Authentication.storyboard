@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="-858" y="-957"/>
         </scene>
-        <!--registrationMain-->
+        <!--MainTabbar-->
         <scene sceneID="osd-Q4-Spk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="registrationMain" id="GVM-Pt-XaU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="GVM-Pt-XaU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz8-Yg-kub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704" y="-1454"/>
