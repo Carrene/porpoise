@@ -5,6 +5,7 @@ class UserRepository: UserRepositoryProtocol {
     let userRestRepository = UserRestRepository()
     let userRealmRepository = UserRealmRepository()
     
+    //TODO: UPDATE USER WITH BANK, 
     func bind(user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         userRestRepository.bind(user: user) { restRepositoryResponse in
             onDone?(restRepositoryResponse)
