@@ -28,7 +28,7 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
             authentication?.successAttempt()
             RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: password.bytes, salt: (authentication?.salt!.bytes)!)?.toHexString())!
             updateAuthentication(authentication: self.authentication!)
-             getUser()
+             getAllUsers()
         } else {
             self.authentication?.failAttempt()
             updateAuthentication(authentication: self.authentication!)
@@ -53,21 +53,21 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
         authenticationRepository.update(authentication, onDone: onDataResponse)
     }
     
-    func getUser() {
+    func getAllUsers() {
         let userRepository = UserRepository()
-        let onDataResponse: ((RepositoryResponse<User>) -> ()) = {[weak self] repoResponse in
+        let onDataResponse: ((RepositoryResponse<[User]>) -> ()) = {[weak self] repoResponse in
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
                 self!.initScreenLocker()
-                if repoResponse.value != nil {
+                if (repoResponse.value?.count)! > 0 {
                     self?.authenticationPasswordView.navigateToCardList()
                 } else {
                     self?.authenticationPasswordView.navigateToInputPhoneNumber()
                 }
             }
         }
-        userRepository.get(identifier: 0, onDone: onDataResponse)
+        userRepository.getAll(onDone: onDataResponse)
     }
     
     func initScreenLocker() {

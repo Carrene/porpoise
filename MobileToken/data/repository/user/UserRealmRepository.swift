@@ -8,7 +8,9 @@ class UserRealmRepository:UserRepositoryProtocol {
         if let user = realm.objects(User.self).filter("Bank.Name='"+bank.name!+"'").first {
             onDone?(RepositoryResponse(value:user))
         }
-        //print(user)
+        else {
+            onDone?(RepositoryResponse(value:nil))
+        }
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<User>) -> ())?) {
@@ -16,7 +18,7 @@ class UserRealmRepository:UserRepositoryProtocol {
     }
     
     func update(_ user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         do {
             try realm.write {
                 realm.add(user.copy() as! User, update: true)

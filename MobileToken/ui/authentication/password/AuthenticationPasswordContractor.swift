@@ -13,7 +13,7 @@ protocol AuthenticationPasswordPresenterProtocol {
     func checkPasswordCorrection(password: String)
     func getAuthentication()
     func updateAuthentication(authentication: Authentication)
-    func getUser()
+    func getAllUsers()
     func initScreenLocker()
 }
 

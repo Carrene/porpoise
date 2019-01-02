@@ -30,7 +30,10 @@ class MyApplication: UIApplication {
                 while let presentedViewController = topController.presentedViewController{
                     topController = presentedViewController
                 }
-                ScreenLocker.instance.resetTimer(time: ScreenLocker.SCREEN_LOCKER_TIME)
+                if(topController is AuthenticationViewController == false){
+                    
+                    ScreenLocker.instance.resetTimer(time: ScreenLocker.SCREEN_LOCKER_TIME)
+                }
             }
         }
         super.sendEvent(event)

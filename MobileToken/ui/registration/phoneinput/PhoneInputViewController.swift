@@ -16,6 +16,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
+    private var selectedBank : Bank?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,13 +69,20 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         countryPickerView.countries[index].name = "Iran"
     }
     
+    
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
         if textFieldPhoneNumber.text != "" {
-            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
+            if selectedBank != nil {
+                self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: self.selectedBank! )
+            }
+            else {
+                selectedBank = banks.first
+                self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: self.selectedBank! )
+            }
         }
     }
     
@@ -115,11 +123,21 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     
     func selectedBank(bankIndex: Int) {
         presenter.getUser(bank: self.banks[bankIndex])
+        self.selectedBank = self.banks[bankIndex]
     }
+    
+    func showAlreadyRegistered() {
+        
+    }
+    
+    func showPhoneInput() {
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == R.segue.phoneInputViewController.phoneInputToActivationSegue.identifier {
-        (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:labelPhoneCode.text!+textFieldPhoneNumber.text! )
+            (segue.destination as! PhoneConfirmationViewController).setData(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: selectedBank!)
         }
     }
     

@@ -46,10 +46,11 @@ class User: Object, Mappable, NSCopying {
         return ["activationCode"]
     }
     
-    convenience init( phone: String? = nil, activationCode: String? = nil) {
+    convenience init( phone: String? = nil, activationCode: String? = nil, bank: Bank? = nil) {
         self.init()
         self.phone = phone
         self.activationCode = activationCode
+        self.bank = bank
     }
     
     func mapping(map: Map) {

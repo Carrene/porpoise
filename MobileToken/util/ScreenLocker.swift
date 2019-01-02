@@ -4,11 +4,12 @@ import UIKit
 
 class ScreenLocker {
     static let instance : ScreenLocker = {
+        
         let instance = ScreenLocker()
         return instance
     }()
     
-    static var SCREEN_LOCKER_TIME = 60
+    static var SCREEN_LOCKER_TIME = 6000
     var timer:Timer!
     var time:Int!
     

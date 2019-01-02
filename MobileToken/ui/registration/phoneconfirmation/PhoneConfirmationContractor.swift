@@ -14,7 +14,7 @@ protocol PhoneConfirmationViewProtocol:class {
 protocol PhoneConfirmationPresenterProtocol {
     
     init(view:PhoneConfirmationViewProtocol)
-    func bind(phone:String,activationCode:String)
+    func bind(user:User)
     func initCodeTimer()
     func invalidateTimer()
 }
