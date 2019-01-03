@@ -34,7 +34,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         self.hideKeyboardWhenTappedAround()
         textFieldPhoneNumber.text = ""
         labelPhoneCode.isHidden = true
-        viewPhone.isOpaque = false
+        viewPhone.isHidden = false
     }
     
 
@@ -134,12 +134,12 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     
     func showAlreadyRegistered() {
         labelPhoneCode.isHidden = false
-        viewPhone.isOpaque = true
+        viewTextfields.isHidden = true
     }
     
     func showPhoneInput() {
         labelPhoneCode.isHidden = true
-        viewPhone.isOpaque = false
+        viewTextfields.isHidden = false
     }
     
     

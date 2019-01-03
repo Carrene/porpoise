@@ -171,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
-                                <rect key="frame" x="61.5" y="234" width="197" height="27"/>
+                                <rect key="frame" x="61.5" y="244" width="197" height="27"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,7 +182,7 @@
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="7Z4-1H-0yY"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
-                            <constraint firstItem="CC4-XA-VAv" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" id="EFT-av-ayl"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="10" id="EFT-av-ayl"/>
                             <constraint firstItem="CC4-XA-VAv" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="Hsf-xI-fhB"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Wp6-vC-o6G" secondAttribute="trailing" constant="30" id="dSE-W4-c0L"/>
