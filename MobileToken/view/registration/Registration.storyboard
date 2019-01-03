@@ -17,6 +17,9 @@
         <array key="IRANSansMobile(FaNum)_Bold.ttf">
             <string>IRANSansMobileFaNum-Bold</string>
         </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
         <array key="IranSansReqular.ttf">
             <string>IranianSans</string>
         </array>
@@ -167,12 +170,20 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
+                                <rect key="frame" x="61.5" y="234" width="197" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="7Z4-1H-0yY"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" id="EFT-av-ayl"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="Hsf-xI-fhB"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Wp6-vC-o6G" secondAttribute="trailing" constant="30" id="dSE-W4-c0L"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
@@ -193,6 +204,7 @@
                     <connections>
                         <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
                         <outlet property="countryPickerView" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
+                        <outlet property="labelAlreadyRegistered" destination="CC4-XA-VAv" id="B62-Xk-gMO"/>
                         <outlet property="labelChooseCountry" destination="Xx4-zz-5hZ" id="5vS-G7-pIZ"/>
                         <outlet property="labelChooseYourBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
                         <outlet property="labelEnterYourPhone" destination="rRT-Ye-jcl" id="nQI-LX-dlS"/>

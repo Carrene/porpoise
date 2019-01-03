@@ -13,6 +13,9 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var viewTextfields: UIView!
     @IBOutlet var labelChooseCountry: UILabel!
     @IBOutlet var viewPhone: UIView!
+    @IBOutlet var labelAlreadyRegistered: UILabel!
+    
+    
     private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
@@ -29,6 +32,9 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
 
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
+        textFieldPhoneNumber.text = ""
+        labelPhoneCode.isHidden = true
+        viewPhone.isOpaque = false
     }
     
 
@@ -127,11 +133,13 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func showAlreadyRegistered() {
-        
+        labelPhoneCode.isHidden = false
+        viewPhone.isOpaque = true
     }
     
     func showPhoneInput() {
-        
+        labelPhoneCode.isHidden = true
+        viewPhone.isOpaque = false
     }
     
     
