@@ -46,11 +46,11 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     }
     
     func navigateToCardList() {
-        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList, sender: self)
+        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration.identifier, sender: self)
     }
 
     func navigateToInputPhoneNumber() {
-        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration, sender: self)
+        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList.identifier, sender: self)
     }
 
     func navigateToLockView() {

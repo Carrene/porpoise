@@ -23,8 +23,9 @@
                         <color key="barTintColor" name="primaryDark"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0uT-4r-YxP" kind="relationship" relationship="viewControllers" id="cDn-Q2-dDv"/>
                         <segue destination="9Rl-F6-GbH" kind="relationship" relationship="viewControllers" id="EDb-hh-ixf"/>
+                        <segue destination="hwB-VW-AkW" kind="relationship" relationship="viewControllers" id="spu-8w-Kca"/>
+                        <segue destination="0uT-4r-YxP" kind="relationship" relationship="viewControllers" id="cDn-Q2-dDv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSX-dc-Zho" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,8 +55,21 @@
             </objects>
             <point key="canvasLocation" x="-777" y="-1186"/>
         </scene>
+        <!--CardList-->
+        <scene sceneID="NMd-Tz-yvG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardList" id="hwB-VW-AkW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="کارت ها" image="list-icon" id="2p8-Ti-71K">
+                        <color key="badgeColor" name="buttonColor"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTK-Q9-mzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739" y="-1350"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="list-icon" width="20" height="16"/>
         <image name="plus-icon" width="20" height="20"/>
         <image name="setting-icon" width="20" height="20"/>
         <namedColor name="buttonColor">

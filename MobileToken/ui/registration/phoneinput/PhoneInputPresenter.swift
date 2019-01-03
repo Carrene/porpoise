@@ -28,7 +28,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
     }
     
     func getBankList(){
-        let banks = [Bank(name:"آینده")]
+        let banks = [Bank(name:"ayande")]
         view.setBankList(banks: banks)
     }
     

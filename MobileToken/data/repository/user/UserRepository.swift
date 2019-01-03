@@ -5,19 +5,9 @@ class UserRepository: UserRepositoryProtocol {
     let userRestRepository = UserRestRepository()
     let userRealmRepository = UserRealmRepository()
     
-    //TODO: UPDATE USER WITH BANK, 
     func bind(user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         userRestRepository.bind(user: user) { restRepositoryResponse in
             onDone?(restRepositoryResponse)
-            if restRepositoryResponse.restDataResponse?.response?.statusCode == 200 {
-                self.userRealmRepository.update(restRepositoryResponse.value!) { realmRepositoryResponse in
-                    if let error = restRepositoryResponse.error {
-                        onDone?(RepositoryResponse(error: error))
-                        return
-                    }
-                    onDone?(restRepositoryResponse)
-                }
-            }
         }
     }
     
