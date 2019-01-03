@@ -33,8 +33,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
         textFieldPhoneNumber.text = ""
-        labelPhoneCode.isHidden = true
-        viewPhone.isHidden = false
     }
     
 
