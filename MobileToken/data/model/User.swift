@@ -13,7 +13,7 @@ class User: Object, Mappable, NSCopying {
     }
     
     @objc private dynamic var Bank : Bank?
-    var bank : Bank?{
+    var bank : Bank? {
         get{return Bank}
         set{Bank = newValue}
     }
@@ -60,7 +60,7 @@ class User: Object, Mappable, NSCopying {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return User(phone: phone)
+        return User(phone: phone, activationCode: nil, bank: bank)
     }
     
 }
