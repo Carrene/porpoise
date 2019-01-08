@@ -505,6 +505,13 @@
 			path = setting;
 			sourceTree = "<group>";
 		};
+		AC4E1A3F21E4CF39007DEB86 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,6 +784,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AC4E1A3F21E4CF39007DEB86 /* tabbar */,
 				AC353B0221BEB11F00B80412 /* applicationlock */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
