@@ -16,7 +16,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var labelAlreadyRegistered: UILabel!
     @IBOutlet var labelPhone: UILabel!
     
-    
     private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
@@ -30,13 +29,11 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         presenter.getBankList()
     }
     
-
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
         textFieldPhoneNumber.text = ""
     }
     
-
     func initUIComponents() {
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
@@ -79,7 +76,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
             item.phoneCode == "+98" })!
         countryPickerView.countries[index].name = "Iran"
     }
-    
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode

@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="704" y="-1454"/>
         </scene>
-        <!--TokenListViewController-->
+        <!--MainTabbar-->
         <scene sceneID="tVn-vf-YgA">
             <objects>
-                <viewControllerPlaceholder storyboardName="CardList" referencedIdentifier="TokenListViewController" id="WHz-rC-ahz" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="WHz-rC-ahz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kng-tA-ttj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="703" y="-1196"/>
@@ -138,7 +138,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ApplicationLockViewController" storyboardName="ApplicationLock" referencedIdentifier="ApplicationLockViewController" id="HTl-cV-4Gj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWm-Ta-qyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="-1032"/>
+            <point key="canvasLocation" x="733" y="-930"/>
         </scene>
         <!--Authentication Pattern View Controller-->
         <scene sceneID="g7p-MB-Twu">

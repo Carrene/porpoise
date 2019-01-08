@@ -23,7 +23,6 @@ class MainViewController: UINavigationController {
             else {
                 intro()
             }
-            
         }
         else {
             navigateToAuthentication()
@@ -69,6 +68,12 @@ class MainViewController: UINavigationController {
     
     func navigateToImportToken() {
         performSegue(withIdentifier: R.segue.mainViewController.navigatoToImportToken.identifier, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == R.segue.mainViewController.navigateToTabbar.identifier {
+            (segue.destination as! TabBarViewController).selectedIndex = 1
+        }
     }
 
 }

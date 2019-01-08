@@ -57,6 +57,17 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
         performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToApplicationLock.identifier, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case R.segue.authenticationViewController.authenticationToCardList.identifier:
+            (segue.destination as! TabBarViewController).selectedIndex = 0
+        case R.segue.authenticationViewController.authenticationToRegistration.identifier:
+            (segue.destination as! TabBarViewController).selectedIndex = 1
+        default:
+            print("error")
+        }
+    }
+    
     
 }
 
