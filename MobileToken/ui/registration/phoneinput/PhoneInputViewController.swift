@@ -14,6 +14,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var labelChooseCountry: UILabel!
     @IBOutlet var viewPhone: UIView!
     @IBOutlet var labelAlreadyRegistered: UILabel!
+    @IBOutlet var labelPhone: UILabel!
     
     
     private var banks:[Bank]!
@@ -41,6 +42,12 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 16)
         countryPickerView.layer.cornerRadius = 10
+        countryPickerView.layer.borderColor = R.color.buttonColor()?.cgColor
+        countryPickerView.layer.borderWidth = 1
+        viewPhone.layer.borderWidth = 1
+        viewTextfields.layer.borderWidth = 1
+        viewTextfields.layer.borderColor = R.color.buttonColor()?.cgColor
+        viewPhone.layer.borderColor = R.color.buttonColor()?.cgColor
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         viewPhone.layer.cornerRadius = 10
@@ -130,14 +137,21 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         self.selectedBank = self.banks[bankIndex]
     }
     
-    func showAlreadyRegistered() {
+    func showAlreadyRegistered(phone:String) {
         labelAlreadyRegistered.isHidden = false
-        viewTextfields.isHidden = true
+        labelPhone.isHidden = false
+        //viewTextfields.isHidden = true
+        viewPhone.isHidden = true
+        countryPickerView.isHidden = true
+        labelPhone.text = phone
     }
     
     func showPhoneInput() {
         labelAlreadyRegistered.isHidden = true
-        viewTextfields.isHidden = false
+        labelPhone.isHidden = true
+        viewPhone.isHidden = false
+        countryPickerView.isHidden = false
+        //viewTextfields.isHidden = false
     }
     
     

@@ -83,13 +83,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G" userLabel="View textfields">
-                                <rect key="frame" x="30" y="282" width="260" height="210"/>
+                                <rect key="frame" x="30" y="282" width="260" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
-                                        <rect key="frame" x="30" y="20" width="200" height="40"/>
-                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <rect key="frame" x="30" y="20" width="200" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="tzl-2f-H2m"/>
+                                            <constraint firstAttribute="height" constant="45" id="tzl-2f-H2m"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کشور خود را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-zz-5hZ" userLabel="label enter country">
@@ -104,11 +103,11 @@
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Uc-PUg" userLabel="vPhone">
-                                        <rect key="frame" x="30" y="150" width="200" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Uc-PUg" userLabel="vPhone">
+                                        <rect key="frame" x="30" y="115" width="200" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l93-8h-1tj" userLabel="phoneTextField">
-                                                <rect key="frame" x="50" y="2.5" width="140" height="35"/>
+                                                <rect key="frame" x="50" y="2.5" width="140" height="40"/>
                                                 <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -120,16 +119,15 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-mU-OoY">
-                                                <rect key="frame" x="16" y="0.0" width="29" height="40"/>
+                                                <rect key="frame" x="16" y="0.0" width="29" height="45"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                                 <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" name="primaryDark"/>
                                         <constraints>
                                             <constraint firstItem="l93-8h-1tj" firstAttribute="centerY" secondItem="E24-Uc-PUg" secondAttribute="centerY" id="FhJ-0Z-tN9"/>
-                                            <constraint firstAttribute="height" constant="40" id="OPt-dc-IZa"/>
+                                            <constraint firstAttribute="height" constant="45" id="OPt-dc-IZa"/>
                                             <constraint firstItem="Mmg-mU-OoY" firstAttribute="leading" secondItem="E24-Uc-PUg" secondAttribute="leading" constant="16" id="k0d-4l-cs3"/>
                                             <constraint firstItem="Mmg-mU-OoY" firstAttribute="height" secondItem="E24-Uc-PUg" secondAttribute="height" id="lUm-Gz-UDw"/>
                                             <constraint firstAttribute="trailing" secondItem="l93-8h-1tj" secondAttribute="trailing" constant="10" id="r1B-39-hjn"/>
@@ -139,15 +137,15 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
                                     <constraint firstItem="9Rd-d6-I82" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" constant="20" id="71n-rb-Znk"/>
-                                    <constraint firstAttribute="height" constant="210" id="8UA-3B-NWa"/>
+                                    <constraint firstAttribute="height" constant="180" id="8UA-3B-NWa"/>
                                     <constraint firstItem="Xx4-zz-5hZ" firstAttribute="bottom" secondItem="9Rd-d6-I82" secondAttribute="top" constant="-10" id="AIz-wC-nAZ"/>
                                     <constraint firstAttribute="width" constant="315" id="GE6-f7-lST"/>
                                     <constraint firstItem="Xx4-zz-5hZ" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" constant="20" id="HlB-VW-gIi"/>
                                     <constraint firstItem="rRT-Ye-jcl" firstAttribute="bottom" secondItem="E24-Uc-PUg" secondAttribute="top" constant="-10" id="JK4-Xe-Mfu"/>
                                     <constraint firstAttribute="trailing" secondItem="E24-Uc-PUg" secondAttribute="trailing" constant="30" id="REC-9b-xEk"/>
+                                    <constraint firstItem="E24-Uc-PUg" firstAttribute="top" secondItem="9Rd-d6-I82" secondAttribute="bottom" constant="50" id="cqV-wp-DOs"/>
                                     <constraint firstItem="E24-Uc-PUg" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="gJ5-TD-Mau"/>
                                     <constraint firstItem="9Rd-d6-I82" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="gXq-y7-O0o"/>
                                     <constraint firstAttribute="trailing" secondItem="9Rd-d6-I82" secondAttribute="trailing" constant="30" id="nZZ-TO-6Sy"/>
@@ -177,13 +175,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
-                                <rect key="frame" x="61.5" y="308.5" width="197" height="27"/>
+                                <rect key="frame" x="61.5" y="311" width="197" height="27"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="09019692425" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzG-7L-ohl" userLabel="labelPhone">
-                                <rect key="frame" x="61" y="438.5" width="197" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzG-7L-ohl" userLabel="labelPhone">
+                                <rect key="frame" x="160" y="419.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -201,6 +199,7 @@
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Wp6-vC-o6G" secondAttribute="trailing" constant="30" id="dSE-W4-c0L"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
+                            <constraint firstItem="AzG-7L-ohl" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="n5L-2R-cuW"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="trailing" secondItem="rD3-UM-afT" secondAttribute="trailing" constant="5" id="rwN-DB-cdD"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="48" id="sTa-QV-y7L"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" id="tHQ-4x-4bc"/>
@@ -227,6 +226,7 @@
                         <outlet property="labelChooseCountry" destination="Xx4-zz-5hZ" id="5vS-G7-pIZ"/>
                         <outlet property="labelChooseYourBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
                         <outlet property="labelEnterYourPhone" destination="rRT-Ye-jcl" id="nQI-LX-dlS"/>
+                        <outlet property="labelPhone" destination="AzG-7L-ohl" id="5Kn-Qg-9rD"/>
                         <outlet property="labelPhoneCode" destination="Mmg-mU-OoY" id="IjJ-p2-dJ8"/>
                         <outlet property="textFieldPhoneNumber" destination="l93-8h-1tj" id="Zku-If-riz"/>
                         <outlet property="viewPhone" destination="E24-Uc-PUg" id="Nt3-Sf-Bhl"/>
