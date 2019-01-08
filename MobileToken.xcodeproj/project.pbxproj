@@ -68,6 +68,7 @@
 		AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */; };
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
+		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
@@ -236,6 +237,7 @@
 		AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRealmRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
+		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 		AC4E1A3F21E4CF39007DEB86 /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */,
 			);
 			path = tabbar;
 			sourceTree = "<group>";
@@ -1529,6 +1532,7 @@
 				AF285FF2219C46E300D8C342 /* BankCollectionViewAdapter.swift in Sources */,
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */,
+				AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */,
 				AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */,
 				ACCAF7B021DB6BD20057402B /* MyApplication.swift in Sources */,
 				AC16D71721CA325C0094FBED /* AuthenticationDefinitionPatternContractor.swift in Sources */,
