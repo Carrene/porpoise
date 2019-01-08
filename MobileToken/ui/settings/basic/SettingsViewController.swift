@@ -35,7 +35,6 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = R.color.primary()
         tableView.reloadData()
-        
     }
     
     func getSettingMediator(settingMediator: SettingMediator) {
@@ -50,9 +49,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     func updateLockTimer(lockTimer: Int) {
         settingPresenter?.updateSetting(setting: Setting(lockTimer: lockTimer))
         settingMediator?.setSetting(setting: Setting(lockTimer: lockTimer))
-        
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        

@@ -49,7 +49,7 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
     }
     
     func initScreenLocker() {
-        ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
+        ScreenLocker.instance._init(time: MainViewController.SCREEN_LOCKER_TIME!)
         ScreenLocker.instance.start()
     }
 }

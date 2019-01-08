@@ -9,7 +9,6 @@ class ScreenLocker {
         return instance
     }()
     
-    static var SCREEN_LOCKER_TIME = 6000
     var timer:Timer!
     var time:Int!
     

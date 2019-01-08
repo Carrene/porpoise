@@ -4,6 +4,8 @@ class MainViewController: UINavigationController {
 
     var hasWizardShown = false
     var authentication : Authentication?
+    var setting : Setting?
+    static var SCREEN_LOCKER_TIME : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +43,22 @@ class MainViewController: UINavigationController {
         authenticationRestRepository.get(onDone: onDataResponse)
     }
     
-    func getSetting() {
-        
+    func getSetting() -> Setting{
+        let settingRepository = SettingRealmRepository()
+        let onDataResponse: ((RepositoryResponse<Setting>) -> ()) = {[weak self] repoResponse in
+            if repoResponse.error != nil {
+                UIHelper.showFailedSnackBar()
+            } else {
+                if let setting = repoResponse.value {
+                    self?.setting = setting
+                    MainViewController.SCREEN_LOCKER_TIME = setting.lockTimer
+                } else {
+                    UIHelper.showFailedSnackBar()
+                }
+            }
+        }
+        settingRepository.get(onDone: onDataResponse)
+        return setting!
     }
     
     func intro() {
