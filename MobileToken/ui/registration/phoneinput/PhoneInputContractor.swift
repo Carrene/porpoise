@@ -5,7 +5,7 @@ import Foundation
         func showServerError()
         func setBankList(banks: [Bank])
         func navigateToPhoneConfirmation(phone:String)
-        func showAlreadyRegistered()
+        func showAlreadyRegistered(phone:String)
         func showPhoneInput()
     }
 

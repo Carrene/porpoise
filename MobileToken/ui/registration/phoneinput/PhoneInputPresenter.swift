@@ -43,7 +43,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
                     self!.view.showPhoneInput()
                 }
                 else {
-                    self!.view.showAlreadyRegistered()
+                    self!.view.showAlreadyRegistered(phone: (response.value?.phone)!)
                 }
             }
         }

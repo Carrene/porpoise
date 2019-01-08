@@ -131,12 +131,12 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func showAlreadyRegistered() {
-        labelPhoneCode.isHidden = false
+        labelAlreadyRegistered.isHidden = false
         viewTextfields.isHidden = true
     }
     
     func showPhoneInput() {
-        labelPhoneCode.isHidden = true
+        labelAlreadyRegistered.isHidden = true
         viewTextfields.isHidden = false
     }
     
