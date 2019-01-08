@@ -86,7 +86,7 @@
                                 <rect key="frame" x="30" y="282" width="260" height="210"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
-                                        <rect key="frame" x="30" y="50" width="200" height="40"/>
+                                        <rect key="frame" x="30" y="20" width="200" height="40"/>
                                         <color key="backgroundColor" name="primaryDark"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="tzl-2f-H2m"/>
@@ -104,7 +104,7 @@
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Uc-PUg" userLabel="vPhone">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Uc-PUg" userLabel="vPhone">
                                         <rect key="frame" x="30" y="150" width="200" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l93-8h-1tj" userLabel="phoneTextField">
@@ -141,6 +141,7 @@
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
+                                    <constraint firstItem="9Rd-d6-I82" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" constant="20" id="71n-rb-Znk"/>
                                     <constraint firstAttribute="height" constant="210" id="8UA-3B-NWa"/>
                                     <constraint firstItem="Xx4-zz-5hZ" firstAttribute="bottom" secondItem="9Rd-d6-I82" secondAttribute="top" constant="-10" id="AIz-wC-nAZ"/>
                                     <constraint firstAttribute="width" constant="315" id="GE6-f7-lST"/>
@@ -158,9 +159,14 @@
                                     <constraint firstItem="9Rd-d6-I82" firstAttribute="width" secondItem="Wp6-vC-o6G" secondAttribute="width" multiplier="0.8" id="yBX-1p-Pah"/>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Xx4-zz-5hZ"/>
+                                        <exclude reference="rRT-Ye-jcl"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="GE6-f7-lST"/>
                                         <exclude reference="yBX-1p-Pah"/>
+                                        <exclude reference="o0X-CG-gKk"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -171,18 +177,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
-                                <rect key="frame" x="61.5" y="244" width="197" height="27"/>
+                                <rect key="frame" x="61.5" y="308.5" width="197" height="27"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="09019692425" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzG-7L-ohl" userLabel="labelPhone">
+                                <rect key="frame" x="61" y="438.5" width="197" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
+                            <constraint firstItem="AzG-7L-ohl" firstAttribute="centerY" secondItem="E24-Uc-PUg" secondAttribute="centerY" id="6Ab-wU-NUP"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="7Z4-1H-0yY"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
                             <constraint firstItem="CC4-XA-VAv" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="10" id="EFT-av-ayl"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="centerY" secondItem="9Rd-d6-I82" secondAttribute="centerY" id="FEx-IM-7NI"/>
                             <constraint firstItem="CC4-XA-VAv" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="Hsf-xI-fhB"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Wp6-vC-o6G" secondAttribute="trailing" constant="30" id="dSE-W4-c0L"/>
@@ -193,6 +207,11 @@
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="top" secondItem="rD3-UM-afT" secondAttribute="top" constant="30" id="zdI-ft-Vfn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EFT-av-ayl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="افزودن بانک" image="plus-icon" id="fIu-iE-rvY">
                         <color key="badgeColor" name="buttonColor"/>
