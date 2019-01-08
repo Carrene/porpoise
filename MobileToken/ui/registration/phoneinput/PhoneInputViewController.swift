@@ -25,8 +25,8 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PhoneInputPresenter(view: self)
-        initBankCollectionView()
         initCountryPicker()
+        initBankCollectionView()
         presenter.getBankList()
     }
     
@@ -45,7 +45,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         countryPickerView.layer.borderColor = R.color.buttonColor()?.cgColor
         countryPickerView.layer.borderWidth = 1
         viewPhone.layer.borderWidth = 1
-        viewTextfields.layer.borderWidth = 1
+        viewTextfields.layer.borderWidth = 0.5
         viewTextfields.layer.borderColor = R.color.buttonColor()?.cgColor
         viewPhone.layer.borderColor = R.color.buttonColor()?.cgColor
         viewTextfields.layer.cornerRadius = 10
@@ -140,7 +140,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     func showAlreadyRegistered(phone:String) {
         labelAlreadyRegistered.isHidden = false
         labelPhone.isHidden = false
-        //viewTextfields.isHidden = true
         viewPhone.isHidden = true
         countryPickerView.isHidden = true
         labelPhone.text = phone
@@ -151,7 +150,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelPhone.isHidden = true
         viewPhone.isHidden = false
         countryPickerView.isHidden = false
-        //viewTextfields.isHidden = false
     }
     
     

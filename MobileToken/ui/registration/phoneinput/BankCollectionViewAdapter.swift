@@ -30,16 +30,32 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         collectionView.allowsMultipleSelection = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
         cell.lbBankName.text = banks![indexPath.row].name!
+        cell.lmgLogo.image = UIImage(named: banks![indexPath.row].logoResourceId!)
+        
         if selectedIndex == indexPath.row {
             cell.lbBankName.textColor = R.color.buttonColor()
-            cell.vCell.backgroundColor = R.color.ayandehColor()
             cell.isSelected = true
             bankPagerViewDelegate?.selectedBank(bankIndex: selectedIndex)
+            if banks![indexPath.row].name! == "آینده" {
+                cell.vCell.backgroundColor = R.color.ayandehColor()
+                cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+            }
+            else {
+                cell.vCell.backgroundColor = R.color.saderatColor()
+                cell.vCell.layer.borderColor = R.color.saderatColor()?.cgColor
+            }
         }
         else {
-            cell.lbBankName.textColor = R.color.ayandehColor()
             cell.vCell.backgroundColor = .clear
             cell.isSelected = false
+            if banks![indexPath.row].name! == "آینده" {
+                cell.lbBankName.textColor = R.color.ayandehColor()
+                cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+            }
+            else {
+                cell.lbBankName.textColor = R.color.saderatColor()
+                cell.vCell.layer.borderColor = R.color.saderatColor()?.cgColor
+            }
         }
         return cell
     }

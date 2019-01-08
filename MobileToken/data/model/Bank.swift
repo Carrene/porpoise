@@ -20,7 +20,11 @@ class Bank: Object, Mappable, NSCopying{
     
     var cardList : [Card]?
     
-    private var logoResourceId: String?
+    private var LogoResourceId: String?
+    var logoResourceId:String? {
+        get { return LogoResourceId }
+        set { LogoResourceId=newValue }
+    }
     
     required convenience init?(map: Map) {
         self.init()
