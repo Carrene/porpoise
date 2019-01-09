@@ -1,9 +1,7 @@
-
-
 import UIKit
 
-class AuthenticationViewController: UIViewController, AuthenticationDelegate, AuthenticationViewProtocol {
-    
+class AuthenticationViewController: BaseViewController, AuthenticationDelegate, AuthenticationViewProtocol {
+   
     @IBOutlet weak var vAuthenticationContainer: UIView!
     @IBOutlet weak var lbTitle: UILabel!
     
@@ -15,12 +13,17 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate, Au
     }
     
     override func viewDidAppear(_ animated: Bool) {
-         authenticationPresenter?.getAuthentication()
+        authenticationPresenter?.getAuthentication()
     }
     
-    func setAuthentication(label: String) {
-        self.lbTitle.text = label
+    func initUIComponents() {
+        
     }
+    
+    func initListeners() {
+        
+    }
+    
     
     func embedVCPassword(authentication:Authentication) {
         var vcPassword: AuthenticationPasswordViewController?
@@ -43,15 +46,28 @@ class AuthenticationViewController: UIViewController, AuthenticationDelegate, Au
     }
     
     func navigateToCardList() {
-        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList, sender: self)
+        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration.identifier, sender: self)
     }
 
     func navigateToInputPhoneNumber() {
-        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration, sender: self)
+        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList.identifier, sender: self)
     }
 
     func navigateToLockView() {
         performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToApplicationLock.identifier, sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case R.segue.authenticationViewController.authenticationToCardList.identifier:
+            (segue.destination as! TabBarViewController).selectedIndex = 0
+        case R.segue.authenticationViewController.authenticationToRegistration.identifier:
+            (segue.destination as! TabBarViewController).selectedIndex = 1
+        default:
+            print("error")
+        }
+    }
+    
+    
 }
 

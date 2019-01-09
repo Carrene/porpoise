@@ -11,35 +11,43 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var collectionViewbank: UICollectionView!
     @IBOutlet var countryPickerView: CountryPickerView!
     @IBOutlet var viewTextfields: UIView!
-    @IBOutlet var buttonRegister: UIButton!
     @IBOutlet var labelChooseCountry: UILabel!
     @IBOutlet var viewPhone: UIView!
+    @IBOutlet var labelAlreadyRegistered: UILabel!
+    @IBOutlet var labelPhone: UILabel!
     
+    private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
+    private var selectedBank : Bank?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PhoneInputPresenter(view: self)
-        initBankCollectionView()
         initCountryPicker()
+        initBankCollectionView()
         presenter.getBankList()
     }
     
-
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
+        textFieldPhoneNumber.text = ""
+        collectionViewbank.reloadData()
     }
     
-
     func initUIComponents() {
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 16)
         countryPickerView.layer.cornerRadius = 10
+        countryPickerView.layer.borderColor = R.color.buttonColor()?.cgColor
+        countryPickerView.layer.borderWidth = 1
+        viewPhone.layer.borderWidth = 1
+        viewTextfields.layer.borderWidth = 0.5
+        viewTextfields.layer.borderColor = R.color.buttonColor()?.cgColor
+        viewPhone.layer.borderColor = R.color.buttonColor()?.cgColor
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
-        buttonRegister.layer.cornerRadius = 10
         viewPhone.layer.cornerRadius = 10
     }
     
@@ -76,18 +84,24 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
         if textFieldPhoneNumber.text != "" {
-            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
+            if selectedBank != nil {
+                self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: self.selectedBank! )
+            }
+            else {
+                selectedBank = banks.first
+                self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: self.selectedBank! )
+            }
         }
     }
     
     @IBAction func onButtonRegister(_ sender: UIButton) {
-        if textFieldPhoneNumber.text != "" {
-            buttonRegister.isEnabled = true
-            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
-        }
-        else {
-            buttonRegister.isEnabled = false
-        }
+//        if textFieldPhoneNumber.text != "" {
+//            buttonRegister.isEnabled = true
+//            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
+//        }
+//        else {
+//            buttonRegister.isEnabled = false
+//        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -108,6 +122,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     
     func setBankList(banks : [Bank]) {
         bankCollectionViewAdapter?.setDataSource(banks: banks)
+        self.banks = banks
     }
     
     func navigateToPhoneConfirmation(phone:String) {
@@ -115,12 +130,29 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func selectedBank(bankIndex: Int) {
-        
+        presenter.getUser(bank: self.banks[bankIndex])
+        self.selectedBank = self.banks[bankIndex]
     }
+    
+    func showAlreadyRegistered(phone:String) {
+        labelAlreadyRegistered.isHidden = false
+        labelPhone.isHidden = false
+        viewPhone.isHidden = true
+        countryPickerView.isHidden = true
+        labelPhone.text = phone
+    }
+    
+    func showPhoneInput() {
+        labelAlreadyRegistered.isHidden = true
+        labelPhone.isHidden = true
+        viewPhone.isHidden = false
+        countryPickerView.isHidden = false
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == R.segue.phoneInputViewController.phoneInputToActivationSegue.identifier {
-        (segue.destination as! PhoneConfirmationViewController).setPhoneNumber(phone:labelPhoneCode.text!+textFieldPhoneNumber.text! )
+            (segue.destination as! PhoneConfirmationViewController).setData(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: selectedBank!)
         }
     }
     

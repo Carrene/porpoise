@@ -4,6 +4,10 @@ import Alamofire
 import AlamofireObjectMapper
 
 class UserRestRepository: UserRepositoryProtocol {
+    func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
+        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+    }
+    
     
     func bind(user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         let urlComponents = ApiHelper.newUrlComponentsInstance()

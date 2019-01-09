@@ -1,5 +1,3 @@
-
-
 import Foundation
 
 class UserRepository: UserRepositoryProtocol {
@@ -10,15 +8,6 @@ class UserRepository: UserRepositoryProtocol {
     func bind(user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         userRestRepository.bind(user: user) { restRepositoryResponse in
             onDone?(restRepositoryResponse)
-            if restRepositoryResponse.restDataResponse?.response?.statusCode == 200 {
-                self.userRealmRepository.update(restRepositoryResponse.value!) { realmRepositoryResponse in
-                    if let error = restRepositoryResponse.error {
-                        onDone?(RepositoryResponse(error: error))
-                        return
-                    }
-                    onDone?(restRepositoryResponse)
-                }
-            }
         }
     }
     
@@ -37,13 +26,22 @@ class UserRepository: UserRepositoryProtocol {
     
     func getAll(onDone: ((RepositoryResponse<[User]>) -> ())?) {
         userRealmRepository.getAll() { realmRepositoryResponse in
-            
             onDone?(realmRepositoryResponse)
         }
     }
     
-    func update(_: User, onDone: ((RepositoryResponse<User>) -> ())?) {
-        
+    func update(_ user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
+        userRealmRepository.update(user) {
+            repoResponse in
+            onDone?(repoResponse)
+        }
     }
-
+    
+    func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
+        userRealmRepository.get(bank: bank) {
+            repoResponse in
+            onDone?(repoResponse)
+        }
+    }
+    
 }

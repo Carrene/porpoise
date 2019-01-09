@@ -1,5 +1,5 @@
-
 import Foundation
+
 class AuthenticationPresenter: AuthenticationPresenterProtocol {
     
     unowned let authenticationView: AuthenticationViewProtocol
@@ -15,10 +15,8 @@ class AuthenticationPresenter: AuthenticationPresenterProtocol {
             } else {
                 if let authentication = repoResponse.value, !authentication.isLocked {
                     if authentication.authenticationType == AuthenticationTypeEnum.PASSWORD {
-                        self?.authenticationView.setAuthentication(label: R.string.localizable.lb_enter_password())
                         self?.authenticationView.embedVCPassword(authentication:repoResponse.value!)
                     } else {
-                        self?.authenticationView.setAuthentication(label: R.string.localizable.lb_enter_pattern())
                         self?.authenticationView.embedVCPattern(authentication: repoResponse.value!)
                     }
                 } else {

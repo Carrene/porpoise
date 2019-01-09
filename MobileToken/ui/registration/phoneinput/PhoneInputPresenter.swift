@@ -9,8 +9,8 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         self.view = view
     }
     
-    func claim(phone: String) {
-        let user = User(phone: phone)
+    func claim(phone: String,bank:Bank) {
+        let user = User(phone: phone, activationCode: nil, bank: bank)
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
@@ -28,7 +28,25 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
     }
     
     func getBankList(){
-        let banks = [Bank(name:"آینده")]
+        let banks = [Bank(name: "آینده", logoResourceId: R.image.bankAyandehLogo.name),Bank(name: "صادرات", logoResourceId: R.image.bankSaderatLogo.name)]
         view.setBankList(banks: banks)
+    }
+    
+    func getUser(bank: Bank) {
+        let repository = UserRepository()
+        let onDataResponse : ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            if response.error != nil {
+                print("error")
+            }
+            else {
+                if response.value == nil {
+                    self!.view.showPhoneInput()
+                }
+                else {
+                    self!.view.showAlreadyRegistered(phone: (response.value?.phone)!)
+                }
+            }
+        }
+        repository.get(bank: bank, onDone: onDataResponse)
     }
 }

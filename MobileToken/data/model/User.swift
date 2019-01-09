@@ -13,7 +13,7 @@ class User: Object, Mappable, NSCopying {
     }
     
     @objc private dynamic var Bank : Bank?
-    var bank : Bank?{
+    var bank : Bank? {
         get{return Bank}
         set{Bank = newValue}
     }
@@ -46,10 +46,11 @@ class User: Object, Mappable, NSCopying {
         return ["activationCode"]
     }
     
-    convenience init( phone: String? = nil, activationCode: String? = nil) {
+    convenience init( phone: String? = nil, activationCode: String? = nil, bank: Bank? = nil) {
         self.init()
         self.phone = phone
         self.activationCode = activationCode
+        self.bank = bank
     }
     
     func mapping(map: Map) {
@@ -59,7 +60,7 @@ class User: Object, Mappable, NSCopying {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return User(phone: phone)
+        return User(phone: phone, activationCode: nil, bank: bank)
     }
     
 }

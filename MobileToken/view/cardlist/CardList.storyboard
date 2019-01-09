@@ -6,11 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Token List View Controller-->
+        <!--کارت ها-->
         <scene sceneID="Owr-MW-4mL">
             <objects>
                 <viewController storyboardIdentifier="TokenListViewController" id="qfI-nN-dBL" customClass="TokenListViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,19 +24,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لیست کارت ها" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-KC-5nN" userLabel="labelTitle">
+                                <rect key="frame" x="139" y="35" width="97.5" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-M4-KV2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="536"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="primaryLight"/>
                         <constraints>
+                            <constraint firstItem="KAK-KC-5nN" firstAttribute="centerX" secondItem="DEU-Kc-QOS" secondAttribute="centerX" id="BH1-6F-jmr"/>
+                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="KAK-KC-5nN" secondAttribute="bottom" constant="20" id="TXe-sh-kwf"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="trailing" secondItem="X9c-M4-KV2" secondAttribute="trailing" id="Ta6-WG-SH4"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="bottom" secondItem="X9c-M4-KV2" secondAttribute="bottom" id="iJW-nB-UNj"/>
+                            <constraint firstItem="KAK-KC-5nN" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="15" id="oxP-jk-lbF"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="leading" secondItem="DEU-Kc-QOS" secondAttribute="leading" id="pyK-vq-ipC"/>
-                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" id="rtL-GN-R2a"/>
+                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="70" id="rtL-GN-R2a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEU-Kc-QOS"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rtL-GN-R2a"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="کارت ها" image="list-icon" id="TAT-Oz-QT1">
+                        <color key="badgeColor" name="buttonColor"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="vScroll" destination="X9c-M4-KV2" id="0bD-Zt-mgo"/>
                     </connections>
@@ -40,4 +64,13 @@
             <point key="canvasLocation" x="828" y="909.89505247376314"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list-icon" width="20" height="16"/>
+        <namedColor name="buttonColor">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryLight">
+            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

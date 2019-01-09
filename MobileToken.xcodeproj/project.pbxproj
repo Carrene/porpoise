@@ -68,6 +68,7 @@
 		AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */; };
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
+		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
@@ -85,6 +86,7 @@
 		ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
 		ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */; };
 		ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
+		ACCAF7B021DB6BD20057402B /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAF7AF21DB6BD20057402B /* MyApplication.swift */; };
 		ACDFD89F21A4016D00839F97 /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
 		ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
 		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
@@ -235,6 +237,7 @@
 		AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRealmRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
+		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationTypeTableViewCell.xib; sourceTree = "<group>"; };
 		ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewAdapter.swift; sourceTree = "<group>"; };
 		ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationViewController.swift; sourceTree = "<group>"; };
+		ACCAF7AF21DB6BD20057402B /* MyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
 		ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputPresenter.swift; sourceTree = "<group>"; };
 		ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputContractor.swift; sourceTree = "<group>"; };
 		ACDFD8A421A418BC00839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -501,6 +505,14 @@
 				AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */,
 			);
 			path = setting;
+			sourceTree = "<group>";
+		};
+		AC4E1A3F21E4CF39007DEB86 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */,
+			);
+			path = tabbar;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -775,6 +787,7 @@
 		AF463BC32189D8DF00DC8A3E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AC4E1A3F21E4CF39007DEB86 /* tabbar */,
 				AC353B0221BEB11F00B80412 /* applicationlock */,
 				AFE81B3E2196EE1300AA0AF2 /* authentication */,
 				AFE81B082196CC2D00AA0AF2 /* authenticationdefinition */,
@@ -1054,13 +1067,14 @@
 		AFE81B162196D26C00AA0AF2 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				AC16D72B21CA38550094FBED /* ScreenLocker.swift */,
 				AC16D72921CA36220094FBED /* CryptoUtil.swift */,
-				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
 				AF246A972199A59100C44E4B /* JwtPersistable.swift */,
+				ACCAF7AF21DB6BD20057402B /* MyApplication.swift */,
+				AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */,
+				AC16D72B21CA38550094FBED /* ScreenLocker.swift */,
 				AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */,
 				AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */,
-				AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */,
+				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1518,7 +1532,9 @@
 				AF285FF2219C46E300D8C342 /* BankCollectionViewAdapter.swift in Sources */,
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
 				AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */,
+				AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */,
 				AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */,
+				ACCAF7B021DB6BD20057402B /* MyApplication.swift in Sources */,
 				AC16D71721CA325C0094FBED /* AuthenticationDefinitionPatternContractor.swift in Sources */,
 				AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */,
 				AC16D73321CA734A0094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */,

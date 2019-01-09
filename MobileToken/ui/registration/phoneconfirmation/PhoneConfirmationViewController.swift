@@ -12,6 +12,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     @IBOutlet var NavigationItemTitle: UINavigationItem!
     @IBOutlet var viewTextfield: UIView!
     
+    private var selectedBank : Bank?
     private var presenter:PhoneConfirmationPresenterProtocol?
     private var phoneNumber = ""
     
@@ -59,8 +60,8 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         presenter?.invalidateTimer()
     }
     
-    func setPhoneNumber(phone:String) {
-        
+    func setData(phone:String,bank:Bank) {
+        self.selectedBank = bank
         self.phoneNumber = phone
     }
     
@@ -108,9 +109,9 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     @IBAction func onConfirm(_ sender: UIBarButtonItem) {
-        
+        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank)
         if textFieldCode.text != "" && self.phoneNumber != "" {
-            presenter?.bind(phone: self.phoneNumber, activationCode: textFieldCode.text!)
+            presenter?.bind(user:user)
         }
     }
     
@@ -133,9 +134,9 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
-        
+        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
         if textFieldCode.text != "" && self.phoneNumber != "" {
-            presenter?.bind(phone: self.phoneNumber, activationCode: textFieldCode.text!)
+            presenter?.bind(user:user)
         }
     }
     

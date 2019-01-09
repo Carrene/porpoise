@@ -1,22 +1,24 @@
-
-
 import Foundation
 import RealmSwift
 
 class UserRealmRepository:UserRepositoryProtocol {
     
-    func get(identifier: Int, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
-        if let user = realm.object(ofType: User.self, forPrimaryKey: identifier)?.copy() as? User {
-            onDone?(RepositoryResponse(value: user))
-        } else {
-            onDone?(RepositoryResponse(value: nil, restDataResponse: nil, error: nil))
+    func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        if let user = realm.objects(User.self).filter("Bank.Name='"+bank.name!+"'").first {
+            onDone?(RepositoryResponse(value:user))
         }
-        
+        else {
+            onDone?(RepositoryResponse(value:nil))
+        }
+    }
+    
+    func get(identifier: Int, onDone: ((RepositoryResponse<User>) -> ())?) {
+        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }
     
     func update(_ user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.insensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         do {
             try realm.write {
                 realm.add(user.copy() as! User, update: true)
@@ -36,7 +38,9 @@ class UserRealmRepository:UserRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[User]>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let userList : [User] = realm.objects(User.self).map { $0.copy() as! User }
+        onDone?(RepositoryResponse(value: userList))
     }
     
 }

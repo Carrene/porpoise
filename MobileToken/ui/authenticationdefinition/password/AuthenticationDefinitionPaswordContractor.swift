@@ -1,6 +1,5 @@
-
-
 import Foundation
+
 protocol AuthenticationDefinitionPasswordViewProtocol: class {
     func showNotMatchError()
     func navigateToTabbar()

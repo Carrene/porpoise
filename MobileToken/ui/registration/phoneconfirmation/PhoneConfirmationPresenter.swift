@@ -12,15 +12,12 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
         self.view = view
     }
     
-    func bind(phone:String,activationCode:String) {
-        
-        let user = User(phone: phone, activationCode: activationCode)
-
+    func bind(user:User) {
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
             case 200:
-                self?.view.segue()
+                self?.updateUserInRealm(user: user)
             case 400:
                 self?.view.showBadRequestError()
             case 801:
@@ -32,6 +29,18 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
             }
         }
         userRepository.bind(user: user, onDone: onDataResponse)
+    }
+    
+    func updateUserInRealm(user:User) {
+        let userRealmRepository = UserRealmRepository()
+        let onDataResponse: ((RepositoryResponse<User>) -> ()) = {[weak self] repoResponse in
+            if let error = repoResponse.error {
+                print("\(error)")
+            } else {
+                self?.view.segue()
+            }
+        }
+        userRealmRepository.update(user, onDone: onDataResponse)
     }
     
     @objc func update() {
