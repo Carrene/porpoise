@@ -8,7 +8,7 @@ class ScreenLocker {
         let instance = ScreenLocker()
         return instance
     }()
-    
+    static var SCREEN_LOCKER_TIME = 60
     var timer:Timer!
     var time:Int!
     

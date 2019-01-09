@@ -5,7 +5,6 @@ class MainViewController: UINavigationController {
     var hasWizardShown = false
     var authentication : Authentication?
     var setting : Setting?
-    static var SCREEN_LOCKER_TIME : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +50,7 @@ class MainViewController: UINavigationController {
             } else {
                 if let setting = repoResponse.value {
                     self?.setting = setting
-                    MainViewController.SCREEN_LOCKER_TIME = setting.lockTimer
+                    ScreenLocker.SCREEN_LOCKER_TIME = setting.lockTimer
                 } else {
                     UIHelper.showFailedSnackBar()
                 }

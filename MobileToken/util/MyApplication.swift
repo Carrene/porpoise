@@ -32,7 +32,7 @@ class MyApplication: UIApplication {
                 }
                 if(topController is AuthenticationViewController == false){
                     
-                    ScreenLocker.instance.resetTimer(time: MainViewController.SCREEN_LOCKER_TIME!)
+                    ScreenLocker.instance.resetTimer(time: ScreenLocker.SCREEN_LOCKER_TIME)
                 }
             }
         }
