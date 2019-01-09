@@ -17,7 +17,6 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
         initTableView()
         getVersion()
         settingPresenter?.getAllDataSetting()
-        // = setingview.getsetingmediator
     }
     
     func getVersion() {
