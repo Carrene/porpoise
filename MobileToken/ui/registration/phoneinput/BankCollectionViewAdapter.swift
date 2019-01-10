@@ -39,10 +39,12 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
             if banks![indexPath.row].name! == "آینده" {
                 cell.vCell.backgroundColor = R.color.ayandehColor()
                 cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+                cell.lmgLogo.image = R.image.lightBankAyandehLogo()
             }
             else {
                 cell.vCell.backgroundColor = R.color.saderatColor()
                 cell.vCell.layer.borderColor = R.color.saderatColor()?.cgColor
+                cell.lmgLogo.image = R.image.lightBankSaderatLogo()
             }
         }
         else {
@@ -51,10 +53,12 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
             if banks![indexPath.row].name! == "آینده" {
                 cell.lbBankName.textColor = R.color.ayandehColor()
                 cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+                cell.lmgLogo.image = R.image.colorBankAyandehLogo()
             }
             else {
                 cell.lbBankName.textColor = R.color.saderatColor()
                 cell.vCell.layer.borderColor = R.color.saderatColor()?.cgColor
+                cell.lmgLogo.image = R.image.bankSaderatLogo()
             }
         }
         return cell
