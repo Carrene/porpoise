@@ -23,6 +23,7 @@
             <connections>
                 <outlet property="buttonActionSheet" destination="i6y-WO-q3H" id="J7T-38-fsU"/>
                 <outlet property="imageLogo" destination="lUN-2e-ulq" id="zxQ-yg-pMD"/>
+                <outlet property="imagePlus" destination="ms6-qG-9Rd" id="g5a-US-Cm0"/>
                 <outlet property="labelBankName" destination="sZ2-Dk-Vth" id="H7W-do-TsR"/>
                 <outlet property="labelTitle" destination="HJy-qy-Uvt" id="aUc-5e-pBI"/>
                 <outlet property="labelTitle2" destination="sWj-1Y-Zmx" id="Vw6-cQ-3oM"/>
@@ -102,6 +103,13 @@
                                 <constraint firstAttribute="height" constant="25" id="Qem-K5-sLe"/>
                             </constraints>
                         </stackView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-qG-9Rd" userLabel="imageAdd">
+                            <rect key="frame" x="147.5" y="110" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="ASj-pg-JG7"/>
+                                <constraint firstAttribute="height" constant="20" id="med-bv-eln"/>
+                            </constraints>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دریافت رمزهای کارت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-1Y-Zmx">
                             <rect key="frame" x="93" y="110" width="129.5" height="20"/>
                             <constraints>
@@ -117,11 +125,13 @@
                         <constraint firstItem="fZI-ax-72e" firstAttribute="top" secondItem="lUN-2e-ulq" secondAttribute="bottom" constant="30" id="7A0-rB-2nR"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="7mn-71-bf2"/>
                         <constraint firstItem="i6y-WO-q3H" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" id="8Gy-BS-TI2"/>
+                        <constraint firstItem="ms6-qG-9Rd" firstAttribute="centerX" secondItem="sWj-1Y-Zmx" secondAttribute="centerX" id="Awl-ts-028"/>
                         <constraint firstItem="i6y-WO-q3H" firstAttribute="centerY" secondItem="sWj-1Y-Zmx" secondAttribute="centerY" id="CKA-XI-VYT"/>
                         <constraint firstItem="fZI-ax-72e" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="Cg7-Yv-4qM"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" constant="20" id="Ebe-cT-zrx"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="sZ2-Dk-Vth" secondAttribute="trailing" constant="20" id="LCq-oY-iyA"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="centerY" secondItem="lUN-2e-ulq" secondAttribute="centerY" id="Nq5-0I-OAL"/>
+                        <constraint firstItem="ms6-qG-9Rd" firstAttribute="centerY" secondItem="sWj-1Y-Zmx" secondAttribute="centerY" id="O7a-f1-B1t"/>
                         <constraint firstItem="sZ2-Dk-Vth" firstAttribute="centerY" secondItem="HJy-qy-Uvt" secondAttribute="centerY" id="ODW-bA-VlR"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="bottom" secondItem="sWj-1Y-Zmx" secondAttribute="bottom" constant="10" id="Tb6-28-iRf"/>
                         <constraint firstItem="sWj-1Y-Zmx" firstAttribute="top" secondItem="fZI-ax-72e" secondAttribute="bottom" constant="25" id="YzR-Yz-jy7"/>
@@ -156,6 +166,7 @@
     <resources>
         <image name="color-bank-ayandeh-logo" width="30" height="30"/>
         <image name="more-dots" width="20" height="5"/>
+        <image name="plus" width="40" height="40"/>
         <namedColor name="buttonColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

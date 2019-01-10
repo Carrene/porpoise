@@ -21,6 +21,7 @@ class CardCellXibView: UIView {
     @IBOutlet var stackViewCardNumber: UIStackView!
     @IBOutlet var buttonActionSheet: UIButton!
     @IBOutlet var labelTitle2: UILabel!
+    @IBOutlet var imagePlus: UIImageView!
     var cardCellXibProtocol:CardCellXibProtocol?
     
     override init(frame: CGRect) {
