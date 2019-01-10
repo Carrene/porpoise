@@ -11,11 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
+        </array>
         <array key="IRANSansMobile-Medium.ttf">
             <string>IRANSansMobile-Medium</string>
-        </array>
-        <array key="IranSansMediumFarsi.ttf">
-            <string>IRANSansMobileFaNum-Medium</string>
         </array>
     </customFonts>
     <objects>
@@ -40,16 +40,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-9I-6w2" userLabel="vCard">
                     <rect key="frame" x="0.0" y="0.0" width="315" height="140"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color-bank-ayandeh-logo" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
                             <rect key="frame" x="20" y="10" width="40" height="40"/>
-                            <color key="backgroundColor" name="buttonColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="gDb-D0-3om"/>
                                 <constraint firstAttribute="height" constant="40" id="mVX-rh-vm4"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک‌ملی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ2-Dk-Vth" userLabel="lbBankName">
-                            <rect key="frame" x="240.5" y="17.5" width="54.5" height="25.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک آینده" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ2-Dk-Vth" userLabel="lbBankName">
+                            <rect key="frame" x="228.5" y="17.5" width="66.5" height="25.5"/>
                             <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
@@ -75,25 +74,25 @@
                             <rect key="frame" x="20" y="80" width="275" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-fa-mEH" userLabel="lb1">
-                                    <rect key="frame" x="0.0" y="3" width="61.5" height="19"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="61.5" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-aM-HWX" userLabel="lb2">
-                                    <rect key="frame" x="71.5" y="3" width="61" height="19"/>
+                                    <rect key="frame" x="71.5" y="0.0" width="61" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-26-kOf" userLabel="lb3">
-                                    <rect key="frame" x="142.5" y="3" width="61.5" height="19"/>
+                                    <rect key="frame" x="142.5" y="0.0" width="61.5" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-SU-IKq" userLabel="lb4">
-                                    <rect key="frame" x="214" y="3" width="61" height="19"/>
+                                    <rect key="frame" x="214" y="0.0" width="61" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
@@ -155,9 +154,10 @@
         </view>
     </objects>
     <resources>
+        <image name="color-bank-ayandeh-logo" width="30" height="30"/>
         <image name="more-dots" width="20" height="5"/>
         <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

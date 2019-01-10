@@ -995,13 +995,13 @@
 			isa = PBXGroup;
 			children = (
 				AC5E6BDE21E717E200A9D4C3 /* addcard */,
-				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
-				AC5E6BDA21E62D1000A9D4C3 /* alert */,
-				AC16D72621CA35AD0094FBED /* passwordhint */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
+				AC5E6BDA21E62D1000A9D4C3 /* alert */,
 				ACDFD8AE21A9836200839F97 /* bank */,
+				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
 				AFE190E7219029430023E785 /* card */,
 				AFE190E82190296D0023E785 /* otp */,
+				AC16D72621CA35AD0094FBED /* passwordhint */,
 				AFAD2303219092EA00EC00CB /* selectbank */,
 				ACAAD86121AE8EDF007266F4 /* settingsrows */,
 			);

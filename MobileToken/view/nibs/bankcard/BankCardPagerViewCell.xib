@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,10 +25,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-DL-HCS" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="primary"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="primaryDark"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Cfi-DL-HCS" secondAttribute="trailing" id="51m-s9-pAt"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="6dx-TP-Zsw"/>
@@ -48,8 +49,17 @@
             <size key="customSize" width="289" height="293"/>
             <connections>
                 <outlet property="vCard" destination="Cfi-DL-HCS" id="QrG-4Q-v1p"/>
+                <outlet property="viewBankCard" destination="k8F-ES-KrH" id="PAO-2h-ocq"/>
             </connections>
             <point key="canvasLocation" x="-80.799999999999997" y="65.217391304347828"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
