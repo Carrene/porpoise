@@ -27,14 +27,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
                                 <color key="backgroundColor" name="primary"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-dB-g5S" userLabel="viewFirstOtp" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="20" y="175" width="260" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VzP-gL-DCt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSQ-ih-8sx" userLabel="viewSecondOtp" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="20" y="235" width="260" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q8j-dq-QCZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="primaryDark"/>
                         <constraints>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="top" secondItem="oxa-dB-g5S" secondAttribute="bottom" constant="20" id="4Ni-ND-Sfo"/>
                             <constraint firstAttribute="trailing" secondItem="Cfi-DL-HCS" secondAttribute="trailing" id="51m-s9-pAt"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="6dx-TP-Zsw"/>
+                            <constraint firstItem="oxa-dB-g5S" firstAttribute="top" secondItem="Cfi-DL-HCS" secondAttribute="bottom" constant="25" id="7vB-nZ-2Am"/>
+                            <constraint firstItem="oxa-dB-g5S" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="83a-rv-sEc"/>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="height" secondItem="oxa-dB-g5S" secondAttribute="height" id="TiY-dB-dLZ"/>
+                            <constraint firstAttribute="trailing" secondItem="oxa-dB-g5S" secondAttribute="trailing" constant="20" id="VJP-wu-rmq"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="top" secondItem="k8F-ES-KrH" secondAttribute="top" id="awR-pW-kEN"/>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="bkG-1S-qLy"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="height" secondItem="k8F-ES-KrH" secondAttribute="height" multiplier="0.5" id="fXh-GE-1nf"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" id="gyp-kA-CiJ"/>
+                            <constraint firstAttribute="trailing" secondItem="cSQ-ih-8sx" secondAttribute="trailing" constant="20" id="mou-QN-wiG"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -50,6 +69,8 @@
             <connections>
                 <outlet property="vCard" destination="Cfi-DL-HCS" id="QrG-4Q-v1p"/>
                 <outlet property="viewBankCard" destination="k8F-ES-KrH" id="PAO-2h-ocq"/>
+                <outlet property="viewFirstOtp" destination="oxa-dB-g5S" id="qtj-KC-yWL"/>
+                <outlet property="viewSecondOtp" destination="cSQ-ih-8sx" id="Ytv-t0-U3l"/>
             </connections>
             <point key="canvasLocation" x="-80.799999999999997" y="65.217391304347828"/>
         </collectionViewCell>

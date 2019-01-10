@@ -4,13 +4,18 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="IranSansReqular.ttf">
-            <string>IranianSans</string>
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
         </array>
     </customFonts>
     <objects>
@@ -29,10 +34,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-MO-ltC">
-                    <rect key="frame" x="205" y="2.5" width="35" height="50"/>
-                    <color key="backgroundColor" red="0.16949376460000001" green="0.4191063344" blue="0.66955816749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="205" y="7.5" width="35" height="40"/>
+                    <color key="backgroundColor" name="primaryDark"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="do5-PL-LrE"/>
+                        <constraint firstAttribute="height" constant="40" id="do5-PL-LrE"/>
                         <constraint firstAttribute="width" constant="35" id="zkn-Xp-Tw3"/>
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +48,7 @@
                     <subviews>
                         <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="b1r-eL-wJl" customClass="UIProgressView">
                             <rect key="frame" x="0.0" y="0.0" width="198" height="51"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="primaryDark"/>
                             <color key="tintColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمزاول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gge-C6-Uez" userLabel="lbPass">
@@ -52,23 +57,23 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="tKG-9C-0FE"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="13"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۲۳۴" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-MZ-xf5" userLabel="lbOtp">
-                            <rect key="frame" x="0.0" y="0.0" width="148" height="51"/>
+                            <rect key="frame" x="0.0" y="6" width="148" height="45"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="24"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.16949376460000001" green="0.4191063344" blue="0.66955816749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" name="primary"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="gge-C6-Uez" secondAttribute="trailing" id="4Yn-aS-rcW"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" id="8FC-gw-GzE"/>
-                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" id="SnP-ty-tvc"/>
+                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" constant="6" id="SnP-ty-tvc"/>
                         <constraint firstItem="gge-C6-Uez" firstAttribute="leading" secondItem="Ne0-MZ-xf5" secondAttribute="trailing" constant="5" id="aIp-Vi-23H"/>
                         <constraint firstAttribute="bottom" secondItem="Ne0-MZ-xf5" secondAttribute="bottom" id="aoP-YA-kHj"/>
                         <constraint firstAttribute="bottom" secondItem="b1r-eL-wJl" secondAttribute="bottom" id="dZW-74-D7l"/>
@@ -96,6 +101,12 @@
         </view>
     </objects>
     <resources>
-        <image name="copy" width="24" height="24"/>
+        <image name="copy" width="15" height="18"/>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

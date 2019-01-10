@@ -60,6 +60,10 @@ class OtpViewDesignable: UIView {
         btCopy.layer.masksToBounds = true
         btCopy.layer.cornerRadius = 5
         vProgress.progressViewStyle = .bar
+        btCopy.layer.borderWidth = 0.5
+        btCopy.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        vComponent.layer.borderWidth = 0.5
+        vComponent.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
     }
 }
 

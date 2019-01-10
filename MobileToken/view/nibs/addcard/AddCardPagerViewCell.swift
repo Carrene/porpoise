@@ -6,6 +6,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
     
     @IBOutlet var viewAddCard: UIView!
     @IBOutlet var viewCard: CardCellXibView!
+    @IBOutlet var textField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +19,9 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewAddCard.layer.borderWidth = 0.5
-        
+        textField.layer.cornerRadius = 10
+        textField.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        textField.layer.borderWidth = 0.5
     }
     
     
