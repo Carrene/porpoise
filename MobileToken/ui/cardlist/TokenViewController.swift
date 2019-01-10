@@ -7,7 +7,7 @@ class TokenListViewController: BaseViewController {
     @IBOutlet weak var vScroll: UIScrollView!
     
     var cardListPagerViewAdapter:CardPagerViewAdapter?
-    var pagerList = [CardPagerViewAdapter(), CardPagerViewAdapter(), CardPagerViewAdapter()]
+    var pagerList = [CardPagerViewAdapter(), CardPagerViewAdapter()]
     let actionController = MobileTokenActionSheetController()
     var selectedWalletIndex: Int?
     
