@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="82" width="375" height="536"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" name="primaryLight"/>
+                        <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="KAK-KC-5nN" firstAttribute="centerX" secondItem="DEU-Kc-QOS" secondAttribute="centerX" id="BH1-6F-jmr"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="KAK-KC-5nN" secondAttribute="bottom" constant="20" id="TXe-sh-kwf"/>
@@ -69,8 +69,8 @@
         <namedColor name="buttonColor">
             <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="primaryLight">
-            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

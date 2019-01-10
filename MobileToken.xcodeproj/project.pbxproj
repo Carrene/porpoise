@@ -71,6 +71,7 @@
 		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
+		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -240,6 +241,7 @@
 		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
+		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -513,6 +515,23 @@
 				AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		AC5E6BDA21E62D1000A9D4C3 /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */,
+			);
+			path = alert;
+			sourceTree = "<group>";
+		};
+		AC5E6BDD21E7175700A9D4C3 /* bankcard */ = {
+			isa = PBXGroup;
+			children = (
+				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
+				AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */,
+			);
+			path = bankcard;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -966,6 +985,8 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
+				AC5E6BDA21E62D1000A9D4C3 /* alert */,
 				AC16D72621CA35AD0094FBED /* passwordhint */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
 				ACDFD8AE21A9836200839F97 /* bank */,
@@ -983,8 +1004,6 @@
 				057924BE219202CB00DFA69F /* TokenViewController.swift */,
 				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
 				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
-				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
-				AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */,
 				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
 			);
 			path = cardlist;
@@ -1298,6 +1317,7 @@
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */,
+				AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */,
 				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
