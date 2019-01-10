@@ -534,6 +534,15 @@
 			path = bankcard;
 			sourceTree = "<group>";
 		};
+		AC5E6BDE21E717E200A9D4C3 /* addcard */ = {
+			isa = PBXGroup;
+			children = (
+				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
+				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
+			);
+			path = addcard;
+			sourceTree = "<group>";
+		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +994,7 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AC5E6BDE21E717E200A9D4C3 /* addcard */,
 				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
 				AC5E6BDA21E62D1000A9D4C3 /* alert */,
 				AC16D72621CA35AD0094FBED /* passwordhint */,
@@ -1002,8 +1012,6 @@
 			isa = PBXGroup;
 			children = (
 				057924BE219202CB00DFA69F /* TokenViewController.swift */,
-				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
-				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
 				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
 			);
 			path = cardlist;
