@@ -23,7 +23,7 @@ class AuthenticationPatternViewController: UIViewController, AuthenticationPatte
         vPattern.resetDotsState()
         vPattern.normalDotImage = R.image.patternDot()
         vPattern.highlightedDotImage = R.image.patternGrayDot()
-        vPattern.dotWidth = 25
+        vPattern.dotWidth = 40
         configuareLockViewWithImages()
     }
     

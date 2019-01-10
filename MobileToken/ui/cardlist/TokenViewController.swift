@@ -43,13 +43,13 @@ class TokenListViewController: BaseViewController {
     
     func initCardListPagerView() {
         var y = 0
-        for i in 0...2 {
+        for i in 0...1 {
             
             let screenBounds =  UIScreen.main.bounds
             
             let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)
             let cardListPagerView = FSPagerView(frame: frame)
-            y += 340
+            y += 330
             
             let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
             cardListPagerView.register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)

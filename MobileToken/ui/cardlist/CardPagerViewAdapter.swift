@@ -22,6 +22,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
         if index == 0 {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
             //cell.vCard.backgroundColor = R.color.primary()
+            cell.vCard.imagePlus.isHidden = true
             return cell
         }else {
             
