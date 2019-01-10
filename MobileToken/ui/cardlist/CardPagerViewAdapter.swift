@@ -14,7 +14,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
         self.cardPagerViewDelegate = cardPagerViewDelegate
     }
     
-    
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return 2
     }
