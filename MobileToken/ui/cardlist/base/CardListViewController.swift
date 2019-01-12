@@ -44,7 +44,7 @@ class CardListViewController: BaseViewController {
     func initCardListPagerView() {
         var y = 0
         for i in 0...1 {
-            
+    
             let screenBounds =  UIScreen.main.bounds
             
             let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)

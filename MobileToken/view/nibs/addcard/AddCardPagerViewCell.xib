@@ -89,7 +89,7 @@
                 <outlet property="viewAddCard" destination="k8F-ES-KrH" id="z77-Ex-sJP"/>
                 <outlet property="viewCard" destination="phn-by-T2c" id="bzz-II-L72"/>
             </connections>
-            <point key="canvasLocation" x="-80.799999999999997" y="65.217391304347828"/>
+            <point key="canvasLocation" x="-81.599999999999994" y="64.767616191904054"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -1,5 +1,3 @@
-
-
 import Foundation
 import ObjectMapper
 import ObjectMapper_Realm
@@ -39,7 +37,7 @@ class Card: Object, Mappable, NSCopying{
         case ADD = "ADD"
     }
    //why user list?
-    var TokenList = List<User>()
+    var TokenList = List<Token>()
 
     required convenience init?(map: Map) {
         self.init()

@@ -20,13 +20,12 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         if index == 0 {
+            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
+            return cell
+        }  else {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
             cell.vCard.imagePlus.isHidden = true
             return cell
-        }else {
-            let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
-            return cell
-            
         }
     }
     
