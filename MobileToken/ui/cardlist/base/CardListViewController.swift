@@ -6,19 +6,22 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
    
     @IBOutlet weak var vScroll: UIScrollView!
     
-    var cardListPagerViewAdapter:CardPagerViewAdapter?
-    var pagerList = [CardPagerViewAdapter(), CardPagerViewAdapter()]
+    private var cardListPagerViewAdapter:CardPagerViewAdapter?
+    private var pagerList : [CardPagerViewAdapter]?
+    private var cardListPresenter : CardListPresenterProtocol?
     let actionController = MobileTokenActionSheetController()
-    var selectedWalletIndex: Int?
+    private var selectedWalletIndex: Int?
+    private var banks : [Bank]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initActionSheet()
+        self.cardListPresenter = CardListPresenter(view: self)
+        cardListPresenter?.getBankList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         initCardListPagerView()
-        
     }
     
     func initActionSheet() {
@@ -41,40 +44,48 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     }
     
     func setBankList(banks: [Bank]) {
-        
+        self.banks = banks
+        initPagerList()
+    }
+    
+    func initPagerList() {
+        for _ in banks! {
+            pagerList?.append(CardPagerViewAdapter())
+        }
     }
     
     func noBank() {
         
     }
     
-    
     func initCardListPagerView() {
         var y = 0
-        for i in 0...1 {
-    
-            let screenBounds =  UIScreen.main.bounds
-            
-            let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)
-            let cardListPagerView = FSPagerView(frame: frame)
-            y += 330
-            
-            let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
-            cardListPagerView.register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
-            
-            let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
-            cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
-            
-            cardListPagerViewAdapter = pagerList[i]
-            cardListPagerView.delegate = cardListPagerViewAdapter
-            cardListPagerView.dataSource = cardListPagerViewAdapter
-            cardListPagerView.itemSize = CGSize(width: 300, height: 300)
-            cardListPagerView.interitemSpacing = 10
-            
-            vScroll.isScrollEnabled = true
-            vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
-            vScroll.addSubview(cardListPagerView)
-            cardListPagerView.reloadData()
+        if pagerList != nil {
+            for i in pagerList!.indices {
+                let screenBounds =  UIScreen.main.bounds
+                
+                let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)
+                let cardListPagerView = FSPagerView(frame: frame)
+                y += 330
+                
+                let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
+                cardListPagerView.register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
+                
+                let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
+                cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
+
+                cardListPagerViewAdapter = pagerList![i]
+                
+                cardListPagerView.delegate = cardListPagerViewAdapter
+                cardListPagerView.dataSource = cardListPagerViewAdapter
+                cardListPagerView.itemSize = CGSize(width: 300, height: 300)
+                cardListPagerView.interitemSpacing = 10
+                
+                vScroll.isScrollEnabled = true
+                vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
+                vScroll.addSubview(cardListPagerView)
+                cardListPagerView.reloadData()
+            }
         }
     }
 }
