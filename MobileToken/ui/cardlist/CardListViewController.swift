@@ -2,7 +2,7 @@ import XLActionController
 import UIKit
 import FSPagerView
 
-class TokenListViewController: BaseViewController {
+class CardListViewController: BaseViewController {
     
     @IBOutlet weak var vScroll: UIScrollView!
     

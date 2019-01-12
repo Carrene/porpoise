@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* TokenViewController.swift */; };
+		057924BF219202CB00DFA69F /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* CardListViewController.swift */; };
 		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
@@ -175,7 +175,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		057924BE219202CB00DFA69F /* TokenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		057924BE219202CB00DFA69F /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		1D9306731899899C0CC5FB63 /* Pods-MobileToken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.release.xcconfig"; sourceTree = "<group>"; };
 		2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.release.xcconfig"; sourceTree = "<group>"; };
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1011,7 +1011,7 @@
 		AFBC2ADC21918E3000D37C84 /* cardlist */ = {
 			isa = PBXGroup;
 			children = (
-				057924BE219202CB00DFA69F /* TokenViewController.swift */,
+				057924BE219202CB00DFA69F /* CardListViewController.swift */,
 				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
 			);
 			path = cardlist;
@@ -1531,7 +1531,7 @@
 				AF246AAB219ADC3300C44E4B /* TokenRepositoryProtocol.swift in Sources */,
 				AF246A962199A2CE00C44E4B /* Interceptor.swift in Sources */,
 				AF246A7C21984A5500C44E4B /* Bank.swift in Sources */,
-				057924BF219202CB00DFA69F /* TokenViewController.swift in Sources */,
+				057924BF219202CB00DFA69F /* CardListViewController.swift in Sources */,
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
 				AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */,

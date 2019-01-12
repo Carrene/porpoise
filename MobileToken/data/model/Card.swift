@@ -38,7 +38,7 @@ class Card: Object, Mappable, NSCopying{
         case INTERNET = "INTERNET"
         case ADD = "ADD"
     }
-   
+   //why user list?
     var TokenList = List<User>()
 
     required convenience init?(map: Map) {

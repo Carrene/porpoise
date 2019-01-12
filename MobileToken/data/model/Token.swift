@@ -6,10 +6,10 @@ import RealmSwift
 //TODO(Fateme) Just extend from realm not object mapper
 class Token: Object, Mappable, NSCopying{
     
-    @objc private dynamic var TokenPaket: String? = nil
-    public var tokenPaket: String? {
-        get { return TokenPaket }
-        set { TokenPaket = newValue }
+    @objc private dynamic var TokenPacket: String? = nil
+    public var tokenPacket: String? {
+        get { return TokenPacket }
+        set { TokenPacket = newValue }
     }
     
     private var expireDate: String?
@@ -32,7 +32,7 @@ class Token: Object, Mappable, NSCopying{
     
     convenience init(tokenPaket: String? = nil, secret: String? = nil) {
         self.init()
-        self.tokenPaket = tokenPaket
+        self.tokenPacket = tokenPaket
         self.secret = secret
     }
     
@@ -40,6 +40,6 @@ class Token: Object, Mappable, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Token(tokenPaket: tokenPaket, secret: secret)
+        return Token(tokenPaket: tokenPacket, secret: secret)
     }
 }
