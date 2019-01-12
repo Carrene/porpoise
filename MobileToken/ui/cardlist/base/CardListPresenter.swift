@@ -9,7 +9,19 @@ class CardListPresenter : CardListPresenterProtocol {
     }
     
     func getBankList() {
-        //view.setBankList(banks: <#T##[Bank]#>)
+        let repository = UserRepository()
+        let onDataResponse : ((RepositoryResponse<[Bank]>) -> ()) = { [weak self] response in
+            if response.error != nil {
+                print("error")
+            }
+            else {
+                if response.value == nil {
+                    self!.view.noBank()
+                }
+                else {
+                    self!.view.setBankList(banks: response.value!)
+                }
+            }
+        }
     }
-    
 }

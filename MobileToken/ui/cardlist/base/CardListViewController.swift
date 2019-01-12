@@ -3,7 +3,7 @@ import UIKit
 import FSPagerView
 
 class CardListViewController: BaseViewController,CardListViewProtocol {
-    
+   
     @IBOutlet weak var vScroll: UIScrollView!
     
     var cardListPagerViewAdapter:CardPagerViewAdapter?
@@ -41,6 +41,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     }
     
     func setBankList(banks: [Bank]) {
+        
+    }
+    
+    func noBank() {
         
     }
     
