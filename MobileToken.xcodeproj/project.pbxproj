@@ -73,6 +73,7 @@
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
 		AC5E6BE021E9CFAC00A9D4C3 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
+		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -243,6 +244,7 @@
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
 		AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
+		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -548,8 +550,17 @@
 			children = (
 				057924BE219202CB00DFA69F /* CardListViewController.swift */,
 				AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */,
+				AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		AC5E6BE221E9D07600A9D4C3 /* bankcards */ = {
+			isa = PBXGroup;
+			children = (
+				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
+			);
+			path = bankcards;
 			sourceTree = "<group>";
 		};
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
@@ -1020,7 +1031,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5E6BE121E9CFDB00A9D4C3 /* base */,
-				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
+				AC5E6BE221E9D07600A9D4C3 /* bankcards */,
 			);
 			path = cardlist;
 			sourceTree = "<group>";
@@ -1507,6 +1518,7 @@
 				AC16D71921CA325C0094FBED /* AuthenticationDefinitionPatternpresenter.swift in Sources */,
 				AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */,
 				AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
+				AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */,
 				AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,

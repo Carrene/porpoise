@@ -2,7 +2,7 @@ import XLActionController
 import UIKit
 import FSPagerView
 
-class CardListViewController: BaseViewController {
+class CardListViewController: BaseViewController,CardListViewProtocol {
     
     @IBOutlet weak var vScroll: UIScrollView!
     
@@ -37,6 +37,10 @@ class CardListViewController: BaseViewController {
     }
     
     func initListeners() {
+        
+    }
+    
+    func setBankList(banks: [Bank]) {
         
     }
     
