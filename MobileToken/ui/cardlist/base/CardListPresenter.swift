@@ -12,5 +12,4 @@ class CardListPresenter : CardListPresenterProtocol {
         //view.setBankList(banks: <#T##[Bank]#>)
     }
     
-    
 }
