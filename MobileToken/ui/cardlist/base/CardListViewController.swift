@@ -17,12 +17,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
         super.viewDidLoad()
         initActionSheet()
         self.cardListPresenter = CardListPresenter(view: self)
-        cardListPresenter?.getBankList()
-        initCardListPagerView()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        cardListPresenter?.getBankList()
+        initCardListPagerView()
     }
     
     func initActionSheet() {
@@ -51,7 +51,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     
     func initPagerList() {
         for _ in banks! {
+            if pagerList.count < (banks?.count)! {
             pagerList.append(CardPagerViewAdapter())
+            }
         }
     }
     
