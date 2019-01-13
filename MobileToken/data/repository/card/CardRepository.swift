@@ -5,7 +5,9 @@ class CardRepository: CardRepositoryProtocol {
     let cardRealmRepository = CardRealmRepository()
     
     func addCard(card: Card, bankName: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        
+        cardRealmRepository.addCard(card: card, bankName: bankName) {
+            realmRepositoryResponse in onDone?(realmRepositoryResponse)
+        }
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {

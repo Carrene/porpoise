@@ -18,7 +18,6 @@ class CardRealmRepository: CardRepositoryProtocol {
             onDone?(RepositoryResponse(error: error))
         }
         
-        
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {
