@@ -6,8 +6,17 @@ class CardRealmRepository: CardRepositoryProtocol {
     func addCard(card: Card, bankName: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         let bank = realm.objects(Bank.self).filter("Bank.Name='"+bankName+"'").first
-        
-        
+        bank?.cardList?.append(card)
+        do {
+            try realm.write {
+                realm.add(bank?.copy() as! Bank, update: true)
+                realm.add(card.copy() as! Card, update: true)
+            }
+            onDone?(RepositoryResponse(value: (card.copy() as! Card), restDataResponse: nil, error: nil))
+        }
+        catch {
+            onDone?(RepositoryResponse(error: error))
+        }
         
         
     }
