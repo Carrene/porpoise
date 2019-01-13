@@ -24,6 +24,9 @@ class AddCardPagerViewCell: FSPagerViewCell {
         textField.layer.borderWidth = 0.5
     }
     
+    @IBAction func onAddCardButton(_ sender: UIButton) {
+        
+    }
     
 
 }

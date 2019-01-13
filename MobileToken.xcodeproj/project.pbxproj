@@ -74,6 +74,7 @@
 		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
 		AC5E6BE021E9CFAC00A9D4C3 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
 		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
+		AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
@@ -111,7 +112,6 @@
 		AF246A9F219AAA1700C44E4B /* BankRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */; };
 		AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA0219AB17F00C44E4B /* BankRepository.swift */; };
 		AF246AA4219AB91700C44E4B /* CardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */; };
-		AF246AA6219ABBA400C44E4B /* CardRelmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA5219ABBA400C44E4B /* CardRelmRepsitory.swift */; };
 		AF246AA8219ACAC700C44E4B /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA7219ACAC600C44E4B /* CardRepository.swift */; };
 		AF246AAB219ADC3300C44E4B /* TokenRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */; };
 		AF246AAD219ADCC000C44E4B /* TokenRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */; };
@@ -245,6 +245,7 @@
 		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
 		AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
+		AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRealmRepsitory.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
@@ -283,7 +284,6 @@
 		AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRealmRepository.swift; sourceTree = "<group>"; };
 		AF246AA0219AB17F00C44E4B /* BankRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRepository.swift; sourceTree = "<group>"; };
 		AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepositoryProtocol.swift; sourceTree = "<group>"; };
-		AF246AA5219ABBA400C44E4B /* CardRelmRepsitory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRelmRepsitory.swift; sourceTree = "<group>"; };
 		AF246AA7219ACAC600C44E4B /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRealmRepository.swift; sourceTree = "<group>"; };
@@ -767,8 +767,8 @@
 		AF246AA2219AB8CE00C44E4B /* card */ = {
 			isa = PBXGroup;
 			children = (
+				AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */,
 				AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */,
-				AF246AA5219ABBA400C44E4B /* CardRelmRepsitory.swift */,
 				AF246AA7219ACAC600C44E4B /* CardRepository.swift */,
 			);
 			path = card;
@@ -1592,7 +1592,6 @@
 				ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */,
 				AC16D70621CA31CA0094FBED /* AuthenticationPasswordViewController.swift in Sources */,
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
-				AF246AA6219ABBA400C44E4B /* CardRelmRepsitory.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 				AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */,
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
@@ -1602,6 +1601,7 @@
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
 				AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */,
+				AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */,
 				AC16D73021CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,5 +26,9 @@ class CardListPresenter : CardListPresenterProtocol {
         repository.getAll(onDone: onDataResponse)
     }
     
+    func addCard() {
+        
+    }
+    
     
 }

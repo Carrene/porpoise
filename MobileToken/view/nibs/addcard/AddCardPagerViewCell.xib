@@ -38,14 +38,15 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام پیشنهادی کارت" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
                                 <rect key="frame" x="20" y="175" width="260" height="40"/>
                                 <color key="backgroundColor" name="primaryDark"/>
+                                <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CqA-HG-NmI"/>
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-BK-Rl0">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-BK-Rl0">
                                 <rect key="frame" x="0.0" y="260" width="300" height="40"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
@@ -57,6 +58,9 @@
 </string>
                                     <color key="titleColor" name="secondary"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAddCardButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="SBf-fJ-Sfm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="primaryDark"/>

@@ -1,9 +1,12 @@
-
-
 import Foundation
+
 class CardRepository: CardRepositoryProtocol {
     
     let cardRealmRepository = CardRealmRepository()
+    
+    func addCard(card: Card, bankName: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
+        
+    }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
