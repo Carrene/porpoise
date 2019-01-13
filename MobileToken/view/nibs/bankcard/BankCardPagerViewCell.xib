@@ -14,27 +14,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BankCardPagerViewCell" id="gTV-IL-0wX" userLabel="BankCardPagerViewCell" customClass="BankCardPagerViewCell" customModule="MobileToken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-DL-HCS" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
                                 <color key="backgroundColor" name="primary"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-dB-g5S" userLabel="viewFirstOtp" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="20" y="175" width="260" height="40"/>
+                                <rect key="frame" x="20" y="139" width="280" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VzP-gL-DCt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSQ-ih-8sx" userLabel="viewSecondOtp" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="20" y="235" width="260" height="40"/>
+                                <rect key="frame" x="20" y="195" width="280" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Q8j-dq-QCZ"/>
                                 </constraints>
@@ -42,19 +42,25 @@
                         </subviews>
                         <color key="backgroundColor" name="primaryDark"/>
                         <constraints>
-                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="top" secondItem="oxa-dB-g5S" secondAttribute="bottom" constant="20" id="4Ni-ND-Sfo"/>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="top" secondItem="oxa-dB-g5S" secondAttribute="bottom" constant="16" id="4Ni-ND-Sfo"/>
                             <constraint firstAttribute="trailing" secondItem="Cfi-DL-HCS" secondAttribute="trailing" id="51m-s9-pAt"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="6dx-TP-Zsw"/>
-                            <constraint firstItem="oxa-dB-g5S" firstAttribute="top" secondItem="Cfi-DL-HCS" secondAttribute="bottom" constant="25" id="7vB-nZ-2Am"/>
+                            <constraint firstItem="oxa-dB-g5S" firstAttribute="top" secondItem="Cfi-DL-HCS" secondAttribute="bottom" constant="16" id="7vB-nZ-2Am"/>
                             <constraint firstItem="oxa-dB-g5S" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="83a-rv-sEc"/>
                             <constraint firstItem="cSQ-ih-8sx" firstAttribute="height" secondItem="oxa-dB-g5S" secondAttribute="height" id="TiY-dB-dLZ"/>
                             <constraint firstAttribute="trailing" secondItem="oxa-dB-g5S" secondAttribute="trailing" constant="20" id="VJP-wu-rmq"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="top" secondItem="k8F-ES-KrH" secondAttribute="top" id="awR-pW-kEN"/>
                             <constraint firstItem="cSQ-ih-8sx" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="bkG-1S-qLy"/>
+                            <constraint firstAttribute="bottom" secondItem="cSQ-ih-8sx" secondAttribute="bottom" constant="16" id="dZn-pG-cme"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="height" secondItem="k8F-ES-KrH" secondAttribute="height" multiplier="0.5" id="fXh-GE-1nf"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" id="gyp-kA-CiJ"/>
                             <constraint firstAttribute="trailing" secondItem="cSQ-ih-8sx" secondAttribute="trailing" constant="20" id="mou-QN-wiG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fXh-GE-1nf"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
             </view>

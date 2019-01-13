@@ -10,11 +10,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="IRANSansMobile-Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="Xmc-xJ-6og">
@@ -40,23 +35,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-KC-5nN" userLabel="labelTitle">
-                                <rect key="frame" x="187.5" y="79" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
-                                <color key="textColor" name="buttonColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-M4-KV2">
-                                <rect key="frame" x="0.0" y="99" width="375" height="519"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="542"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="KAK-KC-5nN" firstAttribute="centerX" secondItem="DEU-Kc-QOS" secondAttribute="centerX" id="BH1-6F-jmr"/>
-                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="KAK-KC-5nN" secondAttribute="bottom" constant="20" id="TXe-sh-kwf"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="trailing" secondItem="X9c-M4-KV2" secondAttribute="trailing" id="Ta6-WG-SH4"/>
+                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="12" id="Zuq-eh-D5N"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="bottom" secondItem="X9c-M4-KV2" secondAttribute="bottom" id="iJW-nB-UNj"/>
-                            <constraint firstItem="KAK-KC-5nN" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="15" id="oxP-jk-lbF"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="leading" secondItem="DEU-Kc-QOS" secondAttribute="leading" id="pyK-vq-ipC"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="70" id="rtL-GN-R2a"/>
                         </constraints>

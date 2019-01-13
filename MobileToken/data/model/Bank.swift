@@ -18,13 +18,20 @@ class Bank: Object, Mappable, NSCopying{
         set { Secret=newValue }
     }
     
-    var cardList : [Card]?
+    private var CardList: [Card]?
+    var cardList : [Card]? {
+        get { return CardList }
+        set { CardList = newValue }
+    }
+    
     
     private var LogoResourceId: String?
     var logoResourceId:String? {
         get { return LogoResourceId }
         set { LogoResourceId=newValue }
     }
+    
+    
     
     required convenience init?(map: Map) {
         self.init()
