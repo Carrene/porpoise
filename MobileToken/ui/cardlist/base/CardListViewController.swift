@@ -22,7 +22,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         cardListPresenter?.getBankList()
-        initCardListPagerView()
+        //initCardListPagerView()
     }
     
     func initActionSheet() {
@@ -51,9 +51,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     
     func initPagerList() {
         pagerList.removeAll()
-        for _ in banks! {
-            pagerList.append(CardPagerViewAdapter())
+        for i in (banks?.indices)! {
+            pagerList.append(CardPagerViewAdapter(sender: banks![i]))
+            
         }
+        initCardListPagerView()
     }
     
     func noBank() {
@@ -66,6 +68,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
         if pagerList.count > 0 {
             
             vScroll.subviews.forEach({ $0.removeFromSuperview() })
+            
             for i in pagerList.indices {
                 let screenBounds =  UIScreen.main.bounds
                 
@@ -78,7 +81,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
                 
                 let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
-
+                cardListPagerViewAdapter = CardPagerViewAdapter(sender: banks![i])
                 cardListPagerViewAdapter = pagerList[i]
                 
                 cardListPagerView.delegate = cardListPagerViewAdapter

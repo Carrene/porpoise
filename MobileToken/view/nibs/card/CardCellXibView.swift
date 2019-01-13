@@ -17,10 +17,10 @@ class CardCellXibView: UIView {
     var contentView : UIView!
     @IBOutlet var imageLogo: UIImageView!
     @IBOutlet var labelBankName: UILabel!
-    @IBOutlet var labelTitle: UILabel!
+    @IBOutlet var labelCardName: UILabel!
     @IBOutlet var stackViewCardNumber: UIStackView!
     @IBOutlet var buttonActionSheet: UIButton!
-    @IBOutlet var labelTitle2: UILabel!
+    @IBOutlet var labelBottomTitle: UILabel!
     @IBOutlet var imagePlus: UIImageView!
     var cardCellXibProtocol:CardCellXibProtocol?
     
