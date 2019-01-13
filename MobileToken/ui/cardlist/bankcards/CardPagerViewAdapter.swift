@@ -16,7 +16,12 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return 2
+        if let cardCount = bank.cardList?.count {
+            return cardCount + 1
+        }
+        else {
+            return 1
+        }
     }
     
     init(sender:Bank) {
@@ -27,6 +32,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource 
         if index == 0 {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
             cell.viewCard.labelBankName.text = self.bank.name
+
             //cell.viewCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             return cell
         }  else {
