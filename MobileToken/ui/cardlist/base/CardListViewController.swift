@@ -2,7 +2,7 @@ import XLActionController
 import UIKit
 import FSPagerView
 
-class CardListViewController: BaseViewController,CardListViewProtocol {
+class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
    
     @IBOutlet weak var vScroll: UIScrollView!
     
@@ -48,6 +48,16 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
         self.banks = banks
         initPagerList()
     }
+    
+    func selectedCard(cardIndex: Int) {
+        
+    }
+    
+    func addCard(cardName: String,selectedBank:Bank) {
+        let card = Card(number: "", bank: selectedBank, name: cardName, cardType: Card.CardTypeEnum.BANK )
+        cardListPresenter?.addCard(card: card, bankName: selectedBank.name!)
+    }
+    
     
     func initPagerList() {
         pagerList.removeAll()

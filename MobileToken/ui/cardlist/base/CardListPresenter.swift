@@ -26,8 +26,17 @@ class CardListPresenter : CardListPresenterProtocol {
         repository.getAll(onDone: onDataResponse)
     }
     
-    func addCard() {
-        
+    func addCard(card:Card,bankName:String) {
+        let repository = CardRepository()
+        let onDataResponse : ((RepositoryResponse<Card>) -> ()) = { [weak self] response in
+            if response.error != nil {
+                print("error")
+            }
+            else {
+                print("card added successfully")
+            }
+        }
+        repository.addCard(card: card, bankName: bankName, onDone: onDataResponse)
     }
     
     

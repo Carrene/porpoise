@@ -1,5 +1,6 @@
 import UIKit
 
+
 class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,SettingViewProtocol {
 
     @IBOutlet var tableView: UITableView!

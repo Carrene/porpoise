@@ -2,11 +2,17 @@
 import UIKit
 import FSPagerView
 
+protocol AddCardPagerViewCellProtocol {
+    func addCardDetail(cardName:String,selectedBank:Bank)
+}
+
 class AddCardPagerViewCell: FSPagerViewCell {
     
     @IBOutlet var viewAddCard: UIView!
     @IBOutlet var viewCard: CardCellXibView!
     @IBOutlet var textField: UITextField!
+    private var addCardPagerViewCellProtocol : AddCardPagerViewCellProtocol?
+    private var bank:Bank?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +28,22 @@ class AddCardPagerViewCell: FSPagerViewCell {
         textField.layer.cornerRadius = 10
         textField.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         textField.layer.borderWidth = 0.5
+        viewCard.labelBankName.text = self.bank!.name
+    }
+    
+    func setDelegate(addCardPagerViewCellProtocol:AddCardPagerViewCellProtocol) {
+        self.addCardPagerViewCellProtocol = addCardPagerViewCellProtocol
+    }
+    
+    func setBank(bank:Bank) {
+        self.bank = bank
     }
     
     @IBAction func onAddCardButton(_ sender: UIButton) {
-        
+        if textField.text != nil {
+            addCardPagerViewCellProtocol?.addCardDetail(cardName: textField.text!, selectedBank: self.bank!)
+           //viewCard.labelBankName.text addCardPagerViewCellProtocol?.addCardDetail(cardName: textField.text!)
+        }
     }
     
 
