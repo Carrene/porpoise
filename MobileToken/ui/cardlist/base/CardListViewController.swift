@@ -7,7 +7,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     @IBOutlet weak var vScroll: UIScrollView!
     
     private var cardListPagerViewAdapter:CardPagerViewAdapter?
-    private var pagerList : [CardPagerViewAdapter]?
+    private var pagerList = [CardPagerViewAdapter]()
     private var cardListPresenter : CardListPresenterProtocol?
     let actionController = MobileTokenActionSheetController()
     private var selectedWalletIndex: Int?
@@ -18,10 +18,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
         initActionSheet()
         self.cardListPresenter = CardListPresenter(view: self)
         cardListPresenter?.getBankList()
+        initCardListPagerView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        initCardListPagerView()
+        
     }
     
     func initActionSheet() {
@@ -50,7 +51,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     
     func initPagerList() {
         for _ in banks! {
-            pagerList?.append(CardPagerViewAdapter())
+            pagerList.append(CardPagerViewAdapter())
         }
     }
     
@@ -60,8 +61,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     
     func initCardListPagerView() {
         var y = 0
-        if pagerList != nil {
-            for i in pagerList!.indices {
+        if pagerList.count > 0 {
+            for i in pagerList.indices {
                 let screenBounds =  UIScreen.main.bounds
                 
                 let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)
@@ -74,7 +75,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
                 let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
 
-                cardListPagerViewAdapter = pagerList![i]
+                cardListPagerViewAdapter = pagerList[i]
                 
                 cardListPagerView.delegate = cardListPagerViewAdapter
                 cardListPagerView.dataSource = cardListPagerViewAdapter

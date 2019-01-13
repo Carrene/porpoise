@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="-777" y="-1186"/>
         </scene>
-        <!--CardList-->
+        <!--MainCardList-->
         <scene sceneID="NMd-Tz-yvG">
             <objects>
-                <viewControllerPlaceholder storyboardName="CardList" id="hwB-VW-AkW" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CardList" referencedIdentifier="MainCardList" id="hwB-VW-AkW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="کارت ها" image="list-icon" id="2p8-Ti-71K">
                         <color key="badgeColor" name="buttonColor"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
