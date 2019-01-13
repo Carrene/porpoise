@@ -50,10 +50,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     }
     
     func initPagerList() {
+        pagerList.removeAll()
         for _ in banks! {
-            if pagerList.count < (banks?.count)! {
             pagerList.append(CardPagerViewAdapter())
-            }
         }
     }
     
@@ -63,7 +62,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol {
     
     func initCardListPagerView() {
         var y = 0
+        
         if pagerList.count > 0 {
+            
+            vScroll.subviews.forEach({ $0.removeFromSuperview() })
             for i in pagerList.indices {
                 let screenBounds =  UIScreen.main.bounds
                 
