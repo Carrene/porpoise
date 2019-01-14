@@ -1,5 +1,3 @@
-
-
 import UIKit
 import RealmSwift
 import IQKeyboardManager
@@ -8,7 +6,6 @@ import IQKeyboardManager
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let storyBoard = UIStoryboard(resource: R.storyboard.main)

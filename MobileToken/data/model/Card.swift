@@ -7,6 +7,16 @@ class Card: Object, Mappable, NSCopying{
     var a: List<User>?
     var b: [User]?
     
+    @objc dynamic var Id: String = NSUUID().uuidString.lowercased()
+    public var id: String {
+        get { return Id }
+        set { Id = newValue }
+    }
+    
+    override class func primaryKey() -> String {
+        return "Id"
+    }
+    
     @objc private dynamic var CardNumber: String? = nil
     public var number: String? {
         get { return CardNumber }
@@ -20,7 +30,7 @@ class Card: Object, Mappable, NSCopying{
     }
     
     @objc private dynamic var CardName: String? = nil
-    public var name: String? {
+    public var cardName: String? {
         get { return CardName }
         set { CardName = newValue }
     }
@@ -36,18 +46,18 @@ class Card: Object, Mappable, NSCopying{
         case INTERNET = "INTERNET"
         case ADD = "ADD"
     }
-   //why user list?
+   
     var TokenList = List<Token>()
 
     required convenience init?(map: Map) {
         self.init()
     }
     
-    convenience init(number: String? = nil, bank: Bank? = nil, name: String? = nil, cardType: CardTypeEnum? = nil) {
+    convenience init(number: String? = nil, bank: Bank? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil) {
         self.init()
         self.number = number
         self.bank = bank
-        self.name = name
+        self.cardName = cardName
         self.type = cardType
         
     }
@@ -56,7 +66,7 @@ class Card: Object, Mappable, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Card(number: self.number, bank: self.bank, name: self.name, cardType: self.type)
+        return Card(number: self.number, bank: self.bank, cardName: self.cardName, cardType: self.type)
     }
     
     public func getMaskCardNumber() -> [String] {

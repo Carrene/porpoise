@@ -6,6 +6,10 @@ import RealmSwift
 
 class Bank: Object, Mappable, NSCopying{
     
+    override class func primaryKey() -> String {
+        return "Name"
+    }
+    
     @objc private dynamic var Name: String? = nil
     var name: String? {
         get { return Name }
@@ -24,7 +28,6 @@ class Bank: Object, Mappable, NSCopying{
         set { CardList = newValue }
     }
     
-    
     private var LogoResourceId: String?
     var logoResourceId:String? {
         get { return LogoResourceId }
@@ -32,22 +35,22 @@ class Bank: Object, Mappable, NSCopying{
     }
     
     
-    
     required convenience init?(map: Map) {
         self.init()
     }
     
-    convenience init(name: String, logoResourceId: String? = nil) {
+    convenience init(name: String? = nil, logoResourceId: String? = nil, cardList: [Card]? = nil) {
         self.init()
         self.name = name
         self.logoResourceId = logoResourceId
+        self.cardList = cardList
     }
     
     func mapping(map: Map) {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Bank(name: self.name!, logoResourceId: self.logoResourceId)
+        return Bank(name: name, logoResourceId: logoResourceId, cardList: cardList)
     }
     
 }

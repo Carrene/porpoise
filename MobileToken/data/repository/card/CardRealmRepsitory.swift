@@ -3,9 +3,9 @@ import RealmSwift
 
 class CardRealmRepository: CardRepositoryProtocol {
     
-    func addCard(card: Card, bankName: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
+    func addCard(card: Card, bank: Bank, onDone: ((RepositoryResponse<Card>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-        let bank = realm.objects(Bank.self).filter("Bank.Name='"+bankName+"'").first
+        let bank = realm.objects(Bank.self).filter("Name = '" + bank.name! + "'").first
         bank?.cardList?.append(card)
         do {
             try realm.write {
@@ -17,7 +17,6 @@ class CardRealmRepository: CardRepositoryProtocol {
         catch {
             onDone?(RepositoryResponse(error: error))
         }
-        
     }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {

@@ -4,8 +4,8 @@ class CardRepository: CardRepositoryProtocol {
     
     let cardRealmRepository = CardRealmRepository()
     
-    func addCard(card: Card, bankName: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        cardRealmRepository.addCard(card: card, bankName: bankName) {
+    func addCard(card: Card, bank: Bank, onDone: ((RepositoryResponse<Card>) -> ())?) {
+        cardRealmRepository.addCard(card: card, bank: bank) {
             realmRepositoryResponse in onDone?(realmRepositoryResponse)
         }
     }

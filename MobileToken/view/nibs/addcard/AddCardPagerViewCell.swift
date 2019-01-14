@@ -28,7 +28,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         textField.layer.cornerRadius = 10
         textField.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         textField.layer.borderWidth = 0.5
-        viewCard.labelBankName.text = self.bank!.name
+        
     }
     
     func setDelegate(addCardPagerViewCellProtocol:AddCardPagerViewCellProtocol) {
@@ -37,6 +37,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
     
     func setBank(bank:Bank) {
         self.bank = bank
+        viewCard.labelBankName.text = self.bank!.name
     }
     
     @IBAction func onAddCardButton(_ sender: UIButton) {

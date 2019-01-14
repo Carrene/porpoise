@@ -33,8 +33,9 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         if index == 0 {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
-            cell.setDelegate(addCardPagerViewCellProtocol: self)
             cell.setBank(bank: self.bank)
+            cell.setDelegate(addCardPagerViewCellProtocol: self)
+            
             //cell.viewCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             return cell
         }  else {

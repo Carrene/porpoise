@@ -22,6 +22,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     override func viewDidAppear(_ animated: Bool) {
         cardListPresenter?.getBankList()
+        cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
         //initCardListPagerView()
     }
     
@@ -53,9 +54,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
     }
     
-    func addCard(cardName: String,selectedBank:Bank) {
-        let card = Card(number: "", bank: selectedBank, name: cardName, cardType: Card.CardTypeEnum.BANK )
-        cardListPresenter?.addCard(card: card, bankName: selectedBank.name!)
+    func addCard(cardName:String ,selectedBank:Bank) {
+        let card = Card(number: "", bank: selectedBank, cardName: cardName, cardType: Card.CardTypeEnum.BANK )
+        cardListPresenter?.addCard(card: card, bank: selectedBank)
     }
     
     
