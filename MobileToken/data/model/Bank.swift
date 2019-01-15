@@ -22,11 +22,8 @@ class Bank: Object, Mappable, NSCopying{
         set { Secret=newValue }
     }
     
-    private var CardList = List<Card>()
-    var cardList: List<Card>? {
-        get { return CardList }
-        set { CardList = newValue ?? List<Card>() }
-    }
+    let cardList = List<Card>()
+    
     
     private var LogoResourceId: String?
     var logoResourceId:String? {
@@ -43,7 +40,12 @@ class Bank: Object, Mappable, NSCopying{
         self.init()
         self.name = name
         self.logoResourceId = logoResourceId
-        self.cardList = cardList
+        self.cardList.removeAll()
+        if let cards = cardList {
+            for card in cards {
+                self.cardList.append(card)
+            }
+        }
     }
     
     func mapping(map: Map) {

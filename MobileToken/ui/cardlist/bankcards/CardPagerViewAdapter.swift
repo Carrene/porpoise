@@ -18,12 +18,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        if let cardCount = bank.cardList?.count {
-            return cardCount + 1
-        }
-        else {
-            return 1
-        }
+        return bank.cardList.count + 1
     }
     
     init(sender:Bank) {
