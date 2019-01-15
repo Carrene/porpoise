@@ -22,10 +22,10 @@ class Bank: Object, Mappable, NSCopying{
         set { Secret=newValue }
     }
     
-    private var CardList: [Card]?
-    var cardList : [Card]? {
+    private var CardList = List<Card>()
+    var cardList: List<Card>? {
         get { return CardList }
-        set { CardList = newValue }
+        set { CardList = newValue ?? List<Card>() }
     }
     
     private var LogoResourceId: String?
@@ -39,7 +39,7 @@ class Bank: Object, Mappable, NSCopying{
         self.init()
     }
     
-    convenience init(name: String? = nil, logoResourceId: String? = nil, cardList: [Card]? = nil) {
+    convenience init(name: String? = nil, logoResourceId: String? = nil, cardList: List<Card>? = nil) {
         self.init()
         self.name = name
         self.logoResourceId = logoResourceId
