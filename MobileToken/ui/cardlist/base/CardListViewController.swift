@@ -2,7 +2,7 @@ import XLActionController
 import UIKit
 import FSPagerView
 
-class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
+class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate,CardCellXibProtocol {
    
     @IBOutlet weak var vScroll: UIScrollView!
     
@@ -12,18 +12,20 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     let actionController = MobileTokenActionSheetController()
     private var selectedWalletIndex: Int?
     private var banks : [Bank]?
+    private var bankCardCell = BankCardPagerViewCell()
+    
+    //private var cardCellXibView = CardCellXibView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initActionSheet()
         self.cardListPresenter = CardListPresenter(view: self)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         cardListPresenter?.getBankList()
         cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
-        //initCardListPagerView()
+        
     }
     
     func initActionSheet() {
@@ -97,12 +99,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
                 cardListPagerViewAdapter = CardPagerViewAdapter(sender: banks![i])
                 cardListPagerViewAdapter = pagerList[i]
-                
                 cardListPagerView.delegate = cardListPagerViewAdapter
                 cardListPagerView.dataSource = cardListPagerViewAdapter
                 cardListPagerView.itemSize = CGSize(width: 300, height: 300)
                 cardListPagerView.interitemSpacing = 10
-                
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)
