@@ -49,7 +49,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     func addCardDetail(cardName: String, selectedBank: Bank) {
         cardPagerViewDelegate?.addCard(cardName: cardName, selectedBank: selectedBank)
         self.cardName = cardName
-        print(cardName)
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {

@@ -13,6 +13,8 @@ class AddCardPagerViewCell: FSPagerViewCell {
     @IBOutlet var textField: UITextField!
     private var addCardPagerViewCellProtocol : AddCardPagerViewCellProtocol?
     private var bank:Bank?
+    @IBOutlet var buttonAddCard: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +30,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         textField.layer.cornerRadius = 10
         textField.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         textField.layer.borderWidth = 0.5
-        
+        buttonAddCard.isEnabled = false
     }
     
     func setDelegate(addCardPagerViewCellProtocol:AddCardPagerViewCellProtocol) {
@@ -38,14 +40,19 @@ class AddCardPagerViewCell: FSPagerViewCell {
     func setBank(bank:Bank) {
         self.bank = bank
         viewCard.labelBankName.text = self.bank!.name
-        
     }
     
     @IBAction func onAddCardButton(_ sender: UIButton) {
         if textField.text != nil {
+            buttonAddCard.isEnabled = true
             addCardPagerViewCellProtocol?.addCardDetail(cardName: textField.text!, selectedBank: self.bank!)
         }
     }
     
-
+    @IBAction func onEditingDidChanged(_ sender: UITextField) {
+        if textField.text != nil {
+            buttonAddCard.isEnabled = true
+        }
+    }
+    
 }

@@ -10,7 +10,7 @@ class CardRealmRepository: CardRepositoryProtocol {
                 try realm.write {
                     bank.cardList.append(card)
                     realm.add(bank.copy() as! Bank, update: true)
-                    realm.add(card.copy() as! Card, update: true)
+                    //realm.add(card.copy() as! Card, update: true)
                     
                 }
                 onDone?(RepositoryResponse(value: (card.copy() as! Card)))

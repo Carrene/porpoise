@@ -9,6 +9,5 @@ protocol CardListViewProtocol: class {
 protocol CardListPresenterProtocol {
     func getBankList()
     func addCard(card:Card,bank:Bank)
-    //func addCardSuccessfully()
 }
 

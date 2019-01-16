@@ -89,6 +89,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="289" height="293"/>
             <connections>
+                <outlet property="buttonAddCard" destination="Ssh-BK-Rl0" id="Ija-1G-QZv"/>
                 <outlet property="textField" destination="k5A-5T-3Eh" id="A0v-Dz-eae"/>
                 <outlet property="viewAddCard" destination="k8F-ES-KrH" id="z77-Ex-sJP"/>
                 <outlet property="viewCard" destination="phn-by-T2c" id="bzz-II-L72"/>
