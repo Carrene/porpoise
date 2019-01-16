@@ -33,7 +33,7 @@ class CardListPresenter : CardListPresenterProtocol {
                 print("error")
             }
             else {
-                print("card added successfully")
+                self?.view.reloadCardPager()
             }
         }
         repository.addCard(card: card, bank: bank, onDone: onDataResponse)

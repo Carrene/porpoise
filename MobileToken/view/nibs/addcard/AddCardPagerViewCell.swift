@@ -38,12 +38,12 @@ class AddCardPagerViewCell: FSPagerViewCell {
     func setBank(bank:Bank) {
         self.bank = bank
         viewCard.labelBankName.text = self.bank!.name
+        
     }
     
     @IBAction func onAddCardButton(_ sender: UIButton) {
         if textField.text != nil {
             addCardPagerViewCellProtocol?.addCardDetail(cardName: textField.text!, selectedBank: self.bank!)
-           //viewCard.labelBankName.text addCardPagerViewCellProtocol?.addCardDetail(cardName: textField.text!)
         }
     }
     

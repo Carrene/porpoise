@@ -59,6 +59,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         cardListPresenter?.addCard(card: card, bank: selectedBank)
     }
     
+    func reloadCardPager() {
+        initCardListPagerView()
+    }
     
     func initPagerList() {
         pagerList.removeAll()

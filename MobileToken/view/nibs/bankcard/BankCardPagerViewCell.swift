@@ -19,4 +19,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
         viewBankCard.layer.borderWidth = 0.5
 
     }
+    
+    func setCardName(cardName:String) {
+        vCard.labelCardName.text = cardName
+    }
 }

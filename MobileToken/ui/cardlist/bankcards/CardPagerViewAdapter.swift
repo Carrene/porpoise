@@ -12,6 +12,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     var cardPagerViewDelegate: CardPagerViewDelegate?
     var selectedIndex = 0
     var bank = Bank()
+    var cardName = "نام کارت"
     
     func setDelegate(cardPagerViewDelegate: CardPagerViewDelegate) {
         self.cardPagerViewDelegate = cardPagerViewDelegate
@@ -23,6 +24,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     init(sender:Bank) {
         self.bank = sender
+        print(bank.cardList.count)
     }
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
@@ -37,6 +39,8 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
             cell.vCard.imagePlus.isHidden = true
             cell.vCard.labelBankName.text = self.bank.name
+            cell.vCard.labelCardName.text = self.cardName
+            cell.setCardName(cardName: bank.cardList[index-1].cardName!)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             return cell
         }
@@ -44,6 +48,8 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     func addCardDetail(cardName: String, selectedBank: Bank) {
         cardPagerViewDelegate?.addCard(cardName: cardName, selectedBank: selectedBank)
+        self.cardName = cardName
+        print(cardName)
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
