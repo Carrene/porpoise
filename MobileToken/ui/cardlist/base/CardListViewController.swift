@@ -12,7 +12,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     let actionController = MobileTokenActionSheetController()
     private var selectedWalletIndex: Int?
     private var banks : [Bank]?
-    private var cardCellXibView = CardCellXibView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +22,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     override func viewDidAppear(_ animated: Bool) {
         cardListPresenter?.getBankList()
         cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
-        //cardCellXibView.setDelegate(cardCellXibProtocol: self)
-    }
-    
-    func initActionSheet() {
-        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert()})
-        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
-        actionController.addAction(editCardAction)
-        actionController.addAction(deleteCardAction)
-    }
-    
-    func actionButtonClicked() {
-        present(actionController, animated: true, completion: nil)
+
     }
     
     func initUIComponents() {
@@ -52,6 +40,17 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func selectedCard(cardIndex: Int) {
         
+    }
+    
+    func initActionSheet() {
+        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert()})
+        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
+        actionController.addAction(editCardAction)
+        actionController.addAction(deleteCardAction)
+    }
+    
+    func actionButtonClicked() {
+        present(actionController, animated: true, completion: nil)
     }
     
     func editCardAlert() {
