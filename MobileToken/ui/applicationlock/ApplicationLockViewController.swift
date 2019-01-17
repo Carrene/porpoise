@@ -12,7 +12,6 @@ class ApplicationLockViewController: BaseViewController {
     }
     
     func initUIComponents() {
-        labelDescription.font = R.font.iranSansMobile(size: 16)
         imageLock.layer.cornerRadius = 5
     }
     

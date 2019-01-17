@@ -33,10 +33,10 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
             cell.setBank(bank: self.bank)
             cell.setDelegate(addCardPagerViewCellProtocol: self)
-            
             //cell.viewCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             return cell
-        }  else {
+        }
+        else {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
             cell.vCard.imagePlus.isHidden = true
             cell.vCard.labelBankName.text = self.bank.name

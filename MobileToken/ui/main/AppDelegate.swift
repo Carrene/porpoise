@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = storyBoard.instantiateInitialViewController()
         self.window?.makeKeyAndVisible()
         self.window?.tintColor = R.color.eyeCatching()
-        UILabel.appearance().font = R.font.iranSansMobile(size: 16)
+        UILabel.appearance().font = R.font.iranSansMobileFaNum(size:16)
         UITextView.appearance().font = R.font.iranSansMobile(size: 16)
         UITextField.appearance().font = R.font.iranSansMobile(size: 16)
         

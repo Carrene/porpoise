@@ -67,7 +67,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             textField.layer.cornerRadius = 5
             textField.tintColor = R.color.eyeCatching()
             textField.borderStyle = .roundedRect
-            //textField.textFieldBackgroundColor()
         }
         
         
@@ -150,15 +149,3 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
 }
 
-//extension UITextField {
-//
-//    func textFieldBackgroundColor() {
-//        superview?.backgroundColor = .clear
-//
-//        let view = superview?.superview
-//        view?.subviews.first?.alpha = 0
-//        view?.backgroundColor = .clear
-//
-//    }
-//
-//}

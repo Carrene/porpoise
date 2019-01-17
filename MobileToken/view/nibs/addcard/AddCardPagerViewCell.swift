@@ -21,7 +21,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.layer.cornerRadius = 10
         viewCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCard.layer.borderWidth = 0.5
-        viewCard.labelCardName.text = "نام کارت"
+        viewCard.labelCardName.text = R.string.localizable.lb_cardName()
         viewCard.buttonActionSheet.isHidden = true
         viewCard.labelBottomTitle.isHidden = true
         viewAddCard.layer.cornerRadius = 10

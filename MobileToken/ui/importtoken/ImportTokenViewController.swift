@@ -22,8 +22,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
         textViewSmsCode.layer.cornerRadius = 10
         textViewAtmCode.delegate = self
         textViewSmsCode.delegate = self
-        textViewSmsCode.font = R.font.iranSansMobile(size: 16)
-        textViewAtmCode.font = R.font.iranSansMobile(size: 16)
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         initBankCard()
