@@ -13,7 +13,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     var cardPagerViewDelegate: CardPagerViewDelegate?
     var selectedIndex = 0
     var bank = Bank()
-    var cardName = "نام کارت"
+    var cardName = R.string.localizable.lb_cardName()
     
     func setDelegate(cardPagerViewDelegate: CardPagerViewDelegate) {
         self.cardPagerViewDelegate = cardPagerViewDelegate

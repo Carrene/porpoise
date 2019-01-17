@@ -4,6 +4,7 @@
 "skip" = "رد کن";
 "lb_enter_program" = "ورود به برنامه";
 "lb_version" = "نسخه";
+
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است";
 "sb_wrong_pattern" = "الگو اشتباه است";
@@ -32,7 +33,8 @@
 "lb_resend" = "ارسال دوباره کد";
 "lb_pattern" = "الگو";
 "lb_password" = "رمز";
-
+"lb_cardName" = "نام کارت";
+"lb_add_card_name" = ".به کارت خود نام دلخواه اختصاص دهید";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
@@ -50,4 +52,5 @@
 "intro3Description" = "دیگر رمز اول، دوم و اینترنت بانک خود را حفظ نکنید، یکبار مصرف دریافت کنید";
 
 "pattern" = "الگو";
-
+"save" = "ذخیره";
+"cancel" = "انصراف";

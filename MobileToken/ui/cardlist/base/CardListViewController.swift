@@ -27,7 +27,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func initActionSheet() {
-        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in })
+        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert()})
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
@@ -51,6 +51,26 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func selectedCard(cardIndex: Int) {
+        
+    }
+    
+    func editCardAlert() {
+        let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
+        editCardAlert.addTextField { (textField : UITextField!) -> Void in
+            //textField.placeholder = "Enter Second Name"
+        }
+        
+        let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
+            //let firstTextField = editCardAlert.textFields![0] as UITextField
+        })
+        
+        let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
+            (action : UIAlertAction!) -> Void in })
+        
+        editCardAlert.addAction(saveAction)
+        editCardAlert.addAction(cancelAction)
+        
+        self.present(editCardAlert, animated: true, completion: nil)
         
     }
     
