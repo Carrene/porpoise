@@ -54,8 +54,14 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func editCardAlert() {
+        let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
+            NSAttributedString.Key.font : R.font.iranSansMobile(size: 12)!,
+            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
+            ])
+        
         let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
         editCardAlert.addTextField { (textField : UITextField!) -> Void in
+           editCardAlert.setValue(attributedString, forKey: "attributedMessage")
             
             let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
             textField.addConstraint(heightConstraint)
@@ -66,6 +72,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             textField.layer.cornerRadius = 5
             textField.tintColor = R.color.eyeCatching()
             textField.borderStyle = .roundedRect
+            textField.keyboardAppearance = .dark
         }
         
         
@@ -77,9 +84,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
             (action : UIAlertAction!) -> Void in })
         
-        
-        editCardAlert.addAction(saveAction)
         editCardAlert.addAction(cancelAction)
+        editCardAlert.addAction(saveAction)
+        
         
         self.present(editCardAlert, animated: true, completion: nil)
         
