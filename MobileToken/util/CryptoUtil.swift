@@ -9,7 +9,6 @@ class CryptoUtil {
         } catch {
             print("\(error)")
         }
-        print("key:++++" + (key?.toBase64())!)
         return  key
     }
     

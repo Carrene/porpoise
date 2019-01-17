@@ -57,20 +57,45 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func editCardAlert() {
         let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
         editCardAlert.addTextField { (textField : UITextField!) -> Void in
-            //textField.placeholder = "Enter Second Name"
+            
+            let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
+            textField.addConstraint(heightConstraint)
+            textField.backgroundColor = R.color.primaryLight()
+            textField.font = R.font.iranSansMobile(size: 16)
+            textField.textColor = R.color.buttonColor()
+            textField.layer.borderColor = R.color.eyeCatching()?.cgColor
+            textField.layer.borderWidth = 1
+            textField.layer.cornerRadius = 5
+            textField.tintColor = R.color.eyeCatching()
+            textField.borderStyle = .roundedRect
+            //textField.textFieldBackgroundColor()
         }
         
+//        let saveAttributedText = NSMutableAttributedString(string: R.string.localizable.save())
+//        let range = NSRange(location: 0, length: saveAttributedText.length)
+//        saveAttributedText.addAttribute(NSAttributedString.Key.kern, value: 1.5, range: range)
+//        saveAttributedText.addAttribute(NSAttributedString.Key.font, value: R.font.iranSansMobileBold(size: 16)!, range: range)
+        
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
+            
             //let firstTextField = editCardAlert.textFields![0] as UITextField
         })
         
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
             (action : UIAlertAction!) -> Void in })
         
+        
         editCardAlert.addAction(saveAction)
         editCardAlert.addAction(cancelAction)
+//        guard let label = (saveAction.value(forKey: "__representer")as? NSObject)?.value(forKey: "label") as? UILabel else { return }
+//        label.attributedText = saveAttributedText
         
         self.present(editCardAlert, animated: true, completion: nil)
+        
+        let subview = (editCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.layer.cornerRadius = 10
+        
+        subview.backgroundColor = R.color.primaryLight()
         
     }
     
@@ -131,3 +156,16 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
     }
 }
+
+//extension UITextField {
+//
+//    func textFieldBackgroundColor() {
+//        superview?.backgroundColor = .clear
+//
+//        let view = superview?.superview
+//        view?.subviews.first?.alpha = 0
+//        view?.backgroundColor = .clear
+//
+//    }
+//
+//}

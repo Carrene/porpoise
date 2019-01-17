@@ -37,9 +37,11 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-M4-KV2">
                                 <rect key="frame" x="0.0" y="76" width="375" height="542"/>
+                                <color key="tintColor" name="eyeCatching"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
+                        <color key="tintColor" name="eyeCatching"/>
                         <constraints>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="trailing" secondItem="X9c-M4-KV2" secondAttribute="trailing" id="Ta6-WG-SH4"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="12" id="Zuq-eh-D5N"/>
@@ -72,6 +74,9 @@
         <image name="list-icon" width="20" height="16"/>
         <namedColor name="buttonColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="eyeCatching">
+            <color red="0.11400000005960464" green="1" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
