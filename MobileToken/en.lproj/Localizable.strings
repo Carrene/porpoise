@@ -35,6 +35,7 @@
 "lb_password" = "رمز";
 "lb_cardName" = "نام کارت";
 "lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید";
+"lb_desired_card_name" = "نام پیشنهادی کارت";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
