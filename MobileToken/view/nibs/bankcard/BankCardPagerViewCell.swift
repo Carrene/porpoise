@@ -17,7 +17,13 @@ class BankCardPagerViewCell: FSPagerViewCell {
         viewBankCard.layer.cornerRadius = 10
         viewBankCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewBankCard.layer.borderWidth = 0.5
-
+        //vCard.buttonActionSheet.on
+        let actionButton = vCard.buttonActionSheet
+        actionButton!.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+    
+    @objc func buttonAction() {
+        vCard.cardCellXibProtocol?.actionSheetButtonClicked()
     }
     
     func setCardName(cardName:String) {

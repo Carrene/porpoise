@@ -2,8 +2,8 @@ import XLActionController
 import UIKit
 import FSPagerView
 
-class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate,CardCellXibProtocol {
-   
+class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
+    
     @IBOutlet weak var vScroll: UIScrollView!
     
     private var cardListPagerViewAdapter:CardPagerViewAdapter?
@@ -12,9 +12,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     let actionController = MobileTokenActionSheetController()
     private var selectedWalletIndex: Int?
     private var banks : [Bank]?
-    private var bankCardCell = BankCardPagerViewCell()
-    
-    //private var cardCellXibView = CardCellXibView()
+    private var cardCellXibView = CardCellXibView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +23,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     override func viewDidAppear(_ animated: Bool) {
         cardListPresenter?.getBankList()
         cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
-        
+        //cardCellXibView.setDelegate(cardCellXibProtocol: self)
     }
     
     func initActionSheet() {
@@ -35,7 +33,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         actionController.addAction(deleteCardAction)
     }
     
-    func actionSheetButtonClicked() {
+    func actionButtonClicked() {
         present(actionController, animated: true, completion: nil)
     }
     
@@ -99,10 +97,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
                 cardListPagerViewAdapter = CardPagerViewAdapter(sender: banks![i])
                 cardListPagerViewAdapter = pagerList[i]
+                
                 cardListPagerView.delegate = cardListPagerViewAdapter
                 cardListPagerView.dataSource = cardListPagerViewAdapter
                 cardListPagerView.itemSize = CGSize(width: 300, height: 300)
                 cardListPagerView.interitemSpacing = 10
+                
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)

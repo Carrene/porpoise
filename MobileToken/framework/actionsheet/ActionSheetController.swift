@@ -55,7 +55,7 @@ open class MobileTokenActionSheetController: ActionController<ActionSheet, Actio
         settings.animation.present.springVelocity = 0.0
         settings.cancelView.hideCollectionViewBehindCancelView = true
         
-        cellSpec = .nibFile(nibName: "ActionSheet", bundle: Bundle(for: ActionSheet.self), height: { _ in 60 })
+        cellSpec = .nibFile(nibName: R.nib.actionSheet.name, bundle: Bundle(for: ActionSheet.self), height: { _ in 60 })
         headerSpec = .cellClass( height: { _ in 84 })
         
         onConfigureCellForAction = { [weak self] cell, action, indexPath in

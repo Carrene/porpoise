@@ -67,9 +67,6 @@
                                 <constraint firstAttribute="height" constant="40" id="hzH-0N-1vV"/>
                             </constraints>
                             <state key="normal" image="more-dots"/>
-                            <connections>
-                                <action selector="onButtonActionSheet:" destination="-1" eventType="touchUpInside" id="Op0-Ud-ELX"/>
-                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-ax-72e" userLabel="svCardNumber">
                             <rect key="frame" x="20" y="80" width="275" height="25"/>

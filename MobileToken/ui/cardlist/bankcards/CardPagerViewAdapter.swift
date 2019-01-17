@@ -5,10 +5,11 @@ import FSPagerView
 protocol CardPagerViewDelegate {
     func selectedCard(cardIndex: Int)
     func addCard(cardName:String,selectedBank:Bank)
+    func actionButtonClicked()
 }
 
-class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol {
-   
+class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol,CardCellXibProtocol {
+    
     var cardPagerViewDelegate: CardPagerViewDelegate?
     var selectedIndex = 0
     var bank = Bank()
@@ -41,6 +42,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.vCard.labelBankName.text = self.bank.name
             cell.vCard.labelCardName.text = self.cardName
             cell.setCardName(cardName: bank.cardList[index-1].cardName!)
+            cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             return cell
         }
@@ -53,6 +55,10 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
         
+    }
+    
+    func actionSheetButtonClicked() {
+        cardPagerViewDelegate?.actionButtonClicked()
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
