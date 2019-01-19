@@ -1,7 +1,6 @@
 import Foundation
 
 protocol ImportTokenViewProtocol: class {
-    func set(card: Card)
 }
 
 

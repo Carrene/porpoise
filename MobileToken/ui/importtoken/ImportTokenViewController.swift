@@ -1,18 +1,23 @@
 import UIKit
 import XLActionController
 
-class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellXibProtocol {
-    
+class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellXibProtocol, ImportTokenViewProtocol {
+   
     @IBOutlet var viewCard: CardCellXibView!
     @IBOutlet var textViewAtmCode: UITextView!
     @IBOutlet var labelAtmCode: UILabel!
     @IBOutlet var textViewSmsCode: UITextView!
     @IBOutlet var labelSmsCode: UILabel!
     @IBOutlet var buttonAddCode: UIButton!
+    var card: Card?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewCard.setDelegate(cardCellXibProtocol: self)
+    }
+    
+    func set(card: Card) {
+        self.card = card
     }
     
     func initUIComponents() {
@@ -26,6 +31,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
         textViewAtmCode.font = R.font.iranSansMobile(size: 16)
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        self.hideKeyboardWhenTappedAround()
         initBankCard()
     }
     
