@@ -11,6 +11,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     private var cardListPresenter : CardListPresenterProtocol?
     let actionController = MobileTokenActionSheetController()
     private var banks : [Bank]?
+    private var selectedCard:Card?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +36,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         initPagerList()
     }
     
-    func selectedCard(cardIndex: Int) {
-        
+    func selectedCard(card: Card) {
+        self.selectedCard = card
     }
     
     func initActionSheet() {
@@ -57,6 +58,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             ])
         
         let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
+        
         editCardAlert.addTextField { (textField : UITextField!) -> Void in
             editCardAlert.setValue(attributedString, forKey: "attributedMessage")
             
@@ -70,11 +72,17 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             textField.tintColor = R.color.eyeCatching()
             textField.borderStyle = .roundedRect
             textField.keyboardAppearance = .dark
+            let textView = (textField.subviews.first!)
+            textView.backgroundColor = .clear
+            textField.text = self.selectedCard?.cardName
         }
         
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
-            
-            //let firstTextField = editCardAlert.textFields![0] as UITextField
+            if let newCardName = editCardAlert.textFields![0].text {
+            let card = self.selectedCard?.copy() as! Card
+            card.cardName = newCardName
+            self.cardListPresenter?.editCard(card: card)
+            }
         })
         
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
@@ -115,7 +123,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func initCardListPagerView() {
         var y = 0
-        
         if pagerList.count > 0 {
             
             vScroll.subviews.forEach({ $0.removeFromSuperview() })

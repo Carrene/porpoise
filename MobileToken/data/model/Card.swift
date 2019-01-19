@@ -4,11 +4,9 @@ import ObjectMapper_Realm
 import RealmSwift
 
 class Card: Object, Mappable, NSCopying{
-    var a: List<User>?
-    var b: [User]?
     
-    @objc dynamic var Id: String = NSUUID().uuidString.lowercased()
-    public var id: String {
+    @objc dynamic var Id: String?
+    public var id: String? {
         get { return Id }
         set { Id = newValue }
     }
@@ -53,12 +51,17 @@ class Card: Object, Mappable, NSCopying{
         self.init()
     }
     
-    convenience init(number: String? = nil, bank: Bank? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil) {
+    convenience init(number: String? = nil, bank: Bank? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil, id: String? = nil) {
         self.init()
         self.number = number
         self.bank = bank
         self.cardName = cardName
         self.type = cardType
+        if id == nil {
+            self.id = NSUUID().uuidString.lowercased()
+        } else {
+            self.id = id!
+        }
         
     }
     
@@ -66,7 +69,7 @@ class Card: Object, Mappable, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Card(number: self.number, bank: self.bank, cardName: self.cardName, cardType: self.type)
+        return Card(number: self.number, bank: self.bank, cardName: self.cardName, cardType: self.type, id: self.id)
     }
     
     public func getMaskCardNumber() -> [String] {

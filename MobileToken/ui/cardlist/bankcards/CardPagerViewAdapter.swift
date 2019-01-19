@@ -3,7 +3,7 @@ import Foundation
 import FSPagerView
 
 protocol CardPagerViewDelegate {
-    func selectedCard(cardIndex: Int)
+    func selectedCard(card: Card)
     func addCard(cardName:String,selectedBank:Bank)
     func actionButtonClicked()
 }
@@ -25,7 +25,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     init(sender:Bank) {
         self.bank = sender
-        print(bank.cardList.count)
     }
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
@@ -54,7 +53,9 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        
+        if targetIndex>0 {
+        cardPagerViewDelegate?.selectedCard(card:bank.cardList[targetIndex-1])
+        }
     }
     
     func actionSheetButtonClicked() {
@@ -62,7 +63,9 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
-        
+        if index>0 {
+        cardPagerViewDelegate?.selectedCard(card:bank.cardList[index-1])
+        }
     }
     
 }

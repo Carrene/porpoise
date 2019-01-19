@@ -1,7 +1,7 @@
 import Foundation
 
 class CardListPresenter : CardListPresenterProtocol {
-    
+
     unowned let view: CardListViewProtocol
     
     required init(view: CardListViewProtocol) {
@@ -37,6 +37,19 @@ class CardListPresenter : CardListPresenterProtocol {
             }
         }
         repository.addCard(card: card, bank: bank, onDone: onDataResponse)
+    }
+    
+    func editCard(card: Card) {
+        let repository = CardRepository()
+        let onDataResponse : ((RepositoryResponse<Card>) -> ()) = { [weak self] response in
+            if response.error != nil {
+                print("error")
+            }
+            else {
+                self?.view.reloadCardPager()
+            }
+        }
+        repository.update(card, onDone: onDataResponse)
     }
     
     

@@ -43,7 +43,8 @@ class Bank: Object, Mappable, NSCopying{
         self.cardList.removeAll()
         if let cards = cardList {
             for card in cards {
-                self.cardList.append(card)
+                let c = card.copy() as! Card
+                self.cardList.append(c)
             }
         }
     }
