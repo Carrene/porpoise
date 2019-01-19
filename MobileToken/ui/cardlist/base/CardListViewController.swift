@@ -10,7 +10,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     private var pagerList = [CardPagerViewAdapter]()
     private var cardListPresenter : CardListPresenterProtocol?
     let actionController = MobileTokenActionSheetController()
-    private var selectedWalletIndex: Int?
     private var banks : [Bank]?
     
     override func viewDidLoad() {
@@ -21,8 +20,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     override func viewDidAppear(_ animated: Bool) {
         cardListPresenter?.getBankList()
-        cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
-
     }
     
     func initUIComponents() {
@@ -61,7 +58,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
         editCardAlert.addTextField { (textField : UITextField!) -> Void in
-           editCardAlert.setValue(attributedString, forKey: "attributedMessage")
+            editCardAlert.setValue(attributedString, forKey: "attributedMessage")
             
             let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
             textField.addConstraint(heightConstraint)
@@ -75,7 +72,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             textField.keyboardAppearance = .dark
         }
         
-        
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
             
             //let firstTextField = editCardAlert.textFields![0] as UITextField
@@ -87,14 +83,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         editCardAlert.addAction(cancelAction)
         editCardAlert.addAction(saveAction)
         
-        
         self.present(editCardAlert, animated: true, completion: nil)
         
         let subview = (editCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 10
-        
         subview.backgroundColor = R.color.primaryLight()
-        
     }
     
     func addCard(cardName:String ,selectedBank:Bank) {
@@ -107,6 +100,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func initPagerList() {
+        
         pagerList.removeAll()
         for i in (banks?.indices)! {
             pagerList.append(CardPagerViewAdapter(sender: banks![i]))
@@ -140,7 +134,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
                 cardListPagerViewAdapter = CardPagerViewAdapter(sender: banks![i])
                 cardListPagerViewAdapter = pagerList[i]
-                
+                cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
                 cardListPagerView.delegate = cardListPagerViewAdapter
                 cardListPagerView.dataSource = cardListPagerViewAdapter
                 cardListPagerView.itemSize = CGSize(width: 300, height: 300)
