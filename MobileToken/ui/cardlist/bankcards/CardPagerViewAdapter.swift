@@ -14,6 +14,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     var selectedIndex = 0
     var bank = Bank()
     var cardName = R.string.localizable.lb_cardName()
+    var updateCard:Card?
     
     func setDelegate(cardPagerViewDelegate: CardPagerViewDelegate) {
         self.cardPagerViewDelegate = cardPagerViewDelegate
@@ -25,6 +26,12 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     init(sender:Bank) {
         self.bank = sender
+    }
+    
+    func setCardDataSource(updatedCard:Card) {
+        self.updateCard = updatedCard
+        //array.filter {$0.eventID == id}.first?.added = value
+        //self.bank.cardList.filter{$0.id == updatedCard.id}.first = updatedCard
     }
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
@@ -40,7 +47,13 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.vCard.imagePlus.isHidden = true
             cell.vCard.labelBankName.text = self.bank.name
             cell.vCard.labelCardName.text = self.cardName
+            if bank.cardList[index-1].id == updateCard?.id {
+                //cell.vCard.labelCardName.text = updateCard?.cardName
+                cell.setCardName(cardName: (updateCard?.cardName)!)
+            }
+            else {
             cell.setCardName(cardName: bank.cardList[index-1].cardName!)
+            }
             cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             return cell

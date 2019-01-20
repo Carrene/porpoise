@@ -12,6 +12,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     let actionController = MobileTokenActionSheetController()
     private var banks : [Bank]?
     private var selectedCard:Card?
+    private var updatedCard:Card?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func selectedCard(card: Card) {
         self.selectedCard = card
+    }
+    
+    func updateCardList(card: Card) {
+        self.updatedCard = card
+        initPagerList()
     }
     
     func initActionSheet() {
@@ -74,7 +80,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             textField.keyboardAppearance = .dark
             let textView = (textField.subviews.first!)
             textView.backgroundColor = .clear
+            if self.updatedCard != nil {
+                textField.text = self.updatedCard?.cardName
+            }
+            else {
             textField.text = self.selectedCard?.cardName
+            }
         }
         
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
@@ -108,11 +119,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func initPagerList() {
-        
         pagerList.removeAll()
         for i in (banks?.indices)! {
             pagerList.append(CardPagerViewAdapter(sender: banks![i]))
-            
         }
         initCardListPagerView()
     }
@@ -146,7 +155,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 cardListPagerView.dataSource = cardListPagerViewAdapter
                 cardListPagerView.itemSize = CGSize(width: 300, height: 300)
                 cardListPagerView.interitemSpacing = 10
-                
+                if updatedCard != nil {
+                cardListPagerViewAdapter?.setCardDataSource(updatedCard:self.updatedCard!)
+                }
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)

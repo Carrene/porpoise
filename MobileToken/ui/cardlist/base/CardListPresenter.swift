@@ -46,7 +46,7 @@ class CardListPresenter : CardListPresenterProtocol {
                 print("error")
             }
             else {
-                self?.view.reloadCardPager()
+                self?.view.updateCardList(card: response.value!)
             }
         }
         repository.update(card, onDone: onDataResponse)
