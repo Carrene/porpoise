@@ -56,7 +56,13 @@ class User: Object, Mappable, NSCopying {
     func mapping(map: Map) {
         map.shouldIncludeNilValues = true
         self.phone <- map["phone"]
-        
+        let secret = map["secret"]
+        if bank != nil {
+            bank!.secret <- secret
+        }else {
+            self.bank = MobileToken.Bank()
+            bank!.secret <- secret
+        }
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
