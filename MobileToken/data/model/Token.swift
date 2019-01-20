@@ -23,6 +23,7 @@ class Token: Object, Mappable, NSCopying{
     private var timeInterval: Int?
     private var otpLength: Int?
     private var secret: String?
+    private var bankId: Int?
     
     required convenience init(map: Map) {
         self.init()
@@ -48,12 +49,11 @@ class Token: Object, Mappable, NSCopying{
     func parse() -> Bool {
         let tokenPlusIvPacketBytes = tokenPacket?.hexaToBytes()
         let iv = Array(tokenPlusIvPacketBytes![0..<16])
-        //TODO: #warning: Url safa secret in base64 format
-        let decodedSecret = Data(base64Encoded: secret!, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
-        let secretBytes = decodedSecret?.bytes
+        let secretBytes = Data(base64urlEncoded: secret!)?.bytes
         let tokenPacketEncrypted = Array(tokenPlusIvPacketBytes![16..<tokenPlusIvPacketBytes!.count])
         
         let tokenPacketDecrypted = try! AES(key: secretBytes!, blockMode: CBC(iv: iv), padding: .pkcs5).decrypt(tokenPacketEncrypted)
+        
         let checksum = Array(tokenPacketDecrypted[tokenPacketDecrypted.count - 4 ..< tokenPacketDecrypted.count])
         let tokenPacketDecryptedWithoutChecksum = Array(tokenPacketDecrypted[0 ..< tokenPacketDecrypted.count - 4])
         let checkSumString = String(bytes: checksum, encoding: .utf8)
@@ -61,7 +61,6 @@ class Token: Object, Mappable, NSCopying{
         if isValid {
             self.version = Int(tokenPacketDecrypted[0])
             if self.version == 1 {
-                
                 let array : [UInt8] = Array(tokenPacketDecryptedWithoutChecksum[1 ..< 5])
                 var value : UInt32 = 0
                 let data = NSData(bytes: array, length: 4)
@@ -69,6 +68,7 @@ class Token: Object, Mappable, NSCopying{
                 value = UInt32(bigEndian: value)
                 self.expireDate = "" + "\(value)"
                 self.cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
+//                self.bankId = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.timeInterval = Int(tokenPacketDecryptedWithoutChecksum[7])
                 self.seed = Array(tokenPacketDecryptedWithoutChecksum[8 ..< 28])
@@ -76,9 +76,7 @@ class Token: Object, Mappable, NSCopying{
                 self.hashType = HashType.SHA1
             }
         }
-        
         return true
-        
     }
     
     func isChecksumValid(secret: [UInt8], tokenpacket: [UInt8], checksum: String) -> Bool {
@@ -90,7 +88,6 @@ class Token: Object, Mappable, NSCopying{
         } catch {
             return false
         }
-        
         let offset = hmac[hmac.count - 1] & 0xf
         var otpBinary = Int((hmac[Int(offset)] & 0x7f)) << 24
         otpBinary = otpBinary | Int((hmac[Int(offset+1)] & 0xff)) << 16
@@ -116,5 +113,4 @@ class Token: Object, Mappable, NSCopying{
         let otp = Totp(secret: seed!, timeInterval: timeInterval!, otpLength: otpLength!, hashType: hashType!)
         return otp.generateTotp() ?? "Error"
     }
-
 }
