@@ -30,8 +30,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     func setCardDataSource(updatedCard:Card) {
         self.updateCard = updatedCard
-        //array.filter {$0.eventID == id}.first?.added = value
-        //self.bank.cardList.filter{$0.id == updatedCard.id}.first = updatedCard
     }
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
@@ -48,8 +46,10 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.vCard.labelBankName.text = self.bank.name
             cell.vCard.labelCardName.text = self.cardName
             if bank.cardList[index-1].id == updateCard?.id {
-                //cell.vCard.labelCardName.text = updateCard?.cardName
+                pagerView.scrollToItem(at: index, animated: true)
                 cell.setCardName(cardName: (updateCard?.cardName)!)
+                cardPagerViewDelegate?.selectedCard(card: updateCard!)
+                updateCard = nil
             }
             else {
             cell.setCardName(cardName: bank.cardList[index-1].cardName!)
