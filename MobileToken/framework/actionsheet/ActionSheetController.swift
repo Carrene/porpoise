@@ -25,11 +25,11 @@ open class MobileTokenActionSheetHeaderView: UICollectionReusableView {
 
 open class MobileTokenActionSheetController: ActionController<ActionSheet, ActionData, MobileTokenActionSheetHeaderView, MobileTokenActionSheetHeaderData, UICollectionReusableView, Void> {
     
-    private lazy var blurView: UIVisualEffectView = {
-        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-        blurView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        return blurView
-    }()
+//    private lazy var blurView: UIVisualEffectView = {
+//        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+//        blurView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        return blurView
+//    }()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ open class MobileTokenActionSheetController: ActionController<ActionSheet, Actio
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        blurView.frame = backgroundView.bounds
+        //blurView.frame = backgroundView.bounds
     }
     
     public override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {

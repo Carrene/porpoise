@@ -3,16 +3,15 @@ import UIKit
 import FSPagerView
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
-    
+   
     @IBOutlet weak var vScroll: UIScrollView!
     
-    private var cardListPagerViewAdapter:CardPagerViewAdapter?
     private var pagerList = [CardPagerViewAdapter]()
     private var cardListPresenter : CardListPresenterProtocol?
     let actionController = MobileTokenActionSheetController()
     private var banks : [Bank]?
     private var selectedCard:Card?
-    private var updatedCard:Card?
+    private var updatedCard: Card?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +41,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func updateCardList(card: Card) {
-        self.updatedCard = card
+        updatedCard = card
+        UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+        for bank in banks! {
+            if let index = bank.cardList.index(where: {$0.id == card.id}) {
+                bank.cardList[index] = card
+            }
+        }
         initPagerList()
     }
     
@@ -89,6 +94,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             let card = self.selectedCard?.copy() as! Card
             card.cardName = newCardName
             self.cardListPresenter?.editCard(card: card)
+                
             }
         })
         
@@ -111,6 +117,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func reloadCardPager() {
+        UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
         initCardListPagerView()
     }
     
@@ -144,21 +151,16 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 
                 let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
-                cardListPagerViewAdapter = CardPagerViewAdapter(sender: banks![i])
-                cardListPagerViewAdapter = pagerList[i]
-                cardListPagerViewAdapter?.setDelegate(cardPagerViewDelegate: self)
-                cardListPagerView.delegate = cardListPagerViewAdapter
-                cardListPagerView.dataSource = cardListPagerViewAdapter
+                pagerList[i] = CardPagerViewAdapter(sender: banks![i])
+                pagerList[i].setDelegate(cardPagerViewDelegate: self)
+                cardListPagerView.delegate = pagerList[i]
+                cardListPagerView.dataSource = pagerList[i]
                 cardListPagerView.itemSize = CGSize(width: 300, height: 300)
                 cardListPagerView.interitemSpacing = 10
-                
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)
                 cardListPagerView.reloadData()
-                if updatedCard != nil {
-                    cardListPagerViewAdapter?.setCardDataSource(updatedCard:self.updatedCard!)
-                }
             }
         }
     }
