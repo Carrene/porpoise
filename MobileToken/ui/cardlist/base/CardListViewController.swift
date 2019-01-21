@@ -43,11 +43,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func updateCardList(card: Card) {
         updatedCard = card
         UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-        for bank in banks! {
-            if let index = bank.cardList.index(where: {$0.id == card.id}) {
-                bank.cardList[index] = card
-            }
-        }
+//        for bank in banks! {
+//            if let index = bank.cardList.index(where: {$0.id == card.id}) {
+//                bank.cardList[index] = card
+//            }
+//        }
         initPagerList()
     }
     
@@ -151,6 +151,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 
                 let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
                 cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
+                
                 pagerList[i] = CardPagerViewAdapter(sender: banks![i])
                 pagerList[i].setDelegate(cardPagerViewDelegate: self)
                 cardListPagerView.delegate = pagerList[i]
@@ -160,6 +161,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)
+                if updatedCard != nil {
+                    pagerList[i].setCardDataSource(updatedCard: updatedCard!)
+                }
                 cardListPagerView.reloadData()
             }
         }

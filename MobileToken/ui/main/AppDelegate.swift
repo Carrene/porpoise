@@ -13,9 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.tintColor = R.color.eyeCatching()
         UILabel.appearance().font = R.font.iranSansMobileFaNum(size:16)
-        UITextView.appearance().font = R.font.iranSansMobile(size: 16)
-        UITextField.appearance().font = R.font.iranSansMobile(size: 16)
-        
+        UITextView.appearance().font = R.font.iranSansMobileFaNum(size: 16)
+        UITextField.appearance().font = R.font.iranSansMobileFaNum(size: 16)
         let appearance = UITabBarItem.appearance()
         let attributes = [NSAttributedString.Key.font:R.font.iranSansMobileMedium(size: 14)]
         appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)

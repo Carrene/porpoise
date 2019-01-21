@@ -46,15 +46,15 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.vCard.imagePlus.isHidden = true
             cell.vCard.labelBankName.text = self.bank.name
             cell.vCard.labelCardName.text = self.cardName
-//            if bank.cardList[index-1].id == updateCard?.id {
-//                pagerView.scrollToItem(at: index, animated: true)
-//                cell.setCardName(cardName: (updateCard?.cardName)!)
-//                cardPagerViewDelegate?.selectedCard(card: updateCard!)
-//                updateCard = nil
-//            }
-//            else {
+            if bank.cardList[index-1].id == updateCard?.id {
+                //pagerView.scrollToItem(at: index, animated: true)
+                cell.setCardName(cardName: (updateCard?.cardName)!)
+                cardPagerViewDelegate?.selectedCard(card: updateCard!)
+                updateCard = nil
+            }
+            else {
             cell.setCardName(cardName: bank.cardList[index-1].cardName!)
-//            }
+            }
             cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
 
