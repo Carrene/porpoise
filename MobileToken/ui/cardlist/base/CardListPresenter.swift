@@ -52,5 +52,9 @@ class CardListPresenter : CardListPresenterProtocol {
         repository.update(card, onDone: onDataResponse)
     }
     
+    func deleteCard(identifier: String) {
+        
+    }
+    
     
 }

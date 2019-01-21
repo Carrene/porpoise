@@ -26,4 +26,10 @@ class CardRepository: CardRepositoryProtocol {
             
         }
     }
+    
+    func delete(identifier:String, onDone: ((RepositoryResponse<Card>) -> ())?) {
+        cardRealmRepository.delete(identifier: identifier) {
+            realmRepoResponse in onDone?(realmRepoResponse)
+        }
+    }
 }

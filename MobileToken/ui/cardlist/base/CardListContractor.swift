@@ -11,5 +11,6 @@ protocol CardListPresenterProtocol {
     func getBankList()
     func addCard(card:Card,bank:Bank)
     func editCard(card: Card)
+    func deleteCard(identifier: String)
 }
 
