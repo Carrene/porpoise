@@ -61,8 +61,10 @@ class CardRealmRepository: CardRepositoryProtocol {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         let existCard = realm.objects(Card.self).filter("Id='"+identifier+"'").first
         do {
-            realm.delete(existCard!)
-            onDone?(RepositoryResponse(value: (existCard?.copy() as! Card)))
+            try realm.write {
+                realm.delete(existCard!)
+            }
+            onDone?(RepositoryResponse(value: (existCard)))
         }
         catch {
             onDone?(RepositoryResponse(error: error))
