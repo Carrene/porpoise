@@ -21,12 +21,6 @@ class Card: Object, Mappable, NSCopying{
         set { CardNumber = newValue }
     }
     
-    @objc private dynamic var Bank: Bank? = nil
-    public var bank: Bank? {
-        get { return Bank }
-        set { Bank = newValue }
-    }
-    
     @objc private dynamic var CardName: String? = nil
     public var cardName: String? {
         get { return CardName }
@@ -46,15 +40,25 @@ class Card: Object, Mappable, NSCopying{
     }
    
     var TokenList = List<Token>()
-
+    
+    var owner: Bank? {
+        
+        return LinkingObjects(fromType: Bank.self, property: "cardList").first
+    }
+    public var bank: Bank? {
+        get {
+            return owner
+        }
+    }
+    
     required convenience init?(map: Map) {
         self.init()
     }
     
-    convenience init(number: String? = nil, bank: Bank? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil, id: String? = nil) {
+
+    convenience init(number: String? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil, id: String? = nil) {
         self.init()
         self.number = number
-        self.bank = bank
         self.cardName = cardName
         self.type = cardType
         if id == nil {
@@ -62,14 +66,14 @@ class Card: Object, Mappable, NSCopying{
         } else {
             self.id = id!
         }
-        
     }
     
     func mapping(map: Map) {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Card(number: self.number, bank: self.bank, cardName: self.cardName, cardType: self.type, id: self.id)
+       
+        return Card(number: self.number, cardName: self.cardName, cardType: self.type, id: self.id)
     }
     
     public func getMaskCardNumber() -> [String] {

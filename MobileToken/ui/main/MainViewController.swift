@@ -12,6 +12,8 @@ class MainViewController: UINavigationController {
     
     override func viewDidAppear(_ animated: Bool) {
         checkIfNewUser()
+//        let vc = R.storyboard.importToken.importTokenViewController()
+//        UIApplication.shared.keyWindow?.rootViewController = vc
         initPages()
     }
     

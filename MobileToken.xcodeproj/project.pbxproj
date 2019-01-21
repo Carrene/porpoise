@@ -135,7 +135,7 @@
 		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
 		AFB39B572189A6A700302624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
 		AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
-		AFB39B652189A6A700302624 /* MobileTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B642189A6A700302624 /* MobileTokenTests.swift */; };
+		AFB39B652189A6A700302624 /* TokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B642189A6A700302624 /* TokenTest.swift */; };
 		AFB39B702189A6A700302624 /* MobileTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */; };
 		AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
 		AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
@@ -144,6 +144,8 @@
 		AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */; };
 		AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
 		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
+		AFBFE16F21F457F300FDAE4A /* Base64urlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */; };
+		AFDD174821EDFE3200C975CD /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
 		AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
 		AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */; };
@@ -310,7 +312,7 @@
 		AFB39B592189A6A700302624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFB39B5B2189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB39B602189A6A700302624 /* MobileTokenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTokenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFB39B642189A6A700302624 /* MobileTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTokenTests.swift; sourceTree = "<group>"; };
+		AFB39B642189A6A700302624 /* TokenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTest.swift; sourceTree = "<group>"; };
 		AFB39B662189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTokenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTokenUITests.swift; sourceTree = "<group>"; };
@@ -322,6 +324,8 @@
 		AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
+		AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64urlEncoded.swift; sourceTree = "<group>"; };
+		AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenContractor.swift; sourceTree = "<group>"; };
 		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
 		AFE190EB219049030023E785 /* OtpViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewDesignable.swift; sourceTree = "<group>"; };
 		AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTappedAround.swift; sourceTree = "<group>"; };
@@ -479,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */,
+				AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */,
 			);
 			path = importtoken;
 			sourceTree = "<group>";
@@ -986,7 +991,7 @@
 		AFB39B632189A6A700302624 /* MobileTokenTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFB39B642189A6A700302624 /* MobileTokenTests.swift */,
+				AFB39B642189A6A700302624 /* TokenTest.swift */,
 				AFB39B662189A6A700302624 /* Info.plist */,
 			);
 			path = MobileTokenTests;
@@ -1036,6 +1041,14 @@
 			path = cardlist;
 			sourceTree = "<group>";
 		};
+		AFBFE16D21F457B400FDAE4A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		AFE190E7219029430023E785 /* card */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,6 +1080,7 @@
 		AFE81B0B2196CCDA00AA0AF2 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AFBFE16D21F457B400FDAE4A /* data */,
 				AFE81B222196D4D400AA0AF2 /* uicolor */,
 				AFE81B0C2196CD1600AA0AF2 /* uiviewcontroller */,
 			);
@@ -1518,6 +1532,7 @@
 				AC16D71921CA325C0094FBED /* AuthenticationDefinitionPatternpresenter.swift in Sources */,
 				AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */,
 				AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
+				AFBFE16F21F457F300FDAE4A /* Base64urlEncoded.swift in Sources */,
 				AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */,
 				AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
@@ -1601,6 +1616,7 @@
 				ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */,
 				AF246AAF219AE0A500C44E4B /* TokenRepository.swift in Sources */,
 				AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */,
+				AFDD174821EDFE3200C975CD /* ImportTokenContractor.swift in Sources */,
 				AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */,
 				AC16D73021CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift in Sources */,
 			);
@@ -1610,7 +1626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB39B652189A6A700302624 /* MobileTokenTests.swift in Sources */,
+				AFB39B652189A6A700302624 /* TokenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1809,6 +1825,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_PORT = 443;
 			};
 			name = Debug;
 		};
@@ -1829,6 +1846,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_PORT = 443;
 			};
 			name = Release;
 		};

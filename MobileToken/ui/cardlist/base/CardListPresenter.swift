@@ -33,7 +33,7 @@ class CardListPresenter : CardListPresenterProtocol {
                 print("error")
             }
             else {
-                self?.view.reloadCardPager()
+                self?.getBankList()
             }
         }
         repository.addCard(card: card, bank: bank, onDone: onDataResponse)
@@ -46,7 +46,7 @@ class CardListPresenter : CardListPresenterProtocol {
                 print("error")
             }
             else {
-                self?.view.updateCardList(card: response.value!)
+               self?.getBankList()
             }
         }
         repository.update(card, onDone: onDataResponse)
@@ -59,7 +59,7 @@ class CardListPresenter : CardListPresenterProtocol {
                 print("error")
             }
             else {
-                self?.view.reloadCardPager()
+                self?.getBankList()
             }
         }
         repository.delete(identifier: identifier, onDone: onDataResponse)
