@@ -116,12 +116,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
             ])
-        let deleteCardAlert = UIAlertController(title: R.string.localizable.lb_are_you_sure(), message:"" , preferredStyle: .alert)
+        let deleteCardAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
         
         deleteCardAlert.setValue(attributedString, forKey: "attributedMessage")
         
         let deleteAction = UIAlertAction(title: R.string.localizable.delete_card() , style: .default , handler: { alert -> Void in
-            
+            self.cardListPresenter?.deleteCard(identifier: (self.selectedCard?.id)!)
         })
         
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
