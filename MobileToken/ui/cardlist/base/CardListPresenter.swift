@@ -53,7 +53,16 @@ class CardListPresenter : CardListPresenterProtocol {
     }
     
     func deleteCard(identifier: String) {
-        
+        let repository = CardRepository()
+        let onDataResponse : ((RepositoryResponse<Card>) -> ()) = { [weak self] response in
+            if response.error != nil {
+                print("error")
+            }
+            else {
+                self?.view.reloadCardPager()
+            }
+        }
+        repository.delete(identifier: identifier, onDone: onDataResponse)
     }
     
     
