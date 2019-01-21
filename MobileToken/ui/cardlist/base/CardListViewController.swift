@@ -55,7 +55,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func addCard(cardName:String ,selectedBank:Bank) {
-        let card = Card(number: "", bank: selectedBank, cardName: cardName, cardType: Card.CardTypeEnum.BANK )
+        let card = Card(number: "", cardName: cardName, cardType: Card.CardTypeEnum.BANK )
         cardListPresenter?.addCard(card: card, bank: selectedBank)
     }
     
@@ -106,5 +106,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 cardListPagerView.reloadData()
             }
         }
+    }
+    
+    func navigateToImportToken() {
+//        performSegue(withIdentifier: R.segue., sender: <#T##Any?#>)
     }
 }
