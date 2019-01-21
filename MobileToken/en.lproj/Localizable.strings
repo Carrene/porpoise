@@ -36,6 +36,7 @@
 "lb_cardName" = "نام کارت";
 "lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید";
 "lb_desired_card_name" = "نام پیشنهادی کارت";
+"lb_are_you_sure" = "آیا مطمئن هستید؟";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
@@ -55,3 +56,4 @@
 "pattern" = "الگو";
 "save" = "ذخیره";
 "cancel" = "انصراف";
+"delete_card" = "حذف کارت";

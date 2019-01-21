@@ -53,7 +53,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func initActionSheet() {
         let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert()})
-        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in })
+        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert()})
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
     }
@@ -110,6 +110,27 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
     }
+    
+    func deleteCardAlert() {
+        let editCardAlert = UIAlertController(title: R.string.localizable.lb_are_you_sure(), message:"" , preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: R.string.localizable.delete_card() , style: .default , handler: { alert -> Void in
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
+            (action : UIAlertAction!) -> Void in })
+        
+        editCardAlert.addAction(cancelAction)
+        editCardAlert.addAction(deleteAction)
+        
+        self.present(editCardAlert, animated: true, completion: nil)
+        
+        let subview = (editCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.layer.cornerRadius = 10
+        subview.backgroundColor = R.color.primaryLight()
+        }
+    
     
     func addCard(cardName:String ,selectedBank:Bank) {
         let card = Card(number: "", bank: selectedBank, cardName: cardName, cardType: Card.CardTypeEnum.BANK )
