@@ -64,8 +64,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func editCardAlert() {
         let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobile(size: 12)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
+            NSAttributedString.Key.font : R.font.iranSansMobile(size: 14)!,
+            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!.withAlphaComponent(0.5)
             ])
         
         let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
@@ -112,7 +112,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteCardAlert() {
-        let editCardAlert = UIAlertController(title: R.string.localizable.lb_are_you_sure(), message:"" , preferredStyle: .alert)
+        let attributedString = NSAttributedString(string: R.string.localizable.lb_are_you_sure(), attributes: [
+            NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
+            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
+            ])
+        let deleteCardAlert = UIAlertController(title: R.string.localizable.lb_are_you_sure(), message:"" , preferredStyle: .alert)
+        
+        deleteCardAlert.setValue(attributedString, forKey: "attributedMessage")
         
         let deleteAction = UIAlertAction(title: R.string.localizable.delete_card() , style: .default , handler: { alert -> Void in
             
@@ -121,12 +127,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
             (action : UIAlertAction!) -> Void in })
         
-        editCardAlert.addAction(cancelAction)
-        editCardAlert.addAction(deleteAction)
+        deleteCardAlert.addAction(cancelAction)
+        deleteCardAlert.addAction(deleteAction)
         
-        self.present(editCardAlert, animated: true, completion: nil)
+        self.present(deleteCardAlert, animated: true, completion: nil)
         
-        let subview = (editCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        let subview = (deleteCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
         }
