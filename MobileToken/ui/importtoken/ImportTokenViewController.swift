@@ -10,14 +10,25 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     @IBOutlet var labelSmsCode: UILabel!
     @IBOutlet var buttonAddCode: UIButton!
     var card: Card?
+    var presenter: ImportTokenPresenterProtokol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewCard.setDelegate(cardCellXibProtocol: self)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        presenter = ImportTokenPresenter(view: self)
+        presenter?.getManagedCard(id: (card?.id)!)
+    }
+    
     func set(card: Card) {
         self.card = card
+        
+    }
+    
+    func setManagedCard(card: Card) {
+        card.bank?.name
     }
     
     func initUIComponents() {

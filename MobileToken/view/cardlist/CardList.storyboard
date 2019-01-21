@@ -63,11 +63,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="vScroll" destination="X9c-M4-KV2" id="0bD-Zt-mgo"/>
+                        <segue destination="CPa-E7-dNy" kind="show" identifier="navigateToImportToken" id="snV-lL-ZJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-vq-qki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828" y="909.89505247376314"/>
+        </scene>
+        <!--ImportToken-->
+        <scene sceneID="uPH-Ro-uuk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImportToken" id="CPa-E7-dNy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJN-Go-QPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="872"/>
         </scene>
     </scenes>
     <resources>

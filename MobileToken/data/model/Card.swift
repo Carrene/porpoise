@@ -41,15 +41,8 @@ class Card: Object, Mappable, NSCopying{
    
     var TokenList = List<Token>()
     
-    var owner: Bank? {
-        
-        return LinkingObjects(fromType: Bank.self, property: "cardList").first
-    }
-    public var bank: Bank? {
-        get {
-            return owner
-        }
-    }
+    var owner = LinkingObjects(fromType: Bank.self, property: "cardList")
+    public var bank: Bank?
     
     required convenience init?(map: Map) {
         self.init()

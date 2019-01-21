@@ -23,8 +23,12 @@ class CardRealmRepository: CardRepositoryProtocol {
         }
     }
     
-    func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+    func get(identifier: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let card: Card? = realm.object(ofType: Card.self, forPrimaryKey: identifier)
+        let cardCopy = card?.copy() as! Card
+        cardCopy.bank = card?.owner.first!
+        onDone!(RepositoryResponse(value: cardCopy))
     }
     
     func getAll(onDone: ((RepositoryResponse<[Card]>) -> ())?) {

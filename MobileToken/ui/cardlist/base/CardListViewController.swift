@@ -3,7 +3,7 @@ import UIKit
 import FSPagerView
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
-   
+    
     @IBOutlet weak var vScroll: UIScrollView!
     
     private var pagerList = [CardPagerViewAdapter]()
@@ -43,11 +43,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func updateCardList(card: Card) {
         updatedCard = card
         UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-//        for bank in banks! {
-//            if let index = bank.cardList.index(where: {$0.id == card.id}) {
-//                bank.cardList[index] = card
-//            }
-//        }
+        //        for bank in banks! {
+        //            if let index = bank.cardList.index(where: {$0.id == card.id}) {
+        //                bank.cardList[index] = card
+        //            }
+        //        }
         initPagerList()
     }
     
@@ -91,9 +91,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
             if let newCardName = editCardAlert.textFields![0].text {
-            let card = self.selectedCard?.copy() as! Card
-            card.cardName = newCardName
-            self.cardListPresenter?.editCard(card: card)
+                let card = self.selectedCard?.copy() as! Card
+                card.cardName = newCardName
+                self.cardListPresenter?.editCard(card: card)
                 
             }
         })
@@ -135,7 +135,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let subview = (deleteCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
-        }
+    }
     
     
     func addCard(cardName:String ,selectedBank:Bank) {
@@ -196,8 +196,15 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
     }
     
-    func navigateToImportToken() {
-//        performSegue(withIdentifier: R.segue., sender: <#T##Any?#>)
+    func navigateToImportToken(card: Card) {
+        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: card)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = (segue.destination as? ImportTokenViewController) {
+            destination.set(card: sender as! Card)
+        }
+    }
+    
 }
 

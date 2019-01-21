@@ -10,8 +10,10 @@ class CardRepository: CardRepositoryProtocol {
         }
     }
     
-    func get(identifier: Int, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+    func get(identifier: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
+        cardRealmRepository.get(identifier: identifier) { realmRepositoryResponse in
+            onDone?(realmRepositoryResponse)
+        }
     }
     
     func getAll(onDone: ((RepositoryResponse<[Card]>) -> ())?) {
