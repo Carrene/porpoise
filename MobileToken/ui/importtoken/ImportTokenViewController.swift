@@ -28,7 +28,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     }
     
     func setManagedCard(card: Card) {
-        card.bank?.name
+        self.card = card
+        textViewSmsCode.text = "178a6d2275ead9166099ad0095a47ccdd350383130ce43eb3ae976239efa904b06f6a7e920006b28b8995eaacf337c4bb50f3773459aa0f40559d6bb"
+        textViewAtmCode.text = "93406ebd"
     }
     
     func initUIComponents() {
@@ -61,6 +63,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
             textView.text = nil
             textView.textColor = R.color.buttonColor()
         }
+        
+        if textView == self.textViewAtmCode, textView.text.count == 8 {
+            
+            self.textViewSmsCode.becomeFirstResponder()
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -86,9 +93,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     }
     
     @IBAction func onButtonAddCode(_ sender: UIButton) {
-        if textViewAtmCode.text.count < 9 || textViewSmsCode.text.count == 0 {
+//        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
             UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
-        }
+            let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
+            presenter?.importToken(tokenPacket: tokenPacket, cryptoModuleId: .one, card: card!)
+//        }
     }
     
     func actionSheetButtonClicked() {

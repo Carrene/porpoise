@@ -9,7 +9,7 @@ import CryptoSwift
 class Token: Object, Mappable, NSCopying{
     
     public enum CryptoModuleId: Int {
-
+        
         case one = 1
         case two = 2
     }
@@ -19,7 +19,6 @@ class Token: Object, Mappable, NSCopying{
         get { return Id }
         set { Id = newValue }
     }
-    
     
     @objc private dynamic var TokenPacket: String? = nil
     public var tokenPacket: String? {
@@ -81,8 +80,8 @@ class Token: Object, Mappable, NSCopying{
         let tokenPacketDecryptedWithoutChecksum = Array(tokenPacketDecrypted[0 ..< tokenPacketDecrypted.count - 4])
         let checkSumString = String(bytes: checksum, encoding: .utf8)
         let isValid = isChecksumValid(secret: secretBytes!, tokenpacket: tokenPacketDecryptedWithoutChecksum, checksum: checkSumString!)
-       
-          if isValid {
+        
+        if isValid {
             self.version = Int(tokenPacketDecrypted[0])
             if self.version == 1 {
                 let array : [UInt8] = Array(tokenPacketDecryptedWithoutChecksum[1 ..< 5])
@@ -90,12 +89,13 @@ class Token: Object, Mappable, NSCopying{
                 let data = NSData(bytes: array, length: 4)
                 data.getBytes(&value, length: 4)
                 value = UInt32(bigEndian: value)
+                //TODO: check expiredate date
                 self.expireDate = "" + "\(value)"
+                bank?.id
                 let cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
                 if let cryptoModule = self.cryptoModuleId, cryptoModule != CryptoModuleId(rawValue: cryptoModuleId){
                     return false
                 }
-//                self.bankId = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.timeInterval = Int(tokenPacketDecryptedWithoutChecksum[7])
                 self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
@@ -106,10 +106,9 @@ class Token: Object, Mappable, NSCopying{
                 self.name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[29 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
                 self.hashType = HashType.SHA1
             }
-            return false
-            
+            return true
         }
-       return false
+        return false
     }
     
     func isChecksumValid(secret: [UInt8], tokenpacket: [UInt8], checksum: String) -> Bool {

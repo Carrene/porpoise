@@ -20,9 +20,9 @@ class MobileTokenTests: XCTestCase {
     }
     
     func testParseToken() {
-        let secret = "D-vjoZUYzLsp0Uz4nyBF3xXGlA3HnAAouZsiUsDdzWA="
-        let bank = Bank(name: Bank.BankName.MELI, logoResourceId: nil, secret: secret)
-        let tokenPacket = "14d5d5620e7ac19a2cf9d4103ad2dc6be29b00ceeb5ad06dbeea7a0fafd2f366bdd68240fbc19ea2092e883abd0e2570a39c4805a58eda0ebe4f698307d71462"
+        let secret = "p_ggeBSlQwxoTPds93novuCNWZp1DF_NNQ9mcrFkx0g="
+        let bank = Bank(name: Bank.BankName.AYANDE, logoResourceId: nil, secret: secret)
+        let tokenPacket = "c15d8f73a30e82b6102038f8d33e4d7b580806aafdfdbd63cd3f81a5f96337a0ad71519cdd31a37c6f1fdf5d01172f1802382b96150a03b47c5180cc80c8ea39"
         let token = Token(tokenPaket: tokenPacket, bank: bank, cryptoModuleId: .one)
         XCTAssertTrue(token.parse())
     }

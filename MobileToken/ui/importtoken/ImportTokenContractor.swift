@@ -7,6 +7,6 @@ protocol ImportTokenViewProtocol: class {
 
 protocol ImportTokenPresenterProtokol {
     init(view: ImportTokenViewProtocol)
-    func importToken(tokenPacket: String, card: Card)
+    func importToken(tokenPacket: String, cryptoModuleId: Token.CryptoModuleId, card: Card)
     func getManagedCard(id: String)
 }
