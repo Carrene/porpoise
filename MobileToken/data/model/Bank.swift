@@ -6,6 +6,13 @@ import RealmSwift
 
 class Bank: Object, Mappable, NSCopying{
     
+    
+    public enum BankName: String {
+        case MELI = "ملی"
+        case AYANDE = "آینده"
+        case SADERAT = "صادرات"
+    }
+    
     override class func primaryKey() -> String {
         return "Name"
     }
@@ -13,7 +20,26 @@ class Bank: Object, Mappable, NSCopying{
     @objc private dynamic var Name: String? = nil
     var name: String? {
         get { return Name }
-        set { Name = newValue }
+        set {
+            Name = newValue
+            switch name! {
+            case BankName.MELI.rawValue:
+                self.id = 1
+            case BankName.AYANDE.rawValue:
+                self.id = 2
+            case BankName.SADERAT.rawValue:
+                self.id = 3
+            default: break
+            }
+            
+            
+        }
+    }
+    
+    @objc private var Id: Int = 0
+    var id: Int {
+        get { return Id}
+        set { Id = newValue}
     }
     
     @objc private dynamic var Secret:String? = nil
@@ -36,10 +62,11 @@ class Bank: Object, Mappable, NSCopying{
         self.init()
     }
     
-    convenience init(name: String? = nil, logoResourceId: String? = nil, cardList: List<Card>? = nil) {
+    convenience init(name: BankName? = nil, logoResourceId: String? = nil, cardList: List<Card>? = nil, secret: String? = nil) {
         self.init()
-        self.name = name
+        self.name = name?.rawValue
         self.logoResourceId = logoResourceId
+        self.secret = secret
         self.cardList.removeAll()
         if let cards = cardList {
             for card in cards {
@@ -53,7 +80,7 @@ class Bank: Object, Mappable, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Bank(name: name, logoResourceId: logoResourceId, cardList: cardList)
+        return Bank(name: BankName(rawValue: name!), logoResourceId: logoResourceId, cardList: cardList, secret: self.secret)
     }
     
 }

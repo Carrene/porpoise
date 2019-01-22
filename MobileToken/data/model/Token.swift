@@ -8,6 +8,19 @@ import CryptoSwift
 //TODO(Fateme) Just extend from realm not object mapper
 class Token: Object, Mappable, NSCopying{
     
+    public enum CryptoModuleId: Int {
+
+        case one = 1
+        case two = 2
+    }
+    
+    @objc dynamic var Id: String?
+    public var id: String? {
+        get { return Id }
+        set { Id = newValue }
+    }
+    
+    
     @objc private dynamic var TokenPacket: String? = nil
     public var tokenPacket: String? {
         get { return TokenPacket }
@@ -15,41 +28,51 @@ class Token: Object, Mappable, NSCopying{
     }
     
     private var expireDate: String?
-    private var cryptoModuleId: Int?
+    private var cryptoModuleId: CryptoModuleId?
     private var seed: [UInt8]?
     private var name: String?
     private var hashType: HashType?
     private var version: Int?
     private var timeInterval: Int?
     private var otpLength: Int?
-    private var secret: String?
     private var bankId: Int?
+    private var bank: Bank?
     
     required convenience init(map: Map) {
         self.init()
     }
     
+    override class func primaryKey() -> String {
+        return "Id"
+    }
     override static func ignoredProperties() -> [String] {
         return ["secret"]
     }
     
-    convenience init(tokenPaket: String? = nil, secret: String? = nil) {
+    convenience init(tokenPaket: String? = nil, id: String? = nil, bank: Bank? = nil, cryptoModuleId: CryptoModuleId? = nil) {
         self.init()
         self.tokenPacket = tokenPaket
-        self.secret = secret
+        self.bank = bank
+        self.cryptoModuleId = cryptoModuleId
+        if id == nil {
+            self.id = NSUUID().uuidString.lowercased()
+        } else {
+            self.id = id!
+        }
     }
     
     func mapping(map: Map) {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Token(tokenPaket: tokenPacket, secret: secret)
+        return Token(tokenPaket: tokenPacket, id: self.id)
     }
     
     func parse() -> Bool {
+        
         let tokenPlusIvPacketBytes = tokenPacket?.hexaToBytes()
         let iv = Array(tokenPlusIvPacketBytes![0..<16])
-        let secretBytes = Data(base64urlEncoded: secret!)?.bytes
+        let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes
         let tokenPacketEncrypted = Array(tokenPlusIvPacketBytes![16..<tokenPlusIvPacketBytes!.count])
         
         let tokenPacketDecrypted = try! AES(key: secretBytes!, blockMode: CBC(iv: iv), padding: .pkcs5).decrypt(tokenPacketEncrypted)
@@ -58,7 +81,8 @@ class Token: Object, Mappable, NSCopying{
         let tokenPacketDecryptedWithoutChecksum = Array(tokenPacketDecrypted[0 ..< tokenPacketDecrypted.count - 4])
         let checkSumString = String(bytes: checksum, encoding: .utf8)
         let isValid = isChecksumValid(secret: secretBytes!, tokenpacket: tokenPacketDecryptedWithoutChecksum, checksum: checkSumString!)
-        if isValid {
+       
+          if isValid {
             self.version = Int(tokenPacketDecrypted[0])
             if self.version == 1 {
                 let array : [UInt8] = Array(tokenPacketDecryptedWithoutChecksum[1 ..< 5])
@@ -67,16 +91,25 @@ class Token: Object, Mappable, NSCopying{
                 data.getBytes(&value, length: 4)
                 value = UInt32(bigEndian: value)
                 self.expireDate = "" + "\(value)"
-                self.cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
+                let cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
+                if let cryptoModule = self.cryptoModuleId, cryptoModule != CryptoModuleId(rawValue: cryptoModuleId){
+                    return false
+                }
 //                self.bankId = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.timeInterval = Int(tokenPacketDecryptedWithoutChecksum[7])
-                self.seed = Array(tokenPacketDecryptedWithoutChecksum[8 ..< 28])
-                self.name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[28 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
+                self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
+                if self.bankId != bank!.id {
+                    return false
+                }
+                self.seed = Array(tokenPacketDecryptedWithoutChecksum[9 ..< 29])
+                self.name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[29 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
                 self.hashType = HashType.SHA1
             }
+            return false
+            
         }
-        return true
+       return false
     }
     
     func isChecksumValid(secret: [UInt8], tokenpacket: [UInt8], checksum: String) -> Bool {
