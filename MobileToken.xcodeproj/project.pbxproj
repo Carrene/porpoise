@@ -80,6 +80,7 @@
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
 		AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
 		AC75A4F921B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */; };
+		AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
 		ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
 		ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
 		ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
@@ -251,6 +252,7 @@
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
 		AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
 		AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternViewController.swift; sourceTree = "<group>"; };
+		AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankUtil.swift; sourceTree = "<group>"; };
 		ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		ACAAD85C21AE7AED007266F4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -1121,6 +1123,7 @@
 				AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */,
 				AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */,
 				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
+				AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1503,6 +1506,7 @@
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
+				AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */,
 				AC16D71321CA322C0094FBED /* AuthenticationDefinitionViewController.swift in Sources */,
 				AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */,
 				AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */,

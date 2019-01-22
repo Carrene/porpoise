@@ -5,6 +5,8 @@ import ObjectMapper_Realm
 import RealmSwift
 
 class Bank: Object, Mappable, NSCopying{
+    static let AYANDE = R.string.localizable.ayande()
+    static let SADERAT = R.string.localizable.saderat()
     
     override class func primaryKey() -> String {
         return "Name"
