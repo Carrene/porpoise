@@ -60,7 +60,35 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteTokenAlert() {
+        let attributedString = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
+            NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
+            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
+            ])
+        let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
         
+        deleteTokenAlert.setValue(attributedString, forKey: "attributedMessage")
+        
+        let deleteSecondTokenAction = UIAlertAction(title: R.string.localizable.alert_delete_second_token() , style: .default , handler: { alert -> Void in
+            
+        })
+        
+        let deleteFirstTokenAction = UIAlertAction(title: R.string.localizable.alert_delete_first_token() , style: .default , handler: { alert -> Void in
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .destructive, handler: {
+            (action : UIAlertAction!) -> Void in })
+        
+    
+        deleteTokenAlert.addAction(deleteFirstTokenAction)
+        deleteTokenAlert.addAction(deleteSecondTokenAction)
+        deleteTokenAlert.addAction(cancelAction)
+        
+        self.present(deleteTokenAlert, animated: true, completion: nil)
+        
+        let subview = (deleteTokenAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.layer.cornerRadius = 10
+        subview.backgroundColor = R.color.primaryLight()
     }
     
     func editCardAlert() {
