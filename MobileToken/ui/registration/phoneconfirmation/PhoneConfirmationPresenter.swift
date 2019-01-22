@@ -17,6 +17,8 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
             let statusCode = response.restDataResponse?.response?.statusCode
             switch statusCode {
             case 200:
+                let responseUser = response.value
+                user.bank?.secret = responseUser!.bank?.secret
                 self?.updateUserInRealm(user: user)
             case 400:
                 self?.view.showBadRequestError()
