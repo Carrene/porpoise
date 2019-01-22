@@ -43,23 +43,24 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func updateCardList(card: Card) {
         updatedCard = card
         UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-//        for bank in banks! {
-//            if let index = bank.cardList.index(where: {$0.id == card.id}) {
-//                bank.cardList[index] = card
-//            }
-//        }
         initPagerList()
     }
     
     func initActionSheet() {
         let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert()})
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert()})
+        let deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert()})
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
+        actionController.addAction(deleteTokenAction)
     }
     
     func actionButtonClicked() {
         present(actionController, animated: true, completion: nil)
+    }
+    
+    func deleteTokenAlert() {
+        
     }
     
     func editCardAlert() {

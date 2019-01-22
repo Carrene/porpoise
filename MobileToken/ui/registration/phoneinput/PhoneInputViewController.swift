@@ -39,7 +39,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 16)
-        countryPickerView.layer.cornerRadius = 10
+        countryPickerView.layer.cornerRadius = 5
         countryPickerView.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         countryPickerView.layer.borderWidth = 1
         viewPhone.layer.borderWidth = 1
@@ -48,7 +48,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
-        viewPhone.layer.cornerRadius = 10
+        viewPhone.layer.cornerRadius = 5
     }
     
     func initListeners() {

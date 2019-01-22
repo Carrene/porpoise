@@ -14,27 +14,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BankCardPagerViewCell" id="gTV-IL-0wX" userLabel="BankCardPagerViewCell" customClass="BankCardPagerViewCell" customModule="MobileToken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+            <rect key="frame" x="0.0" y="0.0" width="335" height="251"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                <rect key="frame" x="0.0" y="0.0" width="335" height="251"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="251"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-DL-HCS" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="123"/>
                                 <color key="backgroundColor" name="primary"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-dB-g5S" userLabel="viewFirstOtp" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="20" y="139" width="280" height="40"/>
+                                <rect key="frame" x="20" y="139" width="295" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VzP-gL-DCt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSQ-ih-8sx" userLabel="viewSecondOtp" customClass="OtpViewDesignable" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="20" y="195" width="280" height="40"/>
+                                <rect key="frame" x="20" y="195" width="295" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Q8j-dq-QCZ"/>
                                 </constraints>
