@@ -2,6 +2,8 @@ import UIKit
 
 class AuthenticationTypeSettingTableViewCell: UITableViewCell {
 
+    @IBOutlet var imageIcon: UIImageView!
+    @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelType: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
