@@ -5,6 +5,7 @@ import UIKit
 class BankUtil {
     
     public static func getColor(bank: Bank) -> UIColor {
+        
         switch bank.name {
         case Bank.AYANDE:
             return R.color.ayandehColor()!
@@ -41,9 +42,6 @@ class BankUtil {
             
         }
     }
-    
-    
-    
     
 }
 

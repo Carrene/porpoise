@@ -28,7 +28,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
     }
     
     func getBankList(){
-        let banks = [Bank(name: "آینده", logoResourceId: R.image.colorBankAyandehLogo.name),Bank(name: "صادرات", logoResourceId: R.image.bankSaderatLogo.name)]
+        let banks = [Bank(name: Bank.AYANDE, logoResourceId: R.image.colorBankAyandehLogo.name),Bank(name: Bank.SADERAT, logoResourceId: R.image.bankSaderatLogo.name)]
         view.setBankList(banks: banks)
     }
     
