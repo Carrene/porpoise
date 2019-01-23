@@ -80,7 +80,6 @@ class Token: Object, Mappable, NSCopying{
         let tokenPacketDecryptedWithoutChecksum = Array(tokenPacketDecrypted[0 ..< tokenPacketDecrypted.count - 4])
         let checkSumString = String(bytes: checksum, encoding: .utf8)
         let isValid = isChecksumValid(secret: secretBytes!, tokenpacket: tokenPacketDecryptedWithoutChecksum, checksum: checkSumString!)
-        
         if isValid {
             self.version = Int(tokenPacketDecrypted[0])
             if self.version == 1 {
@@ -91,7 +90,6 @@ class Token: Object, Mappable, NSCopying{
                 value = UInt32(bigEndian: value)
                 //TODO: check expiredate date
                 self.expireDate = "" + "\(value)"
-                bank?.id
                 let cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
                 if let cryptoModule = self.cryptoModuleId, cryptoModule != CryptoModuleId(rawValue: cryptoModuleId){
                     return false

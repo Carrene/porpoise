@@ -13,6 +13,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         let isSuccessful = token.parse()
         if isSuccessful {
             card.TokenList.append(token)
+            card.TokenList.count
             updateCard(card: card)
         }
     }
@@ -43,7 +44,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                     
                 }
                 else {
-                    SnackBarHelper.init(message: "added", color: R.color.primary()!, duration: .short).show()
+                    SnackBarHelper.init(message: "added", color: R.color.primary()!, duration: .long).show()
                 }
             }
         }

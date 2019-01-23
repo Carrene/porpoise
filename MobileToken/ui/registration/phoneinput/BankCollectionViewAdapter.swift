@@ -30,7 +30,7 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         collectionView.allowsMultipleSelection = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
         cell.lbBankName.text = banks![indexPath.row].name!
-        cell.lmgLogo.image = UIImage(named: banks![indexPath.row].logoResourceId!)
+//        cell.lmgLogo.image = UIImage(named: banks![indexPath.row].logoResourceId!)
         
         if selectedIndex == indexPath.row {
             cell.lbBankName.textColor = R.color.buttonColor()

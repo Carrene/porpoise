@@ -39,7 +39,7 @@ class Card: Object, Mappable, NSCopying{
         case ADD = "ADD"
     }
    
-    var TokenList = List<Token>()
+    let TokenList = List<Token>()
     
     var owner = LinkingObjects(fromType: Bank.self, property: "cardList")
     public var bank: Bank?
@@ -49,11 +49,17 @@ class Card: Object, Mappable, NSCopying{
     }
     
 
-    convenience init(number: String? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil, id: String? = nil) {
+    convenience init(number: String? = nil, cardName: String? = nil, cardType: CardTypeEnum? = nil, id: String? = nil, tokenList: List<Token>? = nil) {
         self.init()
         self.number = number
         self.cardName = cardName
         self.type = cardType
+        if let tokens = tokenList {
+            for token in tokens {
+                let tokenCopy = token.copy() as! Token
+                self.TokenList.append(tokenCopy)
+            }
+        }
         if id == nil {
             self.id = NSUUID().uuidString.lowercased()
         } else {
@@ -66,7 +72,7 @@ class Card: Object, Mappable, NSCopying{
     
     func copy(with zone: NSZone? = nil) -> Any {
        
-        return Card(number: self.number, cardName: self.cardName, cardType: self.type, id: self.id)
+        return Card(number: self.number, cardName: self.cardName, cardType: self.type, id: self.id, tokenList: self.TokenList)
     }
     
     public func getMaskCardNumber() -> [String] {

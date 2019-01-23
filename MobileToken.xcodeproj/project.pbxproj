@@ -976,17 +976,17 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
-				AC2676BA21B52B6900524636 /* framework */,
-				AFE81B372196E10500AA0AF2 /* error */,
-				AFE81B162196D26C00AA0AF2 /* util */,
-				AFE81B0B2196CCDA00AA0AF2 /* extensions */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
-				AF463BCA2189E4E900DC8A3E /* view */,
-				AF463BC32189D8DF00DC8A3E /* ui */,
 				AF463BC22189D8CF00DC8A3E /* data */,
+				AFE81B372196E10500AA0AF2 /* error */,
+				AFE81B0B2196CCDA00AA0AF2 /* extensions */,
+				AC2676BA21B52B6900524636 /* framework */,
 				AFB39B5B2189A6A700302624 /* Info.plist */,
-				AFAD230121908A9600EC00CB /* R.generated.swift */,
 				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
+				AFAD230121908A9600EC00CB /* R.generated.swift */,
+				AF463BC32189D8DF00DC8A3E /* ui */,
+				AFE81B162196D26C00AA0AF2 /* util */,
+				AF463BCA2189E4E900DC8A3E /* view */,
 			);
 			path = MobileToken;
 			sourceTree = "<group>";

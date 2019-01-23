@@ -29,8 +29,8 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     
     func setManagedCard(card: Card) {
         self.card = card
-        textViewSmsCode.text = "178a6d2275ead9166099ad0095a47ccdd350383130ce43eb3ae976239efa904b06f6a7e920006b28b8995eaacf337c4bb50f3773459aa0f40559d6bb"
-        textViewAtmCode.text = "93406ebd"
+        
+        
     }
     
     func initUIComponents() {
@@ -54,10 +54,16 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
         viewCard.backgroundColor = R.color.ayandehColor()
         viewCard.imageLogo.image = R.image.bankAyandehLogo()
         viewCard.labelBankName.text = "بانک آینده"
-        //viewCard.buttonActionSheet.isEnabled = false
     }
     
-    
+    func textViewDidChange(_ textView: UITextView) {
+        let smsText = textViewSmsCode.text.split(separator: "\n")
+        smsText.forEach{ text in
+            if text.count == 120 {
+                textViewSmsCode.text = String(text)
+            }
+        }
+    }
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == R.color.buttonColor()?.withAlphaComponent(0.5) {
             textView.text = nil
@@ -68,6 +74,8 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
             
             self.textViewSmsCode.becomeFirstResponder()
         }
+        
+       
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -82,6 +90,8 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        
         if textView == textViewAtmCode {
             let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
             let numberOfChars = newText.count
@@ -91,13 +101,14 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
             return true
         }
     }
-    
+   
     @IBAction func onButtonAddCode(_ sender: UIButton) {
-//        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
+        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
             UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
+        } else {
             let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
             presenter?.importToken(tokenPacket: tokenPacket, cryptoModuleId: .one, card: card!)
-//        }
+        }
     }
     
     func actionSheetButtonClicked() {

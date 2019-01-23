@@ -62,8 +62,9 @@ class Bank: Object, Mappable, NSCopying{
         self.init()
     }
     
-    convenience init(name: BankName? = nil, logoResourceId: String? = nil, cardList: List<Card>? = nil, secret: String? = nil) {
+    convenience init(name: BankName? = nil, id: Int? = nil, logoResourceId: String? = nil, cardList: List<Card>? = nil, secret: String? = nil) {
         self.init()
+        self.id = id ?? 0
         self.name = name?.rawValue
         self.logoResourceId = logoResourceId
         self.secret = secret
@@ -80,7 +81,7 @@ class Bank: Object, Mappable, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Bank(name: BankName(rawValue: name!), logoResourceId: logoResourceId, cardList: cardList, secret: self.secret)
+        return Bank(name: BankName(rawValue: name!),id: self.id, logoResourceId: logoResourceId, cardList: cardList, secret: self.secret)
     }
     
 }
