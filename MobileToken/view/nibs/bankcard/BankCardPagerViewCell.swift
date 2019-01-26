@@ -6,8 +6,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
 
     @IBOutlet weak var vCard: CardCellXibView!
     @IBOutlet var viewBankCard: UIView!
-    @IBOutlet var viewFirstOtp: OtpViewDesignable!
-    @IBOutlet var viewSecondOtp: OtpViewDesignable!
+    @IBOutlet var viewFirstOtp: UIView!
+    @IBOutlet var viewSecondOtp: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +20,14 @@ class BankCardPagerViewCell: FSPagerViewCell {
         //vCard.buttonActionSheet.on
         let actionButton = vCard.buttonActionSheet
         actionButton!.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        let viewFirstRow = AddPasswordViewDesignable()
+        let vFirstRow = viewFirstRow.loadViewFromNib()
+        vFirstRow?.frame.size = viewFirstOtp.frame.size
+        viewFirstOtp.addSubview(vFirstRow!)
+        let viewSecondRpw = AddPasswordViewDesignable()
+        let vSecondRow = viewSecondRpw.loadViewFromNib()
+        vSecondRow?.frame.size = viewSecondOtp.frame.size
+        viewSecondOtp.addSubview(vSecondRow!)
     }
     
     @objc func buttonAction() {
@@ -28,5 +36,24 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func setCardName(cardName:String) {
         vCard.labelCardName.text = cardName
+    }
+    
+    func setBank(card: Card) {
+        for token in card.TokenList {
+            switch token.cryptoModuleId {
+                case Token.CryptoModuleId.one?:
+                    viewFirstOtp.subviews.forEach{ view in
+                        view.removeFromSuperview()
+                    }
+                case Token.CryptoModuleId.two?:
+                    break
+                default: break
+            }
+            
+        }
+    }
+    
+    func addOtpLayout(token: Token) {
+        
     }
 }

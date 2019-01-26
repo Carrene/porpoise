@@ -14,16 +14,16 @@ class OtpViewDesignable: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
+
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        xibSetup()
     }
     
     func xibSetup() {
         contentView = loadViewFromNib()
-        initUIComponent()
+//        initUIComponent()
         // use bounds not frame or it'll be offset
         contentView.frame = bounds
         
@@ -38,6 +38,7 @@ class OtpViewDesignable: UIView {
     func loadViewFromNib() -> UIView! {
         //let bundle = Bundle(for: type(of: self))
         //let nib = UINib(nibName: "OtpViewDesignable", bundle: bundle)
+       
         let nib = UINib(resource: R.nib.otpViewDesignable)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         initUIComponent()

@@ -26,16 +26,16 @@ class Token: Object, Mappable, NSCopying{
         set { TokenPacket = newValue }
     }
     
-    private var expireDate: String?
-    private var cryptoModuleId: CryptoModuleId?
-    private var seed: [UInt8]?
-    private var name: String?
-    private var hashType: HashType?
-    private var version: Int?
-    private var timeInterval: Int?
-    private var otpLength: Int?
-    private var bankId: Int?
-    private var bank: Bank?
+    var expireDate: String?
+    var cryptoModuleId: CryptoModuleId?
+    var seed: [UInt8]?
+    var name: String?
+    var hashType: HashType?
+    var version: Int?
+    var timeInterval: Int?
+    var otpLength: Int?
+    var bankId: Int?
+    var bank: Bank?
     
     required convenience init(map: Map) {
         self.init()
