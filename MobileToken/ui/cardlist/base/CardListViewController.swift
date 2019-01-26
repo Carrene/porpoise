@@ -62,7 +62,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func deleteTokenAlert() {
         let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
         let margin:CGFloat = 10.0
-        let rect = CGRect(x: margin, y: margin, width: 300, height: 310)
+        let rect = CGRect(x: margin, y: margin, width: 335, height: 170)
         let customView = UIView(frame: rect)
         
         let buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
@@ -74,6 +74,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         buttonDeleteFirstToken.setTitleColor(R.color.buttonColor(), for: .normal)
         buttonDeleteFirstToken.setTitleColor(R.color.secondary(), for: .selected)
         buttonDeleteFirstToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+        buttonDeleteFirstToken.addTarget(self, action: #selector(onbuttonDeleteFirstToken), for: .touchUpInside)
+        
         
         let buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 104, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
         buttonDeleteSecondToken.layer.cornerRadius = 10
@@ -85,7 +87,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         buttonDeleteSecondToken.setTitle(
             R.string.localizable.alert_delete_second_token(), for: .normal)
         buttonDeleteSecondToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+        buttonDeleteSecondToken.addTarget(self, action: #selector(onbuttonDeleteSecondToken), for: .touchUpInside)
         
+
         customView.addSubview(buttonDeleteFirstToken)
         customView.addSubview(buttonDeleteSecondToken)
         
@@ -112,13 +116,20 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteTokenAlert.addAction(cancelAction)
         deleteTokenAlert.addAction(saveAction)
         
-        
         DispatchQueue.main.async {
             self.present(deleteTokenAlert, animated: true, completion:{})
         }
         let subview = (deleteTokenAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
+    }
+    
+    @objc func onbuttonDeleteFirstToken() {
+        
+    }
+    
+    @objc func onbuttonDeleteSecondToken() {
+        
     }
     
     
