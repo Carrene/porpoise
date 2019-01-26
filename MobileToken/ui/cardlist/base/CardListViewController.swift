@@ -65,7 +65,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let rect = CGRect(x: margin, y: margin, width: 300, height: 310)
         let customView = UIView(frame: rect)
         
-        let buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 60, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
+        let buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
         buttonDeleteFirstToken.layer.cornerRadius = 10
         buttonDeleteFirstToken.layer.borderColor = R.color.buttonColor()?.cgColor
         buttonDeleteFirstToken.backgroundColor = .clear
@@ -75,7 +75,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         buttonDeleteFirstToken.setTitleColor(R.color.secondary(), for: .selected)
         buttonDeleteFirstToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
         
-        let buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 114, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
+        let buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 104, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
         buttonDeleteSecondToken.layer.cornerRadius = 10
         buttonDeleteSecondToken.layer.borderColor = R.color.buttonColor()?.cgColor
         buttonDeleteSecondToken.setTitleColor(R.color.buttonColor(), for: .normal)
@@ -89,8 +89,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         customView.addSubview(buttonDeleteFirstToken)
         customView.addSubview(buttonDeleteSecondToken)
         
-        
-        
         let attributedString = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
@@ -99,13 +97,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteTokenAlert.view.addSubview(customView)
         deleteTokenAlert.setValue(attributedString, forKey: "attributedMessage")
         
-        let deleteSecondTokenAction = UIAlertAction(title: R.string.localizable.alert_delete_second_token() , style: .default , handler: { alert -> Void in
-            
-        })
-        
-        let deleteFirstTokenAction = UIAlertAction(title: R.string.localizable.alert_delete_first_token() , style: .default , handler: { alert -> Void in
-            
-        })
         let saveAction = UIAlertAction(title: R.string.localizable.ash_delete_token() , style: .default, handler: { (action : UIAlertAction!) -> Void in })
       
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
