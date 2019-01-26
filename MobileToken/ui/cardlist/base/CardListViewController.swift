@@ -12,10 +12,14 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     private var banks : [Bank]?
     private var selectedCard:Card?
     private var updatedCard: Card?
+    private var buttonDeleteFirstToken : UIButton?
+    private var buttonDeleteSecondToken : UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initUIComponents()
         initActionSheet()
+        
         self.cardListPresenter = CardListPresenter(view: self)
     }
     
@@ -24,7 +28,29 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func initUIComponents() {
+        buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: 220, height: 40))
+        buttonDeleteFirstToken?.layer.cornerRadius = 10
+        buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
+        buttonDeleteFirstToken?.backgroundColor = .clear
+        buttonDeleteFirstToken?.layer.borderWidth = 1
+        buttonDeleteFirstToken?.setTitle(R.string.localizable.alert_delete_first_token(), for: .normal)
+        buttonDeleteFirstToken?.setTitleColor(R.color.buttonColor(), for: .normal)
+        buttonDeleteFirstToken?.setTitleColor(R.color.secondary(), for: .selected)
+        buttonDeleteFirstToken?.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+        buttonDeleteFirstToken?.addTarget(self, action: #selector(onbuttonDeleteFirstToken), for: .touchUpInside)
         
+        
+        buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 104, width: 220, height: 40))
+        buttonDeleteSecondToken?.layer.cornerRadius = 10
+        buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
+        buttonDeleteSecondToken?.setTitleColor(R.color.buttonColor(), for: .normal)
+        buttonDeleteSecondToken?.setTitleColor(R.color.secondary(), for: .selected)
+        buttonDeleteSecondToken?.backgroundColor = .clear
+        buttonDeleteSecondToken?.layer.borderWidth = 1
+        buttonDeleteSecondToken?.setTitle(
+            R.string.localizable.alert_delete_second_token(), for: .normal)
+        buttonDeleteSecondToken?.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+        buttonDeleteSecondToken?.addTarget(self, action: #selector(onbuttonDeleteSecondToken), for: .touchUpInside)
     }
     
     func initListeners() {
@@ -65,33 +91,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let rect = CGRect(x: margin, y: margin, width: 335, height: 170)
         let customView = UIView(frame: rect)
         
-        let buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
-        buttonDeleteFirstToken.layer.cornerRadius = 10
-        buttonDeleteFirstToken.layer.borderColor = R.color.buttonColor()?.cgColor
-        buttonDeleteFirstToken.backgroundColor = .clear
-        buttonDeleteFirstToken.layer.borderWidth = 1
-        buttonDeleteFirstToken.setTitle(R.string.localizable.alert_delete_first_token(), for: .normal)
-        buttonDeleteFirstToken.setTitleColor(R.color.buttonColor(), for: .normal)
-        buttonDeleteFirstToken.setTitleColor(R.color.secondary(), for: .selected)
-        buttonDeleteFirstToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-        buttonDeleteFirstToken.addTarget(self, action: #selector(onbuttonDeleteFirstToken), for: .touchUpInside)
-        
-        
-        let buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 104, width: deleteTokenAlert.view.frame.width*0.6, height: 40))
-        buttonDeleteSecondToken.layer.cornerRadius = 10
-        buttonDeleteSecondToken.layer.borderColor = R.color.buttonColor()?.cgColor
-        buttonDeleteSecondToken.setTitleColor(R.color.buttonColor(), for: .normal)
-        buttonDeleteSecondToken.setTitleColor(R.color.secondary(), for: .selected)
-        buttonDeleteSecondToken.backgroundColor = .clear
-        buttonDeleteSecondToken.layer.borderWidth = 1
-        buttonDeleteSecondToken.setTitle(
-            R.string.localizable.alert_delete_second_token(), for: .normal)
-        buttonDeleteSecondToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-        buttonDeleteSecondToken.addTarget(self, action: #selector(onbuttonDeleteSecondToken), for: .touchUpInside)
-        
-
-        customView.addSubview(buttonDeleteFirstToken)
-        customView.addSubview(buttonDeleteSecondToken)
+        customView.addSubview(buttonDeleteFirstToken!)
+        customView.addSubview(buttonDeleteSecondToken!)
         
         let attributedString = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
@@ -125,11 +126,27 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     @objc func onbuttonDeleteFirstToken() {
-        
+        if !(buttonDeleteFirstToken?.isSelected)! {
+            buttonDeleteFirstToken?.isSelected = true
+            buttonDeleteFirstToken?.layer.borderColor = R.color.secondary()?.cgColor
+        }
+        else {
+            buttonDeleteFirstToken?.isSelected = false
+            
+            buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
+        }
     }
     
     @objc func onbuttonDeleteSecondToken() {
-        
+        if !(buttonDeleteSecondToken?.isSelected)! {
+            buttonDeleteSecondToken?.isSelected = true
+            buttonDeleteSecondToken?.layer.borderColor = R.color.secondary()?.cgColor
+        }
+        else {
+            buttonDeleteSecondToken?.isSelected = false
+            buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
+            
+        }
     }
     
     
