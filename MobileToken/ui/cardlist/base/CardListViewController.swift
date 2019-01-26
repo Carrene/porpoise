@@ -60,12 +60,38 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteTokenAlert() {
+        let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
+        let margin:CGFloat = 10.0
+        let rect = CGRect(x: margin, y: margin, width: 300, height: 310)
+        let customView = UIView(frame: rect)
+        
+        let buttonDeleteFirstToken = UIButton(frame: CGRect(x: 40, y: 60, width: 295, height: 40))
+        buttonDeleteFirstToken.layer.cornerRadius = 10
+        buttonDeleteFirstToken.layer.borderColor = R.color.buttonColor()?.cgColor
+        buttonDeleteFirstToken.backgroundColor = .clear
+        buttonDeleteFirstToken.layer.borderWidth = 1
+        buttonDeleteFirstToken.setTitle("حذف رمز اول کارت", for: .normal)
+        buttonDeleteFirstToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+        
+        let buttonDeleteSecondToken = UIButton(frame: CGRect(x: 40, y: 114, width: 295, height: 40))
+        buttonDeleteSecondToken.layer.cornerRadius = 10
+        buttonDeleteSecondToken.layer.borderColor = R.color.buttonColor()?.cgColor
+        buttonDeleteSecondToken.backgroundColor = .clear
+        buttonDeleteSecondToken.layer.borderWidth = 1
+        buttonDeleteSecondToken.setTitle("حذف رمز دوم کارت,", for: .normal)
+        buttonDeleteSecondToken.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+        
+        customView.addSubview(buttonDeleteFirstToken)
+        customView.addSubview(buttonDeleteSecondToken)
+        
+        
+        
         let attributedString = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
             ])
-        let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
         
+        deleteTokenAlert.view.addSubview(customView)
         deleteTokenAlert.setValue(attributedString, forKey: "attributedMessage")
         
         let deleteSecondTokenAction = UIAlertAction(title: R.string.localizable.alert_delete_second_token() , style: .default , handler: { alert -> Void in
@@ -75,21 +101,29 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let deleteFirstTokenAction = UIAlertAction(title: R.string.localizable.alert_delete_first_token() , style: .default , handler: { alert -> Void in
             
         })
+        let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { (action : UIAlertAction!) -> Void in })
         
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .destructive, handler: {
             (action : UIAlertAction!) -> Void in })
         
-    
-        deleteTokenAlert.addAction(deleteFirstTokenAction)
-        deleteTokenAlert.addAction(deleteSecondTokenAction)
+        let height:NSLayoutConstraint = NSLayoutConstraint(item: deleteTokenAlert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.30)
+        deleteTokenAlert.view.addConstraint(height)
+        
+        let width:NSLayoutConstraint = NSLayoutConstraint(item: deleteTokenAlert.view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.width * 0.90)
+        deleteTokenAlert.view.addConstraint(width)
+        
+        deleteTokenAlert.addAction(saveAction)
         deleteTokenAlert.addAction(cancelAction)
         
-        self.present(deleteTokenAlert, animated: true, completion: nil)
-        
+        DispatchQueue.main.async {
+            self.present(deleteTokenAlert, animated: true, completion:{})
+        }
         let subview = (deleteTokenAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
     }
+    
+    
     
     func editCardAlert() {
         let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
