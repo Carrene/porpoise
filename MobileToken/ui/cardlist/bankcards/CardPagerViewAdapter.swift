@@ -57,7 +57,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             }
             cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
-
+            cell.set(card: bank.cardList[index-1])
             return cell
         }
     }
