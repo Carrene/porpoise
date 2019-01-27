@@ -74,6 +74,7 @@
 		AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AC57D76421FDA2B500DFDD33 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
 		AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */; };
+		AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
@@ -253,6 +254,7 @@
 		AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
 		AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		AC57D76921FDCDD300DFDD33 /* answer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = answer.html; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 		AC57D76621FDCBED00DFDD33 /* questions */ = {
 			isa = PBXGroup;
 			children = (
+				AC57D76921FDCDD300DFDD33 /* answer.html */,
 				AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */,
 			);
 			path = questions;
@@ -1389,6 +1392,7 @@
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
 				AC353B1C21BFCB5300B80412 /* security.gif in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
+				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
 				AC16D72821CA35CA0094FBED /* PasswordHintTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,

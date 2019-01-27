@@ -62,7 +62,7 @@
         <!--سوال-->
         <scene sceneID="LCb-3J-mgu">
             <objects>
-                <viewController id="Mzz-ZW-1A0" sceneMemberID="viewController">
+                <viewController id="Mzz-ZW-1A0" customClass="QuestionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dYg-kU-BCv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +91,9 @@
                             <color key="tintColor" name="eyeCatching"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="X5A-17-3VW" id="yi8-JZ-eNq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9u-qC-MxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

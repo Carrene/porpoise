@@ -4,6 +4,7 @@ class HelpViewController: BaseViewController {
    
     @IBOutlet var tableView: UITableView!
     private var adapter : HelpTableViewAdapter?
+    private var dataSource = [R.string.localizable.help_add_bank(),R.string.localizable.help_add_card(),R.string.localizable.help_edit_cardName(),R.string.localizable.help_delete_card(),R.string.localizable.help_get_token(),R.string.localizable.help_add_token(),R.string.localizable.help_change_token(),R.string.localizable.help_custom_token(),R.string.localizable.help_copy_token(),R.string.localizable.help_delete_token(),R.string.localizable.help_edit_phone()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class HelpViewController: BaseViewController {
         //adapter!.setDelegate(settingTableAdapterProtocol: self)
         tableView.delegate = adapter
         tableView.dataSource = adapter
+        self.adapter?.setDataSource(dataSource: self.dataSource)
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = R.color.primary()
         tableView.reloadData()
