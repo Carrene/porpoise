@@ -30,6 +30,7 @@ class HelpTableViewAdapter : NSObject,UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseHelpCell.identifier, for: indexPath) as! HelpTableViewCell
         cell.textLabel?.text = dataSource![indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
     

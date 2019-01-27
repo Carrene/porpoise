@@ -8,14 +8,14 @@ class QuestionViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var url = Bundle.main.url(forResource: "answer", withExtension: "html")
-        let components = NSURLComponents(string: "#q5")
-        //url?.appendPathComponent(components)
-        //url = url?.appendingPathComponent("#"+"q5", isDirectory: true)
-        print(url!)
+        let url = Bundle.main.url(forResource: "answer", withExtension: "html")
         let request = URLRequest(url: url!)
         webView.load(request)
+        //webView.evaluateJavaScript("window.location.hash='q5'")
+
+
     }
+    
     
     func setIndex(index:Int) {
         self.index = index
@@ -28,6 +28,9 @@ class QuestionViewController: BaseViewController {
     func initListeners() {
         
     }
+    
+    
+    
     
 
 }
