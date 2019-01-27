@@ -94,13 +94,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         customView.addSubview(buttonDeleteFirstToken!)
         customView.addSubview(buttonDeleteSecondToken!)
         
-        let attributedString = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
+        let labelTitle = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
             ])
         
         deleteTokenAlert.view.addSubview(customView)
-        deleteTokenAlert.setValue(attributedString, forKey: "attributedMessage")
+        deleteTokenAlert.setValue(labelTitle, forKey: "attributedMessage")
         
         let saveAction = UIAlertAction(title: R.string.localizable.ash_delete_token() , style: .default, handler: { (action : UIAlertAction!) -> Void in })
       
@@ -120,9 +120,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         DispatchQueue.main.async {
             self.present(deleteTokenAlert, animated: true, completion:{})
         }
+        
         let subview = (deleteTokenAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
+        
     }
     
     @objc func onbuttonDeleteFirstToken() {
