@@ -66,7 +66,24 @@
                     <view key="view" contentMode="scaleToFill" id="dYg-kU-BCv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5A-17-3VW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <color key="tintColor" name="eyeCatching"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X5A-17-3VW" firstAttribute="centerX" secondItem="kVc-o6-wgQ" secondAttribute="centerX" id="4pt-NR-Hiy"/>
+                            <constraint firstItem="X5A-17-3VW" firstAttribute="width" secondItem="kVc-o6-wgQ" secondAttribute="width" id="GMP-fB-LoB"/>
+                            <constraint firstItem="X5A-17-3VW" firstAttribute="height" secondItem="kVc-o6-wgQ" secondAttribute="height" id="T8t-j1-DSW"/>
+                            <constraint firstItem="X5A-17-3VW" firstAttribute="centerY" secondItem="kVc-o6-wgQ" secondAttribute="centerY" id="bya-Am-Dt1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kVc-o6-wgQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="سوال" id="RRO-NL-7xm">
