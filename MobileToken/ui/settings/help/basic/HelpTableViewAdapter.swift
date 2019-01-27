@@ -2,17 +2,21 @@ import Foundation
 import UIKit
 
 protocol HelpTableAdapterProtocol {
-    func selectedRow()
+    func selectedRow(index:Int)
 }
 
 class HelpTableViewAdapter : NSObject,UITableViewDelegate,UITableViewDataSource {
     
     private var dataSource : [String]?
-    
     private var sender:HelpViewController?
+    private var helpAdapterProtocol:HelpTableAdapterProtocol?
     
     func setDataSource(dataSource:[String]) {
         self.dataSource = dataSource
+    }
+    
+    func setDelegate(delegate:HelpTableAdapterProtocol) {
+        self.helpAdapterProtocol = delegate
     }
     
     init(sender:HelpViewController) {
@@ -30,7 +34,7 @@ class HelpTableViewAdapter : NSObject,UITableViewDelegate,UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.helpAdapterProtocol?.selectedRow(index: indexPath.row)
     }
     
     

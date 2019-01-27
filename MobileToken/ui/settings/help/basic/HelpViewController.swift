@@ -1,7 +1,7 @@
 import UIKit
 
-class HelpViewController: BaseViewController {
-   
+class HelpViewController: BaseViewController,HelpTableAdapterProtocol {
+    
     @IBOutlet var tableView: UITableView!
     private var adapter : HelpTableViewAdapter?
     private var dataSource = [R.string.localizable.help_add_bank(),R.string.localizable.help_add_card(),R.string.localizable.help_edit_cardName(),R.string.localizable.help_delete_card(),R.string.localizable.help_get_token(),R.string.localizable.help_add_token(),R.string.localizable.help_change_token(),R.string.localizable.help_custom_token(),R.string.localizable.help_copy_token(),R.string.localizable.help_delete_token(),R.string.localizable.help_edit_phone()]
@@ -22,8 +22,6 @@ class HelpViewController: BaseViewController {
     }
     
     func initTableView() {
-//        tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
-//        tableView?.register(UINib(nibName:R.nib.authenticationTypeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier)
         self.adapter = HelpTableViewAdapter(sender: self)
         //adapter!.setDelegate(settingTableAdapterProtocol: self)
         tableView.delegate = adapter
@@ -33,5 +31,11 @@ class HelpViewController: BaseViewController {
         tableView.backgroundColor = R.color.primary()
         tableView.reloadData()
     }
+    
+    func selectedRow(index:Int) {
+        
+    }
+    
+    
     
 }
