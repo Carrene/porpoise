@@ -69,6 +69,7 @@
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
+		AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
@@ -243,6 +244,7 @@
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		AC54E26921FD94C0008764B8 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
@@ -524,6 +526,14 @@
 				AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		AC54E26821FD9480008764B8 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				AC54E26921FD94C0008764B8 /* Help.storyboard */,
+			);
+			path = help;
 			sourceTree = "<group>";
 		};
 		AC5E6BDA21E62D1000A9D4C3 /* alert */ = {
@@ -907,11 +917,12 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				AC4C4DBD21CE7ADC00B15B90 /* cardlist */,
 				AC353AFF21BEB0A900B80412 /* applicationlock */,
 				ACAAD85121AC2C95007266F4 /* authentication */,
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
+				AC4C4DBD21CE7ADC00B15B90 /* cardlist */,
+				AC54E26821FD9480008764B8 /* help */,
 				AC46685521BC050900A0B5BA /* importtoken */,
 				AC353B0521BEB89600B80412 /* latestupdates */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
@@ -1333,6 +1344,7 @@
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
+				AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AC16D73C21CA8B780094FBED /* AuthenticationDefinition.storyboard in Resources */,
