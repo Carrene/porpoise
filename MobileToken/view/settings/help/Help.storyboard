@@ -14,7 +14,7 @@
         <!--راهنمای برنامه-->
         <scene sceneID="jYV-Yn-i0U">
             <objects>
-                <viewController storyboardIdentifier="helpNavigation" id="53v-M4-UbE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="helpNavigation" id="53v-M4-UbE" customClass="HelpViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpi-us-T4v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="eyeCatching"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseHelpCell" id="S5x-U6-kE0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseHelpCell" id="S5x-U6-kE0" customClass="HelpTableViewCell" customModule="MobileToken" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S5x-U6-kE0" id="Dax-P3-UKy">
@@ -50,6 +50,9 @@
                             <color key="tintColor" name="eyeCatching"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0gV-mi-0J4" id="qYa-AI-Khe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mas-Lk-XaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
