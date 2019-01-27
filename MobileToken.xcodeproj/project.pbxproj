@@ -674,6 +674,7 @@
 		ACAAD85B21AE7AB4007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				AC54E26821FD9480008764B8 /* help */,
 				AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */,
 				AC75A4FA21B270E3009441C4 /* basic */,
 			);
@@ -922,7 +923,6 @@
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
 				AC4C4DBD21CE7ADC00B15B90 /* cardlist */,
-				AC54E26821FD9480008764B8 /* help */,
 				AC46685521BC050900A0B5BA /* importtoken */,
 				AC353B0521BEB89600B80412 /* latestupdates */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
