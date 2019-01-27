@@ -545,11 +545,19 @@
 		AC57D75E21FD9F4000DFDD33 /* help */ = {
 			isa = PBXGroup;
 			children = (
+				AC57D76521FDCBCE00DFDD33 /* basic */,
+			);
+			path = help;
+			sourceTree = "<group>";
+		};
+		AC57D76521FDCBCE00DFDD33 /* basic */ = {
+			isa = PBXGroup;
+			children = (
 				AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */,
 				AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */,
 				AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */,
 			);
-			path = help;
+			path = basic;
 			sourceTree = "<group>";
 		};
 		AC5E6BDA21E62D1000A9D4C3 /* alert */ = {

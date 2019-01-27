@@ -52,7 +52,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0gV-mi-0J4" id="qYa-AI-Khe"/>
-                        <segue destination="Mzz-ZW-1A0" kind="show" id="GTv-P8-yA8"/>
+                        <segue destination="Mzz-ZW-1A0" kind="show" identifier="helpToWebView" id="GTv-P8-yA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mas-Lk-XaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
