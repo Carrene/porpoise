@@ -52,11 +52,32 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0gV-mi-0J4" id="qYa-AI-Khe"/>
+                        <segue destination="Mzz-ZW-1A0" kind="show" id="GTv-P8-yA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mas-Lk-XaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-674" y="107"/>
+        </scene>
+        <!--سوال-->
+        <scene sceneID="LCb-3J-mgu">
+            <objects>
+                <viewController id="Mzz-ZW-1A0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dYg-kU-BCv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kVc-o6-wgQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="سوال" id="RRO-NL-7xm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="i3g-dg-yql">
+                            <color key="tintColor" name="eyeCatching"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9u-qC-MxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="107"/>
         </scene>
     </scenes>
     <resources>
