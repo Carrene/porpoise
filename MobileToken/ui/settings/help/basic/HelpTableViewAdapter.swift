@@ -47,9 +47,4 @@ class HelpTableViewAdapter : NSObject,UITableViewDelegate,UITableViewDataSource 
     
     
     
-    
-    
-    
-    
-    
 }
