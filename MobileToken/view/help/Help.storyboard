@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YeW-Be-Dkl">
             <objects>
-                <navigationController id="DDu-XU-Rnb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="helpNavigation" id="DDu-XU-Rnb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tp7-an-LVy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zp-3l-e67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="149"/>
+            <point key="canvasLocation" x="-844" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jYV-Yn-i0U">
