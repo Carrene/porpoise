@@ -11,7 +11,6 @@ class HelpViewController: BaseViewController,HelpTableAdapterProtocol {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
-        
     }
     
     func initUIComponents() {
@@ -28,14 +27,16 @@ class HelpViewController: BaseViewController,HelpTableAdapterProtocol {
         tableView.delegate = adapter
         tableView.dataSource = adapter
         self.adapter?.setDataSource(dataSource: self.dataSource)
+        
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = R.color.primary()
         tableView.reloadData()
     }
     
     func selectedRow(index:Int) {
-        performSegue(withIdentifier: R.segue.helpViewController.helpToWebView, sender: self)
         self.index = index
+        performSegue(withIdentifier: R.segue.helpViewController.helpToWebView, sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
