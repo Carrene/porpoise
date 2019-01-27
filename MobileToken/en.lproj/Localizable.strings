@@ -17,6 +17,7 @@
 "sb_wrong_phone" = "شماره ای که وارد کردید اشتباه است";
 "sb_successfully_done" = "با موفقیت انجام شد";
 "sb_server_error" = "خطای سرور";
+"sb_password_copied" = "پسورد کپی شد";
 
 
 //passWordHint

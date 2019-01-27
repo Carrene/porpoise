@@ -57,6 +57,13 @@ class OtpViewDesignable: UIView {
         btCopy.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         vComponent.layer.borderWidth = 0.5
         vComponent.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.initCopy))
+        contentView.addGestureRecognizer(tap)
+    }
+    
+    @objc func initCopy() {
+        UIPasteboard.general.string = lbOtp.text
+        SnackBarHelper.init(message: R.string.localizable.sb_password_copied(), color: R.color.primaryLight()!, duration: .short).show()
     }
 }
 
