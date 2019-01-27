@@ -73,6 +73,7 @@
 		AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
 		AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AC57D76421FDA2B500DFDD33 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
+		AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
@@ -251,6 +252,7 @@
 		AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewAdapter.swift; sourceTree = "<group>"; };
 		AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
+		AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 		AC57D75E21FD9F4000DFDD33 /* help */ = {
 			isa = PBXGroup;
 			children = (
+				AC57D76621FDCBED00DFDD33 /* questions */,
 				AC57D76521FDCBCE00DFDD33 /* basic */,
 			);
 			path = help;
@@ -558,6 +561,14 @@
 				AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */,
 			);
 			path = basic;
+			sourceTree = "<group>";
+		};
+		AC57D76621FDCBED00DFDD33 /* questions */ = {
+			isa = PBXGroup;
+			children = (
+				AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */,
+			);
+			path = questions;
 			sourceTree = "<group>";
 		};
 		AC5E6BDA21E62D1000A9D4C3 /* alert */ = {
@@ -1582,6 +1593,7 @@
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
 				AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */,
 				AC16D72421CA33410094FBED /* PasswordHintTableAdapter.swift in Sources */,
+				AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */,
 				ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */,
 				ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */,
 				AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */,
