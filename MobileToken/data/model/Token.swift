@@ -32,7 +32,7 @@ class Token: Object, Mappable, NSCopying{
     var name: String?
     var hashType: HashType?
     var version: Int?
-    var timeInterval: Int?
+    var timeInterval: Float?
     var otpLength: Int?
     var bankId: Int?
     var bank: Bank?

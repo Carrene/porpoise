@@ -40,16 +40,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
                 token.bank = card.bank
                 if token.parse() {
                     // mask card
+                    iniOtp(token: token)
                 }
-//                switch token.cryptoModuleId {
-//                case Token.CryptoModuleId.one?:
-//                    viewFirstOtp.subviews.forEach{ view in
-//                        view.removeFromSuperview()
-//                    }
-//                case Token.CryptoModuleId.two?:
-//                    break
-//                default: break
-//                }
                 
             }
         } else {
@@ -58,13 +50,54 @@ class BankCardPagerViewCell: FSPagerViewCell {
             
     }
     
+    func iniOtp(token: Token) {
+        let view = getOtpView()
+        initOtpView(token: token, view: view)
+        view.lbOtp.text = generateOtp(token: token)
+        //    initProgressbar(progressBar, token);
+    }
+    
+    
+    func initOtpView(token: Token, view: OtpViewDesignable) {
+        if token.cryptoModuleId == Token.CryptoModuleId.one {
+            viewFirstOtp.subviews.forEach { view in
+                view.removeFromSuperview()
+            }
+            view.lbPassword.text = R.string.localizable.everywhere_firstpassword()
+            viewFirstOtp.addSubview(view)
+                
+        } else if  token.cryptoModuleId == Token.CryptoModuleId.two{
+            viewFirstOtp.subviews.forEach { view in
+                view.removeFromSuperview()
+            }
+            view.lbPassword.text = R.string.localizable.everywhere_secondpassword()
+            viewSecondOtp.addSubview(view)
+        }
+    }
+    
+   
     func getOtpView() -> OtpViewDesignable {
         let otpView = OtpViewDesignable()
-        let vRow = otpView.loadViewFromNib()
-        vRow?.frame.size = viewFirstOtp.frame.size
-        
-        return vRow! as! OtpViewDesignable
+        otpView.frame.size =  CGSize(width: viewFirstOtp.layer.frame.width-20, height: 40)
+        return otpView
     }
+    
+    func generateOtp(token: Token) -> String{
+        var otp = token.generateTotp()
+        otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        return otp
+    }
+    
+    func initProgressBar(view: OtpViewDesignable, token: Token) {
+        let calendar = Calendar.current
+        let time=calendar.dateComponents([.hour,.minute,.second], from: Date())
+        let second = Float(time.second!)
+        view.vProgress.progress = (Float(second) - token.timeInterval!) / 60
+        let diff = token.timeInterval! - second
+        let timer: Timer!
+//        timer = Timer.scheduledTimer(timeInterval: <#T##TimeInterval#>, target: <#T##Any#>, selector: <#T##Selector#>, userInfo: <#T##Any?#>, repeats: <#T##Bool#>)
+    }
+    
     
     func addOtpLayout(token: Token) {
         
