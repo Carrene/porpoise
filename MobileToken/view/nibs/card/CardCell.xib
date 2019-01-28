@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -36,10 +36,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pN3-TI-KqC" userLabel="imgAddCard">
-                    <rect key="frame" x="0.0" y="0.0" width="335" height="140"/>
+                    <rect key="frame" x="0.0" y="44" width="335" height="62"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-9I-6w2" userLabel="vCard">
-                    <rect key="frame" x="0.0" y="0.0" width="335" height="140"/>
+                    <rect key="frame" x="0.0" y="44" width="335" height="62"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
                             <rect key="frame" x="20" y="10" width="40" height="40"/>
@@ -55,13 +55,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbTitle">
-                            <rect key="frame" x="167.5" y="30" width="0.0" height="0.0"/>
+                            <rect key="frame" x="167.66666666666666" y="30" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="14"/>
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-WO-q3H" userLabel="buttonActionSheet">
-                            <rect key="frame" x="275" y="100" width="40" height="40"/>
+                            <rect key="frame" x="275" y="22" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="ZVS-CB-BNf"/>
                                 <constraint firstAttribute="height" constant="40" id="hzH-0N-1vV"/>
@@ -72,25 +72,25 @@
                             <rect key="frame" x="20" y="80" width="295" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-fa-mEH" userLabel="lb1">
-                                    <rect key="frame" x="0.0" y="0.0" width="66.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-aM-HWX" userLabel="lb2">
-                                    <rect key="frame" x="76.5" y="0.0" width="66" height="25"/>
+                                    <rect key="frame" x="76.333333333333343" y="0.0" width="66.333333333333343" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-26-kOf" userLabel="lb3">
-                                    <rect key="frame" x="152.5" y="0.0" width="66.5" height="25"/>
+                                    <rect key="frame" x="152.66666666666666" y="0.0" width="66" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-SU-IKq" userLabel="lb4">
-                                    <rect key="frame" x="229" y="0.0" width="66" height="25"/>
+                                    <rect key="frame" x="228.66666666666666" y="0.0" width="66.333333333333343" height="25"/>
                                     <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
@@ -101,14 +101,14 @@
                             </constraints>
                         </stackView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-qG-9Rd" userLabel="imageAdd">
-                            <rect key="frame" x="157.5" y="110" width="20" height="20"/>
+                            <rect key="frame" x="157.66666666666666" y="32" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="ASj-pg-JG7"/>
                                 <constraint firstAttribute="height" constant="20" id="med-bv-eln"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دریافت رمزهای کارت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-1Y-Zmx">
-                            <rect key="frame" x="103" y="110" width="129.5" height="20"/>
+                            <rect key="frame" x="103.00000000000001" y="32" width="129.33333333333337" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="y4N-Uk-Jdp"/>
                             </constraints>
