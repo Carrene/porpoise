@@ -8,7 +8,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     @IBOutlet var viewBankCard: UIView!
     @IBOutlet var viewFirstOtp: UIView!
     @IBOutlet var viewSecondOtp: UIView!
-    
+    var card: Card?
     override func awakeFromNib() {
         super.awakeFromNib()
         vCard.layer.cornerRadius = 10
@@ -26,6 +26,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     func initDefaultView() {
         let viewFirstRow = AddPasswordViewDesignable()
         viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width-20, height: 40)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
         viewFirstOtp.addSubview(viewFirstRow)
         
         let viewSecondRpw = AddPasswordViewDesignable()
@@ -34,6 +35,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     }
     
     func set(card: Card) {
+        self.card = card
         let tokenList = card.TokenList
         if tokenList.count > 0 {
             for token in card.TokenList {
@@ -54,7 +56,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let view = getOtpView()
         initOtpView(token: token, view: view)
         view.lbOtp.text = generateOtp(token: token)
-        //    initProgressbar(progressBar, token);
+        initProgressBar(view: view, token: token)
     }
     
     
@@ -92,10 +94,29 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let calendar = Calendar.current
         let time=calendar.dateComponents([.hour,.minute,.second], from: Date())
         let second = Float(time.second!)
-        view.vProgress.progress = (Float(second) - token.timeInterval!) / 60
-        let diff = token.timeInterval! - second
-        let timer: Timer!
-//        timer = Timer.scheduledTimer(timeInterval: <#T##TimeInterval#>, target: <#T##Any#>, selector: <#T##Selector#>, userInfo: <#T##Any?#>, repeats: <#T##Bool#>)
+//        view.vProgress.progress = (Float(second) % (token.timeInterval!)) / token.timeInterval!
+        let currentProgress = Float(second).truncatingRemainder(dividingBy: (token.timeInterval!)) / token.timeInterval!
+        view.vProgress.progress = currentProgress
+        let diff = token.timeInterval! - currentProgress
+        Timer.scheduledTimer(timeInterval: TimeInterval(1/token.timeInterval!), target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
+    }
+    
+    @objc func timerHandler(timer: Timer) {
+        let info = timer.userInfo as! (token: Token,view: OtpViewDesignable, diff: Float)
+        let view = info.view
+        let token = info.token
+        let diff = info.diff
+        
+        view.vProgress.progress =   view.vProgress.progress + (1/token.timeInterval!)
+        if view.vProgress.progress >= 1 {
+            timer.invalidate()
+            iniOtp(token: token)
+        }
+    }
+    
+    
+    @objc func addOtp(sender: UIView) {
+        
     }
     
     

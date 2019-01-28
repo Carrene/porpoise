@@ -95,7 +95,7 @@ class Token: Object, Mappable, NSCopying{
                     return false
                 }
                 self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
-                self.timeInterval = Int(tokenPacketDecryptedWithoutChecksum[7])
+                self.timeInterval = Float(tokenPacketDecryptedWithoutChecksum[7])
                 self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
                 if self.bankId != bank!.id {
                     return false
@@ -140,7 +140,7 @@ class Token: Object, Mappable, NSCopying{
     }
     
     func generateTotp() -> String {
-        let otp = Totp(secret: seed!, timeInterval: timeInterval!, otpLength: otpLength!, hashType: hashType!)
+        let otp = Totp(secret: seed!, timeInterval: Int(timeInterval!), otpLength: otpLength!, hashType: hashType!)
         return otp.generateTotp() ?? "Error"
     }
 }
