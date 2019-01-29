@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : R.color.buttonColor()!,NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!]
         // Override point for customization after application launch.
         IQKeyboardManager.shared().isEnabled = true
+        print("\(String(describing: RealmConfiguration.sensitiveDataConfiguration().fileURL))")
         return true
     }
 

@@ -2,6 +2,10 @@
 import UIKit
 import FSPagerView
 
+protocol BankCardPagerViewDelegate {
+    func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
+}
+
 class BankCardPagerViewCell: FSPagerViewCell {
     
     @IBOutlet weak var vCard: CardCellXibView!
@@ -9,6 +13,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
     @IBOutlet var viewFirstOtp: UIView!
     @IBOutlet var viewSecondOtp: UIView!
     var card: Card?
+    var bankCardPagerViewDelegate: BankCardPagerViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         vCard.layer.cornerRadius = 10
@@ -26,12 +32,18 @@ class BankCardPagerViewCell: FSPagerViewCell {
     func initDefaultView() {
         let viewFirstRow = AddPasswordViewDesignable()
         viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width-20, height: 40)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
+        let tapImportFirstPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
+        tapImportFirstPass.cryptoModuleId = Token.CryptoModuleId.one
+        viewFirstRow.addGestureRecognizer(tapImportFirstPass)
         viewFirstOtp.addSubview(viewFirstRow)
         
-        let viewSecondRpw = AddPasswordViewDesignable()
-        viewSecondRpw.frame.size = CGSize(width: viewSecondOtp.layer.frame.width-20, height: 40)
-        viewSecondOtp.addSubview(viewSecondRpw)
+        let viewSecondRow = AddPasswordViewDesignable()
+        viewSecondRow.frame.size = CGSize(width: viewSecondOtp.layer.frame.width-20, height: 40)
+        
+        let tapImportSecondPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
+        tapImportSecondPass.cryptoModuleId = Token.CryptoModuleId.two
+        viewSecondRow.addGestureRecognizer(tapImportSecondPass)
+        viewSecondOtp.addSubview(viewSecondRow)
     }
     
     func set(card: Card) {
@@ -69,7 +81,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
             viewFirstOtp.addSubview(view)
                 
         } else if  token.cryptoModuleId == Token.CryptoModuleId.two{
-            viewFirstOtp.subviews.forEach { view in
+            viewSecondOtp.subviews.forEach { view in
                 view.removeFromSuperview()
             }
             view.lbPassword.text = R.string.localizable.everywhere_secondpassword()
@@ -87,6 +99,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     func generateOtp(token: Token) -> String{
         var otp = token.generateTotp()
         otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        print(otp)
         return otp
     }
     
@@ -98,25 +111,26 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let currentProgress = Float(second).truncatingRemainder(dividingBy: (token.timeInterval!)) / token.timeInterval!
         view.vProgress.progress = currentProgress
         let diff = token.timeInterval! - currentProgress
-        Timer.scheduledTimer(timeInterval: TimeInterval(1/token.timeInterval!), target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
+        Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
     }
     
     @objc func timerHandler(timer: Timer) {
-        let info = timer.userInfo as! (token: Token,view: OtpViewDesignable, diff: Float)
+        let info = timer.userInfo as! (token: Token,view: OtpViewDesignable, countdownTime: Float)
         let view = info.view
         let token = info.token
-        let diff = info.diff
+        let diff = info.countdownTime
         
         view.vProgress.progress =   view.vProgress.progress + (1/token.timeInterval!)
         if view.vProgress.progress >= 1 {
             timer.invalidate()
+            view.vProgress.progress = 0
             iniOtp(token: token)
         }
     }
     
     
-    @objc func addOtp(sender: UIView) {
-        
+    @objc func addOtp(sender: ImportTokenTapGesture) {
+        self.bankCardPagerViewDelegate?.importToken(card: self.card!, cryptoModuleId: sender.cryptoModuleId!)
     }
     
     

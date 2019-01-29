@@ -29,7 +29,7 @@ class OtpViewDesignable: UIView {
         
         // Make the view stretch with containing view
         contentView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-        
+        initUIComponent()
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(contentView)
     }
@@ -41,7 +41,7 @@ class OtpViewDesignable: UIView {
        
         let nib = UINib(resource: R.nib.otpViewDesignable)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        initUIComponent()
+        
         return view
     }
     

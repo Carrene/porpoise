@@ -126,6 +126,7 @@
 		AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
 		AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
+		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
 		AFAD230221908A9700EC00CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD230121908A9600EC00CB /* R.generated.swift */; };
@@ -301,6 +302,7 @@
 		AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSansMobile.ttf; path = MobileToken/assets/fonts/IRANSansMobile.ttf; sourceTree = SOURCE_ROOT; };
 		AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Medium.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Medium.ttf"; sourceTree = SOURCE_ROOT; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
 		AFAD230121908A9600EC00CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -540,6 +542,7 @@
 			children = (
 				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
 				AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */,
+				AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */,
 			);
 			path = bankcard;
 			sourceTree = "<group>";
@@ -1229,7 +1232,7 @@
 				AFB39B482189A6A600302624 /* Sources */,
 				AFB39B492189A6A600302624 /* Frameworks */,
 				AFB39B4A2189A6A600302624 /* Resources */,
-				42661D200674783256C627B2 /* [CP] Embed Pods Frameworks */,
+				9F82A25F7A55F171F9558E22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1403,7 +1406,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		42661D200674783256C627B2 /* [CP] Embed Pods Frameworks */ = {
+		9F82A25F7A55F171F9558E22 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1521,6 +1524,7 @@
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AC16D71321CA322C0094FBED /* AuthenticationDefinitionViewController.swift in Sources */,
+				AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */,
 				AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */,
 				AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */,
 				AC16D70021CA31B70094FBED /* AuthenticationPatternContractor.swift in Sources */,

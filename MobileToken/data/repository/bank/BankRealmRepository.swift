@@ -12,15 +12,18 @@ class BankRealmRepository: BankRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[Bank]>) -> ())?) {
+        var banks = [Bank]()
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-        let bankRealmResult = realm.objects(Bank.self)       
-        for bank in bankRealmResult {
-            for card in bank.cardList {
-                card.bank = (card.owner.first!.copy() as! Bank)
+        let bankRealmResult = realm.objects(Bank.self)
+        for j in  0 ..< bankRealmResult.count {
+            let bank = bankRealmResult[j].detached()
+            for i in 0 ..< bank.cardList.count {
+                bank.cardList[i].bank = bank
             }
+            banks.append(bank)
         }
-        
-        onDone?(RepositoryResponse(value: bankRealmResult.map{$0.copy() as! Bank}))
+   
+        onDone?(RepositoryResponse(value: banks))
     }
     
     func update(_ bank: Bank, onDone: ((RepositoryResponse<Bank>) -> ())?) {
@@ -34,5 +37,69 @@ class BankRealmRepository: BankRepositoryProtocol {
         catch {
             onDone?(RepositoryResponse(error: error))
         }
+    }
+}
+
+
+
+
+
+protocol DetachableObject: AnyObject {
+    func detached() -> Self
+}
+
+extension Object: DetachableObject {
+    
+    func detached() -> Self {
+        let detached = type(of: self).init()
+        for property in objectSchema.properties {
+            guard let value = value(forKey: property.name) else { continue }
+            
+            if property.isArray == true {
+                //Realm List property support
+                let detachable = value as? DetachableObject
+                detached.setValue(detachable?.detached(), forKey: property.name)
+            } else if property.type == .object {
+                //Realm Object property support
+                let detachable = value as? DetachableObject
+                detached.setValue(detachable?.detached(), forKey: property.name)
+            } else {
+                detached.setValue(value, forKey: property.name)
+            }
+        }
+        return detached
+    }
+}
+
+extension List: DetachableObject {
+    func detached() -> List<Element> {
+        let result = List<Element>()
+        
+        forEach {
+            if let detachable = $0 as? DetachableObject {
+                let detached = detachable.detached() as! Element
+                result.append(detached)
+            } else {
+                result.append($0) //Primtives are pass by value; don't need to recreate
+            }
+        }
+        
+        return result
+    }
+    
+    func toArray() -> [Element] {
+        return Array(self.detached())
+    }
+}
+
+extension Results {
+    func toArray() -> [Element] {
+        let result = List<Element>()
+        
+        forEach {
+            result.append($0)
+        }
+        
+        return Array(result.detached())
     }
 }

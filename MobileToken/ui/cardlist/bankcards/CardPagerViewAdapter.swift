@@ -6,9 +6,10 @@ protocol CardPagerViewDelegate {
     func selectedCard(card: Card)
     func addCard(cardName:String,selectedBank:Bank)
     func actionButtonClicked()
+    func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
 }
 
-class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol,CardCellXibProtocol {
+class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol,CardCellXibProtocol , BankCardPagerViewDelegate{
     
     var cardPagerViewDelegate: CardPagerViewDelegate?
     var selectedIndex = 0
@@ -58,6 +59,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             cell.set(card: bank.cardList[index-1])
+            cell.bankCardPagerViewDelegate = self
             return cell
         }
     }
@@ -82,5 +84,10 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
         cardPagerViewDelegate?.selectedCard(card:bank.cardList[index-1])
         }
     }
+    
+    func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId) {
+        self.cardPagerViewDelegate?.importToken(card: card, cryptoModuleId: cryptoModuleId)
+    }
+    
     
 }

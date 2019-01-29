@@ -57,7 +57,9 @@ class Bank: Object, Mappable, NSCopying{
         set { LogoResourceId=newValue }
     }
     
-    
+    override static func ignoredProperties() -> [String] {
+        return [  "LogoResourceId"]
+    }
     required convenience init?(map: Map) {
         self.init()
     }

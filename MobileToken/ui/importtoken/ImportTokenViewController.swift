@@ -10,6 +10,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     @IBOutlet var labelSmsCode: UILabel!
     @IBOutlet var buttonAddCode: UIButton!
     var card: Card?
+    var cryptoModuleId: Token.CryptoModuleId?
     var presenter: ImportTokenPresenterProtokol?
     
     override func viewDidLoad() {
@@ -19,18 +20,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     
     override func viewDidAppear(_ animated: Bool) {
         presenter = ImportTokenPresenter(view: self)
-        presenter?.getManagedCard(id: (card?.id)!)
     }
     
-    func set(card: Card) {
+    func set(card: Card, cryptoModuleId: Token.CryptoModuleId) {
         self.card = card
-        
-    }
-    
-    func setManagedCard(card: Card) {
-        self.card = card
-        
-        
+        self.cryptoModuleId = cryptoModuleId
     }
     
     func initUIComponents() {
@@ -107,7 +101,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
             UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
         } else {
             let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
-            presenter?.importToken(tokenPacket: tokenPacket, cryptoModuleId: .one, card: card!)
+            presenter?.importToken(tokenPacket: tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
         }
     }
     

@@ -1,37 +1,37 @@
 PODS:
   - Alamofire (4.7.3)
-  - AlamofireObjectMapper (5.1.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 3.3)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
   - AMPopTip (3.5.0)
-  - CountryPickerView (2.2.0)
-  - CryptoSwift (0.13.0)
+  - CountryPickerView (2.2.1)
+  - CryptoSwift (0.13.1)
   - DeviceKit (1.9.0)
-  - FSPagerView (0.8.1)
+  - FSPagerView (0.8.2)
   - HUIPatternLockView-Swift (2.0.1)
   - IQKeyboardManager (6.0.6)
   - oath (0.4.0):
     - CryptoSwift (~> 0.13.0)
-  - ObjectMapper (3.3.0)
+  - ObjectMapper (3.4.2)
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
   - Onboard (2.3.3)
   - PasswordTextField (1.2.0)
-  - R.swift (5.0.0.alpha.2):
-    - R.swift.Library (~> 5.0.0.alpha.2)
-  - R.swift.Library (5.0.0.alpha.2)
-  - Realm (3.11.1):
-    - Realm/Headers (= 3.11.1)
-  - Realm/Headers (3.11.1)
-  - RealmSwift (3.11.1):
-    - Realm (= 3.11.1)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - SwiftyGif (4.2.0)
   - TTGSnackbar (1.7.5)
-  - XLActionController (4.1.0):
-    - XLActionController/Core (= 4.1.0)
-  - XLActionController/Core (4.1.0)
-  - XLActionController/Spotify (4.1.0):
+  - XLActionController (4.1.1):
+    - XLActionController/Core (= 4.1.1)
+  - XLActionController/Core (4.1.1)
+  - XLActionController/Spotify (4.1.1):
     - XLActionController/Core
 
 DEPENDENCIES:
@@ -89,26 +89,26 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   AMPopTip: 871ae0570b68fe396e714922b3f7d8ed6a36bb71
-  CountryPickerView: 77177af9744802d0a61391508b37e0a08f630871
-  CryptoSwift: 16e78bebf567bad1c87b2d58f6547f25b74c31aa
+  CountryPickerView: b21b69a1ed16df0e198b819ad897e885b19f5389
+  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
   DeviceKit: a376cb3d0dda0c27c81dcc0d2b7b8600b6802065
-  FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HUIPatternLockView-Swift: 0f72d91ff3aeb01f5cad43f6093c5361522bb472
   IQKeyboardManager: 6b4ecd3e59cf55a26133d802d4678721d7f88499
   oath: 107b59d360ec1f9f0fce270d32b1e5052a59aa3a
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
-  R.swift: 31fa1bd537fa81307815cc622122f33331f32174
-  R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
-  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
-  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SwiftyGif: a149bf84df23370592f3f075561ae02c8632a314
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
-  XLActionController: e8a8b38d3b226a69921e412e769d8483d1794064
+  XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
 PODFILE CHECKSUM: 2cc40df330cd525ce3ebcbe45b06c9bb8a4c1317
 

@@ -44,6 +44,10 @@ class Card: Object, Mappable, NSCopying{
     var owner = LinkingObjects(fromType: Bank.self, property: "cardList")
     public var bank: Bank?
     
+    override static func ignoredProperties() -> [String] {
+        return ["owner", "bank"]
+    }
+    
     required convenience init?(map: Map) {
         self.init()
     }

@@ -5,7 +5,6 @@ protocol CardListViewProtocol: class {
     func noBank()
     func reloadCardPager()
     func updateCardList(card:Card)
-    func navigateToImportToken(card: Card)
 }
 
 protocol CardListPresenterProtocol {

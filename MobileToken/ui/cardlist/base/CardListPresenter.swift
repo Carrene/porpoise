@@ -33,8 +33,8 @@ class CardListPresenter : CardListPresenterProtocol {
                 print("error")
             }
             else {
-//                self?.getBankList()
-                self!.view.navigateToImportToken(card: response.value!)
+                self?.getBankList()
+                
             }
         }
         repository.addCard(card: card, bank: bank, onDone: onDataResponse)

@@ -45,7 +45,7 @@ class Token: Object, Mappable, NSCopying{
         return "Id"
     }
     override static func ignoredProperties() -> [String] {
-        return ["secret"]
+        return ["expireDate", "cryptoModuleId", "CryptoModuleId", "seed", "name", "hashType", "version", "timeInterval", "otpLength", "bankId", "bank"]
     }
     
     convenience init(tokenPaket: String? = nil, id: String? = nil, bank: Bank? = nil, cryptoModuleId: CryptoModuleId? = nil) {
@@ -90,10 +90,11 @@ class Token: Object, Mappable, NSCopying{
                 value = UInt32(bigEndian: value)
                 //TODO: check expiredate date
                 self.expireDate = "" + "\(value)"
-                let cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
-                if let cryptoModule = self.cryptoModuleId, cryptoModule != CryptoModuleId(rawValue: cryptoModuleId){
-                    return false
-                }
+                self.cryptoModuleId = Token.CryptoModuleId(rawValue: Int(tokenPacketDecryptedWithoutChecksum[5]))
+//                let cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
+//                if let cryptoModule = self.cryptoModuleId, cryptoModule != CryptoModuleId(rawValue: cryptoModuleId){
+//                    return false
+//                }
                 self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
                 self.timeInterval = Float(tokenPacketDecryptedWithoutChecksum[7])
                 self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])

@@ -196,14 +196,15 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
     }
     
-    func navigateToImportToken(card: Card) {
-        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: card)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = (segue.destination as? ImportTokenViewController) {
-            destination.set(card: sender as! Card)
+            let info: (card: Card, cryptoModuleId: Token.CryptoModuleId) = sender as! (card: Card, cryptoModuleId: Token.CryptoModuleId)
+            destination.set(card: info.card, cryptoModuleId: info.cryptoModuleId)
         }
+    }
+    
+    func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId) {
+        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
     }
     
 }
