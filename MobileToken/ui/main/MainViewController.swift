@@ -12,14 +12,12 @@ class MainViewController: UINavigationController {
     
     override func viewDidAppear(_ animated: Bool) {
         checkIfNewUser()
-//        let vc = R.storyboard.importToken.importTokenViewController()
-//        UIApplication.shared.keyWindow?.rootViewController = vc
         initPages()
     }
-    
+   
     func initPages() {
         if authentication == nil {
-            if hasWizardShown {
+            if UserDefaults.standard.bool(forKey: "hasWizardShown") {
                 navigatoToAuthenticationDefinition()
             }
             else {
@@ -45,11 +43,12 @@ class MainViewController: UINavigationController {
     
     func intro() {
         let onIntroEnd = { [weak self] in
-            //self!.navigationController?.popViewController(animated: true)
+            
         }
         let introVC = IntroViewController.newInstance(withIntroEndAction: onIntroEnd)
         present(introVC, animated: true, completion: nil)
-        hasWizardShown = true
+        UserDefaults.standard.set(true, forKey: "hasWizardShown")
+        
     }
     
     func navigateToAuthentication() {

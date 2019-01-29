@@ -7,6 +7,7 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
     
     @IBOutlet weak var authenticationTypeContainer: UIView!
     @IBOutlet weak var scAuthenticationType: UISegmentedControl!
+    private var hasAlertShown = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,14 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
         scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
         scAuthenticationType.layer.cornerRadius = 10
         embedVCPattern()
-        alert()
+        if !UserDefaults.standard.bool(forKey: "hasAlertShown") {
+        timeZoneAlert()
+        }
     }
     
-    func alert() {
+    func timeZoneAlert() {
+        UserDefaults.standard.set(true, forKey: "hasAlertShown")
+        
         let attributedString = NSAttributedString(string: R.string.localizable.alert_set_timezone(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobile(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
