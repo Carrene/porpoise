@@ -23,7 +23,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     init(sender:SettingsViewController) {
@@ -63,11 +63,18 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            
             if settingMediator?.getAuthentication().AuthenticationType == "pattern" {
                 (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = R.string.localizable.lb_pattern()
             } else {
                 (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = R.string.localizable.lb_password()
             }
+            
+        case 2:
+            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_app_guide()
+            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
+            //cell.accessoryType = .disclosureIndicator
             
         default:
             break
@@ -89,6 +96,9 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 1 {
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToAuthenticationDefinitionSegue.identifier)
+        }
+        else if indexPath.row == 2 {
+            settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToHelp.identifier)
         }
     }
     

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n0P-EJ-7RH">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,18 +24,18 @@
             <objects>
                 <viewController storyboardIdentifier="ImportTokenViewController" id="n0P-EJ-7RH" customClass="ImportTokenViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bu9-dw-9ay">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlf-W8-eg8" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="30" y="33" width="315" height="140"/>
+                                <rect key="frame" x="30" y="33" width="260" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="SLs-O7-J4I"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-aJ-kfa" userLabel="textViewAtmCode">
-                                <rect key="frame" x="30" y="203" width="315" height="40"/>
+                                <rect key="frame" x="30" y="203" width="260" height="40"/>
                                 <color key="backgroundColor" name="primaryDark"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="klq-pZ-S29"/>
@@ -45,26 +45,26 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* به خودپرداز مربوط به کارت خود مراجعه فرمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
-                                <rect key="frame" x="30" y="248" width="315" height="19.5"/>
+                                <rect key="frame" x="30" y="248" width="260" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کد دریافتی از پیامک" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkF-dm-DBr" userLabel="textViewSmsCode">
-                                <rect key="frame" x="30" y="287" width="315" height="232"/>
+                                <rect key="frame" x="30" y="287" width="260" height="45"/>
                                 <color key="backgroundColor" name="primaryDark"/>
                                 <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* محتوای پیامک دریافتی را کپی کنید " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
-                                <rect key="frame" x="30" y="524" width="315" height="19.5"/>
+                                <rect key="frame" x="30" y="337" width="260" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.91399997470000005" green="0.91399997470000005" blue="0.91399997470000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ8-wZ-OrF" userLabel="buttonAddCode">
-                                <rect key="frame" x="30" y="599" width="315" height="48"/>
+                                <rect key="frame" x="30" y="412" width="260" height="48"/>
                                 <color key="backgroundColor" name="ayandehColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3Bb-4v-Lnc"/>
@@ -126,7 +126,7 @@
             <color red="0.83099997043609619" green="0.63099998235702515" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

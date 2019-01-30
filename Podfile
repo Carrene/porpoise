@@ -4,7 +4,7 @@ target 'MobileToken' do
     
     use_frameworks!
     pod 'ObjectMapper+Realm', '~> 0.6'
-    pod 'R.swift', '~> 5.0.0.alpha.2'
+    pod 'R.swift'
     pod 'PasswordTextField', '~> 1.2.0'
     pod 'TTGSnackbar', '~> 1.7.5'
     pod 'HUIPatternLockView-Swift', '~> 2.0.1'

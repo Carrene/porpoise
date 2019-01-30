@@ -48,7 +48,7 @@ DEPENDENCIES:
   - "ObjectMapper+Realm (~> 0.6)"
   - Onboard (~> 2.3.3)
   - PasswordTextField (~> 1.2.0)
-  - R.swift (~> 5.0.0.alpha.2)
+  - R.swift
   - SwiftyGif (~> 4.2.0)
   - TTGSnackbar (~> 1.7.5)
   - XLActionController (~> 4.1.0)
@@ -110,6 +110,6 @@ SPEC CHECKSUMS:
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
-PODFILE CHECKSUM: 2cc40df330cd525ce3ebcbe45b06c9bb8a4c1317
+PODFILE CHECKSUM: fa7f1f77db6adba7240ea1b9070d76fe279da102
 
 COCOAPODS: 1.5.3

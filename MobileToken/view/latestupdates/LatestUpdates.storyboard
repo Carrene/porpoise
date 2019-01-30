@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Op2-uj-cX5">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,32 +24,32 @@
             <objects>
                 <viewController id="Op2-uj-cX5" customClass="LatestUpdatesViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yWb-Ub-jpq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45z-XG-svE" userLabel="vText">
-                                <rect key="frame" x="30" y="184" width="315" height="251"/>
+                                <rect key="frame" x="30" y="208" width="354" height="422"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIA-hb-igP">
-                                        <rect key="frame" x="5" y="15" width="305" height="221"/>
+                                        <rect key="frame" x="5" y="15" width="344" height="392"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseUpdatesTableviewCell" rowHeight="32" id="YOp-BP-lLU">
-                                                <rect key="frame" x="0.0" y="28" width="305" height="32"/>
+                                                <rect key="frame" x="0.0" y="28" width="344" height="32"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YOp-BP-lLU" id="oUa-Vh-egq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="305" height="32"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="32"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-circle" translatesAutoresizingMaskIntoConstraints="NO" id="ItJ-H8-K8p" userLabel="imageDot">
-                                                            <rect key="frame" x="277" y="12" width="8" height="8"/>
+                                                            <rect key="frame" x="316" y="12" width="8" height="8"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="8" id="RAe-xo-99c"/>
                                                                 <constraint firstAttribute="height" constant="8" id="me9-bB-fos"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضافه شدن رمزهای دوم و اینترنتی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-LH-UUB">
-                                                            <rect key="frame" x="44" y="3.5" width="217" height="25.5"/>
+                                                            <rect key="frame" x="83" y="3.3333333333333339" width="217" height="25.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
                                                             <color key="textColor" name="buttonColor"/>
                                                             <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7s-60-z67" userLabel="btEnter">
-                                <rect key="frame" x="30" y="599" width="315" height="48"/>
+                                <rect key="frame" x="30" y="794" width="354" height="48"/>
                                 <color key="backgroundColor" name="secondary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="98U-Ri-kfg"/>
@@ -120,7 +120,7 @@
     <resources>
         <image name="blue-circle" width="8" height="8"/>
         <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,7 +129,7 @@
             <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
-            <color red="0.093999996781349182" green="0.57300001382827759" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

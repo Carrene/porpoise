@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="134" width="320" height="100"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="100"/>
+                                        <rect key="frame" x="20" y="0.0" width="280" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Qfx-jO-6LW">
                                             <size key="itemSize" width="140" height="100"/>
@@ -79,14 +79,14 @@
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="centerY" secondItem="cui-1P-fqF" secondAttribute="centerY" id="Zac-bY-eTg"/>
                                     <constraint firstAttribute="height" constant="100" id="bMe-ev-IwE"/>
                                     <constraint firstItem="Me0-PK-q7R" firstAttribute="height" secondItem="cui-1P-fqF" secondAttribute="height" id="jHL-Ct-Bja"/>
-                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" constant="-20" id="z2X-x8-ZxM"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" constant="-40" id="z2X-x8-ZxM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G" userLabel="View textfields">
-                                <rect key="frame" x="30" y="282" width="260" height="180"/>
+                                <rect key="frame" x="20" y="282" width="280" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
-                                        <rect key="frame" x="30" y="20" width="200" height="45"/>
+                                        <rect key="frame" x="30" y="20" width="220" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="tzl-2f-H2m"/>
                                         </constraints>
@@ -104,10 +104,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Uc-PUg" userLabel="vPhone">
-                                        <rect key="frame" x="30" y="115" width="200" height="45"/>
+                                        <rect key="frame" x="30" y="115" width="220" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l93-8h-1tj" userLabel="phoneTextField">
-                                                <rect key="frame" x="50" y="2.5" width="140" height="40"/>
+                                                <rect key="frame" x="50" y="2.5" width="160" height="40"/>
                                                 <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -190,14 +190,14 @@
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="AzG-7L-ohl" firstAttribute="centerY" secondItem="E24-Uc-PUg" secondAttribute="centerY" id="6Ab-wU-NUP"/>
-                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="30" id="7Z4-1H-0yY"/>
+                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="20" id="7Z4-1H-0yY"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="leading" secondItem="rD3-UM-afT" secondAttribute="leading" constant="5" id="8Fj-Bt-AaF"/>
                             <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
                             <constraint firstItem="CC4-XA-VAv" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="10" id="EFT-av-ayl"/>
                             <constraint firstItem="CC4-XA-VAv" firstAttribute="centerY" secondItem="9Rd-d6-I82" secondAttribute="centerY" id="FEx-IM-7NI"/>
                             <constraint firstItem="CC4-XA-VAv" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="Hsf-xI-fhB"/>
                             <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
-                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Wp6-vC-o6G" secondAttribute="trailing" constant="30" id="dSE-W4-c0L"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="Wp6-vC-o6G" secondAttribute="trailing" constant="20" id="dSE-W4-c0L"/>
                             <constraint firstItem="rD3-UM-afT" firstAttribute="trailing" secondItem="cui-1P-fqF" secondAttribute="trailing" id="drx-XH-nAw"/>
                             <constraint firstItem="AzG-7L-ohl" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="n5L-2R-cuW"/>
                             <constraint firstItem="Olh-5b-lfG" firstAttribute="trailing" secondItem="rD3-UM-afT" secondAttribute="trailing" constant="5" id="rwN-DB-cdD"/>
@@ -216,7 +216,9 @@
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
-                        <barButtonItem key="backBarButtonItem" title="                    " id="xVv-zH-gB0"/>
+                        <barButtonItem key="backBarButtonItem" id="xVv-zH-gB0">
+                            <color key="tintColor" name="secondary"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -247,16 +249,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Gr-hPV" userLabel="lbTitle">
-                                <rect key="frame" x="81.5" y="76" width="157.5" height="20"/>
+                                <rect key="frame" x="81.5" y="76" width="157" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
-                                <rect key="frame" x="-25" y="116" width="315" height="110"/>
+                                <rect key="frame" x="2.5" y="116" width="315" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
-                                        <rect key="frame" x="144.5" y="20" width="26.5" height="27"/>
+                                        <rect key="frame" x="144" y="20" width="27" height="27"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
@@ -301,7 +303,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
-                                <rect key="frame" x="-25" y="236" width="315" height="40"/>
+                                <rect key="frame" x="2.5" y="236" width="315" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تغییر شماره" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
                                         <rect key="frame" x="20" y="9.5" width="77" height="21"/>
@@ -310,7 +312,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(۰۵:۰۰)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNP-va-IUg" userLabel="lbCounter">
-                                        <rect key="frame" x="248" y="7.5" width="47" height="25.5"/>
+                                        <rect key="frame" x="248" y="7.5" width="47" height="25"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <color key="textColor" name="eyeCatching"/>
                                         <nil key="highlightedColor"/>
@@ -332,14 +334,14 @@
                             <constraint firstItem="aEl-Gr-hPV" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="7TS-Ji-s9B"/>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="8hZ-1P-GLw"/>
                             <constraint firstItem="m28-i2-93v" firstAttribute="top" secondItem="aEl-Gr-hPV" secondAttribute="top" constant="-12" id="IvM-C8-527"/>
-                            <constraint firstItem="zi8-T5-FwR" firstAttribute="leading" secondItem="m28-i2-93v" secondAttribute="trailing" constant="-345" id="JQG-VH-nIt"/>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="bottom" constant="10" id="SG3-Wh-Wmg"/>
                             <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="aEl-Gr-hPV" secondAttribute="bottom" constant="20" id="Ve9-km-5au"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="Ywe-3J-7H9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
                     <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
-                        <barButtonItem key="backBarButtonItem" title=" " style="plain" id="xd6-RE-Mgr">
+                        <barButtonItem key="backBarButtonItem" style="plain" id="xd6-RE-Mgr">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
                     </navigationItem>
@@ -372,7 +374,7 @@
     <resources>
         <image name="plus-icon" width="20" height="20"/>
         <namedColor name="buttonColor">
-            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="eyeCatching">
             <color red="0.11400000005960464" green="1" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

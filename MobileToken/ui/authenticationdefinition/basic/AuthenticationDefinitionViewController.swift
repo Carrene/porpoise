@@ -7,10 +7,12 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
     
     @IBOutlet weak var authenticationTypeContainer: UIView!
     @IBOutlet weak var scAuthenticationType: UISegmentedControl!
+    private var hasAlertShown = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIComponents()
+        
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -30,6 +32,31 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
         scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
         scAuthenticationType.layer.cornerRadius = 10
         embedVCPattern()
+        if !UserDefaults.standard.bool(forKey: "hasAlertShown") {
+        timeZoneAlert()
+        }
+    }
+    
+    func timeZoneAlert() {
+        UserDefaults.standard.set(true, forKey: "hasAlertShown")
+        
+        let attributedString = NSAttributedString(string: R.string.localizable.alert_set_timezone(), attributes: [
+            NSAttributedString.Key.font : R.font.iranSansMobile(size: 16)!,
+            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
+            ])
+        
+        let alert = UIAlertController(title: "", message: R.string.localizable.alert_set_timezone(), preferredStyle: .alert)
+        
+        alert.setValue(attributedString, forKey: "attributedMessage")
+            
+        
+        let okAction = UIAlertAction(title: R.string.localizable.ok() , style: .cancel, handler: {
+            (action : UIAlertAction!) -> Void in })
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion:{})
+        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.layer.cornerRadius = 10
+        subview.backgroundColor = R.color.primaryLight()
     }
     
     func initListeners() {

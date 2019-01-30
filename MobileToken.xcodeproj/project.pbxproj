@@ -43,7 +43,6 @@
 		AC16D73721CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */; };
 		AC16D73821CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */; };
 		AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC16D73921CA8B640094FBED /* Authentication.storyboard */; };
-		AC16D73C21CA8B780094FBED /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC16D73B21CA8B770094FBED /* AuthenticationDefinition.storyboard */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
@@ -69,9 +68,16 @@
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
+		AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
+		AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
+		AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
+		AC57D76421FDA2B500DFDD33 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
+		AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */; };
+		AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
+		AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
+		AC57D76E21FDD12F00DFDD33 /* html_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76D21FDD12F00DFDD33 /* html_copy.png */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
-		AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */; };
 		AC5E6BE021E9CFAC00A9D4C3 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
 		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
 		AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
@@ -80,6 +86,7 @@
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
 		AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
 		AC75A4F921B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */; };
+		AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
 		ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
 		ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
 		ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
@@ -96,6 +103,9 @@
 		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
 		ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
+		AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
+		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
+		AF02085522017D630021856A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
 		AF246A7C21984A5500C44E4B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
 		AF246A7E219852EA00C44E4B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF246A84219948F300C44E4B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A83219948F300C44E4B /* Token.swift */; };
@@ -129,7 +139,6 @@
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
-		AFAD230221908A9700EC00CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD230121908A9600EC00CB /* R.generated.swift */; };
 		AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
 		AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
@@ -142,7 +151,6 @@
 		AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
 		AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
 		AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
-		AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */; };
 		AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
 		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
 		AFBFE16F21F457F300FDAE4A /* Base64urlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */; };
@@ -218,7 +226,6 @@
 		AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPaswordContractor.swift; sourceTree = "<group>"; };
 		AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordPresenter.swift; sourceTree = "<group>"; };
 		AC16D73921CA8B640094FBED /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
-		AC16D73B21CA8B770094FBED /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
 		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
@@ -244,9 +251,16 @@
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		AC54E26921FD94C0008764B8 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewAdapter.swift; sourceTree = "<group>"; };
+		AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
+		AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		AC57D76921FDCDD300DFDD33 /* answer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = answer.html; sourceTree = "<group>"; };
+		AC57D76B21FDD12500DFDD33 /* html_dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = html_dots.png; sourceTree = "<group>"; };
+		AC57D76D21FDD12F00DFDD33 /* html_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = html_copy.png; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
-		AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
 		AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
 		AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRealmRepsitory.swift; sourceTree = "<group>"; };
@@ -255,6 +269,7 @@
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
 		AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
 		AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternViewController.swift; sourceTree = "<group>"; };
+		AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankUtil.swift; sourceTree = "<group>"; };
 		ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		ACAAD85C21AE7AED007266F4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -272,6 +287,9 @@
 		ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationContractor.swift; sourceTree = "<group>"; };
 		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AF020850220175E80021856A /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
+		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
+		AF02085422017D630021856A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		AF246A7D219852EA00C44E4B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AF246A83219948F300C44E4B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -305,7 +323,6 @@
 		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
-		AFAD230121908A9600EC00CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBankViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBankViewDesignable.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,7 +341,6 @@
 		AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellXibView.swift; sourceTree = "<group>"; };
 		AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagerViewAdapter.swift; sourceTree = "<group>"; };
 		AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardPagerViewCell.swift; sourceTree = "<group>"; };
-		AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64urlEncoded.swift; sourceTree = "<group>"; };
@@ -529,19 +545,49 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
-		AC5E6BDA21E62D1000A9D4C3 /* alert */ = {
+		AC54E26821FD9480008764B8 /* help */ = {
 			isa = PBXGroup;
 			children = (
-				AC5E6BDB21E62D3800A9D4C3 /* SimpleAlert.xib */,
+				AC54E26921FD94C0008764B8 /* Help.storyboard */,
 			);
-			path = alert;
+			path = help;
+			sourceTree = "<group>";
+		};
+		AC57D75E21FD9F4000DFDD33 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				AC57D76621FDCBED00DFDD33 /* questions */,
+				AC57D76521FDCBCE00DFDD33 /* basic */,
+			);
+			path = help;
+			sourceTree = "<group>";
+		};
+		AC57D76521FDCBCE00DFDD33 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */,
+				AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */,
+				AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		AC57D76621FDCBED00DFDD33 /* questions */ = {
+			isa = PBXGroup;
+			children = (
+				AC57D76921FDCDD300DFDD33 /* answer.html */,
+				AC57D76D21FDD12F00DFDD33 /* html_copy.png */,
+				AC57D76B21FDD12500DFDD33 /* html_dots.png */,
+				AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */,
+			);
+			path = questions;
 			sourceTree = "<group>";
 		};
 		AC5E6BDD21E7175700A9D4C3 /* bankcard */ = {
 			isa = PBXGroup;
 			children = (
+				AF020852220177050021856A /* BankCardPagerViewCell.xib */,
 				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
-				AFBC2AE02191936F00D37C84 /* BankCardPagerViewCell.xib */,
 				AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */,
 			);
 			path = bankcard;
@@ -652,7 +698,7 @@
 		ACAAD85221AC2CAF007266F4 /* authenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
-				AC16D73B21CA8B770094FBED /* AuthenticationDefinition.storyboard */,
+				AF020850220175E80021856A /* AuthenticationDefinition.storyboard */,
 			);
 			path = authenticationdefinition;
 			sourceTree = "<group>";
@@ -668,6 +714,7 @@
 		ACAAD85B21AE7AB4007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				AC54E26821FD9480008764B8 /* help */,
 				AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */,
 				AC75A4FA21B270E3009441C4 /* basic */,
 			);
@@ -677,6 +724,7 @@
 		ACAAD85E21AE8058007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				AC57D75E21FD9F4000DFDD33 /* help */,
 				AC75A4ED21B26EE7009441C4 /* basic */,
 				AC75A4EE21B26F2C009441C4 /* settingauthenticationdefinition */,
 			);
@@ -911,11 +959,11 @@
 		AF463BCA2189E4E900DC8A3E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				AC4C4DBD21CE7ADC00B15B90 /* cardlist */,
 				AC353AFF21BEB0A900B80412 /* applicationlock */,
 				ACAAD85121AC2C95007266F4 /* authentication */,
 				ACAAD85221AC2CAF007266F4 /* authenticationdefinition */,
 				AFB9BB25218ED9BD004F16DD /* basic */,
+				AC4C4DBD21CE7ADC00B15B90 /* cardlist */,
 				AC46685521BC050900A0B5BA /* importtoken */,
 				AC353B0521BEB89600B80412 /* latestupdates */,
 				AFB9BB26218EE0AB004F16DD /* nibs */,
@@ -979,6 +1027,7 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AF02085422017D630021856A /* R.generated.swift */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BC22189D8CF00DC8A3E /* data */,
 				AFE81B372196E10500AA0AF2 /* error */,
@@ -986,7 +1035,6 @@
 				AC2676BA21B52B6900524636 /* framework */,
 				AFB39B5B2189A6A700302624 /* Info.plist */,
 				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
-				AFAD230121908A9600EC00CB /* R.generated.swift */,
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AFE81B162196D26C00AA0AF2 /* util */,
 				AF463BCA2189E4E900DC8A3E /* view */,
@@ -1026,7 +1074,6 @@
 			children = (
 				AC5E6BDE21E717E200A9D4C3 /* addcard */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
-				AC5E6BDA21E62D1000A9D4C3 /* alert */,
 				ACDFD8AE21A9836200839F97 /* bank */,
 				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
 				AFE190E7219029430023E785 /* card */,
@@ -1141,6 +1188,7 @@
 				AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */,
 				AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */,
 				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
+				AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1331,19 +1379,21 @@
 			files = (
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
-				AFBC2AE22191936F00D37C84 /* BankCardPagerViewCell.xib in Resources */,
+				AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */,
+				AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */,
 				AC04FAAE21C14D4500A41D9D /* forget-password.gif in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
+				AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
-				AC16D73C21CA8B780094FBED /* AuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
 				AC353B1C21BFCB5300B80412 /* security.gif in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
+				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
 				AC16D72821CA35CA0094FBED /* PasswordHintTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,
@@ -1351,7 +1401,9 @@
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
+				AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */,
 				AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */,
+				AC57D76E21FDD12F00DFDD33 /* html_copy.png in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
 				ACAAD86521AE8F24007266F4 /* LockScreenTimeTableViewCell.xib in Resources */,
 				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
@@ -1364,7 +1416,6 @@
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */,
-				AC5E6BDC21E62D3800A9D4C3 /* SimpleAlert.xib in Resources */,
 				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
@@ -1486,12 +1537,14 @@
 			files = (
 			);
 			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\nTAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		C71206364838EA0D4F9F171E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1523,6 +1576,7 @@
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
+				AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */,
 				AC16D71321CA322C0094FBED /* AuthenticationDefinitionViewController.swift in Sources */,
 				AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */,
 				AF246A9021999AE400C44E4B /* UserRealmRepository.swift in Sources */,
@@ -1549,6 +1603,7 @@
 				AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */,
 				AC16D72421CA33410094FBED /* PasswordHintTableAdapter.swift in Sources */,
 				AFBFE17321F5DEAB00FDAE4A /* ImportTokenPresenter.swift in Sources */,
+				AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */,
 				ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */,
 				ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */,
 				AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */,
@@ -1563,10 +1618,10 @@
 				AC16D70B21CA32130094FBED /* AuthenticationViewController.swift in Sources */,
 				ACAAD86A21AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,
 				AC4C4DC121CFB5D700B15B90 /* Setting.swift in Sources */,
-				AFAD230221908A9700EC00CB /* R.generated.swift in Sources */,
 				AC16D70121CA31B70094FBED /* AuthenticationPatternPresenter.swift in Sources */,
 				AC353B0A21BEB94500B80412 /* LatestUpdatesViewController.swift in Sources */,
 				AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */,
+				AC57D76421FDA2B500DFDD33 /* HelpTableViewCell.swift in Sources */,
 				AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */,
 				AC16D71221CA322C0094FBED /* AuthenticationDefinitionContractor.swift in Sources */,
 				AC75A4F921B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */,
@@ -1617,6 +1672,9 @@
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 				AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */,
+				AF02085522017D630021856A /* R.generated.swift in Sources */,
+				AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */,
+				AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */,
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,

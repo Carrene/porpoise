@@ -26,7 +26,7 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             button.layer.cornerRadius = 10
             button.layer.borderWidth = 2
             button.setTitleColor(R.color.primaryDark(), for: .selected)
-            button.setTitleColor(R.color.buttonColor(), for: .normal)
+            button.setTitleColor(R.color.secondary(), for: .normal)
             button.tintColor = .clear
             
             if index == selectedIndex {
@@ -49,13 +49,13 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     
     private func setSelected(button:UIButton){
         labelSecond.text =  button.currentTitle! + " " + R.string.localizable.lb_seconds()
-        button.layer.backgroundColor = R.color.buttonColor()?.cgColor
+        button.layer.backgroundColor = R.color.secondary()?.cgColor
         button.isSelected = true
         
     }
     
     private func setDeselect(button:UIButton){
-        button.layer.borderColor = R.color.buttonColor()?.cgColor
+        button.layer.borderColor = R.color.secondary()?.cgColor
         button.backgroundColor = R.color.primaryDark()
         button.isSelected = false
         

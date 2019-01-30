@@ -5,6 +5,8 @@ import ObjectMapper_Realm
 import RealmSwift
 
 class Bank: Object, Mappable, NSCopying{
+    static let AYANDE = R.string.localizable.ayande()
+    static let SADERAT = R.string.localizable.saderat()
     
     
     public enum BankName: String {
@@ -58,7 +60,7 @@ class Bank: Object, Mappable, NSCopying{
     }
     
     override static func ignoredProperties() -> [String] {
-        return [  "LogoResourceId"]
+        return [ "LogoResourceId"]
     }
     required convenience init?(map: Map) {
         self.init()
