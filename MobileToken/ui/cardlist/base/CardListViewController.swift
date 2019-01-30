@@ -265,7 +265,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             for i in pagerList.indices {
                 let screenBounds =  UIScreen.main.bounds
                 
-                let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 300)
+                let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 251)
                 let cardListPagerView = FSPagerView(frame: frame)
                 y += 330
                 
@@ -279,7 +279,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 pagerList[i].setDelegate(cardPagerViewDelegate: self)
                 cardListPagerView.delegate = pagerList[i]
                 cardListPagerView.dataSource = pagerList[i]
-                cardListPagerView.itemSize = CGSize(width: 300, height: 300)
+                cardListPagerView.itemSize = CGSize(width: 320, height: 251)
                 cardListPagerView.interitemSpacing = 10
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))

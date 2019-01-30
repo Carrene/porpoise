@@ -31,14 +31,14 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func initDefaultView() {
         let viewFirstRow = AddPasswordViewDesignable()
-        viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width-20, height: 40)
+        viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width, height: 40)
         let tapImportFirstPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
         tapImportFirstPass.cryptoModuleId = Token.CryptoModuleId.one
         viewFirstRow.addGestureRecognizer(tapImportFirstPass)
         viewFirstOtp.addSubview(viewFirstRow)
         
         let viewSecondRow = AddPasswordViewDesignable()
-        viewSecondRow.frame.size = CGSize(width: viewSecondOtp.layer.frame.width-20, height: 40)
+        viewSecondRow.frame.size = CGSize(width: viewSecondOtp.layer.frame.width, height: 40)
         
         let tapImportSecondPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
         tapImportSecondPass.cryptoModuleId = Token.CryptoModuleId.two
@@ -92,7 +92,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
    
     func getOtpView() -> OtpViewDesignable {
         let otpView = OtpViewDesignable()
-        otpView.frame.size =  CGSize(width: viewFirstOtp.layer.frame.width-20, height: 40)
+        otpView.frame.size =  CGSize(width: viewFirstOtp.layer.frame.width, height: 40)
         return otpView
     }
     
