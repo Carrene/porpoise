@@ -14,6 +14,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     private var updatedCard: Card?
     private var buttonDeleteFirstToken : UIButton?
     private var buttonDeleteSecondToken : UIButton?
+    private var countDownTimer = [Timer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         cardListPresenter?.getBankList()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        countDownTimer.forEach { timer in
+            timer.invalidate()
+        }
+        countDownTimer.removeAll()
+    }
     func initUIComponents() {
         buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: 220, height: 40))
         buttonDeleteFirstToken?.layer.cornerRadius = 10
@@ -303,5 +310,22 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
     }
     
+    func removeTimerInstance(timer: Timer) {
+       self.countDownTimer.remove(timer)
+    }
+    
+    func saveTimerInstance(timer: Timer) {
+        self.countDownTimer.append(timer)
+    }
+    
+}
+
+extension Array where Element: Equatable {
+    mutating func remove(_ obj: Element) {
+        if let index = self.index(where: { $0 == obj }) {
+            self.remove(at: index)
+            //continue do: arrPickerData.append(...)
+        }
+    }
 }
 
