@@ -107,7 +107,7 @@
                                         <rect key="frame" x="30" y="115" width="220" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l93-8h-1tj" userLabel="phoneTextField">
-                                                <rect key="frame" x="50" y="2.5" width="160" height="40"/>
+                                                <rect key="frame" x="48.5" y="2.5" width="161.5" height="40"/>
                                                 <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -119,7 +119,7 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-mU-OoY">
-                                                <rect key="frame" x="16" y="0.0" width="29" height="45"/>
+                                                <rect key="frame" x="16" y="0.0" width="27.5" height="45"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                                 <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
-                                <rect key="frame" x="61.5" y="311" width="197" height="27"/>
+                                <rect key="frame" x="73" y="314.5" width="174.5" height="20"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -258,13 +258,13 @@
                                 <rect key="frame" x="2.5" y="116" width="315" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
-                                        <rect key="frame" x="144" y="20" width="27" height="27"/>
+                                        <rect key="frame" x="143.5" y="20" width="28.5" height="20"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-Ch-7PK" userLabel="ViewTextField">
-                                        <rect key="frame" x="30" y="52" width="255" height="40"/>
+                                        <rect key="frame" x="30" y="45" width="255" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
                                                 <rect key="frame" x="0.0" y="5" width="255" height="35"/>
@@ -312,7 +312,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(۰۵:۰۰)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNP-va-IUg" userLabel="lbCounter">
-                                        <rect key="frame" x="248" y="7.5" width="47" height="25"/>
+                                        <rect key="frame" x="251.5" y="10.5" width="43.5" height="19"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <color key="textColor" name="eyeCatching"/>
                                         <nil key="highlightedColor"/>
@@ -340,11 +340,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
-                        <barButtonItem key="backBarButtonItem" style="plain" id="xd6-RE-Mgr">
-                            <color key="tintColor" name="buttonColor"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA"/>
                     <connections>
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
@@ -355,17 +351,17 @@
                         <outlet property="viewChangeNumber" destination="qBh-yJ-CU2" id="FEz-5z-3Nd"/>
                         <outlet property="viewCode" destination="zi8-T5-FwR" id="Onm-en-ezx"/>
                         <outlet property="viewTextfield" destination="PmH-Ch-7PK" id="0lf-Tf-LU3"/>
-                        <segue destination="eNx-MU-pEA" kind="show" identifier="PhoneConfirmationToCardList" id="EJz-of-0od"/>
+                        <segue destination="eNx-MU-pEA" kind="showDetail" identifier="PhoneConfirmationToCardList" id="EJz-of-0od"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9x-k3-vgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="-34"/>
         </scene>
-        <!--TokenListViewController-->
+        <!--MainTabbar-->
         <scene sceneID="2e5-KZ-59c">
             <objects>
-                <viewControllerPlaceholder storyboardName="CardList" referencedIdentifier="TokenListViewController" id="eNx-MU-pEA" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="eNx-MU-pEA" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYI-Ru-0fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1660" y="-34"/>

@@ -34,14 +34,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
-//        let iconView = UIImageView(frame:
-//            CGRect(x: 10, y: 10, width: 20, height: 11))
-//        iconView.image = R.image.key()
-//        let iconContainerView: UIView = UIView(frame:
-//            CGRect(x: 20, y: 0, width: 30, height: 30))
-//        iconContainerView.addSubview(iconView)
-//        textFieldCode.leftView = iconContainerView
-//        textFieldCode.leftViewMode = .always
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
@@ -115,6 +107,14 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         }
     }
     
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let count = text.count + string.count - range.length
+        return count <= 6
+    }
+    
     func showBadRequestError() {
         
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_activation_code_is_not_valid(), color: R.color.errorColor()!, duration: .middle)
@@ -141,6 +141,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        (segue.destination as! TabBarViewController).selectedIndex = 0
     }
 }
