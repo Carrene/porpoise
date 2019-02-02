@@ -23,6 +23,11 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     func initUIComponent() {
         textFieldPassword.delegate = self
         textFieldPassword.becomeFirstResponder()
+        textFieldPassword.layer.borderColor = R.color.buttonColor()?.cgColor
+        textFieldPassword.layer.borderWidth = 1
+        textFieldPassword.layer.cornerRadius = 5
+        textFieldPassword.attributedPlaceholder = NSAttributedString(string: "رمز برنامه",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
     }
     
     @IBAction func textFieldPasswordEditingChanged(_ sender: UITextField) {

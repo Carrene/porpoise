@@ -39,10 +39,11 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         passwordHint.shouldDismissOnTap = false
         passwordHint.shouldDismissOnSwipeOutside = false
         textFieldPassword.becomeFirstResponder()
-        buttonConfirm.layer.cornerRadius = 5
-        buttonConfirm.isEnabled = false
-        buttonConfirm.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.2), for: .disabled)
-        buttonConfirm.backgroundColor = R.color.secondary()?.withAlphaComponent(0.2)
+        
+        //buttonConfirm.layer.cornerRadius = 5
+        //buttonConfirm.isEnabled = false
+        //buttonConfirm.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.2), for: .disabled)
+        //buttonConfirm.backgroundColor = R.color.secondary()?.withAlphaComponent(0.2)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -102,12 +103,12 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     }
     
     func showNotMatchError() {
-        buttonConfirm.isEnabled = false
+        //buttonConfirm.isEnabled = false
     }
     
     func authenticationUpdatedAction() {
-        buttonConfirm.isEnabled = true
-        buttonConfirm.backgroundColor = R.color.secondary()
+        //uttonConfirm.isEnabled = true
+        //buttonConfirm.backgroundColor = R.color.secondary()
     }               
 }
 

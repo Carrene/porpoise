@@ -76,9 +76,9 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword">
-                                <rect key="frame" x="30" y="54" width="315" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز برنامه" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword">
+                                <rect key="frame" x="30" y="134" width="315" height="40"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hwx-0B-WkN"/>
@@ -98,7 +98,7 @@
                             <constraint firstItem="6DJ-lZ-aNG" firstAttribute="top" secondItem="47X-kO-rhi" secondAttribute="top" id="Gb2-aY-miS"/>
                             <constraint firstItem="6DJ-lZ-aNG" firstAttribute="trailing" secondItem="yeM-4x-iKm" secondAttribute="trailing" constant="30" id="IV0-CT-srz"/>
                             <constraint firstItem="47X-kO-rhi" firstAttribute="centerX" secondItem="6DJ-lZ-aNG" secondAttribute="centerX" id="L3h-xl-3UC"/>
-                            <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="6DJ-lZ-aNG" secondAttribute="top" constant="10" id="hx4-zv-d4U"/>
+                            <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="6DJ-lZ-aNG" secondAttribute="top" constant="90" id="hx4-zv-d4U"/>
                             <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="47X-kO-rhi" secondAttribute="bottom" constant="20" id="tvR-Ri-DSg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6DJ-lZ-aNG"/>
@@ -149,12 +149,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mq-00-gPf" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
-                                <rect key="frame" x="58" y="407" width="259" height="259"/>
+                                <rect key="frame" x="37.666666666666657" y="144" width="300" height="300"/>
                                 <color key="backgroundColor" name="primary"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="259" id="I9Q-z3-pYY"/>
-                                    <constraint firstAttribute="width" constant="259" id="Lwv-9X-iHG"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                         <color key="value" name="buttonColor"/>
@@ -170,11 +166,11 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="9NJ-SA-kL1" firstAttribute="bottom" secondItem="3mq-00-gPf" secondAttribute="bottom" constant="112" id="2Xg-ak-5yC"/>
-                            <constraint firstItem="3mq-00-gPf" firstAttribute="leading" secondItem="9NJ-SA-kL1" secondAttribute="leading" constant="58" id="KYR-CH-mhY"/>
                             <constraint firstItem="3mq-00-gPf" firstAttribute="centerX" secondItem="9NJ-SA-kL1" secondAttribute="centerX" id="NQc-so-hVk"/>
                             <constraint firstItem="Asb-xx-Mi5" firstAttribute="top" secondItem="9NJ-SA-kL1" secondAttribute="top" id="OAD-ue-Jcu"/>
-                            <constraint firstItem="9NJ-SA-kL1" firstAttribute="trailing" secondItem="3mq-00-gPf" secondAttribute="trailing" constant="58" id="SWg-ef-TBY"/>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="height" secondItem="9NJ-SA-kL1" secondAttribute="width" multiplier="0.8" id="Oaf-u7-Zzo"/>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="width" secondItem="9NJ-SA-kL1" secondAttribute="width" multiplier="0.8" id="XjW-mz-lV9"/>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="top" secondItem="9NJ-SA-kL1" secondAttribute="top" constant="100" id="bjz-kJ-MCW"/>
                             <constraint firstItem="Asb-xx-Mi5" firstAttribute="centerX" secondItem="3mq-00-gPf" secondAttribute="centerX" id="uDN-oG-2Ef"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9NJ-SA-kL1"/>
@@ -199,9 +195,6 @@
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryDark">
-            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

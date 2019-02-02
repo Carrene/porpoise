@@ -22,8 +22,8 @@ class SettingAuthenticationDefinitionPatternViewController: UIViewController, Se
     func initUIComponent() {
         
         self.viewPattern.resetDotsState()
-        self.viewPattern.normalDotImage = #imageLiteral(resourceName: "patternGrayDot")
-        self.viewPattern.highlightedDotImage = #imageLiteral(resourceName: "patternDot")
+        self.viewPattern.normalDotImage = #imageLiteral(resourceName: "patternDot")
+        self.viewPattern.highlightedDotImage = #imageLiteral(resourceName: "patternGrayDot")
         self.viewPattern.dotWidth = 40
         configuareLockViewWithImages()
     }
