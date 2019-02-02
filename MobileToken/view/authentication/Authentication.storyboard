@@ -87,6 +87,7 @@
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
+                                    <action selector="onEditDidEnd:" destination="ga8-hu-KSt" eventType="editingDidEnd" id="KlH-Gy-rA9"/>
                                     <action selector="textFieldPasswordEditingChanged:" destination="ga8-hu-KSt" eventType="editingDidEnd" id="9D3-10-fcE"/>
                                 </connections>
                             </textField>

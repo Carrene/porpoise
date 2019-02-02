@@ -31,12 +31,13 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     }
     
     @IBAction func textFieldPasswordEditingChanged(_ sender: UITextField) {
-//        self.authenticationPasswordPresenter?.checkPasswordCorrection(password: sender.text!)
+       
+    }
+    @IBAction func onEditDidEnd(_ sender: UITextField) {
+         self.authenticationPasswordPresenter?.checkPasswordCorrection(password: sender.text!)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        //TODO for checking pass 
         self.authenticationPasswordPresenter?.checkPasswordCorrection(password: textField.text!)
         self.dismissKeyboard()
         return true

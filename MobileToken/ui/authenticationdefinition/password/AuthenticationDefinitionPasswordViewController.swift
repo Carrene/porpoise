@@ -60,36 +60,6 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
-        var flag = false
-        if PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text)   {
-            flag = true
-        }
-        else {
-            flag = false
-        }
-        
-        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text)   {
-            flag = true
-        }
-        else {
-            flag = false
-        }
-        
-        if PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text)   {
-            flag = true
-        }
-        else {
-            flag = false
-        }
-        
-        if PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text)  {
-            flag = true
-        }
-        else {
-            flag = false
-        }
-        
-        
         if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
             textFieldConfirmPassword.text = nil
