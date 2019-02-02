@@ -1,17 +1,8 @@
-//
-//  PasswordHintTableAdapter.swift
-//  alpha
-//
-//  Created by Fateme' Kazemi on 5/20/1397 AP.
-//  Copyright © 1397 Nuesoft. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
 class PasswordHintTableAdapter: NSObject,UITableViewDataSource,UITableViewDelegate{
     
-//    var hintDataSource : [String:Bool]?
     var tableView : UITableView?
     var hintDataSource = [R.string.localizable.enter_at_least_eight_characters():false,R.string.localizable.enter_at_least_one_capital_letter():false,R.string.localizable.enter_at_least_one_digit():false,R.string.localizable.enter_at_least_one_special_character():false]
     
@@ -22,12 +13,10 @@ class PasswordHintTableAdapter: NSObject,UITableViewDataSource,UITableViewDelega
     
     
     func isCompleted() -> Bool {
-    
         return i >= 4
     }
     
     func resetValidation() {
-    
         i = 0
     }
     

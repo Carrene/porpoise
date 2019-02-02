@@ -1,27 +1,19 @@
-
-
 import UIKit
-import PasswordTextField
 import AMPopTip
 
 class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFieldDelegate,AuthenticationDefinitionPasswordViewProtocol {
     
-    @IBOutlet weak var textFieldPassword: PasswordTextField!
-    @IBOutlet weak var textFieldConfirmPassword: PasswordTextField!
-    @IBOutlet var buttonConfirm: UIButton!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldConfirmPassword: UITextField!
+    @IBOutlet var labelPasswordHint: UILabel!
     
-    var passwordHint = PopTip()
     var passwordIsValid = false
-    var passwordHintAdapter : PasswordHintTableAdapter?
-    var passwordHintTableView : UITableView?
     var authenticationDefinitionPasswordPresenter: AuthenticationDefinitionPasswordPresenterProtocol?
-    
     var authenticationDefinitionDelegate: AuthenticationDefintionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         authenticationDefinitionPasswordPresenter = AuthenticationDefinitionPasswordPresenter(authenticationDefinitionPasswordView: self)
-        initPasswordHintTable()
         initUIComponent()
     }
     
@@ -32,13 +24,19 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         self.hideKeyboardWhenTappedAround()
         textFieldPassword.addTarget(self, action: #selector(self.textFieldPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
         textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
+        textFieldConfirmPassword.layer.cornerRadius = 5
         textFieldConfirmPassword.isUserInteractionEnabled = false
-        textFieldConfirmPassword.cornerRadius = 5
-        textFieldPassword.cornerRadius = 5
-        passwordHint.shouldDismissOnTapOutside = false
-        passwordHint.shouldDismissOnTap = false
-        passwordHint.shouldDismissOnSwipeOutside = false
+        textFieldPassword.layer.cornerRadius = 5
+        textFieldPassword.layer.borderWidth = 1
+        textFieldPassword.layer.borderColor = R.color.buttonColor()?.cgColor
+        textFieldConfirmPassword.layer.borderWidth = 1
+        textFieldConfirmPassword.layer.borderColor = R.color.buttonColor()?.cgColor
         textFieldPassword.becomeFirstResponder()
+        labelPasswordHint.font = R.font.iranSansMobile(size: 12)
+        textFieldPassword.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_password(),
+                                                             attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
+        textFieldConfirmPassword.attributedPlaceholder = NSAttributedString(string:R.string.localizable.ph_confirm_password() ,
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
     
     }
     
@@ -47,50 +45,65 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         return true
     }
     
-    func initPasswordHintTable() {
-        passwordHintTableView = UITableView(frame: CGRect(x: 0, y: 0, width: 315, height: 119))
-        passwordHintTableView?.layer.cornerRadius = 5
-        passwordHintTableView?.backgroundColor = R.color.primary()
-        self.passwordHintTableView?.register(R.nib.passwordHintTableViewCell)
-        passwordHintAdapter = PasswordHintTableAdapter()
-        passwordHintTableView?.delegate = passwordHintAdapter
-        passwordHintTableView?.dataSource = passwordHintAdapter
-        passwordHint.bubbleColor = R.color.primary()!
-        passwordHint.borderColor = UIColor.clear
-        passwordHintTableView?.allowsSelection = false
-        passwordHintTableView?.reloadData()
-    }
-    
     func setDelegate(authenticationDefinitionDelegate: AuthenticationDefintionDelegate) {
         
         self.authenticationDefinitionDelegate = authenticationDefinitionDelegate
     }
     
-    @IBAction func onEditBegin(_ sender: PasswordTextField) {
-        passwordHint.show(customView: passwordHintTableView!, direction: .down, in: view, from: (textFieldPassword.frame))
+    @IBAction func onEditBegin(_ sender: UITextField) {
+        
     }
     
-    @IBAction func onEndEditing(_ sender: PasswordTextField) {
-        passwordHint.hide()
+    @IBAction func onEndEditing(_ sender: UITextField) {
+        
     }
     
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
-        passwordHintAdapter?.resetValidation()
-        passwordHintAdapter!.setMinimumLengthValid(isValid: (authenticationDefinitionPasswordPresenter?.hasMinimumLength(password: textFieldPassword.text!))!)
-        passwordHintAdapter!.setCapitalLetterValid(isValid: (authenticationDefinitionPasswordPresenter?.hasCapitalLetter(password: textFieldPassword.text!))!)
-        passwordHintAdapter!.setHasDigit(isValid: (authenticationDefinitionPasswordPresenter?.hasDigit(password: textFieldPassword.text!))!)
-        passwordHintAdapter!.setSpecialCharacterValid(isValid: (authenticationDefinitionPasswordPresenter?.hasSpecialCharacters(password: textFieldPassword.text!))!)
-        passwordHintTableView?.reloadData()
+        var flag = false
+        if PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text)   {
+            flag = true
+        }
+        else {
+            flag = false
+        }
         
-        if passwordHintAdapter?.isCompleted() == false {
+        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text)   {
+            flag = true
+        }
+        else {
+            flag = false
+        }
+        
+        if PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text)   {
+            flag = true
+        }
+        else {
+            flag = false
+        }
+        
+        if PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text)  {
+            flag = true
+        }
+        else {
+            flag = false
+        }
+        
+        
+        if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
             textFieldConfirmPassword.text = nil
         }
         else {
-            passwordHint.hide()
             textFieldConfirmPassword.isUserInteractionEnabled = true
         }
+    }
+    
+    func checkPasswordIsValid(password:String) -> Bool {
+    return (PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text) &&
+    PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text) &&
+    PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text) &&
+    PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text))
     }
     
     @objc func textFieldConfirmPasswordDidChange(_ textField: UITextField) {
@@ -102,7 +115,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     }
     
     func authenticationUpdatedAction() {
-        buttonConfirm.backgroundColor = R.color.secondary()
+        
     }
     
     func navigateToTabbar() {

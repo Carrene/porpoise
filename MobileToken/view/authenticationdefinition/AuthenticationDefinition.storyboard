@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
         <array key="IRANSansMobile-Bold.ttf">
             <string>IRANSansMobile-Bold</string>
         </array>
@@ -27,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-D3-AaW">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-D3-AaW">
                                 <rect key="frame" x="30" y="40" width="260" height="41"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
@@ -79,32 +82,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6K0-Ct-2n1" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="30" y="139" width="260" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="تکرار رمز" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6K0-Ct-2n1" userLabel="tfConfirmPassword">
+                                <rect key="frame" x="30" y="120" width="260" height="40"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="WEp-O1-6aL"/>
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0v-Up-gtc" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="30" y="69" width="260" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0v-Up-gtc" userLabel="tfPassword">
+                                <rect key="frame" x="30" y="50" width="260" height="40"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uMp-QV-kAW"/>
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                 <connections>
                                     <action selector="onEditBegin:" destination="Ei6-jL-L9f" eventType="editingDidBegin" id="oLO-IX-Rnp"/>
                                     <action selector="onEndEditing:" destination="Ei6-jL-L9f" eventType="editingDidEnd" id="HAo-xq-URE"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر و یک عدد، یک حرف بزرگ و یک کاراکتر (؟*_=+%$#@) باشد" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B1-GI-j54" userLabel="labelPasswordHint">
+                                <rect key="frame" x="30" y="170" width="260" height="38.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-ih-ZVt" userLabel="btConfirm">
                                 <rect key="frame" x="30" y="599" width="315" height="48"/>
                                 <color key="backgroundColor" name="secondary"/>
@@ -128,9 +137,12 @@
                             <constraint firstItem="MVf-ih-ZVt" firstAttribute="leading" secondItem="mRQ-Oi-FUQ" secondAttribute="leading" constant="30" id="ZnW-7H-vbc"/>
                             <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" constant="30" id="aIu-h0-lzB"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" id="bAa-g3-aYT"/>
-                            <constraint firstItem="G0v-Up-gtc" firstAttribute="top" secondItem="mRQ-Oi-FUQ" secondAttribute="top" constant="49" id="cW8-WO-kzE"/>
+                            <constraint firstItem="G0v-Up-gtc" firstAttribute="top" secondItem="mRQ-Oi-FUQ" secondAttribute="top" constant="30" id="cW8-WO-kzE"/>
+                            <constraint firstItem="0B1-GI-j54" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="10" id="jz4-WT-Kod"/>
+                            <constraint firstItem="0B1-GI-j54" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" id="kWI-WG-2vA"/>
                             <constraint firstItem="MVf-ih-ZVt" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="nAg-WR-XQr"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="leading" secondItem="mRQ-Oi-FUQ" secondAttribute="leading" constant="30" id="oW6-4R-XyZ"/>
+                            <constraint firstItem="0B1-GI-j54" firstAttribute="width" secondItem="G0v-Up-gtc" secondAttribute="width" id="qAt-YE-uSX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mRQ-Oi-FUQ"/>
                         <variation key="default">
@@ -140,6 +152,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="labelPasswordHint" destination="0B1-GI-j54" id="r2p-Kw-YhZ"/>
                         <outlet property="textFieldConfirmPassword" destination="6K0-Ct-2n1" id="0Ci-hB-jeF"/>
                         <outlet property="textFieldPassword" destination="G0v-Up-gtc" id="CpT-DP-mPG"/>
                     </connections>
@@ -157,7 +170,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKw-0a-F9K" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
-                                <rect key="frame" x="32" y="84" width="256" height="256"/>
+                                <rect key="frame" x="32" y="50" width="256" height="256"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -168,12 +181,18 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
+                            <constraint firstItem="NKw-0a-F9K" firstAttribute="top" secondItem="E4Q-3N-j6Y" secondAttribute="top" constant="30" id="4gY-2O-Mfh"/>
                             <constraint firstItem="E4Q-3N-j6Y" firstAttribute="bottom" secondItem="NKw-0a-F9K" secondAttribute="bottom" constant="140" id="4z2-yC-p9d"/>
                             <constraint firstItem="NKw-0a-F9K" firstAttribute="width" secondItem="07K-3z-QyO" secondAttribute="width" multiplier="0.8" id="8o5-17-uBW"/>
                             <constraint firstItem="NKw-0a-F9K" firstAttribute="centerX" secondItem="E4Q-3N-j6Y" secondAttribute="centerX" id="Fef-4L-2qm"/>
                             <constraint firstItem="NKw-0a-F9K" firstAttribute="height" secondItem="07K-3z-QyO" secondAttribute="width" multiplier="0.8" id="iIj-Ke-Nui"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E4Q-3N-j6Y"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4z2-yC-p9d"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="vPattern" destination="NKw-0a-F9K" id="KkC-Sx-gnd"/>
@@ -200,9 +219,6 @@
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryDark">
-            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
             <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

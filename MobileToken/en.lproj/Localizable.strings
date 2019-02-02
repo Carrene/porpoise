@@ -26,7 +26,7 @@
 "enter_at_least_one_capital_letter" = "شامل حداقل یک حرف بزرگ";
 "enter_at_least_one_digit" = "شامل حداقل یک عدد";
 "enter_at_least_one_special_character" = "شامل حداقل یکی از کاراکترهای (@,#,$,%,+,=,_,*,?)";
-
+"lb_passwordHint" = "رمز باید شامل حداقل 8 کاراکتر و یک عدد، یک حرف بزرگ و یک کاراکتر (؟*_=+%$#@) باشد";
 
 //label
 "lb_enter_pattern" = "الگوی خود را وارد کنید";
@@ -46,6 +46,8 @@
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
 "ph_atm_code" = "کد دریافتی از دستگاه";
+"ph_password" = "رمز";
+"ph_confirm_password" = "تکرار رمز";
 
 //actionsheet
 "ash_edit_card_name" = "ویرایش نام کارت";

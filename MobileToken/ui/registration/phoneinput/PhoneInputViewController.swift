@@ -17,7 +17,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var labelAlreadyRegistered: UILabel!
     @IBOutlet var labelPhone: UILabel!
     @IBOutlet var viewCountry: UIView!
-    
+    private var inputPhone : String!
     private var maskedDelegate: MaskedTextFieldDelegate!
     private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
@@ -90,19 +90,23 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         textFieldPhoneNumber.delegate = maskedDelegate
     }
     
+    open func textField(_ textField: UITextField,didFillMandatoryCharacters complete: Bool,didExtractValue value: String) {
+        self.inputPhone = value
+    }
+    
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
-        if textFieldPhoneNumber.text != "" {
+        if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
-                self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: self.selectedBank! )
+                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
             else {
                 selectedBank = banks.first
-                self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: self.selectedBank! )
+                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
         }
     }
@@ -153,6 +157,9 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         viewPhone.isHidden = true
         countryPickerView.isHidden = true
         labelPhone.text = phone
+        labelChooseCountry.isHidden = true
+        labelEnterYourPhone.isHidden = true
+        viewCountry.isHidden = true
     }
     
     func showPhoneInput() {
@@ -160,12 +167,15 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelPhone.isHidden = true
         viewPhone.isHidden = false
         countryPickerView.isHidden = false
+        labelChooseCountry.isHidden = false
+        labelEnterYourPhone.isHidden = false
+        viewCountry.isHidden = false
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == R.segue.phoneInputViewController.phoneInputToActivationSegue.identifier {
-            (segue.destination as! PhoneConfirmationViewController).setData(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!, bank: selectedBank!)
+            (segue.destination as! PhoneConfirmationViewController).setData(phone: labelPhoneCode.text!+inputPhone, bank: selectedBank!)
         }
     }
     
