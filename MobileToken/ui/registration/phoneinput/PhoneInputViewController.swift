@@ -15,6 +15,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var viewPhone: UIView!
     @IBOutlet var labelAlreadyRegistered: UILabel!
     @IBOutlet var labelPhone: UILabel!
+    @IBOutlet var viewCountry: UIView!
     
     private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
@@ -39,9 +40,9 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 16)
-        countryPickerView.layer.cornerRadius = 5
-        countryPickerView.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        countryPickerView.layer.borderWidth = 1
+        viewCountry.layer.cornerRadius = 5
+        viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewCountry.layer.borderWidth = 1
         viewPhone.layer.borderWidth = 1
         viewTextfields.layer.borderWidth = 0.5
         viewTextfields.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
@@ -72,11 +73,14 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         countryPickerView.dataSource = self
         countryPickerView.showPhoneCodeInView = false
         countryPickerView.showCountryCodeInView = true
+        
         countryPickerView.setCountryByPhoneCode("+98")
         let index = countryPickerView.countries.index(where: { (item) -> Bool in
             item.phoneCode == "+98" })!
         countryPickerView.countries[index].name = "Iran"
+        
     }
+    
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
