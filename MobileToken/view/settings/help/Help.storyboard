@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="-674" y="107"/>
         </scene>
-        <!--سوال-->
+        <!--راهنما-->
         <scene sceneID="LCb-3J-mgu">
             <objects>
                 <viewController id="Mzz-ZW-1A0" customClass="QuestionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kVc-o6-wgQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="سوال" id="RRO-NL-7xm">
+                    <navigationItem key="navigationItem" title="راهنما" id="RRO-NL-7xm">
                         <barButtonItem key="backBarButtonItem" title=" " id="i3g-dg-yql">
                             <color key="tintColor" name="eyeCatching"/>
                         </barButtonItem>

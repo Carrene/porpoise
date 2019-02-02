@@ -35,13 +35,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="روش احراز هویت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw8-dp-cRT" userLabel="labelTitle">
-                                <rect key="frame" x="190" y="15" width="109" height="26"/>
+                                <rect key="frame" x="221" y="15" width="109" height="26"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-reset" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-sn-6jc" userLabel="imageTimer">
-                                <rect key="frame" x="309" y="18" width="20" height="20"/>
+                                <rect key="frame" x="340" y="18" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="6WB-af-n6e"/>
                                     <constraint firstAttribute="height" constant="20" id="I5s-mo-RXL"/>
@@ -55,7 +55,7 @@
                             <constraint firstItem="gtq-aV-gt8" firstAttribute="leading" secondItem="xFT-nP-W5v" secondAttribute="leading" constant="30" id="EqE-pg-0jt"/>
                             <constraint firstItem="gtq-aV-gt8" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="bgO-ga-t0d"/>
                             <constraint firstItem="Xw8-dp-cRT" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="jLa-ki-ErD"/>
-                            <constraint firstAttribute="trailing" secondItem="DUg-sn-6jc" secondAttribute="trailing" constant="46" id="o4i-2j-KmT"/>
+                            <constraint firstAttribute="trailing" secondItem="DUg-sn-6jc" secondAttribute="trailing" constant="15" id="o4i-2j-KmT"/>
                         </constraints>
                     </view>
                 </subviews>
