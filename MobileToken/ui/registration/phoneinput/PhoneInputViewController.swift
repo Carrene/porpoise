@@ -39,15 +39,15 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func initUIComponents() {
-        labelChooseYourBank.font = R.font.iranSansMobileBold(size: 16)
-        labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 16)
-        labelChooseCountry.font = R.font.iranSansMobileMedium(size: 16)
+        labelChooseYourBank.font = R.font.iranSansMobile(size: 16)
+        labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 12)
+        labelChooseCountry.font = R.font.iranSansMobileMedium(size: 12)
         viewCountry.layer.cornerRadius = 5
         viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCountry.layer.borderWidth = 1
         viewPhone.layer.borderWidth = 1
         viewTextfields.layer.borderWidth = 0.5
-        viewTextfields.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewTextfields.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
