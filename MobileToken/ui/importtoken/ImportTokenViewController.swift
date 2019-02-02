@@ -45,7 +45,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     }
     
     func initBankCard() {
-        viewCard.backgroundColor = R.color.ayandehColor()
+        viewCard.backgroundColor = R.color.secondaryDark()
         viewCard.imageLogo.image = R.image.bankAyandehLogo()
         viewCard.labelBankName.text = "بانک آینده"
     }

@@ -186,7 +186,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nkV-SJ-1Xs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

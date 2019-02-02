@@ -9,6 +9,7 @@ PODS:
   - DeviceKit (1.9.0)
   - FSPagerView (0.8.2)
   - HUIPatternLockView-Swift (2.0.1)
+  - InputMask (3.4.1)
   - IQKeyboardManager (6.0.6)
   - oath (0.4.0):
     - CryptoSwift (~> 0.13.0)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - DeviceKit (~> 1.9.0)
   - FSPagerView (~> 0.8.1)
   - HUIPatternLockView-Swift (~> 2.0.1)
+  - InputMask (~> 3.4.0)
   - IQKeyboardManager (~> 6.0.4)
   - oath (from `https://github.com/Carrene/oath.swift.git`, tag `0.4.0`)
   - "ObjectMapper+Realm (~> 0.6)"
@@ -64,6 +66,7 @@ SPEC REPOS:
     - DeviceKit
     - FSPagerView
     - HUIPatternLockView-Swift
+    - InputMask
     - IQKeyboardManager
     - ObjectMapper
     - "ObjectMapper+Realm"
@@ -96,6 +99,7 @@ SPEC CHECKSUMS:
   DeviceKit: a376cb3d0dda0c27c81dcc0d2b7b8600b6802065
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HUIPatternLockView-Swift: 0f72d91ff3aeb01f5cad43f6093c5361522bb472
+  InputMask: 2c7d3faddbc724a8356a6ea269d60d9d6d7d2423
   IQKeyboardManager: 6b4ecd3e59cf55a26133d802d4678721d7f88499
   oath: 107b59d360ec1f9f0fce270d32b1e5052a59aa3a
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
@@ -110,6 +114,6 @@ SPEC CHECKSUMS:
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
-PODFILE CHECKSUM: fa7f1f77db6adba7240ea1b9070d76fe279da102
+PODFILE CHECKSUM: f08e2c8eb6c47f93c6dadfa043f4707e3551b809
 
 COCOAPODS: 1.5.3

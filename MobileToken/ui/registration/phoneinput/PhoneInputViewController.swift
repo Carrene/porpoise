@@ -1,8 +1,9 @@
 import UIKit
 import CountryPickerView
 import IQKeyboardManager
+import InputMask
 
-class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate {
+class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate,MaskedTextFieldDelegateListener {
     
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
@@ -17,6 +18,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var labelPhone: UILabel!
     @IBOutlet var viewCountry: UIView!
     
+    private var maskedDelegate: MaskedTextFieldDelegate!
     private var banks:[Bank]!
     private var bankCollectionViewAdapter: BankCollectionViewAdapter?
     private var presenter: PhoneInputPresenterProtocol!
@@ -50,6 +52,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         viewPhone.layer.cornerRadius = 5
+        inputMask()
     }
     
     func initListeners() {
@@ -79,6 +82,12 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
             item.phoneCode == "+98" })!
         countryPickerView.countries[index].name = "Iran"
         
+    }
+    
+    func inputMask() {
+        maskedDelegate = MaskedTextFieldDelegate(format: "[000] [000] [0000] [-----------------------------------------------------]")
+        maskedDelegate.listener = self
+        textFieldPhoneNumber.delegate = maskedDelegate
     }
     
     

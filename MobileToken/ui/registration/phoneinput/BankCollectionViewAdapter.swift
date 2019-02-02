@@ -37,13 +37,13 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
             cell.isSelected = true
             bankPagerViewDelegate?.selectedBank(bankIndex: selectedIndex)
             if banks![indexPath.row].name! == "آینده" {
-                cell.vCell.backgroundColor = R.color.ayandehColor()
-                cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+                cell.vCell.backgroundColor = R.color.secondaryDark()
+                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
                 cell.lmgLogo.image = R.image.lightBankAyandehLogo()
             }
             else {
-                cell.vCell.backgroundColor = R.color.saderatColor()
-                cell.vCell.layer.borderColor = R.color.saderatColor()?.cgColor
+                cell.vCell.backgroundColor = R.color.secondary()
+                cell.vCell.layer.borderColor = R.color.secondary()?.cgColor
                 cell.lmgLogo.image = R.image.lightBankSaderatLogo()
             }
         }
@@ -51,13 +51,13 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
             cell.vCell.backgroundColor = .clear
             cell.isSelected = false
             if banks![indexPath.row].name! == "آینده" {
-                cell.lbBankName.textColor = R.color.ayandehColor()
-                cell.vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+                cell.lbBankName.textColor = R.color.secondaryDark()
+                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
                 cell.lmgLogo.image = R.image.colorBankAyandehLogo()
             }
             else {
-                cell.lbBankName.textColor = R.color.saderatColor()
-                cell.vCell.layer.borderColor = R.color.saderatColor()?.cgColor
+                cell.lbBankName.textColor = R.color.secondary()
+                cell.vCell.layer.borderColor = R.color.secondary()?.cgColor
                 cell.lmgLogo.image = R.image.bankSaderatLogo()
             }
         }

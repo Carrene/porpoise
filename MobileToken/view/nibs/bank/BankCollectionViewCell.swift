@@ -1,10 +1,3 @@
-//
-//  BankPagerViewCell.swift
-//  MobileToken
-//
-//  Created by hamed akhlaghi on 8/23/1397 AP.
-//  Copyright © 1397 ba24.ir. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -18,7 +11,7 @@ class BankCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         vCell.layer.cornerRadius = 10
-        vCell.layer.borderColor = R.color.ayandehColor()?.cgColor
+        vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
         vCell.layer.borderWidth = 2
         lbBankName.font = R.font.iranSansMobileBold(size: 16)
     }
