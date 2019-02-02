@@ -5,6 +5,7 @@ import FSPagerView
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
     
     @IBOutlet weak var vScroll: UIScrollView!
+    @IBOutlet var labelFirstRegister: UILabel!
     
     private var pagerList = [CardPagerViewAdapter]()
     private var cardListPresenter : CardListPresenterProtocol?
@@ -259,7 +260,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func initCardListPagerView() {
         var y = 0
         if pagerList.count > 0 {
-            
+            labelFirstRegister.isHidden = true
             vScroll.subviews.forEach({ $0.removeFromSuperview() })
             
             for i in pagerList.indices {
@@ -289,6 +290,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 }
                 cardListPagerView.reloadData()
             }
+        }
+        else {
+            labelFirstRegister.isHidden = false
+            
         }
     }
     

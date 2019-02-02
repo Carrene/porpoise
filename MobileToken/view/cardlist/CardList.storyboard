@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="Xmc-xJ-6og">
@@ -39,11 +44,19 @@
                                 <rect key="frame" x="0.0" y="76" width="375" height="542"/>
                                 <color key="tintColor" name="eyeCatching"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ابتدا در یک بانک ثبت نام کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-6G-lYZ">
+                                <rect key="frame" x="86" y="327.5" width="203.5" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <color key="tintColor" name="eyeCatching"/>
                         <constraints>
+                            <constraint firstItem="pQv-6G-lYZ" firstAttribute="centerX" secondItem="DEU-Kc-QOS" secondAttribute="centerX" id="5W5-57-Xis"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="trailing" secondItem="X9c-M4-KV2" secondAttribute="trailing" id="Ta6-WG-SH4"/>
+                            <constraint firstItem="pQv-6G-lYZ" firstAttribute="centerY" secondItem="DEU-Kc-QOS" secondAttribute="centerY" id="TxU-Je-Wfg"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="12" id="Zuq-eh-D5N"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="bottom" secondItem="X9c-M4-KV2" secondAttribute="bottom" id="iJW-nB-UNj"/>
                             <constraint firstItem="X9c-M4-KV2" firstAttribute="leading" secondItem="DEU-Kc-QOS" secondAttribute="leading" id="pyK-vq-ipC"/>
@@ -62,6 +75,7 @@
                     <navigationItem key="navigationItem" title="لیست کارت ها" id="TqB-wM-dKr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="labelFirstRegister" destination="pQv-6G-lYZ" id="hLU-W8-QZz"/>
                         <outlet property="vScroll" destination="X9c-M4-KV2" id="0bD-Zt-mgo"/>
                         <segue destination="CPa-E7-dNy" kind="show" identifier="navigateToImportToken" id="snV-lL-ZJZ"/>
                     </connections>
