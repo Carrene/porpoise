@@ -90,7 +90,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-Os-O1H" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="30" y="149" width="315" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Vn1-sI-5Ao"/>
@@ -101,7 +101,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhg-fN-egb" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="30" y="79" width="315" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eYS-FD-WuB"/>
@@ -163,7 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNx-qd-maC" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
-                                <rect key="frame" x="37.5" y="120" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="79" width="300" height="300"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -181,6 +181,7 @@
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="sNx-qd-maC" firstAttribute="height" secondItem="Cb6-Jc-sgg" secondAttribute="width" multiplier="0.8" id="0Xo-br-eiz"/>
+                            <constraint firstItem="sNx-qd-maC" firstAttribute="top" secondItem="Kp7-sE-vYv" secondAttribute="bottom" constant="20" id="1rN-Yv-IL4"/>
                             <constraint firstItem="sNx-qd-maC" firstAttribute="width" secondItem="Cb6-Jc-sgg" secondAttribute="width" multiplier="0.8" id="CcR-oe-cxB"/>
                             <constraint firstItem="sNx-qd-maC" firstAttribute="centerX" secondItem="Cb6-Jc-sgg" secondAttribute="centerX" id="V5D-9L-zYE"/>
                             <constraint firstItem="sNx-qd-maC" firstAttribute="top" secondItem="Cb6-Jc-sgg" secondAttribute="top" constant="100" id="Z5o-ft-FEK"/>
@@ -188,6 +189,11 @@
                             <constraint firstItem="Kp7-sE-vYv" firstAttribute="top" secondItem="Cb6-Jc-sgg" secondAttribute="top" constant="10" id="z52-Tj-9ma"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cb6-Jc-sgg"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z5o-ft-FEK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="viewPattern" destination="sNx-qd-maC" id="k2z-B2-yXK"/>

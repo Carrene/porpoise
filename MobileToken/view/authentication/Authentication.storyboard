@@ -76,7 +76,7 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز برنامه" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز برنامه" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="30" y="134" width="315" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>

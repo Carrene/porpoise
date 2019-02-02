@@ -155,7 +155,7 @@
                                     <constraint firstAttribute="height" constant="180" id="8UA-3B-NWa"/>
                                     <constraint firstItem="Xx4-zz-5hZ" firstAttribute="trailing" secondItem="bYH-B5-UKm" secondAttribute="trailing" id="ASM-JJ-jq5"/>
                                     <constraint firstItem="bYH-B5-UKm" firstAttribute="centerY" secondItem="Wp6-vC-o6G" secondAttribute="centerY" id="Bn1-Wq-8b6"/>
-                                    <constraint firstItem="bYH-B5-UKm" firstAttribute="width" secondItem="Wp6-vC-o6G" secondAttribute="width" multiplier="0.8" id="Exv-Bp-LtM"/>
+                                    <constraint firstItem="bYH-B5-UKm" firstAttribute="width" secondItem="Wp6-vC-o6G" secondAttribute="width" multiplier="0.9" id="Exv-Bp-LtM"/>
                                     <constraint firstAttribute="width" constant="315" id="GE6-f7-lST"/>
                                     <constraint firstItem="bYH-B5-UKm" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" constant="20" id="JVp-Kn-N54"/>
                                     <constraint firstAttribute="trailing" secondItem="E24-Uc-PUg" secondAttribute="trailing" constant="30" id="REC-9b-xEk"/>

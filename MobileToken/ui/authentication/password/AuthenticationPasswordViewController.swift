@@ -33,6 +33,7 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     @IBAction func textFieldPasswordEditingChanged(_ sender: UITextField) {
        
     }
+    
     @IBAction func onEditDidEnd(_ sender: UITextField) {
          self.authenticationPasswordPresenter?.checkPasswordCorrection(password: sender.text!)
     }
