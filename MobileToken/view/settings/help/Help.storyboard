@@ -47,7 +47,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="راهنمای برنامه" id="CBa-pQ-9PU">
                         <barButtonItem key="backBarButtonItem" title=" " id="2qt-C5-HFT">
-                            <color key="tintColor" name="eyeCatching"/>
+                            <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
