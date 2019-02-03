@@ -36,6 +36,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         countDownTimer.removeAll()
     }
     func initUIComponents() {
+        labelFirstRegister.isHidden = true
         buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: 220, height: 40))
         buttonDeleteFirstToken?.layer.cornerRadius = 10
         buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
@@ -261,7 +262,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func noBank() {
-        
+        labelFirstRegister.isHidden = false
     }
     
     func initCardListPagerView() {
@@ -269,13 +270,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         if pagerList.count > 0 {
             labelFirstRegister.isHidden = true
             vScroll.subviews.forEach({ $0.removeFromSuperview() })
-            
             for i in pagerList.indices {
                 let screenBounds =  UIScreen.main.bounds
-                
+                //TODO: Scrool view size!!! check
                 let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 251)
                 let cardListPagerView = FSPagerView(frame: frame)
-                y += 330
+                y += 270
                 
                 let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
                 cardListPagerView.register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
@@ -297,10 +297,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 }
                 cardListPagerView.reloadData()
             }
-        }
-        else {
-            labelFirstRegister.isHidden = false
-            
         }
     }
     

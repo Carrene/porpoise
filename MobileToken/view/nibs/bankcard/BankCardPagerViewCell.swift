@@ -44,6 +44,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func initDefaultView() {
         let viewFirstRow = AddPasswordViewDesignable()
+        viewFirstRow.labelAddOtp.text = R.string.localizable.lb_add_first_otp()
         viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width, height: 40)
         let tapImportFirstPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
         tapImportFirstPass.cryptoModuleId = Token.CryptoModuleId.one
@@ -51,6 +52,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
         viewFirstOtp.addSubview(viewFirstRow)
         
         let viewSecondRow = AddPasswordViewDesignable()
+        viewSecondRow.labelAddOtp.text = R.string.localizable.lb_add_second_otp()
         viewSecondRow.frame.size = CGSize(width: viewSecondOtp.layer.frame.width, height: 40)
         
         let tapImportSecondPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
@@ -60,7 +62,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     }
     
     func set(card: Card) {
-        
+        self.vCard.imageLogo.image = BankUtil.getLogo(bank: card.bank!)
         if timerFirst != nil {
             timerFirst?.invalidate()
             self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerFirst!)
@@ -136,6 +138,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let second = Float(time.second!)
         let currentProgress = Float(second).truncatingRemainder(dividingBy: (token.timeInterval!)) / token.timeInterval!
         view.vProgress.progress = currentProgress
+        view.vProgress.progressTintColor = R.color.primary()
+        view.vComponent.backgroundColor = R.color.secondaryDark()
         let diff = token.timeInterval! - currentProgress
         
         if token.cryptoModuleId == Token.CryptoModuleId.one {
