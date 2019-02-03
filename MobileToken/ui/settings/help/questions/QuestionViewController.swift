@@ -1,19 +1,28 @@
 import UIKit
 import WebKit
 
-class QuestionViewController: BaseViewController {
+class QuestionViewController: BaseViewController,WKNavigationDelegate {
     
     @IBOutlet var webView: WKWebView!
-    private var index : Int?
+    private var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+        webView = WKWebView(frame: view.bounds, configuration: configuration)
+        view.addSubview(webView)
         let url = Bundle.main.url(forResource: "answer", withExtension: "html")
         let request = URLRequest(url: url!)
         webView.load(request)
-        //webView.evaluateJavaScript("window.location.hash='q5'")
+        webView.navigationDelegate = self
 
-
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("scrollToId('q\(index)')")
     }
     
     
@@ -29,8 +38,4 @@ class QuestionViewController: BaseViewController {
         
     }
     
-    
-    
-    
-
 }
