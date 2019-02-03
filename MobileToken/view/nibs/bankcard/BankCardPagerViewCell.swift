@@ -63,6 +63,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func set(card: Card) {
         self.vCard.imageLogo.image = BankUtil.getLogo(bank: card.bank!)
+        
         if timerFirst != nil {
             timerFirst?.invalidate()
             self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerFirst!)
