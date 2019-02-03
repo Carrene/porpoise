@@ -1,4 +1,5 @@
 import UIKit
+import DTTJailbreakDetection
 
 class MainViewController: UINavigationController {
 
@@ -16,16 +17,21 @@ class MainViewController: UINavigationController {
     }
    
     func initPages() {
-        if authentication == nil {
-            if UserDefaults.standard.bool(forKey: "hasWizardShown") {
-                navigatoToAuthenticationDefinition()
+        if DTTJailbreakDetection.isJailbroken() {
+            sendJailBrokenDeviceToServer()
+        }
+        else{
+            if authentication == nil {
+                if UserDefaults.standard.bool(forKey: "hasWizardShown") {
+                    navigatoToAuthenticationDefinition()
+                }
+                else {
+                    intro()
+                }
             }
             else {
-                intro()
+                navigateToAuthentication()
             }
-        }
-        else {
-            navigateToAuthentication()
         }
     }
     
@@ -71,6 +77,26 @@ class MainViewController: UINavigationController {
         if segue.identifier == R.segue.mainViewController.navigateToTabbar.identifier {
             (segue.destination as! TabBarViewController).selectedIndex = 1
         }
+    }
+    
+    fileprivate func sendJailBrokenDeviceToServer() {
+        let alertController : UIAlertController = UIAlertController(title: NSLocalizedString("ad_root_title", comment: ""), message: nil, preferredStyle: .alert)
+        alertController.view.backgroundColor = UIColor.white
+        alertController.view.layer.cornerRadius = 8.0
+        let user = User.load()
+        if(user.getPhoneNumber() != nil && user.getPhoneNumber()?.characters.count != 0){
+            
+            NSLogv("Jailbreak device %@ %@", getVaList([user.getPhoneNumber()!,DeviceUtil.getDeviceName()]))
+        }
+        var myMutableString = NSMutableAttributedString()
+        myMutableString = NSMutableAttributedString(string: NSLocalizedString("ad_root_message", comment: "") as String, attributes: [NSFontAttributeName:UIFont(name: "IRANSansMobile(FaNum)", size: 12.0)!])
+        alertController.setValue(myMutableString, forKey: "attributedTitle")
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("ad_root_button", comment: ""), style: UIAlertActionStyle.default)
+        { action -> Void in
+            
+            exit(0)}
+        )
+        present(alertController, animated: true, completion: nil)
     }
 
 }

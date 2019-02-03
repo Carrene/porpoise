@@ -22,7 +22,7 @@ target 'MobileToken' do
     pod 'XLActionController/Spotify'
     pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.4.0'
     pod 'InputMask', '~> 3.4.0'
-    pod 'DTTJailbreakDetection'
+    pod 'DTTJailbreakDetection', '~> 0.4.0'
     
     target 'MobileTokenTests' do
         inherit! :search_paths

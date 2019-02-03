@@ -43,7 +43,7 @@ DEPENDENCIES:
   - CountryPickerView (~> 2.2.0)
   - CryptoSwift (~> 0.13.0)
   - DeviceKit (~> 1.9.0)
-  - DTTJailbreakDetection
+  - DTTJailbreakDetection (~> 0.4.0)
   - FSPagerView (~> 0.8.1)
   - HUIPatternLockView-Swift (~> 2.0.1)
   - InputMask (~> 3.4.0)
@@ -118,6 +118,6 @@ SPEC CHECKSUMS:
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
-PODFILE CHECKSUM: 4098e5e9c5dbaa4f203d2ce0beeca6d0d1aa2e99
+PODFILE CHECKSUM: 15ce194cae3f02cecbf0217f35a1b63ed92bb457
 
 COCOAPODS: 1.5.3
