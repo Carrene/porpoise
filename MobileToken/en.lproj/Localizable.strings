@@ -42,6 +42,9 @@
 "everywhere_firstpassword" = "رمز اول";
 "everywhere_secondpassword" = "رمز دوم";
 "lb_app_guide" = "راهنمای برنامه";
+"lb_add_new_bank" = "افزودن بانک جدید";
+"lb_add_first_otp" = "افزودن رمز اول";
+"lb_add_second_otp" = "افزودن رمز دوم";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";

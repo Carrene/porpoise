@@ -33,7 +33,7 @@
             <rect key="frame" x="0.0" y="0.0" width="245" height="55"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-MO-ltC">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-MO-ltC">
                     <rect key="frame" x="205" y="7.5" width="35" height="40"/>
                     <color key="backgroundColor" name="primary"/>
                     <constraints>
@@ -48,21 +48,21 @@
                     <subviews>
                         <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="b1r-eL-wJl" customClass="UIProgressView">
                             <rect key="frame" x="0.0" y="0.0" width="200" height="55"/>
-                            <color key="backgroundColor" name="primary"/>
-                            <color key="tintColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="secondaryDark"/>
+                            <color key="tintColor" name="primary"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمزاول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gge-C6-Uez" userLabel="lbPass">
-                            <rect key="frame" x="155" y="0.0" width="45" height="55"/>
+                            <rect key="frame" x="140" y="0.0" width="60" height="55"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="45" id="tKG-9C-0FE"/>
+                                <constraint firstAttribute="width" constant="60" id="tKG-9C-0FE"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۲۳۴" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-MZ-xf5" userLabel="lbOtp">
-                            <rect key="frame" x="0.0" y="6" width="150" height="49"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۲۳۴" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-MZ-xf5" userLabel="lbOtp">
+                            <rect key="frame" x="20" y="6" width="115" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="24"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +72,7 @@
                     <color key="backgroundColor" name="primary"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="gge-C6-Uez" secondAttribute="trailing" id="4Yn-aS-rcW"/>
-                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" id="8FC-gw-GzE"/>
+                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" constant="20" id="8FC-gw-GzE"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" constant="6" id="SnP-ty-tvc"/>
                         <constraint firstItem="gge-C6-Uez" firstAttribute="leading" secondItem="Ne0-MZ-xf5" secondAttribute="trailing" constant="5" id="aIp-Vi-23H"/>
                         <constraint firstAttribute="bottom" secondItem="Ne0-MZ-xf5" secondAttribute="bottom" id="aoP-YA-kHj"/>
@@ -97,13 +97,16 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="60" y="130.88455772113943"/>
+            <point key="canvasLocation" x="110" y="124"/>
         </view>
     </objects>
     <resources>
         <image name="copy" width="15" height="18"/>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryDark">
+            <color red="0.0" green="0.77254901960784317" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

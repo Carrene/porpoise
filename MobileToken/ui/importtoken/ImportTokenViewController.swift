@@ -3,6 +3,7 @@ import XLActionController
 
 class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellXibProtocol, ImportTokenViewProtocol {
    
+    @IBOutlet weak var btConfirm: UIBarButtonItem!
     @IBOutlet var viewCard: CardCellXibView!
     @IBOutlet var textViewAtmCode: UITextView!
     @IBOutlet var labelAtmCode: UILabel!
@@ -28,10 +29,23 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     }
     
     func initUIComponents() {
+        btConfirm.isEnabled = false
         buttonAddCode.layer.cornerRadius = 10
+        self.buttonAddCode.backgroundColor = R.color.borderColor()
         viewCard.layer.cornerRadius = 10
+        viewCard.contentView.backgroundColor = R.color.primary()
+        viewCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewCard.layer.borderWidth = 1
+        viewCard.imagePlus.isHidden = true
+        viewCard.buttonActionSheet.isEnabled = false
+        
         textViewAtmCode.layer.cornerRadius = 10
         textViewSmsCode.layer.cornerRadius = 10
+        if self.cryptoModuleId == Token.CryptoModuleId.one {
+            self.viewCard.labelBottomTitle.text = R.string.localizable.everywhere_firstpassword()
+        } else {
+            self.viewCard.labelBottomTitle.text = R.string.localizable.everywhere_secondpassword()
+        }
         textViewAtmCode.delegate = self
         textViewSmsCode.delegate = self
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
@@ -98,10 +112,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
    
     @IBAction func onButtonAddCode(_ sender: UIButton) {
         if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
-            UIHelper.showSpecificSnackBar(message: "ورودی خود را کنترل کنید", color: R.color.errorColor()!)
+            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorColor()!)
         } else {
             let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
-            presenter?.importToken(tokenPacket: tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
+            btConfirm.isEnabled = true
+            presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
         }
     }
     
@@ -109,4 +124,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
         
     }
     
+    @IBAction func onConfirmClicked(_ sender: Any) {
+    }
 }

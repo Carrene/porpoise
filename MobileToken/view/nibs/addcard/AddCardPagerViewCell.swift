@@ -22,8 +22,9 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCard.layer.borderWidth = 0.5
         viewCard.labelCardName.text = R.string.localizable.lb_cardName()
-        viewCard.buttonActionSheet.isHidden = true
-        viewCard.labelBottomTitle.isHidden = true
+        viewCard.buttonActionSheet.isEnabled = false
+        viewCard.labelBottomTitle.text = R.string.localizable.lb_add_new_bank()
+        viewCard.stackViewCardNumber.isHidden = true
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewAddCard.layer.borderWidth = 0.5
@@ -41,6 +42,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
     
     func setBank(bank:Bank) {
         self.bank = bank
+        self.viewCard.imageLogo.image = BankUtil.getLogo(bank: bank)
         viewCard.labelBankName.text = self.bank!.name
     }
     

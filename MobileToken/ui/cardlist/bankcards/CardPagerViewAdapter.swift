@@ -7,10 +7,12 @@ protocol CardPagerViewDelegate {
     func addCard(cardName:String,selectedBank:Bank)
     func actionButtonClicked()
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
+    func removeTimerInstance(timer: Timer)
+    func saveTimerInstance(timer: Timer)
 }
 
 class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol,CardCellXibProtocol , BankCardPagerViewDelegate{
-    
+
     var cardPagerViewDelegate: CardPagerViewDelegate?
     var selectedIndex = 0
     var bank = Bank()
@@ -87,6 +89,14 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId) {
         self.cardPagerViewDelegate?.importToken(card: card, cryptoModuleId: cryptoModuleId)
+    }
+    
+    func saveTimerInstance(timer: Timer) {
+        self.cardPagerViewDelegate?.saveTimerInstance(timer: timer)
+    }
+    
+    func removeTimerInstance(timer: Timer) {
+        self.cardPagerViewDelegate?.removeTimerInstance(timer: timer)
     }
     
     
