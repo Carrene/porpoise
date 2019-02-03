@@ -80,23 +80,25 @@ class MainViewController: UINavigationController {
     }
     
     fileprivate func sendJailBrokenDeviceToServer() {
-        let alertController : UIAlertController = UIAlertController(title: NSLocalizedString("ad_root_title", comment: ""), message: nil, preferredStyle: .alert)
-        alertController.view.backgroundColor = UIColor.white
-        alertController.view.layer.cornerRadius = 8.0
-        let user = User.load()
-        if(user.getPhoneNumber() != nil && user.getPhoneNumber()?.characters.count != 0){
-            
-            NSLogv("Jailbreak device %@ %@", getVaList([user.getPhoneNumber()!,DeviceUtil.getDeviceName()]))
-        }
-        var myMutableString = NSMutableAttributedString()
-        myMutableString = NSMutableAttributedString(string: NSLocalizedString("ad_root_message", comment: "") as String, attributes: [NSFontAttributeName:UIFont(name: "IRANSansMobile(FaNum)", size: 12.0)!])
-        alertController.setValue(myMutableString, forKey: "attributedTitle")
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("ad_root_button", comment: ""), style: UIAlertActionStyle.default)
-        { action -> Void in
-            
+        
+        let attributedString = NSAttributedString(string: R.string.localizable.alert_root_message(), attributes: [
+            NSAttributedString.Key.font : R.font.iranSansMobile(size: 16)!,
+            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
+            ])
+        
+        let alert = UIAlertController(title:"", message: R.string.localizable.alert_root_message(), preferredStyle: .alert)
+        
+        alert.setValue(attributedString, forKey: "attributedMessage")
+        
+        alert.addAction(UIAlertAction(title: R.string.localizable.ok(), style: .destructive, handler: 
+        { (action : UIAlertAction!) -> Void in
             exit(0)}
-        )
-        present(alertController, animated: true, completion: nil)
+        ))
+        
+        self.present(alert, animated: true, completion:{})
+        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.layer.cornerRadius = 10
+        subview.backgroundColor = R.color.primaryLight()
     }
 
 }
