@@ -224,8 +224,8 @@
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="eOF-Tu-q1Q"/>
                                 <exclude reference="EFT-av-ayl"/>
+                                <exclude reference="eOF-Tu-q1Q"/>
                             </mask>
                         </variation>
                     </view>
@@ -233,13 +233,18 @@
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
-                        <barButtonItem key="backBarButtonItem" id="xVv-zH-gB0">
-                            <color key="tintColor" name="secondary"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="nAV-Jx-a3S"/>
+                        <barButtonItem key="rightBarButtonItem" title="تایید" id="gx1-xG-geb">
+                            <color key="tintColor" name="eyeCatching"/>
+                            <connections>
+                                <action selector="onButtonRegister:" destination="t2g-dI-h8H" id="2NK-Jb-P3Q"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
+                        <outlet property="confirmBarButton" destination="gx1-xG-geb" id="35l-92-m12"/>
                         <outlet property="countryPickerView" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
                         <outlet property="labelAlreadyRegistered" destination="CC4-XA-VAv" id="B62-Xk-gMO"/>
                         <outlet property="labelChooseCountry" destination="Xx4-zz-5hZ" id="5vS-G7-pIZ"/>
@@ -286,7 +291,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
                                                 <rect key="frame" x="0.0" y="5" width="255" height="35"/>
-                                                <color key="backgroundColor" name="primaryDark"/>
+                                                <color key="backgroundColor" name="primary"/>
                                                 <color key="tintColor" name="buttonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="255" id="jta-so-Sho"/>
@@ -309,7 +314,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" name="primaryLight"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="2VD-5F-1WN"/>
                                     <constraint firstItem="G9q-D2-cf1" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="top" constant="20" id="9jY-w0-7mk"/>
@@ -336,7 +341,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="primaryLight"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <constraints>
                                     <constraint firstItem="rNP-va-IUg" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="LYi-Nx-ITp"/>
                                     <constraint firstAttribute="width" constant="315" id="bUc-B8-zRB"/>
@@ -358,7 +363,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA"/>
+                    <navigationItem key="navigationItem" title="فعال سازی" id="3L1-2P-FFA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="DSW-cS-5rQ"/>
+                        <barButtonItem key="rightBarButtonItem" title="تایید" id="Hmr-eP-5ar">
+                            <color key="tintColor" name="eyeCatching"/>
+                            <connections>
+                                <action selector="onConfirmButton:" destination="zAA-ph-Mfk" id="Mp5-YO-R1V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
@@ -398,9 +411,6 @@
         </namedColor>
         <namedColor name="primaryDark">
             <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryLight">
-            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
             <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

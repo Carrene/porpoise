@@ -29,7 +29,13 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func initUIComponents() {
-        viewTextfield.layer.cornerRadius = 10
+        viewTextfield.layer.cornerRadius = 5
+        viewTextfield.layer.borderColor = R.color.buttonColor()?.cgColor
+        viewTextfield.layer.borderWidth = 1
+        viewChangeNumber.layer.borderColor = R.color.buttonColor()?.cgColor
+        viewChangeNumber.layer.borderWidth = 1
+        viewCode.layer.borderWidth = 1
+        viewCode.layer.borderColor = R.color.borderColor()?.cgColor
         labelTitle.font = UIHelper.iranSansBold(size: 16)
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
@@ -131,6 +137,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     
     func segue() {
         performSegue(withIdentifier: R.segue.phoneConfirmationViewController.phoneConfirmationToCardList, sender: self)
+    }
+    @IBAction func onConfirmButton(_ sender: UIBarButtonItem) {
+        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
+        if textFieldCode.text != "" && self.phoneNumber != "" {
+            presenter?.bind(user:user)
+        }
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {

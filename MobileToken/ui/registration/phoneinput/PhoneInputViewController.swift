@@ -17,6 +17,9 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     @IBOutlet var labelAlreadyRegistered: UILabel!
     @IBOutlet var labelPhone: UILabel!
     @IBOutlet var viewCountry: UIView!
+    @IBOutlet var confirmBarButton: UIBarButtonItem!
+    
+    
     private var inputPhone : String!
     private var maskedDelegate: MaskedTextFieldDelegate!
     private var banks:[Bank]!
@@ -52,6 +55,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
         viewPhone.layer.cornerRadius = 5
+        
         inputMask()
     }
     
@@ -100,6 +104,18 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
+//        if inputPhone != nil && inputPhone.count > 0 {
+//            if selectedBank != nil {
+//                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
+//            }
+//            else {
+//                selectedBank = banks.first
+//                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
+//            }
+//        }
+    }
+    
+    @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
@@ -109,16 +125,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
         }
-    }
-    
-    @IBAction func onButtonRegister(_ sender: UIButton) {
-//        if textFieldPhoneNumber.text != "" {
-//            buttonRegister.isEnabled = true
-//            self.presenter.claim(phone: labelPhoneCode.text!+textFieldPhoneNumber.text!)
-//        }
-//        else {
-//            buttonRegister.isEnabled = false
-//        }
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
