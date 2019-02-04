@@ -98,15 +98,15 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         self.inputPhone = value
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.hasPrefix("0") {
-            textFieldPhoneNumber.text?.remove(at: (textFieldPhoneNumber.text?.startIndex)!)
-            return false
-        }
-        else {
-            return true
-        }
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if string.hasPrefix("0") && string.count == 0{
+//            textFieldPhoneNumber.text?.remove(at: (textFieldPhoneNumber.text?.startIndex)!)
+//            return false
+//        }
+//        else {
+//            return true
+//        }
+//    }
     
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
