@@ -271,30 +271,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Gr-hPV" userLabel="lbTitle">
-                                <rect key="frame" x="81.5" y="76" width="157" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" name="buttonColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
-                                <rect key="frame" x="2.5" y="116" width="315" height="110"/>
+                                <rect key="frame" x="16" y="77" width="288" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
-                                        <rect key="frame" x="144" y="20" width="27" height="27"/>
+                                        <rect key="frame" x="130.5" y="20" width="27" height="27"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-Ch-7PK" userLabel="ViewTextField">
-                                        <rect key="frame" x="30" y="52" width="255" height="40"/>
+                                        <rect key="frame" x="14.5" y="52" width="259" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
-                                                <rect key="frame" x="0.0" y="5" width="255" height="35"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="کد فعال سازی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
+                                                <rect key="frame" x="0.0" y="5" width="259" height="35"/>
                                                 <color key="backgroundColor" name="primary"/>
                                                 <color key="tintColor" name="buttonColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="255" id="jta-so-Sho"/>
                                                     <constraint firstAttribute="height" constant="35" id="rG8-s9-F8q"/>
                                                 </constraints>
                                                 <color key="textColor" name="buttonColor"/>
@@ -306,36 +299,50 @@
                                                 </connections>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" name="primaryDark"/>
+                                        <color key="backgroundColor" name="primary"/>
                                         <constraints>
+                                            <constraint firstItem="frk-Zy-hGa" firstAttribute="width" secondItem="PmH-Ch-7PK" secondAttribute="width" id="4Pq-es-4Wx"/>
                                             <constraint firstAttribute="bottom" secondItem="frk-Zy-hGa" secondAttribute="bottom" id="Srg-ri-SIS"/>
                                             <constraint firstItem="frk-Zy-hGa" firstAttribute="centerX" secondItem="PmH-Ch-7PK" secondAttribute="centerX" id="cZc-FA-pt7"/>
                                             <constraint firstAttribute="height" constant="40" id="sf6-zW-dJR"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی ارسال شده را وارد کنید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="332-EN-mwW" userLabel="label enter code">
+                                        <rect key="frame" x="112" y="94" width="161.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="315" id="2VD-5F-1WN"/>
+                                    <constraint firstAttribute="bottom" secondItem="332-EN-mwW" secondAttribute="bottom" constant="16" id="363-YZ-QK3"/>
                                     <constraint firstItem="G9q-D2-cf1" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="top" constant="20" id="9jY-w0-7mk"/>
+                                    <constraint firstItem="PmH-Ch-7PK" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="DbU-ta-IUZ"/>
+                                    <constraint firstItem="332-EN-mwW" firstAttribute="trailing" secondItem="PmH-Ch-7PK" secondAttribute="trailing" id="JDV-oO-1rt"/>
                                     <constraint firstItem="G9q-D2-cf1" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="LIP-42-pWd"/>
-                                    <constraint firstItem="PmH-Ch-7PK" firstAttribute="leading" secondItem="zi8-T5-FwR" secondAttribute="leading" constant="30" id="T3L-Xg-4YT"/>
                                     <constraint firstAttribute="height" constant="110" id="WEk-CA-hH6"/>
-                                    <constraint firstAttribute="trailing" secondItem="PmH-Ch-7PK" secondAttribute="trailing" constant="30" id="Wgv-OF-oRT"/>
                                     <constraint firstItem="PmH-Ch-7PK" firstAttribute="top" secondItem="G9q-D2-cf1" secondAttribute="bottom" constant="5" id="phH-MK-fnI"/>
+                                    <constraint firstItem="PmH-Ch-7PK" firstAttribute="width" secondItem="zi8-T5-FwR" secondAttribute="width" multiplier="0.9" id="u4Q-lE-yvZ"/>
+                                    <constraint firstItem="332-EN-mwW" firstAttribute="top" secondItem="PmH-Ch-7PK" secondAttribute="bottom" constant="2" id="wYv-nQ-APm"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WEk-CA-hH6"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
-                                <rect key="frame" x="2.5" y="236" width="315" height="40"/>
+                                <rect key="frame" x="16" y="217" width="288" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تغییر شماره" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
-                                        <rect key="frame" x="20" y="9.5" width="77" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="           تغییر شماره            " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="secondary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(۰۵:۰۰)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNP-va-IUg" userLabel="lbCounter">
-                                        <rect key="frame" x="248" y="7.5" width="47" height="25"/>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(۰۵:۰۰)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNP-va-IUg" userLabel="lbCounter">
+                                        <rect key="frame" x="144" y="0.0" width="144" height="40"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <color key="textColor" name="eyeCatching"/>
                                         <nil key="highlightedColor"/>
@@ -343,22 +350,26 @@
                                 </subviews>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
+                                    <constraint firstItem="rNP-va-IUg" firstAttribute="width" secondItem="1UJ-1q-E33" secondAttribute="width" constant="-20" id="6ue-9E-iDy"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="width" secondItem="qBh-yJ-CU2" secondAttribute="width" multiplier="0.5" constant="20" id="790-WT-If3"/>
                                     <constraint firstItem="rNP-va-IUg" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="LYi-Nx-ITp"/>
-                                    <constraint firstAttribute="width" constant="315" id="bUc-B8-zRB"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="height" secondItem="qBh-yJ-CU2" secondAttribute="height" id="fJC-Ut-bh2"/>
                                     <constraint firstAttribute="height" constant="40" id="hZe-wd-Q5U"/>
-                                    <constraint firstAttribute="trailing" secondItem="rNP-va-IUg" secondAttribute="trailing" constant="20" id="rd3-Do-fEh"/>
-                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="leading" secondItem="qBh-yJ-CU2" secondAttribute="leading" constant="20" id="wWM-pX-Gj8"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNP-va-IUg" secondAttribute="trailing" id="rd3-Do-fEh"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="leading" secondItem="qBh-yJ-CU2" secondAttribute="leading" id="wWM-pX-Gj8"/>
+                                    <constraint firstItem="rNP-va-IUg" firstAttribute="height" secondItem="1UJ-1q-E33" secondAttribute="height" id="xNv-Jz-HD2"/>
                                     <constraint firstItem="1UJ-1q-E33" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="xtE-0q-D6n"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="aEl-Gr-hPV" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="7TS-Ji-s9B"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="width" secondItem="oog-9L-98P" secondAttribute="width" multiplier="0.9" id="4gC-Ao-258"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="width" secondItem="oog-9L-98P" secondAttribute="width" multiplier="0.9" id="7z7-bZ-edO"/>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="8hZ-1P-GLw"/>
-                            <constraint firstItem="m28-i2-93v" firstAttribute="top" secondItem="aEl-Gr-hPV" secondAttribute="top" constant="-12" id="IvM-C8-527"/>
-                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="bottom" constant="10" id="SG3-Wh-Wmg"/>
-                            <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="aEl-Gr-hPV" secondAttribute="bottom" constant="20" id="Ve9-km-5au"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="DrW-Ii-H0b"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="m28-i2-93v" secondAttribute="top" constant="13" id="RQx-Jq-lyF"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="bottom" constant="16" id="SG3-Wh-Wmg"/>
                             <constraint firstItem="zi8-T5-FwR" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="Ywe-3J-7H9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
@@ -376,8 +387,8 @@
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
                         <outlet property="labelCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
+                        <outlet property="labelEnterCode" destination="332-EN-mwW" id="XUI-I5-zmn"/>
                         <outlet property="labelPhone" destination="G9q-D2-cf1" id="EIh-lD-9yS"/>
-                        <outlet property="labelTitle" destination="aEl-Gr-hPV" id="4Oa-mu-WZp"/>
                         <outlet property="textFieldCode" destination="frk-Zy-hGa" id="lPZ-p3-c4e"/>
                         <outlet property="viewChangeNumber" destination="qBh-yJ-CU2" id="FEz-5z-3Nd"/>
                         <outlet property="viewCode" destination="zi8-T5-FwR" id="Onm-en-ezx"/>
@@ -408,9 +419,6 @@
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryDark">
-            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
             <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
