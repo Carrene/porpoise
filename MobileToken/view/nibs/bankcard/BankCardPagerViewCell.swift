@@ -4,6 +4,8 @@ import FSPagerView
 
 protocol BankCardPagerViewDelegate {
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
+    func saveTimerInstance(timer: Timer)
+    func removeTimerInstance(timer: Timer)
 }
 
 class BankCardPagerViewCell: FSPagerViewCell {
@@ -14,9 +16,20 @@ class BankCardPagerViewCell: FSPagerViewCell {
     @IBOutlet var viewSecondOtp: UIView!
     var card: Card?
     var bankCardPagerViewDelegate: BankCardPagerViewDelegate?
+    var timerFirst: Timer?
+    var timerSecond: Timer?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+//        if timerFirst != nil && token.cryptoModuleId == Token.CryptoModuleId.one {
+//            timerFirst?.invalidate()
+//        }
+//
+//        if timerSecond != nil && token.cryptoModuleId == Token.CryptoModuleId.two {
+//            timerSecond?.invalidate()
+//        }
+        
+       
         vCard.layer.cornerRadius = 10
         vCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         vCard.layer.borderWidth = 0.5
@@ -31,6 +44,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func initDefaultView() {
         let viewFirstRow = AddPasswordViewDesignable()
+        viewFirstRow.labelAddOtp.text = R.string.localizable.lb_add_first_otp()
         viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width, height: 40)
         let tapImportFirstPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
         tapImportFirstPass.cryptoModuleId = Token.CryptoModuleId.one
@@ -38,6 +52,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
         viewFirstOtp.addSubview(viewFirstRow)
         
         let viewSecondRow = AddPasswordViewDesignable()
+        viewSecondRow.labelAddOtp.text = R.string.localizable.lb_add_second_otp()
         viewSecondRow.frame.size = CGSize(width: viewSecondOtp.layer.frame.width, height: 40)
         
         let tapImportSecondPass = ImportTokenTapGesture(target: self, action: #selector(BankCardPagerViewCell.addOtp(sender:)))
@@ -47,6 +62,21 @@ class BankCardPagerViewCell: FSPagerViewCell {
     }
     
     func set(card: Card) {
+        self.vCard.imageLogo.image = BankUtil.getLogo(bank: card.bank!)
+        
+        if timerFirst != nil {
+            timerFirst?.invalidate()
+            self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerFirst!)
+            print("invalidate 1")
+            
+        }
+        
+        if timerSecond != nil {
+            timerSecond?.invalidate()
+            self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerSecond!)
+            print("invalidate 2")
+        }
+        
         self.card = card
         let tokenList = card.TokenList
         if tokenList.count > 0 {
@@ -99,7 +129,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     func generateOtp(token: Token) -> String{
         var otp = token.generateTotp()
         otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        print(otp)
+        print("generate "+otp)
         return otp
     }
     
@@ -107,11 +137,21 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let calendar = Calendar.current
         let time=calendar.dateComponents([.hour,.minute,.second], from: Date())
         let second = Float(time.second!)
-//        view.vProgress.progress = (Float(second) % (token.timeInterval!)) / token.timeInterval!
         let currentProgress = Float(second).truncatingRemainder(dividingBy: (token.timeInterval!)) / token.timeInterval!
         view.vProgress.progress = currentProgress
+        view.vProgress.progressTintColor = R.color.primary()
+        view.vComponent.backgroundColor = R.color.secondaryDark()
         let diff = token.timeInterval! - currentProgress
-        Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
+        
+        if token.cryptoModuleId == Token.CryptoModuleId.one {
+            timerFirst = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
+            self.bankCardPagerViewDelegate?.saveTimerInstance(timer: timerFirst!)
+            print("new timer1")
+        } else if token.cryptoModuleId == Token.CryptoModuleId.two {
+            timerSecond = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
+            self.bankCardPagerViewDelegate?.saveTimerInstance(timer: timerSecond!)
+            print("new timer2")
+        }
     }
     
     @objc func timerHandler(timer: Timer) {
@@ -144,5 +184,9 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func setCardName(cardName:String) {
         vCard.labelCardName.text = cardName
+    }
+    
+    override func prepareForReuse() {
+       
     }
 }

@@ -32,14 +32,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="czo-z1-dRl">
-            <rect key="frame" x="0.0" y="0.0" width="335" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="335" height="356"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pN3-TI-KqC" userLabel="imgAddCard">
-                    <rect key="frame" x="0.0" y="44" width="335" height="62"/>
+                    <rect key="frame" x="0.0" y="44" width="335" height="278"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-9I-6w2" userLabel="vCard">
-                    <rect key="frame" x="0.0" y="44" width="335" height="62"/>
+                    <rect key="frame" x="0.0" y="44" width="335" height="278"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
                             <rect key="frame" x="20" y="10" width="40" height="40"/>
@@ -61,7 +61,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-WO-q3H" userLabel="buttonActionSheet">
-                            <rect key="frame" x="275" y="22" width="40" height="40"/>
+                            <rect key="frame" x="275" y="238" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="ZVS-CB-BNf"/>
                                 <constraint firstAttribute="height" constant="40" id="hzH-0N-1vV"/>
@@ -69,7 +69,7 @@
                             <state key="normal" image="more-dots"/>
                         </button>
                         <stackView opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-ax-72e" userLabel="svCardNumber">
-                            <rect key="frame" x="20" y="80" width="295" height="25"/>
+                            <rect key="frame" x="20" y="161.33333333333334" width="295" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-fa-mEH" userLabel="lb1">
                                     <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="25"/>
@@ -100,15 +100,8 @@
                                 <constraint firstAttribute="height" constant="25" id="Qem-K5-sLe"/>
                             </constraints>
                         </stackView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-qG-9Rd" userLabel="imageAdd">
-                            <rect key="frame" x="157.66666666666666" y="32" width="20" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="20" id="ASj-pg-JG7"/>
-                                <constraint firstAttribute="height" constant="20" id="med-bv-eln"/>
-                            </constraints>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دریافت رمزهای کارت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-1Y-Zmx">
-                            <rect key="frame" x="103.00000000000001" y="32" width="129.33333333333337" height="20"/>
+                            <rect key="frame" x="103.00000000000001" y="248" width="129.33333333333337" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="y4N-Uk-Jdp"/>
                             </constraints>
@@ -116,24 +109,32 @@
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-qG-9Rd" userLabel="imageAdd">
+                            <rect key="frame" x="157.66666666666666" y="129" width="20" height="20"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="ASj-pg-JG7"/>
+                                <constraint firstAttribute="height" constant="20" id="med-bv-eln"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="lUN-2e-ulq" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="2Er-mF-kyW"/>
-                        <constraint firstItem="fZI-ax-72e" firstAttribute="top" secondItem="lUN-2e-ulq" secondAttribute="bottom" constant="30" id="7A0-rB-2nR"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="7mn-71-bf2"/>
-                        <constraint firstItem="i6y-WO-q3H" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" id="8Gy-BS-TI2"/>
-                        <constraint firstItem="ms6-qG-9Rd" firstAttribute="centerX" secondItem="sWj-1Y-Zmx" secondAttribute="centerX" id="Awl-ts-028"/>
-                        <constraint firstItem="i6y-WO-q3H" firstAttribute="centerY" secondItem="sWj-1Y-Zmx" secondAttribute="centerY" id="CKA-XI-VYT"/>
                         <constraint firstItem="fZI-ax-72e" firstAttribute="leading" secondItem="RsV-rx-6jy" secondAttribute="leading" constant="20" id="Cg7-Yv-4qM"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="fZI-ax-72e" secondAttribute="trailing" constant="20" id="Ebe-cT-zrx"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="sZ2-Dk-Vth" secondAttribute="trailing" constant="20" id="LCq-oY-iyA"/>
+                        <constraint firstItem="ms6-qG-9Rd" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="LwV-PP-thK"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="centerY" secondItem="lUN-2e-ulq" secondAttribute="centerY" id="Nq5-0I-OAL"/>
-                        <constraint firstItem="ms6-qG-9Rd" firstAttribute="centerY" secondItem="sWj-1Y-Zmx" secondAttribute="centerY" id="O7a-f1-B1t"/>
                         <constraint firstItem="sZ2-Dk-Vth" firstAttribute="centerY" secondItem="HJy-qy-Uvt" secondAttribute="centerY" id="ODW-bA-VlR"/>
+                        <constraint firstItem="RsV-rx-6jy" firstAttribute="trailing" secondItem="i6y-WO-q3H" secondAttribute="trailing" constant="20" id="QZF-l0-Hch"/>
+                        <constraint firstItem="fZI-ax-72e" firstAttribute="centerY" secondItem="RsV-rx-6jy" secondAttribute="centerY" multiplier="1.25" id="QvJ-Kb-brz"/>
                         <constraint firstItem="RsV-rx-6jy" firstAttribute="bottom" secondItem="sWj-1Y-Zmx" secondAttribute="bottom" constant="10" id="Tb6-28-iRf"/>
                         <constraint firstItem="sWj-1Y-Zmx" firstAttribute="top" secondItem="fZI-ax-72e" secondAttribute="bottom" constant="25" id="YzR-Yz-jy7"/>
                         <constraint firstItem="lUN-2e-ulq" firstAttribute="top" secondItem="RsV-rx-6jy" secondAttribute="top" constant="10" id="oIC-8D-Bqt"/>
+                        <constraint firstItem="ms6-qG-9Rd" firstAttribute="centerY" secondItem="RsV-rx-6jy" secondAttribute="centerY" id="rhH-Gv-srF"/>
                         <constraint firstItem="sWj-1Y-Zmx" firstAttribute="top" secondItem="fZI-ax-72e" secondAttribute="bottom" constant="35" id="xId-JK-ok3"/>
+                        <constraint firstItem="i6y-WO-q3H" firstAttribute="centerY" secondItem="sWj-1Y-Zmx" secondAttribute="centerY" id="zNQ-32-iL0"/>
                         <constraint firstItem="sWj-1Y-Zmx" firstAttribute="centerX" secondItem="RsV-rx-6jy" secondAttribute="centerX" id="zPs-MO-yCF"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="RsV-rx-6jy"/>
@@ -157,7 +158,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="U2J-3b-ILO"/>
-            <point key="canvasLocation" x="182.40000000000001" y="75.112443778110944"/>
+            <point key="canvasLocation" x="181.8840579710145" y="77.008928571428569"/>
         </view>
     </objects>
     <resources>
