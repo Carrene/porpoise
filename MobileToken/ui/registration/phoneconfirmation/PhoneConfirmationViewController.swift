@@ -152,10 +152,10 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
-        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
-        if textFieldCode.text != "" && self.phoneNumber != "" {
-            presenter?.bind(user:user)
-        }
+//        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
+//        if textFieldCode.text != "" && self.phoneNumber != "" {
+//            presenter?.bind(user:user)
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
