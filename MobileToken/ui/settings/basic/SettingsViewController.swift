@@ -34,6 +34,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
         tableView.dataSource = adapter
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = R.color.primary()
+        
         tableView.reloadData()
     }
     

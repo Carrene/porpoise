@@ -5,12 +5,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     @IBOutlet var viewChangeNumber: UIView!
     @IBOutlet var textFieldCode: UITextField!
     @IBOutlet var viewCode: UIView!
-    @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelPhone: UILabel!
     @IBOutlet var labelChangeNumber: UILabel!
     @IBOutlet var labelCounter: UILabel!
     @IBOutlet var NavigationItemTitle: UINavigationItem!
     @IBOutlet var viewTextfield: UIView!
+    @IBOutlet var labelEnterCode: UILabel!
     
     private var selectedBank : Bank?
     private var presenter:PhoneConfirmationPresenterProtocol?
@@ -29,14 +29,26 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func initUIComponents() {
-        viewTextfield.layer.cornerRadius = 10
-        labelTitle.font = UIHelper.iranSansBold(size: 16)
+        viewTextfield.layer.cornerRadius = 5
+        viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
+        viewTextfield.layer.borderWidth = 1
+        viewChangeNumber.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewChangeNumber.layer.borderWidth = 1
+        viewCode.layer.borderWidth = 1
+        viewCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        labelChangeNumber.layer.backgroundColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        labelChangeNumber.layer.cornerRadius = 10
+        labelCounter.layer.backgroundColor = R.color.primary()?.cgColor
+        //labelCounter.layer.cornerRadius = 10
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
+        labelEnterCode.font = R.font.iranSansMobile(size: 12)
+        textFieldCode.attributedPlaceholder = NSAttributedString(string: "کد فعال سازی",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
     }
     
     func initListeners() {
@@ -131,6 +143,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     
     func segue() {
         performSegue(withIdentifier: R.segue.phoneConfirmationViewController.phoneConfirmationToCardList, sender: self)
+    }
+    @IBAction func onConfirmButton(_ sender: UIBarButtonItem) {
+        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
+        if textFieldCode.text != "" && self.phoneNumber != "" {
+            presenter?.bind(user:user)
+        }
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {

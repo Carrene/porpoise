@@ -40,11 +40,13 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
                 cell.vCell.backgroundColor = R.color.secondaryDark()
                 cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
                 cell.lmgLogo.image = R.image.lightBankAyandehLogo()
+                cell.lmgLogo.tintColor = R.color.buttonColor()
             }
             else {
-                cell.vCell.backgroundColor = R.color.secondary()
-                cell.vCell.layer.borderColor = R.color.secondary()?.cgColor
+                cell.vCell.backgroundColor = R.color.secondaryDark()
+                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
                 cell.lmgLogo.image = R.image.lightBankSaderatLogo()
+                cell.lmgLogo.tintColor = R.color.buttonColor()
             }
         }
         else {
@@ -53,12 +55,14 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
             if banks![indexPath.row].name! == "آینده" {
                 cell.lbBankName.textColor = R.color.secondaryDark()
                 cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
-                cell.lmgLogo.image = R.image.colorBankAyandehLogo()
+                cell.lmgLogo.image = R.image.lightBankAyandehLogo()
+                cell.lmgLogo.tintColor = R.color.secondaryDark()
             }
             else {
-                cell.lbBankName.textColor = R.color.secondary()
-                cell.vCell.layer.borderColor = R.color.secondary()?.cgColor
-                cell.lmgLogo.image = R.image.bankSaderatLogo()
+                cell.lbBankName.textColor = R.color.secondaryDark()
+                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
+                cell.lmgLogo.image = R.image.lightBankSaderatLogo()
+                cell.lmgLogo.tintColor = R.color.secondaryDark()
             }
         }
         return cell
