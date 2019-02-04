@@ -1,5 +1,6 @@
 
 import Foundation
+import TTGSnackbar
 class ImportTokenPresenter: ImportTokenPresenterProtokol{
     
     unowned let view: ImportTokenViewProtocol
@@ -10,11 +11,30 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
     
     func importToken(tokenPacket: String, card: Card, cryptoModuleId: Token.CryptoModuleId) {
         let token = Token(tokenPaket: tokenPacket, bank: card.bank, cryptoModuleId: cryptoModuleId)
-        let isSuccessful = token.parse()
-        if isSuccessful {
+//        let isSuccessful = token.parse()
+       
+        do {
+            try token.validate()
             card.TokenList.append(token)
-            card.TokenList.count
+//            card.TokenList.count
             updateCard(card: card)
+            
+        } catch ParseTokenException.InvalidChecksumException{
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch ParseTokenException.InvalidBankIdException {
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidbankid(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch ParseTokenException.InvalidCryptoModuleIdException {
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch ParseTokenException.NumberFormatException {
+            SnackBarHelper.init(message: R.string.localizable.everywhere_fail(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch ParseTokenException.InvalidKeyException {
+            SnackBarHelper.init(message: R.string.localizable.everywhere_fail(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch ParseTokenException.InvalidKeyException {
+            SnackBarHelper.init(message: R.string.localizable.everywhere_fail(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch ParseTokenException.IllegalStateException {
+            SnackBarHelper.init(message: R.string.localizable.everywhere_fail(), color: R.color.primaryLight()!, duration: .middle).show()
+        } catch {
+            SnackBarHelper.init(message: R.string.localizable.everywhere_fail(), color: R.color.primaryLight()!, duration: .middle).show()
         }
     }
     

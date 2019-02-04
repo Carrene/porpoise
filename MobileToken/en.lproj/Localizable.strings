@@ -20,6 +20,11 @@
 "sb_password_copied" = "پسورد کپی شد";
 "sb_check_your_input" = "ورودی خود را کنترل کنید";
 
+"sb_tokenimport_invalidkey" = "کلید اشتباه است";
+"sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است";
+"sb_tokenimport_invalidcryptomoduleid" = "تفاوت در نوع رم";
+"sb_tokenimport_invalidchecksum" = "عبارت ارزیابی اشتباه است";
+
 
 //passWordHint
 "enter_at_least_eight_characters" = "شامل حداقل ۸ کاراکتر";
@@ -93,3 +98,4 @@
 "alert_set_timezone" = "لطفا منطقه زمانی گوشی خود را بر روی حالت خودکار تنظیم کنید";
 "ok" = "باشد";
 
+"everywhere_fail" = "با خطا مواجه شد";

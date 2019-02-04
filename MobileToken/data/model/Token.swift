@@ -1,3 +1,13 @@
+enum ParseTokenException: Error {
+    case InvalidChecksumException
+    case InvalidBankIdException
+    case InvalidCryptoModuleIdException
+    case NumberFormatException
+    case InvalidKeyException
+    case NoSuchAlgorithmException
+    case IllegalStateException
+}
+
 import Foundation
 import ObjectMapper
 import ObjectMapper_Realm
@@ -68,7 +78,7 @@ class Token: Object, Mappable, NSCopying{
     }
     
     func parse() -> Bool {
-        
+    
         let tokenPlusIvPacketBytes = tokenPacket?.hexaToBytes()
         let iv = Array(tokenPlusIvPacketBytes![0..<16])
         let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes
@@ -76,38 +86,66 @@ class Token: Object, Mappable, NSCopying{
         
         let tokenPacketDecrypted = try! AES(key: secretBytes!, blockMode: CBC(iv: iv), padding: .pkcs5).decrypt(tokenPacketEncrypted)
         
+        let tokenPacketDecryptedWithoutChecksum = Array(tokenPacketDecrypted[0 ..< tokenPacketDecrypted.count - 4])
+        
+        self.version = Int(tokenPacketDecrypted[0])
+        if self.version == 1 {
+            let array : [UInt8] = Array(tokenPacketDecryptedWithoutChecksum[1 ..< 5])
+            var value : UInt32 = 0
+            let data = NSData(bytes: array, length: 4)
+            data.getBytes(&value, length: 4)
+            value = UInt32(bigEndian: value)
+            //TODO: check expiredate date
+            self.expireDate = "" + "\(value)"
+            self.cryptoModuleId = Token.CryptoModuleId(rawValue: Int(tokenPacketDecryptedWithoutChecksum[5]))
+            self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
+            self.timeInterval = Float(tokenPacketDecryptedWithoutChecksum[7])
+            self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
+            self.seed = Array(tokenPacketDecryptedWithoutChecksum[9 ..< 29])
+            self.name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[29 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
+            self.hashType = HashType.SHA1
+        }
+        return true
+    }
+    
+    func validate() throws {
+        
+        guard let tokenPlusIvPacketBytes =  tokenPacket?.hexaToBytes() else {
+            throw ParseTokenException.NumberFormatException
+        }
+        
+        let iv = Array(tokenPlusIvPacketBytes[0 ..< 16])
+        
+        guard let secretBytes = Data(base64Encoded: bank!.secret!)?.bytes else{
+            throw ParseTokenException.InvalidKeyException
+        }
+        let tokenPacketEncrypted = Array(tokenPlusIvPacketBytes[16 ..< tokenPlusIvPacketBytes.count])
+        guard let tokenPacketDecrypted = try? AES(key: secretBytes, blockMode: CBC(iv: iv), padding: .pkcs5).decrypt(tokenPacketEncrypted) else {
+            throw ParseTokenException.IllegalStateException
+        }
         let checksum = Array(tokenPacketDecrypted[tokenPacketDecrypted.count - 4 ..< tokenPacketDecrypted.count])
         let tokenPacketDecryptedWithoutChecksum = Array(tokenPacketDecrypted[0 ..< tokenPacketDecrypted.count - 4])
-        let checkSumString = String(bytes: checksum, encoding: .utf8)
-        let isValid = isChecksumValid(secret: secretBytes!, tokenpacket: tokenPacketDecryptedWithoutChecksum, checksum: checkSumString!)
-        if isValid {
-            self.version = Int(tokenPacketDecrypted[0])
-            if self.version == 1 {
-                let array : [UInt8] = Array(tokenPacketDecryptedWithoutChecksum[1 ..< 5])
-                var value : UInt32 = 0
-                let data = NSData(bytes: array, length: 4)
-                data.getBytes(&value, length: 4)
-                value = UInt32(bigEndian: value)
-                //TODO: check expiredate date
-                self.expireDate = "" + "\(value)"
-                self.cryptoModuleId = Token.CryptoModuleId(rawValue: Int(tokenPacketDecryptedWithoutChecksum[5]))
-//                let cryptoModuleId = Int(tokenPacketDecryptedWithoutChecksum[5])
-//                if let cryptoModule = self.cryptoModuleId, cryptoModule != CryptoModuleId(rawValue: cryptoModuleId){
-//                    return false
-//                }
-                self.otpLength = Int(tokenPacketDecryptedWithoutChecksum[6])
-                self.timeInterval = Float(tokenPacketDecryptedWithoutChecksum[7])
-                self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
-                if self.bankId != bank!.id {
-                    return false
-                }
-                self.seed = Array(tokenPacketDecryptedWithoutChecksum[9 ..< 29])
-                self.name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[29 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
-                self.hashType = HashType.SHA1
-            }
-            return true
+        guard let checksumString = String(bytes: checksum, encoding: .utf8) else{
+            throw ParseTokenException.InvalidChecksumException
         }
-        return false
+        let isValid = isChecksumValid(secret: secretBytes, tokenpacket: tokenPacketDecryptedWithoutChecksum, checksum: checksumString)
+        
+        if !isValid {
+            throw ParseTokenException.InvalidChecksumException
+        }
+        
+        self.version = Int(tokenPacketDecrypted[0])
+        if (version == 1) {
+            let cryptoModuleIdRawValue: Int = Int(tokenPacketDecryptedWithoutChecksum[5])
+            let cryptoModuleId = CryptoModuleId(rawValue: cryptoModuleIdRawValue)
+            if (self.cryptoModuleId != cryptoModuleId) {
+                throw ParseTokenException.InvalidCryptoModuleIdException
+            }
+            self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
+            if (self.bankId != self.bank?.id) {
+                throw ParseTokenException.InvalidBankIdException
+            }
+        }
     }
     
     func isChecksumValid(secret: [UInt8], tokenpacket: [UInt8], checksum: String) -> Bool {
