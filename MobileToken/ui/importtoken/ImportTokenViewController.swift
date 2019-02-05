@@ -49,7 +49,13 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
         textViewAtmCode.delegate = self
         textViewSmsCode.delegate = self
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        textViewAtmCode.layer.borderWidth = 1
+        textViewAtmCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        labelAtmCode.font = R.font.iranSansMobile(size: 12)
+        labelSmsCode.font = R.font.iranSansMobile(size: 12)
+        textViewSmsCode.layer.borderWidth = 1
+        textViewSmsCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         self.hideKeyboardWhenTappedAround()
         initBankCard()
     }
@@ -60,7 +66,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     
     func initBankCard() {
         viewCard.backgroundColor = R.color.secondaryDark()
-        viewCard.imageLogo.image = R.image.bankAyandehLogo()
+        viewCard.imageLogo.image = R.image.lightBankAyandehLogo()
         viewCard.labelBankName.text = "بانک آینده"
     }
     

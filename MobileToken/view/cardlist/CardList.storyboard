@@ -72,7 +72,9 @@
                     <tabBarItem key="tabBarItem" title="کارت ها" image="list-icon" id="TAT-Oz-QT1">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="لیست کارت ها" id="TqB-wM-dKr"/>
+                    <navigationItem key="navigationItem" title="لیست کارت ها" id="TqB-wM-dKr">
+                        <barButtonItem key="backBarButtonItem" title="  " id="tPo-SG-4Yc"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="labelFirstRegister" destination="pQv-6G-lYZ" id="hLU-W8-QZz"/>
@@ -90,7 +92,7 @@
                 <viewControllerPlaceholder storyboardName="ImportToken" id="CPa-E7-dNy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJN-Go-QPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="872"/>
+            <point key="canvasLocation" x="1484" y="909"/>
         </scene>
     </scenes>
     <resources>
