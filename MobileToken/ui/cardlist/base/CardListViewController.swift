@@ -78,11 +78,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func updateCardList(card: Card) {
         updatedCard = card
         UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-        //        for bank in banks! {
-        //            if let index = bank.cardList.index(where: {$0.id == card.id}) {
-        //                bank.cardList[index] = card
-        //            }
-        //        }
         initPagerList()
     }
     

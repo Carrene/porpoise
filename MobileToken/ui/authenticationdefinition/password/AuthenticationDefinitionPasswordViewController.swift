@@ -60,6 +60,14 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
+        if PasswordValidator.hasPasswordCapitalLetter(testStr: textField.text) {
+            var first = labelPasswordHint.text?.components(separatedBy: ",").first
+            
+        }
+        
+        
+        
+        
         if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
             textFieldConfirmPassword.text = nil

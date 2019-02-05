@@ -31,7 +31,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         textField.layer.cornerRadius = 10
         textField.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         textField.layer.borderWidth = 0.5
-        buttonAddCard.isEnabled = false
+        //buttonAddCard.isEnabled = false
         textField.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
     }
@@ -53,9 +53,9 @@ class AddCardPagerViewCell: FSPagerViewCell {
         }
     }
     
-    @IBAction func onEditingDidChanged(_ sender: UITextField) {
+    @IBAction func onDoneKeyboard(_ sender: UITextField) {
         if textField.text != nil {
-            buttonAddCard.isEnabled = true
+            //buttonAddCard.isEnabled = true
         }
     }
     
