@@ -45,17 +45,17 @@ class SettingAuthenticationDefinitionPatternViewController: UIViewController, Se
     }
     
     func showNotMatchError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_not_match(), color: R.color.errorColor()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_patterns_not_match(), color: R.color.errorDark()!)
 
     }
     
     func showTryForSecondTimeMessage() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.secondary()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.secondaryDark()!)
 
     }
     
     func showPatternMinPointError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_pattern_min_point_error(), color: R.color.errorColor()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_pattern_min_point_error(), color: R.color.errorDark()!)
 
     }
     

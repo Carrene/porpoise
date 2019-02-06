@@ -45,12 +45,12 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     }
     
     func showWrongPasswordError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorColor()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorDark()!)
     }
     
     func navigateToCardList() {
         self.authenticationDelegate?.navigateToCardList()
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.eyeCatching()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.secondaryDark()!)
     }
     
     func navigateToInputPhoneNumber() {

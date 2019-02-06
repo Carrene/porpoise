@@ -83,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="تکرار رمز" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6K0-Ct-2n1" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="30" y="120" width="260" height="40"/>
+                                <rect key="frame" x="30" y="160.5" width="260" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
@@ -109,7 +109,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر و یک عدد، یک حرف بزرگ و یک کاراکتر (؟*_=+%$#@) باشد" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B1-GI-j54" userLabel="labelPasswordHint">
-                                <rect key="frame" x="30" y="170" width="260" height="38.5"/>
+                                <rect key="frame" x="30" y="92" width="260" height="38.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز را دوباره وارد کنید" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6w-Si-ccv" userLabel="labelSecondPassword">
+                                <rect key="frame" x="189.5" y="202.5" width="100.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -134,10 +140,14 @@
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="RmU-gR-MWi"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="VoO-gX-iXl"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="top" secondItem="G0v-Up-gtc" secondAttribute="bottom" constant="30" id="XNR-jG-KVd"/>
+                            <constraint firstItem="Y6w-Si-ccv" firstAttribute="trailing" secondItem="6K0-Ct-2n1" secondAttribute="trailing" id="XQa-fg-9nQ"/>
+                            <constraint firstItem="6K0-Ct-2n1" firstAttribute="top" secondItem="0B1-GI-j54" secondAttribute="bottom" constant="30" id="Xp5-1D-88G"/>
                             <constraint firstItem="MVf-ih-ZVt" firstAttribute="leading" secondItem="mRQ-Oi-FUQ" secondAttribute="leading" constant="30" id="ZnW-7H-vbc"/>
                             <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" constant="30" id="aIu-h0-lzB"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" id="bAa-g3-aYT"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="top" secondItem="mRQ-Oi-FUQ" secondAttribute="top" constant="30" id="cW8-WO-kzE"/>
+                            <constraint firstItem="0B1-GI-j54" firstAttribute="top" secondItem="G0v-Up-gtc" secondAttribute="bottom" constant="2" id="dbp-dp-twf"/>
+                            <constraint firstItem="Y6w-Si-ccv" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="2" id="gRA-Pc-iXi"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="10" id="jz4-WT-Kod"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" id="kWI-WG-2vA"/>
                             <constraint firstItem="MVf-ih-ZVt" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="nAg-WR-XQr"/>
@@ -149,10 +159,15 @@
                             <mask key="subviews">
                                 <exclude reference="MVf-ih-ZVt"/>
                             </mask>
+                            <mask key="constraints">
+                                <exclude reference="jz4-WT-Kod"/>
+                                <exclude reference="XNR-jG-KVd"/>
+                            </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="labelPasswordHint" destination="0B1-GI-j54" id="r2p-Kw-YhZ"/>
+                        <outlet property="labelSecondPassword" destination="Y6w-Si-ccv" id="T4M-1V-Gz1"/>
                         <outlet property="textFieldConfirmPassword" destination="6K0-Ct-2n1" id="0Ci-hB-jeF"/>
                         <outlet property="textFieldPassword" destination="G0v-Up-gtc" id="CpT-DP-mPG"/>
                     </connections>
