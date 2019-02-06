@@ -48,7 +48,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         buttonDeleteFirstToken?.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
         buttonDeleteFirstToken?.addTarget(self, action: #selector(onbuttonDeleteFirstToken), for: .touchUpInside)
         
-        
         buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 104, width: 220, height: 40))
         buttonDeleteSecondToken?.layer.cornerRadius = 10
         buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
