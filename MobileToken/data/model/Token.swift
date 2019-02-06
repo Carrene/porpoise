@@ -116,9 +116,10 @@ class Token: Object, Mappable, NSCopying{
         
         let iv = Array(tokenPlusIvPacketBytes[0 ..< 16])
         
-        guard let secretBytes = Data(base64Encoded: bank!.secret!)?.bytes else{
+        guard let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes else{
             throw ParseTokenException.InvalidKeyException
         }
+//        let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes
         let tokenPacketEncrypted = Array(tokenPlusIvPacketBytes[16 ..< tokenPlusIvPacketBytes.count])
         guard let tokenPacketDecrypted = try? AES(key: secretBytes, blockMode: CBC(iv: iv), padding: .pkcs5).decrypt(tokenPacketEncrypted) else {
             throw ParseTokenException.IllegalStateException

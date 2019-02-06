@@ -54,4 +54,23 @@ class UIHelper {
     static func showSpecificSnackBar(message:String, color:UIColor, duration: TTGSnackbarDuration) {
         SnackBarHelper.init(message: message,color:color, duration: duration).show()
     }
+    
+    static func getMaskCardNumber(number: String) -> [String] {
+        //        var maskCardNumber = [String]()
+        var maskCardNumber = [String]()
+        let template = number
+        
+        let index1 = template.index(template.startIndex, offsetBy: 3)
+        var substring = template[...index1]
+        maskCardNumber.append(String(substring))
+        let index2 = template.index(template.startIndex, offsetBy: 4)
+        let index3 = template.index(template.startIndex, offsetBy: 5)
+        substring = template[index2...index3]
+        maskCardNumber.append(String(substring)+"**")
+        maskCardNumber.append("****")
+        let index4 = template.index(template.endIndex, offsetBy: -4)
+        substring = template[index4...]
+        maskCardNumber.append(String(substring))
+        return maskCardNumber
+    }
 }
