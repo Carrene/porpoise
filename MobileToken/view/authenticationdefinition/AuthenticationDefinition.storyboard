@@ -92,6 +92,9 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                <connections>
+                                    <action selector="onDoneKeyboard:" destination="Ei6-jL-L9f" eventType="editingDidEnd" id="IUY-fN-DVM"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0v-Up-gtc" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="30" y="50" width="260" height="40"/>

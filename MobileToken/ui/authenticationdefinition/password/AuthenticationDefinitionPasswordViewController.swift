@@ -24,7 +24,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     func initUIComponent() {
         self.hideKeyboardWhenTappedAround()
         textFieldPassword.addTarget(self, action: #selector(self.textFieldPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
-        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
+//        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
         textFieldConfirmPassword.layer.cornerRadius = 5
         textFieldConfirmPassword.isUserInteractionEnabled = false
         textFieldPassword.layer.cornerRadius = 5
@@ -60,15 +60,14 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         
     }
     
+    @IBAction func onDoneKeyboard(_ sender: Any) {
+        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
+    }
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
         if PasswordValidator.hasPasswordCapitalLetter(testStr: textField.text) {
             
-            
         }
-        
-        
-        
         
         if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
@@ -86,9 +85,9 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text))
     }
     
-    @objc func textFieldConfirmPasswordDidChange(_ textField: UITextField) {
-        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
-    }
+//    @objc func textFieldConfirmPasswordDidChange(_ textField: UITextField) {
+//        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
+//    }
     
     func showNotMatchError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_passwords_not_match(), color: R.color.errorDark()!)
