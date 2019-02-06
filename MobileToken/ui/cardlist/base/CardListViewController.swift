@@ -9,7 +9,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     private var pagerList = [CardPagerViewAdapter]()
     private var cardListPresenter : CardListPresenterProtocol?
-    let actionController = MobileTokenActionSheetController()
     private var banks : [Bank]?
     private var selectedCard:Card?
     private var updatedCard: Card?
@@ -20,8 +19,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIComponents()
-        initActionSheet()
-        
         self.cardListPresenter = CardListPresenter(view: self)
     }
     
@@ -80,20 +77,24 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         initPagerList()
     }
     
-    func initActionSheet() {
-        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert()})
-        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert()})
-        let deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert()})
+    func initActionSheet(card: Card) -> MobileTokenActionSheetController {
+        let actionController = MobileTokenActionSheetController()
+
+        let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert(card: card)})
+        let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
+        let deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
         actionController.addAction(deleteTokenAction)
+        return actionController
     }
     
-    func actionButtonClicked() {
+    func actionButtonClicked(card: Card) {
+        let actionController = initActionSheet(card: card)
         present(actionController, animated: true, completion: nil)
     }
     
-    func deleteTokenAlert() {
+    func deleteTokenAlert(card: Card) {
         let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
         let margin:CGFloat = 10.0
         let rect = CGRect(x: margin, y: margin, width: 335, height: 170)
@@ -135,7 +136,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
     }
     
-    @objc func onbuttonDeleteFirstToken() {
+    @objc func onbuttonDeleteFirstToken(sender: UIButton) {
         if !(buttonDeleteFirstToken?.isSelected)! {
             buttonDeleteFirstToken?.isSelected = true
             buttonDeleteFirstToken?.layer.borderColor = R.color.secondary()?.cgColor
@@ -161,7 +162,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     
     
-    func editCardAlert() {
+    func editCardAlert(card: Card) {
         let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobile(size: 14)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!.withAlphaComponent(0.5)
@@ -185,7 +186,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             let textView = (textField.subviews.first!)
             textView.backgroundColor = .clear
             textField.text = self.selectedCard?.cardName
-            
+
         }
         
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
@@ -210,7 +211,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         subview.backgroundColor = R.color.primaryLight()
     }
     
-    func deleteCardAlert() {
+    func deleteCardAlert(card: Card) {
         let attributedString = NSAttributedString(string: R.string.localizable.lb_are_you_sure(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
@@ -220,7 +221,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteCardAlert.setValue(attributedString, forKey: "attributedMessage")
         
         let deleteAction = UIAlertAction(title: R.string.localizable.delete_card() , style: .default , handler: { alert -> Void in
-            self.cardListPresenter?.deleteCard(identifier: (self.selectedCard?.id)!)
+            self.cardListPresenter?.deleteCard(identifier: (card.id)!)
         })
         
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
@@ -314,13 +315,3 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
 }
-
-extension Array where Element: Equatable {
-    mutating func remove(_ obj: Element) {
-        if let index = self.index(where: { $0 == obj }) {
-            self.remove(at: index)
-            //continue do: arrPickerData.append(...)
-        }
-    }
-}
-

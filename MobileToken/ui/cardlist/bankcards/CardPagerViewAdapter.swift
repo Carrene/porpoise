@@ -5,13 +5,13 @@ import FSPagerView
 protocol CardPagerViewDelegate {
     func selectedCard(card: Card)
     func addCard(cardName:String,selectedBank:Bank)
-    func actionButtonClicked()
+    func actionButtonClicked(card: Card)
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
     func removeTimerInstance(timer: Timer)
     func saveTimerInstance(timer: Timer)
 }
 
-class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol,CardCellXibProtocol , BankCardPagerViewDelegate{
+class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource, AddCardPagerViewCellProtocol, BankCardPagerViewDelegate{    
 
     var cardPagerViewDelegate: CardPagerViewDelegate?
     var selectedIndex = 0
@@ -58,7 +58,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             else {
             cell.setCardName(cardName: bank.cardList[index-1].cardName!)
             }
-            cell.vCard.setDelegate(cardCellXibProtocol: self)
+//            cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             cell.set(card: bank.cardList[index-1])
             cell.bankCardPagerViewDelegate = self
@@ -75,10 +75,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
         if targetIndex>0 {
         cardPagerViewDelegate?.selectedCard(card:bank.cardList[targetIndex-1])
         }
-    }
-    
-    func actionSheetButtonClicked() {
-        cardPagerViewDelegate?.actionButtonClicked()
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
@@ -98,6 +94,8 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     func removeTimerInstance(timer: Timer) {
         self.cardPagerViewDelegate?.removeTimerInstance(timer: timer)
     }
-    
-    
+
+    func actionSheetButtonClicked(card: Card) {
+        cardPagerViewDelegate?.actionButtonClicked(card: card)
+    }
 }

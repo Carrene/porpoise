@@ -1,7 +1,7 @@
 import UIKit
 import XLActionController
 
-class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellXibProtocol, ImportTokenViewProtocol {
+class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTokenViewProtocol {
    
     @IBOutlet weak var btConfirm: UIBarButtonItem!
     @IBOutlet var viewCard: CardCellXibView!
@@ -16,7 +16,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewCard.setDelegate(cardCellXibProtocol: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +28,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
     }
     
     func initUIComponents() {
+        viewCard.buttonActionSheet.isHidden = true
         btConfirm.isEnabled = false
         buttonAddCode.layer.cornerRadius = 10
         self.buttonAddCode.backgroundColor = R.color.borderColor()
@@ -124,10 +124,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
             btConfirm.isEnabled = true
             presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
         }
-    }
-    
-    func actionSheetButtonClicked() {
-        
     }
     
     @IBAction func onConfirmClicked(_ sender: Any) {

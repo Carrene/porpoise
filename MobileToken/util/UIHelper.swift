@@ -61,16 +61,17 @@ class UIHelper {
         let template = number
         
         let index1 = template.index(template.startIndex, offsetBy: 3)
-        var substring = template[...index1]
-        maskCardNumber.append(String(substring))
+        var substring = String(template[...index1])
+        maskCardNumber.append(substring)
         let index2 = template.index(template.startIndex, offsetBy: 4)
         let index3 = template.index(template.startIndex, offsetBy: 5)
-        substring = template[index2...index3]
-        maskCardNumber.append(String(substring)+"**")
+        substring = String(template[index2...index3])
+        maskCardNumber.append(substring+"**")
         maskCardNumber.append("****")
-        let index4 = template.index(template.endIndex, offsetBy: -4)
-        substring = template[index4...]
-        maskCardNumber.append(String(substring))
+        let index4 = template.index(template.endIndex, offsetBy: -7)
+        let index5 = template.index(template.endIndex, offsetBy: -4)
+        substring = String(template[index4...index5])
+        maskCardNumber.append(substring)
         return maskCardNumber
     }
 }

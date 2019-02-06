@@ -4,6 +4,7 @@ import FSPagerView
 
 protocol BankCardPagerViewDelegate {
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
+    func actionSheetButtonClicked(card: Card)
     func saveTimerInstance(timer: Timer)
     func removeTimerInstance(timer: Timer)
 }
@@ -83,10 +84,12 @@ class BankCardPagerViewCell: FSPagerViewCell {
             for token in card.TokenList {
                 token.bank = card.bank
                 if token.parse() {
-                    // mask card
+                    let cardNumber = UIHelper.getMaskCardNumber(number: token.name!)
+                    for i in 0 ..< cardNumber.count {
+                        vCard.labelCardNumber[i].text = cardNumber[i]
+                    }
                     iniOtp(token: token)
                 }
-                
             }
         } else {
             // mask card
@@ -179,7 +182,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
     }
     
     @objc func buttonAction() {
-        vCard.cardCellXibProtocol?.actionSheetButtonClicked()
+//        vCard.cardCellXibProtocol?.actionSheetButtonClicked()
+        bankCardPagerViewDelegate?.actionSheetButtonClicked(card: self.card!)
     }
     
     func setCardName(cardName:String) {
