@@ -1,4 +1,5 @@
 import Foundation
+import TTGSnackbar
 
 class CardListPresenter : CardListPresenterProtocol {
 
@@ -70,9 +71,11 @@ class CardListPresenter : CardListPresenterProtocol {
         let repository = TokenRepository()
         let onDataResponse : ((RepositoryResponse<Token>) -> ()) =  { [weak self] response in
             if response.error != nil {
-                //TODO:Show error
+                
+                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_unsuccessfully(), color: R.color.errorDark()!, duration: .short).show()
             } else {
                 self?.getBankList()
+                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.secondaryDark()!, duration: .short).show()
             }
         }
         repository.delete(identifire: token.id!, onDone: onDataResponse)
