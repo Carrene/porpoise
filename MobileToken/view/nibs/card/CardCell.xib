@@ -28,6 +28,10 @@
                 <outlet property="labelBottomTitle" destination="sWj-1Y-Zmx" id="Vw6-cQ-3oM"/>
                 <outlet property="labelCardName" destination="HJy-qy-Uvt" id="aUc-5e-pBI"/>
                 <outlet property="stackViewCardNumber" destination="fZI-ax-72e" id="d0S-GI-Qy8"/>
+                <outletCollection property="labelCardNumber" destination="LT0-fa-mEH" collectionClass="NSMutableArray" id="LwA-jH-eEf"/>
+                <outletCollection property="labelCardNumber" destination="7bS-aM-HWX" collectionClass="NSMutableArray" id="bHT-lD-jXx"/>
+                <outletCollection property="labelCardNumber" destination="ptB-26-kOf" collectionClass="NSMutableArray" id="af2-5B-TIx"/>
+                <outletCollection property="labelCardNumber" destination="CX8-SU-IKq" collectionClass="NSMutableArray" id="fcz-fl-Ckh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

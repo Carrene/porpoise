@@ -17,6 +17,7 @@ class CardCellXibView: UIView {
     @IBOutlet var imagePlus: UIImageView!
     var cardCellXibProtocol:CardCellXibProtocol?
     
+    @IBOutlet var labelCardNumber: [UILabel]!
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
