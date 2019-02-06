@@ -22,7 +22,6 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     
     func initUIComponent() {
         textFieldPassword.delegate = self
-        textFieldPassword.becomeFirstResponder()
         textFieldPassword.layer.borderColor = R.color.buttonColor()?.cgColor
         textFieldPassword.layer.borderWidth = 1
         textFieldPassword.layer.cornerRadius = 5
@@ -45,12 +44,13 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     }
     
     func showWrongPasswordError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorColor()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorDark()!)
+        textFieldPassword.text = ""
     }
     
     func navigateToCardList() {
         self.authenticationDelegate?.navigateToCardList()
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.eyeCatching()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.secondaryDark()!)
     }
     
     func navigateToInputPhoneNumber() {

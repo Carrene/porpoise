@@ -38,7 +38,7 @@ class AuthenticationPatternViewController: UIViewController, AuthenticationPatte
     }
     
     func showWrongPatternError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_pattern(), color: R.color.errorColor()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_pattern(), color: R.color.errorDark()!)
     }
     
     func navigateToCardList() {

@@ -6,6 +6,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFieldConfirmPassword: UITextField!
     @IBOutlet var labelPasswordHint: UILabel!
+    @IBOutlet var labelSecondPassword: UILabel!
     
     var passwordIsValid = false
     var authenticationDefinitionPasswordPresenter: AuthenticationDefinitionPasswordPresenterProtocol?
@@ -23,7 +24,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     func initUIComponent() {
         self.hideKeyboardWhenTappedAround()
         textFieldPassword.addTarget(self, action: #selector(self.textFieldPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
-        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
+//        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
         textFieldConfirmPassword.layer.cornerRadius = 5
         textFieldConfirmPassword.isUserInteractionEnabled = false
         textFieldPassword.layer.cornerRadius = 5
@@ -33,6 +34,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         textFieldConfirmPassword.layer.borderColor = R.color.buttonColor()?.cgColor
         textFieldPassword.becomeFirstResponder()
         labelPasswordHint.font = R.font.iranSansMobile(size: 12)
+        labelSecondPassword.font = R.font.iranSansMobile(size: 12)
         textFieldPassword.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_password(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         textFieldConfirmPassword.attributedPlaceholder = NSAttributedString(string:R.string.localizable.ph_confirm_password() ,
@@ -58,15 +60,14 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         
     }
     
+    @IBAction func onDoneKeyboard(_ sender: Any) {
+        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
+    }
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
         if PasswordValidator.hasPasswordCapitalLetter(testStr: textField.text) {
-            var first = labelPasswordHint.text?.components(separatedBy: ",").first
             
         }
-        
-        
-        
         
         if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
@@ -84,12 +85,12 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text))
     }
     
-    @objc func textFieldConfirmPasswordDidChange(_ textField: UITextField) {
-        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
-    }
+//    @objc func textFieldConfirmPasswordDidChange(_ textField: UITextField) {
+//        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
+//    }
     
     func showNotMatchError() {
-        
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_passwords_not_match(), color: R.color.errorDark()!)
     }
     
     func authenticationUpdatedAction() {
