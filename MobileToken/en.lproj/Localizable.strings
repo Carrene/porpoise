@@ -8,11 +8,12 @@
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است";
 "sb_wrong_pattern" = "الگو اشتباه است";
-"sb_try_for_second_time" = "برای بار دوم تلاش کنید";
-"sb_not_match" = "یکسان نیستند";
+"sb_try_for_second_time" = "برای بار دوم انجام دهید";
+"sb_patterns_not_match" = "الگو و تکرار آن مطابقت ندارند، دوباره تلاش کنید";
+"sb_passwords_not_match" = "رمز و تکرار آن برابر نیستند، دوباره تلاش کنید";
 "sb_pattern_min_point_error" = "حداقل ۴ نقطه را متصل کنید";
 "sb_bad_request" = "درخواست اشتباه است";
-"sb_activation_code_is_not_valid" = "کد فعال سازی معتبر نیست";
+"sb_activation_code_is_not_valid" = "کد فعال‌سازی اشتباه است";
 "sb_SSM_is_not_available" = "SSM در دسترس نیست";
 "sb_wrong_phone" = "شماره ای که وارد کردید اشتباه است";
 "sb_successfully_done" = "با موفقیت انجام شد";
@@ -25,6 +26,11 @@
 "sb_tokenimport_invalidcryptomoduleid" = "تفاوت در نوع رم";
 "sb_tokenimport_invalidchecksum" = "عبارت ارزیابی اشتباه است";
 
+"sb_card_deleted_successfully" = "کارت حذف شد";
+"sb_card_deleted_unsuccessfully" = "حذف کارت با خطا مواجه شد";
+"sb_token_deleted_successfully" = "رمز اول/دوم با موفقیت حذف شد";
+"sb_token_deleted_unsuccessfully" = "حذف رمز اول/دوم با خطا مواجه شد";
+"sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است";
 
 //passWordHint
 "enter_at_least_eight_characters" = "شامل حداقل ۸ کاراکتر";

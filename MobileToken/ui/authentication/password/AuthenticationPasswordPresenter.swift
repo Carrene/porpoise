@@ -32,7 +32,7 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
         } else {
             self.authentication?.failAttempt()
             updateAuthentication(authentication: self.authentication!)
-            //self.authenticationPasswordView.showWrongPasswordError()
+            self.authenticationPasswordView.showWrongPasswordError()
             updateAuthentication(authentication: self.authentication!)
             if (authentication?.isLocked)! {
                 self.authenticationPasswordView.navigateToLockView()

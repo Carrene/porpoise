@@ -118,7 +118,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate,CardCellX
    
     @IBAction func onButtonAddCode(_ sender: UIButton) {
         if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
-            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorColor()!)
+            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
         } else {
             let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
             btConfirm.isEnabled = true
