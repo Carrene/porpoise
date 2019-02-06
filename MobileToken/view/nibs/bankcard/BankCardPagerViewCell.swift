@@ -4,6 +4,7 @@ import FSPagerView
 
 protocol BankCardPagerViewDelegate {
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId)
+    func actionSheetButtonClicked(card: Card)
     func saveTimerInstance(timer: Timer)
     func removeTimerInstance(timer: Timer)
 }
@@ -181,7 +182,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
     }
     
     @objc func buttonAction() {
-        vCard.cardCellXibProtocol?.actionSheetButtonClicked()
+//        vCard.cardCellXibProtocol?.actionSheetButtonClicked()
+        bankCardPagerViewDelegate?.actionSheetButtonClicked(card: self.card!)
     }
     
     func setCardName(cardName:String) {

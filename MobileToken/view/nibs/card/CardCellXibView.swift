@@ -1,6 +1,3 @@
-protocol CardCellXibProtocol {
-    func actionSheetButtonClicked()
-}
 
 import UIKit
 @IBDesignable
@@ -15,7 +12,6 @@ class CardCellXibView: UIView {
     @IBOutlet var buttonActionSheet: UIButton!
     @IBOutlet var labelBottomTitle: UILabel!
     @IBOutlet var imagePlus: UIImageView!
-    var cardCellXibProtocol:CardCellXibProtocol?
     
     @IBOutlet var labelCardNumber: [UILabel]!
     override init(frame: CGRect) {
@@ -42,12 +38,9 @@ class CardCellXibView: UIView {
         addSubview(contentView)
     }
     
-    func setDelegate(cardCellXibProtocol:CardCellXibProtocol) {
-        self.cardCellXibProtocol = cardCellXibProtocol
-    }
+  
     
     @IBAction func onButtonActionSheet(_ sender: UIButton) {
-        self.cardCellXibProtocol?.actionSheetButtonClicked()
     }
     
     func initUIComponent() {
