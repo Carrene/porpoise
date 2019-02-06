@@ -1,4 +1,3 @@
-
 import Foundation
 protocol AuthenticationPatternViewProtocol: class {
     func showWrongPatternError()
