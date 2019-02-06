@@ -66,5 +66,18 @@ class CardListPresenter : CardListPresenterProtocol {
         repository.delete(identifier: identifier, onDone: onDataResponse)
     }
     
+    func deleteToken(token: Token) {
+        let repository = TokenRepository()
+        let onDataResponse : ((RepositoryResponse<Token>) -> ()) =  { [weak self] response in
+            if response.error != nil {
+                //TODO:Show error
+            } else {
+                self?.getBankList()
+            }
+        }
+        repository.delete(identifire: token.id!, onDone: onDataResponse)
+    }
+    
+    
     
 }

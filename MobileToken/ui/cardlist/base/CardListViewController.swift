@@ -83,7 +83,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
 
         let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert(card: card)})
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
-        let deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
+        var deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
+        if card.TokenList.count == 0 {
+            deleteTokenAction.enabled = false
+        }
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
         actionController.addAction(deleteTokenAction)
@@ -96,6 +99,15 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteTokenAlert(card: Card) {
+        buttonDeleteFirstToken?.isEnabled = false
+        buttonDeleteSecondToken?.isEnabled = false
+        card.TokenList.forEach{token in
+            if token.cryptoModuleId == Token.CryptoModuleId.one {
+                buttonDeleteFirstToken?.isEnabled = true
+            } else if token.cryptoModuleId == Token.CryptoModuleId.two {
+                buttonDeleteSecondToken?.isEnabled = true
+            }
+        }
         let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
         let margin:CGFloat = 10.0
         let rect = CGRect(x: margin, y: margin, width: 335, height: 170)
@@ -112,7 +124,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteTokenAlert.view.addSubview(customView)
         deleteTokenAlert.setValue(labelTitle, forKey: "attributedMessage")
         
-        let saveAction = UIAlertAction(title: R.string.localizable.ash_delete_token() , style: .default, handler: { (action : UIAlertAction!) -> Void in })
+        let saveAction = UIAlertAction(title: R.string.localizable.ash_delete_token() , style: .default, handler: { (action : UIAlertAction!) -> Void in
+            self.deleteTokens(card: card)
+        })
       
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
             (action : UIAlertAction!) -> Void in })
@@ -135,6 +149,17 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         subview.layer.cornerRadius = 10
         subview.backgroundColor = R.color.primaryLight()
         
+    }
+    
+    func deleteTokens(card: Card) {
+        if buttonDeleteFirstToken?.isSelected == true {
+            let token = card.TokenList.filter{$0.cryptoModuleId == Token.CryptoModuleId.one}.first
+            cardListPresenter?.deleteToken(token: token!)
+        }
+        if buttonDeleteSecondToken?.isSelected == true {
+            let token = card.TokenList.filter {$0.cryptoModuleId == Token.CryptoModuleId.two}.first
+            cardListPresenter?.deleteToken(token: token!)
+        }
     }
     
     @objc func onbuttonDeleteFirstToken(sender: UIButton) {

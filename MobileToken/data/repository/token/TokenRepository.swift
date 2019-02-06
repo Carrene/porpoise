@@ -5,7 +5,7 @@ class TokenRepository: TokenRepositoryProtocol {
     
     let tokenRealmRepository = TokenRealmRepository()
     
-    func get(identifier: Int, onDone: ((RepositoryResponse<Token>) -> ())?) {
+    func get(identifier: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
     }
     
@@ -19,6 +19,12 @@ class TokenRepository: TokenRepositoryProtocol {
         tokenRealmRepository.update(token) { realmRepositoryResponse in
             onDone?(realmRepositoryResponse)
             
+        }
+    }
+    
+    func delete(identifire: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
+        tokenRealmRepository.delete(identifire: identifire) { realmRepositoryRsponse in
+            onDone?(realmRepositoryRsponse)
         }
     }
 }

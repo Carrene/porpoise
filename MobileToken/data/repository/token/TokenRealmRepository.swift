@@ -1,34 +1,51 @@
 
 
 import Foundation
-    import RealmSwift
-    class TokenRealmRepository: TokenRepositoryProtocol {
-        func get(identifier: Int, onDone: ((RepositoryResponse<Token>) -> ())?) {
-            onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+import RealmSwift
+class TokenRealmRepository: TokenRepositoryProtocol {
+   
+    func get(identifier: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
+        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+    }
+    
+    func getAll(onDone: ((RepositoryResponse<[Token]>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realmTokenResults: [Token]? = realm.objects(Token.self).map{$0.copy() as! Token}
+        if realmTokenResults == nil {
+            onDone?(RepositoryResponse(value: nil))
+        } else {
+            onDone?(RepositoryResponse(value: realmTokenResults))
         }
-        
-        func getAll(onDone: ((RepositoryResponse<[Token]>) -> ())?) {
-            let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-            let realmTokenResults: [Token]? = realm.objects(Token.self).map{$0.copy() as! Token}
-            if realmTokenResults == nil {
-                onDone?(RepositoryResponse(value: nil))
-            } else {
-                onDone?(RepositoryResponse(value: realmTokenResults))
+    }
+    
+    func update(_ token: Token, onDone: ((RepositoryResponse<Token>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        do {
+            try realm.write {
+                realm.add(token.copy() as! Token, update:  true)
             }
+            onDone?(RepositoryResponse(value: token, restDataResponse: nil, error: nil))
         }
-        
-        func update(_ token: Token, onDone: ((RepositoryResponse<Token>) -> ())?) {
-            let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-            do {
-                try realm.write {
-                    realm.add(token.copy() as! Token, update:  true)
-                }
-                onDone?(RepositoryResponse(value: token, restDataResponse: nil, error: nil))
-            }
-            catch {
-                onDone?(RepositoryResponse(error: error))
-            }
+        catch {
+            onDone?(RepositoryResponse(error: error))
         }
-        
+    }
+    
+    func delete(identifire: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let token = realm.objects(Token.self).filter("Id='"+identifire+"'").first
+        let tokenResponse = token?.copy() as! Token
+        do {
+            try realm.write {
+                realm.delete(token!)
+            }
+            onDone?(RepositoryResponse(value: tokenResponse))
+
+        } catch {
+            onDone?(RepositoryResponse(error: error))
+        }
         
     }
+    
+    
+}
