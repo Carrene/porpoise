@@ -7,7 +7,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     @IBOutlet weak var vScroll: UIScrollView!
     @IBOutlet var labelFirstRegister: UILabel!
     
-    private var pagerList = [CardPagerViewAdapter]()
+    private var fsPagerAdapterList = [CardPagerViewAdapter]()
+    private var fsPagerCollectionView = [FSPagerView]()
     private var cardListPresenter : CardListPresenterProtocol?
     private var banks : [Bank]?
     private var selectedCard:Card?
@@ -32,6 +33,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
         countDownTimer.removeAll()
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        for i in 0 ..< fsPagerCollectionView.count {
+//            fsPagerCollectionView[i].scrollToItem(at: banks![i].cardList.count, animated: false)
+//        }
+//    }
+    
     func initUIComponents() {
         labelFirstRegister.isHidden = true
         buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: 220, height: 40))
@@ -72,9 +80,27 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func updateCardList(card: Card) {
-        updatedCard = card
-        UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-        initPagerList()
+        for i in 0 ..< banks!.count {
+            let cardList = banks![i].cardList
+            for j in 0 ..< cardList.count {
+                if cardList[j].id == card.id {
+                    banks![i].cardList[j] = card
+                    fsPagerCollectionView[i].reloadData()
+                }
+            }
+            
+        }
+    }
+    
+    func addCard(card: Card) {
+        for i in 0 ..< banks!.count {
+            if card.bank?.id == banks![i].id {
+                banks![i].cardList.append(card)
+                fsPagerCollectionView[i].reloadData()
+                fsPagerCollectionView[i].layoutIfNeeded()
+                fsPagerCollectionView[i].scrollToItem(at: banks![i].cardList.count, animated: false)
+            }
+        }
     }
     
     func initActionSheet(card: Card) -> MobileTokenActionSheetController {
@@ -274,9 +300,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func initPagerList() {
-        pagerList.removeAll()
+        fsPagerAdapterList.removeAll()
         for i in (banks?.indices)! {
-            pagerList.append(CardPagerViewAdapter(sender: banks![i]))
+            fsPagerAdapterList.append(CardPagerViewAdapter(sender: banks![i]))
         }
         initCardListPagerView()
     }
@@ -287,35 +313,38 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func initCardListPagerView() {
         var y = 0
-        if pagerList.count > 0 {
+        if fsPagerAdapterList.count > 0 {
+            fsPagerCollectionView.removeAll()
             labelFirstRegister.isHidden = true
             vScroll.subviews.forEach({ $0.removeFromSuperview() })
-            for i in pagerList.indices {
+            for i in fsPagerAdapterList.indices {
                 let screenBounds =  UIScreen.main.bounds
                 //TODO: Scrool view size!!! check
                 let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 251)
                 let cardListPagerView = FSPagerView(frame: frame)
                 y += 270
+                fsPagerCollectionView.append(cardListPagerView)
                 
                 let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
-                cardListPagerView.register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
+                fsPagerCollectionView[i].register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
                 
                 let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
-                cardListPagerView.register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
+                fsPagerCollectionView[i].register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
                 
-                pagerList[i] = CardPagerViewAdapter(sender: banks![i])
-                pagerList[i].setDelegate(cardPagerViewDelegate: self)
-                cardListPagerView.delegate = pagerList[i]
-                cardListPagerView.dataSource = pagerList[i]
-                cardListPagerView.itemSize = CGSize(width: 320, height: 251)
-                cardListPagerView.interitemSpacing = 10
+                fsPagerAdapterList[i] = CardPagerViewAdapter(sender: banks![i])
+                fsPagerAdapterList[i].setDelegate(cardPagerViewDelegate: self)
+                fsPagerCollectionView[i].delegate = fsPagerAdapterList[i]
+                fsPagerCollectionView[i].dataSource = fsPagerAdapterList[i]
+                fsPagerCollectionView[i].itemSize = CGSize(width: 320, height: 251)
+                fsPagerCollectionView[i].interitemSpacing = 10
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)
                 if updatedCard != nil {
-                    pagerList[i].setCardDataSource(updatedCard: updatedCard!)
+                    fsPagerAdapterList[i].setCardDataSource(updatedCard: updatedCard!)
                 }
-                cardListPagerView.reloadData()
+                
+                fsPagerCollectionView[i].reloadData()
             }
         }
     }
@@ -328,7 +357,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId) {
-        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
+         fsPagerCollectionView[0].scrollToItem(at: 1, animated: false)
+//        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
     }
     
     func removeTimerInstance(timer: Timer) {

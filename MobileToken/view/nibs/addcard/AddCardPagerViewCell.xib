@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -90,7 +86,7 @@
             <size key="customSize" width="289" height="293"/>
             <connections>
                 <outlet property="buttonAddCard" destination="Ssh-BK-Rl0" id="Ija-1G-QZv"/>
-                <outlet property="textField" destination="k5A-5T-3Eh" id="A0v-Dz-eae"/>
+                <outlet property="textFieldCardName" destination="k5A-5T-3Eh" id="A0v-Dz-eae"/>
                 <outlet property="viewAddCard" destination="k8F-ES-KrH" id="z77-Ex-sJP"/>
                 <outlet property="viewCard" destination="phn-by-T2c" id="bzz-II-L72"/>
             </connections>

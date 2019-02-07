@@ -5,6 +5,7 @@ protocol CardListViewProtocol: class {
     func noBank()
     func reloadCardPager()
     func updateCardList(card:Card)
+    func addCard(card: Card)
 }
 
 protocol CardListPresenterProtocol {

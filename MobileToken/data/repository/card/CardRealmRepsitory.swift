@@ -12,7 +12,12 @@ class CardRealmRepository: CardRepositoryProtocol {
                     realm.add(bank.copy() as! Bank, update: true)
 
                 }
-                onDone?(RepositoryResponse(value: (card.copy() as! Card)))
+                let card: Card? = realm.object(ofType: Card.self, forPrimaryKey: card.id)
+                let cardCopy = card?.copy() as! Card
+                cardCopy.bank = (card?.owners.first!.copy() as! Bank)
+                onDone!(RepositoryResponse(value: cardCopy))
+
+//                onDone?(RepositoryResponse(value: (card.copy() as! Card)))
             }
             catch {
                 onDone?(RepositoryResponse(error: error))
@@ -27,7 +32,7 @@ class CardRealmRepository: CardRepositoryProtocol {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         let card: Card? = realm.object(ofType: Card.self, forPrimaryKey: identifier)
         let cardCopy = card?.copy() as! Card
-        cardCopy.bank = (card?.owner.first!.copy() as! Bank)
+        cardCopy.bank = (card?.owners.first!.copy() as! Bank)
         onDone!(RepositoryResponse(value: cardCopy))
     }
     
@@ -48,7 +53,11 @@ class CardRealmRepository: CardRepositoryProtocol {
 
                 realm.add(card.copy() as! Card, update: true)
             }
-            onDone?(RepositoryResponse(value: (card.copy() as! Card)))
+            let card: Card? = realm.object(ofType: Card.self, forPrimaryKey: card.id)
+            let cardCopy = card?.copy() as! Card
+            cardCopy.bank = (card?.owners.first!.copy() as! Bank)
+            onDone!(RepositoryResponse(value: cardCopy))
+           
         }
         catch {
             onDone?(RepositoryResponse(error: error))

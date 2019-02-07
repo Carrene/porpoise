@@ -42,6 +42,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.setBank(bank: self.bank)
             cell.setDelegate(addCardPagerViewCellProtocol: self)
             //cell.viewCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
+            
             return cell
         }
         else {
@@ -62,8 +63,13 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             cell.set(card: bank.cardList[index-1])
             cell.bankCardPagerViewDelegate = self
+           
             return cell
         }
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
+//        pagerView.scrollToItem(at: 1, animated: false)
     }
     
     func addCardDetail(cardName: String, selectedBank: Bank) {

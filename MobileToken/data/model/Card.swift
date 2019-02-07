@@ -41,7 +41,7 @@ class Card: Object, Mappable, NSCopying{
    
     let TokenList = List<Token>()
     
-    var owner = LinkingObjects(fromType: Bank.self, property: "cardList")
+    let owners = LinkingObjects(fromType: Bank.self, property: "cardList")
     public var bank: Bank?
     
     override static func ignoredProperties() -> [String] {

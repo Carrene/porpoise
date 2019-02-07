@@ -10,7 +10,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
     
     @IBOutlet var viewAddCard: UIView!
     @IBOutlet var viewCard: CardCellXibView!
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var textFieldCardName: UITextField!
     private var addCardPagerViewCellProtocol : AddCardPagerViewCellProtocol?
     private var bank:Bank?
     @IBOutlet var buttonAddCard: UIButton!
@@ -28,10 +28,10 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewAddCard.layer.borderWidth = 0.5
-        textField.layer.cornerRadius = 10
-        textField.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        textField.layer.borderWidth = 0.5
-        textField.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),
+        textFieldCardName.layer.cornerRadius = 10
+        textFieldCardName.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        textFieldCardName.layer.borderWidth = 0.5
+        textFieldCardName.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         
     }
@@ -47,14 +47,15 @@ class AddCardPagerViewCell: FSPagerViewCell {
     }
     
     @IBAction func onAddCardButton(_ sender: UIButton) {
-        if textField.text != nil {
+        if textFieldCardName.text != nil {
             buttonAddCard.isEnabled = true
-            addCardPagerViewCellProtocol?.addCardDetail(cardName: textField.text!, selectedBank: self.bank!)
+            self.textFieldCardName.text = ""
+            addCardPagerViewCellProtocol?.addCardDetail(cardName: textFieldCardName.text!, selectedBank: self.bank!)
         }
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
-        if textField.text != nil {
+        if textFieldCardName.text != nil {
             
         }
     }
