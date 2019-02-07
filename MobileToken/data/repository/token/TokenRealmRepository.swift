@@ -31,15 +31,20 @@ class TokenRealmRepository: TokenRepositoryProtocol {
         }
     }
     
-    func delete(identifire: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
+    func delete(tokens: [Token], onDone: ((RepositoryResponse<[Token]>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-        let token = realm.objects(Token.self).filter("Id='"+identifire+"'").first
-        let tokenResponse = token?.copy() as! Token
+        var responseTokens = [Token]()
         do {
             try realm.write {
-                realm.delete(token!)
+                for token in tokens {
+                    let token = realm.objects(Token.self).filter("Id='"+token.id!+"'").first
+                    let tokenCopy = token?.copy() as! Token
+                    responseTokens.append(tokenCopy)
+                    realm.delete(token!)
+                }
+               
             }
-            onDone?(RepositoryResponse(value: tokenResponse))
+            onDone?(RepositoryResponse(value: responseTokens))
 
         } catch {
             onDone?(RepositoryResponse(error: error))

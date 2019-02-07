@@ -22,8 +22,8 @@ class TokenRepository: TokenRepositoryProtocol {
         }
     }
     
-    func delete(identifire: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
-        tokenRealmRepository.delete(identifire: identifire) { realmRepositoryRsponse in
+    func delete(tokens: [Token], onDone: ((RepositoryResponse<[Token]>) -> ())?) {
+        tokenRealmRepository.delete(tokens: tokens) { realmRepositoryRsponse in
             onDone?(realmRepositoryRsponse)
         }
     }

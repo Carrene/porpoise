@@ -3,5 +3,5 @@
 import Foundation
 
 protocol TokenRepositoryProtocol: Repository where Model == Token, Identifier == String {
-    func delete(identifire: Identifier, onDone: ((RepositoryResponse<Model>) -> ())?)
+    func delete(tokens: [Token], onDone: ((RepositoryResponse<[Model]>) -> ())?)
 }

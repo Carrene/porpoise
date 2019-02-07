@@ -46,6 +46,8 @@ class Token: Object, Mappable, NSCopying{
     var otpLength: Int?
     var bankId: Int?
     var bank: Bank?
+    let owners = LinkingObjects(fromType: Card.self, property: "TokenList")
+    var card: Card?
     
     required convenience init(map: Map) {
         self.init()
@@ -55,7 +57,7 @@ class Token: Object, Mappable, NSCopying{
         return "Id"
     }
     override static func ignoredProperties() -> [String] {
-        return ["expireDate", "cryptoModuleId", "CryptoModuleId", "seed", "name", "hashType", "version", "timeInterval", "otpLength", "bankId", "bank"]
+        return ["expireDate", "cryptoModuleId", "CryptoModuleId", "seed", "name", "hashType", "version", "timeInterval", "otpLength", "bankId", "bank", "owner", "card"]
     }
     
     convenience init(tokenPaket: String? = nil, id: String? = nil, bank: Bank? = nil, cryptoModuleId: CryptoModuleId? = nil) {

@@ -67,18 +67,18 @@ class CardListPresenter : CardListPresenterProtocol {
         repository.delete(identifier: card.id!, onDone: onDataResponse)
     }
     
-    func deleteToken(token: Token) {
+    func deleteToken(tokens: [Token]) {
         let repository = TokenRepository()
-        let onDataResponse : ((RepositoryResponse<Token>) -> ()) =  { [weak self] response in
+        let onDataResponse : ((RepositoryResponse<[Token]>) -> ()) =  { [weak self] response in
             if response.error != nil {
                 
                 SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_unsuccessfully(), color: R.color.errorDark()!, duration: .short).show()
             } else {
-                self?.getBankList()
+                self?.view.deleteToken(tokens: response.value!)
                 SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.secondaryDark()!, duration: .short).show()
             }
         }
-        repository.delete(identifire: token.id!, onDone: onDataResponse)
+        repository.delete(tokens: tokens, onDone: onDataResponse)
     }
     
     

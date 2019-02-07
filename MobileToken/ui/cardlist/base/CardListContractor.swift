@@ -7,6 +7,7 @@ protocol CardListViewProtocol: class {
     func updateCardList(card:Card)
     func addCard(card: Card)
     func deleteCard(card: Card)
+    func deleteToken(tokens: [Token])
 }
 
 protocol CardListPresenterProtocol {
@@ -14,6 +15,6 @@ protocol CardListPresenterProtocol {
     func addCard(card:Card,bank:Bank)
     func editCard(card: Card)
     func deleteCard(card: Card)
-    func deleteToken(token: Token)
+    func deleteToken(tokens: [Token])
 }
 

@@ -3,6 +3,7 @@ import UIKit
 import FSPagerView
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
+
     
     @IBOutlet weak var vScroll: UIScrollView!
     @IBOutlet var labelFirstRegister: UILabel!
@@ -115,6 +116,25 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
     }
     
+    func deleteToken(tokens: [Token]) {
+        for token in tokens {
+            for i in 0 ..< banks!.count {
+                let cards = banks![i].cardList
+                for j in 0 ..< cards.count{
+                    let tokenList = banks![i].cardList[j].TokenList
+                    for z in 0 ..< tokenList.count {
+                        if token.id == tokenList[z].id {
+                            banks![i].cardList[j].TokenList.remove(at: z)
+                            fsPagerCollectionView[i].reloadData()
+                            fsPagerCollectionView[i].layoutIfNeeded()
+                            fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     func initActionSheet(card: Card) -> MobileTokenActionSheetController {
         let actionController = MobileTokenActionSheetController()
 
@@ -189,14 +209,19 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteTokens(card: Card) {
+        var tokens = [Token]()
         if buttonDeleteFirstToken?.isSelected == true {
             let token = card.TokenList.filter{$0.cryptoModuleId == Token.CryptoModuleId.one}.first
-            cardListPresenter?.deleteToken(token: token!)
+            tokens.append(token!)
+//            cardListPresenter?.deleteToken(token: token!)
         }
         if buttonDeleteSecondToken?.isSelected == true {
             let token = card.TokenList.filter {$0.cryptoModuleId == Token.CryptoModuleId.two}.first
-            cardListPresenter?.deleteToken(token: token!)
+            tokens.append(token!)
+
+//            cardListPresenter?.deleteToken(token: token!)
         }
+        cardListPresenter?.deleteToken(tokens: tokens)
     }
     
     @objc func onbuttonDeleteFirstToken(sender: UIButton) {
@@ -357,6 +382,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 }
                 
                 fsPagerCollectionView[i].reloadData()
+                fsPagerCollectionView[i].layoutIfNeeded()
+                if banks![i].cardList.count > 0 {
+                    fsPagerCollectionView[i].scrollToItem(at: 1, animated: false)
+                }
             }
         }
     }
@@ -369,8 +398,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId) {
-         fsPagerCollectionView[0].scrollToItem(at: 1, animated: false)
-//        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
+        performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
     }
     
     func removeTimerInstance(timer: Timer) {

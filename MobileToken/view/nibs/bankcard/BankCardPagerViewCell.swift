@@ -37,13 +37,17 @@ class BankCardPagerViewCell: FSPagerViewCell {
         viewBankCard.layer.cornerRadius = 10
         viewBankCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewBankCard.layer.borderWidth = 0.5
-        //vCard.buttonActionSheet.on
         let actionButton = vCard.buttonActionSheet
         actionButton!.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        initDefaultView()
     }
     
     func initDefaultView() {
+        viewFirstOtp.subviews.forEach { view in
+            view.removeFromSuperview()
+        }
+        viewSecondOtp.subviews.forEach { view in
+            view.removeFromSuperview()
+        }
         let viewFirstRow = AddPasswordViewDesignable()
         viewFirstRow.labelAddOtp.text = R.string.localizable.lb_add_first_otp()
         viewFirstRow.frame.size = CGSize(width: viewFirstOtp.layer.frame.width, height: 40)
