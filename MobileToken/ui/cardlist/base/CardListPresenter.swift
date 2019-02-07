@@ -53,17 +53,18 @@ class CardListPresenter : CardListPresenterProtocol {
         repository.update(card, onDone: onDataResponse)
     }
     
-    func deleteCard(identifier: String) {
+    func deleteCard(card: Card) {
+        let card = card
         let repository = CardRepository()
         let onDataResponse : ((RepositoryResponse<Card>) -> ()) = { [weak self] response in
             if response.error != nil {
                 print("error")
             }
             else {
-                self?.getBankList()
+                self?.view.deleteCard(card: card)
             }
         }
-        repository.delete(identifier: identifier, onDone: onDataResponse)
+        repository.delete(identifier: card.id!, onDone: onDataResponse)
     }
     
     func deleteToken(token: Token) {

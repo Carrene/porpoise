@@ -103,6 +103,18 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
     }
     
+    func deleteCard(card: Card) {
+        for i in 0 ..< banks!.count {
+            if card.bank?.id == banks![i].id {
+                let index = banks![i].cardList.index(where: {$0.id == card.id})
+                banks![i].cardList.remove(at: index!)
+                fsPagerCollectionView[i].reloadData()
+                fsPagerCollectionView[i].layoutIfNeeded()
+                fsPagerCollectionView[i].scrollToItem(at: index!, animated: false)
+            }
+        }
+    }
+    
     func initActionSheet(card: Card) -> MobileTokenActionSheetController {
         let actionController = MobileTokenActionSheetController()
 
@@ -272,7 +284,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteCardAlert.setValue(attributedString, forKey: "attributedMessage")
         
         let deleteAction = UIAlertAction(title: R.string.localizable.delete_card() , style: .default , handler: { alert -> Void in
-            self.cardListPresenter?.deleteCard(identifier: (card.id)!)
+            self.cardListPresenter?.deleteCard(card: card)
         })
         
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {

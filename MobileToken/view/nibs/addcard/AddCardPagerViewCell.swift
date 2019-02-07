@@ -49,8 +49,8 @@ class AddCardPagerViewCell: FSPagerViewCell {
     @IBAction func onAddCardButton(_ sender: UIButton) {
         if textFieldCardName.text != nil {
             buttonAddCard.isEnabled = true
-            self.textFieldCardName.text = ""
             addCardPagerViewCellProtocol?.addCardDetail(cardName: textFieldCardName.text!, selectedBank: self.bank!)
+            self.textFieldCardName.text = ""
         }
     }
     
