@@ -7,8 +7,6 @@ class ApplicationLockViewController: BaseViewController {
     @IBOutlet var imageLock: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     func initUIComponents() {

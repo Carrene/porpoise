@@ -1,4 +1,3 @@
-
 import UIKit
 import HUIPatternLockView_Swift
 class AuthenticationPatternViewController: UIViewController, AuthenticationPatternViewProtocol {

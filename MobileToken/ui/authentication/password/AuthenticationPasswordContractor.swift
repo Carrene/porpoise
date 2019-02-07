@@ -1,5 +1,3 @@
-
-
 import Foundation
 protocol AuthenticationPasswordViewProtocol: class {
     func showWrongPasswordError()
