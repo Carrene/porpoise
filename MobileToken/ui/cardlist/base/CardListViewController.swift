@@ -2,7 +2,7 @@ import XLActionController
 import UIKit
 import FSPagerView
 
-class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate {
+class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate, ImportToeknDelegate {
 
     
     @IBOutlet weak var vScroll: UIScrollView!
@@ -22,10 +22,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         super.viewDidLoad()
         initUIComponents()
         self.cardListPresenter = CardListPresenter(view: self)
+         cardListPresenter?.getBankList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        cardListPresenter?.getBankList()
+       
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -393,12 +394,18 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = (segue.destination as? ImportTokenViewController) {
             let info: (card: Card, cryptoModuleId: Token.CryptoModuleId) = sender as! (card: Card, cryptoModuleId: Token.CryptoModuleId)
+            destination.setDelegate(importTokenDelegate: self)
             destination.set(card: info.card, cryptoModuleId: info.cryptoModuleId)
         }
     }
     
     func importToken(card: Card, cryptoModuleId: Token.CryptoModuleId) {
         performSegue(withIdentifier: R.segue.cardListViewController.navigateToImportToken.identifier, sender: (card:card, cryptoModuleId: cryptoModuleId))
+    }
+    
+    func importedToken(card: Card) {
+        updateCardList(card: card)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func removeTimerInstance(timer: Timer) {
@@ -408,5 +415,4 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func saveTimerInstance(timer: Timer) {
         self.countDownTimer.append(timer)
     }
-    
 }

@@ -50,6 +50,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                 }
                 else {
                     SnackBarHelper.init(message: "added", color: R.color.primary()!, duration: .long).show()
+                    self?.view.tokenImported(card: card)
                 }
             }
         }

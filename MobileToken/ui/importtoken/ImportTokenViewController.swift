@@ -1,6 +1,10 @@
 import UIKit
 import XLActionController
 
+protocol ImportToeknDelegate {
+    func importedToken(card: Card)
+}
+
 class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTokenViewProtocol {
    
     @IBOutlet weak var btConfirm: UIBarButtonItem!
@@ -13,6 +17,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     var card: Card?
     var cryptoModuleId: Token.CryptoModuleId?
     var presenter: ImportTokenPresenterProtokol?
+    var importTokenDelegate: ImportToeknDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,10 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func set(card: Card, cryptoModuleId: Token.CryptoModuleId) {
         self.card = card
         self.cryptoModuleId = cryptoModuleId
+    }
+    
+    func setDelegate(importTokenDelegate: ImportToeknDelegate) {
+        self.importTokenDelegate = importTokenDelegate
     }
     
     func initUIComponents() {
@@ -124,6 +133,10 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
             btConfirm.isEnabled = true
             presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
         }
+    }
+    
+    func tokenImported(card: Card) {
+        self.importTokenDelegate?.importedToken(card:card)
     }
     
     @IBAction func onConfirmClicked(_ sender: Any) {
