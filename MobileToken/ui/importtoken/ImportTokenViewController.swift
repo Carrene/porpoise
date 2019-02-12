@@ -80,13 +80,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        let smsText = textViewSmsCode.text.split(separator: "\n")
-        smsText.forEach{ text in
-            if text.count == 120 {
-                textViewSmsCode.text = String(text)
-            }
-        }
+        
     }
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == R.color.buttonColor()?.withAlphaComponent(0.5) {
             textView.text = nil
@@ -107,14 +103,20 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
-        
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        let numberOfChars = newText.count
         if textView == textViewAtmCode {
-            let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
-            let numberOfChars = newText.count
+            
             return numberOfChars < 9
         }
         else {
-            return true
+            let smsText = text.split(separator: "\n")
+            smsText.forEach{ text in
+                if text.count == 120 {
+                    textViewSmsCode.text = String(text)
+                }
+            }
+            return numberOfChars < 121
         }
     }
    
