@@ -92,13 +92,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
             textView.text = nil
             textView.textColor = R.color.buttonColor()
         }
-        
-        if textView == self.textViewAtmCode, textView.text.count == 8 {
-            
-            self.textViewSmsCode.becomeFirstResponder()
-        }
-        
-       
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
