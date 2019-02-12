@@ -145,24 +145,24 @@
                         <constraints>
                             <constraint firstItem="NHz-YE-YXP" firstAttribute="top" secondItem="tnA-qI-CRm" secondAttribute="top" constant="-10" id="1ts-Nl-CDS"/>
                             <constraint firstItem="tnA-qI-CRm" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="5QA-ry-dy1"/>
-                            <constraint firstItem="rE4-8J-QjC" firstAttribute="leading" secondItem="NHz-YE-YXP" secondAttribute="leading" constant="30" id="F07-xl-GzB"/>
+                            <constraint firstItem="rE4-8J-QjC" firstAttribute="left" secondItem="NHz-YE-YXP" secondAttribute="left" constant="30" id="F07-xl-GzB"/>
                             <constraint firstItem="nhg-fN-egb" firstAttribute="top" secondItem="tnA-qI-CRm" secondAttribute="bottom" constant="20" id="Fli-TJ-kt2"/>
                             <constraint firstItem="rE4-8J-QjC" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="Ibw-27-XMz"/>
                             <constraint firstItem="ZCg-Os-O1H" firstAttribute="top" secondItem="fUl-hy-OU6" secondAttribute="bottom" constant="30" id="IcS-Td-jJg"/>
                             <constraint firstItem="ZCg-Os-O1H" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="NMz-DZ-ydZ"/>
                             <constraint firstItem="nhg-fN-egb" firstAttribute="centerX" secondItem="NHz-YE-YXP" secondAttribute="centerX" id="OHA-op-99e"/>
-                            <constraint firstItem="NHz-YE-YXP" firstAttribute="trailing" secondItem="rE4-8J-QjC" secondAttribute="trailing" constant="30" id="W6D-lS-gsL"/>
+                            <constraint firstItem="NHz-YE-YXP" firstAttribute="right" secondItem="rE4-8J-QjC" secondAttribute="right" constant="30" id="W6D-lS-gsL"/>
                             <constraint firstItem="fUl-hy-OU6" firstAttribute="top" secondItem="nhg-fN-egb" secondAttribute="bottom" constant="2" id="WNe-Wr-Vnp"/>
                             <constraint firstItem="fUl-hy-OU6" firstAttribute="width" secondItem="nhg-fN-egb" secondAttribute="width" id="XYO-B5-G4c"/>
                             <constraint firstItem="Rp7-XY-O6m" firstAttribute="top" secondItem="ZCg-Os-O1H" secondAttribute="bottom" constant="2" id="XyF-MT-7Oc"/>
                             <constraint firstItem="ZCg-Os-O1H" firstAttribute="top" secondItem="nhg-fN-egb" secondAttribute="bottom" constant="30" id="faS-jd-k60"/>
-                            <constraint firstItem="NHz-YE-YXP" firstAttribute="trailing" secondItem="nhg-fN-egb" secondAttribute="trailing" constant="30" id="izN-8L-WvG"/>
-                            <constraint firstItem="Rp7-XY-O6m" firstAttribute="trailing" secondItem="ZCg-Os-O1H" secondAttribute="trailing" id="j7M-rc-ceC"/>
+                            <constraint firstItem="NHz-YE-YXP" firstAttribute="right" secondItem="nhg-fN-egb" secondAttribute="right" constant="30" id="izN-8L-WvG"/>
+                            <constraint firstItem="Rp7-XY-O6m" firstAttribute="right" secondItem="ZCg-Os-O1H" secondAttribute="right" id="j7M-rc-ceC"/>
                             <constraint firstItem="NHz-YE-YXP" firstAttribute="bottom" secondItem="rE4-8J-QjC" secondAttribute="bottom" constant="20" id="ktb-NR-MeK"/>
-                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="leading" secondItem="nhg-fN-egb" secondAttribute="leading" id="m3R-y4-wRX"/>
-                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="trailing" secondItem="nhg-fN-egb" secondAttribute="trailing" id="r1j-C9-IwA"/>
-                            <constraint firstItem="fUl-hy-OU6" firstAttribute="trailing" secondItem="nhg-fN-egb" secondAttribute="trailing" id="tKp-L9-PGJ"/>
-                            <constraint firstItem="nhg-fN-egb" firstAttribute="leading" secondItem="NHz-YE-YXP" secondAttribute="leading" constant="30" id="zFz-VQ-yFx"/>
+                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="left" secondItem="nhg-fN-egb" secondAttribute="left" id="m3R-y4-wRX"/>
+                            <constraint firstItem="ZCg-Os-O1H" firstAttribute="right" secondItem="nhg-fN-egb" secondAttribute="right" id="r1j-C9-IwA"/>
+                            <constraint firstItem="fUl-hy-OU6" firstAttribute="right" secondItem="nhg-fN-egb" secondAttribute="right" id="tKp-L9-PGJ"/>
+                            <constraint firstItem="nhg-fN-egb" firstAttribute="left" secondItem="NHz-YE-YXP" secondAttribute="left" constant="30" id="zFz-VQ-yFx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NHz-YE-YXP"/>
                         <variation key="default">

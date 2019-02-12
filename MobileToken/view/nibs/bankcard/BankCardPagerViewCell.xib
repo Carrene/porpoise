@@ -43,18 +43,18 @@
                         <color key="backgroundColor" name="primaryDark"/>
                         <constraints>
                             <constraint firstItem="cSQ-ih-8sx" firstAttribute="top" secondItem="oxa-dB-g5S" secondAttribute="bottom" constant="16" id="4Ni-ND-Sfo"/>
-                            <constraint firstAttribute="trailing" secondItem="Cfi-DL-HCS" secondAttribute="trailing" id="51m-s9-pAt"/>
+                            <constraint firstAttribute="right" secondItem="Cfi-DL-HCS" secondAttribute="right" id="51m-s9-pAt"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="6dx-TP-Zsw"/>
                             <constraint firstItem="oxa-dB-g5S" firstAttribute="top" secondItem="Cfi-DL-HCS" secondAttribute="bottom" constant="16" id="7vB-nZ-2Am"/>
                             <constraint firstItem="oxa-dB-g5S" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="83a-rv-sEc"/>
                             <constraint firstItem="cSQ-ih-8sx" firstAttribute="height" secondItem="oxa-dB-g5S" secondAttribute="height" id="TiY-dB-dLZ"/>
                             <constraint firstAttribute="trailing" secondItem="oxa-dB-g5S" secondAttribute="trailing" constant="20" id="VJP-wu-rmq"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="top" secondItem="k8F-ES-KrH" secondAttribute="top" id="awR-pW-kEN"/>
-                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="bkG-1S-qLy"/>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="left" secondItem="k8F-ES-KrH" secondAttribute="left" constant="20" id="bkG-1S-qLy"/>
                             <constraint firstAttribute="bottom" secondItem="cSQ-ih-8sx" secondAttribute="bottom" constant="16" id="dZn-pG-cme"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="height" secondItem="k8F-ES-KrH" secondAttribute="height" multiplier="0.5" id="fXh-GE-1nf"/>
-                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" id="gyp-kA-CiJ"/>
-                            <constraint firstAttribute="trailing" secondItem="cSQ-ih-8sx" secondAttribute="trailing" constant="20" id="mou-QN-wiG"/>
+                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="left" secondItem="k8F-ES-KrH" secondAttribute="left" id="gyp-kA-CiJ"/>
+                            <constraint firstAttribute="right" secondItem="cSQ-ih-8sx" secondAttribute="right" constant="20" id="mou-QN-wiG"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -65,9 +65,9 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="k8F-ES-KrH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KT1-gv-zda"/>
+                <constraint firstItem="k8F-ES-KrH" firstAttribute="left" secondItem="gTV-IL-0wX" secondAttribute="left" id="KT1-gv-zda"/>
                 <constraint firstAttribute="bottom" secondItem="k8F-ES-KrH" secondAttribute="bottom" id="O0M-Ev-59q"/>
-                <constraint firstAttribute="trailing" secondItem="k8F-ES-KrH" secondAttribute="trailing" id="VWD-9v-PLP"/>
+                <constraint firstAttribute="right" secondItem="k8F-ES-KrH" secondAttribute="right" id="VWD-9v-PLP"/>
                 <constraint firstItem="k8F-ES-KrH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ev2-dg-QKG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

@@ -98,12 +98,12 @@
                                 <constraints>
                                     <constraint firstItem="7H9-en-ngd" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="7Co-Jg-JWa"/>
                                     <constraint firstItem="QQ1-U2-y2B" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="Ih8-3w-tiU"/>
-                                    <constraint firstItem="QQ1-U2-y2B" firstAttribute="leading" secondItem="7H9-en-ngd" secondAttribute="trailing" constant="20" id="J5w-bE-fdr"/>
-                                    <constraint firstItem="YeL-2Q-Nbb" firstAttribute="leading" secondItem="KZV-oZ-w8D" secondAttribute="trailing" constant="20" id="OYJ-qp-efC"/>
+                                    <constraint firstItem="QQ1-U2-y2B" firstAttribute="left" secondItem="7H9-en-ngd" secondAttribute="right" constant="20" id="J5w-bE-fdr"/>
+                                    <constraint firstItem="YeL-2Q-Nbb" firstAttribute="left" secondItem="KZV-oZ-w8D" secondAttribute="right" constant="20" id="OYJ-qp-efC"/>
                                     <constraint firstAttribute="trailing" secondItem="QQ1-U2-y2B" secondAttribute="trailing" constant="20" id="Sjz-3m-EdI"/>
                                     <constraint firstItem="KZV-oZ-w8D" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="ayT-7Q-MfG"/>
-                                    <constraint firstItem="7H9-en-ngd" firstAttribute="leading" secondItem="YeL-2Q-Nbb" secondAttribute="trailing" constant="20" id="hjx-HM-M5V"/>
-                                    <constraint firstItem="KZV-oZ-w8D" firstAttribute="leading" secondItem="xIl-pG-zsS" secondAttribute="leading" constant="20" id="hsn-fn-3jz"/>
+                                    <constraint firstItem="7H9-en-ngd" firstAttribute="left" secondItem="YeL-2Q-Nbb" secondAttribute="right" constant="20" id="hjx-HM-M5V"/>
+                                    <constraint firstItem="KZV-oZ-w8D" firstAttribute="left" secondItem="xIl-pG-zsS" secondAttribute="left" constant="20" id="hsn-fn-3jz"/>
                                     <constraint firstItem="YeL-2Q-Nbb" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="iHQ-4g-XCy"/>
                                 </constraints>
                                 <variation key="default">
@@ -136,14 +136,14 @@
                         <constraints>
                             <constraint firstItem="xIl-pG-zsS" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="56" id="2JN-T8-YNk"/>
                             <constraint firstItem="jBa-RC-JwO" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="18" id="2T7-T5-Qu2"/>
-                            <constraint firstAttribute="trailing" secondItem="xIl-pG-zsS" secondAttribute="trailing" constant="15" id="BRx-Tn-LFm"/>
+                            <constraint firstAttribute="right" secondItem="xIl-pG-zsS" secondAttribute="right" constant="15" id="BRx-Tn-LFm"/>
                             <constraint firstItem="j9y-F9-3pr" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="18" id="BtL-dy-it7"/>
-                            <constraint firstItem="lNM-iF-yCq" firstAttribute="leading" secondItem="j9y-F9-3pr" secondAttribute="trailing" constant="10" id="LkQ-Wq-T8t"/>
-                            <constraint firstItem="jBa-RC-JwO" firstAttribute="leading" secondItem="6ET-8m-5lP" secondAttribute="leading" constant="30" id="QU5-mN-pyw"/>
+                            <constraint firstItem="lNM-iF-yCq" firstAttribute="left" secondItem="j9y-F9-3pr" secondAttribute="right" constant="10" id="LkQ-Wq-T8t"/>
+                            <constraint firstItem="jBa-RC-JwO" firstAttribute="left" secondItem="6ET-8m-5lP" secondAttribute="left" constant="30" id="QU5-mN-pyw"/>
                             <constraint firstItem="xIl-pG-zsS" firstAttribute="centerX" secondItem="6ET-8m-5lP" secondAttribute="centerX" id="TXQ-Xe-Lf0"/>
-                            <constraint firstItem="xIl-pG-zsS" firstAttribute="leading" secondItem="6ET-8m-5lP" secondAttribute="leading" constant="15" id="cmD-UY-4h5"/>
+                            <constraint firstItem="xIl-pG-zsS" firstAttribute="left" secondItem="6ET-8m-5lP" secondAttribute="left" constant="15" id="cmD-UY-4h5"/>
                             <constraint firstItem="lNM-iF-yCq" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="18" id="kmV-bt-vFZ"/>
-                            <constraint firstAttribute="trailing" secondItem="lNM-iF-yCq" secondAttribute="trailing" constant="15" id="rSK-3M-dd3"/>
+                            <constraint firstAttribute="right" secondItem="lNM-iF-yCq" secondAttribute="right" constant="15" id="rSK-3M-dd3"/>
                             <constraint firstAttribute="bottom" secondItem="xIl-pG-zsS" secondAttribute="bottom" constant="15" id="sml-nC-wrN"/>
                         </constraints>
                     </view>

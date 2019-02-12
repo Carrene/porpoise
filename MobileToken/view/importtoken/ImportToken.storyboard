@@ -79,28 +79,28 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="1ex-1N-Gxh"/>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="30" id="1ex-1N-Gxh"/>
                             <constraint firstItem="PkF-dm-DBr" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="44" id="4Xq-7N-MxV"/>
                             <constraint firstItem="Nlf-W8-eg8" firstAttribute="top" secondItem="nDK-RK-Yz7" secondAttribute="top" constant="13" id="6lX-pA-Npk"/>
-                            <constraint firstItem="3e5-yh-neA" firstAttribute="trailing" secondItem="MqB-aJ-kfa" secondAttribute="trailing" id="7em-Og-ZLb"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="XQ8-wZ-OrF" secondAttribute="trailing" constant="30" id="Cjh-Be-h1B"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" id="7em-Og-ZLb"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="XQ8-wZ-OrF" secondAttribute="right" constant="30" id="Cjh-Be-h1B"/>
                             <constraint firstItem="PkF-dm-DBr" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="H7p-7b-vmC"/>
                             <constraint firstItem="XQ8-wZ-OrF" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="80" id="JlO-li-LNG"/>
                             <constraint firstItem="3e5-yh-neA" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="Kcv-cg-qJ5"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="Nlf-W8-eg8" secondAttribute="trailing" constant="30" id="RtH-RS-Xld"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="PkF-dm-DBr" secondAttribute="trailing" constant="30" id="SZQ-6T-n8e"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="Nlf-W8-eg8" secondAttribute="right" constant="30" id="RtH-RS-Xld"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" constant="30" id="SZQ-6T-n8e"/>
                             <constraint firstItem="nDK-RK-Yz7" firstAttribute="bottom" secondItem="XQ8-wZ-OrF" secondAttribute="bottom" constant="20" id="TRf-rG-ohr"/>
-                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="trailing" secondItem="PkF-dm-DBr" secondAttribute="trailing" id="Tim-0J-2Ca"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" id="Tim-0J-2Ca"/>
                             <constraint firstItem="XQ8-wZ-OrF" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="W2J-uN-bDR"/>
                             <constraint firstItem="MqB-aJ-kfa" firstAttribute="top" secondItem="Nlf-W8-eg8" secondAttribute="bottom" constant="30" id="Yys-9h-G82"/>
-                            <constraint firstItem="PkF-dm-DBr" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="cZG-Qb-IE6"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="30" id="cZG-Qb-IE6"/>
                             <constraint firstItem="MqB-aJ-kfa" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="fP6-TX-c2B"/>
                             <constraint firstItem="Nlf-W8-eg8" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="mSo-ad-6Pk"/>
-                            <constraint firstItem="XQ8-wZ-OrF" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="mTI-Mh-rd5"/>
-                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="leading" secondItem="nDK-RK-Yz7" secondAttribute="leading" constant="30" id="nWI-Vb-9dQ"/>
+                            <constraint firstItem="XQ8-wZ-OrF" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="30" id="mTI-Mh-rd5"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="30" id="nWI-Vb-9dQ"/>
                             <constraint firstItem="nAm-Ke-r4o" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="5" id="psd-ao-QZk"/>
                             <constraint firstItem="3e5-yh-neA" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="5" id="r2M-Kf-bOm"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="trailing" secondItem="MqB-aJ-kfa" secondAttribute="trailing" constant="30" id="ypv-rZ-pHR"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" constant="30" id="ypv-rZ-pHR"/>
                             <constraint firstItem="nAm-Ke-r4o" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="zNV-AR-egC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nDK-RK-Yz7"/>

@@ -71,29 +71,29 @@
                     </subviews>
                     <color key="backgroundColor" name="primary"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="gge-C6-Uez" secondAttribute="trailing" id="4Yn-aS-rcW"/>
+                        <constraint firstAttribute="right" secondItem="gge-C6-Uez" secondAttribute="right" id="4Yn-aS-rcW"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" constant="20" id="8FC-gw-GzE"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" constant="6" id="SnP-ty-tvc"/>
-                        <constraint firstItem="gge-C6-Uez" firstAttribute="leading" secondItem="Ne0-MZ-xf5" secondAttribute="trailing" constant="5" id="aIp-Vi-23H"/>
+                        <constraint firstItem="gge-C6-Uez" firstAttribute="left" secondItem="Ne0-MZ-xf5" secondAttribute="right" constant="5" id="aIp-Vi-23H"/>
                         <constraint firstAttribute="bottom" secondItem="Ne0-MZ-xf5" secondAttribute="bottom" id="aoP-YA-kHj"/>
                         <constraint firstAttribute="bottom" secondItem="b1r-eL-wJl" secondAttribute="bottom" id="dZW-74-D7l"/>
                         <constraint firstAttribute="bottom" secondItem="gge-C6-Uez" secondAttribute="bottom" id="hOr-UI-yQc"/>
                         <constraint firstItem="b1r-eL-wJl" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" id="iE5-vn-VBP"/>
                         <constraint firstItem="gge-C6-Uez" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" id="oPJ-PU-Wbh"/>
-                        <constraint firstItem="b1r-eL-wJl" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" id="rxM-62-atH"/>
-                        <constraint firstAttribute="trailing" secondItem="b1r-eL-wJl" secondAttribute="trailing" id="wsv-8B-hCy"/>
+                        <constraint firstItem="b1r-eL-wJl" firstAttribute="left" secondItem="jPM-xg-r5T" secondAttribute="left" id="rxM-62-atH"/>
+                        <constraint firstAttribute="right" secondItem="b1r-eL-wJl" secondAttribute="right" id="wsv-8B-hCy"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="jvY-MO-ltC" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="trailing" constant="5" id="3w6-Wp-6UC"/>
-                <constraint firstItem="jPM-xg-r5T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IKw-hz-bGm"/>
+                <constraint firstItem="jvY-MO-ltC" firstAttribute="left" secondItem="jPM-xg-r5T" secondAttribute="right" constant="5" id="3w6-Wp-6UC"/>
+                <constraint firstItem="jPM-xg-r5T" firstAttribute="left" secondItem="vUN-kp-3ea" secondAttribute="left" id="IKw-hz-bGm"/>
                 <constraint firstItem="jvY-MO-ltC" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="JSn-pa-CS6"/>
                 <constraint firstAttribute="bottom" secondItem="jPM-xg-r5T" secondAttribute="bottom" id="eNI-zx-KLV"/>
                 <constraint firstItem="jPM-xg-r5T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ivg-Cj-YqS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jvY-MO-ltC" secondAttribute="trailing" constant="5" id="vgt-mM-ORx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="right" secondItem="jvY-MO-ltC" secondAttribute="right" constant="5" id="vgt-mM-ORx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

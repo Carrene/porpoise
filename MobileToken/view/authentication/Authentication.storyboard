@@ -94,10 +94,10 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="yeM-4x-iKm" firstAttribute="leading" secondItem="6DJ-lZ-aNG" secondAttribute="leading" constant="30" id="2AD-6r-6WQ"/>
+                            <constraint firstItem="yeM-4x-iKm" firstAttribute="left" secondItem="6DJ-lZ-aNG" secondAttribute="left" constant="30" id="2AD-6r-6WQ"/>
                             <constraint firstItem="yeM-4x-iKm" firstAttribute="centerX" secondItem="6DJ-lZ-aNG" secondAttribute="centerX" id="4fE-Kx-fjT"/>
                             <constraint firstItem="6DJ-lZ-aNG" firstAttribute="top" secondItem="47X-kO-rhi" secondAttribute="top" id="Gb2-aY-miS"/>
-                            <constraint firstItem="6DJ-lZ-aNG" firstAttribute="trailing" secondItem="yeM-4x-iKm" secondAttribute="trailing" constant="30" id="IV0-CT-srz"/>
+                            <constraint firstItem="6DJ-lZ-aNG" firstAttribute="right" secondItem="yeM-4x-iKm" secondAttribute="right" constant="30" id="IV0-CT-srz"/>
                             <constraint firstItem="47X-kO-rhi" firstAttribute="centerX" secondItem="6DJ-lZ-aNG" secondAttribute="centerX" id="L3h-xl-3UC"/>
                             <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="6DJ-lZ-aNG" secondAttribute="top" constant="90" id="hx4-zv-d4U"/>
                             <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="47X-kO-rhi" secondAttribute="bottom" constant="20" id="tvR-Ri-DSg"/>

@@ -12,14 +12,17 @@ open class MobileTokenActionSheetHeaderView: UICollectionReusableView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
     }
     
     open override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
 }
 
@@ -33,6 +36,7 @@ open class MobileTokenActionSheetController: ActionController<ActionSheet, Actio
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.semanticContentAttribute = .forceLeftToRight
         //backgroundView.addSubview(blurView)
         cancelView?.frame.origin.y = view.bounds.size.height // Starts hidden below screen
         cancelView?.layer.shadowColor = UIColor.black.cgColor

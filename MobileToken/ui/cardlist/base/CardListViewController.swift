@@ -138,7 +138,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func initActionSheet(card: Card) -> MobileTokenActionSheetController {
         let actionController = MobileTokenActionSheetController()
-
+        
         let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert(card: card)})
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
         var deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
@@ -196,8 +196,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let width:NSLayoutConstraint = NSLayoutConstraint(item: deleteTokenAlert.view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.width * 0.9)
         deleteTokenAlert.view.addConstraint(width)
         
-        deleteTokenAlert.addAction(cancelAction)
+        
         deleteTokenAlert.addAction(saveAction)
+        deleteTokenAlert.addAction(cancelAction)
         
         DispatchQueue.main.async {
             self.present(deleteTokenAlert, animated: true, completion:{})
@@ -250,7 +251,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     
-    
     func editCardAlert(card: Card) {
         let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
             NSAttributedString.Key.font : R.font.iranSansMobile(size: 14)!,
@@ -290,8 +290,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
             (action : UIAlertAction!) -> Void in })
         
-        editCardAlert.addAction(cancelAction)
         editCardAlert.addAction(saveAction)
+        editCardAlert.addAction(cancelAction)
+        
         
         self.present(editCardAlert, animated: true, completion: nil)
         
@@ -316,8 +317,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
             (action : UIAlertAction!) -> Void in })
         
-        deleteCardAlert.addAction(cancelAction)
         deleteCardAlert.addAction(deleteAction)
+        deleteCardAlert.addAction(cancelAction)
+        
         
         self.present(deleteCardAlert, animated: true, completion: nil)
         

@@ -137,24 +137,24 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="trailing" secondItem="MVf-ih-ZVt" secondAttribute="trailing" constant="30" id="Bre-e9-F4P"/>
+                            <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="right" secondItem="MVf-ih-ZVt" secondAttribute="right" constant="30" id="Bre-e9-F4P"/>
                             <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="bottom" secondItem="MVf-ih-ZVt" secondAttribute="bottom" constant="20" id="Nf6-uH-6SR"/>
-                            <constraint firstItem="6K0-Ct-2n1" firstAttribute="leading" secondItem="G0v-Up-gtc" secondAttribute="leading" id="PVW-q0-1hv"/>
+                            <constraint firstItem="6K0-Ct-2n1" firstAttribute="left" secondItem="G0v-Up-gtc" secondAttribute="left" id="PVW-q0-1hv"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="RmU-gR-MWi"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="VoO-gX-iXl"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="top" secondItem="G0v-Up-gtc" secondAttribute="bottom" constant="30" id="XNR-jG-KVd"/>
-                            <constraint firstItem="Y6w-Si-ccv" firstAttribute="trailing" secondItem="6K0-Ct-2n1" secondAttribute="trailing" id="XQa-fg-9nQ"/>
+                            <constraint firstItem="Y6w-Si-ccv" firstAttribute="right" secondItem="6K0-Ct-2n1" secondAttribute="right" id="XQa-fg-9nQ"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="top" secondItem="0B1-GI-j54" secondAttribute="bottom" constant="30" id="Xp5-1D-88G"/>
-                            <constraint firstItem="MVf-ih-ZVt" firstAttribute="leading" secondItem="mRQ-Oi-FUQ" secondAttribute="leading" constant="30" id="ZnW-7H-vbc"/>
-                            <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" constant="30" id="aIu-h0-lzB"/>
-                            <constraint firstItem="6K0-Ct-2n1" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" id="bAa-g3-aYT"/>
+                            <constraint firstItem="MVf-ih-ZVt" firstAttribute="left" secondItem="mRQ-Oi-FUQ" secondAttribute="left" constant="30" id="ZnW-7H-vbc"/>
+                            <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="right" secondItem="G0v-Up-gtc" secondAttribute="right" constant="30" id="aIu-h0-lzB"/>
+                            <constraint firstItem="6K0-Ct-2n1" firstAttribute="right" secondItem="G0v-Up-gtc" secondAttribute="right" id="bAa-g3-aYT"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="top" secondItem="mRQ-Oi-FUQ" secondAttribute="top" constant="30" id="cW8-WO-kzE"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="top" secondItem="G0v-Up-gtc" secondAttribute="bottom" constant="2" id="dbp-dp-twf"/>
                             <constraint firstItem="Y6w-Si-ccv" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="2" id="gRA-Pc-iXi"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="10" id="jz4-WT-Kod"/>
-                            <constraint firstItem="0B1-GI-j54" firstAttribute="trailing" secondItem="G0v-Up-gtc" secondAttribute="trailing" id="kWI-WG-2vA"/>
+                            <constraint firstItem="0B1-GI-j54" firstAttribute="right" secondItem="G0v-Up-gtc" secondAttribute="right" id="kWI-WG-2vA"/>
                             <constraint firstItem="MVf-ih-ZVt" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="nAg-WR-XQr"/>
-                            <constraint firstItem="G0v-Up-gtc" firstAttribute="leading" secondItem="mRQ-Oi-FUQ" secondAttribute="leading" constant="30" id="oW6-4R-XyZ"/>
+                            <constraint firstItem="G0v-Up-gtc" firstAttribute="left" secondItem="mRQ-Oi-FUQ" secondAttribute="left" constant="30" id="oW6-4R-XyZ"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="width" secondItem="G0v-Up-gtc" secondAttribute="width" id="qAt-YE-uSX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mRQ-Oi-FUQ"/>
