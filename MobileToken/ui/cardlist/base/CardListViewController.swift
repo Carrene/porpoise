@@ -12,8 +12,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     private var fsPagerCollectionView = [FSPagerView]()
     private var cardListPresenter : CardListPresenterProtocol?
     private var banks : [Bank]?
-    private var selectedCard:Card?
-    private var updatedCard: Card?
+//    private var selectedCard:Card?
+//    private var updatedCard: Card?
     private var buttonDeleteFirstToken : UIButton?
     private var buttonDeleteSecondToken : UIButton?
     private var countDownTimer = [Timer]()
@@ -77,7 +77,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func selectedCard(card: Card) {
-        self.selectedCard = card
+//        self.selectedCard = card
     }
     
     func updateCardList(card: Card) {
@@ -273,14 +273,14 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             textField.keyboardAppearance = .dark
             let textView = (textField.subviews.first!)
             textView.backgroundColor = .clear
-            textField.text = self.selectedCard?.cardName
+            textField.text = card.cardName
 
         }
         
         let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
             if let newCardName = editCardAlert.textFields![0].text {
-                let card = self.selectedCard?.copy() as! Card
-                card.cardName = newCardName
+                let cardForEdit = card
+                cardForEdit.cardName = newCardName
                 self.cardListPresenter?.editCard(card: card)
                 
             }
@@ -377,9 +377,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)
-                if updatedCard != nil {
-                    fsPagerAdapterList[i].setCardDataSource(updatedCard: updatedCard!)
-                }
+//                if updatedCard != nil {
+//                    fsPagerAdapterList[i].setCardDataSource(updatedCard: updatedCard!)
+//                }
                 
                 fsPagerCollectionView[i].reloadData()
                 fsPagerCollectionView[i].layoutIfNeeded()
