@@ -18,7 +18,8 @@ class UserRestRepository: UserRepositoryProtocol {
             "udid": user.udid,
             "phone": user.phone,
             "name": user.deviceName,
-            "activationCode": user.activationCode
+            "activationCode": user.activationCode,
+            "bankId" : user.bank?.id
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)
         var request = URLRequest(url: url)
@@ -41,7 +42,8 @@ class UserRestRepository: UserRepositoryProtocol {
         let parameters: [String: Any?] =
         [
             "phone": user.phone,
-            "udid": user.udid
+            "udid": user.udid,
+            "bankId" : user.bank?.id
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)
         var request = URLRequest(url: url)
