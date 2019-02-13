@@ -323,6 +323,8 @@
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
 		AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveArrayElementExtention.swift; sourceTree = "<group>"; };
+		AF9F219822144F08005088B9 /* CarreneDev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDev.xcconfig; sourceTree = "<group>"; };
+		AF9F2199221451C1005088B9 /* ISCOP.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOP.xcconfig; sourceTree = "<group>"; };
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
 		AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBankViewDesignable.xib; sourceTree = "<group>"; };
@@ -994,6 +996,15 @@
 			path = array;
 			sourceTree = "<group>";
 		};
+		AF9F219722144E92005088B9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AF9F219822144F08005088B9 /* CarreneDev.xcconfig */,
+				AF9F2199221451C1005088B9 /* ISCOP.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		AFAD22FB2190774200EC00CB /* addpassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -1015,6 +1026,7 @@
 		AFB39B432189A6A600302624 = {
 			isa = PBXGroup;
 			children = (
+				AF9F219722144E92005088B9 /* Configuration */,
 				AFB39B4E2189A6A600302624 /* MobileToken */,
 				AFB39B632189A6A700302624 /* MobileTokenTests */,
 				AFB39B6E2189A6A700302624 /* MobileTokenUITests */,
