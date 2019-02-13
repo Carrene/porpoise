@@ -21,6 +21,8 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO: remove bt
+        buttonAddCode.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,7 +82,12 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        
+        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
+//            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
+            btConfirm.isEnabled = false
+        } else {
+            btConfirm.isEnabled = true
+        }
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -110,10 +117,10 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
             return numberOfChars < 9
         }
         else {
-            let smsText = text.split(separator: "\n")
-            smsText.forEach{ text in
-                if text.count == 120 {
-                    textViewSmsCode.text = String(text)
+            let smsText = text.components(separatedBy: CharacterSet(charactersIn: "\n "))
+            smsText.forEach{ splitedText in
+                if splitedText.count == 120 && smsText.count > 1 {
+                    textViewSmsCode.text = String(splitedText)
                 }
             }
             return numberOfChars < 121
@@ -121,13 +128,13 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
    
     @IBAction func onButtonAddCode(_ sender: UIButton) {
-        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
-            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
-        } else {
-            let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
-            btConfirm.isEnabled = true
-            presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
-        }
+//        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
+//            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
+//        } else {
+//            let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
+//            btConfirm.isEnabled = true
+//            presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
+//        }
     }
     
     func tokenImported(card: Card) {
@@ -135,5 +142,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     @IBAction func onConfirmClicked(_ sender: Any) {
+        let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
+        presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
     }
 }
