@@ -177,6 +177,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseCountry.isHidden = true
         labelEnterYourPhone.isHidden = true
         viewCountry.isHidden = true
+        confirmBarButton.isEnabled = false
     }
     
     func showPhoneInput() {
@@ -187,6 +188,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseCountry.isHidden = false
         labelEnterYourPhone.isHidden = false
         viewCountry.isHidden = false
+        confirmBarButton.isEnabled = true
     }
     
     
