@@ -72,7 +72,7 @@
                     <color key="backgroundColor" name="primary"/>
                     <constraints>
                         <constraint firstAttribute="right" secondItem="gge-C6-Uez" secondAttribute="right" id="4Yn-aS-rcW"/>
-                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="leading" secondItem="jPM-xg-r5T" secondAttribute="leading" constant="20" id="8FC-gw-GzE"/>
+                        <constraint firstItem="Ne0-MZ-xf5" firstAttribute="left" secondItem="jPM-xg-r5T" secondAttribute="left" constant="20" id="8FC-gw-GzE"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" constant="6" id="SnP-ty-tvc"/>
                         <constraint firstItem="gge-C6-Uez" firstAttribute="left" secondItem="Ne0-MZ-xf5" secondAttribute="right" constant="5" id="aIp-Vi-23H"/>
                         <constraint firstAttribute="bottom" secondItem="Ne0-MZ-xf5" secondAttribute="bottom" id="aoP-YA-kHj"/>

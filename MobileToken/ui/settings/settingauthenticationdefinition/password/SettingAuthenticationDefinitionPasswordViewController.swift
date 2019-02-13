@@ -1,16 +1,18 @@
 import UIKit
+import PasswordTextField
 
 class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UITextFieldDelegate,SettingAuthenticationDefinitionPasswordViewProtocol {
     
-    @IBOutlet weak var textFieldPassword: UITextField!
-    @IBOutlet weak var textFieldConfirmPassword: UITextField!
+    @IBOutlet weak var textFieldPassword: PasswordTextField!
+    @IBOutlet weak var textFieldConfirmPassword: PasswordTextField!
     @IBOutlet var labelPasswordHint: UILabel!
     @IBOutlet var labelSecondPassword: UILabel!
     
     var passwordIsValid = false
     var authenticationDefinitionPasswordPresenter: SettingAuthenticationDefinitionPasswordPresenterProtocol?
-    
     var authenticationDefinitionDelegate: SettingAuthenticationDefintionDelegate?
+    
+    var hintDataSource = [R.string.localizable.enter_at_least_eight_characters():false,R.string.localizable.enter_at_least_one_capital_letter():false,R.string.localizable.enter_at_least_one_digit():false,R.string.localizable.enter_at_least_one_special_character():false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         textFieldPassword.becomeFirstResponder()
         labelPasswordHint.font = R.font.iranSansMobile(size: 12)
         labelSecondPassword.font = R.font.iranSansMobile(size: 12)
+        labelPasswordHint.textColor = R.color.buttonColor()
+        //labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(), changeText: (labelPasswordHint.text?.components(separatedBy: "،").first)!)
         textFieldPassword.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_password(),
                                                                      attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         textFieldConfirmPassword.attributedPlaceholder = NSAttributedString(string:R.string.localizable.ph_confirm_password() ,
@@ -86,5 +90,15 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     func authenticationUpdatedAction() {
         
     }               
+}
+
+extension UILabel {
+    func halfTextColorChange (fullText : String , changeText : String ) {
+        let strNumber: NSString = fullText as NSString
+        let range = (strNumber).range(of: changeText)
+        let attribute = NSMutableAttributedString.init(string: fullText)
+        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red , range: range)
+        self.attributedText = attribute
+    }
 }
 
