@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,8 +42,8 @@
                     <constraints>
                         <constraint firstItem="mOM-yG-fvW" firstAttribute="centerY" secondItem="uUP-pq-5fR" secondAttribute="centerY" id="SHG-VV-c7P"/>
                         <constraint firstItem="uUP-pq-5fR" firstAttribute="centerY" secondItem="pug-zC-P1v" secondAttribute="centerY" id="bln-kn-QLW"/>
-                        <constraint firstItem="mOM-yG-fvW" firstAttribute="leading" secondItem="uUP-pq-5fR" secondAttribute="trailing" constant="20" id="kvP-xl-qxM"/>
-                        <constraint firstAttribute="trailing" secondItem="mOM-yG-fvW" secondAttribute="trailing" constant="30" id="qPS-a0-rjw"/>
+                        <constraint firstItem="mOM-yG-fvW" firstAttribute="left" secondItem="uUP-pq-5fR" secondAttribute="right" constant="20" id="kvP-xl-qxM"/>
+                        <constraint firstAttribute="right" secondItem="mOM-yG-fvW" secondAttribute="right" constant="30" id="qPS-a0-rjw"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haP-Jk-6pt" userLabel="viewDisable">
@@ -63,23 +64,24 @@
                         </imageView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="l8n-FV-auA" secondAttribute="trailing" constant="30" id="R65-MU-nHz"/>
-                        <constraint firstItem="l8n-FV-auA" firstAttribute="leading" secondItem="wIF-a0-HIC" secondAttribute="trailing" constant="20" id="cgX-O0-ioc"/>
+                        <constraint firstAttribute="right" secondItem="l8n-FV-auA" secondAttribute="right" constant="30" id="R65-MU-nHz"/>
+                        <constraint firstItem="l8n-FV-auA" firstAttribute="left" secondItem="wIF-a0-HIC" secondAttribute="right" constant="20" id="cgX-O0-ioc"/>
                         <constraint firstItem="wIF-a0-HIC" firstAttribute="centerY" secondItem="haP-Jk-6pt" secondAttribute="centerY" id="dsl-YM-y1u"/>
                         <constraint firstItem="l8n-FV-auA" firstAttribute="centerY" secondItem="wIF-a0-HIC" secondAttribute="centerY" id="tIg-e8-i0x"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" name="secondary"/>
             <constraints>
                 <constraint firstItem="haP-Jk-6pt" firstAttribute="centerY" secondItem="pug-zC-P1v" secondAttribute="centerY" id="Jnq-M2-sja"/>
                 <constraint firstItem="haP-Jk-6pt" firstAttribute="centerX" secondItem="pug-zC-P1v" secondAttribute="centerX" id="P10-ja-hLH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pug-zC-P1v" secondAttribute="bottom" id="RQP-WT-tIu"/>
                 <constraint firstItem="haP-Jk-6pt" firstAttribute="height" secondItem="pug-zC-P1v" secondAttribute="height" id="XcE-iC-EA0"/>
                 <constraint firstItem="pug-zC-P1v" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZPi-sK-zoQ"/>
-                <constraint firstItem="pug-zC-P1v" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hWq-vS-7cl"/>
+                <constraint firstItem="pug-zC-P1v" firstAttribute="right" secondItem="vUN-kp-3ea" secondAttribute="right" id="hWq-vS-7cl"/>
                 <constraint firstItem="haP-Jk-6pt" firstAttribute="width" secondItem="pug-zC-P1v" secondAttribute="width" id="iGO-d0-VID"/>
-                <constraint firstItem="pug-zC-P1v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uws-9h-aSt"/>
+                <constraint firstItem="pug-zC-P1v" firstAttribute="left" secondItem="vUN-kp-3ea" secondAttribute="left" id="uws-9h-aSt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -90,4 +92,9 @@
             </connections>
         </view>
     </objects>
+    <resources>
+        <namedColor name="secondary">
+            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

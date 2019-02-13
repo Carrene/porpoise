@@ -22,7 +22,6 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     }
     
     func initUIComponent() {
-        self.hideKeyboardWhenTappedAround()
         textFieldPassword.addTarget(self, action: #selector(self.textFieldPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
 //        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
         textFieldConfirmPassword.layer.cornerRadius = 5
@@ -40,11 +39,6 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         textFieldConfirmPassword.attributedPlaceholder = NSAttributedString(string:R.string.localizable.ph_confirm_password() ,
                                                                      attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
     
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        dismissKeyboard()
-        return true
     }
     
     func setDelegate(authenticationDefinitionDelegate: AuthenticationDefintionDelegate) {
