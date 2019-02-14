@@ -1,8 +1,9 @@
-import CryptoSwift
 import Foundation
 import RealmSwift
 import ObjectMapper
 import DeviceKit
+import CryptoSwift
+
 
 class User: Object, Mappable, NSCopying {
 
