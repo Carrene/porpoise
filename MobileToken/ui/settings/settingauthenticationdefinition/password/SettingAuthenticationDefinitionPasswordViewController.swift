@@ -12,8 +12,6 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     var authenticationDefinitionPasswordPresenter: SettingAuthenticationDefinitionPasswordPresenterProtocol?
     var authenticationDefinitionDelegate: SettingAuthenticationDefintionDelegate?
     
-    var hintDataSource = [R.string.localizable.enter_at_least_eight_characters():false,R.string.localizable.enter_at_least_one_capital_letter():false,R.string.localizable.enter_at_least_one_digit():false,R.string.localizable.enter_at_least_one_special_character():false]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         authenticationDefinitionPasswordPresenter = SettingAuthenticationDefinitionPasswordPresenter(authenticationDefinitionPasswordView: self)
@@ -37,7 +35,6 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         labelPasswordHint.font = R.font.iranSansMobile(size: 12)
         labelSecondPassword.font = R.font.iranSansMobile(size: 12)
         labelPasswordHint.textColor = R.color.buttonColor()
-        //labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(), changeText: (labelPasswordHint.text?.components(separatedBy: "،").first)!)
         textFieldPassword.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_password(),
                                                                      attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         textFieldConfirmPassword.attributedPlaceholder = NSAttributedString(string:R.string.localizable.ph_confirm_password() ,
@@ -46,7 +43,6 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     }
     
     func setDelegate(authenticationDefinitionDelegate: SettingAuthenticationDefintionDelegate) {
-        
         self.authenticationDefinitionDelegate = authenticationDefinitionDelegate
     }
     
@@ -54,26 +50,35 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         
     }
     
-   
-    
     @IBAction func onEndEditing(_ sender: UITextField) {
         
     }
     
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
-//        if !checkPasswordIsValid(password: textFieldPassword.text!) {
-//            textFieldConfirmPassword.isUserInteractionEnabled = false
-//            textFieldConfirmPassword.text = nil
-//        }
-//        else {
-//            textFieldConfirmPassword.isUserInteractionEnabled = true
-//        }
-//        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text!) {
-//            labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(), changeText: (R.string.localizable.enter_at_least_one_capital_letter())
-//        }
-         if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text!) {
-            labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(), changeText: R.string.localizable.enter_at_least_one_capital_letter())
+        var metState = [String]()
+        
+        if PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_eight_characters())
+        }
+        if PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_one_digit())
+        }
+        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_one_capital_letter())
+        }
+        if PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_one_special_character())
+        }
+        
+        labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(),changeText:metState )
+        
+        if !checkPasswordIsValid(password: textFieldPassword.text!) {
+            textFieldConfirmPassword.isUserInteractionEnabled = false
+            textFieldConfirmPassword.text = nil
+        }
+        else {
+            textFieldConfirmPassword.isUserInteractionEnabled = true
         }
     }
     
@@ -101,12 +106,14 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
 }
 
 extension UILabel {
-    func halfTextColorChange (fullText : String , changeText : String ) {
-        let strNumber: NSString = fullText as NSString
-        let range = (strNumber).range(of: changeText)
-        let attribute = NSMutableAttributedString.init(string: fullText)
-        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red , range: range)
-        self.attributedText = attribute
+    func halfTextColorChange (fullText : String , changeText : [String] ) {
+    
+        let attributedString = NSMutableAttributedString.init(string: fullText)
+        for highlightedWord in changeText {
+            let textRange = (fullText as NSString).range(of: highlightedWord)
+            attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: R.color.secondary()! , range: textRange)
+        }
+        self.attributedText = attributedString
     }
 }
 
