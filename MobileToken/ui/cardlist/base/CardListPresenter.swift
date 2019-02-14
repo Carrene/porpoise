@@ -80,7 +80,4 @@ class CardListPresenter : CardListPresenterProtocol {
         }
         repository.delete(tokens: tokens, onDone: onDataResponse)
     }
-    
-    
-    
 }

@@ -148,6 +148,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
         actionController.addAction(deleteTokenAction)
+        buttonDeleteFirstToken?.isSelected = false
+        buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
+        buttonDeleteSecondToken?.isSelected = false
+        buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
         return actionController
     }
     
@@ -215,13 +219,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         if buttonDeleteFirstToken?.isSelected == true {
             let token = card.TokenList.filter{$0.cryptoModuleId == Token.CryptoModuleId.one}.first
             tokens.append(token!)
-//            cardListPresenter?.deleteToken(token: token!)
         }
         if buttonDeleteSecondToken?.isSelected == true {
             let token = card.TokenList.filter {$0.cryptoModuleId == Token.CryptoModuleId.two}.first
             tokens.append(token!)
-
-//            cardListPresenter?.deleteToken(token: token!)
         }
         cardListPresenter?.deleteToken(tokens: tokens)
     }
@@ -233,7 +234,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
         else {
             buttonDeleteFirstToken?.isSelected = false
-            
             buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
         }
     }
@@ -246,10 +246,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         else {
             buttonDeleteSecondToken?.isSelected = false
             buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
-            
         }
     }
-    
     
     func editCardAlert(card: Card) {
         let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
@@ -380,10 +378,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 40))
                 vScroll.addSubview(cardListPagerView)
-//                if updatedCard != nil {
-//                    fsPagerAdapterList[i].setCardDataSource(updatedCard: updatedCard!)
-//                }
-                
                 fsPagerCollectionView[i].reloadData()
                 fsPagerCollectionView[i].layoutIfNeeded()
                 if banks![i].cardList.count > 0 {

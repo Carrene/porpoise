@@ -12,11 +12,11 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     override func viewDidLoad() {
         super.viewDidLoad()
         settingPresenter = SettingPresenter(settingView: self)
+        initTableView()
+        getVersion()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        initTableView()
-        getVersion()
         settingPresenter?.getAllDataSetting()
     }
     

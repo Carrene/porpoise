@@ -25,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared().isEnabled = true
         print("\(String(describing: RealmConfiguration.sensitiveDataConfiguration().fileURL))")
+        print((Bundle.main.infoDictionary?["UrlEndPoint"] as! String).replacingOccurrences(of: "\\", with: ""))
+        print(Bundle.main.infoDictionary?["UrlPort"] as! String)
+        print(Bundle.main.infoDictionary?["InitialToken"] as! String)
+
+
         return true
     }
 
