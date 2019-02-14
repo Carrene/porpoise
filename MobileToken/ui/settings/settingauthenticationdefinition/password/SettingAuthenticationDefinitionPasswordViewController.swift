@@ -62,14 +62,22 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
-        if !checkPasswordIsValid(password: textFieldPassword.text!) {
-            textFieldConfirmPassword.isUserInteractionEnabled = false
-            textFieldConfirmPassword.text = nil
-        }
-        else {
-            textFieldConfirmPassword.isUserInteractionEnabled = true
+//        if !checkPasswordIsValid(password: textFieldPassword.text!) {
+//            textFieldConfirmPassword.isUserInteractionEnabled = false
+//            textFieldConfirmPassword.text = nil
+//        }
+//        else {
+//            textFieldConfirmPassword.isUserInteractionEnabled = true
+//        }
+//        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text!) {
+//            labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(), changeText: (R.string.localizable.enter_at_least_one_capital_letter())
+//        }
+         if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text!) {
+            labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(), changeText: R.string.localizable.enter_at_least_one_capital_letter())
         }
     }
+    
+    
     
     func checkPasswordIsValid(password:String) -> Bool {
         return (PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text) &&
