@@ -16,6 +16,8 @@ class QuestionViewController: BaseViewController,WKNavigationDelegate {
         view.addSubview(webView)
         let url = Bundle.main.url(forResource: "answer", withExtension: "html")
         let request = URLRequest(url: url!)
+        webView.backgroundColor = R.color.primary()
+        webView.tintColor = R.color.primary()
         webView.load(request)
         webView.navigationDelegate = self
 

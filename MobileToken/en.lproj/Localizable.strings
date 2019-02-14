@@ -33,10 +33,10 @@
 "sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است";
 
 //passWordHint
-"enter_at_least_eight_characters" = "شامل حداقل ۸ کاراکتر";
-"enter_at_least_one_capital_letter" = "شامل حداقل یک حرف بزرگ";
-"enter_at_least_one_digit" = "شامل حداقل یک عدد";
-"enter_at_least_one_special_character" = "شامل حداقل یکی از کاراکترهای (@,#,$,%,+,=,_,*,?)";
+"enter_at_least_eight_characters" = "رمز باید شامل حداقل 8 کاراکتر";
+"enter_at_least_one_capital_letter" = "یک حرف بزرگ";
+"enter_at_least_one_digit" = "یک عدد";
+"enter_at_least_one_special_character" = "یک کاراکتر (؟*_=+%$#@) باشد";
 "lb_passwordHint" = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد";
 
 //label

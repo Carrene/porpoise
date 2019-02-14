@@ -36,7 +36,8 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="primary"/>
+                        <color key="tintColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="0gV-mi-0J4" firstAttribute="centerX" secondItem="LfD-IU-t3u" secondAttribute="centerX" id="IeZ-fE-YsT"/>
                             <constraint firstItem="0gV-mi-0J4" firstAttribute="centerY" secondItem="LfD-IU-t3u" secondAttribute="centerY" id="NNp-PB-JeM"/>
@@ -77,7 +78,8 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="primary"/>
+                        <color key="tintColor" name="secondary"/>
                         <constraints>
                             <constraint firstItem="X5A-17-3VW" firstAttribute="centerX" secondItem="kVc-o6-wgQ" secondAttribute="centerX" id="4pt-NR-Hiy"/>
                             <constraint firstItem="X5A-17-3VW" firstAttribute="width" secondItem="kVc-o6-wgQ" secondAttribute="width" id="GMP-fB-LoB"/>
@@ -109,6 +111,9 @@
         </namedColor>
         <namedColor name="primary">
             <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
