@@ -111,7 +111,7 @@
                                     <action selector="onEndEditing:" destination="Ei6-jL-L9f" eventType="editingDidEnd" id="HAo-xq-URE"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر و یک عدد، یک حرف بزرگ و یک کاراکتر (؟*_=+%$#@) باشد" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B1-GI-j54" userLabel="labelPasswordHint">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B1-GI-j54" userLabel="labelPasswordHint">
                                 <rect key="frame" x="30" y="92" width="260" height="38.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" name="buttonColor"/>

@@ -59,9 +59,22 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     }
     
     @objc func textFieldPasswordDidChange(_ textField: UITextField) {
-        if PasswordValidator.hasPasswordCapitalLetter(testStr: textField.text) {
-            
+        var metState = [String]()
+        
+        if PasswordValidator.hasPasswordMinimumLength(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_eight_characters())
         }
+        if PasswordValidator.hasPasswordDigit(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_one_digit())
+        }
+        if PasswordValidator.hasPasswordCapitalLetter(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_one_capital_letter())
+        }
+        if PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text!) {
+            metState.append(R.string.localizable.enter_at_least_one_special_character())
+        }
+        
+        labelPasswordHint.halfTextColorChange(fullText: R.string.localizable.lb_passwordHint(),changeText:metState )
         
         if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
@@ -79,9 +92,6 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     PasswordValidator.hasPasswordCustomCharacters(testStr: textFieldPassword.text))
     }
     
-//    @objc func textFieldConfirmPasswordDidChange(_ textField: UITextField) {
-//        authenticationDefinitionPasswordPresenter?.checkPasswords(password: textFieldPassword.text!, confirmpassword: textFieldConfirmPassword.text!)
-//    }
     
     func showNotMatchError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_passwords_not_match(), color: R.color.errorDark()!)
