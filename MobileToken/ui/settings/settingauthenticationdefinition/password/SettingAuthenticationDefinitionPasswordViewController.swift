@@ -107,7 +107,7 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
 
 extension UILabel {
     func halfTextColorChange (fullText : String , changeText : [String] ) {
-    
+        
         let attributedString = NSMutableAttributedString.init(string: fullText)
         for highlightedWord in changeText {
             let textRange = (fullText as NSString).range(of: highlightedWord)
@@ -116,4 +116,6 @@ extension UILabel {
         self.attributedText = attributedString
     }
 }
+
+
 
