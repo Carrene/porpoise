@@ -85,7 +85,7 @@
       buildConfiguration = "DebugCarreneDev">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "ReleaseCarreneDev"
+      buildConfiguration = "DebugCarreneDev"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -23,7 +23,10 @@ target 'MobileToken' do
     pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.4.0'
     pod 'InputMask', '~> 3.4.0'
     pod 'DTTJailbreakDetection', '~> 0.4.0'
-    
+    pod 'Firebase/Core'
+    pod 'Fabric', '~> 1.9.0'
+    pod 'Crashlytics', '~> 3.12.0'
+
     target 'MobileTokenTests' do
         inherit! :search_paths
     end

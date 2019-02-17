@@ -72,5 +72,6 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         self.selectedIndex = indexPath.row
         bankPagerViewDelegate?.selectedBank(bankIndex: self.selectedIndex)
         collectionView.reloadData()
+        
     }
 }
