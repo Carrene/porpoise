@@ -258,7 +258,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         let editCardAlert = PopupDialog(viewController: editCardNameVC,
                                 buttonAlignment: .horizontal,
-                                transitionStyle: .bounceDown,
+                                transitionStyle: .zoomIn,
                                 tapGestureDismissal: true,
                                 panGestureDismissal: false)
 
@@ -279,12 +279,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         }
         
         let saveButton = DefaultButton(title: R.string.localizable.save(), dismissOnTap: true) {
-//            if let newCardName = editCardAlert.textFields![0].text {
-//                let cardForEdit = card
-//                cardForEdit.cardName = newCardName
-//                self.cardListPresenter?.editCard(card: card)
-//
-//            }
+            if let newCardName = editCardNameVC.editNameTextField.text {
+                let cardForEdit = card
+                cardForEdit.cardName = newCardName
+                self.cardListPresenter?.editCard(card: card)
+
+            }
         }
         
         var cancelButtonAppearance = CancelButton.appearance()
@@ -307,6 +307,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func deleteCardAlert(card: Card) {
         let deleteCardAlert = PopupDialog(title: R.string.localizable.lb_are_you_sure(), message: "")
+        deleteCardAlert.transitionStyle = .zoomIn
         deleteCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
         dialogAppearance.backgroundColor = R.color.primaryDark()
