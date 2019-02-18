@@ -2,6 +2,7 @@ import XLActionController
 import UIKit
 import FSPagerView
 import Crashlytics
+import PopupDialog
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate, ImportToeknDelegate {
 
@@ -306,26 +307,42 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
             NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
             ])
-        let deleteCardAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
+
+        let deleteCardAlert = PopupDialog(title: R.string.localizable.lb_are_you_sure(), message: "")
+        deleteCardAlert.buttonAlignment = .horizontal
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor = R.color.primaryDark()
+        dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        dialogAppearance.titleColor = R.color.buttonColor()
         
-        deleteCardAlert.setValue(attributedString, forKey: "attributedMessage")
+        let containerAppearance = PopupDialogContainerView.appearance()
+        containerAppearance.backgroundColor = R.color.primary()
+        containerAppearance.cornerRadius = 10
         
-        let deleteAction = UIAlertAction(title: R.string.localizable.delete_card() , style: .default , handler: { alert -> Void in
+        let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
+            print("You canceled the dialog.")
+        }
+        
+        let deleteButton = DefaultButton(title: R.string.localizable.delete_card(), dismissOnTap: true) {
             self.cardListPresenter?.deleteCard(card: card)
-        })
+        }
         
-        let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
-            (action : UIAlertAction!) -> Void in })
+        var buttonAppearance = CancelButton.appearance()
+        buttonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        buttonAppearance.titleColor = R.color.secondary()
+        buttonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        buttonAppearance.buttonColor = R.color.primaryDark()
         
-        deleteCardAlert.addAction(deleteAction)
-        deleteCardAlert.addAction(cancelAction)
+        var defaultButtonAppearance = DefaultButton.appearance()
+        defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        defaultButtonAppearance.titleColor = R.color.secondary()
+        defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
         
+        
+        deleteCardAlert.addButtons([deleteButton, cancelButton])
         
         self.present(deleteCardAlert, animated: true, completion: nil)
-        
-        let subview = (deleteCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 10
-        subview.backgroundColor = R.color.primaryLight()
+      
     }
     
     
