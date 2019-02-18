@@ -135,6 +135,8 @@
 		AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
 		AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
 		AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
+		AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
+		AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
@@ -330,9 +332,16 @@
 		AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Light.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSansMobile.ttf; path = MobileToken/assets/fonts/IRANSansMobile.ttf; sourceTree = SOURCE_ROOT; };
 		AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Medium.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-r.plist"; sourceTree = "<group>"; };
+		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF52C34C22155B8500639DA3 /* CarreneDevRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevRelease.xcconfig; sourceTree = "<group>"; };
-		AF52C34D22155BA800639DA3 /* ISCOPRekease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPRekease.xcconfig; sourceTree = "<group>"; };
+		AF52C34D22155BA800639DA3 /* ISCOPRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPRelease.xcconfig; sourceTree = "<group>"; };
+		AF595927221970A60049DAAC /* MobileToken copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy-Info.plist"; sourceTree = "<absolute>"; };
+		AF5959DA22197ED20049DAAC /* MobileToken copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy2-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy2-Info.plist"; sourceTree = "<absolute>"; };
+		AF595A8B22197F240049DAAC /* MobileToken copy 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy 2-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy 2-Info.plist"; sourceTree = "<absolute>"; };
+		AF595B3C22197F270049DAAC /* MobileToken copy 3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy 3-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy 3-Info.plist"; sourceTree = "<absolute>"; };
+		AF595BED22197F330049DAAC /* MobileToken copy 4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy 4-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy 4-Info.plist"; sourceTree = "<absolute>"; };
 		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
 		AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveArrayElementExtention.swift; sourceTree = "<group>"; };
 		AF9F219822144F08005088B9 /* CarreneDevDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevDebug.xcconfig; sourceTree = "<group>"; };
@@ -1014,6 +1023,13 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		AF52C3512218187D00639DA3 /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = firebase;
+			sourceTree = "<group>";
+		};
 		AF9F2194220AFD24005088B9 /* array */ = {
 			isa = PBXGroup;
 			children = (
@@ -1028,7 +1044,7 @@
 				AF52C34C22155B8500639DA3 /* CarreneDevRelease.xcconfig */,
 				AF9F219822144F08005088B9 /* CarreneDevDebug.xcconfig */,
 				AF9F2199221451C1005088B9 /* ISCOPDebug.xcconfig */,
-				AF52C34D22155BA800639DA3 /* ISCOPRekease.xcconfig */,
+				AF52C34D22155BA800639DA3 /* ISCOPRelease.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -1061,6 +1077,11 @@
 				AFB39B4D2189A6A600302624 /* Products */,
 				510385C2178795F3E0C5F799 /* Pods */,
 				A0846E286139B9158EA3297A /* Frameworks */,
+				AF595927221970A60049DAAC /* MobileToken copy-Info.plist */,
+				AF5959DA22197ED20049DAAC /* MobileToken copy2-Info.plist */,
+				AF595A8B22197F240049DAAC /* MobileToken copy 2-Info.plist */,
+				AF595B3C22197F270049DAAC /* MobileToken copy 3-Info.plist */,
+				AF595BED22197F330049DAAC /* MobileToken copy 4-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1077,6 +1098,9 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
+				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
+				AF52C3512218187D00639DA3 /* firebase */,
 				AF02085422017D630021856A /* R.generated.swift */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BC22189D8CF00DC8A3E /* data */,
@@ -1332,6 +1356,8 @@
 				AFB39B492189A6A600302624 /* Frameworks */,
 				AFB39B4A2189A6A600302624 /* Resources */,
 				9F82A25F7A55F171F9558E22 /* [CP] Embed Pods Frameworks */,
+				AF52C35822182C5B00639DA3 /* ShellScript */,
+				AF52C35C22184A4A00639DA3 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -1467,6 +1493,8 @@
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */,
+				AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */,
+				AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */,
 				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
 				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
@@ -1523,6 +1551,7 @@
 				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
 				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
@@ -1536,6 +1565,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/oath/oath.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1548,6 +1578,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
@@ -1561,6 +1592,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/oath.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1585,6 +1617,42 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AF52C35822182C5B00639DA3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		AF52C35C22184A4A00639DA3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nPATH_TO_GOOGLE_PLISTS=\"${PROJECT_DIR}/MobileToken\"\n\necho \"HhhhhHH\"\nif [ \"${CONFIGURATION}\" = \"ReleaseCarreneDev\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-r.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: RRRRRRRRR\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"ReleaseISCOP\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-r.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: RRRRRRRRR\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"DebugCarreneDev\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-d.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: DDDDDD\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"DebugISCOP\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-d.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: DDDDDD\"\nfi\n";
 		};
 		AFAD23002190896C00EC00CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1876,7 +1944,9 @@
 			baseConfigurationReference = A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = MobileToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -1937,7 +2007,7 @@
 		};
 		AF67C08D22154AFE000DA700 /* ReleaseISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF52C34D22155BA800639DA3 /* ISCOPRekease.xcconfig */;
+			baseConfigurationReference = AF52C34D22155BA800639DA3 /* ISCOPRelease.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -2001,7 +2071,9 @@
 			baseConfigurationReference = AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = MobileToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -2193,7 +2265,9 @@
 			baseConfigurationReference = C1CDF2D278473F060C92F6AB /* Pods-MobileToken.debugcarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = MobileToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -2214,7 +2288,9 @@
 			baseConfigurationReference = F38F3D73E573C46828A81D82 /* Pods-MobileToken.releasecarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = MobileToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;

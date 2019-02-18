@@ -1,6 +1,7 @@
 import XLActionController
 import UIKit
 import FSPagerView
+import Crashlytics
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate, ImportToeknDelegate {
 
@@ -23,10 +24,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         initUIComponents()
         self.cardListPresenter = CardListPresenter(view: self)
          cardListPresenter?.getBankList()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       
+       Crashlytics.sharedInstance().crash()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
