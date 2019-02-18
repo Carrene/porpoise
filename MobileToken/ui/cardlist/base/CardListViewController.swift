@@ -253,23 +253,15 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func editCardAlert(card: Card) {
-        let editCardAlert = PopupDialog(title: "", message: R.string.localizable.lb_add_card_name())
         
-//            let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
-//            textField.addConstraint(heightConstraint)
-//            textField.backgroundColor = R.color.primaryLight()
-//            textField.textColor = R.color.buttonColor()
-//            textField.layer.borderColor = R.color.eyeCatching()?.cgColor
-//            textField.layer.borderWidth = 1
-//            textField.layer.cornerRadius = 5
-//            textField.tintColor = R.color.eyeCatching()
-//            textField.borderStyle = .roundedRect
-//            textField.keyboardAppearance = .dark
-//            let textView = (textField.subviews.first!)
-//            textView.backgroundColor = .clear
-//            textField.text = card.cardName
+        let editCardNameVC = EditCardNameAlertViewController(nibName: R.nib.editCardNameAlert.name, bundle: nil)
+        
+        let editCardAlert = PopupDialog(viewController: editCardNameVC,
+                                buttonAlignment: .horizontal,
+                                transitionStyle: .bounceDown,
+                                tapGestureDismissal: true,
+                                panGestureDismissal: false)
 
-        //}
         
         editCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditCardNameAlertViewController" customModule="MobileToken" customModuleProvider="target">
+            <connections>
+                <outlet property="editNameTextField" destination="HM9-oG-TFU" id="UHp-ON-wk4"/>
+                <outlet property="label" destination="KXW-RY-SWF" id="tPX-ED-9On"/>
+                <outlet property="view" destination="7HE-uw-C5s" id="mlC-Zn-4Xq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7HE-uw-C5s">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xax-cY-rqC">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HM9-oG-TFU">
+                            <rect key="frame" x="30" y="16" width="240" height="40"/>
+                            <color key="backgroundColor" name="primaryDark"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="0nB-Aj-hse"/>
+                            </constraints>
+                            <color key="textColor" name="buttonColor"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="به کارت خود نام دلخواه اختصاص دهید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXW-RY-SWF">
+                            <rect key="frame" x="84.5" y="61" width="185.5" height="19.5"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
+                            <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="primaryDark"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="5cZ-dM-XXg"/>
+                        <constraint firstItem="KXW-RY-SWF" firstAttribute="right" secondItem="HM9-oG-TFU" secondAttribute="right" id="6A7-sH-8Nv"/>
+                        <constraint firstItem="HM9-oG-TFU" firstAttribute="centerX" secondItem="xax-cY-rqC" secondAttribute="centerX" id="C4R-jj-3ju"/>
+                        <constraint firstAttribute="height" constant="100" id="Nec-ph-Ncr"/>
+                        <constraint firstItem="HM9-oG-TFU" firstAttribute="top" secondItem="xax-cY-rqC" secondAttribute="top" constant="16" id="Xan-GX-Yuv"/>
+                        <constraint firstItem="HM9-oG-TFU" firstAttribute="width" secondItem="xax-cY-rqC" secondAttribute="width" multiplier="0.8" id="bFV-oK-92f"/>
+                        <constraint firstItem="KXW-RY-SWF" firstAttribute="top" secondItem="HM9-oG-TFU" secondAttribute="bottom" constant="5" id="gQ6-he-onO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xax-cY-rqC" secondAttribute="trailing" constant="-10" id="FEJ-Gj-ko9"/>
+                <constraint firstItem="xax-cY-rqC" firstAttribute="top" secondItem="7HE-uw-C5s" secondAttribute="top" id="QfA-pQ-jbj"/>
+                <constraint firstItem="xax-cY-rqC" firstAttribute="leading" secondItem="7HE-uw-C5s" secondAttribute="leading" id="itW-P3-gMx"/>
+                <constraint firstAttribute="bottom" secondItem="xax-cY-rqC" secondAttribute="bottom" id="jCp-QI-1mm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="g7K-Dh-8x0"/>
+            <point key="canvasLocation" x="263" y="268"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

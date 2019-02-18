@@ -68,6 +68,8 @@
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
+		AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
+		AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */; };
 		AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
 		AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
 		AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
@@ -264,6 +266,8 @@
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditCardNameAlert.xib; sourceTree = "<group>"; };
+		AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardNameAlertViewController.swift; sourceTree = "<group>"; };
 		AC54E26921FD94C0008764B8 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewAdapter.swift; sourceTree = "<group>"; };
 		AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -582,6 +586,15 @@
 				AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		AC54CF9E221AF90F009BF03B /* alerts */ = {
+			isa = PBXGroup;
+			children = (
+				AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */,
+				AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */,
+			);
+			path = alerts;
 			sourceTree = "<group>";
 		};
 		AC54E26821FD9480008764B8 /* help */ = {
@@ -1146,6 +1159,7 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AC54CF9E221AF90F009BF03B /* alerts */,
 				AC5E6BDE21E717E200A9D4C3 /* addcard */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
 				ACDFD8AE21A9836200839F97 /* bank */,
@@ -1492,6 +1506,7 @@
 				AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
+				AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */,
 				AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */,
 				AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */,
 				AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */,
@@ -1667,7 +1682,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1726,6 +1741,7 @@
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
 				AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */,
+				AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */,
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
 				AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */,
 				AC16D72421CA33410094FBED /* PasswordHintTableAdapter.swift in Sources */,
