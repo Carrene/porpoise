@@ -253,61 +253,67 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func editCardAlert(card: Card) {
-        let attributedString = NSAttributedString(string: R.string.localizable.lb_add_card_name(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobile(size: 14)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!.withAlphaComponent(0.5)
-            ])
+        let editCardAlert = PopupDialog(title: "", message: R.string.localizable.lb_add_card_name())
         
-        let editCardAlert = UIAlertController(title: "", message: R.string.localizable.lb_add_card_name() , preferredStyle: .alert)
-        
-        editCardAlert.addTextField { (textField : UITextField!) -> Void in
-            editCardAlert.setValue(attributedString, forKey: "attributedMessage")
-            
-            let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
-            textField.addConstraint(heightConstraint)
-            textField.backgroundColor = R.color.primaryLight()
-            textField.textColor = R.color.buttonColor()
-            textField.layer.borderColor = R.color.eyeCatching()?.cgColor
-            textField.layer.borderWidth = 1
-            textField.layer.cornerRadius = 5
-            textField.tintColor = R.color.eyeCatching()
-            textField.borderStyle = .roundedRect
-            textField.keyboardAppearance = .dark
-            let textView = (textField.subviews.first!)
-            textView.backgroundColor = .clear
-            textField.text = card.cardName
+//            let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
+//            textField.addConstraint(heightConstraint)
+//            textField.backgroundColor = R.color.primaryLight()
+//            textField.textColor = R.color.buttonColor()
+//            textField.layer.borderColor = R.color.eyeCatching()?.cgColor
+//            textField.layer.borderWidth = 1
+//            textField.layer.cornerRadius = 5
+//            textField.tintColor = R.color.eyeCatching()
+//            textField.borderStyle = .roundedRect
+//            textField.keyboardAppearance = .dark
+//            let textView = (textField.subviews.first!)
+//            textView.backgroundColor = .clear
+//            textField.text = card.cardName
 
+        //}
+        
+        editCardAlert.buttonAlignment = .horizontal
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor = R.color.primaryDark()
+        dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        dialogAppearance.titleColor = R.color.buttonColor()
+        
+        let containerAppearance = PopupDialogContainerView.appearance()
+        containerAppearance.backgroundColor = R.color.primary()
+        containerAppearance.cornerRadius = 10
+        
+        
+        let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
+            print("You canceled the dialog.")
         }
         
-        let saveAction = UIAlertAction(title: R.string.localizable.save() , style: .default, handler: { alert -> Void in
-            if let newCardName = editCardAlert.textFields![0].text {
-                let cardForEdit = card
-                cardForEdit.cardName = newCardName
-                self.cardListPresenter?.editCard(card: card)
-                
-            }
-        })
+        let saveButton = DefaultButton(title: R.string.localizable.save(), dismissOnTap: true) {
+//            if let newCardName = editCardAlert.textFields![0].text {
+//                let cardForEdit = card
+//                cardForEdit.cardName = newCardName
+//                self.cardListPresenter?.editCard(card: card)
+//
+//            }
+        }
         
-        let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
-            (action : UIAlertAction!) -> Void in })
+        var cancelButtonAppearance = CancelButton.appearance()
+        cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        cancelButtonAppearance.titleColor = R.color.secondary()
+        cancelButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        cancelButtonAppearance.buttonColor = R.color.primaryDark()
         
-        editCardAlert.addAction(saveAction)
-        editCardAlert.addAction(cancelAction)
+        var defaultButtonAppearance = DefaultButton.appearance()
+        defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        defaultButtonAppearance.titleColor = R.color.secondary()
+        defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
         
+        
+        editCardAlert.addButtons([saveButton, cancelButton])
         
         self.present(editCardAlert, animated: true, completion: nil)
         
-        let subview = (editCardAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 10
-        subview.backgroundColor = R.color.primaryLight()
     }
     
     func deleteCardAlert(card: Card) {
-        let attributedString = NSAttributedString(string: R.string.localizable.lb_are_you_sure(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
-            ])
-
         let deleteCardAlert = PopupDialog(title: R.string.localizable.lb_are_you_sure(), message: "")
         deleteCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
@@ -327,11 +333,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             self.cardListPresenter?.deleteCard(card: card)
         }
         
-        var buttonAppearance = CancelButton.appearance()
-        buttonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
-        buttonAppearance.titleColor = R.color.secondary()
-        buttonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
-        buttonAppearance.buttonColor = R.color.primaryDark()
+        var cancelButtonAppearance = CancelButton.appearance()
+        cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        cancelButtonAppearance.titleColor = R.color.secondary()
+        cancelButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        cancelButtonAppearance.buttonColor = R.color.primaryDark()
         
         var defaultButtonAppearance = DefaultButton.appearance()
         defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
