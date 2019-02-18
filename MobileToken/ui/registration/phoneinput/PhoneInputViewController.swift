@@ -127,7 +127,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
-         Crashlytics.sharedInstance().crash()
+         
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
