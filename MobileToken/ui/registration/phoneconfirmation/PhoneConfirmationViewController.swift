@@ -157,6 +157,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as! TabBarViewController).selectedIndex = 0
+        (segue.destination as! TabBarViewController).selectedIndex = 1
     }
 }

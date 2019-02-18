@@ -1958,6 +1958,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
 				WEB_SERVICE_PORT = 443;
 			};
 			name = DebugISCOP;
@@ -2085,6 +2086,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
 				WEB_SERVICE_PORT = 443;
 			};
 			name = ReleaseISCOP;
@@ -2279,6 +2281,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
 				WEB_SERVICE_PORT = 443;
 			};
 			name = DebugCarreneDev;
@@ -2302,6 +2305,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
 				WEB_SERVICE_PORT = 443;
 			};
 			name = ReleaseCarreneDev;

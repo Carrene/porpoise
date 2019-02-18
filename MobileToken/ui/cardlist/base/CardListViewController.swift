@@ -28,7 +28,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       Crashlytics.sharedInstance().crash()
+       
     }
     
     override func viewWillDisappear(_ animated: Bool) {
