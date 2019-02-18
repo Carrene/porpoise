@@ -1023,13 +1023,6 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
-		AF52C3512218187D00639DA3 /* firebase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = firebase;
-			sourceTree = "<group>";
-		};
 		AF9F2194220AFD24005088B9 /* array */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,7 +1093,6 @@
 			children = (
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
-				AF52C3512218187D00639DA3 /* firebase */,
 				AF02085422017D630021856A /* R.generated.swift */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BC22189D8CF00DC8A3E /* data */,
@@ -1623,12 +1615,8 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -1641,13 +1629,9 @@
 			buildActionMask = 12;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "Run Script";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1663,7 +1647,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

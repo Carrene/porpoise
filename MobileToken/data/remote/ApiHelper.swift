@@ -24,16 +24,52 @@ class ApiHelper {
     
     private static var Manager : Alamofire.SessionManager = {
         // Create the server trust policies
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            "192.168.1.57": .disableEvaluation
-        ]
+//        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+//            "192.168.1.57": ServerTrustPolicy.disableEvaluation
+//            "raaz.isc.co.ir":
+//
+//        ]
         // Create custom manager
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         let man = Alamofire.SessionManager(
-            configuration: URLSessionConfiguration.default,
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+//            configuration: URLSessionConfiguration.default
+//            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
         )
+        man.delegate.sessionDidReceiveChallenge = { session, challenge in
+            var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+            var credential: URLCredential?
+            
+            if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+                let host = challenge.protectionSpace.host
+                
+                if let serverTrust = challenge.protectionSpace.serverTrust {
+                    
+                    let serverTrustPolicy = ServerTrustPolicy.performDefaultEvaluation(validateHost: true)
+                    if serverTrustPolicy.evaluate(serverTrust, forHost: host) {
+                        disposition = .useCredential
+                        credential = URLCredential(trust: serverTrust)
+                    } else {
+                        disposition = .cancelAuthenticationChallenge
+                        return (disposition, credential)
+                    }
+                    var fingerPrint: String?
+                    fingerPrint = "certificate.SHA1Fingerprint"
+                    
+                    for index in 0..<SecTrustGetCertificateCount(serverTrust) {
+                        if let certificate = SecTrustGetCertificateAtIndex(serverTrust, index) {
+                            if let fingerPrint = fingerPrint {
+//                                if isValidFingerprint(fingerPrint)  {
+                                    return (disposition, credential)
+//                                }
+                            }
+                        }
+                    }
+                }
+            }
+            disposition = .cancelAuthenticationChallenge
+            return (disposition, credential)
+        }
         return man
     }()
     
