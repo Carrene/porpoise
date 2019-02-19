@@ -16,6 +16,9 @@ PODS:
     - FirebaseAnalytics (= 5.5.0)
   - Firebase/CoreOnly (5.16.0):
     - FirebaseCore (= 5.2.0)
+  - Firebase/Messaging (5.16.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.3.0)
   - FirebaseAnalytics (5.5.0):
     - FirebaseCore (~> 5.2)
     - FirebaseInstanceID (~> 3.4)
@@ -25,12 +28,20 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
+  - FirebaseAnalyticsInterop (1.1.0)
   - FirebaseCore (5.2.0):
     - GoogleUtilities/Logger (~> 5.2)
   - FirebaseInstanceID (3.4.0):
     - FirebaseCore (~> 5.2)
     - GoogleUtilities/Environment (~> 5.3)
     - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseMessaging (3.3.0):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 5.2)
+    - FirebaseInstanceID (~> 3.4)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
   - FSPagerView (0.8.2)
   - GoogleAppMeasurement (5.5.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
@@ -72,6 +83,7 @@ PODS:
     - RealmSwift
   - Onboard (2.3.3)
   - PasswordTextField (1.2.0)
+  - Protobuf (3.6.1)
   - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
@@ -99,6 +111,7 @@ DEPENDENCIES:
   - DTTJailbreakDetection (~> 0.4.0)
   - Fabric (~> 1.9.0)
   - Firebase/Core
+  - Firebase/Messaging
   - FSPagerView (~> 0.8.1)
   - HUIPatternLockView-Swift (~> 2.0.1)
   - InputMask (~> 3.4.0)
@@ -126,8 +139,10 @@ SPEC REPOS:
     - Fabric
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
     - FirebaseCore
     - FirebaseInstanceID
+    - FirebaseMessaging
     - FSPagerView
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -139,6 +154,7 @@ SPEC REPOS:
     - "ObjectMapper+Realm"
     - Onboard
     - PasswordTextField
+    - Protobuf
     - R.swift
     - R.swift.Library
     - Realm
@@ -169,8 +185,10 @@ SPEC CHECKSUMS:
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
   FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
+  FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
   FirebaseCore: ea2d1816723ef21492b8e9113303e1350db5e08c
   FirebaseInstanceID: 97ea7a5dca9afd72c79bfcdddb7a44aa1cbb42a1
+  FirebaseMessaging: acbd51fe1a172bf29abaaa6e93a60f98bbf8e4f9
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   GoogleAppMeasurement: 621f3bc6211d5ba548debe01fafad30cf5ab6859
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
@@ -183,6 +201,7 @@ SPEC CHECKSUMS:
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
@@ -191,6 +210,6 @@ SPEC CHECKSUMS:
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
-PODFILE CHECKSUM: fb4988cc65872167f906af0c706364842adcfa97
+PODFILE CHECKSUM: b2a40e2961c46f28b968de24156792992089932e
 
 COCOAPODS: 1.5.3

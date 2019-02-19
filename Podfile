@@ -24,6 +24,7 @@ target 'MobileToken' do
     pod 'InputMask', '~> 3.4.0'
     pod 'DTTJailbreakDetection', '~> 0.4.0'
     pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
     pod 'Fabric', '~> 1.9.0'
     pod 'Crashlytics', '~> 3.12.0'
 
