@@ -12,16 +12,31 @@ class DeleteTokenAlertViewController: BaseViewController {
     }
     
     func initUIComponents() {
+        buttonFirstToken.isEnabled = false
+        buttonSecondToken.isEnabled = false
         buttonFirstToken.layer.borderWidth = 1
         buttonFirstToken.layer.borderColor = R.color.secondary()?.cgColor
         buttonFirstToken.layer.cornerRadius = 10
         buttonSecondToken.layer.borderWidth = 1
         buttonSecondToken.layer.borderColor = R.color.secondary()?.cgColor
         buttonSecondToken.layer.cornerRadius = 10
+        buttonSecondToken.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.5), for: .disabled)
+        buttonFirstToken.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.5), for: .disabled)
         label.font = R.font.iranSansMobileBold(size: 16)
     }
     
     func initListeners() {
+        
+    }
+    
+    func setTokenList(card:Card) {
+        card.TokenList.forEach{token in
+            if token.cryptoModuleId == Token.CryptoModuleId.one {
+                self.buttonFirstToken.isEnabled = true
+            } else if token.cryptoModuleId == Token.CryptoModuleId.two {
+                self.buttonSecondToken.isEnabled = true
+            }
+        }
         
     }
     

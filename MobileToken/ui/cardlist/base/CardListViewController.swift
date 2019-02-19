@@ -14,10 +14,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     private var fsPagerCollectionView = [FSPagerView]()
     private var cardListPresenter : CardListPresenterProtocol?
     private var banks : [Bank]?
-//    private var selectedCard:Card?
-//    private var updatedCard: Card?
-    private var buttonDeleteFirstToken : UIButton?
-    private var buttonDeleteSecondToken : UIButton?
     private var countDownTimer = [Timer]()
     
     override func viewDidLoad() {
@@ -39,36 +35,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         countDownTimer.removeAll()
     }
     
-//    override func viewDidLayoutSubviews() {
-//        for i in 0 ..< fsPagerCollectionView.count {
-//            fsPagerCollectionView[i].scrollToItem(at: banks![i].cardList.count, animated: false)
-//        }
-//    }
-    
     func initUIComponents() {
         labelFirstRegister.isHidden = true
-        buttonDeleteFirstToken = UIButton(frame: CGRect(x: 45, y: 50, width: 220, height: 40))
-        buttonDeleteFirstToken?.layer.cornerRadius = 10
-        buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
-        buttonDeleteFirstToken?.backgroundColor = .clear
-        buttonDeleteFirstToken?.layer.borderWidth = 1
-        buttonDeleteFirstToken?.setTitle(R.string.localizable.alert_delete_first_token(), for: .normal)
-        buttonDeleteFirstToken?.setTitleColor(R.color.buttonColor(), for: .normal)
-        buttonDeleteFirstToken?.setTitleColor(R.color.secondary(), for: .selected)
-        buttonDeleteFirstToken?.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-        buttonDeleteFirstToken?.addTarget(self, action: #selector(onbuttonDeleteFirstToken), for: .touchUpInside)
-        
-        buttonDeleteSecondToken = UIButton(frame: CGRect(x: 45, y: 104, width: 220, height: 40))
-        buttonDeleteSecondToken?.layer.cornerRadius = 10
-        buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
-        buttonDeleteSecondToken?.setTitleColor(R.color.buttonColor(), for: .normal)
-        buttonDeleteSecondToken?.setTitleColor(R.color.secondary(), for: .selected)
-        buttonDeleteSecondToken?.backgroundColor = .clear
-        buttonDeleteSecondToken?.layer.borderWidth = 1
-        buttonDeleteSecondToken?.setTitle(
-            R.string.localizable.alert_delete_second_token(), for: .normal)
-        buttonDeleteSecondToken?.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-        buttonDeleteSecondToken?.addTarget(self, action: #selector(onbuttonDeleteSecondToken), for: .touchUpInside)
     }
     
     func initListeners() {
@@ -146,15 +114,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
         var deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
         if card.TokenList.count == 0 {
-            //deleteTokenAction.enabled = false
+            deleteTokenAction.enabled = false
         }
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
         actionController.addAction(deleteTokenAction)
-        buttonDeleteFirstToken?.isSelected = false
-        buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
-        buttonDeleteSecondToken?.isSelected = false
-        buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
         return actionController
     }
     
@@ -164,21 +128,15 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteTokenAlert(card: Card) {
-//        card.TokenList.forEach{token in
-//            if token.cryptoModuleId == Token.CryptoModuleId.one {
-//                buttonDeleteFirstToken?.isEnabled = true
-//            } else if token.cryptoModuleId == Token.CryptoModuleId.two {
-//                buttonDeleteSecondToken?.isEnabled = true
-//            }
-//        }
+        
         let deleteTokensVC = DeleteTokenAlertViewController(nib: R.nib.deleteTokensAlert)
+        
         let deleteTokensAlert = PopupDialog(viewController: deleteTokensVC,
                                         buttonAlignment: .horizontal,
                                         transitionStyle: .zoomIn,
                                         tapGestureDismissal: true,
                                         panGestureDismissal: false)
-        buttonDeleteFirstToken?.isEnabled = false
-        buttonDeleteSecondToken?.isEnabled = false
+        deleteTokensVC.setTokenList(card:card)
         deleteTokensAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
         dialogAppearance.backgroundColor = R.color.primaryDark()
@@ -189,13 +147,12 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         containerAppearance.backgroundColor = R.color.primary()
         containerAppearance.cornerRadius = 10
         
-        
         let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
             print("You canceled the dialog.")
         }
         
         let saveButton = DefaultButton(title: R.string.localizable.ash_delete_token(), dismissOnTap: true) {
-            self.deleteTokens(card: card)        }
+            self.deleteTokens(card: card, view: deleteTokensVC)        }
         
         let cancelButtonAppearance = CancelButton.appearance()
         cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
@@ -208,47 +165,25 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         defaultButtonAppearance.titleColor = R.color.secondary()
         defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
         
-        
         deleteTokensAlert.addButtons([saveButton, cancelButton])
         
         self.present(deleteTokensAlert, animated: true, completion: nil)
         
     }
     
-    func deleteTokens(card: Card) {
+    func deleteTokens(card: Card,view:DeleteTokenAlertViewController) {
         var tokens = [Token]()
-        if buttonDeleteFirstToken?.isSelected == true {
+        if view.buttonFirstToken?.isSelected == true {
             let token = card.TokenList.filter{$0.cryptoModuleId == Token.CryptoModuleId.one}.first
             tokens.append(token!)
         }
-        if buttonDeleteSecondToken?.isSelected == true {
+        if view.buttonSecondToken?.isSelected == true {
             let token = card.TokenList.filter {$0.cryptoModuleId == Token.CryptoModuleId.two}.first
             tokens.append(token!)
         }
         cardListPresenter?.deleteToken(tokens: tokens)
     }
     
-    @objc func onbuttonDeleteFirstToken(sender: UIButton) {
-        if !(buttonDeleteFirstToken?.isSelected)! {
-            buttonDeleteFirstToken?.isSelected = true
-            buttonDeleteFirstToken?.layer.borderColor = R.color.secondary()?.cgColor
-        }
-        else {
-            buttonDeleteFirstToken?.isSelected = false
-            buttonDeleteFirstToken?.layer.borderColor = R.color.buttonColor()?.cgColor
-        }
-    }
-    
-    @objc func onbuttonDeleteSecondToken() {
-        if !(buttonDeleteSecondToken?.isSelected)! {
-            buttonDeleteSecondToken?.isSelected = true
-            buttonDeleteSecondToken?.layer.borderColor = R.color.secondary()?.cgColor
-        }
-        else {
-            buttonDeleteSecondToken?.isSelected = false
-            buttonDeleteSecondToken?.layer.borderColor = R.color.buttonColor()?.cgColor
-        }
-    }
     
     func editCardAlert(card: Card) {
         

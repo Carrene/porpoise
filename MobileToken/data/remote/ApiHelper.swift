@@ -65,7 +65,7 @@ class ApiHelper {
             urlComponents.host = host
         }
         else {
-            urlComponents.host = "raaz.isc.co.ir"
+            urlComponents.host = "192.168.1.57"
         }
         
         if let port = Bundle.main.infoDictionary!["WEB_SERVICE_PORT"] as? String {
