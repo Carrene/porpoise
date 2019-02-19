@@ -146,7 +146,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
         var deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
         if card.TokenList.count == 0 {
-            deleteTokenAction.enabled = false
+            //deleteTokenAction.enabled = false
         }
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
@@ -164,56 +164,54 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteTokenAlert(card: Card) {
+//        card.TokenList.forEach{token in
+//            if token.cryptoModuleId == Token.CryptoModuleId.one {
+//                buttonDeleteFirstToken?.isEnabled = true
+//            } else if token.cryptoModuleId == Token.CryptoModuleId.two {
+//                buttonDeleteSecondToken?.isEnabled = true
+//            }
+//        }
+        let deleteTokensVC = DeleteTokenAlertViewController(nib: R.nib.deleteTokensAlert)
+        let deleteTokensAlert = PopupDialog(viewController: deleteTokensVC,
+                                        buttonAlignment: .horizontal,
+                                        transitionStyle: .zoomIn,
+                                        tapGestureDismissal: true,
+                                        panGestureDismissal: false)
         buttonDeleteFirstToken?.isEnabled = false
         buttonDeleteSecondToken?.isEnabled = false
-        card.TokenList.forEach{token in
-            if token.cryptoModuleId == Token.CryptoModuleId.one {
-                buttonDeleteFirstToken?.isEnabled = true
-            } else if token.cryptoModuleId == Token.CryptoModuleId.two {
-                buttonDeleteSecondToken?.isEnabled = true
-            }
-        }
-        let deleteTokenAlert = UIAlertController(title: "", message:"" , preferredStyle: .alert)
-        let margin:CGFloat = 10.0
-        let rect = CGRect(x: margin, y: margin, width: 335, height: 170)
-        let customView = UIView(frame: rect)
+        deleteTokensAlert.buttonAlignment = .horizontal
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor = R.color.primaryDark()
+        dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        dialogAppearance.titleColor = R.color.buttonColor()
         
-        customView.addSubview(buttonDeleteFirstToken!)
-        customView.addSubview(buttonDeleteSecondToken!)
-        
-        let labelTitle = NSAttributedString(string: R.string.localizable.alert_choose_token(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobileBold(size: 16)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
-            ])
-        
-        deleteTokenAlert.view.addSubview(customView)
-        deleteTokenAlert.setValue(labelTitle, forKey: "attributedMessage")
-        
-        let saveAction = UIAlertAction(title: R.string.localizable.ash_delete_token() , style: .default, handler: { (action : UIAlertAction!) -> Void in
-            self.deleteTokens(card: card)
-        })
-      
-        let cancelAction = UIAlertAction(title: R.string.localizable.cancel() , style: .default, handler: {
-            (action : UIAlertAction!) -> Void in })
-        
-        let height:NSLayoutConstraint = NSLayoutConstraint(item: deleteTokenAlert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.33)
-        
-        deleteTokenAlert.view.addConstraint(height)
-        
-        let width:NSLayoutConstraint = NSLayoutConstraint(item: deleteTokenAlert.view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.width * 0.9)
-        deleteTokenAlert.view.addConstraint(width)
+        let containerAppearance = PopupDialogContainerView.appearance()
+        containerAppearance.backgroundColor = R.color.primary()
+        containerAppearance.cornerRadius = 10
         
         
-        deleteTokenAlert.addAction(saveAction)
-        deleteTokenAlert.addAction(cancelAction)
-        
-        DispatchQueue.main.async {
-            self.present(deleteTokenAlert, animated: true, completion:{})
+        let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
+            print("You canceled the dialog.")
         }
         
-        let subview = (deleteTokenAlert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 10
-        subview.backgroundColor = R.color.primaryLight()
+        let saveButton = DefaultButton(title: R.string.localizable.ash_delete_token(), dismissOnTap: true) {
+            self.deleteTokens(card: card)        }
+        
+        let cancelButtonAppearance = CancelButton.appearance()
+        cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        cancelButtonAppearance.titleColor = R.color.secondary()
+        cancelButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        cancelButtonAppearance.buttonColor = R.color.primaryDark()
+        
+        let defaultButtonAppearance = DefaultButton.appearance()
+        defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        defaultButtonAppearance.titleColor = R.color.secondary()
+        defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        
+        
+        deleteTokensAlert.addButtons([saveButton, cancelButton])
+        
+        self.present(deleteTokensAlert, animated: true, completion: nil)
         
     }
     
@@ -262,7 +260,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                                 tapGestureDismissal: true,
                                 panGestureDismissal: false)
 
-        
+        editCardNameVC.editNameTextField.text = card.cardName
         editCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
         dialogAppearance.backgroundColor = R.color.primaryDark()
@@ -287,13 +285,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             }
         }
         
-        var cancelButtonAppearance = CancelButton.appearance()
+        let cancelButtonAppearance = CancelButton.appearance()
         cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         cancelButtonAppearance.titleColor = R.color.secondary()
         cancelButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
         cancelButtonAppearance.buttonColor = R.color.primaryDark()
         
-        var defaultButtonAppearance = DefaultButton.appearance()
+        let defaultButtonAppearance = DefaultButton.appearance()
         defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         defaultButtonAppearance.titleColor = R.color.secondary()
         defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)

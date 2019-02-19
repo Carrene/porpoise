@@ -60,6 +60,8 @@
 		AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1721BFCB4200B80412 /* no-internet.gif */; };
 		AC353B1C21BFCB5300B80412 /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1B21BFCB5300B80412 /* security.gif */; };
 		AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
+		AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
+		AC405AFC221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
 		AC4C4DC121CFB5D700B15B90 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC021CFB5D700B15B90 /* Setting.swift */; };
@@ -258,6 +260,8 @@
 		AC353B1721BFCB4200B80412 /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
 		AC353B1B21BFCB5300B80412 /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesTableAdapter.swift; sourceTree = "<group>"; };
+		AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTokensAlert.xib; sourceTree = "<group>"; };
+		AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenAlertViewController.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardList.storyboard; sourceTree = "<group>"; };
 		AC4C4DC021CFB5D700B15B90 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
@@ -593,6 +597,8 @@
 			children = (
 				AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */,
 				AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */,
+				AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */,
+				AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */,
 			);
 			path = alerts;
 			sourceTree = "<group>";
@@ -1477,6 +1483,7 @@
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
 				AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */,
+				AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
@@ -1757,6 +1764,7 @@
 				AC16D72A21CA36220094FBED /* CryptoUtil.swift in Sources */,
 				AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */,
 				AF246A862199762700C44E4B /* AuthenticationRepository.swift in Sources */,
+				AC405AFC221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift in Sources */,
 				AFE81B242196D4E700AA0AF2 /* NetHex.swift in Sources */,
 				AC16D70B21CA32130094FBED /* AuthenticationViewController.swift in Sources */,
 				ACAAD86A21AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,

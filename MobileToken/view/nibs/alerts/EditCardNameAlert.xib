@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="330" height="100"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HM9-oG-TFU">
-                            <rect key="frame" x="33" y="16" width="264" height="40"/>
+                            <rect key="frame" x="25" y="16" width="280.5" height="40"/>
                             <color key="backgroundColor" name="primaryDark"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="0nB-Aj-hse"/>
@@ -42,7 +42,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="به کارت خود نام دلخواه اختصاص دهید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXW-RY-SWF">
-                            <rect key="frame" x="111.5" y="61" width="185.5" height="19.5"/>
+                            <rect key="frame" x="120" y="61" width="185.5" height="19.5"/>
                             <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                             <color key="textColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                         <constraint firstItem="HM9-oG-TFU" firstAttribute="centerX" secondItem="xax-cY-rqC" secondAttribute="centerX" id="C4R-jj-3ju"/>
                         <constraint firstAttribute="height" constant="100" id="Nec-ph-Ncr"/>
                         <constraint firstItem="HM9-oG-TFU" firstAttribute="top" secondItem="xax-cY-rqC" secondAttribute="top" constant="16" id="Xan-GX-Yuv"/>
-                        <constraint firstItem="HM9-oG-TFU" firstAttribute="width" secondItem="xax-cY-rqC" secondAttribute="width" multiplier="0.8" id="bFV-oK-92f"/>
+                        <constraint firstItem="HM9-oG-TFU" firstAttribute="width" secondItem="xax-cY-rqC" secondAttribute="width" multiplier="0.85" id="bFV-oK-92f"/>
                         <constraint firstItem="KXW-RY-SWF" firstAttribute="top" secondItem="HM9-oG-TFU" secondAttribute="bottom" constant="5" id="gQ6-he-onO"/>
                     </constraints>
                 </view>
