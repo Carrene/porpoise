@@ -2,6 +2,7 @@ import Foundation
 import ObjectMapper
 import Alamofire
 import AlamofireObjectMapper
+import Security
 
 class ApiHelper {
     
