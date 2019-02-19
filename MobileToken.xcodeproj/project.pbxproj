@@ -140,6 +140,7 @@
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
+		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
 		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
 		AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
@@ -346,6 +347,7 @@
 		AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveArrayElementExtention.swift; sourceTree = "<group>"; };
 		AF9F219822144F08005088B9 /* CarreneDevDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevDebug.xcconfig; sourceTree = "<group>"; };
 		AF9F2199221451C1005088B9 /* ISCOPDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPDebug.xcconfig; sourceTree = "<group>"; };
+		AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCertificateToData.swift; sourceTree = "<group>"; };
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
 		AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBankViewDesignable.xib; sourceTree = "<group>"; };
@@ -1164,6 +1166,7 @@
 			isa = PBXGroup;
 			children = (
 				AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */,
+				AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -1647,7 +1650,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1694,6 +1697,7 @@
 				AF246A8F21999AE400C44E4B /* UserRestRepository.swift in Sources */,
 				AF246A9121999AE400C44E4B /* UserRepositoryProtocol.swift in Sources */,
 				AC16D70521CA31CA0094FBED /* AuthenticationPasswordPresenter.swift in Sources */,
+				AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */,
 				AF246A84219948F300C44E4B /* Token.swift in Sources */,
 				AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */,
 				AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */,

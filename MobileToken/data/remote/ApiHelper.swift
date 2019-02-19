@@ -20,26 +20,12 @@ class ApiHelper {
         let instance = ApiHelper()
         return instance
     }()
-    #warning("Remove server trust this in release mode")
     
     private static var Manager : Alamofire.SessionManager = {
-        // Create the server trust policies
-//        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-//            "192.168.1.57": ServerTrustPolicy.disableEvaluation
-//            "raaz.isc.co.ir":
-//
-//        ]
-        // Create custom manager
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        let man = Alamofire.SessionManager(
-//            configuration: URLSessionConfiguration.default
-//            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-        )
+        let man = Alamofire.SessionManager()
         man.delegate.sessionDidReceiveChallenge = { session, challenge in
             var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
             var credential: URLCredential?
-            
             if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
                 let host = challenge.protectionSpace.host
                 
@@ -53,15 +39,22 @@ class ApiHelper {
                         disposition = .cancelAuthenticationChallenge
                         return (disposition, credential)
                     }
-                    var fingerPrint: String?
-                    fingerPrint = "certificate.SHA1Fingerprint"
+                    let fingerPrints = [
+                        "5C58468D55F58E497E743982D2B50010B6D165374ACF83A7D4A32DB768C4408E".lowercased(),
+                        "129FB5DE501E24041CD14A81075FD1CDE257408D4A353E636912E38BDDA2D3FB".lowercased(),
+                        "31E164412F51F75D6E97A5D5FF4E7E14CE2B470479D7A0986451C6B12BB9D4B7".lowercased()
+                    ]
                     
                     for index in 0..<SecTrustGetCertificateCount(serverTrust) {
+                        let cer = SecTrustGetCertificateAtIndex(serverTrust, index)
+                        
                         if let certificate = SecTrustGetCertificateAtIndex(serverTrust, index) {
-                            if let fingerPrint = fingerPrint {
-//                                if isValidFingerprint(fingerPrint)  {
-                                    return (disposition, credential)
-//                                }
+                            let certData = certificate.data
+                            let certHashByteArray = certData.sha256()
+                            let certificateHexString = certHashByteArray.toHexString().lowercased()
+                            
+                            if fingerPrints.contains(certificateHexString) {
+                                return (disposition, credential)
                             }
                         }
                     }
@@ -75,6 +68,7 @@ class ApiHelper {
     
     private init() {
         alamofire = ApiHelper.Manager
+        
         alamofire.adapter = RequestInterceptor()
     }
     
