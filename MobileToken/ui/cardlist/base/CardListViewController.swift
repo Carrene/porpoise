@@ -95,16 +95,19 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 for j in 0 ..< cards.count{
                     let tokenList = banks![i].cardList[j].TokenList
                     for z in 0 ..< tokenList.count {
-                        if token.id == tokenList[z].id {
+                        if tokens.count == 2 {
+                            banks![i].cardList[j].TokenList.removeAll()
+                        }else if token.id == tokenList[z].id {
                             banks![i].cardList[j].TokenList.remove(at: z)
-                            fsPagerCollectionView[i].reloadData()
-                            fsPagerCollectionView[i].layoutIfNeeded()
-                            fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
                         }
+                        fsPagerCollectionView[i].reloadData()
+                        fsPagerCollectionView[i].layoutIfNeeded()
+                        fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
                     }
                 }
             }
         }
+        
     }
     
     func initActionSheet(card: Card) -> MobileTokenActionSheetController {
