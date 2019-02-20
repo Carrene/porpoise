@@ -29,10 +29,10 @@ extension DataRequest {
                 let data = data,
                 let value = try? JSONSerialization.jsonObject(with: data) as! [String : Any?] ,
                 let jwt = value["token"] as? String {
-                ApiHelper.instance.jwtPersistable.save(jwt: jwt)
+                _ = ApiHelper.instance.jwtPersistable.save(jwt: jwt)
             }
             if let jwt = response?.allHeaderFields["X-New-JWT-Token"] as? String {
-                ApiHelper.instance.jwtPersistable.save(jwt: jwt)
+                _ = ApiHelper.instance.jwtPersistable.save(jwt: jwt)
             }
             return .success(data)
         }
