@@ -26,6 +26,8 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
                 self?.view.showSSMNotAvailable()
             case 500:
                 self?.view.showServerError()
+            case 502:
+                self?.view.showNetworkError()
             default:
                 UIHelper.showFailedSnackBar()
             }

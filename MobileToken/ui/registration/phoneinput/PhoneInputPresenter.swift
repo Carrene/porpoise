@@ -20,6 +20,8 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
                 self?.view.showBadRequestError()
             case 500:
                 self?.view.showServerError()
+            case 502:
+                self?.view.showNetworkError()
             default:
                 UIHelper.showFailedSnackBar()
             }

@@ -7,6 +7,7 @@ import Foundation
         func navigateToPhoneConfirmation(phone:String)
         func showAlreadyRegistered(phone:String)
         func showPhoneInput()
+        func showNetworkError()
     }
 
     protocol PhoneInputPresenterProtocol {

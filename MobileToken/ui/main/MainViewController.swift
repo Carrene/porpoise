@@ -1,5 +1,6 @@
 import UIKit
 import DTTJailbreakDetection
+import RealmSwift
 
 class MainViewController: UINavigationController {
 
@@ -12,6 +13,7 @@ class MainViewController: UINavigationController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //sendJailBrokenDeviceToServer()
         checkIfNewUser()
         initPages()
     }
@@ -80,25 +82,11 @@ class MainViewController: UINavigationController {
     }
     
     fileprivate func sendJailBrokenDeviceToServer() {
-        
-        let attributedString = NSAttributedString(string: R.string.localizable.alert_root_message(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobile(size: 16)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
-            ])
-        
-        let alert = UIAlertController(title:"", message: R.string.localizable.alert_root_message(), preferredStyle: .alert)
-        
-        alert.setValue(attributedString, forKey: "attributedMessage")
-        
-        alert.addAction(UIAlertAction(title: R.string.localizable.ok(), style: .destructive, handler: 
-        { (action : UIAlertAction!) -> Void in
-            exit(0)}
-        ))
-        
-        self.present(alert, animated: true, completion:{})
-        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 10
-        subview.backgroundColor = R.color.primaryLight()
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        exit(0)
     }
 
 }

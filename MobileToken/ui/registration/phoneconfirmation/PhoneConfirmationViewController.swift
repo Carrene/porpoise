@@ -1,7 +1,7 @@
 import UIKit
 
 class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
-
+   
     @IBOutlet var viewChangeNumber: UIView!
     @IBOutlet var textFieldCode: UITextField!
     @IBOutlet var viewCode: UIView!
@@ -138,6 +138,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     func showServerError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .middle)
     }
+    
+    func showNetworkError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_network_error(), color: R.color.errorDark()!)
+    }
+    
+
     
     func segue() {
         performSegue(withIdentifier: R.segue.phoneConfirmationViewController.phoneConfirmationToCardList, sender: self)
