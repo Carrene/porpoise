@@ -4,7 +4,7 @@ target 'MobileToken' do
     
     use_frameworks!
     pod 'ObjectMapper+Realm', '~> 0.6'
-    pod 'R.swift'
+    pod 'R.swift', '~> 5.0.2'
     pod 'PasswordTextField', '~> 1.2.0'
     pod 'TTGSnackbar', '~> 1.7.5'
     pod 'HUIPatternLockView-Swift', '~> 2.0.1'
@@ -27,6 +27,7 @@ target 'MobileToken' do
     pod 'Firebase/Messaging'
     pod 'Fabric', '~> 1.9.0'
     pod 'Crashlytics', '~> 3.12.0'
+    pod 'PopupDialog', '~> 0.9'
 
     target 'MobileTokenTests' do
         inherit! :search_paths

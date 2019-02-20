@@ -31,6 +31,7 @@
 "sb_token_deleted_successfully" = "رمز اول/دوم با موفقیت حذف شد";
 "sb_token_deleted_unsuccessfully" = "حذف رمز اول/دوم با خطا مواجه شد";
 "sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است";
+"sb_network_error" = "خطای شبکه";
 
 //passWordHint
 "enter_at_least_eight_characters" = "رمز باید شامل حداقل 8 کاراکتر";

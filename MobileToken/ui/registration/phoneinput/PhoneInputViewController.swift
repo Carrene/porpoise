@@ -155,6 +155,10 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .middle)
     }
     
+    func showNetworkError() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_network_error(), color: R.color.errorDark()!)
+    }
+    
     func setBankList(banks : [Bank]) {
         bankCollectionViewAdapter?.setDataSource(banks: banks)
         self.banks = banks

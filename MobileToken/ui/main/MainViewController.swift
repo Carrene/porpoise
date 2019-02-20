@@ -1,5 +1,6 @@
 import UIKit
 import DTTJailbreakDetection
+import RealmSwift
 
 class MainViewController: UINavigationController {
 
@@ -80,25 +81,28 @@ class MainViewController: UINavigationController {
     }
     
     fileprivate func sendJailBrokenDeviceToServer() {
-        
-        let attributedString = NSAttributedString(string: R.string.localizable.alert_root_message(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobile(size: 16)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
-            ])
-        
-        let alert = UIAlertController(title:"", message: R.string.localizable.alert_root_message(), preferredStyle: .alert)
-        
-        alert.setValue(attributedString, forKey: "attributedMessage")
-        
-        alert.addAction(UIAlertAction(title: R.string.localizable.ok(), style: .destructive, handler: 
-        { (action : UIAlertAction!) -> Void in
-            exit(0)}
-        ))
-        
-        self.present(alert, animated: true, completion:{})
-        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 10
-        subview.backgroundColor = R.color.primaryLight()
+        do {
+            remove(realmURL: Realm.Configuration.defaultConfiguration.fileURL!.deletingLastPathComponent().appendingPathComponent("sensitive.realm"))
+    
+            remove(realmURL: Realm.Configuration.defaultConfiguration.fileURL!.deletingLastPathComponent().appendingPathComponent("insensitive.realm"))
+            
+        } catch {
+            
+            
+        }
+        exit(0)
     }
-
+    
+    func remove(realmURL: URL) {
+        let realmURLs = [
+            realmURL,
+            realmURL.appendingPathExtension("lock"),
+            realmURL.appendingPathExtension("note"),
+            realmURL.appendingPathExtension("management"),
+            ]
+        for URL in realmURLs {
+            try? FileManager.default.removeItem(at: URL)
+        }
+    }
+    
 }

@@ -9,6 +9,7 @@ protocol PhoneConfirmationViewProtocol:class {
     func showTimer()
     func setCounterTitleToResend()
     func setCounterTitleTime(time:String)
+    func showNetworkError()
 }
 
 protocol PhoneConfirmationPresenterProtocol {
