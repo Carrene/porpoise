@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fDD-Ex-Lcf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="10" y="30" width="355" height="627"/>
                                 <color key="backgroundColor" name="primary"/>
                             </tableView>
                         </subviews>
@@ -28,8 +28,8 @@
                         <constraints>
                             <constraint firstItem="fDD-Ex-Lcf" firstAttribute="centerX" secondItem="gMS-e3-SKA" secondAttribute="centerX" id="3t7-WM-BT3"/>
                             <constraint firstItem="fDD-Ex-Lcf" firstAttribute="centerY" secondItem="gMS-e3-SKA" secondAttribute="centerY" id="AcF-W9-jHy"/>
-                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="height" secondItem="gMS-e3-SKA" secondAttribute="height" id="LS4-6r-0Qy"/>
-                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="width" secondItem="gMS-e3-SKA" secondAttribute="width" id="sNY-ve-mdy"/>
+                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="height" secondItem="gMS-e3-SKA" secondAttribute="height" constant="-20" id="LS4-6r-0Qy"/>
+                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="width" secondItem="gMS-e3-SKA" secondAttribute="width" constant="-20" id="sNY-ve-mdy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gMS-e3-SKA"/>
                     </view>
@@ -38,6 +38,9 @@
                             <color key="tintColor" name="secondary"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="fDD-Ex-Lcf" id="yG2-5f-uAj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCb-7b-BXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
