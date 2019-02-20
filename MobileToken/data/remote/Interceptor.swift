@@ -14,6 +14,7 @@ class RequestInterceptor: RequestAdapter {
         if let jwt = ApiHelper.instance.jwtPersistable.get() {
             urlRequest.addValue("Bearer " + jwt, forHTTPHeaderField: "Authorization")
         }
+        urlRequest.timeoutInterval = 10
         return urlRequest
     }
 }
