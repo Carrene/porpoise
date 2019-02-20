@@ -21,6 +21,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raz-logo-splash" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-EK-V84" userLabel="logo">
                                 <rect key="frame" x="112" y="190" width="96" height="120"/>
+                                <color key="tintColor" name="secondary"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="bXu-Uz-gWB"/>
                                     <constraint firstAttribute="height" constant="120" id="gRn-ft-LNM"/>
@@ -43,7 +44,10 @@
     <resources>
         <image name="raz-logo-splash" width="96" height="120"/>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

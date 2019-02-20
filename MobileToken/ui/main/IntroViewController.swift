@@ -31,20 +31,23 @@ class IntroViewController {
         
         pages.forEach() { element in
             element.bodyLabel.font = R.font.iranSansMobile(size: 16)
+            element.bodyLabel.textColor = R.color.buttonColor()
+            element.titleLabel.textColor = R.color.buttonColor()
             element.titleLabel.font = R.font.iranSansMobileBold(size: 16)
             element.actionButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-            element.actionButton.setTitleColor(R.color.eyeCatching(), for: .normal)
+            element.actionButton.setTitleColor(R.color.secondary(), for: .normal)
         }
         
-        let pageColors = ["192835", "192835", "192835"]
+        let pageColors = [R.color.primary(), R.color.primary(), R.color.primary()]
         for i in 0..<3 {
             pages[i].viewWillAppearBlock = {
-                pages[i].view.backgroundColor = UIColor(netHex: Int(pageColors[i], radix: 16)!)
+                //pages[i].view.backgroundColor = UIColor(netHex: Int(pageColors[i], radix: 16)!)
             }
             pages[i].topPadding = 50
             pages[i].underIconPadding = 50
             pages[i].underTitlePadding = 20
             pages[i].bottomPadding = 20
+            pages[i].iconImageView.backgroundColor = R.color.primary()
             let gif : UIImage?
             switch i {
             case 0:
@@ -76,8 +79,9 @@ class IntroViewController {
         onboardingVC.shouldMaskBackground = false
         onboardingVC.shouldBlurBackground = false
         onboardingVC.fadePageControlOnLastPage = false
-        onboardingVC.pageControl.pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.5)
-        onboardingVC.skipButton.setTitleColor(R.color.eyeCatching(), for: .normal)
+        onboardingVC.pageControl.pageIndicatorTintColor = UIColor.black
+        onboardingVC.pageControl.currentPageIndicatorTintColor = R.color.secondaryLight()
+        onboardingVC.skipButton.setTitleColor(R.color.secondary(), for: .normal)
         onboardingVC.skipButton.setTitle(R.string.localizable.skip(), for: .normal)
         onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
         onboardingVC.allowSkipping = true

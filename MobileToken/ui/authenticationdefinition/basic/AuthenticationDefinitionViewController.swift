@@ -1,5 +1,5 @@
 
-
+import PopupDialog
 import UIKit
 
 class AuthenticationDefinitionViewController: BaseViewController, AuthenticationDefintionDelegate {
@@ -38,26 +38,38 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
     }
     
     func timeZoneAlert() {
-        UserDefaults.standard.set(true, forKey: "hasAlertShown")
+            UserDefaults.standard.set(true, forKey: "hasAlertShown")
         
-        let attributedString = NSAttributedString(string: R.string.localizable.alert_set_timezone(), attributes: [
-            NSAttributedString.Key.font : R.font.iranSansMobile(size: 16)!,
-            NSAttributedString.Key.foregroundColor : R.color.buttonColor()!
-            ])
+            let alert = PopupDialog(title:R.string.localizable.alert() , message: R.string.localizable.alert_set_timezone())
+            alert.transitionStyle = .zoomIn
+            alert.buttonAlignment = .horizontal
+            let dialogAppearance = PopupDialogDefaultView.appearance()
+            dialogAppearance.backgroundColor = R.color.primaryDark()
+            dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+            dialogAppearance.titleColor = R.color.secondaryDark()
+            dialogAppearance.messageColor = R.color.buttonColor()
+            dialogAppearance.messageFont = R.font.iranSansMobile(size: 12)!
         
-        let alert = UIAlertController(title: "", message: R.string.localizable.alert_set_timezone(), preferredStyle: .alert)
-        
-        alert.setValue(attributedString, forKey: "attributedMessage")
+            let containerAppearance = PopupDialogContainerView.appearance()
+            containerAppearance.backgroundColor = R.color.primary()
+            containerAppearance.cornerRadius = 10
             
+            let cancelButton = CancelButton(title: R.string.localizable.ok()) {
+                print("You canceled the dialog.")
+            }
         
-        let okAction = UIAlertAction(title: R.string.localizable.ok() , style: .cancel, handler: {
-            (action : UIAlertAction!) -> Void in })
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion:{})
-        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 10
-        subview.backgroundColor = R.color.primaryLight()
-    }
+            var cancelButtonAppearance = CancelButton.appearance()
+            cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+            cancelButtonAppearance.titleColor = R.color.secondary()
+            cancelButtonAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
+            cancelButtonAppearance.buttonColor = R.color.primaryDark()
+        
+        
+            alert.addButtons([cancelButton])
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     
     func initListeners() {
         
