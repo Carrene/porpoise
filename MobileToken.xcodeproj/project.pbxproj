@@ -792,10 +792,10 @@
 		ACAAD85B21AE7AB4007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
-				AC5BAB60221D4F9F003F3BE6 /* support */,
+				AC75A4FA21B270E3009441C4 /* basic */,
 				AC54E26821FD9480008764B8 /* help */,
 				AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */,
-				AC75A4FA21B270E3009441C4 /* basic */,
+				AC5BAB60221D4F9F003F3BE6 /* support */,
 			);
 			path = settings;
 			sourceTree = "<group>";

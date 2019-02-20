@@ -104,6 +104,9 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         else if indexPath.row == 2 {
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToHelp.identifier)
         }
+        else if indexPath.row == 3 {
+            settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToSupport.identifier)
+        }
     }
     
 }
