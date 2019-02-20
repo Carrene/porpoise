@@ -84,6 +84,8 @@
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */; };
 		AC5BAB65221D4FF6003F3BE6 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */; };
+		AC5BAB69221D53BC003F3BE6 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */; };
+		AC5BAB6A221D53BC003F3BE6 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */; };
 		AC5E6BE021E9CFAC00A9D4C3 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
 		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
 		AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
@@ -286,6 +288,8 @@
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
+		AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportTableViewCell.xib; sourceTree = "<group>"; };
 		AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
 		AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRealmRepsitory.swift; sourceTree = "<group>"; };
@@ -657,6 +661,15 @@
 			isa = PBXGroup;
 			children = (
 				AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		AC5BAB66221D5390003F3BE6 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */,
+				AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -1187,6 +1200,7 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AC5BAB66221D5390003F3BE6 /* support */,
 				AC54CF9E221AF90F009BF03B /* alerts */,
 				AC5E6BDE21E717E200A9D4C3 /* addcard */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
@@ -1505,6 +1519,7 @@
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
 				AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */,
+				AC5BAB6A221D53BC003F3BE6 /* SupportTableViewCell.xib in Resources */,
 				AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
@@ -1843,6 +1858,7 @@
 				AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */,
 				AF285FF6219C4A3500D8C342 /* BankCollectionViewCell.swift in Sources */,
 				AC16D71D21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift in Sources */,
+				AC5BAB69221D53BC003F3BE6 /* SupportTableViewCell.swift in Sources */,
 				ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */,
 				AC16D70621CA31CA0094FBED /* AuthenticationPasswordViewController.swift in Sources */,
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
