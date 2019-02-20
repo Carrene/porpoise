@@ -23,7 +23,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     init(sender:SettingsViewController) {
@@ -73,6 +73,10 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         case 2:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
             (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_app_guide()
+            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
+        case 3:
+            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_support()
             (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
             //cell.accessoryType = .disclosureIndicator
             

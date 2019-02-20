@@ -4,6 +4,7 @@
 "skip" = "رد کن";
 "lb_enter_program" = "ورود به برنامه";
 "lb_version" = "نسخه";
+"lb_support" = "پشتیبانی بانک ها";
 
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است";
