@@ -43,9 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func initPrinit() {
         print("\(String(describing: RealmConfiguration.sensitiveDataConfiguration().fileURL))")
-        //        print((Bundle.main.infoDictionary?["UrlEndPoint"] as! String).replacingOccurrences(of: "\\", with: ""))
-        //        print(Bundle.main.infoDictionary?["UrlPort"] as! String)
-        //        print(Bundle.main.infoDictionary?["InitialToken"] as! String)
+        print((Bundle.main.infoDictionary?["Web service port"] as! String))
+        print((Bundle.main.infoDictionary?["Web service host"] as! String).replacingOccurrences(of: "\\", with: ""))
+        print(Bundle.main.infoDictionary?["Web service token"] as! String)
+        print(Bundle.main.infoDictionary?["Web service scheme"] as! String)
+
+        print(Bundle.main.infoDictionary?["Web service self signed"] as! String)
+
     }
     
     func initialFirebase(application: UIApplication) {
