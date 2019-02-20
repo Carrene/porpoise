@@ -86,6 +86,7 @@
 		AC5BAB65221D4FF6003F3BE6 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */; };
 		AC5BAB69221D53BC003F3BE6 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */; };
 		AC5BAB6A221D53BC003F3BE6 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */; };
+		AC5BAB6C221D67A7003F3BE6 /* SupportTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB6B221D67A7003F3BE6 /* SupportTableViewAdapter.swift */; };
 		AC5E6BE021E9CFAC00A9D4C3 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
 		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
 		AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
@@ -290,6 +291,7 @@
 		AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
 		AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportTableViewCell.xib; sourceTree = "<group>"; };
+		AC5BAB6B221D67A7003F3BE6 /* SupportTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewAdapter.swift; sourceTree = "<group>"; };
 		AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
 		AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRealmRepsitory.swift; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */,
+				AC5BAB6B221D67A7003F3BE6 /* SupportTableViewAdapter.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -1823,6 +1826,7 @@
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
 				AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */,
+				AC5BAB6C221D67A7003F3BE6 /* SupportTableViewAdapter.swift in Sources */,
 				AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,
 				AC16D73821CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */,
