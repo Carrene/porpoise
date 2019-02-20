@@ -827,6 +827,7 @@
 		ACAAD86121AE8EDF007266F4 /* settingsrows */ = {
 			isa = PBXGroup;
 			children = (
+				AC5BAB66221D5390003F3BE6 /* support */,
 				ACAAD86721AE8F5F007266F4 /* authenticationtype */,
 				ACAAD86621AE8F36007266F4 /* lockscreentime */,
 			);
@@ -1200,7 +1201,6 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
-				AC5BAB66221D5390003F3BE6 /* support */,
 				AC54CF9E221AF90F009BF03B /* alerts */,
 				AC5E6BDE21E717E200A9D4C3 /* addcard */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
