@@ -1,7 +1,6 @@
 import XLActionController
 import UIKit
 import FSPagerView
-import Crashlytics
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate, ImportToeknDelegate {
 

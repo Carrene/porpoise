@@ -2,7 +2,6 @@ import UIKit
 import CountryPickerView
 import IQKeyboardManager
 import InputMask
-import Crashlytics
 
 class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate,MaskedTextFieldDelegateListener {
     
@@ -127,7 +126,6 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
-         
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
@@ -141,6 +139,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
         return true
     }
     

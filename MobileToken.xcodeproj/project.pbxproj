@@ -373,6 +373,7 @@
 		AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64urlEncoded.swift; sourceTree = "<group>"; };
 		AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportTokenPresenter.swift; sourceTree = "<group>"; };
 		AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenContractor.swift; sourceTree = "<group>"; };
+		AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileToken.entitlements; sourceTree = "<group>"; };
 		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
 		AFE190EB219049030023E785 /* OtpViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewDesignable.swift; sourceTree = "<group>"; };
 		AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTappedAround.swift; sourceTree = "<group>"; };
@@ -1093,6 +1094,7 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */,
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
 				AF02085422017D630021856A /* R.generated.swift */,
@@ -1413,6 +1415,11 @@
 				TargetAttributes = {
 					AFB39B4B2189A6A600302624 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					AFB39B5F2189A6A700302624 = {
 						CreatedOnToolsVersion = 10.0;
@@ -1652,7 +1659,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1935,6 +1942,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
@@ -2063,6 +2071,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
@@ -2258,6 +2267,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
@@ -2282,6 +2292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;

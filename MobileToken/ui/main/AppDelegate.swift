@@ -5,17 +5,25 @@ import Firebase
 import Fabric
 import UserNotifications
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let storyBoard = UIStoryboard(resource: R.storyboard.main)
         self.window?.rootViewController = storyBoard.instantiateInitialViewController()
         self.window?.makeKeyAndVisible()
+        initialTheme()
+        initialIQKeyboard()
+        initPrinit()
+        initialFirebase(application: application)
+        
+        return true
+    }
+    
+    func initialTheme() {
         self.window?.tintColor = R.color.eyeCatching()
         UILabel.appearance().font = R.font.iranSansMobileFaNum(size:16)
         UITextView.appearance().font = R.font.iranSansMobileFaNum(size: 16)
@@ -27,12 +35,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = R.color.primary()
         UINavigationBar.appearance().tintColor = R.color.buttonColor()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : R.color.buttonColor()!,NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!]
-        // Override point for customization after application launch.
+    }
+    
+    func initialIQKeyboard() {
         IQKeyboardManager.shared().isEnabled = true
+    }
+    
+    func initPrinit() {
         print("\(String(describing: RealmConfiguration.sensitiveDataConfiguration().fileURL))")
-//        print((Bundle.main.infoDictionary?["UrlEndPoint"] as! String).replacingOccurrences(of: "\\", with: ""))
-//        print(Bundle.main.infoDictionary?["UrlPort"] as! String)
-//        print(Bundle.main.infoDictionary?["InitialToken"] as! String)
+        //        print((Bundle.main.infoDictionary?["UrlEndPoint"] as! String).replacingOccurrences(of: "\\", with: ""))
+        //        print(Bundle.main.infoDictionary?["UrlPort"] as! String)
+        //        print(Bundle.main.infoDictionary?["InitialToken"] as! String)
+    }
+    
+    func initialFirebase(application: UIApplication) {
         FirebaseApp.configure()
         
         Messaging.messaging().delegate = self
@@ -54,32 +70,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerUserNotificationSettings(settings)
         }
         
-        application.registerForRemoteNotifications()
-
+        //get application instance ID
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instance ID: \(error)")
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+            }
+        }
         
-        return true
+        application.registerForRemoteNotifications()
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         if(ScreenLocker.instance.isRunning()){
             ScreenLocker.instance.stop()
             ScreenLocker.instance.lockScreen()
         }
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
@@ -106,6 +127,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(userInfo)
     }
     
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Unable to register for remote notifications: \(error.localizedDescription)")
+    }
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // If you are receiving a notification message while your app is in the background,
@@ -125,7 +150,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         completionHandler(UIBackgroundFetchResult.newData)
     }
-
+    
 }
 
 // [START ios_10_message_handling]
