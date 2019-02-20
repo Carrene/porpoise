@@ -9,7 +9,8 @@ class RequestInterceptor: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue("eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0NzYzODMyMiwiZXhwIjoxNTc5MTc0MzIyfQ.e30.dHyLtCJ9KqQXgvgpgD0jZ11Dl9GWkb3lc60lTW_rdPo", forHTTPHeaderField: "Authorization")
+        let token = Bundle.main.infoDictionary?["Web service token"] as! String
+        urlRequest.addValue(token, forHTTPHeaderField: "Authorization")
         if let jwt = ApiHelper.instance.jwtPersistable.get() {
             urlRequest.addValue("Bearer " + jwt, forHTTPHeaderField: "Authorization")
         }

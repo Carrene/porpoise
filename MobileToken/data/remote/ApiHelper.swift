@@ -23,23 +23,7 @@ class ApiHelper {
     }()
     
     private static var Manager : Alamofire.SessionManager = {
-        
-        print((Bundle.main.infoDictionary?["Web service port"] as! String))
-        print((Bundle.main.infoDictionary?["Web service host"] as! String).replacingOccurrences(of: "\\", with: ""))
-        print(Bundle.main.infoDictionary?["Web service token"] as! String)
-        print(Bundle.main.infoDictionary?["Web service scheme"] as! String)
-        print(Bundle.main.infoDictionary?["Web service self signed"] as! String)
-        
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            "192.168.1.57": .disableEvaluation
-        ]
-        // Create custom manager
-//        let configuration = URLSessionConfiguration.default
-//        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-//        let man = Alamofire.SessionManager(
-//            configuration: URLSessionConfiguration.default,
-//            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-//        )
+
         let man = Alamofire.SessionManager()
         man.delegate.sessionDidReceiveChallenge = { session, challenge in
 
