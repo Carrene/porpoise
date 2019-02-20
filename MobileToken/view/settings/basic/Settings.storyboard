@@ -75,6 +75,7 @@
                         <outlet property="tableView" destination="2RQ-2g-WfX" id="v1s-47-0EB"/>
                         <segue destination="CH3-Ix-uEq" kind="show" identifier="settingToAuthenticationDefinitionSegue" id="Ozs-Jd-d0g"/>
                         <segue destination="kd4-Cy-Ix5" kind="show" identifier="settingToHelp" id="14Y-T4-gtp"/>
+                        <segue destination="Rz2-fl-z9d" kind="show" identifier="settingToSupport" id="xLY-Dz-lap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNd-bh-Sgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,7 +96,15 @@
                 <viewControllerPlaceholder storyboardName="Help" referencedIdentifier="helpNavigation" id="kd4-Cy-Ix5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02U-9O-RVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="-621"/>
+            <point key="canvasLocation" x="215" y="-758"/>
+        </scene>
+        <!--SupportViewController-->
+        <scene sceneID="av4-Ii-39B">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Support" referencedIdentifier="SupportViewController" id="Rz2-fl-z9d" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZL-ji-KgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-619"/>
         </scene>
     </scenes>
     <resources>

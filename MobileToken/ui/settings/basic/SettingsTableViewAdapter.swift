@@ -23,7 +23,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     init(sender:SettingsViewController) {
@@ -74,6 +74,10 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
             (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_app_guide()
             (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
+        case 3:
+            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_support()
+            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
             //cell.accessoryType = .disclosureIndicator
             
         default:
@@ -99,6 +103,9 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         }
         else if indexPath.row == 2 {
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToHelp.identifier)
+        }
+        else if indexPath.row == 3 {
+            settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToSupport.identifier)
         }
     }
     

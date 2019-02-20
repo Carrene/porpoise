@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--پشتیبانی بانک ها-->
+        <scene sceneID="dkx-MZ-Xkw">
+            <objects>
+                <viewController storyboardIdentifier="SupportViewController" id="zrz-Rz-z3p" customClass="SupportViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y3S-Kc-vd1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fDD-Ex-Lcf">
+                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <color key="backgroundColor" name="primary"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="centerX" secondItem="gMS-e3-SKA" secondAttribute="centerX" id="3t7-WM-BT3"/>
+                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="centerY" secondItem="gMS-e3-SKA" secondAttribute="centerY" id="AcF-W9-jHy"/>
+                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="height" secondItem="gMS-e3-SKA" secondAttribute="height" constant="-20" id="LS4-6r-0Qy"/>
+                            <constraint firstItem="fDD-Ex-Lcf" firstAttribute="width" secondItem="gMS-e3-SKA" secondAttribute="width" constant="-20" id="sNY-ve-mdy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gMS-e3-SKA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="پشتیبانی بانک ها" id="YvJ-X1-u7y">
+                        <barButtonItem key="backBarButtonItem" title=" " id="IKv-w8-AwH">
+                            <color key="tintColor" name="secondary"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="fDD-Ex-Lcf" id="yG2-5f-uAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCb-7b-BXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
