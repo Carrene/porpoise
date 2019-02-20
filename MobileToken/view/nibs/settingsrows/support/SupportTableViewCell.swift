@@ -23,6 +23,9 @@ class SupportTableViewCell: UITableViewCell {
     }
     
     @IBAction func onButtonCall(_ sender: UIButton) {
+        if let phone = labelPhoneNumber.text {
+        UIApplication.shared.open(URL(string: "tel://\(phone)")!)
+        }
     }
     
 }

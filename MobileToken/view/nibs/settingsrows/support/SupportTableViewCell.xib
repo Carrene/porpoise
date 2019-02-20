@@ -31,7 +31,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltr-Kp-L6c">
                         <rect key="frame" x="10" y="8" width="320" height="71.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color-bank-ayandeh-logo" translatesAutoresizingMaskIntoConstraints="NO" id="jbF-ui-ub9" userLabel="imageLogo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jbF-ui-ub9" userLabel="imageLogo">
                                 <rect key="frame" x="261" y="14.5" width="43" height="42.5"/>
                                 <color key="tintColor" name="secondary"/>
                             </imageView>
@@ -47,9 +47,10 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Dp-gEk" userLabel="buttonCall">
-                                <rect key="frame" x="16" y="18" width="36" height="35.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Dp-gEk" userLabel="buttonCall">
+                                <rect key="frame" x="16" y="14.5" width="43" height="42.5"/>
                                 <color key="backgroundColor" red="0.30426183342933655" green="0.16530811786651611" blue="0.63260734081268311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="html_copy.png"/>
                                 <connections>
                                     <action selector="onButtonCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KdP-cY-qkz"/>
                                 </connections>
@@ -57,8 +58,8 @@
                         </subviews>
                         <color key="backgroundColor" name="primaryDark"/>
                         <constraints>
-                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="width" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.5" id="11e-1J-ijw"/>
-                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="height" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.5" id="BOt-GY-KmS"/>
+                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="width" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="11e-1J-ijw"/>
+                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="height" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="BOt-GY-KmS"/>
                             <constraint firstItem="FjQ-G4-KsA" firstAttribute="top" secondItem="ltr-Kp-L6c" secondAttribute="top" constant="10" id="S2i-2t-sXK"/>
                             <constraint firstItem="Sqw-Dp-gEk" firstAttribute="centerY" secondItem="ltr-Kp-L6c" secondAttribute="centerY" id="T3q-pQ-aur"/>
                             <constraint firstItem="Zkz-6w-F6c" firstAttribute="right" secondItem="FjQ-G4-KsA" secondAttribute="right" id="XXT-AG-Enz"/>
@@ -91,7 +92,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="color-bank-ayandeh-logo" width="30" height="30"/>
+        <image name="html_copy.png" width="15" height="18"/>
         <namedColor name="buttonColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
