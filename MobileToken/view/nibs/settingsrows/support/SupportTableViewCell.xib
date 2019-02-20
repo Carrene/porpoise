@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseSupportTableViewCell" id="KGk-i7-Jjw" customClass="SupportTableViewCell" customModule="MobileToken" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="87.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltr-Kp-L6c">
+                        <rect key="frame" x="10" y="8" width="320" height="71.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jbF-ui-ub9" userLabel="imageLogo">
+                                <rect key="frame" x="261" y="14.5" width="43" height="42.5"/>
+                                <color key="tintColor" name="secondary"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک آینده" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjQ-G4-KsA" userLabel="labelBankName">
+                                <rect key="frame" x="179.5" y="10" width="65.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02127663200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkz-6w-F6c" userLabel="labelPhoneNumber">
+                                <rect key="frame" x="140.5" y="35.5" width="104.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Dp-gEk" userLabel="buttonCall">
+                                <rect key="frame" x="16" y="14.5" width="43" height="42.5"/>
+                                <color key="backgroundColor" red="0.30426183342933655" green="0.16530811786651611" blue="0.63260734081268311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="html_copy.png"/>
+                                <connections>
+                                    <action selector="onButtonCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KdP-cY-qkz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="primaryDark"/>
+                        <constraints>
+                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="width" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="11e-1J-ijw"/>
+                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="height" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="BOt-GY-KmS"/>
+                            <constraint firstItem="FjQ-G4-KsA" firstAttribute="top" secondItem="ltr-Kp-L6c" secondAttribute="top" constant="10" id="S2i-2t-sXK"/>
+                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="centerY" secondItem="ltr-Kp-L6c" secondAttribute="centerY" id="T3q-pQ-aur"/>
+                            <constraint firstItem="Zkz-6w-F6c" firstAttribute="right" secondItem="FjQ-G4-KsA" secondAttribute="right" id="XXT-AG-Enz"/>
+                            <constraint firstItem="Sqw-Dp-gEk" firstAttribute="left" secondItem="ltr-Kp-L6c" secondAttribute="left" constant="16" id="iXw-b1-J4E"/>
+                            <constraint firstItem="jbF-ui-ub9" firstAttribute="width" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="iuh-Zx-730"/>
+                            <constraint firstItem="FjQ-G4-KsA" firstAttribute="right" secondItem="jbF-ui-ub9" secondAttribute="left" constant="-16" id="mzo-2p-fAr"/>
+                            <constraint firstItem="jbF-ui-ub9" firstAttribute="centerY" secondItem="ltr-Kp-L6c" secondAttribute="centerY" id="p29-ra-A1r"/>
+                            <constraint firstItem="jbF-ui-ub9" firstAttribute="height" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="qhs-r2-6uX"/>
+                            <constraint firstItem="Zkz-6w-F6c" firstAttribute="top" secondItem="FjQ-G4-KsA" secondAttribute="bottom" id="tik-im-8A3"/>
+                            <constraint firstAttribute="right" secondItem="jbF-ui-ub9" secondAttribute="right" constant="16" id="vy0-BW-p8R"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="primary"/>
+                <constraints>
+                    <constraint firstItem="ltr-Kp-L6c" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" constant="-16" id="5Rq-lH-xif"/>
+                    <constraint firstItem="ltr-Kp-L6c" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="884-zw-1DO"/>
+                    <constraint firstItem="ltr-Kp-L6c" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-20" id="NNM-eM-jSU"/>
+                    <constraint firstItem="ltr-Kp-L6c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sNp-v7-9bg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttonCall" destination="Sqw-Dp-gEk" id="ng7-EP-7Bw"/>
+                <outlet property="imageLogo" destination="jbF-ui-ub9" id="hRp-RB-AFq"/>
+                <outlet property="labelBankName" destination="FjQ-G4-KsA" id="NN3-b9-fWO"/>
+                <outlet property="labelPhoneNumber" destination="Zkz-6w-F6c" id="gOk-3D-NZh"/>
+                <outlet property="view" destination="ltr-Kp-L6c" id="Rb6-oo-JMW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="html_copy.png" width="15" height="18"/>
+        <namedColor name="buttonColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
