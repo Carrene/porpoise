@@ -13,7 +13,6 @@ class MainViewController: UINavigationController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //sendJailBrokenDeviceToServer()
         checkIfNewUser()
         initPages()
     }
@@ -82,11 +81,28 @@ class MainViewController: UINavigationController {
     }
     
     fileprivate func sendJailBrokenDeviceToServer() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
+        do {
+            remove(realmURL: Realm.Configuration.defaultConfiguration.fileURL!.deletingLastPathComponent().appendingPathComponent("sensitive.realm"))
+    
+            remove(realmURL: Realm.Configuration.defaultConfiguration.fileURL!.deletingLastPathComponent().appendingPathComponent("insensitive.realm"))
+            
+        } catch {
+            
+            
         }
         exit(0)
     }
-
+    
+    func remove(realmURL: URL) {
+        let realmURLs = [
+            realmURL,
+            realmURL.appendingPathExtension("lock"),
+            realmURL.appendingPathExtension("note"),
+            realmURL.appendingPathExtension("management"),
+            ]
+        for URL in realmURLs {
+            try? FileManager.default.removeItem(at: URL)
+        }
+    }
+    
 }
