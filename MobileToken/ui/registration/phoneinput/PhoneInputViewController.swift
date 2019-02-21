@@ -146,7 +146,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     func sectionTitleForPreferredCountries(in countryPickerView: CountryPickerView) -> String? {
         return R.string.localizable.country()
     }
-    //TODO(Fateme): CORRECT 400 AND STRINGS
+    
     func showBadRequestError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorDark()!, duration: .middle)
     }

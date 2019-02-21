@@ -111,7 +111,7 @@ extension UILabel {
         let attributedString = NSMutableAttributedString.init(string: fullText)
         for highlightedWord in changeText {
             let textRange = (fullText as NSString).range(of: highlightedWord)
-            attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: R.color.secondary()! , range: textRange)
+            attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: R.color.secondaryLight()! , range: textRange)
         }
         self.attributedText = attributedString
     }

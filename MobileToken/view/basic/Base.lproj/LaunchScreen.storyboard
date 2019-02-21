@@ -21,14 +21,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raz-logo-splash" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-EK-V84" userLabel="logo">
                                 <rect key="frame" x="112" y="190" width="96" height="120"/>
-                                <color key="tintColor" name="secondary"/>
+                                <color key="tintColor" name="primary"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="bXu-Uz-gWB"/>
                                     <constraint firstAttribute="height" constant="120" id="gRn-ft-LNM"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="primary"/>
+                        <color key="backgroundColor" name="secondary"/>
                         <constraints>
                             <constraint firstItem="OPM-EK-V84" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="SVK-AO-o1T"/>
                             <constraint firstItem="OPM-EK-V84" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z93-oa-NIx"/>

@@ -30,40 +30,22 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         collectionView.allowsMultipleSelection = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
         cell.lbBankName.text = banks![indexPath.row].name!
-//        cell.lmgLogo.image = UIImage(named: banks![indexPath.row].logoResourceId!)
         
-        if selectedIndex == indexPath.row {
-            cell.lbBankName.textColor = R.color.buttonColor()
-            cell.isSelected = true
-            bankPagerViewDelegate?.selectedBank(bankIndex: selectedIndex)
-            if banks![indexPath.row].name! == "آینده" {
-                cell.vCell.backgroundColor = R.color.secondaryDark()
-                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
-                cell.lmgLogo.image = R.image.lightBankAyandehLogo()
-                cell.lmgLogo.tintColor = R.color.buttonColor()
-            }
-            else {
-                cell.vCell.backgroundColor = R.color.secondaryDark()
-                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
-                cell.lmgLogo.image = R.image.lightBankSaderatLogo()
-                cell.lmgLogo.tintColor = R.color.buttonColor()
-            }
+        if banks![indexPath.row].name! == "آینده" {
+            cell.lmgLogo.image = R.image.bankAyandehLogo()
         }
         else {
-            cell.vCell.backgroundColor = .clear
+            cell.lmgLogo.image = R.image.bankSaderatLogo()
+        }
+        
+        if selectedIndex == indexPath.row {
+            cell.isSelected = true
+            bankPagerViewDelegate?.selectedBank(bankIndex: selectedIndex)
+            cell.vCell.layer.borderColor = R.color.secondary()?.cgColor
+        }
+        else {
             cell.isSelected = false
-            if banks![indexPath.row].name! == "آینده" {
-                cell.lbBankName.textColor = R.color.secondaryDark()
-                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
-                cell.lmgLogo.image = R.image.lightBankAyandehLogo()
-                cell.lmgLogo.tintColor = R.color.secondaryDark()
-            }
-            else {
-                cell.lbBankName.textColor = R.color.secondaryDark()
-                cell.vCell.layer.borderColor = R.color.secondaryDark()?.cgColor
-                cell.lmgLogo.image = R.image.lightBankSaderatLogo()
-                cell.lmgLogo.tintColor = R.color.secondaryDark()
-            }
+            cell.vCell.layer.borderColor = R.color.primaryDark()?.cgColor
         }
         return cell
     }
