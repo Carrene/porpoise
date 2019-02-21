@@ -30,7 +30,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewAddCard.layer.borderWidth = 0.5
         textFieldCardName.layer.cornerRadius = 10
         textFieldCardName.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        textFieldCardName.layer.borderWidth = 0.5
+        textFieldCardName.layer.borderWidth = 2
         textFieldCardName.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         

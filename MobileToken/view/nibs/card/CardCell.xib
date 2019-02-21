@@ -47,6 +47,7 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-2e-ulq" userLabel="imgLogo">
                             <rect key="frame" x="20" y="10" width="40" height="40"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="gDb-D0-3om"/>
                                 <constraint firstAttribute="height" constant="40" id="mVX-rh-vm4"/>
@@ -70,6 +71,7 @@
                                 <constraint firstAttribute="width" constant="40" id="ZVS-CB-BNf"/>
                                 <constraint firstAttribute="height" constant="40" id="hzH-0N-1vV"/>
                             </constraints>
+                            <color key="tintColor" name="primaryDark"/>
                             <state key="normal" image="more-dots"/>
                         </button>
                         <stackView opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-ax-72e" userLabel="svCardNumber">
@@ -115,7 +117,7 @@
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-qG-9Rd" userLabel="imageAdd">
                             <rect key="frame" x="157.66666666666666" y="129" width="20" height="20"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="buttonColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="ASj-pg-JG7"/>
                                 <constraint firstAttribute="height" constant="20" id="med-bv-eln"/>
@@ -169,7 +171,10 @@
         <image name="more-dots" width="20" height="5"/>
         <image name="plus" width="40" height="40"/>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

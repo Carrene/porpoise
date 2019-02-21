@@ -21,7 +21,7 @@ class BankUtil {
         
         switch bank.name {
         case Bank.AYANDE:
-            return R.image.colorBankAyandehLogo()
+            return R.image.bankAyandehLogo()
         case Bank.SADERAT:
             return R.image.bankSaderatLogo()
         default:
@@ -34,9 +34,9 @@ class BankUtil {
         
         switch bank.name {
         case Bank.AYANDE:
-            return R.image.lightBankAyandehLogo()
+            return R.image.bankAyandehLogo()
         case Bank.SADERAT:
-            return R.image.lightBankSaderatLogo()
+            return R.image.bankSaderatLogo()
         default:
             return nil
             

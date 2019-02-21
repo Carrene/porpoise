@@ -33,11 +33,11 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phn-by-T2c" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="335" height="125.5"/>
-                                <color key="backgroundColor" name="primary"/>
+                                <color key="backgroundColor" name="primaryLight"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام پیشنهادی کارت" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
                                 <rect key="frame" x="20" y="141.5" width="295" height="40"/>
-                                <color key="backgroundColor" name="primaryDark"/>
+                                <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CqA-HG-NmI"/>
@@ -48,7 +48,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-BK-Rl0">
                                 <rect key="frame" x="0.0" y="211" width="335" height="40"/>
-                                <color key="backgroundColor" name="primaryLight"/>
+                                <color key="backgroundColor" name="secondary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="To7-8V-VZ6"/>
                                 </constraints>
@@ -56,14 +56,14 @@
                                 <state key="normal">
                                     <string key="title">افزودن کارت
 </string>
-                                    <color key="titleColor" name="secondary"/>
+                                    <color key="titleColor" name="primary"/>
                                 </state>
                                 <connections>
                                     <action selector="onAddCardButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="SBf-fJ-Sfm"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="primaryDark"/>
+                        <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="phn-by-T2c" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="7LY-eF-oP1"/>
                             <constraint firstItem="k5A-5T-3Eh" firstAttribute="left" secondItem="k8F-ES-KrH" secondAttribute="left" constant="20" id="AEJ-8x-7kZ"/>
@@ -99,19 +99,16 @@
     </objects>
     <resources>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryDark">
-            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryLight">
-            <color red="0.16078431372549021" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
-            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

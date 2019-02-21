@@ -9,7 +9,7 @@ class EditCardNameAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         editNameTextField.layer.borderColor = R.color.secondary()?.cgColor
-        editNameTextField.layer.borderWidth = 1
+        editNameTextField.layer.borderWidth = 2
         editNameTextField.layer.cornerRadius = 5
         label.font = R.font.iranSansMobile(size: 12)
         

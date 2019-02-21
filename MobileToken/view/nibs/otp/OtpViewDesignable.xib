@@ -35,7 +35,7 @@
             <subviews>
                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-MO-ltC">
                     <rect key="frame" x="205" y="7.5" width="35" height="40"/>
-                    <color key="backgroundColor" name="primary"/>
+                    <color key="backgroundColor" name="secondary"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="do5-PL-LrE"/>
                         <constraint firstAttribute="width" constant="35" id="zkn-Xp-Tw3"/>
@@ -48,7 +48,7 @@
                     <subviews>
                         <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="b1r-eL-wJl" customClass="UIProgressView">
                             <rect key="frame" x="0.0" y="0.0" width="200" height="55"/>
-                            <color key="backgroundColor" name="secondaryDark"/>
+                            <color key="backgroundColor" name="secondary"/>
                             <color key="tintColor" name="primary"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمزاول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gge-C6-Uez" userLabel="lbPass">
@@ -103,10 +103,10 @@
     <resources>
         <image name="copy" width="15" height="18"/>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="secondaryDark">
-            <color red="0.0" green="0.77254901960784317" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
