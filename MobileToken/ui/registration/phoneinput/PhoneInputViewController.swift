@@ -47,9 +47,9 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 12)
         viewCountry.layer.cornerRadius = 5
         viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        viewCountry.layer.borderWidth = 1
-        viewPhone.layer.borderWidth = 1
-        viewTextfields.layer.borderWidth = 0.5
+        viewCountry.layer.borderWidth = 2
+        viewPhone.layer.borderWidth = 2
+        viewTextfields.layer.borderWidth = 1
         viewTextfields.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewTextfields.layer.cornerRadius = 10

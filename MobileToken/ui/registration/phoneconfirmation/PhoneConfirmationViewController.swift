@@ -17,29 +17,23 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     private var phoneNumber = ""
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         self.presenter = PhoneConfirmationPresenter(view: self)
         showTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         self.hideKeyboardWhenTappedAround()
     }
     
     func initUIComponents() {
         viewTextfield.layer.cornerRadius = 5
         viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
-        viewTextfield.layer.borderWidth = 1
-        viewChangeNumber.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewTextfield.layer.borderWidth = 2
+        viewChangeNumber.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         viewChangeNumber.layer.borderWidth = 1
         viewCode.layer.borderWidth = 1
         viewCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
-        labelChangeNumber.layer.backgroundColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
-        labelChangeNumber.layer.cornerRadius = 10
-        labelCounter.layer.backgroundColor = R.color.primary()?.cgColor
-        //labelCounter.layer.cornerRadius = 10
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
