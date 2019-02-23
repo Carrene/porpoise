@@ -79,7 +79,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func initCountryPicker() {
-        self.countryPickerView.textColor = .white
+        self.countryPickerView.textColor = R.color.buttonColor()!
         countryPickerView.delegate = self
         countryPickerView.dataSource = self
         countryPickerView.showPhoneCodeInView = false

@@ -35,6 +35,7 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCF-Lj-z7x">
                                 <rect key="frame" x="0.0" y="111" width="375" height="555"/>
+                                <color key="backgroundColor" name="primary"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>

@@ -36,10 +36,10 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         viewCode.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewCode.layer.shadowOpacity = 0.2
         viewCode.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        viewCode.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
+        viewCode.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
-        viewChangeNumber.layer.shadowPath = UIBezierPath(roundedRect: viewCode.bounds, cornerRadius: 10).cgPath
+        viewChangeNumber.layer.shadowPath = UIBezierPath(roundedRect: viewChangeNumber.bounds, cornerRadius: 10).cgPath
         viewChangeNumber.layer.shadowRadius = 3
         viewChangeNumber.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewChangeNumber.layer.shadowOpacity = 0.2
