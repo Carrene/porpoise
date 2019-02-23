@@ -21,21 +21,23 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.layer.cornerRadius = 10
         buttonAddCard.layer.cornerRadius = 10
         buttonAddCard.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.shadowPath = UIBezierPath(roundedRect: viewAddCard.bounds, cornerRadius: 10).cgPath
         viewAddCard.layer.shadowRadius = 3
         viewAddCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewAddCard.layer.shadowOpacity = 0.2
-        viewAddCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        viewAddCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        viewAddCard.layer.shadowColor = R.color.primary()?.withAlphaComponent(0.15).cgColor
+        viewAddCard.layer.borderWidth = 0
         
         viewCard.layer.cornerRadius = 10
-        viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewAddCard.bounds, cornerRadius: 10).cgPath
+        viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
         viewCard.layer.shadowRadius = 3
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewCard.layer.shadowOpacity = 0.2
         viewCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
         
         viewCard.labelCardName.text = R.string.localizable.lb_cardName()
@@ -45,7 +47,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         
         textFieldCardName.layer.cornerRadius = 10
         textFieldCardName.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        textFieldCardName.layer.borderWidth = 2
+        textFieldCardName.layer.borderWidth = 1
         textFieldCardName.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         

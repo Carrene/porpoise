@@ -30,13 +30,23 @@ class BankCardPagerViewCell: FSPagerViewCell {
 //            timerSecond?.invalidate()
 //        }
         
-       
-        vCard.layer.cornerRadius = 10
-        vCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        vCard.layer.borderWidth = 0.5
         viewBankCard.layer.cornerRadius = 10
-        viewBankCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        viewBankCard.layer.borderWidth = 0.5
+        viewBankCard.layer.shadowPath = UIBezierPath(roundedRect: viewBankCard.bounds, cornerRadius: 10).cgPath
+        viewBankCard.layer.shadowRadius = 3
+        viewBankCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        viewBankCard.layer.shadowOpacity = 0.2
+        viewBankCard.layer.shadowColor = R.color.primary()?.withAlphaComponent(0.15).cgColor
+        viewBankCard.layer.borderWidth = 0
+        
+        vCard.layer.cornerRadius = 10
+        vCard.layer.shadowPath = UIBezierPath(roundedRect: vCard.bounds, cornerRadius: 10).cgPath
+        vCard.layer.shadowRadius = 3
+        vCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        vCard.layer.shadowOpacity = 0.2
+        vCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        vCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
+        
+        viewBankCard.layer.borderWidth = 0
         let actionButton = vCard.buttonActionSheet
         actionButton!.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
