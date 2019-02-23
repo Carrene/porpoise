@@ -29,14 +29,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
-                        <rect key="frame" x="5" y="5" width="310" height="241"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phn-by-T2c" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="310" height="120.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="125.5"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام پیشنهادی کارت" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
-                                <rect key="frame" x="20" y="136.5" width="270" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   نام پیشنهادی کارت" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
+                                <rect key="frame" x="20" y="141.5" width="280" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
@@ -47,7 +47,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-BK-Rl0">
-                                <rect key="frame" x="0.0" y="201" width="310" height="40"/>
+                                <rect key="frame" x="0.0" y="211" width="320" height="40"/>
                                 <color key="backgroundColor" name="secondary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="To7-8V-VZ6"/>
@@ -81,10 +81,10 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="k8F-ES-KrH" firstAttribute="left" secondItem="gTV-IL-0wX" secondAttribute="left" constant="5" id="KT1-gv-zda"/>
-                <constraint firstAttribute="bottom" secondItem="k8F-ES-KrH" secondAttribute="bottom" constant="5" id="O0M-Ev-59q"/>
-                <constraint firstAttribute="right" secondItem="k8F-ES-KrH" secondAttribute="right" constant="5" id="VWD-9v-PLP"/>
-                <constraint firstItem="k8F-ES-KrH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ev2-dg-QKG"/>
+                <constraint firstItem="k8F-ES-KrH" firstAttribute="left" secondItem="gTV-IL-0wX" secondAttribute="left" id="KT1-gv-zda"/>
+                <constraint firstAttribute="bottom" secondItem="k8F-ES-KrH" secondAttribute="bottom" id="O0M-Ev-59q"/>
+                <constraint firstAttribute="right" secondItem="k8F-ES-KrH" secondAttribute="right" id="VWD-9v-PLP"/>
+                <constraint firstItem="k8F-ES-KrH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ev2-dg-QKG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="289" height="293"/>
