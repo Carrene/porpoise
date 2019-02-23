@@ -9,7 +9,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         self.view = view
     }
     
-    func claim(phone: String,bank:Bank) {66
+    func claim(phone: String,bank:Bank) {
         let user = User(phone: phone, activationCode: nil, bank: bank)
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
