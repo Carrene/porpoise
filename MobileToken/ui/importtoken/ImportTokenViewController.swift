@@ -43,10 +43,16 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         btConfirm.isEnabled = false
         buttonAddCode.layer.cornerRadius = 10
         self.buttonAddCode.backgroundColor = R.color.borderColor()
+        
         viewCard.layer.cornerRadius = 10
-        viewCard.contentView.backgroundColor = R.color.primary()
         viewCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        viewCard.layer.borderWidth = 1
+        viewCard.layer.borderWidth = 0
+        viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
+        viewCard.layer.shadowRadius = 5
+        viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        viewCard.layer.shadowOpacity = 0.8
+        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewCard.layer.borderWidth = 0
         viewCard.imagePlus.isHidden = true
         viewCard.buttonActionSheet.isEnabled = false
         
@@ -60,12 +66,12 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         textViewAtmCode.delegate = self
         textViewSmsCode.delegate = self
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
-        textViewAtmCode.layer.borderWidth = 1
+        textViewAtmCode.layer.borderWidth = 2
         textViewAtmCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         labelAtmCode.font = R.font.iranSansMobile(size: 12)
         labelSmsCode.font = R.font.iranSansMobile(size: 12)
-        textViewSmsCode.layer.borderWidth = 1
+        textViewSmsCode.layer.borderWidth = 2
         textViewSmsCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         self.hideKeyboardWhenTappedAround()
         initBankCard()

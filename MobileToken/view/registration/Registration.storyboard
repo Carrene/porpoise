@@ -49,13 +49,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF" userLabel="View bank">
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF" userLabel="View bank">
                                 <rect key="frame" x="0.0" y="127" width="320" height="100"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
                                         <rect key="frame" x="20" y="0.0" width="280" height="100"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Qfx-jO-6LW">
+                                        <color key="backgroundColor" name="primary"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Qfx-jO-6LW">
                                             <size key="itemSize" width="140" height="100"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -69,6 +69,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </view>
+                                                <color key="backgroundColor" name="primaryLight"/>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
