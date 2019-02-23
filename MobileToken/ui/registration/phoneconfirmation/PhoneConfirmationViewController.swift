@@ -30,12 +30,21 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         viewTextfield.layer.cornerRadius = 5
         viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
         viewTextfield.layer.borderWidth = 2
-        viewChangeNumber.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
-        viewChangeNumber.layer.borderWidth = 1
-        viewCode.layer.borderWidth = 1
-        viewCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        
+        viewCode.layer.shadowPath = UIBezierPath(roundedRect: viewCode.bounds, cornerRadius: 10).cgPath
+        viewCode.layer.shadowRadius = 3
+        viewCode.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        viewCode.layer.shadowOpacity = 0.2
+        viewCode.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        viewCode.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         viewCode.layer.cornerRadius = 10
         viewChangeNumber.layer.cornerRadius = 10
+        viewChangeNumber.layer.shadowPath = UIBezierPath(roundedRect: viewCode.bounds, cornerRadius: 10).cgPath
+        viewChangeNumber.layer.shadowRadius = 3
+        viewChangeNumber.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        viewChangeNumber.layer.shadowOpacity = 0.2
+        viewChangeNumber.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        viewChangeNumber.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber

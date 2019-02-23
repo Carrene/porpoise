@@ -47,11 +47,11 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 12)
         viewCountry.layer.cornerRadius = 5
         viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        viewCountry.layer.borderWidth = 2
-        viewPhone.layer.borderWidth = 2
-        viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
+        viewCountry.layer.borderWidth = 1
+        viewPhone.layer.borderWidth = 1
+        viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 5).cgPath
         viewTextfields.layer.shadowRadius = 3
-        viewTextfields.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        viewTextfields.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewTextfields.layer.shadowOpacity = 0.2
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
         viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor

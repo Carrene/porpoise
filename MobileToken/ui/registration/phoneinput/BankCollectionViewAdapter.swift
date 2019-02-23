@@ -45,7 +45,7 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         }
         else {
             cell.isSelected = false
-            cell.vCell.layer.borderColor = R.color.primaryDark()?.cgColor
+            cell.vCell.layer.borderColor = R.color.primary()?.cgColor
         }
         return cell
     }

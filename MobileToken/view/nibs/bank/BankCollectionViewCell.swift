@@ -11,12 +11,13 @@ class BankCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         vCell.layer.cornerRadius = 10
+        vCell.layer.borderWidth = 1
         vCell.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
         vCell.layer.shadowRadius = 3
-        vCell.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        vCell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         vCell.layer.shadowOpacity = 0.2
         vCell.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        vCell.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        vCell.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         lbBankName.font = R.font.iranSansMobileBold(size: 16)
     }
 }
