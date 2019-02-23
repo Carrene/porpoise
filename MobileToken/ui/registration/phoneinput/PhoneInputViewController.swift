@@ -49,8 +49,12 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCountry.layer.borderWidth = 2
         viewPhone.layer.borderWidth = 2
-        viewTextfields.layer.borderWidth = 1
-        viewTextfields.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
+        viewTextfields.layer.shadowRadius = 3
+        viewTextfields.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        viewTextfields.layer.shadowOpacity = 0.2
+        viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewTextfields.layer.cornerRadius = 10
         textFieldPhoneNumber.delegate = self
