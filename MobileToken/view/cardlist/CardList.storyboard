@@ -53,7 +53,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
-                        <color key="tintColor" name="eyeCatching"/>
+                        <color key="tintColor" name="secondary"/>
                         <constraints>
                             <constraint firstItem="pQv-6G-lYZ" firstAttribute="centerX" secondItem="DEU-Kc-QOS" secondAttribute="centerX" id="5W5-57-Xis"/>
                             <constraint firstItem="DEU-Kc-QOS" firstAttribute="trailing" secondItem="X9c-M4-KV2" secondAttribute="trailing" id="Ta6-WG-SH4"/>
@@ -100,9 +100,6 @@
         <image name="list-icon" width="20" height="16"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="eyeCatching">
-            <color red="0.11400000005960464" green="1" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

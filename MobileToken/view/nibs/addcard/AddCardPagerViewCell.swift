@@ -20,7 +20,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         super.awakeFromNib()
         viewCard.layer.cornerRadius = 10
         buttonAddCard.layer.cornerRadius = 10
-        
+        buttonAddCard.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.shadowPath = UIBezierPath(roundedRect: viewAddCard.bounds, cornerRadius: 10).cgPath
         viewAddCard.layer.shadowRadius = 3
