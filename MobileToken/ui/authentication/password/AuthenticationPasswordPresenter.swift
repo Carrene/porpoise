@@ -24,9 +24,13 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
     func checkPasswordCorrection(password: String) {
         if password.sha512() == authentication?.credential {
             authentication?.successAttempt()
-            RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: password.bytes, salt: (authentication?.salt!.bytes)!)?.toHexString())!
-            updateAuthentication(authentication: self.authentication!)
-             getAllUsers()
+            DispatchQueue.global(qos: .userInitiated).async {
+                RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: password.bytes, salt: (self.authentication?.salt!.bytes)!)?.toHexString())!
+                DispatchQueue.main.async {
+                    self.updateAuthentication(authentication: self.authentication!)
+                    self.getAllUsers()
+                }
+            }
         } else {
             self.authentication?.failAttempt()
             updateAuthentication(authentication: self.authentication!)

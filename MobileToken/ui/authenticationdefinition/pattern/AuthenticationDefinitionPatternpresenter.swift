@@ -34,18 +34,22 @@ class AuthenticationDefinitionPatternPresenter: AuthenticationDefinitionPatternP
     
     func updateAuthentication(credential: String) {
         let authentication = Authentication(credentials: credential.sha512(), authenticationType: AuthenticationTypeEnum.PATTERN)
-        RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString())!
-        let authenticationRestRepository = AuthenticationRepository()
-        let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
-            if let error = repoResponse.error {
-                print("\(error)")
-            } else {
-                //UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-                self!.authenticationDefinitionPatternView.navigateToTabbar()
-                self!.initScreenLocker()
+        DispatchQueue.global(qos: .userInitiated).async {
+            RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString())!
+            DispatchQueue.main.async {
+                let authenticationRestRepository = AuthenticationRepository()
+                let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
+                    if let error = repoResponse.error {
+                        print("\(error)")
+                    } else {
+                        UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+                        self!.authenticationDefinitionPatternView.navigateToTabbar()
+                        self?.initScreenLocker()
+                    }
+                }
+                authenticationRestRepository.update(authentication, onDone: onDataResponse)
             }
         }
-        authenticationRestRepository.update(authentication, onDone: onDataResponse)
     }
     
     func initScreenLocker() {
