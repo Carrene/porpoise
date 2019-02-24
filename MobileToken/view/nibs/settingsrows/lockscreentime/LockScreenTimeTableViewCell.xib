@@ -46,7 +46,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <state key="normal" title="30">
-                                            <color key="titleColor" name="secondary"/>
+                                            <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
@@ -61,7 +61,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <state key="normal" title="90">
-                                            <color key="titleColor" name="secondary"/>
+                                            <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
@@ -76,7 +76,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <state key="normal" title="120">
-                                            <color key="titleColor" name="secondary"/>
+                                            <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
@@ -91,7 +91,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                         <state key="normal" title="60">
-                                            <color key="titleColor" name="secondary"/>
+                                            <color key="titleColor" name="buttonColor"/>
                                         </state>
                                         <connections>
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
@@ -182,9 +182,6 @@
         </namedColor>
         <namedColor name="primaryLight">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondary">
-            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
