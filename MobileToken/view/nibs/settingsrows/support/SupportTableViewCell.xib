@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02127663200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkz-6w-F6c" userLabel="labelPhoneNumber">
-                                <rect key="frame" x="152" y="35.5" width="93" height="25.5"/>
+                                <rect key="frame" x="152" y="33.5" width="93" height="25.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                             <constraint firstItem="FjQ-G4-KsA" firstAttribute="right" secondItem="jbF-ui-ub9" secondAttribute="left" constant="-16" id="mzo-2p-fAr"/>
                             <constraint firstItem="jbF-ui-ub9" firstAttribute="centerY" secondItem="ltr-Kp-L6c" secondAttribute="centerY" id="p29-ra-A1r"/>
                             <constraint firstItem="jbF-ui-ub9" firstAttribute="height" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="qhs-r2-6uX"/>
-                            <constraint firstItem="Zkz-6w-F6c" firstAttribute="top" secondItem="FjQ-G4-KsA" secondAttribute="bottom" id="tik-im-8A3"/>
+                            <constraint firstItem="Zkz-6w-F6c" firstAttribute="top" secondItem="FjQ-G4-KsA" secondAttribute="bottom" constant="-2" id="tik-im-8A3"/>
                             <constraint firstAttribute="right" secondItem="jbF-ui-ub9" secondAttribute="right" constant="16" id="vy0-BW-p8R"/>
                         </constraints>
                     </view>
