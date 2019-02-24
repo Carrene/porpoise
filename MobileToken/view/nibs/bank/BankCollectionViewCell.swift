@@ -12,7 +12,8 @@ class BankCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         view.layer.cornerRadius = 10
-        view.layer.borderWidth = 0
+        //view.layer.borderWidth = 1
+        //view.layer.borderColor = R.color.primaryLight()?.cgColor
         view.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
         view.layer.shadowRadius = 3
         view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
@@ -22,7 +23,7 @@ class BankCollectionViewCell: UICollectionViewCell {
         vCell.layer.borderColor = R.color.primaryLight()?.cgColor
         vCell.layer.cornerRadius = 10
         
-//        vCell.layer.borderWidth = 1
+        vCell.layer.borderWidth = 2
 //        vCell.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
 //        vCell.layer.shadowRadius = 5
 //        vCell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

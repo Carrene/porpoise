@@ -18,10 +18,16 @@ class LatestUpdatesViewController: UIViewController {
     func initUIComponent() {
         buttonEnterProgram.layer.cornerRadius = 10
         viewText.layer.cornerRadius = 5
+        viewText.layer.shadowPath = UIBezierPath(roundedRect: viewText.bounds, cornerRadius: 5).cgPath
+        viewText.layer.shadowRadius = 3
+        viewText.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        viewText.layer.shadowOpacity = 0.2
+        viewText.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        viewText.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
+        
     }
     
     func initTable() {
-
         adapter = LatestUpdatesTableAdapter(sender: self)
         tableview.delegate = adapter
         tableview.dataSource = adapter
