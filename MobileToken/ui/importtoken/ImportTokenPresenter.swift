@@ -20,21 +20,21 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             updateCard(card: card)
             
         } catch ParseTokenException.InvalidChecksumException{
-            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .short).show()
         } catch ParseTokenException.InvalidBankIdException {
-            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidbankid(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidbankid(), color: R.color.errorDark()!, duration: .short).show()
         } catch ParseTokenException.InvalidCryptoModuleIdException {
-            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid(), color: R.color.errorDark()!, duration: .short).show()
         } catch ParseTokenException.NumberFormatException {
-            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .short).show()
         } catch ParseTokenException.InvalidKeyException {
-            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .short).show()
         } catch ParseTokenException.InvalidKeyException {
-            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .short).show()
         } catch ParseTokenException.IllegalStateException {
-            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .short).show()
         } catch {
-            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .short).show()
         }
     }
     

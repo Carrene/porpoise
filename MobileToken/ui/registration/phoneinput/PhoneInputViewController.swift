@@ -154,11 +154,11 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func showBadRequestError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorDark()!, duration: .middle)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorDark()!, duration: .short)
     }
     
     func showServerError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .middle)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .short)
     }
     
     func showNetworkError() {

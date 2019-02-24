@@ -130,16 +130,16 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     
     func showBadRequestError() {
         
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_activation_code_is_not_valid(), color: R.color.errorDark()!, duration: .middle)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_activation_code_is_not_valid(), color: R.color.errorDark()!, duration: .short)
     }
     
     func showSSMNotAvailable() {
         
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_SSM_is_not_available(), color: R.color.errorDark()!, duration: .middle)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_SSM_is_not_available(), color: R.color.errorDark()!, duration: .short)
     }
     
     func showServerError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .middle)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .short)
     }
     
     func showNetworkError() {
