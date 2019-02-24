@@ -30,9 +30,10 @@ class MyApplication: UIApplication {
                 while let presentedViewController = topController.presentedViewController{
                     topController = presentedViewController
                 }
-                if(topController is AuthenticationViewController == false){
-                    
-                    ScreenLocker.instance.resetTimer(time: ScreenLocker.SCREEN_LOCKER_TIME)
+                if(ScreenLocker.isAutoLocked == false && CryptoUtil.keyDrivated == true ) {
+                    print("resettttt")
+                    let lockerTimeInterval = AuthenticationPatternPresenter.getSetting().lockTimer
+                    ScreenLocker.instance.resetTimer(time: lockerTimeInterval)
                 }
             }
         }

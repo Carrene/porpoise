@@ -1,5 +1,7 @@
 import Foundation
 class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
+
+    
     
     unowned let authenticationPasswordView: AuthenticationPasswordViewProtocol
     var authentication: Authentication?
@@ -10,7 +12,7 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
     }
     
     func getAuthentication(){
-        let authenticationRestRepository = AuthenticationRealmRepository()
+        let authenticationRepository = AuthenticationRealmRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
             if let error = repoResponse.error {
                 print(error)
@@ -18,7 +20,7 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
                 self?.authentication = repoResponse.value
             }
         }
-        authenticationRestRepository.get(onDone: onDataResponse)
+        authenticationRepository.get(onDone: onDataResponse)
     }
     
     func checkPasswordCorrection(password: String) {
@@ -61,7 +63,7 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self!.initScreenLocker()
+                AuthenticationPatternPresenter.initScreenLocker()
                 if (repoResponse.value?.count)! > 0 {
                     self?.authenticationPasswordView.navigateToCardList()
                 } else {
@@ -71,9 +73,5 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
         }
         userRepository.getAll(onDone: onDataResponse)
     }
-    
-    func initScreenLocker() {
-        ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
-        ScreenLocker.instance.start()
-    }
+
 }

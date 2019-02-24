@@ -17,6 +17,7 @@ open class BaseViewControllerClass : UIViewController{
         guard let controller = self as? BaseViewController else {
             return
         }
+        
         controller.initUIComponents()
         controller.initListeners()
     }

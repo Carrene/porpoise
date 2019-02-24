@@ -59,6 +59,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="primary"/>
                 <constraints>
                     <constraint firstItem="xFT-nP-W5v" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BFW-fF-jVr"/>
                     <constraint firstItem="xFT-nP-W5v" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QsZ-Np-Mjt"/>
@@ -75,12 +76,12 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="lock-reset" width="20" height="18"/>
+        <image name="lock-reset" width="29" height="29"/>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

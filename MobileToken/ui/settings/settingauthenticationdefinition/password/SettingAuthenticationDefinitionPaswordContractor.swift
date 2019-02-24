@@ -13,5 +13,4 @@ protocol SettingAuthenticationDefinitionPasswordPresenterProtocol {
     func hasDigit(password: String) -> Bool
     func hasSpecialCharacters(password: String) -> Bool
     func checkPasswords(password: String, confirmpassword: String)
-    func initScreenLocker()
 }

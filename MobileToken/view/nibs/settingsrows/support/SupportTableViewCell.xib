@@ -81,6 +81,7 @@
                     <constraint firstItem="ltr-Kp-L6c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sNp-v7-9bg"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="primary"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="buttonCall" destination="Sqw-Dp-gEk" id="ng7-EP-7Bw"/>

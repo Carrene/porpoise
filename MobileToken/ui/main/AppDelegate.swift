@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         initialTheme()
         initialIQKeyboard()
-        initPrinit()
+//        initPrinit()
         initialFirebase(application: application)
         
         return true
@@ -91,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
+        self.window?.endEditing(true)
         if(ScreenLocker.instance.isRunning()){
             ScreenLocker.instance.stop()
             ScreenLocker.instance.lockScreen()

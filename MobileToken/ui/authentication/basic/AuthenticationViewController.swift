@@ -46,11 +46,24 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     }
     
     func navigateToCardList() {
-        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration.identifier, sender: self)
+        let appLocked = ScreenLocker.isAutoLocked
+        if appLocked {
+            self.view.isHidden = true
+            ScreenLocker.isAutoLocked = false
+        } else {
+            performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration.identifier, sender: self)
+            
+        }
     }
 
     func navigateToInputPhoneNumber() {
-        performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList.identifier, sender: self)
+        let appLocked  = ScreenLocker.isAutoLocked
+        if appLocked {
+            self.view.isHidden = true
+            ScreenLocker.isAutoLocked = false
+        } else {
+            performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList.identifier, sender: self)
+        }
     }
 
     func navigateToLockView() {

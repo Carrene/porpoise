@@ -8,7 +8,7 @@ class AuthenticationPresenter: AuthenticationPresenterProtocol {
     }
     
     func getAuthentication() {
-        let authenticationRestRepository = AuthenticationRealmRepository()
+        let authenticationRepository = AuthenticationRealmRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
             if let error = repoResponse.error {
                 print(error)
@@ -24,7 +24,7 @@ class AuthenticationPresenter: AuthenticationPresenterProtocol {
                 }
             }
         }
-        authenticationRestRepository.get(onDone: onDataResponse)
+        authenticationRepository.get(onDone: onDataResponse)
     }
     
     

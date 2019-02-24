@@ -9,5 +9,4 @@ protocol SettingAuthenticationDefinitionPatternViewProtocol: class {
 protocol SettingAuthenticationDefinitionPatternPresenterProtocol {
     init(authenticationDefinitionPatternView: SettingAuthenticationDefinitionPatternViewProtocol)
     func checkPattern(count: Int, password: String)
-    func initScreenLocker()
 }
