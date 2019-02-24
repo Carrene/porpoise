@@ -42,8 +42,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02127663200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkz-6w-F6c" userLabel="labelPhoneNumber">
-                                <rect key="frame" x="140.5" y="35.5" width="104.5" height="29"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="18"/>
+                                <rect key="frame" x="152" y="35.5" width="93" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="primaryDark"/>
+                        <color key="backgroundColor" name="primaryLight"/>
                         <constraints>
                             <constraint firstItem="Sqw-Dp-gEk" firstAttribute="width" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="11e-1J-ijw"/>
                             <constraint firstItem="Sqw-Dp-gEk" firstAttribute="height" secondItem="ltr-Kp-L6c" secondAttribute="height" multiplier="0.6" id="BOt-GY-KmS"/>
@@ -94,16 +94,16 @@
     <resources>
         <image name="html_copy.png" width="15" height="18"/>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="primaryDark">
-            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="primaryLight">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
-            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

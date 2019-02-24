@@ -52,7 +52,7 @@
                             <color key="tintColor" name="primary"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمزاول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gge-C6-Uez" userLabel="lbPass">
-                            <rect key="frame" x="140" y="0.0" width="60" height="55"/>
+                            <rect key="frame" x="124" y="0.0" width="60" height="55"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="tKG-9C-0FE"/>
@@ -62,7 +62,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۲۳۴" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-MZ-xf5" userLabel="lbOtp">
-                            <rect key="frame" x="20" y="6" width="115" height="49"/>
+                            <rect key="frame" x="20" y="6" width="99" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="24"/>
                             <color key="textColor" name="buttonColor"/>
@@ -71,7 +71,7 @@
                     </subviews>
                     <color key="backgroundColor" name="primaryDark"/>
                     <constraints>
-                        <constraint firstAttribute="right" secondItem="gge-C6-Uez" secondAttribute="right" id="4Yn-aS-rcW"/>
+                        <constraint firstAttribute="right" secondItem="gge-C6-Uez" secondAttribute="right" constant="16" id="4Yn-aS-rcW"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="left" secondItem="jPM-xg-r5T" secondAttribute="left" constant="20" id="8FC-gw-GzE"/>
                         <constraint firstItem="Ne0-MZ-xf5" firstAttribute="top" secondItem="jPM-xg-r5T" secondAttribute="top" constant="6" id="SnP-ty-tvc"/>
                         <constraint firstItem="gge-C6-Uez" firstAttribute="left" secondItem="Ne0-MZ-xf5" secondAttribute="right" constant="5" id="aIp-Vi-23H"/>
