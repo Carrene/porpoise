@@ -44,7 +44,7 @@ class UIHelper {
     }
     
     static func showSuccessfulSnackBar(message:String) {
-        SnackBarHelper.init(message: message,color:R.color.secondaryDark()!, duration:TTGSnackbarDuration.middle).show()
+        SnackBarHelper.init(message: message,color:R.color.snackbarColor()!, duration:TTGSnackbarDuration.middle).show()
     }
     
     static func showSpecificSnackBar(message:String, color:UIColor) {

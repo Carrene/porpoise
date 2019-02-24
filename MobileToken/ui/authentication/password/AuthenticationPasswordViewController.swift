@@ -50,7 +50,7 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     
     func navigateToCardList() {
         self.authenticationDelegate?.navigateToCardList()
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.secondaryDark()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.snackbarColor()!)
     }
     
     func navigateToInputPhoneNumber() {

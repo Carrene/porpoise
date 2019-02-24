@@ -74,7 +74,7 @@ class CardListPresenter : CardListPresenterProtocol {
                 SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_unsuccessfully(), color: R.color.errorDark()!, duration: .short).show()
             } else {
                 self?.view.deleteToken(tokens: response.value!)
-                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.secondaryDark()!, duration: .short).show()
+                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.snackbarColor()!, duration: .short).show()
             }
         }
         repository.delete(tokens: tokens, onDone: onDataResponse)

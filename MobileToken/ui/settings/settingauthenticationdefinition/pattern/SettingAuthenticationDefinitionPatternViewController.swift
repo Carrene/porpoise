@@ -50,7 +50,7 @@ class SettingAuthenticationDefinitionPatternViewController: UIViewController, Se
     }
     
     func showTryForSecondTimeMessage() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.secondaryDark()!)
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_try_for_second_time(), color: R.color.snackbarColor()!)
 
     }
     
