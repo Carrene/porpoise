@@ -21,8 +21,4 @@ open class BaseViewControllerClass : UIViewController{
         controller.initUIComponents()
         controller.initListeners()
     }
-    
-    open override func viewWillDisappear(_ animated: Bool) {
-       
-    }
 }
