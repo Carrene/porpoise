@@ -113,7 +113,7 @@ DEPENDENCIES:
   - DTTJailbreakDetection (~> 0.4.0)
   - Fabric (~> 1.9.0)
   - Firebase/Core
-  - Firebase/Messaging
+  - Firebase/Messaging (~> 5.17.0)
   - FSPagerView (~> 0.8.1)
   - HUIPatternLockView-Swift (~> 2.0.1)
   - InputMask (~> 3.4.0)
@@ -214,6 +214,6 @@ SPEC CHECKSUMS:
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
-PODFILE CHECKSUM: 8f53e6e24d3e6568bb60a33047559ef8547cd889
+PODFILE CHECKSUM: 76a5c9843f0b4696a42a17fa8483fd6707529e1d
 
 COCOAPODS: 1.5.3
