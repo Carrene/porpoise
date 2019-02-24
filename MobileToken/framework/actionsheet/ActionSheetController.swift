@@ -38,7 +38,7 @@ open class MobileTokenActionSheetController: ActionController<ActionSheet, Actio
         super.viewDidLoad()
         //backgroundView.addSubview(blurView)
         cancelView?.frame.origin.y = view.bounds.size.height // Starts hidden below screen
-        cancelView?.layer.shadowColor = UIColor.black.cgColor
+        cancelView?.layer.shadowColor = R.color.primaryLight()?.cgColor
         cancelView?.layer.shadowOffset = CGSize( width: 0, height: 0)
         cancelView?.layer.shadowRadius = 0
         cancelView?.layer.shadowOpacity = 0
@@ -64,7 +64,7 @@ open class MobileTokenActionSheetController: ActionController<ActionSheet, Actio
         onConfigureCellForAction = { [weak self] cell, action, indexPath in
             //cell.setup(action.data?.title, detail: action.data?.subtitle, image: action.data?.image)
             cell.separatorView?.isHidden = indexPath.item == (self?.collectionView.numberOfItems(inSection: indexPath.section))! - 1
-            cell.viewDisable.backgroundColor = action.enabled ? R.color.primaryDark()?.withAlphaComponent(0.0) : R.color.primaryDark()?.withAlphaComponent(0.9)
+            cell.viewDisable.backgroundColor = action.enabled ? R.color.primary()?.withAlphaComponent(0.0) : R.color.primary()?.withAlphaComponent(0.9)
             cell.label.text = action.data?.title
             cell.imageView.image = action.data?.image
         }

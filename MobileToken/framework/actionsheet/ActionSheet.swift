@@ -25,10 +25,11 @@ open class ActionSheet: ActionCell {
     }
     
     func initialize() {
-        backgroundColor = R.color.primaryDark()
+        backgroundColor = R.color.primary()
         label.textColor = R.color.buttonColor()
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor(white: 0.0, alpha: 0.15)
+        backgroundView.backgroundColor = R.color.primaryLight()
+        label.textColor = R.color.buttonColor()
         selectedBackgroundView = backgroundView
         separatorView?.backgroundColor = UIColor(red: 224/255.0, green: 224/255.0, blue: 224/255.0, alpha: 1.0)
     }
