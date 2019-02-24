@@ -58,7 +58,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-                self!.initScreenLocker()
+                AuthenticationPatternPresenter.initScreenLocker()
                 if (repoResponse.value?.count)! > 0 {
                     self?.authenticationPatternView.navigateToCardList()
                 } else {
@@ -69,8 +69,27 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
         userRepository.getAll(onDone: onDataResponse)
     }
     
-    func initScreenLocker() {
-        ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
+    static func initScreenLocker() {
+//        let setting = AuthenticationPatternPresenter.getSetting()
+        ScreenLocker.instance._init(time: 60)
         ScreenLocker.instance.start()
+    }
+    
+    static func getSetting() -> Setting{
+        var appSetting: Setting?
+        let settingRepository = SettingRepository()
+        let onDataResponse: ((RepositoryResponse<Setting>) -> ()) = { repoResponse in
+            if repoResponse.error != nil {
+                UIHelper.showFailedSnackBar()
+            } else {
+                if let setting = repoResponse.value {
+                    appSetting = setting
+                } else {
+                    UIHelper.showFailedSnackBar()
+                }
+            }
+        }
+        settingRepository.get(onDone: onDataResponse)
+        return appSetting!
     }
 }

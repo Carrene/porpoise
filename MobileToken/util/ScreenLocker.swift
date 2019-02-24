@@ -1,20 +1,20 @@
-
 import Foundation
 import UIKit
 
-class ScreenLocker {
+class ScreenLocker: NSObject{
+    
     static let instance : ScreenLocker = {
         
         let instance = ScreenLocker()
         return instance
     }()
-    static var SCREEN_LOCKER_TIME = 6000
+    
     var timer:Timer!
     var time:Int!
     
     func _init(time:Int){
-        self.time = time
         
+        self.time = time
     }
     
     func isRunning()->Bool{
@@ -34,7 +34,14 @@ class ScreenLocker {
         }
     }
     
-    func resetTimer(time:Int) {
+    func lockScreen() {
+        UserDefaults.standard.set(true, forKey: "locked")
+        let vc = R.storyboard.authentication.authenticationViewController()
+        UIApplication.shared.keyWindow?.rootViewController = vc
+    }
+    
+    func resetTimer(time:Int){
+        
         if(self.timer != nil){
             self.time = time
             self.timer.invalidate()
@@ -42,10 +49,5 @@ class ScreenLocker {
             start()
         }
     }
-    
-    func lockScreen() {
-        UserDefaults.standard.set(true, forKey: "locked")
-        let vc = R.storyboard.authentication.authenticationViewController()
-        UIApplication.shared.keyWindow?.rootViewController = vc
-    }
 }
+

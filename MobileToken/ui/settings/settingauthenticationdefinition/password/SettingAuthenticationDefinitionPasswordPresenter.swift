@@ -43,14 +43,9 @@ class SettingAuthenticationDefinitionPasswordPresenter: SettingAuthenticationDef
             } else {
                 UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
                 //self!.authenticationDefinitionPasswordView.navigateToProvisioning()
-                self!.initScreenLocker()
+                AuthenticationPatternPresenter.initScreenLocker()
             }
         }
         authenticationRestRepository.update(authentication, onDone: onDataResponse)
-    }
-    
-    func initScreenLocker() {
-        ScreenLocker.instance._init(time: ScreenLocker.SCREEN_LOCKER_TIME)
-        ScreenLocker.instance.start();
     }
 }

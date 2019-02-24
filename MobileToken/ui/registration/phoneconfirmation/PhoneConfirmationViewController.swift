@@ -52,7 +52,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func initListeners() {
-        
         let tapChangeNumber = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
         labelChangeNumber.addGestureRecognizer(tapChangeNumber)
         let tapResendCode = UITapGestureRecognizer(target: self, action: #selector(resetTimer(_:)))

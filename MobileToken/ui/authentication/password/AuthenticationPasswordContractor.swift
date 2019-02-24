@@ -12,7 +12,6 @@ protocol AuthenticationPasswordPresenterProtocol {
     func getAuthentication()
     func updateAuthentication(authentication: Authentication)
     func getAllUsers()
-    func initScreenLocker()
 }
 
 
