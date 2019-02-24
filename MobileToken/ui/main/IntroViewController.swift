@@ -48,24 +48,20 @@ class IntroViewController {
             pages[i].underTitlePadding = 20
             pages[i].bottomPadding = 20
             pages[i].iconImageView.backgroundColor = R.color.primary()
-            let gif : UIImage?
             switch i {
             case 0:
-                gif = UIImage(gifName: R.image.noInternetGif.name)
-                pages[0].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
-                pages[0].iconHeight = 110
-                pages[0].iconWidth = 140
-                pages[0].topPadding = 150
-                pages[0].underIconPadding = 70
+                pages[0].iconImageView.image = R.image.noInternet()
+                pages[0].iconHeight = 200
+                pages[0].iconWidth = 200
+                //pages[0].topPadding = 150
+                //pages[0].underIconPadding = 70
                 
             case 2:
-                gif = UIImage(gifName: R.image.forgetPasswordGif.name)
-                pages[2].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+                pages[2].iconImageView.image = R.image.forgetPassword()
                 pages[2].iconHeight = 250
                 pages[2].iconWidth = 250
             case 1:
-                gif = UIImage(gifName: R.image.securityGif.name)
-                pages[1].iconImageView = UIImageView(gifImage: gif!, loopCount: -1)
+                pages[1].iconImageView.image = R.image.security()
                 pages[1].iconHeight = 250
                 pages[1].iconWidth = 250
             default:

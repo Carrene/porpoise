@@ -77,7 +77,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         case 3:
             cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
             (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_support()
-            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
+            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.support()
             //cell.accessoryType = .disclosureIndicator
             
         default:
