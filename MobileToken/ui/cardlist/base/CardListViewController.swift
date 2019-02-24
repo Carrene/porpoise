@@ -200,7 +200,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         editCardNameVC.editNameTextField.text = card.cardName
         editCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
-        dialogAppearance.backgroundColor = R.color.primaryDark()
+        dialogAppearance.backgroundColor = R.color.primary()
         dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         dialogAppearance.titleColor = R.color.buttonColor()
         
@@ -230,9 +230,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         let defaultButtonAppearance = DefaultButton.appearance()
         defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
-        defaultButtonAppearance.titleColor = R.color.secondary()
+        defaultButtonAppearance.titleColor = R.color.primary()
         defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
-        
+        defaultButtonAppearance.buttonColor = R.color.secondary()
         
         editCardAlert.addButtons([saveButton, cancelButton])
         
@@ -245,16 +245,16 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteCardAlert.transitionStyle = .zoomIn
         deleteCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
-        dialogAppearance.backgroundColor = R.color.primaryDark()
+        dialogAppearance.backgroundColor = R.color.primary()
         dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         dialogAppearance.titleColor = R.color.buttonColor()
         
         let containerAppearance = PopupDialogContainerView.appearance()
-        containerAppearance.backgroundColor = R.color.primary()
+        //containerAppearance.backgroundColor = R.color.primaryLight()
         containerAppearance.cornerRadius = 10
         
         let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
-            print("You canceled the dialog.")
+            
         }
         
         let deleteButton = DefaultButton(title: R.string.localizable.delete_card(), dismissOnTap: true) {
@@ -269,9 +269,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         var defaultButtonAppearance = DefaultButton.appearance()
         defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
-        defaultButtonAppearance.titleColor = R.color.secondary()
+        defaultButtonAppearance.titleColor = R.color.primary()
         defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
-        
+        defaultButtonAppearance.backgroundColor = R.color.secondary()
+        defaultButtonAppearance.buttonColor = R.color.secondary()
         
         deleteCardAlert.addButtons([deleteButton, cancelButton])
         

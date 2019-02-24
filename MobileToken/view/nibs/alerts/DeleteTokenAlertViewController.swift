@@ -14,14 +14,31 @@ class DeleteTokenAlertViewController: BaseViewController {
     func initUIComponents() {
         buttonFirstToken.isEnabled = false
         buttonSecondToken.isEnabled = false
-        buttonFirstToken.layer.borderWidth = 1
-        buttonFirstToken.layer.borderColor = R.color.secondary()?.cgColor
+        
         buttonFirstToken.layer.cornerRadius = 10
-        buttonSecondToken.layer.borderWidth = 1
-        buttonSecondToken.layer.borderColor = R.color.secondary()?.cgColor
+        buttonFirstToken.layer.shadowPath = UIBezierPath(roundedRect: buttonFirstToken.bounds, cornerRadius: 10).cgPath
+        buttonFirstToken.layer.shadowRadius = 3
+        buttonFirstToken.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        buttonFirstToken.layer.shadowOpacity = 0.2
+        //buttonFirstToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        buttonFirstToken.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
+        buttonFirstToken.layer.borderWidth = 2
+        buttonFirstToken.layer.borderColor = R.color.primary()?.cgColor
+        
+        
         buttonSecondToken.layer.cornerRadius = 10
-        buttonSecondToken.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.5), for: .disabled)
-        buttonFirstToken.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.5), for: .disabled)
+        buttonSecondToken.layer.shadowPath = UIBezierPath(roundedRect: buttonSecondToken.bounds, cornerRadius: 10).cgPath
+        buttonSecondToken.layer.shadowRadius = 3
+        buttonSecondToken.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        buttonSecondToken.layer.shadowOpacity = 0.2
+        //buttonSecondToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        buttonSecondToken.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
+        buttonSecondToken.layer.borderWidth = 1
+        buttonSecondToken.layer.borderColor = R.color.primary()?.cgColor
+        
+        
+        buttonSecondToken.setTitleColor(R.color.buttonColor(), for: .disabled)
+        buttonFirstToken.setTitleColor(R.color.buttonColor(), for: .disabled)
         label.font = R.font.iranSansMobileBold(size: 16)
     }
     
@@ -43,12 +60,12 @@ class DeleteTokenAlertViewController: BaseViewController {
     @IBAction func onDeleteFirstToken(_ sender: UIButton) {
         if !(buttonFirstToken?.isSelected)! {
             buttonFirstToken?.isSelected = true
-            buttonFirstToken.backgroundColor = R.color.secondary()
-            buttonFirstToken.setTitleColor(R.color.primaryDark(), for: .normal)
+            buttonFirstToken.layer.borderColor = R.color.secondary()?.cgColor
+            buttonFirstToken.setTitleColor(R.color.primary(), for: .normal)
         }
         else {
             buttonFirstToken?.isSelected = false
-            buttonFirstToken.backgroundColor = R.color.primaryDark()
+            buttonFirstToken.layer.borderColor = R.color.primaryLight()?.cgColor
             buttonFirstToken.setTitleColor(R.color.secondary(), for: .normal)
             
         }
@@ -58,12 +75,12 @@ class DeleteTokenAlertViewController: BaseViewController {
     @IBAction func onDeleteSecondToken(_ sender: UIButton) {
         if !(buttonSecondToken?.isSelected)! {
             buttonSecondToken?.isSelected = true
-            buttonSecondToken.backgroundColor = R.color.secondary()
-            buttonSecondToken.setTitleColor(R.color.primaryDark(), for: .normal)
+            buttonSecondToken.layer.borderColor = R.color.secondary()?.cgColor
+            buttonSecondToken.setTitleColor(R.color.primary(), for: .normal)
         }
         else {
             buttonSecondToken?.isSelected = false
-            buttonSecondToken.backgroundColor = R.color.primaryDark()
+            buttonSecondToken.layer.borderColor = R.color.primaryLight()?.cgColor
             buttonSecondToken.setTitleColor(R.color.secondary(), for: .normal)
             
         }

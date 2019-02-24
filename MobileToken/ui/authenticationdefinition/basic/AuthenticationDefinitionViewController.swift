@@ -60,9 +60,9 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
         
             var cancelButtonAppearance = CancelButton.appearance()
             cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
-            cancelButtonAppearance.titleColor = R.color.secondary()
+            cancelButtonAppearance.titleColor = R.color.primary()
             cancelButtonAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
-            cancelButtonAppearance.buttonColor = R.color.primaryDark()
+            cancelButtonAppearance.buttonColor = R.color.secondary()
         
         
             alert.addButtons([cancelButton])

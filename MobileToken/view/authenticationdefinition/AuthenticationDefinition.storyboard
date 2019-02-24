@@ -40,6 +40,7 @@
                                     <segment title="الگو"/>
                                     <segment title="رمز"/>
                                 </segments>
+                                <color key="tintColor" name="secondary"/>
                                 <connections>
                                     <action selector="segmentedControlValueChanged:" destination="88r-3K-z0N" eventType="valueChanged" id="nRC-DE-IkS"/>
                                 </connections>
