@@ -11,7 +11,6 @@
 		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
-		AC04FAAE21C14D4500A41D9D /* forget-password.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC04FAAD21C14D4400A41D9D /* forget-password.gif */; };
 		AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
 		AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
 		AC16D6FF21CA31B70094FBED /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
@@ -31,9 +30,6 @@
 		AC16D71D21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71A21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift */; };
 		AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71B21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift */; };
 		AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
-		AC16D72421CA33410094FBED /* PasswordHintTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72221CA33410094FBED /* PasswordHintTableAdapter.swift */; };
-		AC16D72521CA33410094FBED /* PasswordHintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72321CA33410094FBED /* PasswordHintTableViewCell.swift */; };
-		AC16D72821CA35CA0094FBED /* PasswordHintTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC16D72721CA35CA0094FBED /* PasswordHintTableViewCell.xib */; };
 		AC16D72A21CA36220094FBED /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72921CA36220094FBED /* CryptoUtil.swift */; };
 		AC16D72C21CA38550094FBED /* ScreenLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72B21CA38550094FBED /* ScreenLocker.swift */; };
 		AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */; };
@@ -57,8 +53,6 @@
 		AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
 		AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
-		AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1721BFCB4200B80412 /* no-internet.gif */; };
-		AC353B1C21BFCB5300B80412 /* security.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC353B1B21BFCB5300B80412 /* security.gif */; };
 		AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
 		AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
 		AC405AFC221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
@@ -217,7 +211,6 @@
 		A00193DCA7A801AB64FDC97E /* Pods-MobileTokenUITests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
-		AC04FAAD21C14D4400A41D9D /* forget-password.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "forget-password.gif"; sourceTree = "<group>"; };
 		AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationPresenter.swift; sourceTree = "<group>"; };
 		AC16D6F921CA2F140094FBED /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
@@ -237,9 +230,6 @@
 		AC16D71A21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPaswordContractor.swift; sourceTree = "<group>"; };
 		AC16D71B21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPasswordPresenter.swift; sourceTree = "<group>"; };
 		AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
-		AC16D72221CA33410094FBED /* PasswordHintTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordHintTableAdapter.swift; path = common/passwordhint/PasswordHintTableAdapter.swift; sourceTree = "<group>"; };
-		AC16D72321CA33410094FBED /* PasswordHintTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordHintTableViewCell.swift; path = common/passwordhint/PasswordHintTableViewCell.swift; sourceTree = "<group>"; };
-		AC16D72721CA35CA0094FBED /* PasswordHintTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PasswordHintTableViewCell.xib; path = passwordhint/PasswordHintTableViewCell.xib; sourceTree = "<group>"; };
 		AC16D72921CA36220094FBED /* CryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
 		AC16D72B21CA38550094FBED /* ScreenLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLocker.swift; sourceTree = "<group>"; };
 		AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmConfiguration copy.swift"; sourceTree = "<group>"; };
@@ -263,8 +253,6 @@
 		AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Medium.ttf"; sourceTree = "<group>"; };
 		AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Light.ttf"; sourceTree = "<group>"; };
 		AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_UltraLight.ttf"; sourceTree = "<group>"; };
-		AC353B1721BFCB4200B80412 /* no-internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "no-internet.gif"; sourceTree = "<group>"; };
-		AC353B1B21BFCB5300B80412 /* security.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = security.gif; sourceTree = "<group>"; };
 		AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesTableAdapter.swift; sourceTree = "<group>"; };
 		AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTokensAlert.xib; sourceTree = "<group>"; };
 		AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenAlertViewController.swift; sourceTree = "<group>"; };
@@ -475,31 +463,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC16D72021CA33160094FBED /* common */ = {
-			isa = PBXGroup;
-			children = (
-				AC16D72121CA33310094FBED /* passwordhint */,
-			);
-			name = common;
-			sourceTree = "<group>";
-		};
-		AC16D72121CA33310094FBED /* passwordhint */ = {
-			isa = PBXGroup;
-			children = (
-				AC16D72221CA33410094FBED /* PasswordHintTableAdapter.swift */,
-				AC16D72321CA33410094FBED /* PasswordHintTableViewCell.swift */,
-			);
-			name = passwordhint;
-			sourceTree = "<group>";
-		};
-		AC16D72621CA35AD0094FBED /* passwordhint */ = {
-			isa = PBXGroup;
-			children = (
-				AC16D72721CA35CA0094FBED /* PasswordHintTableViewCell.xib */,
-			);
-			name = passwordhint;
-			sourceTree = "<group>";
-		};
 		AC2676BA21B52B6900524636 /* framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,16 +530,6 @@
 				AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */,
 			);
 			path = importtoken;
-			sourceTree = "<group>";
-		};
-		AC46685921BCEC2500A0B5BA /* gif */ = {
-			isa = PBXGroup;
-			children = (
-				AC04FAAD21C14D4400A41D9D /* forget-password.gif */,
-				AC353B1B21BFCB5300B80412 /* security.gif */,
-				AC353B1721BFCB4200B80412 /* no-internet.gif */,
-			);
-			path = gif;
 			sourceTree = "<group>";
 		};
 		AC4C4DBD21CE7ADC00B15B90 /* cardlist */ = {
@@ -1001,7 +954,6 @@
 				ACEF4CCD21C4E61100CA66A4 /* base */,
 				AFBC2ADC21918E3000D37C84 /* cardlist */,
 				AC46685821BC05DE00A0B5BA /* importtoken */,
-				AC16D72021CA33160094FBED /* common */,
 				AC353B0821BEB90F00B80412 /* latestupdates */,
 				AF463BC42189D8EC00DC8A3E /* main */,
 				AF285FEF219C42B500D8C342 /* registration */,
@@ -1077,7 +1029,6 @@
 		AF463BCC2189E5F200DC8A3E /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				AC46685921BCEC2500A0B5BA /* gif */,
 				AF28600D219D7ADD00D8C342 /* fonts */,
 				AFB39B562189A6A700302624 /* Assets.xcassets */,
 			);
@@ -1207,7 +1158,6 @@
 				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
 				AFE190E7219029430023E785 /* card */,
 				AFE190E82190296D0023E785 /* otp */,
-				AC16D72621CA35AD0094FBED /* passwordhint */,
 				AFAD2303219092EA00EC00CB /* selectbank */,
 				ACAAD86121AE8EDF007266F4 /* settingsrows */,
 			);
@@ -1519,7 +1469,6 @@
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */,
 				AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */,
-				AC04FAAE21C14D4500A41D9D /* forget-password.gif in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
@@ -1532,10 +1481,8 @@
 				AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
-				AC353B1C21BFCB5300B80412 /* security.gif in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
-				AC16D72821CA35CA0094FBED /* PasswordHintTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
@@ -1553,7 +1500,6 @@
 				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
-				AC353B1821BFCB4200B80412 /* no-internet.gif in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */,
@@ -1630,7 +1576,6 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -1660,7 +1605,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -1726,7 +1670,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1790,14 +1734,12 @@
 				AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */,
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
 				AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */,
-				AC16D72421CA33410094FBED /* PasswordHintTableAdapter.swift in Sources */,
 				AFBFE17321F5DEAB00FDAE4A /* ImportTokenPresenter.swift in Sources */,
 				AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */,
 				ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */,
 				ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */,
 				AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */,
 				AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */,
-				AC16D72521CA33410094FBED /* PasswordHintTableViewCell.swift in Sources */,
 				AC16D70721CA31CA0094FBED /* AuthenticationPasswordContractor.swift in Sources */,
 				AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */,
 				AC16D72A21CA36220094FBED /* CryptoUtil.swift in Sources */,

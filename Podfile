@@ -17,7 +17,6 @@ target 'MobileToken' do
     pod 'CountryPickerView', '~> 2.2.0'
     pod 'IQKeyboardManager', '~> 6.0.4'
     pod 'Onboard', '~> 2.3.3'
-    pod 'SwiftyGif', '~> 4.2.0'
     pod 'XLActionController', '~> 4.1.0'
     pod 'XLActionController/Spotify'
     pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.4.0'

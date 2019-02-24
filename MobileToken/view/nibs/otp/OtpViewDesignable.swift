@@ -53,7 +53,7 @@ class OtpViewDesignable: UIView {
         btCopy.layer.masksToBounds = true
         btCopy.layer.cornerRadius = 5
         vProgress.progressViewStyle = .bar
-        lbOtp.font = R.font.iranSansMobileFaNum(size: 24)
+        lbOtp.font = R.font.iranSansMobileFaNum(size: 22)
         btCopy.layer.shadowPath = UIBezierPath(roundedRect: btCopy.bounds, cornerRadius: 5).cgPath
         btCopy.layer.shadowRadius = 3
         btCopy.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

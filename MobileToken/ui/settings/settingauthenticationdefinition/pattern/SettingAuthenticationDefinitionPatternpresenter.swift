@@ -1,9 +1,12 @@
 import Foundation
+import RealmSwift
+
 class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefinitionPatternPresenterProtocol {
     
 
     var firstAttemptPattern: String?
     var secondAttemptPattern:String?
+    var authentication: Authentication?
     unowned let authenticationDefinitionPatternView: SettingAuthenticationDefinitionPatternViewProtocol
     
     required init(authenticationDefinitionPatternView: SettingAuthenticationDefinitionPatternViewProtocol) {
@@ -44,10 +47,27 @@ class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefi
             } else {
                 UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
                 //self!.authenticationDefinitionPatternView.navigateToProvisioning()
-                
+                self!.createTempDB(credential: credential)
                 AuthenticationPatternPresenter.initScreenLocker()
             }
         }
         authenticationRestRepository.update(authentication, onDone: onDataResponse)
+    }
+    
+    func createTempDB(credential: String) {
+        var config = Realm.Configuration()
+        config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("tempt.realm")
+        let newKey = CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication!.salt!.bytes)?.toHexString()
+        let newKeyData = newKey!.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        print("keyTempt\(newKeyData!.toHexString())")
+        addSensitiveAgain(newKey: newKey!)
+    }
+    
+    func addSensitiveAgain(newKey: String) {
+        autoreleasepool {
+            RealmConfiguration.sensitiveDataEncryptionKey = newKey
+            let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+            try! realm.writeCopy(toFile: RealmConfiguration.sensitiveDataConfiguration().fileURL!, encryptionKey: RealmConfiguration.sensitiveDataConfiguration().encryptionKey)
+        }
     }
 }
