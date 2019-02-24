@@ -30,7 +30,6 @@
 		AC16D71D21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71A21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift */; };
 		AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71B21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift */; };
 		AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
-		AC16D72821CA35CA0094FBED /* PasswordHintTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC16D72721CA35CA0094FBED /* PasswordHintTableViewCell.xib */; };
 		AC16D72A21CA36220094FBED /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72921CA36220094FBED /* CryptoUtil.swift */; };
 		AC16D72C21CA38550094FBED /* ScreenLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72B21CA38550094FBED /* ScreenLocker.swift */; };
 		AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */; };
@@ -231,7 +230,6 @@
 		AC16D71A21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPaswordContractor.swift; sourceTree = "<group>"; };
 		AC16D71B21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPasswordPresenter.swift; sourceTree = "<group>"; };
 		AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
-		AC16D72721CA35CA0094FBED /* PasswordHintTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PasswordHintTableViewCell.xib; path = passwordhint/PasswordHintTableViewCell.xib; sourceTree = "<group>"; };
 		AC16D72921CA36220094FBED /* CryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
 		AC16D72B21CA38550094FBED /* ScreenLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLocker.swift; sourceTree = "<group>"; };
 		AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmConfiguration copy.swift"; sourceTree = "<group>"; };
@@ -463,14 +461,6 @@
 				9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AC16D72621CA35AD0094FBED /* passwordhint */ = {
-			isa = PBXGroup;
-			children = (
-				AC16D72721CA35CA0094FBED /* PasswordHintTableViewCell.xib */,
-			);
-			name = passwordhint;
 			sourceTree = "<group>";
 		};
 		AC2676BA21B52B6900524636 /* framework */ = {
@@ -1168,7 +1158,6 @@
 				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
 				AFE190E7219029430023E785 /* card */,
 				AFE190E82190296D0023E785 /* otp */,
-				AC16D72621CA35AD0094FBED /* passwordhint */,
 				AFAD2303219092EA00EC00CB /* selectbank */,
 				ACAAD86121AE8EDF007266F4 /* settingsrows */,
 			);
@@ -1494,7 +1483,6 @@
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
-				AC16D72821CA35CA0094FBED /* PasswordHintTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,
 				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
@@ -1588,7 +1576,6 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -1618,7 +1605,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -1684,7 +1670,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

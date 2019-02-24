@@ -47,7 +47,7 @@ class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefi
             } else {
                 UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
                 //self!.authenticationDefinitionPatternView.navigateToProvisioning()
-                
+                self!.createTempDB(credential: credential)
                 AuthenticationPatternPresenter.initScreenLocker()
             }
         }
