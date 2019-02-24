@@ -44,6 +44,7 @@ class ScreenLocker {
     }
     
     func lockScreen() {
+        UserDefaults.standard.set(true, forKey: "locked")
         let vc = R.storyboard.authentication.authenticationViewController()
         UIApplication.shared.keyWindow?.rootViewController = vc
     }
