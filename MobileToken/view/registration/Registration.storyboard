@@ -30,7 +30,7 @@
             <objects>
                 <navigationController storyboardIdentifier="registrationMain" id="YO5-0U-gs9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Tj-D3-wN4">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -279,7 +279,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="کد فعال سازی" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
                                                 <rect key="frame" x="2.5" y="5" width="254" height="35"/>
-                                                <color key="backgroundColor" name="primary"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
                                                 <color key="tintColor" name="buttonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="rG8-s9-F8q"/>

@@ -11,9 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="IRANSansMobile-Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
-        </array>
         <array key="IRANSansMobile.ttf">
             <string>IRANSansMobile</string>
         </array>
@@ -28,17 +25,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockScreen" translatesAutoresizingMaskIntoConstraints="NO" id="7jF-Jt-TDq">
-                                <rect key="frame" x="62" y="77" width="196" height="63"/>
+                                <rect key="frame" x="60" y="130" width="200" height="200"/>
                                 <color key="backgroundColor" name="primary"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="غیر قابل دسترس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-Yc-jkD" userLabel="labelTitle">
-                                <rect key="frame" x="108.5" y="334" width="103" height="26"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                <color key="textColor" name="buttonColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="برنامه شما به دلایل امنیتی قفل شده است .لطفا به بانک خود مراجعه فرمایید" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeP-ZH-VA1" userLabel="textViewDescription">
-                                <rect key="frame" x="58" y="380" width="204" height="80"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="برنامه شما به دلایل امنیتی قفل شده است. لطفا به بانک خود مراجعه فرمایید." textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeP-ZH-VA1" userLabel="textViewDescription">
+                                <rect key="frame" x="16" y="350" width="288" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CXf-iC-JqG"/>
                                 </constraints>
@@ -49,16 +40,12 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="ZeP-ZH-VA1" firstAttribute="leading" secondItem="Hma-Dn-SG4" secondAttribute="leading" constant="58" id="6Sd-6u-HaJ"/>
+                            <constraint firstItem="ZeP-ZH-VA1" firstAttribute="leading" secondItem="Hma-Dn-SG4" secondAttribute="leading" constant="16" id="6Sd-6u-HaJ"/>
+                            <constraint firstItem="7jF-Jt-TDq" firstAttribute="centerX" secondItem="Hma-Dn-SG4" secondAttribute="centerX" id="ACR-wf-Gpr"/>
                             <constraint firstItem="ZeP-ZH-VA1" firstAttribute="centerX" secondItem="Hma-Dn-SG4" secondAttribute="centerX" id="RLb-ub-PrU"/>
-                            <constraint firstItem="Hma-Dn-SG4" firstAttribute="trailing" secondItem="ZeP-ZH-VA1" secondAttribute="trailing" constant="58" id="Tb5-8R-PLC"/>
-                            <constraint firstItem="7jF-Jt-TDq" firstAttribute="leading" secondItem="Hma-Dn-SG4" secondAttribute="leading" constant="62" id="Ydr-uC-PHq"/>
-                            <constraint firstItem="Hma-Dn-SG4" firstAttribute="bottom" secondItem="ZeP-ZH-VA1" secondAttribute="bottom" constant="20" id="a52-4f-pom"/>
-                            <constraint firstItem="7jF-Jt-TDq" firstAttribute="top" secondItem="Hma-Dn-SG4" secondAttribute="top" constant="57" id="aVa-1n-K9a"/>
-                            <constraint firstItem="TX0-Yc-jkD" firstAttribute="centerX" secondItem="Hma-Dn-SG4" secondAttribute="centerX" id="aWH-rY-CbT"/>
-                            <constraint firstItem="Hma-Dn-SG4" firstAttribute="bottom" secondItem="7jF-Jt-TDq" secondAttribute="bottom" constant="340" id="gf0-1H-jCT"/>
-                            <constraint firstItem="TX0-Yc-jkD" firstAttribute="bottom" secondItem="ZeP-ZH-VA1" secondAttribute="top" constant="-20" id="jeH-2N-YXH"/>
-                            <constraint firstItem="Hma-Dn-SG4" firstAttribute="trailing" secondItem="7jF-Jt-TDq" secondAttribute="trailing" constant="62" id="wCO-O6-Cf4"/>
+                            <constraint firstItem="ZeP-ZH-VA1" firstAttribute="top" secondItem="7jF-Jt-TDq" secondAttribute="bottom" constant="20" id="SBd-JC-cEV"/>
+                            <constraint firstItem="Hma-Dn-SG4" firstAttribute="trailing" secondItem="ZeP-ZH-VA1" secondAttribute="trailing" constant="16" id="Tb5-8R-PLC"/>
+                            <constraint firstItem="7jF-Jt-TDq" firstAttribute="centerY" secondItem="Hma-Dn-SG4" secondAttribute="centerY" constant="-20" id="cgI-kM-F81"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hma-Dn-SG4"/>
                     </view>
@@ -73,12 +60,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lockScreen" width="79" height="105"/>
+        <image name="lockScreen" width="200" height="200"/>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
