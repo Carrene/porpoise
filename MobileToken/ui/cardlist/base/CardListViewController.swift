@@ -141,7 +141,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteTokensVC.setTokenList(card:card)
         deleteTokensAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
-        dialogAppearance.backgroundColor = R.color.primaryDark()
+        dialogAppearance.backgroundColor = R.color.primary()
         dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         dialogAppearance.titleColor = R.color.buttonColor()
         
@@ -150,7 +150,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         containerAppearance.cornerRadius = 10
         
         let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
-            print("You canceled the dialog.")
+            
         }
         
         let saveButton = DefaultButton(title: R.string.localizable.ash_delete_token(), dismissOnTap: true) {
@@ -164,7 +164,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         let defaultButtonAppearance = DefaultButton.appearance()
         defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
-        defaultButtonAppearance.titleColor = R.color.secondary()
+        defaultButtonAppearance.titleColor = R.color.primary()
+        defaultButtonAppearance.buttonColor = R.color.secondary()
         defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
         
         deleteTokensAlert.addButtons([saveButton, cancelButton])
