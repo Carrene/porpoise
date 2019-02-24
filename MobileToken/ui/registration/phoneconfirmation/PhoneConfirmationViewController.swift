@@ -26,6 +26,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
         initUIComponents()
+        initListeners()
     }
     
     func initUIComponents() {
@@ -97,7 +98,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     }
     
     @objc func dismiss(_ sender: UITapGestureRecognizer) {
-        
+        presenter?.invalidateTimer()
         navigationController?.popViewController(animated: true)
     }
     
