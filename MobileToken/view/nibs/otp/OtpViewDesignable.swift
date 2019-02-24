@@ -57,9 +57,9 @@ class OtpViewDesignable: UIView {
         btCopy.layer.shadowPath = UIBezierPath(roundedRect: btCopy.bounds, cornerRadius: 5).cgPath
         btCopy.layer.shadowRadius = 3
         btCopy.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        btCopy.layer.shadowOpacity = 0.1
+        btCopy.layer.shadowOpacity = 0.2
         btCopy.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        btCopy.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        btCopy.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
         vComponent.layer.shadowPath = UIBezierPath(roundedRect: vComponent.bounds, cornerRadius: 5).cgPath
         vComponent.layer.shadowRadius = 3
@@ -68,10 +68,8 @@ class OtpViewDesignable: UIView {
         vComponent.layer.backgroundColor = R.color.primaryLight()?.cgColor
         vComponent.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
-//        btCopy.layer.borderWidth = 0.5
-//        btCopy.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-//        vComponent.layer.borderWidth = 0.5
-//        vComponent.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+       vComponent.layer.borderWidth = 0.5
+        vComponent.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.initCopy))
         contentView.addGestureRecognizer(tap)
     }
