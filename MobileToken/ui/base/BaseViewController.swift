@@ -17,7 +17,12 @@ open class BaseViewControllerClass : UIViewController{
         guard let controller = self as? BaseViewController else {
             return
         }
+        
         controller.initUIComponents()
         controller.initListeners()
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+       
     }
 }

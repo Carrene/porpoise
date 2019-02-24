@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class ScreenLocker: NSObject{
-    
+    static var isAutoLocked = false
     static let instance : ScreenLocker = {
         
         let instance = ScreenLocker()
@@ -30,12 +30,13 @@ class ScreenLocker: NSObject{
         
         if(self.timer != nil){
             self.timer.invalidate()
+            self.timer = nil
             lockScreen()
         }
     }
     
     func lockScreen() {
-        UserDefaults.standard.set(true, forKey: "locked")
+        ScreenLocker.isAutoLocked = true
         let vc = R.storyboard.authentication.authenticationViewController()
         UIApplication.shared.keyWindow?.rootViewController = vc
     }

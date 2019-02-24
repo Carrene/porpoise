@@ -70,8 +70,8 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
     }
     
     static func initScreenLocker() {
-//        let setting = AuthenticationPatternPresenter.getSetting()
-        ScreenLocker.instance._init(time: 60)
+        let setting = AuthenticationPatternPresenter.getSetting()
+        ScreenLocker.instance._init(time: setting.lockTimer)
         ScreenLocker.instance.start()
     }
     
