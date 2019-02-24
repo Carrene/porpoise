@@ -1,9 +1,6 @@
-
-
 import Foundation
 import UIKit
 import Onboard
-import SwiftyGif
 
 class IntroViewController {
     
@@ -53,8 +50,6 @@ class IntroViewController {
                 pages[0].iconImageView.image = R.image.noInternet()
                 pages[0].iconHeight = 200
                 pages[0].iconWidth = 200
-                //pages[0].topPadding = 150
-                //pages[0].underIconPadding = 70
                 
             case 2:
                 pages[2].iconImageView.image = R.image.forgetPassword()
