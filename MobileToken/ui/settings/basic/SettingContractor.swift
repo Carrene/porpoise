@@ -1,7 +1,7 @@
 import Foundation
 
 protocol SettingViewProtocol : class {
-    func getSettingMediator(settingMediator:SettingMediator)
+    func setSettingMediator(settingMediator:SettingMediator)
 }
 
 protocol SettingPresenterProtocol {

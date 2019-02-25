@@ -4,7 +4,7 @@ import UIKit
 protocol SettingsTableAdapterProtocol {
     func changeAuthentication()
     func selectedSegue(identifier:String)
-    func updateLockTimer(lockTimer:Int)
+    func updateLockTimer(setting:Setting)
 }
 
 class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource,LockScreenTimeSettingTableViewCellProtocol {
@@ -12,7 +12,6 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     var settingTableAdapterProtocol : SettingsTableAdapterProtocol?
     var sender:SettingsViewController?
     var settingMediator : SettingMediator?
-    var lockTimer:Int?
     
     func setDelegate(settingTableAdapterProtocol:SettingsTableAdapterProtocol) {
         self.settingTableAdapterProtocol = settingTableAdapterProtocol
@@ -31,59 +30,41 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     }
     
     func updateLockTimer(lockTimer: Int) {
-        self.lockTimer = lockTimer
-        self.settingTableAdapterProtocol?.updateLockTimer(lockTimer: lockTimer)
+        self.settingMediator?.getSetting().lockTimer = lockTimer
+        self.settingTableAdapterProtocol?.updateLockTimer(setting: (self.settingMediator?.getSetting())!)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell.selectionStyle = .none
         switch indexPath.row {
         case 0:
-            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
-            (cell as! LockScreenTimeSettingTableViewCell).setDelegate(lockScreenTimeProtocol: self)
-            
-            if let lockTimer = settingMediator?.getSetting().lockTimer {
-                
-                (cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = " \(lockTimer) " + R.string.localizable.lb_seconds()
-                
-                for index in (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime.indices {
-                    let button  = (cell as! LockScreenTimeSettingTableViewCell).collectionButtonsTime[index]
-                    button.isSelected = false
-                    if button.currentTitle == "\(lockTimer)" {
-                        (cell as! LockScreenTimeSettingTableViewCell).setSelectedIndex(selectedIndex: index)
-                        button.isSelected = true
-                        break
-                    }
-                }
-                
-            } else {
-                //(cell as! LockScreenTimeSettingTableViewCell).labelSecond.text = "60"
-            }
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier, for: indexPath) as! LockScreenTimeSettingTableViewCell
+            cell.setDelegate(lockScreenTimeProtocol: self)
+            let lockTimer = settingMediator?.getSetting().lockTimer
+            cell.labelSecond.text = " \(lockTimer!) " + R.string.localizable.lb_seconds()
+            cell.selectedLockTime(timeInterval: lockTimer!)
+            return cell
         case 1:
-            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
             
             if settingMediator?.getAuthentication().AuthenticationType == "pattern" {
-                (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = R.string.localizable.lb_pattern()
+                cell.labelType.text = R.string.localizable.lb_pattern()
             } else {
-                (cell as! AuthenticationTypeSettingTableViewCell).labelType.text = R.string.localizable.lb_password()
+                cell.labelType.text = R.string.localizable.lb_password()
             }
-            
+            return cell
         case 2:
-            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
-            (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_app_guide()
-            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.help()
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            cell.labelTitle!.text = R.string.localizable.lb_app_guide()
+            cell.imageIcon.image = R.image.help()
+            return cell
         case 3:
-            cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
-            (cell as! AuthenticationTypeSettingTableViewCell).labelTitle!.text = R.string.localizable.lb_support()
-            (cell as! AuthenticationTypeSettingTableViewCell).imageIcon.image = R.image.support()
-            //cell.accessoryType = .disclosureIndicator
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            cell.labelTitle!.text = R.string.localizable.lb_support()
+            cell.imageIcon.image = R.image.support()
+            return cell
         default:
-            break
+            return UITableViewCell()
         }
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -108,5 +89,4 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToSupport.identifier)
         }
     }
-    
 }
