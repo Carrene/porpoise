@@ -10,7 +10,6 @@ protocol SettingsTableAdapterProtocol {
 class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource,LockScreenTimeSettingTableViewCellProtocol {
     
     var settingTableAdapterProtocol : SettingsTableAdapterProtocol?
-    var sender:SettingsViewController?
     var settingMediator : SettingMediator?
     
     func setDelegate(settingTableAdapterProtocol:SettingsTableAdapterProtocol) {
@@ -23,10 +22,6 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
-    }
-    
-    init(sender:SettingsViewController) {
-        self.sender = sender
     }
     
     func updateLockTimer(lockTimer: Int) {

@@ -145,6 +145,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     
     func tokenImported(card: Card) {
         self.importTokenDelegate?.importedToken(card:card)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onConfirmClicked(_ sender: Any) {

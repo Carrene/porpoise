@@ -356,7 +356,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func importedToken(card: Card) {
         updateCardList(card: card)
-        self.navigationController?.popViewController(animated: true)
+        
     }
     
     func removeTimerInstance(timer: Timer) {

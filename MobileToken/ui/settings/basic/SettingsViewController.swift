@@ -11,11 +11,12 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     override func viewDidLoad() {
         super.viewDidLoad()
         settingPresenter = SettingPresenter(settingView: self)
+        settingPresenter?.getAllDataSetting()
         getVersion()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        settingPresenter?.getAllDataSetting()
+        
     }
     
     func getVersion() {
@@ -26,7 +27,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     func initTableView(settingMediator: SettingMediator) {
         tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.authenticationTypeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier)
-        adapter = SettingsTableViewAdapter(sender: self)
+        adapter = SettingsTableViewAdapter()
         adapter!.setDelegate(settingTableAdapterProtocol: self)
         adapter?.setSettingMediator(settingMediator: settingMediator)
         tableView.delegate = adapter
