@@ -162,6 +162,7 @@
 		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
 		AFBFE16F21F457F300FDAE4A /* Base64urlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */; };
 		AFBFE17321F5DEAB00FDAE4A /* ImportTokenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */; };
+		AFC60E67222431C200F16215 /* StringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC60E66222431C200F16215 /* StringSeparator.swift */; };
 		AFDD174821EDFE3200C975CD /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
 		AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
@@ -378,6 +379,7 @@
 		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64urlEncoded.swift; sourceTree = "<group>"; };
 		AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportTokenPresenter.swift; sourceTree = "<group>"; };
+		AFC60E66222431C200F16215 /* StringSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSeparator.swift; sourceTree = "<group>"; };
 		AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenContractor.swift; sourceTree = "<group>"; };
 		AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileToken.entitlements; sourceTree = "<group>"; };
 		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
@@ -1182,6 +1184,14 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		AFC60E652224316B00F16215 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				AFC60E66222431C200F16215 /* StringSeparator.swift */,
+			);
+			path = string;
+			sourceTree = "<group>";
+		};
 		AFE190E7219029430023E785 /* card */ = {
 			isa = PBXGroup;
 			children = (
@@ -1213,6 +1223,7 @@
 		AFE81B0B2196CCDA00AA0AF2 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AFC60E652224316B00F16215 /* string */,
 				AF9F2194220AFD24005088B9 /* array */,
 				AFBFE16D21F457B400FDAE4A /* data */,
 				AFE81B222196D4D400AA0AF2 /* uicolor */,
@@ -1765,6 +1776,7 @@
 				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
 				AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */,
+				AFC60E67222431C200F16215 /* StringSeparator.swift in Sources */,
 				AC5BAB6C221D67A7003F3BE6 /* SupportTableViewAdapter.swift in Sources */,
 				AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AF246AA1219AB17F00C44E4B /* BankRepository.swift in Sources */,

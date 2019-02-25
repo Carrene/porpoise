@@ -145,7 +145,9 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func generateOtp(token: Token) -> String{
         var otp = token.generateTotp()
-        otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        print(otp)
+//        otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        otp = otp.separate()
         print("generate "+otp)
         return otp
     }
