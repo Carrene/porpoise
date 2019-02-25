@@ -21,6 +21,7 @@
 "sb_server_error" = "خطای سرور";
 "sb_password_copied" = "پسورد کپی شد";
 "sb_check_your_input" = "ورودی خود را کنترل کنید";
+"sb_token_added" = "رمز با موفقیت اضافه شد";
 
 "sb_tokenimport_invalidkey" = "کلید اشتباه است";
 "sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است";
@@ -50,7 +51,7 @@
 "lb_password" = "رمز";
 "lb_cardName" = "نام کارت";
 "lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید";
-"lb_desired_card_name" = "  نام پیشنهادی کارت  ";
+"lb_desired_card_name" = "نام پیشنهادی کارت  ";
 "lb_are_you_sure" = "آیا مطمئن هستید؟";
 "everywhere_firstpassword" = "رمز اول";
 "everywhere_secondpassword" = "رمز دوم";

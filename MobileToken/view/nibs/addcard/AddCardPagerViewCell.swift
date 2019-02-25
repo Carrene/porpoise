@@ -46,7 +46,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.labelBottomTitle.text = R.string.localizable.lb_add_new_bank()
         viewCard.stackViewCardNumber.isHidden = true
         
-        textFieldCardName.layer.cornerRadius = 10
+        textFieldCardName.layer.cornerRadius = 5
         textFieldCardName.layer.borderColor = R.color.buttonColor()!.cgColor
         textFieldCardName.layer.borderWidth = 2
         textFieldCardName.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),

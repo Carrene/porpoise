@@ -45,6 +45,7 @@
                                 <constraint firstAttribute="height" constant="40" id="MTV-NU-ESx"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="حذف رمز اول کارت">
                                 <color key="titleColor" name="secondary"/>
                             </state>
@@ -59,6 +60,7 @@
                                 <constraint firstAttribute="height" constant="40" id="cEa-Qd-pg3"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                            <color key="tintColor" name="primaryLight"/>
                             <state key="normal" title="حذف رمز دوم کارت">
                                 <color key="titleColor" name="secondary"/>
                             </state>

@@ -58,7 +58,6 @@ class OtpViewDesignable: UIView {
         btCopy.layer.shadowRadius = 3
         btCopy.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         btCopy.layer.shadowOpacity = 0.2
-        btCopy.layer.backgroundColor = R.color.primaryLight()?.cgColor
         btCopy.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
         vComponent.layer.shadowPath = UIBezierPath(roundedRect: vComponent.bounds, cornerRadius: 5).cgPath
