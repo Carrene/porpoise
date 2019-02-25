@@ -51,7 +51,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Dp-gEk" userLabel="buttonCall">
                                 <rect key="frame" x="16" y="14.5" width="43" height="42.5"/>
                                 <color key="backgroundColor" red="0.30426183342933655" green="0.16530811786651611" blue="0.63260734081268311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="html_copy.png"/>
+                                <state key="normal" image="phone"/>
                                 <connections>
                                     <action selector="onButtonCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KdP-cY-qkz"/>
                                 </connections>
@@ -94,7 +94,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="html_copy.png" width="15" height="18"/>
+        <image name="phone" width="18" height="18"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
