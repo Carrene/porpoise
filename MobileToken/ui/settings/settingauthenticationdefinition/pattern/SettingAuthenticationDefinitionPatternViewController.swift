@@ -59,5 +59,9 @@ class SettingAuthenticationDefinitionPatternViewController: UIViewController, Se
 
     }
     
+    func temptDBCreated() {
+        authenticationDefinitionDelegate?.temptDBCreated()
+    }
+    
 }
 

@@ -58,5 +58,11 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
         navigationItem.backBarButtonItem = backItem
     }
     
+    func temptDBCreated() {
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+
+        
+    }
+    
 }
 

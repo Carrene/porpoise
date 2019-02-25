@@ -8,6 +8,8 @@ class RealmConfiguration {
     
     static var sensitiveDataEncryptionKey = "hamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhame"
 
+    static var teptDataEncryptionKey = "hamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhame"
+    
     public static var defaultDataConfiguration = Realm.Configuration.defaultConfiguration
     
     
@@ -22,6 +24,14 @@ class RealmConfiguration {
         var config = Realm.Configuration()
         config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("sensitive.realm")
         config.encryptionKey = sensitiveDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        print("keyyy"+(config.encryptionKey?.toHexString())!)
+        return config
+    }
+    
+    static func temptDataConfiguration() -> Realm.Configuration {
+        var config = Realm.Configuration()
+        config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("tempt.realm")
+        config.encryptionKey = teptDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
         print("keyyy"+(config.encryptionKey?.toHexString())!)
         return config
     }
