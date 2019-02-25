@@ -45,23 +45,25 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
         labelChooseYourBank.font = R.font.iranSansMobile(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 12)
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 12)
+        
         viewCountry.layer.cornerRadius = 5
         viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCountry.layer.borderWidth = 1
+        
         viewPhone.layer.borderWidth = 1
+        viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewPhone.layer.cornerRadius = 5
         
         
-        viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 5).cgPath
-        viewTextfields.layer.shadowRadius = 5
+        viewTextfields.layer.cornerRadius = 10
+        viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
+        viewTextfields.layer.shadowRadius = 3
         viewTextfields.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewTextfields.layer.shadowOpacity = 0.8
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
-        viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        viewTextfields.layer.cornerRadius = 10
-        textFieldPhoneNumber.delegate = self
-        viewPhone.layer.cornerRadius = 5
+        viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         
+        textFieldPhoneNumber.delegate = self
         inputMask()
     }
     
