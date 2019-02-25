@@ -14,27 +14,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BankCardPagerViewCell" id="gTV-IL-0wX" userLabel="BankCardPagerViewCell" customClass="BankCardPagerViewCell" customModule="MobileToken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="251"/>
+            <rect key="frame" x="0.0" y="0.0" width="290" height="281"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="251"/>
+                <rect key="frame" x="0.0" y="0.0" width="290" height="281"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
-                        <rect key="frame" x="10" y="10" width="280" height="231"/>
+                        <rect key="frame" x="10" y="10" width="270" height="261"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-DL-HCS" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="103"/>
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="151"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-dB-g5S" userLabel="viewFirstOtp">
-                                <rect key="frame" x="20" y="119" width="240" height="40"/>
+                                <rect key="frame" x="16" y="161" width="238" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VzP-gL-DCt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSQ-ih-8sx" userLabel="viewSecondOtp">
-                                <rect key="frame" x="20" y="175" width="240" height="40"/>
+                                <rect key="frame" x="16" y="211" width="238" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Q8j-dq-QCZ"/>
                                 </constraints>
@@ -42,29 +42,23 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="top" secondItem="oxa-dB-g5S" secondAttribute="bottom" constant="16" id="4Ni-ND-Sfo"/>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="top" secondItem="oxa-dB-g5S" secondAttribute="bottom" constant="10" id="4Ni-ND-Sfo"/>
                             <constraint firstAttribute="right" secondItem="Cfi-DL-HCS" secondAttribute="right" id="51m-s9-pAt"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="width" secondItem="k8F-ES-KrH" secondAttribute="width" id="6dx-TP-Zsw"/>
-                            <constraint firstItem="oxa-dB-g5S" firstAttribute="top" secondItem="Cfi-DL-HCS" secondAttribute="bottom" constant="16" id="7vB-nZ-2Am"/>
-                            <constraint firstItem="oxa-dB-g5S" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="20" id="83a-rv-sEc"/>
+                            <constraint firstItem="oxa-dB-g5S" firstAttribute="top" secondItem="Cfi-DL-HCS" secondAttribute="bottom" constant="10" id="7vB-nZ-2Am"/>
+                            <constraint firstItem="oxa-dB-g5S" firstAttribute="leading" secondItem="k8F-ES-KrH" secondAttribute="leading" constant="16" id="83a-rv-sEc"/>
                             <constraint firstItem="cSQ-ih-8sx" firstAttribute="height" secondItem="oxa-dB-g5S" secondAttribute="height" id="TiY-dB-dLZ"/>
-                            <constraint firstAttribute="trailing" secondItem="oxa-dB-g5S" secondAttribute="trailing" constant="20" id="VJP-wu-rmq"/>
+                            <constraint firstAttribute="trailing" secondItem="oxa-dB-g5S" secondAttribute="trailing" constant="16" id="VJP-wu-rmq"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="top" secondItem="k8F-ES-KrH" secondAttribute="top" id="awR-pW-kEN"/>
-                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="left" secondItem="k8F-ES-KrH" secondAttribute="left" constant="20" id="bkG-1S-qLy"/>
-                            <constraint firstAttribute="bottom" secondItem="cSQ-ih-8sx" secondAttribute="bottom" constant="16" id="dZn-pG-cme"/>
-                            <constraint firstItem="Cfi-DL-HCS" firstAttribute="height" secondItem="k8F-ES-KrH" secondAttribute="height" multiplier="0.5" id="fXh-GE-1nf"/>
+                            <constraint firstItem="cSQ-ih-8sx" firstAttribute="left" secondItem="k8F-ES-KrH" secondAttribute="left" constant="16" id="bkG-1S-qLy"/>
+                            <constraint firstAttribute="bottom" secondItem="cSQ-ih-8sx" secondAttribute="bottom" constant="10" id="dZn-pG-cme"/>
                             <constraint firstItem="Cfi-DL-HCS" firstAttribute="left" secondItem="k8F-ES-KrH" secondAttribute="left" id="gyp-kA-CiJ"/>
-                            <constraint firstAttribute="right" secondItem="cSQ-ih-8sx" secondAttribute="right" constant="20" id="mou-QN-wiG"/>
+                            <constraint firstAttribute="right" secondItem="cSQ-ih-8sx" secondAttribute="right" constant="16" id="mou-QN-wiG"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="fXh-GE-1nf"/>
-                            </mask>
-                        </variation>
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" name="primaryLight"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="k8F-ES-KrH" firstAttribute="left" secondItem="gTV-IL-0wX" secondAttribute="left" constant="10" id="KT1-gv-zda"/>
                 <constraint firstAttribute="bottom" secondItem="k8F-ES-KrH" secondAttribute="bottom" constant="10" id="O0M-Ev-59q"/>
@@ -72,14 +66,14 @@
                 <constraint firstItem="k8F-ES-KrH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="ev2-dg-QKG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="289" height="293"/>
+            <size key="customSize" width="279" height="303"/>
             <connections>
                 <outlet property="vCard" destination="Cfi-DL-HCS" id="QrG-4Q-v1p"/>
                 <outlet property="viewBankCard" destination="k8F-ES-KrH" id="PAO-2h-ocq"/>
                 <outlet property="viewFirstOtp" destination="oxa-dB-g5S" id="qtj-KC-yWL"/>
                 <outlet property="viewSecondOtp" destination="cSQ-ih-8sx" id="Ytv-t0-U3l"/>
             </connections>
-            <point key="canvasLocation" x="-80.799999999999997" y="65.217391304347828"/>
+            <point key="canvasLocation" x="-137.59999999999999" y="69.715142428785612"/>
         </collectionViewCell>
     </objects>
     <resources>
