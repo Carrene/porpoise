@@ -39,7 +39,7 @@
                             </constraints>
                             <color key="textColor" name="buttonColor"/>
                             <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="به کارت خود نام دلخواه اختصاص دهید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXW-RY-SWF">
                             <rect key="frame" x="120" y="61" width="185.5" height="19.5"/>
