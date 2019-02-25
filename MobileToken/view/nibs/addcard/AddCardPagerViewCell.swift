@@ -14,6 +14,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
     private var addCardPagerViewCellProtocol : AddCardPagerViewCellProtocol?
     private var bank:Bank?
     @IBOutlet var buttonAddCard: UIButton!
+    @IBOutlet var labelTextfield: UILabel!
     
     
     override func awakeFromNib() {
@@ -21,7 +22,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.layer.cornerRadius = 10
         buttonAddCard.layer.cornerRadius = 10
         buttonAddCard.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
+        labelTextfield.font = R.font.iranSansMobile(size: 12)
         
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.shadowPath = UIBezierPath(roundedRect: viewAddCard.bounds, cornerRadius: 10).cgPath
@@ -33,7 +34,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         
         viewCard.layer.cornerRadius = 10
         viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
-        viewCard.layer.shadowRadius = 3
+        viewCard.layer.shadowRadius = 10
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewCard.layer.shadowOpacity = 0.2
         viewCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
@@ -46,8 +47,8 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.stackViewCardNumber.isHidden = true
         
         textFieldCardName.layer.cornerRadius = 10
-        textFieldCardName.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        textFieldCardName.layer.borderWidth = 1
+        textFieldCardName.layer.borderColor = R.color.buttonColor()!.cgColor
+        textFieldCardName.layer.borderWidth = 2
         textFieldCardName.attributedPlaceholder = NSAttributedString(string: R.string.localizable.lb_desired_card_name(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         

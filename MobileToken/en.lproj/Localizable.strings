@@ -50,7 +50,7 @@
 "lb_password" = "رمز";
 "lb_cardName" = "نام کارت";
 "lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید";
-"lb_desired_card_name" = "نام پیشنهادی کارت";
+"lb_desired_card_name" = "  نام پیشنهادی کارت  ";
 "lb_are_you_sure" = "آیا مطمئن هستید؟";
 "everywhere_firstpassword" = "رمز اول";
 "everywhere_secondpassword" = "رمز دوم";
