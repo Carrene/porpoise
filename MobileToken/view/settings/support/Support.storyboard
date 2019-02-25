@@ -35,7 +35,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="پشتیبانی بانک ها" id="YvJ-X1-u7y">
                         <barButtonItem key="backBarButtonItem" title=" " id="IKv-w8-AwH">
-                            <color key="tintColor" name="secondary"/>
+                            <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -48,11 +48,11 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="buttonColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="secondary">
-            <color red="0.11372549019607843" green="1" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="primary">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

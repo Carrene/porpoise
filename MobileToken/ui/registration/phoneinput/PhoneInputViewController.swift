@@ -18,6 +18,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var labelPhone: UILabel!
     @IBOutlet var viewCountry: UIView!
     @IBOutlet var confirmBarButton: UIBarButtonItem!
+    @IBOutlet var viewLine: UIView!
     
     
     private var inputPhone : String!
@@ -108,31 +109,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.inputPhone = value
     }
     
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        if string.hasPrefix("0") && string.count == 0{
-//            textFieldPhoneNumber.text?.remove(at: (textFieldPhoneNumber.text?.startIndex)!)
-//            return false
-//        }
-//        else {
-//            return true
-//        }
-//    }
-    
-    
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
     }
     
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
-//        if inputPhone != nil && inputPhone.count > 0 {
-//            if selectedBank != nil {
-//                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
-//            }
-//            else {
-//                selectedBank = banks.first
-//                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
-//            }
-//        }
+
     }
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
@@ -194,9 +176,11 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         labelEnterYourPhone.isHidden = true
         viewCountry.isHidden = true
         confirmBarButton.isEnabled = false
+        viewLine.isHidden = false
     }
     
     func showPhoneInput() {
+        viewLine.isHidden = true
         labelAlreadyRegistered.isHidden = true
         labelPhone.isHidden = true
         viewPhone.isHidden = false

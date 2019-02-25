@@ -63,7 +63,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ytF-C4-ckT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="روش احراز هویت" id="eiM-J4-X6A"/>
+                    <navigationItem key="navigationItem" title="روش احراز هویت" id="eiM-J4-X6A">
+                        <barButtonItem key="backBarButtonItem" title="  " id="ULQ-dM-OJz">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="authenticationTypeContainer" destination="kMi-2b-OMT" id="mDC-eB-ddZ"/>
                         <outlet property="scAuthenticationType" destination="Hmm-D3-AaW" id="zXt-Kb-DPs"/>
