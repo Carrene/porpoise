@@ -20,20 +20,17 @@ class DeleteTokenAlertViewController: BaseViewController {
         buttonFirstToken.layer.shadowRadius = 3
         buttonFirstToken.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         buttonFirstToken.layer.shadowOpacity = 0.2
-        buttonFirstToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
         buttonFirstToken.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         buttonFirstToken.layer.borderWidth = 2
         buttonFirstToken.layer.borderColor = R.color.primary()?.cgColor
-        
         
         buttonSecondToken.layer.cornerRadius = 10
         buttonSecondToken.layer.shadowPath = UIBezierPath(roundedRect: buttonSecondToken.bounds, cornerRadius: 10).cgPath
         buttonSecondToken.layer.shadowRadius = 3
         buttonSecondToken.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         buttonSecondToken.layer.shadowOpacity = 0.2
-        buttonSecondToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
         buttonSecondToken.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
-        buttonSecondToken.layer.borderWidth = 1
+        buttonSecondToken.layer.borderWidth = 2
         buttonSecondToken.layer.borderColor = R.color.primary()?.cgColor
         
         
@@ -61,14 +58,12 @@ class DeleteTokenAlertViewController: BaseViewController {
         if !(buttonFirstToken?.isSelected)! {
             buttonFirstToken?.isSelected = true
             buttonFirstToken.layer.borderColor = R.color.secondary()?.cgColor
-            buttonFirstToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
-            buttonFirstToken.setTitleColor(R.color.primary(), for: .normal)
+            buttonFirstToken.setTitleColor(R.color.buttonColor(), for: .selected)
         }
         else {
             buttonFirstToken?.isSelected = false
             buttonFirstToken.layer.borderColor = R.color.primaryLight()?.cgColor
-            buttonFirstToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
-            buttonFirstToken.setTitleColor(R.color.secondary(), for: .normal)
+            buttonFirstToken.setTitleColor(R.color.buttonColor(), for: .normal)
         }
         
     }
@@ -77,13 +72,12 @@ class DeleteTokenAlertViewController: BaseViewController {
         if !(buttonSecondToken?.isSelected)! {
             buttonSecondToken?.isSelected = true
             buttonSecondToken.layer.borderColor = R.color.secondary()?.cgColor
-            buttonSecondToken.setTitleColor(R.color.primary(), for: .normal)
+            buttonSecondToken.setTitleColor(R.color.buttonColor(), for: .selected)
         }
         else {
             buttonSecondToken?.isSelected = false
             buttonSecondToken.layer.borderColor = R.color.primaryLight()?.cgColor
-            buttonFirstToken.layer.backgroundColor = R.color.primaryLight()?.cgColor
-            buttonSecondToken.setTitleColor(R.color.secondary(), for: .normal)
+            buttonSecondToken.setTitleColor(R.color.buttonColor(), for: .normal)
             
         }
     }
