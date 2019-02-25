@@ -21,6 +21,7 @@
 "sb_server_error" = "خطای سرور";
 "sb_password_copied" = "پسورد کپی شد";
 "sb_check_your_input" = "ورودی خود را کنترل کنید";
+"sb_token_added" = "رمز با موفقیت اضافه شد";
 
 "sb_tokenimport_invalidkey" = "کلید اشتباه است";
 "sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است";

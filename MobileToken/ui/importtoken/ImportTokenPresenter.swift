@@ -46,10 +46,10 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             }
             else {
                 if response.value == nil {
-                    
+
                 }
                 else {
-                    SnackBarHelper.init(message: "added", color: R.color.primary()!, duration: .long).show()
+                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.buttonColor()!, duration: .short).show()
                     self?.view.tokenImported(card: card)
                 }
             }
