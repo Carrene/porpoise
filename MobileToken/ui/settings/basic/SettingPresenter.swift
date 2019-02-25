@@ -1,19 +1,16 @@
 import Foundation
 
 class SettingPresenter:SettingPresenterProtocol {
-
-    var settingMediator : SettingMediator?
+    
     unowned let settingView : SettingViewProtocol
-    var setting:Setting?
-    var authentication:Authentication?
     
     required init(settingView:SettingViewProtocol) {
         self.settingView = settingView
     }
     
     func getAllDataSetting() {
-        settingMediator = SettingMediator(setting: getSetting(), authentication: getAuthentication())
-        settingView.getSettingMediator(settingMediator: settingMediator!)
+        let settingMediator = SettingMediator(setting: getSetting(), authentication: getAuthentication())
+        settingView.setSettingMediator(settingMediator: settingMediator)
     }
     
     func updateSetting(setting: Setting) {
@@ -22,8 +19,9 @@ class SettingPresenter:SettingPresenterProtocol {
             if repoResponse.error != nil {
                 UIHelper.showFailedSnackBar()
             } else {
-                if let setting = repoResponse.value {
-                    self?.setting = setting
+                if let _ = repoResponse.value {
+                    self!.getAllDataSetting()
+                    AuthenticationPatternPresenter.initScreenLocker()
                 } else {
                     UIHelper.showFailedSnackBar()
                 }
@@ -33,13 +31,14 @@ class SettingPresenter:SettingPresenterProtocol {
     }
     
     func getAuthentication() -> Authentication{
+        var authentication: Authentication?
         let authenticationRepository = AuthenticationRealmRepository()
-        let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
+        let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = { repoResponse in
             if repoResponse.error != nil {
                 UIHelper.showFailedSnackBar()
             } else {
-                if let authentication = repoResponse.value {
-                    self?.authentication = authentication
+                if let authenticationResponse = repoResponse.value {
+                    authentication = authenticationResponse
                 } else {
                     UIHelper.showFailedSnackBar()
                 }
@@ -50,13 +49,14 @@ class SettingPresenter:SettingPresenterProtocol {
     }
     
     func getSetting() -> Setting{
+        var setting: Setting?
         let settingRepository = SettingRealmRepository()
-        let onDataResponse: ((RepositoryResponse<Setting>) -> ()) = {[weak self] repoResponse in
+        let onDataResponse: ((RepositoryResponse<Setting>) -> ()) = { repoResponse in
             if repoResponse.error != nil {
                 UIHelper.showFailedSnackBar()
             } else {
-                if let setting = repoResponse.value {
-                    self?.setting = setting
+                if let settingResponse = repoResponse.value {
+                    setting = settingResponse
                 } else {
                     UIHelper.showFailedSnackBar()
                 }
@@ -65,6 +65,4 @@ class SettingPresenter:SettingPresenterProtocol {
         settingRepository.get(onDone: onDataResponse)
         return setting!
     }
-    
-    
 }

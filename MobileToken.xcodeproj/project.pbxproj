@@ -783,14 +783,14 @@
 			path = settings;
 			sourceTree = "<group>";
 		};
-		ACAAD86121AE8EDF007266F4 /* settingsrows */ = {
+		ACAAD86121AE8EDF007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
 				AC5BAB66221D5390003F3BE6 /* support */,
 				ACAAD86721AE8F5F007266F4 /* authenticationtype */,
 				ACAAD86621AE8F36007266F4 /* lockscreentime */,
 			);
-			path = settingsrows;
+			path = settings;
 			sourceTree = "<group>";
 		};
 		ACAAD86621AE8F36007266F4 /* lockscreentime */ = {
@@ -1159,7 +1159,7 @@
 				AFE190E7219029430023E785 /* card */,
 				AFE190E82190296D0023E785 /* otp */,
 				AFAD2303219092EA00EC00CB /* selectbank */,
-				ACAAD86121AE8EDF007266F4 /* settingsrows */,
+				ACAAD86121AE8EDF007266F4 /* settings */,
 			);
 			path = nibs;
 			sourceTree = "<group>";
@@ -1670,7 +1670,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

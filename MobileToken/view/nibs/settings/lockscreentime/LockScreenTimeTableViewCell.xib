@@ -37,7 +37,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIl-pG-zsS" userLabel="viewButtons">
                                 <rect key="frame" x="15" y="56" width="345" height="78.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
                                         <rect key="frame" x="20" y="19.5" width="60" height="40"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <constraints>
@@ -52,7 +52,7 @@
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
+                                    <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
                                         <rect key="frame" x="180" y="19.5" width="60" height="40"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <constraints>
@@ -67,7 +67,7 @@
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
+                                    <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
                                         <rect key="frame" x="260" y="19.5" width="60" height="40"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <constraints>
@@ -82,7 +82,7 @@
                                             <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
+                                    <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
                                         <rect key="frame" x="100" y="19.5" width="60" height="40"/>
                                         <color key="backgroundColor" name="primaryLight"/>
                                         <constraints>

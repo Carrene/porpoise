@@ -10,13 +10,11 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     @IBOutlet var viewButtons: UIView!
     @IBOutlet var collectionButtonsTime: [UIButton]!
     @IBOutlet var labelSecond: UILabel!
-    var sender:SettingsTableViewAdapter?
     
+    var sender:SettingsTableViewAdapter?
     var lockScreenTimeProtocol:LockScreenTimeSettingTableViewCellProtocol?
-    var selectedIndex:Int?
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         viewButtons.layer.shadowPath = UIBezierPath(roundedRect: viewButtons.bounds, cornerRadius: 5).cgPath
         viewButtons.layer.shadowRadius = 3
@@ -27,7 +25,6 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
         viewButtons.layer.cornerRadius = 5
         
         for index in collectionButtonsTime.indices {
-            
             let button  = collectionButtonsTime[index]
             button.layer.cornerRadius = 10
             button.layer.shadowPath = UIBezierPath(roundedRect: button.bounds, cornerRadius: 10).cgPath
@@ -40,13 +37,6 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             button.setTitleColor(R.color.buttonColor(), for: .selected)
             button.setTitleColor(R.color.secondary(), for: .normal)
             button.tintColor = .clear
-            
-            if index == selectedIndex {
-                setSelected(button: button)
-            }
-            else {
-                setDeselect(button: button)
-            }
         }
     }
     
@@ -55,41 +45,36 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
     }
     
     func setSelectedIndex(selectedIndex:Int) {
-        self.selectedIndex = selectedIndex
         setSelected(button: collectionButtonsTime[selectedIndex])
     }
     
     private func setSelected(button:UIButton){
         labelSecond.text =  button.currentTitle! + " " + R.string.localizable.lb_seconds()
-        button.isSelected = true
         button.layer.borderColor = R.color.secondary()?.cgColor
         
     }
     
     private func setDeselect(button:UIButton){
         button.layer.borderColor = R.color.primaryLight()?.cgColor
-        button.isSelected = false
-        
     }
     
     @IBAction func onTimeButton(_ sender: UIButton) {
-        
-        for index in collectionButtonsTime.indices {
-            let button  = collectionButtonsTime[index]
-            if index == collectionButtonsTime.index(of: sender)
-            {
-                selectedIndex = index
-                setSelected(button: button)
-                lockScreenTimeProtocol?.updateLockTimer(lockTimer: Int(button.currentTitle!)!)
-            }
-            else {
-                setDeselect(button: button)
-            }
-        }
+        lockScreenTimeProtocol?.updateLockTimer(lockTimer: sender.tag)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.selectionStyle = .none
+    }
+    
+    func selectedLockTime(timeInterval: Int) {
+        for index in collectionButtonsTime.indices {
+            if timeInterval  == collectionButtonsTime[index].tag {
+                setSelected(button: collectionButtonsTime[index])
+            }
+            else {
+                setDeselect(button: collectionButtonsTime[index])
+            }
+        }
     }
 }
