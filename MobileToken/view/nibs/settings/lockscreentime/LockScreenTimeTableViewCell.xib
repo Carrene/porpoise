@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -37,84 +38,70 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIl-pG-zsS" userLabel="viewButtons">
                                 <rect key="frame" x="15" y="56" width="345" height="78.5"/>
                                 <subviews>
-                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
-                                        <rect key="frame" x="20" y="19.5" width="60" height="40"/>
-                                        <color key="backgroundColor" name="primaryLight"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-s9-Qjj">
+                                        <rect key="frame" x="15" y="19.5" width="315" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="40"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <state key="normal" title="30">
+                                                    <color key="titleColor" name="buttonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
+                                                <rect key="frame" x="84" y="0.0" width="63" height="40"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <state key="normal" title="60">
+                                                    <color key="titleColor" name="buttonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
+                                                <rect key="frame" x="168" y="0.0" width="63" height="40"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <state key="normal" title="90">
+                                                    <color key="titleColor" name="buttonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
+                                                <rect key="frame" x="252" y="0.0" width="63" height="40"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <state key="normal" title="120">
+                                                    <color key="titleColor" name="buttonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="GKj-mC-GyI"/>
-                                            <constraint firstAttribute="width" constant="60" id="gL3-R6-abk"/>
+                                            <constraint firstAttribute="height" constant="40" id="2HL-EB-bRh"/>
+                                            <constraint firstItem="QQ1-U2-y2B" firstAttribute="width" secondItem="Hfh-s9-Qjj" secondAttribute="width" multiplier="0.2" id="N9Q-jh-Ddb"/>
+                                            <constraint firstItem="KZV-oZ-w8D" firstAttribute="width" secondItem="Hfh-s9-Qjj" secondAttribute="width" multiplier="0.2" id="WT3-vM-STb"/>
+                                            <constraint firstItem="YeL-2Q-Nbb" firstAttribute="width" secondItem="Hfh-s9-Qjj" secondAttribute="width" multiplier="0.2" id="nFZ-T5-P0i"/>
+                                            <constraint firstItem="7H9-en-ngd" firstAttribute="width" secondItem="Hfh-s9-Qjj" secondAttribute="width" multiplier="0.2" id="tal-Gh-2fs"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                        <state key="normal" title="30">
-                                            <color key="titleColor" name="buttonColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
-                                        <rect key="frame" x="180" y="19.5" width="60" height="40"/>
-                                        <color key="backgroundColor" name="primaryLight"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="pjb-Mm-7W2"/>
-                                            <constraint firstAttribute="height" constant="40" id="sva-7b-mPX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                        <state key="normal" title="90">
-                                            <color key="titleColor" name="buttonColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
-                                        <rect key="frame" x="260" y="19.5" width="60" height="40"/>
-                                        <color key="backgroundColor" name="primaryLight"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="CQs-ho-qsa"/>
-                                            <constraint firstAttribute="height" constant="40" id="e7E-a0-cUt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                        <state key="normal" title="120">
-                                            <color key="titleColor" name="buttonColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
-                                        <rect key="frame" x="100" y="19.5" width="60" height="40"/>
-                                        <color key="backgroundColor" name="primaryLight"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="EVa-xR-3V5"/>
-                                            <constraint firstAttribute="height" constant="40" id="cMk-Jw-BNJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                        <state key="normal" title="60">
-                                            <color key="titleColor" name="buttonColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
-                                    <constraint firstItem="7H9-en-ngd" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="7Co-Jg-JWa"/>
-                                    <constraint firstItem="QQ1-U2-y2B" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="Ih8-3w-tiU"/>
-                                    <constraint firstItem="QQ1-U2-y2B" firstAttribute="left" secondItem="7H9-en-ngd" secondAttribute="right" constant="20" id="J5w-bE-fdr"/>
-                                    <constraint firstItem="YeL-2Q-Nbb" firstAttribute="left" secondItem="KZV-oZ-w8D" secondAttribute="right" constant="20" id="OYJ-qp-efC"/>
-                                    <constraint firstAttribute="trailing" secondItem="QQ1-U2-y2B" secondAttribute="trailing" constant="20" id="Sjz-3m-EdI"/>
-                                    <constraint firstItem="KZV-oZ-w8D" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="ayT-7Q-MfG"/>
-                                    <constraint firstItem="7H9-en-ngd" firstAttribute="left" secondItem="YeL-2Q-Nbb" secondAttribute="right" constant="20" id="hjx-HM-M5V"/>
-                                    <constraint firstItem="KZV-oZ-w8D" firstAttribute="left" secondItem="xIl-pG-zsS" secondAttribute="left" constant="20" id="hsn-fn-3jz"/>
-                                    <constraint firstItem="YeL-2Q-Nbb" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="iHQ-4g-XCy"/>
+                                    <constraint firstItem="Hfh-s9-Qjj" firstAttribute="centerY" secondItem="xIl-pG-zsS" secondAttribute="centerY" id="1qd-aa-8fg"/>
+                                    <constraint firstItem="Hfh-s9-Qjj" firstAttribute="left" secondItem="xIl-pG-zsS" secondAttribute="left" constant="15" id="3pz-dU-Y3M"/>
+                                    <constraint firstAttribute="right" secondItem="Hfh-s9-Qjj" secondAttribute="right" constant="15" id="fqh-YF-Ve7"/>
+                                    <constraint firstItem="Hfh-s9-Qjj" firstAttribute="centerX" secondItem="xIl-pG-zsS" secondAttribute="centerX" id="zrF-OO-WgC"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Sjz-3m-EdI"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ثانیه" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-RC-JwO" userLabel="labelSeconds">
                                 <rect key="frame" x="30" y="18" width="29" height="25.5"/>
