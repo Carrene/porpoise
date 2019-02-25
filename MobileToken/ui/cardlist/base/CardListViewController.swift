@@ -19,12 +19,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         super.viewDidLoad()
         initUIComponents()
         self.cardListPresenter = CardListPresenter(view: self)
-         cardListPresenter?.getBankList()
-        
+        cardListPresenter?.getBankList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       
+        fsPagerCollectionView.forEach { pagerView in
+            pagerView.reloadData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
