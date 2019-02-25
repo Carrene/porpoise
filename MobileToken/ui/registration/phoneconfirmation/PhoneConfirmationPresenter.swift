@@ -20,6 +20,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
                 let responseUser = response.value
                 user.bank?.secret = responseUser!.bank?.secret
                 self?.updateUserInRealm(user: user)
+                self?.invalidateTimer()
             case 400:
                 self?.view.showBadRequestError()
             case 801:

@@ -1,7 +1,8 @@
 import UIKit
 
-class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
+class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
    
+    @IBOutlet weak var btConfirmation: UIBarButtonItem!
     @IBOutlet var viewChangeNumber: UIView!
     @IBOutlet var textFieldCode: UITextField!
     @IBOutlet var viewCode: UIView!
@@ -24,9 +25,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     
     override func viewDidAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
+        initUIComponents()
+        initListeners()
     }
     
     func initUIComponents() {
+        btConfirmation.isEnabled = false
         viewTextfield.layer.cornerRadius = 5
         viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
         viewTextfield.layer.borderWidth = 2
@@ -63,7 +67,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     
     override func viewDidDisappear(_ animated: Bool) {
         
-        presenter?.invalidateTimer()
+//        presenter?.invalidateTimer()
     }
     
     func setData(phone:String,bank:Bank) {
@@ -94,7 +98,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     @objc func dismiss(_ sender: UITapGestureRecognizer) {
-        
+        presenter?.invalidateTimer()
         navigationController?.popViewController(animated: true)
     }
     
@@ -104,19 +108,25 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         return true
     }
     
-    @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
-        
-        if textFieldCode.text != "" {
-            //self.barButtonItemConfirm.isEnabled = true
+    @IBAction func textFieldDidChanged(_ sender: Any) {
+        if textFieldCode.text?.count == 6 {
+            btConfirmation.isEnabled = true
+            onConfirm(btConfirmation)
         }
         else {
-            //self.barButtonItemConfirm.isEnabled = false
+            
         }
+    }
+    
+    @IBAction func onTfPhoneEditDidChanged(_ sender: UITextField) {
+        
+        
     }
     
     @IBAction func onConfirm(_ sender: UIBarButtonItem) {
         let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank)
-        if textFieldCode.text != "" && self.phoneNumber != "" {
+        if textFieldCode.text?.count == 6 && self.phoneNumber != "" {
+            
             presenter?.bind(user:user)
         }
     }

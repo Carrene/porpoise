@@ -290,6 +290,7 @@
                                                 <connections>
                                                     <action selector="onDoneKeyboard:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="VzY-0p-RgX"/>
                                                     <action selector="onTfPhoneEditDidChanged:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="ZwU-6d-nKp"/>
+                                                    <action selector="textFieldDidChanged:" destination="zAA-ph-Mfk" eventType="editingChanged" id="xxG-xe-eLs"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -379,6 +380,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
+                        <outlet property="btConfirmation" destination="Hmr-eP-5ar" id="w13-Bs-Gnk"/>
                         <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
                         <outlet property="labelCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
                         <outlet property="labelEnterCode" destination="332-EN-mwW" id="XUI-I5-zmn"/>
