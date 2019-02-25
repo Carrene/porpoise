@@ -3,7 +3,7 @@ import CountryPickerView
 import IQKeyboardManager
 import InputMask
 
-class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate,MaskedTextFieldDelegateListener {
+class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate,MaskedTextFieldDelegateListener {
     
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
@@ -30,6 +30,8 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PhoneInputPresenter(view: self)
+        initUIComponents()
+        initListeners()
         initCountryPicker()
         initBankCollectionView()
         presenter.getBankList()

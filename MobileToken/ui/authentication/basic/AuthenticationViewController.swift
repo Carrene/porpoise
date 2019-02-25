@@ -48,10 +48,10 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     func navigateToCardList() {
         let appLocked = ScreenLocker.isAutoLocked
         if appLocked {
-            //self.view.isHidden = true
-            self.willMove(toParent: nil)
-            self.view.removeFromSuperview()
-            self.removeFromParent()
+            self.view.isHidden = true
+//            self.willMove(toParent: nil)
+//            self.view.removeFromSuperview()
+//            self.removeFromParent()
             ScreenLocker.isAutoLocked = false
         } else {
             performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration.identifier, sender: self)
@@ -62,11 +62,11 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     func navigateToInputPhoneNumber() {
         let appLocked  = ScreenLocker.isAutoLocked
         if appLocked {
-            //self.view.isHidden = true
-            self.willMove(toParent: nil)
-            self.view.removeFromSuperview()
-            self.removeFromParent()
-            self.navigationController?.popViewController(animated: true)
+            self.view.isHidden = true
+//            self.willMove(toParent: nil)
+//            self.view.removeFromSuperview()
+//            self.removeFromParent()
+//            self.navigationController?.popViewController(animated: true)
 
             ScreenLocker.isAutoLocked = false
         } else {
