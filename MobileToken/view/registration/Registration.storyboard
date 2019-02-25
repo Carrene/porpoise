@@ -123,7 +123,7 @@
                                                 <rect key="frame" x="50" y="2.5" width="188" height="40"/>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
@@ -286,7 +286,7 @@
                                                 </constraints>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                                                 <connections>
                                                     <action selector="onDoneKeyboard:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="VzY-0p-RgX"/>
                                                     <action selector="onTfPhoneEditDidChanged:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="ZwU-6d-nKp"/>

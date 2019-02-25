@@ -91,7 +91,7 @@
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                 <connections>
                                     <action selector="onDoneKeyboard:" destination="Ei6-jL-L9f" eventType="editingDidEnd" id="IUY-fN-DVM"/>
                                 </connections>
@@ -105,7 +105,7 @@
                                 </constraints>
                                 <color key="textColor" name="buttonColor"/>
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                 <connections>
                                     <action selector="onEditBegin:" destination="Ei6-jL-L9f" eventType="editingDidBegin" id="oLO-IX-Rnp"/>
                                     <action selector="onEndEditing:" destination="Ei6-jL-L9f" eventType="editingDidEnd" id="HAo-xq-URE"/>

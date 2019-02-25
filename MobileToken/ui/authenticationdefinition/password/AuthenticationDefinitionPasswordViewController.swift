@@ -27,10 +27,10 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         textFieldConfirmPassword.layer.cornerRadius = 5
         textFieldConfirmPassword.isUserInteractionEnabled = false
         textFieldPassword.layer.cornerRadius = 5
-        textFieldPassword.layer.borderWidth = 1
+        textFieldPassword.layer.borderWidth = 2
         textFieldPassword.layer.borderColor = R.color.buttonColor()?.cgColor
-        textFieldConfirmPassword.layer.borderWidth = 1
-        textFieldConfirmPassword.layer.borderColor = R.color.buttonColor()?.cgColor
+        textFieldConfirmPassword.layer.borderWidth = 2
+        textFieldConfirmPassword.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         textFieldPassword.becomeFirstResponder()
         labelPasswordHint.font = R.font.iranSansMobile(size: 12)
         labelSecondPassword.font = R.font.iranSansMobile(size: 12)
@@ -78,10 +78,12 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
         
         if !checkPasswordIsValid(password: textFieldPassword.text!) {
             textFieldConfirmPassword.isUserInteractionEnabled = false
+            textFieldConfirmPassword.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
             textFieldConfirmPassword.text = nil
         }
         else {
             textFieldConfirmPassword.isUserInteractionEnabled = true
+            textFieldConfirmPassword.layer.borderColor = R.color.buttonColor()!.cgColor
         }
     }
     
