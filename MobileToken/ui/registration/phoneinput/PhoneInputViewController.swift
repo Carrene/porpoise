@@ -173,6 +173,7 @@ class PhoneInputViewController: BaseViewController, BankCollectionViewDelegate,C
     }
     
     func navigateToPhoneConfirmation(phone:String) {
+        
         performSegue(withIdentifier: R.segue.phoneInputViewController.phoneInputToActivationSegue, sender: self)
     }
     
