@@ -21,6 +21,7 @@ class SettingPresenter:SettingPresenterProtocol {
             } else {
                 if let _ = repoResponse.value {
                     self!.getAllDataSetting()
+                    AuthenticationPatternPresenter.initScreenLocker()
                 } else {
                     UIHelper.showFailedSnackBar()
                 }

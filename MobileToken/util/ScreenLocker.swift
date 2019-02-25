@@ -48,6 +48,8 @@ class ScreenLocker: NSObject{
             self.timer.invalidate()
             self.timer = nil
             start()
+        } else {
+           start()
         }
     }
 }
