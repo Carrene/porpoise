@@ -50,7 +50,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O5W-fZ-ZEd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="احراز هویت" id="zHT-dW-jVU"/>
+                    <navigationItem key="navigationItem" title="احراز هویت" id="zHT-dW-jVU">
+                        <barButtonItem key="backBarButtonItem" title="  " id="HTn-wE-LdW">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
                         <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>

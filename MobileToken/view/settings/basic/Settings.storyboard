@@ -67,7 +67,9 @@
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="تنظیمات" id="Qm1-nC-HGp">
-                        <barButtonItem key="backBarButtonItem" title=" " id="4QW-rZ-mSy"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="4QW-rZ-mSy">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -110,10 +112,10 @@
     <resources>
         <image name="setting-icon" width="20" height="20"/>
         <namedColor name="buttonColor">
-            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
-            <color red="0.098039215686274508" green="0.15686274509803921" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

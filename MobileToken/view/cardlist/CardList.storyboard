@@ -74,7 +74,9 @@
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="لیست کارت ها" id="TqB-wM-dKr">
-                        <barButtonItem key="backBarButtonItem" title="  " id="tPo-SG-4Yc"/>
+                        <barButtonItem key="backBarButtonItem" title="  " id="tPo-SG-4Yc">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -97,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list-icon" width="20" height="16"/>
+        <image name="list-icon" width="20" height="20"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

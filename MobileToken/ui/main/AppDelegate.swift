@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSAttributedString.Key.font:R.font.iranSansMobileMedium(size: 14)]
         appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
         UIView.appearance().semanticContentAttribute = .forceRightToLeft
-        //UINavigationBar.appearance().barTintColor = R.color.secondary()
+        UINavigationBar.appearance().barTintColor = R.color.primaryLight()
         UINavigationBar.appearance().tintColor = R.color.buttonColor()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : R.color.buttonColor()!,NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!]
     }
