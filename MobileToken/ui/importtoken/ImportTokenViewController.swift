@@ -13,7 +13,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     @IBOutlet var labelAtmCode: UILabel!
     @IBOutlet var textViewSmsCode: UITextView!
     @IBOutlet var labelSmsCode: UILabel!
-    @IBOutlet var buttonAddCode: UIButton!
+    
     var card: Card?
     var cryptoModuleId: Token.CryptoModuleId?
     var presenter: ImportTokenPresenterProtokol?
@@ -21,8 +21,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: remove bt
-        buttonAddCode.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,17 +39,14 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func initUIComponents() {
         viewCard.buttonActionSheet.isHidden = true
         btConfirm.isEnabled = false
-        buttonAddCode.layer.cornerRadius = 10
-        self.buttonAddCode.backgroundColor = R.color.borderColor()
         
         viewCard.layer.cornerRadius = 10
-        viewCard.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewCard.layer.borderWidth = 0
         viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
-        viewCard.layer.shadowRadius = 5
+        viewCard.layer.shadowRadius = 3
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        viewCard.layer.shadowOpacity = 0.8
-        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewCard.layer.shadowOpacity = 0.2
+        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         viewCard.layer.borderWidth = 0
         viewCard.imagePlus.isHidden = true
         viewCard.buttonActionSheet.isEnabled = false
@@ -67,12 +62,12 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         textViewSmsCode.delegate = self
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         textViewAtmCode.layer.borderWidth = 2
-        textViewAtmCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        textViewAtmCode.layer.borderColor = R.color.buttonColor()!.cgColor
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         labelAtmCode.font = R.font.iranSansMobile(size: 12)
         labelSmsCode.font = R.font.iranSansMobile(size: 12)
         textViewSmsCode.layer.borderWidth = 2
-        textViewSmsCode.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        textViewSmsCode.layer.borderColor = R.color.buttonColor()!.cgColor
         self.hideKeyboardWhenTappedAround()
         initBankCard()
     }
@@ -131,16 +126,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
             }
             return numberOfChars < 121
         }
-    }
-   
-    @IBAction func onButtonAddCode(_ sender: UIButton) {
-//        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
-//            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
-//        } else {
-//            let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
-//            btConfirm.isEnabled = true
-//            presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
-//        }
     }
     
     func tokenImported(card: Card) {

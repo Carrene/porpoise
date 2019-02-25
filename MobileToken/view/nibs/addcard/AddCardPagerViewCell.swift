@@ -34,7 +34,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         
         viewCard.layer.cornerRadius = 10
         viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
-        viewCard.layer.shadowRadius = 3
+        viewCard.layer.shadowRadius = 10
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewCard.layer.shadowOpacity = 0.2
         viewCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
