@@ -41,30 +41,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-s9-Qjj">
                                         <rect key="frame" x="15" y="19.5" width="315" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
+                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="40"/>
                                                 <color key="backgroundColor" name="primaryLight"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                                <state key="normal" title="30">
+                                                <state key="normal" title="120">
                                                     <color key="titleColor" name="buttonColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
-                                                <rect key="frame" x="84" y="0.0" width="63" height="40"/>
-                                                <color key="backgroundColor" name="primaryLight"/>
-                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                                <state key="normal" title="60">
-                                                    <color key="titleColor" name="buttonColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
-                                                <rect key="frame" x="168" y="0.0" width="63" height="40"/>
+                                                <rect key="frame" x="84" y="0.0" width="63" height="40"/>
                                                 <color key="backgroundColor" name="primaryLight"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                                 <state key="normal" title="90">
@@ -74,15 +63,26 @@
                                                     <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
-                                                <rect key="frame" x="252" y="0.0" width="63" height="40"/>
+                                            <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
+                                                <rect key="frame" x="168" y="0.0" width="63" height="40"/>
                                                 <color key="backgroundColor" name="primaryLight"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
-                                                <state key="normal" title="120">
+                                                <state key="normal" title="60">
                                                     <color key="titleColor" name="buttonColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
+                                                <rect key="frame" x="252" y="0.0" width="63" height="40"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <state key="normal" title="30">
+                                                    <color key="titleColor" name="buttonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
