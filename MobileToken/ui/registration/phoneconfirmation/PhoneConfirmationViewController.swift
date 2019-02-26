@@ -52,7 +52,6 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         viewChangeNumber.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         textFieldCode.delegate = self
-        labelPhone.text = phoneNumber.separate()
         labelChangeNumber.isUserInteractionEnabled = true
         labelEnterCode.font = R.font.iranSansMobile(size: 12)
         textFieldCode.attributedPlaceholder = NSAttributedString(string: "کد فعال سازی",
