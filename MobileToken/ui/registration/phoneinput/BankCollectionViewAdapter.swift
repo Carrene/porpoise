@@ -35,7 +35,6 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         else {
             collectionView.bounces = false
         }
-        
         cell.lbBankName.text = banks![indexPath.row].name!
         
         if banks![indexPath.row].name! == "آینده" {
