@@ -71,6 +71,7 @@
                     <connections>
                         <outlet property="authenticationTypeContainer" destination="pSh-bh-Z7t" id="XbA-NK-owa"/>
                         <outlet property="scAuthenticationType" destination="7E5-fo-Wdo" id="Q6y-F4-0fi"/>
+                        <segue destination="a6N-9s-Tee" kind="showDetail" identifier="toAuthentication" id="uR1-Dh-ENh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7O-cF-9LU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,6 +170,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rp-Pe-avZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718" y="-884"/>
+        </scene>
+        <!--AuthenticationViewController-->
+        <scene sceneID="hj3-WB-bC3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Authentication" referencedIdentifier="AuthenticationViewController" id="a6N-9s-Tee" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTR-Gi-GWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-1249"/>
         </scene>
         <!--Setting Authentication Definition Pattern View Controller-->
         <scene sceneID="qDN-03-hiz">

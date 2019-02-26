@@ -3,7 +3,8 @@ import Foundation
 protocol SettingAuthenticationDefinitionPatternViewProtocol: class {
     func showNotMatchError()
     func showTryForSecondTimeMessage()
-    func showPatternMinPointError() 
+    func showPatternMinPointError()
+    func temptDBCreated()
 }
 
 protocol SettingAuthenticationDefinitionPatternPresenterProtocol {

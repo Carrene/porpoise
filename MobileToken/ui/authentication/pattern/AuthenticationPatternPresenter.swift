@@ -26,6 +26,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
         if pattern.sha512() == authentication?.credential {
             authentication?.successAttempt()
             DispatchQueue.global(qos: .userInitiated).async {
+               
                 RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: pattern.bytes, salt: (self.authentication?.salt!.bytes)!)?.toHexString())!
                 DispatchQueue.main.async {
                     self.updateAuthentication(authentication: self.authentication!)
