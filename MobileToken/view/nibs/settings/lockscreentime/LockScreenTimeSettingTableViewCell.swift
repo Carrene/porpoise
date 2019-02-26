@@ -35,7 +35,7 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             button.layer.shadowColor = R.color.buttonColor()!.cgColor
             button.layer.borderWidth = 2
             button.setTitleColor(R.color.buttonColor(), for: .selected)
-            button.setTitleColor(R.color.secondary(), for: .normal)
+            button.setTitleColor(R.color.buttonColor(), for: .normal)
             button.tintColor = .clear
         }
     }
