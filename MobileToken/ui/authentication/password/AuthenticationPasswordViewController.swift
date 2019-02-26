@@ -47,11 +47,13 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
         let message = R.string.localizable.sb_wrong_password() + ". " + " شما \(remainAttemps) فرصت دیگر دارید "
         UIHelper.showSpecificSnackBar(message: message, color: R.color.errorDark()!)
         textFieldPassword.text = ""
+        dismissKeyboard()
     }
     
     func navigateToCardList() {
         self.authenticationDelegate?.navigateToCardList()
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_successfully_done(), color: R.color.snackbarColor()!)
+        dismissKeyboard()
     }
     
     func navigateToInputPhoneNumber() {

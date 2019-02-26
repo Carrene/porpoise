@@ -97,6 +97,7 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     
     func showNotMatchError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_passwords_not_match(), color: R.color.errorDark()!)
+        dismissKeyboard()
     }
     
     func authenticationUpdatedAction() {

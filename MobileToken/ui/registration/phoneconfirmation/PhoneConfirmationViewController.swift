@@ -140,38 +140,34 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     func showBadRequestError() {
         
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_activation_code_is_not_valid(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func showSSMNotAvailable() {
         
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_SSM_is_not_available(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func showServerError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func showNetworkError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_network_error(), color: R.color.errorDark()!)
+        dismissKeyboard()
     }
-    
-
     
     func segue() {
         performSegue(withIdentifier: R.segue.phoneConfirmationViewController.phoneConfirmationToCardList, sender: self)
     }
+    
     @IBAction func onConfirmButton(_ sender: UIBarButtonItem) {
         let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
         if textFieldCode.text != "" && self.phoneNumber != "" {
             presenter?.bind(user:user)
         }
-    }
-    
-    @IBAction func onDoneKeyboard(_ sender: UITextField) {
-//        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
-//        if textFieldCode.text != "" && self.phoneNumber != "" {
-//            presenter?.bind(user:user)
-//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

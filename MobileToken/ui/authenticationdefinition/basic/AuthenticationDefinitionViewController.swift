@@ -48,7 +48,7 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
             dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
             dialogAppearance.titleColor = R.color.buttonColor()
             dialogAppearance.messageColor = R.color.buttonColor()
-            dialogAppearance.messageFont = R.font.iranSansMobile(size: 12)!
+            dialogAppearance.messageFont = R.font.iranSansMobile(size: 14)!
         
             let containerAppearance = PopupDialogContainerView.appearance()
             containerAppearance.backgroundColor = R.color.primary()

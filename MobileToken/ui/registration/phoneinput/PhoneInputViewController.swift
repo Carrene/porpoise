@@ -141,14 +141,17 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     func showBadRequestError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_phone(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func showServerError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func showNetworkError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_network_error(), color: R.color.errorDark()!)
+        dismissKeyboard()
     }
     
     func setBankList(banks : [Bank]) {

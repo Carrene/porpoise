@@ -42,6 +42,7 @@ class SettingAuthenticationDefinitionPasswordPresenter: SettingAuthenticationDef
                 print("\(error)")
             } else {
                 UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
+                
                 //self!.authenticationDefinitionPasswordView.navigateToProvisioning()
                 AuthenticationPatternPresenter.initScreenLocker()
             }

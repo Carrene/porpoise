@@ -291,6 +291,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func reloadCardPager() {
         UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
         initCardListPagerView()
+        dismissKeyboard()
     }
     
     func initPagerList() {

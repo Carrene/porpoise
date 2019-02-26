@@ -44,6 +44,7 @@ class AuthenticationDefinitionPatternViewController: UIViewController, Authentic
     
     func showNotMatchError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_patterns_not_match(), color: R.color.errorDark()!)
+        
 
     }
     

@@ -85,6 +85,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func textViewDidChange(_ textView: UITextView) {
         if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
 //            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
+            
             btConfirm.isEnabled = false
         } else {
             btConfirm.isEnabled = true
