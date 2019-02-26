@@ -35,6 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = R.color.primaryLight()
         UINavigationBar.appearance().tintColor = R.color.buttonColor()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : R.color.buttonColor()!,NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!]
+        UIBarButtonItem.appearance()
+            .setTitleTextAttributes([NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!],
+                                    for: .normal)
+        UIBarButtonItem.appearance()
+            .setTitleTextAttributes([NSAttributedString.Key.font: R.font.iranSansMobileBold(size: 16)!],
+                                    for: .disabled)
     }
     
     func initialIQKeyboard() {
