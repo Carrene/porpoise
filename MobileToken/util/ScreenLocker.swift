@@ -11,10 +11,13 @@ class ScreenLocker: NSObject{
     
     var timer:Timer!
     var time:Int!
-    
-    func _init(time:Int){
+    var callBack = {
+        
+    }
+    func _init(time:Int, callBack: @escaping () -> ()){
         
         self.time = time
+        self.callBack = callBack
     }
     
     func isRunning()->Bool{
@@ -37,8 +40,9 @@ class ScreenLocker: NSObject{
     
     func lockScreen() {
         ScreenLocker.isAutoLocked = true
-        let vc = R.storyboard.authentication.authenticationViewController()
-        UIApplication.shared.keyWindow?.rootViewController = vc
+//        let vc = R.storyboard.authentication.authenticationViewController()
+//        UIApplication.shared.keyWindow?.rootViewController = vc
+        callBack()
     }
     
     func resetTimer(time:Int){

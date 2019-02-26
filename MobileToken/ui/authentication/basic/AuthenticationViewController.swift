@@ -44,28 +44,29 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
         vAuthenticationContainer.addSubview((vcPattern?.view)!)
         vcPattern?.view.frame = vAuthenticationContainer.bounds
     }
-    
     func navigateToCardList() {
+        
+        
         let appLocked = ScreenLocker.isAutoLocked
         if appLocked {
-            self.view.isHidden = true
-
+            self.dismiss(animated: false, completion: nil)
             ScreenLocker.isAutoLocked = false
         } else {
             performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToRegistration.identifier, sender: self)
             
         }
+    
     }
 
     func navigateToInputPhoneNumber() {
+
         let appLocked  = ScreenLocker.isAutoLocked
         if appLocked {
-            self.view.isHidden = true
-
-            ScreenLocker.isAutoLocked = false
+            self.dismiss(animated: false, completion: nil)
         } else {
             performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList.identifier, sender: self)
         }
+        
     }
 
     func navigateToLockView() {
