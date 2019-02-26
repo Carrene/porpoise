@@ -1,4 +1,5 @@
 import UIKit
+import  InputMask
 
 class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
    
@@ -51,11 +52,20 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         viewChangeNumber.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         textFieldCode.delegate = self
-        labelPhone.text = phoneNumber
+        labelPhone.text = phoneNumber.separate()
         labelChangeNumber.isUserInteractionEnabled = true
         labelEnterCode.font = R.font.iranSansMobile(size: 12)
         textFieldCode.attributedPlaceholder = NSAttributedString(string: "کد فعال سازی",
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
+    }
+    
+    override func willMove(toParent parent: UIViewController?)
+    {
+        super.willMove(toParent: parent)
+        if parent == nil
+        {
+            presenter?.invalidateTimer()
+        }
     }
     
     func initListeners() {
@@ -107,6 +117,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         
         return true
     }
+    
     
     @IBAction func textFieldDidChanged(_ sender: Any) {
         if textFieldCode.text?.count == 6 {

@@ -57,7 +57,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewPhone.layer.borderColor = R.color.buttonColor()!.cgColor
         viewPhone.layer.cornerRadius = 5
         
-        
         viewTextfields.layer.cornerRadius = 10
         viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
         viewTextfields.layer.shadowRadius = 3
