@@ -23,6 +23,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         buttonAddCard.layer.cornerRadius = 10
         buttonAddCard.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         labelTextfield.font = R.font.iranSansMobile(size: 12)
+        viewCard.buttonActionSheet.isHidden = true
         
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.shadowPath = UIBezierPath(roundedRect: viewAddCard.bounds, cornerRadius: 10).cgPath
@@ -42,7 +43,6 @@ class AddCardPagerViewCell: FSPagerViewCell {
         
         
         viewCard.labelCardName.text = R.string.localizable.lb_cardName()
-        viewCard.buttonActionSheet.isEnabled = false
         viewCard.labelBottomTitle.text = R.string.localizable.lb_add_new_bank()
         viewCard.stackViewCardNumber.isHidden = true
         
