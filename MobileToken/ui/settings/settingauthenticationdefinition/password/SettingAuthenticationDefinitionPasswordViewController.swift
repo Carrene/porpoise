@@ -35,6 +35,7 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
         labelPasswordHint.font = R.font.iranSansMobile(size: 12)
         labelSecondPassword.font = R.font.iranSansMobile(size: 12)
         labelPasswordHint.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        labelSecondPassword.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         textFieldPassword.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_password(),
                                                                      attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
         textFieldConfirmPassword.attributedPlaceholder = NSAttributedString(string:R.string.localizable.ph_confirm_password() ,
