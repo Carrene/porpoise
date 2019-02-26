@@ -51,9 +51,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         
         viewCountry.layer.cornerRadius = 5
         viewCountry.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
-        viewCountry.layer.borderWidth = 1
+        viewCountry.layer.borderWidth = 2
         
-        viewPhone.layer.borderWidth = 1
+        viewPhone.layer.borderWidth = 2
         viewPhone.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
         viewPhone.layer.cornerRadius = 5
         

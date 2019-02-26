@@ -52,7 +52,7 @@
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF" userLabel="View bank">
                                 <rect key="frame" x="0.0" y="127" width="320" height="100"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
                                         <rect key="frame" x="20" y="0.0" width="280" height="100"/>
                                         <color key="backgroundColor" name="primary"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Qfx-jO-6LW">
@@ -287,7 +287,6 @@
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                                                 <connections>
-                                                    <action selector="onDoneKeyboard:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="VzY-0p-RgX"/>
                                                     <action selector="onTfPhoneEditDidChanged:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="ZwU-6d-nKp"/>
                                                     <action selector="textFieldDidChanged:" destination="zAA-ph-Mfk" eventType="editingChanged" id="xxG-xe-eLs"/>
                                                 </connections>

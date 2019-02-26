@@ -29,6 +29,13 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         collectionView.allowsMultipleSelection = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCollectionViewCell.identifier, for: indexPath) as! BankCollectionViewCell
+        if (banks?.count)! > 3 {
+            collectionView.bounces = true
+        }
+        else {
+            collectionView.bounces = false
+        }
+        
         cell.lbBankName.text = banks![indexPath.row].name!
         
         if banks![indexPath.row].name! == "آینده" {
