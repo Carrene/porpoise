@@ -9,7 +9,7 @@ class TokenRealmRepository: TokenRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[Token]>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         let realmTokenResults: [Token]? = realm.objects(Token.self).map{$0.copy() as! Token}
         if realmTokenResults == nil {
             onDone?(RepositoryResponse(value: nil))
@@ -19,7 +19,7 @@ class TokenRealmRepository: TokenRepositoryProtocol {
     }
     
     func update(_ token: Token, onDone: ((RepositoryResponse<Token>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         do {
             try realm.write {
                 realm.add(token.copy() as! Token, update:  true)
@@ -32,7 +32,7 @@ class TokenRealmRepository: TokenRepositoryProtocol {
     }
     
     func delete(tokens: [Token], onDone: ((RepositoryResponse<[Token]>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         var responseTokens = [Token]()
         do {
             try realm.write {

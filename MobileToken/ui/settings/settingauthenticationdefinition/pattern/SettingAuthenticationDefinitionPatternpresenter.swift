@@ -55,16 +55,11 @@ class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefi
     }
     
     func createTempDB(credential: String, authentication: Authentication) {
-        var config = Realm.Configuration()
-        config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("tempt.realm")
-        let newKey = CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString()
-        config.encryptionKey = newKey
-        let newKeyData = newKey!.data(using: String.Encoding.utf8, allowLossyConversion: false)
-        print("keyTempt\(newKeyData!.toHexString())")
-//        copySensitiveToTempt(newKey: newKey!)
+       
+        RealmConfiguration.teptDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString())!
         autoreleasepool {
             let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-            try! realm.writeCopy(toFile: RealmConfiguration.sensitiveDataConfiguration().fileURL!, encryptionKey: RealmConfiguration.sensitiveDataConfiguration().encryptionKey)
+            try! realm.writeCopy(toFile: RealmConfiguration.temptDataConfiguration().fileURL!, encryptionKey: RealmConfiguration.temptDataConfiguration().encryptionKey)
         }
         authenticationDefinitionPatternView.temptDBCreated()
     }

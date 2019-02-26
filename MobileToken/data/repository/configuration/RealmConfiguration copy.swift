@@ -35,5 +35,22 @@ class RealmConfiguration {
         print("keyyy"+(config.encryptionKey?.toHexString())!)
         return config
     }
+    
+    static func realmMainSensitiveConfiguration() -> Realm.Configuration {
+        if isTemptDbExist() {
+            return temptDataConfiguration()
+        } else {
+            return sensitiveDataConfiguration()
+        }
+    }
+    
+    static func isTemptDbExist() -> Bool {
+        let documentsURL = try! FileManager().url(for: .documentDirectory,
+                                                  in: .userDomainMask,
+                                                  appropriateFor: nil,
+                                                  create: true)
+        let fooURL = documentsURL.appendingPathComponent("tempt.realm")
+        return FileManager().fileExists(atPath: fooURL.path)
+    }
 }
 

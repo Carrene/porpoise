@@ -4,7 +4,7 @@ import RealmSwift
 class SettingRealmRepository:SettingRepositoryProtocol {
     
     func get(onDone: ((RepositoryResponse<Setting>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         if let setting = realm.object(ofType: Setting.self, forPrimaryKey: 1)?.copy() as? Setting {
             onDone?(RepositoryResponse(value: setting))
         } else {
@@ -22,7 +22,7 @@ class SettingRealmRepository:SettingRepositoryProtocol {
     }
     
     func update(_ setting : Setting, onDone: ((RepositoryResponse<Setting>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         do {
             try realm.write {
                 realm.add(setting.copy() as! Setting, update: true)

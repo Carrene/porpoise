@@ -4,7 +4,7 @@ import RealmSwift
 class CardRealmRepository: CardRepositoryProtocol {
     
     func addCard(card: Card, bank: Bank, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         if let bank = realm.objects(Bank.self).filter("Name == '" + (bank.name)! + "'").first?.copy() as? Bank {
             do {
                 try realm.write {
@@ -29,7 +29,7 @@ class CardRealmRepository: CardRepositoryProtocol {
     }
     
     func get(identifier: String, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         let card: Card? = realm.object(ofType: Card.self, forPrimaryKey: identifier)
         let cardCopy = card?.copy() as! Card
         cardCopy.bank = (card?.owners.first!.copy() as! Bank)
@@ -37,7 +37,7 @@ class CardRealmRepository: CardRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[Card]>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         let realmCardResult: [Card]? = realm.objects(Card.self).map{$0.copy() as! Card}
         if realmCardResult == nil {
             onDone?(RepositoryResponse(value: nil))
@@ -47,7 +47,7 @@ class CardRealmRepository: CardRepositoryProtocol {
     }
     
     func update(_ card: Card, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         do {
             try realm.write {
 
@@ -65,7 +65,7 @@ class CardRealmRepository: CardRepositoryProtocol {
     }
     
     func delete(identifier:String, onDone: ((RepositoryResponse<Card>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
         let existCard = realm.objects(Card.self).filter("Id='"+identifier+"'").first
         do {
             try realm.write {
