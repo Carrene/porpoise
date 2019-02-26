@@ -26,9 +26,6 @@ class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefi
             self.secondAttemptPattern = password
             if self.secondAttemptPattern == self.firstAttemptPattern {
                 updateAuthentication(credential: password)
-//                #warning("key drivate")
-//                RealmConfiguration.sensitiveDataEncryptionKey = "hamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhamedhame"
-                
             } else {
                 self.firstAttemptPattern = nil
                 self.secondAttemptPattern = nil
@@ -39,36 +36,29 @@ class SettingAuthenticationDefinitionPatternPresenter: SettingAuthenticationDefi
     
     func updateAuthentication(credential: String) {
         let authentication = Authentication(credentials: credential.sha512(), authenticationType: AuthenticationTypeEnum.PATTERN)
-//        RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString())!
         let authenticationRestRepository = AuthenticationRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ()) = {[weak self] repoResponse in
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
                 UIHelper.showSuccessfulSnackBar(message: R.string.localizable.sb_successfully_done())
-                //self!.authenticationDefinitionPatternView.navigateToProvisioning()
                 self!.createTempDB(credential: credential, authentication: authentication)
-//                AuthenticationPatternPresenter.initScreenLocker()
             }
         }
         authenticationRestRepository.update(authentication, onDone: onDataResponse)
     }
     
     func createTempDB(credential: String, authentication: Authentication) {
-       
-        RealmConfiguration.teptDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString())!
-        autoreleasepool {
-            let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-            try! realm.writeCopy(toFile: RealmConfiguration.temptDataConfiguration().fileURL!, encryptionKey: RealmConfiguration.temptDataConfiguration().encryptionKey)
+        DispatchQueue.global(qos: .userInitiated).async {
+            RealmConfiguration.teptDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: credential.bytes, salt: authentication.salt!.bytes)?.toHexString())!
+            DispatchQueue.main.async {
+                autoreleasepool {
+                    let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+                    try! realm.writeCopy(toFile: RealmConfiguration.temptDataConfiguration().fileURL!, encryptionKey: RealmConfiguration.temptDataConfiguration().encryptionKey)
+                }
+                self.authenticationDefinitionPatternView.temptDBCreated()
+            }
         }
-        authenticationDefinitionPatternView.temptDBCreated()
-    }
-    
-    func copySensitiveToTempt(newKey: String) {
-        autoreleasepool {
-            RealmConfiguration.sensitiveDataEncryptionKey = newKey
-            let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-            try! realm.writeCopy(toFile: RealmConfiguration.sensitiveDataConfiguration().fileURL!, encryptionKey: RealmConfiguration.sensitiveDataConfiguration().encryptionKey)
-        }
+        
     }
 }

@@ -4,7 +4,7 @@ import RealmSwift
 class UserRealmRepository:UserRepositoryProtocol {
     
     func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         if let user = realm.objects(User.self).filter("Bank.Name='"+bank.name!+"'").first {
             onDone?(RepositoryResponse(value:user))
         }
@@ -18,7 +18,7 @@ class UserRealmRepository:UserRepositoryProtocol {
     }
     
     func update(_ user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         do {
             try realm.write {
                 realm.add(user.copy() as! User, update: true)
@@ -38,7 +38,7 @@ class UserRealmRepository:UserRepositoryProtocol {
     }
     
     func getAll(onDone: ((RepositoryResponse<[User]>) -> ())?) {
-        let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         let userList : [User] = realm.objects(User.self).map { $0.copy() as! User }
         onDone?(RepositoryResponse(value: userList))
     }

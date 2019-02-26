@@ -27,7 +27,7 @@ class BankRealmRepository: BankRepositoryProtocol {
     }
     
     func update(_ bank: Bank, onDone: ((RepositoryResponse<Bank>) -> ())?) {
-         let realm = try! Realm(configuration: RealmConfiguration.realmMainSensitiveConfiguration())
+         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         do {
             try realm.write {
                 realm.add(bank.copy() as! Bank, update: true)

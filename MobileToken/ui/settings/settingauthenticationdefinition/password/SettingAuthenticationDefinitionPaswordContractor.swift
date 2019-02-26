@@ -3,6 +3,7 @@ import Foundation
 protocol SettingAuthenticationDefinitionPasswordViewProtocol: class {
     func showNotMatchError()
     func authenticationUpdatedAction()
+    func temptDBCreated()
     
 }
 
