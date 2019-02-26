@@ -11,8 +11,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="IRANSansMobile(FaNum)_Medium.ttf">
-            <string>IRANSansMobileFaNum-Medium</string>
+        <array key="IRANSansMobile(FaNum)_Bold.ttf">
+            <string>IRANSansMobileFaNum-Bold</string>
         </array>
         <array key="IRANSansMobile-Medium.ttf">
             <string>IRANSansMobile-Medium</string>
@@ -82,25 +82,25 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-fa-mEH" userLabel="lb1">
                                     <rect key="frame" x="0.0" y="0.0" width="69" height="25"/>
-                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-aM-HWX" userLabel="lb2">
                                     <rect key="frame" x="79" y="0.0" width="69" height="25"/>
-                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-26-kOf" userLabel="lb3">
                                     <rect key="frame" x="158" y="0.0" width="69" height="25"/>
-                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-SU-IKq" userLabel="lb4">
                                     <rect key="frame" x="237" y="0.0" width="69" height="25"/>
-                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                     <color key="textColor" name="buttonColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>

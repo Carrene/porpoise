@@ -43,16 +43,16 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         viewCard.layer.cornerRadius = 10
         viewCard.layer.borderWidth = 0
         viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
-        viewCard.layer.shadowRadius = 3
+        viewCard.layer.shadowRadius = 5
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        viewCard.layer.shadowOpacity = 0.2
-        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        viewCard.layer.shadowOpacity = 0.5
+        viewCard.layer.shadowColor = R.color.buttonColor()!.cgColor
         viewCard.layer.borderWidth = 0
         viewCard.imagePlus.isHidden = true
-        viewCard.buttonActionSheet.isEnabled = false
+        viewCard.buttonActionSheet.isHidden = true
         
-        textViewAtmCode.layer.cornerRadius = 10
-        textViewSmsCode.layer.cornerRadius = 10
+        textViewAtmCode.layer.cornerRadius = 5
+        textViewSmsCode.layer.cornerRadius = 5
         if self.cryptoModuleId == Token.CryptoModuleId.one {
             self.viewCard.labelBottomTitle.text = R.string.localizable.everywhere_firstpassword()
         } else {
@@ -79,6 +79,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func initBankCard() {
         viewCard.backgroundColor = R.color.secondaryDark()
         viewCard.imageLogo.image = BankUtil.getLightLogo(bank: (card?.bank)!)
+        viewCard.labelCardName.text = card?.cardName
         viewCard.labelBankName.text = card?.bank?.name
     }
     
