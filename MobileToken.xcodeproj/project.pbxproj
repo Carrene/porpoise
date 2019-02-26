@@ -725,8 +725,8 @@
 		AC75A4F021B26F5B009441C4 /* password */ = {
 			isa = PBXGroup;
 			children = (
-				AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */,
 				AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */,
+				AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */,
 				AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */,
 			);
 			path = password;

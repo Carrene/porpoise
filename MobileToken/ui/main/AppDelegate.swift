@@ -17,9 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         initialTheme()
         initialIQKeyboard()
-//        initPrinit()
+        initPrinit()
         initialFirebase(application: application)
-        
         return true
     }
     

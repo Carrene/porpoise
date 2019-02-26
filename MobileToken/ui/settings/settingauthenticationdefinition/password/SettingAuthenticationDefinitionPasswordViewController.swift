@@ -102,7 +102,11 @@ class SettingAuthenticationDefinitionPasswordViewController: UIViewController,UI
     
     func authenticationUpdatedAction() {
         
-    }               
+    }
+    
+    func temptDBCreated() {
+        authenticationDefinitionDelegate?.temptDBCreated()
+    }
 }
 
 

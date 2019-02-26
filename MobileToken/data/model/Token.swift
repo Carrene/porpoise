@@ -96,6 +96,7 @@ class Token: Object, Mappable, NSCopying{
             var value : UInt32 = 0
             let data = NSData(bytes: array, length: 4)
             data.getBytes(&value, length: 4)
+            
             value = UInt32(bigEndian: value)
             //TODO: check expiredate date
             self.expireDate = "" + "\(value)"
