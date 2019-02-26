@@ -1,6 +1,6 @@
 import Foundation
 protocol AuthenticationPatternViewProtocol: class {
-    func showWrongPatternError()
+    func showWrongPatternError(remainAttemps:Int)
     func navigateToCardList()
     func navigateToInputPhoneNumber()
     func navigateToLockView()

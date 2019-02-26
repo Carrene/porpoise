@@ -10,7 +10,7 @@ class SnackBarHelper:TTGSnackbar {
     
     init(message: String,color:UIColor, duration: TTGSnackbarDuration) {
         super.init(message: message, duration: duration)
-        self.messageTextFont = R.font.iranSansMobileMedium(size: 14)!
+        self.messageTextFont = R.font.iranSansMobileFaNum(size: 14)!
         self.messageTextAlign = .right
         self.backgroundColor=color
         self.messageTextColor=R.color.primary()!

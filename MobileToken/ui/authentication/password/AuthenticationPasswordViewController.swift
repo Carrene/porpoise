@@ -43,8 +43,9 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
         return true
     }
     
-    func showWrongPasswordError() {
-        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_wrong_password(), color: R.color.errorDark()!)
+    func showWrongPasswordError(remainAttemps: Int) {
+        let message = R.string.localizable.sb_wrong_password() + ". " + " شما \(remainAttemps) فرصت دیگر دارید "
+        UIHelper.showSpecificSnackBar(message: message, color: R.color.errorDark()!)
         textFieldPassword.text = ""
     }
     
