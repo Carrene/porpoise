@@ -13,6 +13,10 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
         initUIComponent()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         authenticationTypeContainer.subviews.forEach({ $0.removeFromSuperview() })
         if sender.selectedSegmentIndex == 1 {

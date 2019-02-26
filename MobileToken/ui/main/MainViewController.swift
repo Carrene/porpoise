@@ -31,7 +31,11 @@ class MainViewController: UINavigationController {
                 }
             }
             else {
-                navigateToAuthentication()
+                if (authentication?.isLocked)! {
+                    navigateToAppLocked()
+                } else {
+                    navigateToAuthentication()
+                }
             }
         }
     }
@@ -40,7 +44,7 @@ class MainViewController: UINavigationController {
         let authenticationRestRepository = AuthenticationRealmRepository()
         let onDataResponse: ((RepositoryResponse<Authentication>) -> ())  = {[weak self] repoResponse in
             if let error = repoResponse.error {
-                print("error")
+                print(error)
             } else {
                 self?.authentication = repoResponse.value
             }
@@ -56,6 +60,10 @@ class MainViewController: UINavigationController {
         present(introVC, animated: true, completion: nil)
         UserDefaults.standard.set(true, forKey: "hasWizardShown")
         
+    }
+    
+    func navigateToAppLocked() {
+        performSegue(withIdentifier: R.segue.mainViewController.toapplicationLocked.identifier, sender: self)
     }
     
     func navigateToAuthentication() {
