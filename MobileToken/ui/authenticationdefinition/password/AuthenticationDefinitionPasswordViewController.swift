@@ -23,7 +23,6 @@ class AuthenticationDefinitionPasswordViewController: UIViewController,UITextFie
     
     func initUIComponent() {
         textFieldPassword.addTarget(self, action: #selector(self.textFieldPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
-//        textFieldConfirmPassword.addTarget(self, action: #selector(self.textFieldConfirmPasswordDidChange(_:)), for: UIControl.Event.editingChanged)
         textFieldConfirmPassword.layer.cornerRadius = 5
         textFieldConfirmPassword.isUserInteractionEnabled = false
         textFieldPassword.layer.cornerRadius = 5

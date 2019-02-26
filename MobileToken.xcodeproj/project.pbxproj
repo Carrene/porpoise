@@ -57,6 +57,7 @@
 		AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
 		AC405AFC221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
+		AC46F6C02225651400BF611A /* HalfColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46F6BF2225651400BF611A /* HalfColorLabel.swift */; };
 		AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
 		AC4C4DC121CFB5D700B15B90 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC021CFB5D700B15B90 /* Setting.swift */; };
 		AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */; };
@@ -258,6 +259,7 @@
 		AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTokensAlert.xib; sourceTree = "<group>"; };
 		AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenAlertViewController.swift; sourceTree = "<group>"; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
+		AC46F6BF2225651400BF611A /* HalfColorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfColorLabel.swift; sourceTree = "<group>"; };
 		AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardList.storyboard; sourceTree = "<group>"; };
 		AC4C4DC021CFB5D700B15B90 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -532,6 +534,14 @@
 				AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */,
 			);
 			path = importtoken;
+			sourceTree = "<group>";
+		};
+		AC46F6BE222564E500BF611A /* uilabel */ = {
+			isa = PBXGroup;
+			children = (
+				AC46F6BF2225651400BF611A /* HalfColorLabel.swift */,
+			);
+			path = uilabel;
 			sourceTree = "<group>";
 		};
 		AC4C4DBD21CE7ADC00B15B90 /* cardlist */ = {
@@ -1223,6 +1233,7 @@
 		AFE81B0B2196CCDA00AA0AF2 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AC46F6BE222564E500BF611A /* uilabel */,
 				AFC60E652224316B00F16215 /* string */,
 				AF9F2194220AFD24005088B9 /* array */,
 				AFBFE16D21F457B400FDAE4A /* data */,
@@ -1715,6 +1726,7 @@
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
 				AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
+				AC46F6C02225651400BF611A /* HalfColorLabel.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */,
