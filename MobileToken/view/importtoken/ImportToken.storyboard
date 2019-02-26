@@ -25,20 +25,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlf-W8-eg8" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="16" y="33" width="288" height="140"/>
+                                <rect key="frame" x="20" y="33" width="280" height="120"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="SLs-O7-J4I"/>
+                                    <constraint firstAttribute="height" constant="120" id="SLs-O7-J4I"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" محتوای پیامک دریافتی را کپی کنید " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
-                                <rect key="frame" x="16" y="440.5" width="288" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد دریافتی از دستگاه خودپرداز بانک خود را وارد نمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
+                                <rect key="frame" x="20" y="385.5" width="280" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-aJ-kfa" userLabel="textViewAtmCode">
-                                <rect key="frame" x="16" y="203" width="288" height="40"/>
+                                <rect key="frame" x="20" y="173" width="280" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="klq-pZ-S29"/>
@@ -47,14 +47,14 @@
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="به خودپرداز مربوط به کارت خود مراجعه فرمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
-                                <rect key="frame" x="16" y="248" width="288" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد دریافتی از دستگاه خودپرداز بانک خود را وارد نمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
+                                <rect key="frame" x="20" y="218" width="280" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کد دریافتی از پیامک" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkF-dm-DBr" userLabel="textViewSmsCode">
-                                <rect key="frame" x="16" y="287" width="288" height="148.5"/>
+                                <rect key="frame" x="20" y="253" width="280" height="127.5"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
@@ -63,24 +63,24 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="16" id="1ex-1N-Gxh"/>
-                            <constraint firstItem="PkF-dm-DBr" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="44" id="4Xq-7N-MxV"/>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="1ex-1N-Gxh"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="40" id="4Xq-7N-MxV"/>
                             <constraint firstItem="Nlf-W8-eg8" firstAttribute="top" secondItem="nDK-RK-Yz7" secondAttribute="top" constant="13" id="6lX-pA-Npk"/>
                             <constraint firstItem="3e5-yh-neA" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" id="7em-Og-ZLb"/>
                             <constraint firstItem="PkF-dm-DBr" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="H7p-7b-vmC"/>
                             <constraint firstItem="3e5-yh-neA" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="Kcv-cg-qJ5"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="Nlf-W8-eg8" secondAttribute="right" constant="16" id="RtH-RS-Xld"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" constant="16" id="SZQ-6T-n8e"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="Nlf-W8-eg8" secondAttribute="right" constant="20" id="RtH-RS-Xld"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" constant="20" id="SZQ-6T-n8e"/>
                             <constraint firstItem="nAm-Ke-r4o" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" id="Tim-0J-2Ca"/>
-                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="top" secondItem="Nlf-W8-eg8" secondAttribute="bottom" constant="30" id="Yys-9h-G82"/>
-                            <constraint firstItem="PkF-dm-DBr" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="16" id="cZG-Qb-IE6"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="bottom" secondItem="nAm-Ke-r4o" secondAttribute="bottom" constant="20" id="dbe-ca-7Rh"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="top" secondItem="Nlf-W8-eg8" secondAttribute="bottom" constant="20" id="Yys-9h-G82"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="cZG-Qb-IE6"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="bottom" secondItem="nAm-Ke-r4o" secondAttribute="bottom" constant="75" id="dbe-ca-7Rh"/>
                             <constraint firstItem="MqB-aJ-kfa" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="fP6-TX-c2B"/>
                             <constraint firstItem="Nlf-W8-eg8" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="mSo-ad-6Pk"/>
-                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="16" id="nWI-Vb-9dQ"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="nWI-Vb-9dQ"/>
                             <constraint firstItem="nAm-Ke-r4o" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="5" id="psd-ao-QZk"/>
                             <constraint firstItem="3e5-yh-neA" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="5" id="r2M-Kf-bOm"/>
-                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" constant="16" id="ypv-rZ-pHR"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" constant="20" id="ypv-rZ-pHR"/>
                             <constraint firstItem="nAm-Ke-r4o" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="zNV-AR-egC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nDK-RK-Yz7"/>

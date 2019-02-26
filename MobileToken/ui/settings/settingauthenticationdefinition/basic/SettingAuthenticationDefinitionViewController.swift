@@ -27,6 +27,12 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
         self.navigationItem.hidesBackButton = false
         let attr = NSDictionary(object: R.font.iranSansMobileBold(size: 16)!, forKey: NSAttributedString.Key.font as NSCopying)
         scAuthenticationType.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
+        
+        scAuthenticationType.layer.shadowRadius = 5
+        scAuthenticationType.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        scAuthenticationType.layer.shadowOpacity = 0.15
+        scAuthenticationType.removeBorders()
+        
         embedVCPattern()
     }
     
@@ -101,3 +107,24 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
     }
 }
 
+extension UISegmentedControl {
+    func removeBorders() {
+        setBackgroundImage(imageWithColor(color: R.color.primary()!), for: .normal, barMetrics: .default)
+        setBackgroundImage(imageWithColor(color: R.color.secondary()!), for: .selected, barMetrics: .default)
+        setBackgroundImage(imageWithColor(color: R.color.primary()!), for: .focused, barMetrics: .default)
+        setBackgroundImage(imageWithColor(color: R.color.primary()!), for: .highlighted, barMetrics: .default)
+        //setDividerImage(imageWithColor(color: UIColor.clear), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+    }
+    
+    // create a 1x1 image with this color
+    private func imageWithColor(color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0.0, y: 0.0, width:  1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor);
+        context!.fill(rect);
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return image!
+    }
+}

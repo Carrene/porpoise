@@ -14,9 +14,6 @@
         <array key="IRANSansMobile(FaNum).ttf">
             <string>IRANSansMobileFaNum</string>
         </array>
-        <array key="IRANSansMobile-Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
-        </array>
         <array key="IranSansReqular.ttf">
             <string>IranianSans</string>
         </array>
@@ -124,32 +121,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز را دوباره وارد کنید" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6w-Si-ccv" userLabel="labelSecondPassword">
                                 <rect key="frame" x="189.5" y="202.5" width="100.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
-                                <color key="textColor" name="buttonColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-ih-ZVt" userLabel="btConfirm">
-                                <rect key="frame" x="30" y="599" width="315" height="48"/>
-                                <color key="backgroundColor" name="secondary"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="bcc-hr-neq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                <state key="normal" title="تایید">
-                                    <color key="titleColor" name="buttonColor"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="right" secondItem="MVf-ih-ZVt" secondAttribute="right" constant="30" id="Bre-e9-F4P"/>
-                            <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="bottom" secondItem="MVf-ih-ZVt" secondAttribute="bottom" constant="20" id="Nf6-uH-6SR"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="left" secondItem="G0v-Up-gtc" secondAttribute="left" id="PVW-q0-1hv"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="RmU-gR-MWi"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="VoO-gX-iXl"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="top" secondItem="G0v-Up-gtc" secondAttribute="bottom" constant="30" id="XNR-jG-KVd"/>
                             <constraint firstItem="Y6w-Si-ccv" firstAttribute="right" secondItem="6K0-Ct-2n1" secondAttribute="right" id="XQa-fg-9nQ"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="top" secondItem="0B1-GI-j54" secondAttribute="bottom" constant="30" id="Xp5-1D-88G"/>
-                            <constraint firstItem="MVf-ih-ZVt" firstAttribute="left" secondItem="mRQ-Oi-FUQ" secondAttribute="left" constant="30" id="ZnW-7H-vbc"/>
                             <constraint firstItem="mRQ-Oi-FUQ" firstAttribute="right" secondItem="G0v-Up-gtc" secondAttribute="right" constant="30" id="aIu-h0-lzB"/>
                             <constraint firstItem="6K0-Ct-2n1" firstAttribute="right" secondItem="G0v-Up-gtc" secondAttribute="right" id="bAa-g3-aYT"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="top" secondItem="mRQ-Oi-FUQ" secondAttribute="top" constant="30" id="cW8-WO-kzE"/>
@@ -157,15 +140,11 @@
                             <constraint firstItem="Y6w-Si-ccv" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="2" id="gRA-Pc-iXi"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="top" secondItem="6K0-Ct-2n1" secondAttribute="bottom" constant="10" id="jz4-WT-Kod"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="right" secondItem="G0v-Up-gtc" secondAttribute="right" id="kWI-WG-2vA"/>
-                            <constraint firstItem="MVf-ih-ZVt" firstAttribute="centerX" secondItem="mRQ-Oi-FUQ" secondAttribute="centerX" id="nAg-WR-XQr"/>
                             <constraint firstItem="G0v-Up-gtc" firstAttribute="left" secondItem="mRQ-Oi-FUQ" secondAttribute="left" constant="30" id="oW6-4R-XyZ"/>
                             <constraint firstItem="0B1-GI-j54" firstAttribute="width" secondItem="G0v-Up-gtc" secondAttribute="width" id="qAt-YE-uSX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mRQ-Oi-FUQ"/>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="MVf-ih-ZVt"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="jz4-WT-Kod"/>
                                 <exclude reference="XNR-jG-KVd"/>
