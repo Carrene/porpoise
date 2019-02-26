@@ -86,9 +86,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G" userLabel="View textfields">
                                 <rect key="frame" x="20" y="275" width="280" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk3-9c-TtT" userLabel="+++">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk3-9c-TtT" userLabel="vline">
                                         <rect key="frame" x="28" y="89" width="224" height="2"/>
-                                        <color key="backgroundColor" name="buttonColor"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="lqX-VZ-Ua0"/>
                                         </constraints>

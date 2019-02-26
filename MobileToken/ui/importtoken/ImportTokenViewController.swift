@@ -86,7 +86,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func textViewDidChange(_ textView: UITextView) {
         if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
 //            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
-            
             btConfirm.isEnabled = false
         } else {
             btConfirm.isEnabled = true
@@ -96,11 +95,13 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == R.color.buttonColor()?.withAlphaComponent(0.5) {
             textView.text = nil
+            textView.layer.borderColor = R.color.secondary()?.cgColor
             textView.textColor = R.color.buttonColor()
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
+        textView.layer.borderColor = R.color.buttonColor()?.cgColor
         if textViewSmsCode.text.isEmpty {
             textView.text = R.string.localizable.ph_sms_code()
             textView.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
