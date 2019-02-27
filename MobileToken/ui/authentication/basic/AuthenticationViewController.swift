@@ -74,11 +74,13 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! TabBarViewController
+        
         switch segue.identifier {
         case R.segue.authenticationViewController.authenticationToCardList.identifier:
+            let destination = segue.destination as! TabBarViewController
             destination.selectedIndex = 0
         case R.segue.authenticationViewController.authenticationToRegistration.identifier:
+            let destination = segue.destination as! TabBarViewController
             destination.selectedIndex = 1
         default:
             print("error")
