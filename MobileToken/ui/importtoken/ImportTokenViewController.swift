@@ -21,10 +21,15 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = ImportTokenPresenter(view: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        presenter = ImportTokenPresenter(view: self)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     func set(card: Card, cryptoModuleId: Token.CryptoModuleId) {

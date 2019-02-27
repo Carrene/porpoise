@@ -23,6 +23,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fsPagerCollectionView.forEach { pagerView in
             pagerView.reloadData()
         }

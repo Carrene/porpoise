@@ -5,10 +5,15 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         self.delegate = self
+//        lockAppCallBack()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        lockAppCallBack()
+    }
+    
+    func lockAppCallBack() {
         let callBack = {
             let myModalViewController = R.storyboard.authentication.authenticationViewController()
             ScreenLocker.isAutoLocked = true
@@ -18,17 +23,14 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         }
         AuthenticationPatternPresenter.initScreenLocker(callBack: callBack)
     }
+   
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-    }
-
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
+       
         return true
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-
+        
     }
 }

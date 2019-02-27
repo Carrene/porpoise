@@ -1,7 +1,7 @@
 import UIKit
 import  InputMask
 
-class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
+class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
    
     @IBOutlet weak var btConfirmation: UIBarButtonItem!
     @IBOutlet var viewChangeNumber: UIView!
@@ -25,12 +25,12 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.hideKeyboardWhenTappedAround()
-        initUIComponents()
-        initListeners()
+        
+        
     }
     
     func initUIComponents() {
+        self.hideKeyboardWhenTappedAround()
         btConfirmation.isEnabled = false
         viewTextfield.layer.cornerRadius = 5
         viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
