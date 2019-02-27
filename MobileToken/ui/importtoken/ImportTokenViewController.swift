@@ -53,11 +53,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         
         viewCard.layer.cornerRadius = 10
         viewCard.layer.borderWidth = 0
-        viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
+        //viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
         viewCard.layer.shadowRadius = 5
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewCard.layer.shadowOpacity = 0.5
-        viewCard.layer.shadowColor = R.color.buttonColor()!.cgColor
+        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         viewCard.layer.borderWidth = 0
         viewCard.buttonActionSheet.isHidden = true
         
