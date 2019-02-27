@@ -65,6 +65,7 @@
 		AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
+		AC4ECD29222670D400116002 /* ConvertArabicNumbersToEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */; };
 		AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
 		AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */; };
 		AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
@@ -267,6 +268,7 @@
 		AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertArabicNumbersToEnglish.swift; sourceTree = "<group>"; };
 		AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditCardNameAlert.xib; sourceTree = "<group>"; };
 		AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardNameAlertViewController.swift; sourceTree = "<group>"; };
 		AC54E26921FD94C0008764B8 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
@@ -1198,6 +1200,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC60E66222431C200F16215 /* StringSeparator.swift */,
+				AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */,
 			);
 			path = string;
 			sourceTree = "<group>";
@@ -1757,6 +1760,7 @@
 				AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */,
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
 				AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */,
+				AC4ECD29222670D400116002 /* ConvertArabicNumbersToEnglish.swift in Sources */,
 				AFBFE17321F5DEAB00FDAE4A /* ImportTokenPresenter.swift in Sources */,
 				AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */,
 				ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */,

@@ -109,8 +109,8 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     open func textField(_ textField: UITextField,didFillMandatoryCharacters complete: Bool,didExtractValue value: String) {
-        self.inputPhone = value
-    }
+        self.inputPhone = value.replacedArabicPersianDigitsWithEnglish
+        }
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
