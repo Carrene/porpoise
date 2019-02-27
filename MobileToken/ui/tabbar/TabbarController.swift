@@ -15,6 +15,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     func lockAppCallBack() {
         let callBack = {
+            self.view.endEditing(false)
             let myModalViewController = R.storyboard.authentication.authenticationViewController()
             ScreenLocker.isAutoLocked = true
             myModalViewController!.modalPresentationStyle = UIModalPresentationStyle.fullScreen

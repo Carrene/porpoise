@@ -118,6 +118,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let view = getOtpView()
         initOtpView(token: token, view: view)
         view.lbOtp.text = generateOtp(token: token)
+        print("view.text = "+view.lbOtp.text!)
         initProgressBar(view: view, token: token)
     }
     
@@ -152,6 +153,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
 //        otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         otp = otp.separate()
         print("generate "+otp)
+        
         return otp
     }
     
