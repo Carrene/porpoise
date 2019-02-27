@@ -53,15 +53,15 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         viewCard.layer.shadowOpacity = 0.5
         viewCard.layer.shadowColor = R.color.buttonColor()!.cgColor
         viewCard.layer.borderWidth = 0
-        viewCard.imagePlus.isHidden = true
         viewCard.buttonActionSheet.isHidden = true
         
+        viewCard.labelTokenNumber.isHidden = false
         textViewAtmCode.layer.cornerRadius = 5
         textViewSmsCode.layer.cornerRadius = 5
         if self.cryptoModuleId == Token.CryptoModuleId.one {
-            self.viewCard.labelBottomTitle.text = R.string.localizable.everywhere_firstpassword()
+            self.viewCard.labelTokenNumber.text = R.string.localizable.everywhere_firstpassword()
         } else {
-            self.viewCard.labelBottomTitle.text = R.string.localizable.everywhere_secondpassword()
+            self.viewCard.labelTokenNumber.text = R.string.localizable.everywhere_secondpassword()
         }
         textViewAtmCode.delegate = self
         textViewSmsCode.delegate = self

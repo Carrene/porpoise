@@ -33,6 +33,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewAddCard.layer.shadowColor = R.color.primary()?.withAlphaComponent(0.15).cgColor
         viewAddCard.layer.borderWidth = 0
         
+        
         viewCard.layer.cornerRadius = 10
         viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
         viewCard.layer.shadowRadius = 10
@@ -43,9 +44,8 @@ class AddCardPagerViewCell: FSPagerViewCell {
         
         
         viewCard.labelCardName.text = R.string.localizable.lb_cardName()
-        viewCard.labelBottomTitle.text = R.string.localizable.lb_add_new_bank()
         viewCard.stackViewCardNumber.isHidden = true
-        
+        viewCard.labelTokenNumber.isHidden = true
         textFieldCardName.layer.cornerRadius = 5
         textFieldCardName.layer.borderColor = R.color.buttonColor()!.cgColor
         textFieldCardName.layer.borderWidth = 2

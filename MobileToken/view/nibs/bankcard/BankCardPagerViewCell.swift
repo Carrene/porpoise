@@ -45,6 +45,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
         vCard.layer.shadowOpacity = 0.2
         vCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
         vCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
+        vCard.labelTokenNumber.isHidden = true
         
         viewBankCard.layer.borderWidth = 0
         let actionButton = vCard.buttonActionSheet
