@@ -30,6 +30,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     
     override func viewWillAppear(_ animated: Bool) {
         
+        if let cardNumberArray = UIHelper.getMaskCardNumber(number: (card?.number!)!) {
+            for i in 0 ..< cardNumberArray.count {
+                viewCard.labelCardNumber[i].text = cardNumberArray[i]
+            }
+        }
     }
     
     func set(card: Card, cryptoModuleId: Token.CryptoModuleId) {

@@ -288,7 +288,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     
     func addCard(cardName:String ,selectedBank:Bank) {
-        let card = Card(number: "", cardName: cardName, cardType: Card.CardTypeEnum.BANK )
+        let card = Card(number: "________________", cardName: cardName, cardType: Card.CardTypeEnum.BANK )
         cardListPresenter?.addCard(card: card, bank: selectedBank)
     }
     

@@ -55,8 +55,10 @@ class UIHelper {
         SnackBarHelper.init(message: message,color:color, duration: duration).show()
     }
     
-    static func getMaskCardNumber(number: String) -> [String] {
-        //        var maskCardNumber = [String]()
+    static func getMaskCardNumber(number: String) -> [String]? {
+        if number.hasPrefix("_") {
+            return nil
+        }
         var maskCardNumber = [String]()
         let template = number
         
