@@ -87,6 +87,7 @@
 		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
 		AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
 		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
+		AC6D03EF2226BC5A005ECA55 /* BarButtonIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */; };
 		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
 		AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
@@ -290,6 +291,7 @@
 		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
 		AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRealmRepsitory.swift; sourceTree = "<group>"; };
 		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonIndicator.swift; sourceTree = "<group>"; };
 		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
 		AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
@@ -1250,6 +1252,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */,
+				AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */,
 			);
 			path = uiviewcontroller;
 			sourceTree = "<group>";
@@ -1741,6 +1744,7 @@
 				AC16D70021CA31B70094FBED /* AuthenticationPatternContractor.swift in Sources */,
 				AF285FFA219C52F700D8C342 /* PhoneInputViewController.swift in Sources */,
 				ACDFD89F21A4016D00839F97 /* PhoneInputPresenter.swift in Sources */,
+				AC6D03EF2226BC5A005ECA55 /* BarButtonIndicator.swift in Sources */,
 				AF246A8F21999AE400C44E4B /* UserRestRepository.swift in Sources */,
 				AF246A9121999AE400C44E4B /* UserRepositoryProtocol.swift in Sources */,
 				AC16D70521CA31CA0094FBED /* AuthenticationPasswordPresenter.swift in Sources */,

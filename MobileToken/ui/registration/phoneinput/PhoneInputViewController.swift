@@ -19,7 +19,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     @IBOutlet var viewCountry: UIView!
     @IBOutlet var confirmBarButton: UIBarButtonItem!
     @IBOutlet var viewLine: UIView!
-    
+    var activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
     
     private var inputPhone : String!
     private var maskedDelegate: MaskedTextFieldDelegate!
@@ -52,6 +52,8 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         labelChooseYourBank.font = R.font.iranSansMobile(size: 16)
         labelEnterYourPhone.font = R.font.iranSansMobileMedium(size: 12)
         labelChooseCountry.font = R.font.iranSansMobileMedium(size: 12)
+        
+        activityIndicator.color = R.color.secondary()
         
         viewCountry.layer.cornerRadius = 5
         viewCountry.layer.borderColor = R.color.buttonColor()!.cgColor
@@ -121,17 +123,29 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
-
+        
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
             else {
                 selectedBank = banks.first
+                //UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
         }
-
+        else {
+            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
+        }
+        
+    }
+    
+    func startBarIndicator() {
+        self.startBarButtonRightIndicator(activityIndicator: activityIndicator)
+    }
+    
+    func EndBarIndicator() {
+        self.stopBarButtonRightIndicator(btNavigationRight: (self.confirmBarButton)!, activityIndicator: (self.activityIndicator))
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -164,7 +178,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     func navigateToPhoneConfirmation(phone:String) {
-        
         performSegue(withIdentifier: R.segue.phoneInputViewController.phoneInputToActivationSegue, sender: self)
     }
     
