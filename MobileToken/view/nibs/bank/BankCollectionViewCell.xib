@@ -26,20 +26,20 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-MZ-4df">
-                        <rect key="frame" x="5" y="5" width="130" height="80"/>
+                        <rect key="frame" x="10" y="10" width="120" height="70"/>
                         <subviews>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-VS-rhS">
-                                <rect key="frame" x="0.0" y="0.0" width="130" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gb-ag-wDu" userLabel="lbBank">
-                                        <rect key="frame" x="65" y="70" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="60" y="47" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOZ-gV-acZ" userLabel="imgLogo">
-                                        <rect key="frame" x="50" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="45" y="15" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Xdd-ho-kY8"/>
                                             <constraint firstAttribute="height" constant="30" id="Xih-vl-9Jl"/>
@@ -48,17 +48,11 @@
                                 </subviews>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
-                                    <constraint firstItem="tOZ-gV-acZ" firstAttribute="top" secondItem="Cab-VS-rhS" secondAttribute="top" constant="20" id="Qhp-PE-f3b"/>
+                                    <constraint firstItem="tOZ-gV-acZ" firstAttribute="bottom" secondItem="8Gb-ag-wDu" secondAttribute="top" constant="-2" id="1c0-73-fU9"/>
                                     <constraint firstItem="tOZ-gV-acZ" firstAttribute="centerX" secondItem="Cab-VS-rhS" secondAttribute="centerX" id="Qvy-nw-LCH"/>
                                     <constraint firstItem="8Gb-ag-wDu" firstAttribute="centerX" secondItem="Cab-VS-rhS" secondAttribute="centerX" id="Ujs-Rm-QZL"/>
-                                    <constraint firstAttribute="bottom" secondItem="8Gb-ag-wDu" secondAttribute="bottom" constant="10" id="b3s-Mu-KRy"/>
-                                    <constraint firstAttribute="height" constant="80" id="bYP-Le-iY7"/>
+                                    <constraint firstItem="tOZ-gV-acZ" firstAttribute="centerY" secondItem="Cab-VS-rhS" secondAttribute="centerY" constant="-5" id="jw6-SA-YL1"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bYP-Le-iY7"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="primaryLight"/>
@@ -73,10 +67,10 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="7p4-MZ-4df" secondAttribute="bottom" constant="5" id="OO0-7O-OIQ"/>
-                <constraint firstItem="7p4-MZ-4df" firstAttribute="leading" secondItem="Rfm-Bp-Ofg" secondAttribute="leading" constant="5" id="Qcz-Xa-WCz"/>
-                <constraint firstAttribute="trailing" secondItem="7p4-MZ-4df" secondAttribute="trailing" constant="5" id="SYl-ns-Occ"/>
-                <constraint firstItem="7p4-MZ-4df" firstAttribute="top" secondItem="Rfm-Bp-Ofg" secondAttribute="top" constant="5" id="q46-y9-5Jh"/>
+                <constraint firstAttribute="bottom" secondItem="7p4-MZ-4df" secondAttribute="bottom" constant="10" id="OO0-7O-OIQ"/>
+                <constraint firstItem="7p4-MZ-4df" firstAttribute="leading" secondItem="Rfm-Bp-Ofg" secondAttribute="leading" constant="10" id="Qcz-Xa-WCz"/>
+                <constraint firstAttribute="trailing" secondItem="7p4-MZ-4df" secondAttribute="trailing" constant="10" id="SYl-ns-Occ"/>
+                <constraint firstItem="7p4-MZ-4df" firstAttribute="top" secondItem="Rfm-Bp-Ofg" secondAttribute="top" constant="10" id="q46-y9-5Jh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="NxM-zw-Mfb"/>
             <size key="customSize" width="289" height="293"/>
