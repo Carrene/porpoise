@@ -25,6 +25,7 @@
                         <segue destination="Uz4-Om-NCj" kind="show" identifier="navigatoToAuthenticationDefinition" id="laP-Br-1Ad"/>
                         <segue destination="RMI-LM-tRV" kind="show" identifier="navigateToTabbar" id="cQ4-e8-SS2"/>
                         <segue destination="Ofy-a9-fJG" kind="show" identifier="navigatoToImportToken" id="Ydn-vt-sN0"/>
+                        <segue destination="421-IZ-s8T" kind="show" identifier="toapplicationLocked" id="P4s-rU-bjt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEP-2S-8Sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,6 +39,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBu-2F-Pys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2958" y="-1787"/>
+        </scene>
+        <!--ApplicationLockViewController-->
+        <scene sceneID="d5o-Wj-Cl6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ApplicationLock" referencedIdentifier="ApplicationLockViewController" id="421-IZ-s8T" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1u-kC-ygu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2978" y="-2366"/>
         </scene>
         <!--AuthenticationViewController-->
         <scene sceneID="Vq0-ax-Ydg">
