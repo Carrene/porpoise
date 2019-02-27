@@ -31,8 +31,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     override func viewWillAppear(_ animated: Bool) {
         
         if let cardNumberArray = UIHelper.getMaskCardNumber(number: (card?.number!)!) {
-            for i in 0 ..< cardNumberArray.count {
-                viewCard.labelCardNumber[i].text = cardNumberArray[i]
+            let reversedCardNumber = Array(cardNumberArray.reversed())
+            for i in 0 ..< reversedCardNumber.count {
+                viewCard.labelCardNumber[i].text = reversedCardNumber[i]
             }
         }
     }

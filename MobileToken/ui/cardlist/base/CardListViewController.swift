@@ -98,15 +98,20 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 let cards = banks![i].cardList
                 for j in 0 ..< cards.count{
                     let tokenList = banks![i].cardList[j].TokenList
-                    for z in 0 ..< tokenList.count {
-                        if tokens.count == 2 {
-                            banks![i].cardList[j].TokenList.removeAll()
-                        }else if token.id == tokenList[z].id {
-                            banks![i].cardList[j].TokenList.remove(at: z)
+                    for bankToken in tokenList {
+                        if let index = tokenList.index(of: bankToken) {
+                            if token.id == bankToken.id {
+                            banks![i].cardList[j].TokenList.remove(at: index)
+                            
+                            //                        if token.id == bankToken.id {
+                            //                            let index =
+                            //                            banks![i].cardList[j].TokenList.remove()
+                            //                        }
+                            fsPagerCollectionView[i].reloadData()
+                            fsPagerCollectionView[i].layoutIfNeeded()
+                            fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
+                            }
                         }
-                        fsPagerCollectionView[i].reloadData()
-                        fsPagerCollectionView[i].layoutIfNeeded()
-                        fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
                     }
                 }
             }
