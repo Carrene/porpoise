@@ -134,13 +134,7 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         
     }
     
-    @IBAction func onConfirm(_ sender: UIBarButtonItem) {
-        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank)
-        if textFieldCode.text?.count == 6 && self.phoneNumber != "" {
-            
-            presenter?.bind(user:user)
-        }
-    }
+
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
@@ -174,12 +168,13 @@ class PhoneConfirmationViewController: UIViewController,PhoneConfirmationViewPro
         performSegue(withIdentifier: R.segue.phoneConfirmationViewController.phoneConfirmationToCardList, sender: self)
     }
     
-    @IBAction func onConfirmButton(_ sender: UIBarButtonItem) {
-        let user = User(phone: self.phoneNumber, activationCode: textFieldCode.text!, bank: selectedBank!)
-        if textFieldCode.text != "" && self.phoneNumber != "" {
-            presenter?.bind(user:user)
+        @IBAction func onConfirm(_ sender: UIBarButtonItem) {
+            let code = textFieldCode.text!.replacedArabicPersianDigitsWithEnglish
+            let user = User(phone: self.phoneNumber, activationCode: code, bank: selectedBank)
+            if textFieldCode.text?.count == 6 && self.phoneNumber != "" {
+                presenter?.bind(user:user)
+            }
         }
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         (segue.destination as! TabBarViewController).selectedIndex = 1

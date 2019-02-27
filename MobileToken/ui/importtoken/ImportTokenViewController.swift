@@ -137,7 +137,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     @IBAction func onConfirmClicked(_ sender: Any) {
-        let tokenPacket = textViewSmsCode.text + textViewAtmCode.text
+        let sms = textViewSmsCode.text.replacedArabicPersianDigitsWithEnglish
+        let atm = textViewAtmCode.text.replacedArabicPersianDigitsWithEnglish
+        let tokenPacket = sms + atm
         presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
     }
 }

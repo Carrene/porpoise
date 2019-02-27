@@ -49,7 +49,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
 
                 }
                 else {
-                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.buttonColor()!, duration: .short).show()
+                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.snackbarColor()!, duration: .short).show()
                     self?.view.tokenImported(card: card)
                 }
             }
