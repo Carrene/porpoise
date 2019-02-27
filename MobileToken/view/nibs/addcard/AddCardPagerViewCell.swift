@@ -44,7 +44,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         
         
         viewCard.labelCardName.text = R.string.localizable.lb_cardName()
-        viewCard.stackViewCardNumber.isHidden = true
+        viewCard.stackViewCardNumber.isHidden = false
         viewCard.labelTokenNumber.isHidden = true
         textFieldCardName.layer.cornerRadius = 5
         textFieldCardName.layer.borderColor = R.color.buttonColor()!.cgColor

@@ -25,27 +25,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddCardPagerViewCell" id="gTV-IL-0wX" userLabel="BankCardPagerViewCell" customClass="AddCardPagerViewCell" customModule="MobileToken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="251"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="281"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="251"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="281"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-ES-KrH">
-                        <rect key="frame" x="10" y="10" width="280" height="231"/>
+                        <rect key="frame" x="10" y="10" width="280" height="261"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phn-by-T2c" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="115.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="141"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="به کارت خود نام دلخواه اختصاص دهید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzu-YA-pMF">
-                                <rect key="frame" x="74.5" y="163.5" width="185.5" height="20"/>
+                                <rect key="frame" x="74.5" y="189" width="185.5" height="20"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" نام پیشنهادی کارت" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
-                                <rect key="frame" x="20" y="125.5" width="240" height="36"/>
+                                <rect key="frame" x="20" y="151" width="240" height="36"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="CqA-HG-NmI"/>
@@ -55,7 +55,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-BK-Rl0">
-                                <rect key="frame" x="0.0" y="191" width="280" height="40"/>
+                                <rect key="frame" x="0.0" y="221" width="280" height="40"/>
                                 <color key="backgroundColor" name="secondary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="To7-8V-VZ6"/>
@@ -84,9 +84,15 @@
                             <constraint firstAttribute="right" secondItem="k5A-5T-3Eh" secondAttribute="right" constant="20" id="gcN-dE-EI1"/>
                             <constraint firstItem="k5A-5T-3Eh" firstAttribute="top" secondItem="phn-by-T2c" secondAttribute="bottom" constant="10" id="qqm-2A-5wV"/>
                             <constraint firstAttribute="bottom" secondItem="Ssh-BK-Rl0" secondAttribute="bottom" id="tP7-C1-YJH"/>
+                            <constraint firstItem="qzu-YA-pMF" firstAttribute="bottom" secondItem="Ssh-BK-Rl0" secondAttribute="top" constant="-12" id="tcW-l8-Vzy"/>
                             <constraint firstItem="phn-by-T2c" firstAttribute="height" secondItem="k8F-ES-KrH" secondAttribute="height" multiplier="0.5" id="uBO-43-Q8u"/>
                             <constraint firstItem="qzu-YA-pMF" firstAttribute="top" secondItem="k5A-5T-3Eh" secondAttribute="bottom" constant="2" id="wNQ-MI-y5H"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uBO-43-Q8u"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
             </view>
