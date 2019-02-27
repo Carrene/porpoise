@@ -34,8 +34,8 @@ class DeleteTokenAlertViewController: BaseViewController {
         buttonSecondToken.layer.borderColor = R.color.primary()?.cgColor
         
         
-        buttonSecondToken.setTitleColor(R.color.buttonColor(), for: .disabled)
-        buttonFirstToken.setTitleColor(R.color.buttonColor(), for: .disabled)
+        buttonSecondToken.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.15), for: .disabled)
+        buttonFirstToken.setTitleColor(R.color.buttonColor()?.withAlphaComponent(0.15), for: .disabled)
         label.font = R.font.iranSansMobileBold(size: 16)
     }
     
