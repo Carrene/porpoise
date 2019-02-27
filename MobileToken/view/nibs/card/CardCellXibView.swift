@@ -10,8 +10,7 @@ class CardCellXibView: UIView {
     @IBOutlet var labelCardName: UILabel!
     @IBOutlet var stackViewCardNumber: UIStackView!
     @IBOutlet var buttonActionSheet: UIButton!
-    @IBOutlet var labelBottomTitle: UILabel!
-    @IBOutlet var imagePlus: UIImageView!
+    @IBOutlet var labelTokenNumber: UILabel!
     
     @IBOutlet var labelCardNumber: [UILabel]!
     override init(frame: CGRect) {
