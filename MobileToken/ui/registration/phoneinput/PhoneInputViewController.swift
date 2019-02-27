@@ -64,12 +64,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewPhone.layer.cornerRadius = 5
         
         viewTextfields.layer.cornerRadius = 10
-        viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
-        viewTextfields.layer.shadowRadius = 3
-        viewTextfields.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        viewTextfields.layer.shadowOpacity = 0.8
+        //viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
+        viewTextfields.layer.shadowRadius = 5
+        //viewTextfields.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        viewTextfields.layer.shadowOpacity = 0.2
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
+        viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
         textFieldPhoneNumber.delegate = self
         inputMask()

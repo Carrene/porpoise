@@ -13,7 +13,17 @@ class SupportTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.view.layer.cornerRadius = 10
         self.imageLogo.layer.cornerRadius = 5
+        self.imageLogo.layer.backgroundColor = R.color.primaryLight()?.cgColor
+        self.imageLogo.tintColor = R.color.primaryLight()
         self.buttonCall.layer.cornerRadius = 5
+        
+        //viewAddCard.layer.cornerRadius = 10
+        self.view.layer.shadowPath = UIBezierPath(roundedRect: self.view.bounds, cornerRadius: 10).cgPath
+        self.view.layer.shadowRadius = 3
+        self.view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        self.view.layer.shadowOpacity = 0.2
+        self.view.layer.shadowColor = R.color.primary()?.withAlphaComponent(0.15).cgColor
+        self.view.layer.borderWidth = 0
         // Initialization code
     }
 
