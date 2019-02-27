@@ -55,8 +55,8 @@
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbCardName">
-                            <rect key="frame" x="574" y="16" width="0.0" height="0.0"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJy-qy-Uvt" userLabel="lbCardName">
+                            <rect key="frame" x="327" y="16" width="247" height="0.0"/>
                             <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="14"/>
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
@@ -71,7 +71,10 @@
                             <state key="normal" image="more-dots"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSa-E4-cXW" userLabel="labelTokenNumber">
-                            <rect key="frame" x="20" y="16" width="0.0" height="8"/>
+                            <rect key="frame" x="20" y="16" width="0.0" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Iqy-I5-CPf"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                             <color key="textColor" name="buttonColor"/>
                             <nil key="highlightedColor"/>
@@ -123,7 +126,7 @@
                         <constraint firstItem="sZ2-Dk-Vth" firstAttribute="centerX" secondItem="aM0-9I-6w2" secondAttribute="centerX" id="sXw-5W-Nj1"/>
                         <constraint firstAttribute="top" secondItem="i6y-WO-q3H" secondAttribute="top" id="tt0-PZ-AMP"/>
                         <constraint firstItem="HJy-qy-Uvt" firstAttribute="top" secondItem="lUN-2e-ulq" secondAttribute="top" id="uNu-Sc-Sgc"/>
-                        <constraint firstItem="SSa-E4-cXW" firstAttribute="centerY" secondItem="i6y-WO-q3H" secondAttribute="centerY" id="yr6-Kw-c6g"/>
+                        <constraint firstItem="HJy-qy-Uvt" firstAttribute="left" secondItem="lUN-2e-ulq" secondAttribute="right" constant="10" id="zkD-x0-COx"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="RsV-rx-6jy"/>
                 </view>
