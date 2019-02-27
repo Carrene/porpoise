@@ -3,7 +3,7 @@ import  InputMask
 
 class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewProtocol,UITextFieldDelegate {
    
-    @IBOutlet weak var btConfirmation: UIBarButtonItem!
+    @IBOutlet var btConfirmation: UIBarButtonItem!
     @IBOutlet var viewChangeNumber: UIView!
     @IBOutlet var textFieldCode: UITextField!
     @IBOutlet var viewCode: UIView!
@@ -17,10 +17,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     private var selectedBank : Bank?
     private var presenter:PhoneConfirmationPresenterProtocol?
     private var phoneNumber = ""
+    var activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PhoneConfirmationPresenter(view: self)
+        
         showTimer()
     }
     
@@ -35,6 +37,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         viewTextfield.layer.cornerRadius = 5
         viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
         viewTextfield.layer.borderWidth = 2
+        activityIndicator.color = R.color.secondary()
         
         viewCode.layer.shadowPath = UIBezierPath(roundedRect: viewCode.bounds, cornerRadius: 10).cgPath
         viewCode.layer.shadowRadius = 3
@@ -134,7 +137,13 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         
     }
     
-
+    func startBarIndicator() {
+        self.startBarButtonRightIndicator(activityIndicator: activityIndicator)
+    }
+    
+    func EndBarIndicator() {
+        self.stopBarButtonRightIndicator(btNavigationRight: (self.btConfirmation)!, activityIndicator: (self.activityIndicator))
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
@@ -143,13 +152,11 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func showBadRequestError() {
-        
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_activation_code_is_not_valid(), color: R.color.errorDark()!, duration: .short)
         dismissKeyboard()
     }
     
     func showSSMNotAvailable() {
-        
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_SSM_is_not_available(), color: R.color.errorDark()!, duration: .short)
         dismissKeyboard()
     }

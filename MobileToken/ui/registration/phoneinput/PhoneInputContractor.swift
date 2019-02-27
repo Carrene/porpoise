@@ -8,6 +8,8 @@ import Foundation
         func showAlreadyRegistered(phone:String)
         func showPhoneInput()
         func showNetworkError()
+        func startBarIndicator()
+        func EndBarIndicator()
     }
 
     protocol PhoneInputPresenterProtocol {

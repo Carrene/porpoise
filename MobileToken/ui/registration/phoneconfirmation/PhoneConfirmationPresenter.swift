@@ -13,8 +13,10 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     }
     
     func bind(user:User) {
+        self.view.startBarIndicator()
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             let statusCode = response.restDataResponse?.response?.statusCode
+            self?.view.EndBarIndicator()
             switch statusCode {
             case 200:
                 let responseUser = response.value
