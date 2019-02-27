@@ -116,8 +116,12 @@ class Token: Object, Mappable, NSCopying{
         guard let tokenPlusIvPacketBytes =  tokenPacket?.hexaToBytes() else {
             throw ParseTokenException.NumberFormatException
         }
-        
-        let iv = Array(tokenPlusIvPacketBytes[0 ..< 16])
+        var iv = [UInt8](repeating: 0 , count: 16)
+        if tokenPlusIvPacketBytes.count >= 16 {
+            iv = Array(tokenPlusIvPacketBytes[0 ..< 16])
+        }  else {
+            throw ParseTokenException.NumberFormatException
+        }
         
         guard let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes else{
             throw ParseTokenException.InvalidKeyException
