@@ -27,7 +27,9 @@ class AuthenticationPatternViewController: UIViewController, AuthenticationPatte
     
     private func configuareLockViewWithImages() {
         vPattern.didDrawPatternPassword = { (lockView: HUIPatternLockView, count: Int, password: String?) -> Void in
-            guard count > 0 else {
+            guard count > 3 else {
+                self.vPattern.resetDotsState()
+                 UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_pattern_min_point_error(), color: R.color.errorDark()!)
                 return
             }
             self.vPattern.resetDotsState()
