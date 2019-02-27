@@ -54,7 +54,7 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
             containerAppearance.backgroundColor = R.color.primary()
             containerAppearance.cornerRadius = 10
             
-            let cancelButton = CancelButton(title: R.string.localizable.ok()) {
+            let cancelButton = CancelButton(title: R.string.localizable.understand()) {
                 print("You canceled the dialog.")
             }
         

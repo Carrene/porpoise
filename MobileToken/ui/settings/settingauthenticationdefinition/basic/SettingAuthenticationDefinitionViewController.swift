@@ -101,14 +101,45 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
     }
     
     func showDialog() {
-    
-        let popup = PopupDialog(title: "", message: R.string.localizable.alert_force_close())
-        let okButton = DefaultButton(title: "OK", dismissOnTap: false) {
-            exit(0)
+            
+            let alert = PopupDialog(title:R.string.localizable.alert() , message: R.string.localizable.alert_force_close())
+            alert.transitionStyle = .zoomIn
+            alert.buttonAlignment = .horizontal
+            let dialogAppearance = PopupDialogDefaultView.appearance()
+            dialogAppearance.backgroundColor = R.color.primaryDark()
+            dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+            dialogAppearance.titleColor = R.color.buttonColor()
+            dialogAppearance.messageColor = R.color.buttonColor()
+            dialogAppearance.messageFont = R.font.iranSansMobile(size: 14)!
+            
+            let containerAppearance = PopupDialogContainerView.appearance()
+            containerAppearance.backgroundColor = R.color.primary()
+            containerAppearance.cornerRadius = 10
+            
+            let cancelButton = CancelButton(title: R.string.localizable.understand()) {
+                print("You canceled the dialog.")
+            }
+            
+            var cancelButtonAppearance = CancelButton.appearance()
+            cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+            cancelButtonAppearance.titleColor = R.color.primary()
+            cancelButtonAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
+            cancelButtonAppearance.buttonColor = R.color.secondary()
+            
+            
+            alert.addButtons([cancelButton])
+            
+            self.present(alert, animated: true, completion: nil)
+            
         }
-        popup.addButton(okButton)
-        self.present(popup, animated: true, completion: nil)
-    }
+    
+//        let popup = PopupDialog(title: "", message: R.string.localizable.alert_force_close())
+//        let okButton = DefaultButton(title: "OK", dismissOnTap: false) {
+//            exit(0)
+//        }
+//        popup.addButton(okButton)
+//        self.present(popup, animated: true, completion: nil)
+    
 }
 
 extension UISegmentedControl {
