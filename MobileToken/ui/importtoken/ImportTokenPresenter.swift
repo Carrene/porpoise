@@ -16,6 +16,8 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         do {
             try token.validate()
             card.TokenList.append(token)
+            let _ = token.parse()
+            card.number = token.name
 //            card.TokenList.count
             updateCard(card: card)
             

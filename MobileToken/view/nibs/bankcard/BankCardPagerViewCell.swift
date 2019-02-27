@@ -99,9 +99,11 @@ class BankCardPagerViewCell: FSPagerViewCell {
             for token in card.TokenList {
                 token.bank = card.bank
                 if token.parse() {
-                    let cardNumber = UIHelper.getMaskCardNumber(number: token.name!)
-                    for i in 0 ..< cardNumber.count {
-                        vCard.labelCardNumber[i].text = cardNumber[i]
+                    if let cardNumber = UIHelper.getMaskCardNumber(number: token.name!){
+                        
+                        for i in 0 ..< cardNumber.count {
+                            vCard.labelCardNumber[i].text = cardNumber[i]
+                        }
                     }
                     iniOtp(token: token)
                 }
