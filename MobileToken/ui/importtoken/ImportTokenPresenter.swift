@@ -11,14 +11,12 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
     
     func importToken(tokenPacket: String, card: Card, cryptoModuleId: Token.CryptoModuleId) {
         let token = Token(tokenPaket: tokenPacket, bank: card.bank, cryptoModuleId: cryptoModuleId)
-//        let isSuccessful = token.parse()
        
         do {
             try token.validate()
             card.TokenList.append(token)
             let _ = token.parse()
             card.number = token.name
-//            card.TokenList.count
             updateCard(card: card)
             
         } catch ParseTokenException.InvalidChecksumException{
