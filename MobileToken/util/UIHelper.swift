@@ -57,7 +57,7 @@ class UIHelper {
     
     static func getMaskCardNumber(number: String) -> [String]? {
         if number.hasPrefix("_") {
-            return nil
+            return ["____", "____", "____", "____"]
         }
         var maskCardNumber = [String]()
         let template = number
