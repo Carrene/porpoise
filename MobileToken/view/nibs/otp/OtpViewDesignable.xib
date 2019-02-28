@@ -49,7 +49,7 @@
                         <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="b1r-eL-wJl" customClass="UIProgressView">
                             <rect key="frame" x="0.0" y="0.0" width="198" height="55"/>
                             <color key="backgroundColor" name="primaryDark"/>
-                            <color key="tintColor" name="primary"/>
+                            <color key="tintColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمزاول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gge-C6-Uez" userLabel="lbPass">
                             <rect key="frame" x="130" y="0.0" width="60" height="55"/>
@@ -104,9 +104,6 @@
         <image name="copy" width="15" height="18"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primary">
-            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryDark">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

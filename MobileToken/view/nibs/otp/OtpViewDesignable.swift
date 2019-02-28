@@ -54,21 +54,7 @@ class OtpViewDesignable: UIView {
         btCopy.layer.cornerRadius = 5
         vProgress.progressViewStyle = .bar
         lbOtp.font = R.font.iranSansMobileFaNum(size: 22)
-        btCopy.layer.shadowPath = UIBezierPath(roundedRect: btCopy.bounds, cornerRadius: 5).cgPath
-        btCopy.layer.shadowRadius = 3
-        btCopy.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        btCopy.layer.shadowOpacity = 0.2
-        btCopy.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
-        vComponent.layer.shadowPath = UIBezierPath(roundedRect: vComponent.bounds, cornerRadius: 5).cgPath
-        vComponent.layer.shadowRadius = 3
-        vComponent.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        vComponent.layer.shadowOpacity = 0.2
-        vComponent.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        vComponent.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
-        
-       vComponent.layer.borderWidth = 0.5
-        vComponent.layer.borderColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.initCopy))
         contentView.addGestureRecognizer(tap)
     }

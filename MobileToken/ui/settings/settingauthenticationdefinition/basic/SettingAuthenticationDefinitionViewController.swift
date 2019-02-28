@@ -35,7 +35,6 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
         scAuthenticationType.layer.shadowRadius = 5
         scAuthenticationType.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         scAuthenticationType.layer.shadowOpacity = 0.15
-        scAuthenticationType.removeBorders()
         
         embedVCPattern()
     }
@@ -133,33 +132,7 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
             
         }
     
-//        let popup = PopupDialog(title: "", message: R.string.localizable.alert_force_close())
-//        let okButton = DefaultButton(title: "OK", dismissOnTap: false) {
-//            exit(0)
-//        }
-//        popup.addButton(okButton)
-//        self.present(popup, animated: true, completion: nil)
     
 }
 
-extension UISegmentedControl {
-    func removeBorders() {
-        setBackgroundImage(imageWithColor(color: R.color.primary()!), for: .normal, barMetrics: .default)
-        setBackgroundImage(imageWithColor(color: R.color.secondary()!), for: .selected, barMetrics: .default)
-        setBackgroundImage(imageWithColor(color: R.color.primary()!), for: .focused, barMetrics: .default)
-        setBackgroundImage(imageWithColor(color: R.color.primary()!), for: .highlighted, barMetrics: .default)
-        //setDividerImage(imageWithColor(color: UIColor.clear), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-    }
-    
-    // create a 1x1 image with this color
-    private func imageWithColor(color: UIColor) -> UIImage {
-        let rect = CGRect(x: 0.0, y: 0.0, width:  1.0, height: 1.0)
-        UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(color.cgColor);
-        context!.fill(rect);
-        let image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return image!
-    }
-}
+

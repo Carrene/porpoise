@@ -31,17 +31,17 @@ class BankCardPagerViewCell: FSPagerViewCell {
 //        }
         
         viewBankCard.layer.cornerRadius = 10
-        viewBankCard.layer.shadowPath = UIBezierPath(roundedRect: viewBankCard.bounds, cornerRadius: 10).cgPath
+        //viewBankCard.layer.shadowPath = UIBezierPath(roundedRect: viewBankCard.bounds, cornerRadius: 10).cgPath
         viewBankCard.layer.shadowRadius = 5
         viewBankCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        viewBankCard.layer.shadowOpacity = 0.15
+        viewBankCard.layer.shadowOpacity = 0.1
         viewBankCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.15).cgColor
         viewBankCard.layer.borderWidth = 0
         
         vCard.layer.cornerRadius = 10
         vCard.layer.shadowPath = UIBezierPath(roundedRect: vCard.bounds, cornerRadius: 10).cgPath
-        vCard.layer.shadowRadius = 3
-        vCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        vCard.layer.shadowRadius = 5
+        vCard.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         vCard.layer.shadowOpacity = 0.2
         vCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
         vCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
