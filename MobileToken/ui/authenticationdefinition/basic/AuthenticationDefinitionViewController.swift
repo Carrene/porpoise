@@ -51,7 +51,7 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
             dialogAppearance.messageFont = R.font.iranSansMobile(size: 14)!
         
             let containerAppearance = PopupDialogContainerView.appearance()
-            containerAppearance.backgroundColor = R.color.primary()
+            containerAppearance.backgroundColor = R.color.primaryLight()
             containerAppearance.cornerRadius = 10
             
             let cancelButton = CancelButton(title: R.string.localizable.understand()) {
