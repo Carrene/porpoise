@@ -44,7 +44,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     override func viewWillAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
-        textFieldPhoneNumber.text = ""
+        //textFieldPhoneNumber.text = ""
         collectionViewbank.reloadData()
     }
     
