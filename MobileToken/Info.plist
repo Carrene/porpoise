@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPrincipalClass</key>
-	<string>MyApplication</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -11,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(BUNDLE_IDENTIFIER_SUFFIX)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,13 +17,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>rc-0.1.0</string>
+	<string>0.1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>InitialToken</key>
 	<string>$(INITIAL_TOKEN)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPrincipalClass</key>
+	<string>MyApplication</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>IRANSansMobile-Bold.ttf</string>
@@ -63,10 +63,10 @@
 	<string>$(URL_PORT)</string>
 	<key>Web service scheme</key>
 	<string>$(URL_SCHEME)</string>
-	<key>Web service token</key>
-	<string>$(INITIAL_TOKEN)</string>
 	<key>Web service self signed</key>
 	<string>$(SELF_SIGNED)</string>
+	<key>Web service token</key>
+	<string>$(INITIAL_TOKEN)</string>
 	<key>Web service version</key>
 	<string>$(VERSION)</string>
 </dict>
