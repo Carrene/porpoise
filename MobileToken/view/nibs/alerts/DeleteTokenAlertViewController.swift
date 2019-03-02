@@ -63,7 +63,7 @@ class DeleteTokenAlertViewController: BaseViewController {
         else {
             buttonFirstToken?.isSelected = false
             buttonFirstToken.layer.borderColor = R.color.primaryLight()?.cgColor
-            buttonFirstToken.setTitleColor(R.color.buttonColor(), for: .normal)
+            buttonFirstToken.setTitleColor(R.color.secondary(), for: .normal)
         }
         
     }
@@ -77,7 +77,7 @@ class DeleteTokenAlertViewController: BaseViewController {
         else {
             buttonSecondToken?.isSelected = false
             buttonSecondToken.layer.borderColor = R.color.primaryLight()?.cgColor
-            buttonSecondToken.setTitleColor(R.color.buttonColor(), for: .normal)
+            buttonSecondToken.setTitleColor(R.color.secondary(), for: .normal)
             
         }
     }
