@@ -116,10 +116,10 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
             containerAppearance.cornerRadius = 10
             
             let cancelButton = CancelButton(title: R.string.localizable.understand()) {
-                print("You canceled the dialog.")
+               exit(0)
             }
             
-            var cancelButtonAppearance = CancelButton.appearance()
+            let cancelButtonAppearance = CancelButton.appearance()
             cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
             cancelButtonAppearance.titleColor = R.color.primary()
             cancelButtonAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
