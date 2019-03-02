@@ -34,7 +34,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         } catch ParseTokenException.IllegalStateException {
             SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
         } catch {
-            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .short).show()
+            SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
         }
     }
     
@@ -49,7 +49,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
 
                 }
                 else {
-                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.snackbarColor()!, duration: .short).show()
+                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.snackbarColor()!, duration: .middle).show()
                     self?.view.tokenImported(card: card)
                 }
             }

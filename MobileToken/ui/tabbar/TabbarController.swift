@@ -9,7 +9,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         lockAppCallBack()
     }
     

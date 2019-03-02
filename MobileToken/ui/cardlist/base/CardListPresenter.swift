@@ -71,10 +71,10 @@ class CardListPresenter : CardListPresenterProtocol {
         let repository = TokenRepository()
         let onDataResponse : ((RepositoryResponse<[Token]>) -> ()) =  { [weak self] response in
             if response.error != nil {
-                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_unsuccessfully(), color: R.color.errorDark()!, duration: .short).show()
+                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_unsuccessfully(), color: R.color.errorDark()!, duration: .middle).show()
             } else {
                 self?.view.deleteToken(tokens: response.value!)
-                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.snackbarColor()!, duration: .short).show()
+                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.snackbarColor()!, duration: .middle).show()
             }
         }
         repository.delete(tokens: tokens, onDone: onDataResponse)
