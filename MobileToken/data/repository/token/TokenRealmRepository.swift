@@ -49,8 +49,5 @@ class TokenRealmRepository: TokenRepositoryProtocol {
         } catch {
             onDone?(RepositoryResponse(error: error))
         }
-        
     }
-    
-    
 }
