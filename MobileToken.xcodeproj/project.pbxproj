@@ -109,7 +109,7 @@
 		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
 		ACEC112C222BF87100AF933B /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC112B222BF87100AF933B /* JsonParser.swift */; };
-		ACEC1130222BFA7300AF933B /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEC112F222BFA7300AF933B /* banks.json */; };
+		ACEC1132222BFAD600AF933B /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEC1131222BFAD600AF933B /* banks.json */; };
 		ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
 		AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
@@ -316,7 +316,7 @@
 		ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationContractor.swift; sourceTree = "<group>"; };
 		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		ACEC112B222BF87100AF933B /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
-		ACEC112F222BFA7300AF933B /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
+		ACEC1131222BFAD600AF933B /* banks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AF020850220175E80021856A /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
@@ -1293,7 +1293,6 @@
 		AFE81B162196D26C00AA0AF2 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				ACEC112F222BFA7300AF933B /* banks.json */,
 				AC16D72921CA36220094FBED /* CryptoUtil.swift */,
 				AF246A972199A59100C44E4B /* JwtPersistable.swift */,
 				ACCAF7AF21DB6BD20057402B /* MyApplication.swift */,
@@ -1304,6 +1303,7 @@
 				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
 				AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */,
 				ACEC112B222BF87100AF933B /* JsonParser.swift */,
+				ACEC1131222BFAD600AF933B /* banks.json */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1503,7 +1503,7 @@
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */,
 				AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */,
-				ACEC1130222BFA7300AF933B /* banks.json in Resources */,
+				ACEC1132222BFAD600AF933B /* banks.json in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
