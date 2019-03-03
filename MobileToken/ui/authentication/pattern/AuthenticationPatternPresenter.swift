@@ -35,7 +35,6 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
             }
         } else {
             self.authentication?.failAttempt()
-            //print(self.authentication?.remainedAttempts)
             updateAuthentication(authentication: self.authentication!)
             self.authenticationPatternView.showWrongPatternError(remainAttemps:(self.authentication?.remainedAttempts)!)
             updateAuthentication(authentication: self.authentication!)
