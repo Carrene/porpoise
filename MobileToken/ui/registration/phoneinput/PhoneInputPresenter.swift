@@ -32,7 +32,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
     }
     
     func getBankList(){
-
+        //let bankname = JsonParser.readJSONFromFile(fileName: R.file.banksJson.name)
         let banks = [Bank(name: Bank.BankName.AYANDE, logoResourceId: R.image.bankAyandehLogo.name),Bank(name: Bank.BankName.SADERAT, logoResourceId: R.image.bankSaderatLogo.name)]
         view.setBankList(banks: banks)
     }
