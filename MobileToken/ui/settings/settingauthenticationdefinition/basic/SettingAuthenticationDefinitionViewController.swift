@@ -105,7 +105,7 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
             alert.transitionStyle = .zoomIn
             alert.buttonAlignment = .horizontal
             let dialogAppearance = PopupDialogDefaultView.appearance()
-            dialogAppearance.backgroundColor = R.color.primaryDark()
+            dialogAppearance.backgroundColor = R.color.primary()
             dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
             dialogAppearance.titleColor = R.color.buttonColor()
             dialogAppearance.messageColor = R.color.buttonColor()
