@@ -312,7 +312,7 @@
 		AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
 		AF51CBCE222BF07C003051D7 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
-		AF51CBDA222BF7CA003051D7 /* debug-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF51CBD9222BF7C9003051D7 /* debug-Info.plist */; };
+		AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF51CBD9222BF7C9003051D7 /* Info-debug.plist */; };
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
 		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
@@ -519,7 +519,7 @@
 		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF51CBD7222BF07C003051D7 /* MobileTokenDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTokenDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF51CBD9222BF7C9003051D7 /* debug-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "debug-Info.plist"; sourceTree = "<group>"; };
+		AF51CBD9222BF7C9003051D7 /* Info-debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
 		AF52C34C22155B8500639DA3 /* CarreneDevRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevRelease.xcconfig; sourceTree = "<group>"; };
 		AF52C34D22155BA800639DA3 /* ISCOPRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPRelease.xcconfig; sourceTree = "<group>"; };
 		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
@@ -1290,7 +1290,8 @@
 			isa = PBXGroup;
 			children = (
 				AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */,
-				AF51CBD9222BF7C9003051D7 /* debug-Info.plist */,
+				AF51CBD9222BF7C9003051D7 /* Info-debug.plist */,
+				AFB39B5B2189A6A700302624 /* Info.plist */,
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
 				AF02085422017D630021856A /* R.generated.swift */,
@@ -1299,7 +1300,6 @@
 				AFE81B372196E10500AA0AF2 /* error */,
 				AFE81B0B2196CCDA00AA0AF2 /* extensions */,
 				AC2676BA21B52B6900524636 /* framework */,
-				AFB39B5B2189A6A700302624 /* Info.plist */,
 				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AFE81B162196D26C00AA0AF2 /* util */,
@@ -1751,7 +1751,7 @@
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
-				AF51CBDA222BF7CA003051D7 /* debug-Info.plist in Resources */,
+				AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */,
 				AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
@@ -2431,7 +2431,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
-				INFOPLIST_FILE = "MobileToken/debug-Info.plist";
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2458,7 +2458,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
-				INFOPLIST_FILE = "MobileToken/debug-Info.plist";
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2485,7 +2485,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
-				INFOPLIST_FILE = "MobileToken/debug-Info.plist";
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2512,7 +2512,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
-				INFOPLIST_FILE = "MobileToken/debug-Info.plist";
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

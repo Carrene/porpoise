@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initialIQKeyboard()
         initPrinit()
         initialFirebase(application: application)
+        
+        
+        
+        
         return true
     }
     
@@ -47,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initPrinit() {
+        print(Bundle.main.bundleIdentifier!)
         print("\(String(describing: RealmConfiguration.sensitiveDataConfiguration().fileURL))")
         print((Bundle.main.infoDictionary?["Web service port"] as! String))
         print((Bundle.main.infoDictionary?["Web service host"] as! String).replacingOccurrences(of: "\\", with: ""))
