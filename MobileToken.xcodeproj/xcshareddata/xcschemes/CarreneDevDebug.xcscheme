@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AFB39B4B2189A6A600302624"
-            BuildableName = "MobileToken.app"
-            BlueprintName = "MobileToken"
+            BlueprintIdentifier = "AF51CB21222BF07C003051D7"
+            BuildableName = "MobileTokenDebug.app"
+            BlueprintName = "MobileTokenDebug"
             ReferencedContainer = "container:MobileToken.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AFB39B4B2189A6A600302624"
-            BuildableName = "MobileToken.app"
-            BlueprintName = "MobileToken"
+            BlueprintIdentifier = "AF51CB21222BF07C003051D7"
+            BuildableName = "MobileTokenDebug.app"
+            BlueprintName = "MobileTokenDebug"
             ReferencedContainer = "container:MobileToken.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

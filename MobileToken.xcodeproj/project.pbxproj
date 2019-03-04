@@ -146,6 +146,175 @@
 		AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
 		AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
+		AF51CB25222BF07C003051D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
+		AF51CB26222BF07C003051D7 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
+		AF51CB27222BF07C003051D7 /* UnsupportedOperationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */; };
+		AF51CB28222BF07C003051D7 /* HalfColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46F6BF2225651400BF611A /* HalfColorLabel.swift */; };
+		AF51CB29222BF07C003051D7 /* AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */; };
+		AF51CB2A222BF07C003051D7 /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
+		AF51CB2B222BF07C003051D7 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
+		AF51CB2C222BF07C003051D7 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */; };
+		AF51CB2D222BF07C003051D7 /* AuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71021CA322C0094FBED /* AuthenticationDefinitionViewController.swift */; };
+		AF51CB2E222BF07C003051D7 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
+		AF51CB2F222BF07C003051D7 /* UserRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8C21999AE400C44E4B /* UserRealmRepository.swift */; };
+		AF51CB30222BF07C003051D7 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
+		AF51CB31222BF07C003051D7 /* AuthenticationPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FD21CA31B70094FBED /* AuthenticationPatternContractor.swift */; };
+		AF51CB32222BF07C003051D7 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */; };
+		AF51CB33222BF07C003051D7 /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
+		AF51CB34222BF07C003051D7 /* BarButtonIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */; };
+		AF51CB35222BF07C003051D7 /* UserRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8B21999AE400C44E4B /* UserRestRepository.swift */; };
+		AF51CB36222BF07C003051D7 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8D21999AE400C44E4B /* UserRepositoryProtocol.swift */; };
+		AF51CB37222BF07C003051D7 /* AuthenticationPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70221CA31CA0094FBED /* AuthenticationPasswordPresenter.swift */; };
+		AF51CB38222BF07C003051D7 /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
+		AF51CB39222BF07C003051D7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A83219948F300C44E4B /* Token.swift */; };
+		AF51CB3A222BF07C003051D7 /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
+		AF51CB3B222BF07C003051D7 /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
+		AF51CB3C222BF07C003051D7 /* AuthenticationDefinitionPatternpresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71621CA325C0094FBED /* AuthenticationDefinitionPatternpresenter.swift */; };
+		AF51CB3D222BF07C003051D7 /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
+		AF51CB3E222BF07C003051D7 /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */; };
+		AF51CB3F222BF07C003051D7 /* Base64urlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */; };
+		AF51CB40222BF07C003051D7 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
+		AF51CB41222BF07C003051D7 /* AuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71B21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift */; };
+		AF51CB42222BF07C003051D7 /* AuthenticationRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */; };
+		AF51CB43222BF07C003051D7 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */; };
+		AF51CB44222BF07C003051D7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B342196E05900AA0AF2 /* Repository.swift */; };
+		AF51CB45222BF07C003051D7 /* EditCardNameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */; };
+		AF51CB46222BF07C003051D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
+		AF51CB47222BF07C003051D7 /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */; };
+		AF51CB48222BF07C003051D7 /* ConvertArabicNumbersToEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */; };
+		AF51CB49222BF07C003051D7 /* ImportTokenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */; };
+		AF51CB4A222BF07C003051D7 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */; };
+		AF51CB4B222BF07C003051D7 /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */; };
+		AF51CB4C222BF07C003051D7 /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
+		AF51CB4D222BF07C003051D7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
+		AF51CB4E222BF07C003051D7 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
+		AF51CB4F222BF07C003051D7 /* AuthenticationPasswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70421CA31CA0094FBED /* AuthenticationPasswordContractor.swift */; };
+		AF51CB50222BF07C003051D7 /* ApplicationLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */; };
+		AF51CB51222BF07C003051D7 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72921CA36220094FBED /* CryptoUtil.swift */; };
+		AF51CB52222BF07C003051D7 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
+		AF51CB53222BF07C003051D7 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A852199762700C44E4B /* AuthenticationRepository.swift */; };
+		AF51CB54222BF07C003051D7 /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
+		AF51CB55222BF07C003051D7 /* NetHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B232196D4E700AA0AF2 /* NetHex.swift */; };
+		AF51CB56222BF07C003051D7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70821CA32130094FBED /* AuthenticationViewController.swift */; };
+		AF51CB57222BF07C003051D7 /* AuthenticationTypeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */; };
+		AF51CB58222BF07C003051D7 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC021CFB5D700B15B90 /* Setting.swift */; };
+		AF51CB59222BF07C003051D7 /* AuthenticationPatternPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FE21CA31B70094FBED /* AuthenticationPatternPresenter.swift */; };
+		AF51CB5A222BF07C003051D7 /* LatestUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */; };
+		AF51CB5B222BF07C003051D7 /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
+		AF51CB5C222BF07C003051D7 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
+		AF51CB5D222BF07C003051D7 /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B332196E05900AA0AF2 /* RepositoryResponse.swift */; };
+		AF51CB5E222BF07C003051D7 /* AuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70F21CA322C0094FBED /* AuthenticationDefinitionContractor.swift */; };
+		AF51CB5F222BF07C003051D7 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */; };
+		AF51CB60222BF07C003051D7 /* AuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71521CA325C0094FBED /* AuthenticationDefinitionPatternViewController.swift */; };
+		AF51CB61222BF07C003051D7 /* TokenRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */; };
+		AF51CB62222BF07C003051D7 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A942199A2CE00C44E4B /* Interceptor.swift */; };
+		AF51CB63222BF07C003051D7 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
+		AF51CB64222BF07C003051D7 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* CardListViewController.swift */; };
+		AF51CB65222BF07C003051D7 /* SelectBankViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */; };
+		AF51CB66222BF07C003051D7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
+		AF51CB67222BF07C003051D7 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
+		AF51CB68222BF07C003051D7 /* StringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC60E66222431C200F16215 /* StringSeparator.swift */; };
+		AF51CB69222BF07C003051D7 /* SupportTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB6B221D67A7003F3BE6 /* SupportTableViewAdapter.swift */; };
+		AF51CB6A222BF07C003051D7 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
+		AF51CB6B222BF07C003051D7 /* BankRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA0219AB17F00C44E4B /* BankRepository.swift */; };
+		AF51CB6C222BF07C003051D7 /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */; };
+		AF51CB6D222BF07C003051D7 /* CardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */; };
+		AF51CB6E222BF07C003051D7 /* ScreenLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72B21CA38550094FBED /* ScreenLocker.swift */; };
+		AF51CB6F222BF07C003051D7 /* LockScreenTimeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */; };
+		AF51CB70222BF07C003051D7 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
+		AF51CB71222BF07C003051D7 /* UserDefaultsJwtPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */; };
+		AF51CB72222BF07C003051D7 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70A21CA32130094FBED /* AuthenticationPresenter.swift */; };
+		AF51CB73222BF07C003051D7 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
+		AF51CB74222BF07C003051D7 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA7219ACAC600C44E4B /* CardRepository.swift */; };
+		AF51CB75222BF07C003051D7 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
+		AF51CB76222BF07C003051D7 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
+		AF51CB77222BF07C003051D7 /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */; };
+		AF51CB78222BF07C003051D7 /* AuthenticationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70921CA32130094FBED /* AuthenticationContractor.swift */; };
+		AF51CB79222BF07C003051D7 /* BankRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9C219AA57B00C44E4B /* BankRepositoryProtocol.swift */; };
+		AF51CB7A222BF07C003051D7 /* BankRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */; };
+		AF51CB7B222BF07C003051D7 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
+		AF51CB7C222BF07C003051D7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */; };
+		AF51CB7D222BF07C003051D7 /* JwtPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A972199A59100C44E4B /* JwtPersistable.swift */; };
+		AF51CB7E222BF07C003051D7 /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
+		AF51CB7F222BF07C003051D7 /* SnackbarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */; };
+		AF51CB80222BF07C003051D7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8A21999AE400C44E4B /* UserRepository.swift */; };
+		AF51CB81222BF07C003051D7 /* BankCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */; };
+		AF51CB82222BF07C003051D7 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A932199A2CE00C44E4B /* ApiHelper.swift */; };
+		AF51CB83222BF07C003051D7 /* RealmConfiguration copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */; };
+		AF51CB84222BF07C003051D7 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
+		AF51CB85222BF07C003051D7 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
+		AF51CB86222BF07C003051D7 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAF7AF21DB6BD20057402B /* MyApplication.swift */; };
+		AF51CB87222BF07C003051D7 /* AuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71421CA325C0094FBED /* AuthenticationDefinitionPatternContractor.swift */; };
+		AF51CB88222BF07C003051D7 /* TokenRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */; };
+		AF51CB89222BF07C003051D7 /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */; };
+		AF51CB8A222BF07C003051D7 /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
+		AF51CB8B222BF07C003051D7 /* BankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */; };
+		AF51CB8C222BF07C003051D7 /* AuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71A21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift */; };
+		AF51CB8D222BF07C003051D7 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */; };
+		AF51CB8E222BF07C003051D7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
+		AF51CB8F222BF07C003051D7 /* AuthenticationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70321CA31CA0094FBED /* AuthenticationPasswordViewController.swift */; };
+		AF51CB90222BF07C003051D7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
+		AF51CB91222BF07C003051D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
+		AF51CB92222BF07C003051D7 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
+		AF51CB93222BF07C003051D7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
+		AF51CB94222BF07C003051D7 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
+		AF51CB95222BF07C003051D7 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
+		AF51CB96222BF07C003051D7 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
+		AF51CB97222BF07C003051D7 /* HideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */; };
+		AF51CB98222BF07C003051D7 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */; };
+		AF51CB99222BF07C003051D7 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
+		AF51CB9A222BF07C003051D7 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
+		AF51CB9B222BF07C003051D7 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAE219AE0A500C44E4B /* TokenRepository.swift */; };
+		AF51CB9C222BF07C003051D7 /* SettingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */; };
+		AF51CB9D222BF07C003051D7 /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
+		AF51CB9E222BF07C003051D7 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
+		AF51CB9F222BF07C003051D7 /* SettingAuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */; };
+		AF51CBA1222BF07C003051D7 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
+		AF51CBA3222BF07C003051D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
+		AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
+		AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
+		AF51CBA6222BF07C003051D7 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
+		AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
+		AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
+		AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
+		AF51CBAA222BF07C003051D7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
+		AF51CBAB222BF07C003051D7 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */; };
+		AF51CBAC222BF07C003051D7 /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
+		AF51CBAD222BF07C003051D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
+		AF51CBAE222BF07C003051D7 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
+		AF51CBAF222BF07C003051D7 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
+		AF51CBB0222BF07C003051D7 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */; };
+		AF51CBB1222BF07C003051D7 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
+		AF51CBB2222BF07C003051D7 /* IRANSansMobile(FaNum).ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0C21BFA1CE00B80412 /* IRANSansMobile(FaNum).ttf */; };
+		AF51CBB3222BF07C003051D7 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
+		AF51CBB4222BF07C003051D7 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
+		AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
+		AF51CBB6222BF07C003051D7 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
+		AF51CBB7222BF07C003051D7 /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
+		AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
+		AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
+		AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
+		AF51CBBB222BF07C003051D7 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
+		AF51CBBC222BF07C003051D7 /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
+		AF51CBBD222BF07C003051D7 /* html_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76D21FDD12F00DFDD33 /* html_copy.png */; };
+		AF51CBBE222BF07C003051D7 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
+		AF51CBBF222BF07C003051D7 /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */; };
+		AF51CBC0222BF07C003051D7 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
+		AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */; };
+		AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
+		AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
+		AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
+		AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
+		AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
+		AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
+		AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
+		AF51CBC9222BF07C003051D7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC16D73921CA8B640094FBED /* Authentication.storyboard */; };
+		AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
+		AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
+		AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
+		AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
+		AF51CBCE222BF07C003051D7 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
+		AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF51CBD9222BF7C9003051D7 /* Info-debug.plist */; };
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
 		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
@@ -353,13 +522,10 @@
 		AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-r.plist"; sourceTree = "<group>"; };
 		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF51CBD7222BF07C003051D7 /* MobileTokenDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTokenDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF51CBD9222BF7C9003051D7 /* Info-debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
 		AF52C34C22155B8500639DA3 /* CarreneDevRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevRelease.xcconfig; sourceTree = "<group>"; };
 		AF52C34D22155BA800639DA3 /* ISCOPRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPRelease.xcconfig; sourceTree = "<group>"; };
-		AF595927221970A60049DAAC /* MobileToken copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy-Info.plist"; sourceTree = "<absolute>"; };
-		AF5959DA22197ED20049DAAC /* MobileToken copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy2-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy2-Info.plist"; sourceTree = "<absolute>"; };
-		AF595A8B22197F240049DAAC /* MobileToken copy 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy 2-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy 2-Info.plist"; sourceTree = "<absolute>"; };
-		AF595B3C22197F270049DAAC /* MobileToken copy 3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy 3-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy 3-Info.plist"; sourceTree = "<absolute>"; };
-		AF595BED22197F330049DAAC /* MobileToken copy 4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy 4-Info.plist"; path = "/Users/hamedakhlaghi/main/projects/iOS/porpoise/MobileToken copy 4-Info.plist"; sourceTree = "<absolute>"; };
 		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
 		AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveArrayElementExtention.swift; sourceTree = "<group>"; };
 		AF9F219822144F08005088B9 /* CarreneDevDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevDebug.xcconfig; sourceTree = "<group>"; };
@@ -413,6 +579,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF51CBA0222BF07C003051D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF51CBA1222BF07C003051D7 /* Pods_MobileToken.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFB39B492189A6A600302624 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1102,11 +1276,6 @@
 				AFB39B4D2189A6A600302624 /* Products */,
 				510385C2178795F3E0C5F799 /* Pods */,
 				A0846E286139B9158EA3297A /* Frameworks */,
-				AF595927221970A60049DAAC /* MobileToken copy-Info.plist */,
-				AF5959DA22197ED20049DAAC /* MobileToken copy2-Info.plist */,
-				AF595A8B22197F240049DAAC /* MobileToken copy 2-Info.plist */,
-				AF595B3C22197F270049DAAC /* MobileToken copy 3-Info.plist */,
-				AF595BED22197F330049DAAC /* MobileToken copy 4-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1116,6 +1285,7 @@
 				AFB39B4C2189A6A600302624 /* MobileToken.app */,
 				AFB39B602189A6A700302624 /* MobileTokenTests.xctest */,
 				AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */,
+				AF51CBD7222BF07C003051D7 /* MobileTokenDebug.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1124,6 +1294,8 @@
 			isa = PBXGroup;
 			children = (
 				AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */,
+				AF51CBD9222BF7C9003051D7 /* Info-debug.plist */,
+				AFB39B5B2189A6A700302624 /* Info.plist */,
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
 				AF02085422017D630021856A /* R.generated.swift */,
@@ -1132,7 +1304,6 @@
 				AFE81B372196E10500AA0AF2 /* error */,
 				AFE81B0B2196CCDA00AA0AF2 /* extensions */,
 				AC2676BA21B52B6900524636 /* framework */,
-				AFB39B5B2189A6A700302624 /* Info.plist */,
 				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AFE81B162196D26C00AA0AF2 /* util */,
@@ -1386,6 +1557,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF51CB21222BF07C003051D7 /* MobileTokenDebug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF51CBD2222BF07C003051D7 /* Build configuration list for PBXNativeTarget "MobileTokenDebug" */;
+			buildPhases = (
+				AF51CB22222BF07C003051D7 /* [CP] Check Pods Manifest.lock */,
+				AF51CB23222BF07C003051D7 /* ShellScript */,
+				AF51CB24222BF07C003051D7 /* Sources */,
+				AF51CBA0222BF07C003051D7 /* Frameworks */,
+				AF51CBA2222BF07C003051D7 /* Resources */,
+				AF51CBCF222BF07C003051D7 /* [CP] Embed Pods Frameworks */,
+				AF51CBD0222BF07C003051D7 /* ShellScript */,
+				AF51CBD1222BF07C003051D7 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileTokenDebug;
+			productName = MobileToken;
+			productReference = AF51CBD7222BF07C003051D7 /* MobileTokenDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AFB39B4B2189A6A600302624 /* MobileToken */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFB39B742189A6A700302624 /* Build configuration list for PBXNativeTarget "MobileToken" */;
@@ -1490,11 +1683,63 @@
 				AFB39B4B2189A6A600302624 /* MobileToken */,
 				AFB39B5F2189A6A700302624 /* MobileTokenTests */,
 				AFB39B6A2189A6A700302624 /* MobileTokenUITests */,
+				AF51CB21222BF07C003051D7 /* MobileTokenDebug */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF51CBA2222BF07C003051D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF51CBA3222BF07C003051D7 /* LaunchScreen.storyboard in Resources */,
+				AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
+				AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */,
+				AF51CBA6222BF07C003051D7 /* AuthenticationDefinition.storyboard in Resources */,
+				AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */,
+				AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */,
+				AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */,
+				AF51CBAA222BF07C003051D7 /* Help.storyboard in Resources */,
+				AF51CBAB222BF07C003051D7 /* SupportTableViewCell.xib in Resources */,
+				AF51CBAC222BF07C003051D7 /* DeleteTokensAlert.xib in Resources */,
+				AF51CBAD222BF07C003051D7 /* Assets.xcassets in Resources */,
+				AF51CBAE222BF07C003051D7 /* SettingAuthenticationDefinition.storyboard in Resources */,
+				AF51CBAF222BF07C003051D7 /* IRANSansMobile.ttf in Resources */,
+				AF51CBB0222BF07C003051D7 /* Support.storyboard in Resources */,
+				AF51CBB1222BF07C003051D7 /* AddCardPagerViewCell.xib in Resources */,
+				AF51CBB2222BF07C003051D7 /* IRANSansMobile(FaNum).ttf in Resources */,
+				AF51CBB3222BF07C003051D7 /* AuthenticationTypeTableViewCell.xib in Resources */,
+				AF51CBB4222BF07C003051D7 /* answer.html in Resources */,
+				AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */,
+				AF51CBB6222BF07C003051D7 /* ApplicationLock.storyboard in Resources */,
+				AF51CBB7222BF07C003051D7 /* SelectBankViewDesignable.xib in Resources */,
+				AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */,
+				AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */,
+				AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */,
+				AF51CBBB222BF07C003051D7 /* BankCardPagerViewCell.xib in Resources */,
+				AF51CBBC222BF07C003051D7 /* ImportToken.storyboard in Resources */,
+				AF51CBBD222BF07C003051D7 /* html_copy.png in Resources */,
+				AF51CBBE222BF07C003051D7 /* IRANSansMobile-UltraLight.ttf in Resources */,
+				AF51CBBF222BF07C003051D7 /* LockScreenTimeTableViewCell.xib in Resources */,
+				AF51CBC0222BF07C003051D7 /* Registration.storyboard in Resources */,
+				AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
+				AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */,
+				AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */,
+				AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */,
+				AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */,
+				AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */,
+				AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */,
+				AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */,
+				AF51CBC9222BF07C003051D7 /* Authentication.storyboard in Resources */,
+				AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */,
+				AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */,
+				AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
+				AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
+				AF51CBCE222BF07C003051D7 /* CardCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFB39B4A2189A6A600302624 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1513,6 +1758,7 @@
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
+				AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */,
 				AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
@@ -1668,6 +1914,135 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF51CB22222BF07C003051D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileToken-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF51CB23222BF07C003051D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		AF51CBCF222BF07C003051D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/oath/oath.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/oath.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF51CBD0222BF07C003051D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		AF51CBD1222BF07C003051D7 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nPATH_TO_GOOGLE_PLISTS=\"${PROJECT_DIR}/MobileToken\"\n\necho \"HhhhhHH\"\nif [ \"${CONFIGURATION}\" = \"ReleaseCarreneDev\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-r.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: RRRRRRRRR\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"ReleaseISCOP\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-r.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: RRRRRRRRR\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"DebugCarreneDev\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-d.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: DDDDDD\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"DebugISCOP\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-d.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: DDDDDD\"\nfi\n";
+		};
 		AF52C35822182C5B00639DA3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1732,6 +2107,136 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF51CB24222BF07C003051D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF51CB25222BF07C003051D7 /* User.swift in Sources */,
+				AF51CB26222BF07C003051D7 /* ActionSheetController.swift in Sources */,
+				AF51CB27222BF07C003051D7 /* UnsupportedOperationException.swift in Sources */,
+				AF51CB28222BF07C003051D7 /* HalfColorLabel.swift in Sources */,
+				AF51CB29222BF07C003051D7 /* AuthenticationRepositoryProtocol.swift in Sources */,
+				AF51CB2A222BF07C003051D7 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
+				AF51CB2B222BF07C003051D7 /* BankUtil.swift in Sources */,
+				AF51CB2C222BF07C003051D7 /* SupportViewController.swift in Sources */,
+				AF51CB2D222BF07C003051D7 /* AuthenticationDefinitionViewController.swift in Sources */,
+				AF51CB2E222BF07C003051D7 /* ImportTokenTapGesture.swift in Sources */,
+				AF51CB2F222BF07C003051D7 /* UserRealmRepository.swift in Sources */,
+				AF51CB30222BF07C003051D7 /* SettingContractor.swift in Sources */,
+				AF51CB31222BF07C003051D7 /* AuthenticationPatternContractor.swift in Sources */,
+				AF51CB32222BF07C003051D7 /* PhoneInputViewController.swift in Sources */,
+				AF51CB33222BF07C003051D7 /* PhoneInputPresenter.swift in Sources */,
+				AF51CB34222BF07C003051D7 /* BarButtonIndicator.swift in Sources */,
+				AF51CB35222BF07C003051D7 /* UserRestRepository.swift in Sources */,
+				AF51CB36222BF07C003051D7 /* UserRepositoryProtocol.swift in Sources */,
+				AF51CB37222BF07C003051D7 /* AuthenticationPasswordPresenter.swift in Sources */,
+				AF51CB38222BF07C003051D7 /* SecCertificateToData.swift in Sources */,
+				AF51CB39222BF07C003051D7 /* Token.swift in Sources */,
+				AF51CB3A222BF07C003051D7 /* CardCellXibView.swift in Sources */,
+				AF51CB3B222BF07C003051D7 /* CardPagerViewAdapter.swift in Sources */,
+				AF51CB3C222BF07C003051D7 /* AuthenticationDefinitionPatternpresenter.swift in Sources */,
+				AF51CB3D222BF07C003051D7 /* AddPasswordViewDesignable.swift in Sources */,
+				AF51CB3E222BF07C003051D7 /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
+				AF51CB3F222BF07C003051D7 /* Base64urlEncoded.swift in Sources */,
+				AF51CB40222BF07C003051D7 /* CardListContractor.swift in Sources */,
+				AF51CB41222BF07C003051D7 /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
+				AF51CB42222BF07C003051D7 /* AuthenticationRealmRepository.swift in Sources */,
+				AF51CB43222BF07C003051D7 /* PasswordValidator.swift in Sources */,
+				AF51CB44222BF07C003051D7 /* Repository.swift in Sources */,
+				AF51CB45222BF07C003051D7 /* EditCardNameAlertViewController.swift in Sources */,
+				AF51CB46222BF07C003051D7 /* MainViewController.swift in Sources */,
+				AF51CB47222BF07C003051D7 /* SettingRealmRepository.swift in Sources */,
+				AF51CB48222BF07C003051D7 /* ConvertArabicNumbersToEnglish.swift in Sources */,
+				AF51CB49222BF07C003051D7 /* ImportTokenPresenter.swift in Sources */,
+				AF51CB4A222BF07C003051D7 /* QuestionViewController.swift in Sources */,
+				AF51CB4B222BF07C003051D7 /* SettingsTableViewAdapter.swift in Sources */,
+				AF51CB4C222BF07C003051D7 /* PhoneConfirmationViewController.swift in Sources */,
+				AF51CB4D222BF07C003051D7 /* Authentication.swift in Sources */,
+				AF51CB4E222BF07C003051D7 /* OtpViewDesignable.swift in Sources */,
+				AF51CB4F222BF07C003051D7 /* AuthenticationPasswordContractor.swift in Sources */,
+				AF51CB50222BF07C003051D7 /* ApplicationLockViewController.swift in Sources */,
+				AF51CB51222BF07C003051D7 /* CryptoUtil.swift in Sources */,
+				AF51CB52222BF07C003051D7 /* ActionSheet.swift in Sources */,
+				AF51CB53222BF07C003051D7 /* AuthenticationRepository.swift in Sources */,
+				AF51CB54222BF07C003051D7 /* DeleteTokenAlertViewController.swift in Sources */,
+				AF51CB55222BF07C003051D7 /* NetHex.swift in Sources */,
+				AF51CB56222BF07C003051D7 /* AuthenticationViewController.swift in Sources */,
+				AF51CB57222BF07C003051D7 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,
+				AF51CB58222BF07C003051D7 /* Setting.swift in Sources */,
+				AF51CB59222BF07C003051D7 /* AuthenticationPatternPresenter.swift in Sources */,
+				AF51CB5A222BF07C003051D7 /* LatestUpdatesViewController.swift in Sources */,
+				AF51CB5B222BF07C003051D7 /* BankCardPagerViewCell.swift in Sources */,
+				AF51CB5C222BF07C003051D7 /* HelpTableViewCell.swift in Sources */,
+				AF51CB5D222BF07C003051D7 /* RepositoryResponse.swift in Sources */,
+				AF51CB5E222BF07C003051D7 /* AuthenticationDefinitionContractor.swift in Sources */,
+				AF51CB5F222BF07C003051D7 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */,
+				AF51CB60222BF07C003051D7 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
+				AF51CB61222BF07C003051D7 /* TokenRepositoryProtocol.swift in Sources */,
+				AF51CB62222BF07C003051D7 /* Interceptor.swift in Sources */,
+				AF51CB63222BF07C003051D7 /* Bank.swift in Sources */,
+				AF51CB64222BF07C003051D7 /* CardListViewController.swift in Sources */,
+				AF51CB65222BF07C003051D7 /* SelectBankViewDesignable.swift in Sources */,
+				AF51CB66222BF07C003051D7 /* IntroViewController.swift in Sources */,
+				AF51CB67222BF07C003051D7 /* SettingPresenter.swift in Sources */,
+				AF51CB68222BF07C003051D7 /* StringSeparator.swift in Sources */,
+				AF51CB69222BF07C003051D7 /* SupportTableViewAdapter.swift in Sources */,
+				AF51CB6A222BF07C003051D7 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
+				AF51CB6B222BF07C003051D7 /* BankRepository.swift in Sources */,
+				AF51CB6C222BF07C003051D7 /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */,
+				AF51CB6D222BF07C003051D7 /* CardRepositoryProtocol.swift in Sources */,
+				AF51CB6E222BF07C003051D7 /* ScreenLocker.swift in Sources */,
+				AF51CB6F222BF07C003051D7 /* LockScreenTimeSettingTableViewCell.swift in Sources */,
+				AF51CB70222BF07C003051D7 /* RemoveArrayElementExtention.swift in Sources */,
+				AF51CB71222BF07C003051D7 /* UserDefaultsJwtPersistor.swift in Sources */,
+				AF51CB72222BF07C003051D7 /* AuthenticationPresenter.swift in Sources */,
+				AF51CB73222BF07C003051D7 /* CardListPresenter.swift in Sources */,
+				AF51CB74222BF07C003051D7 /* CardRepository.swift in Sources */,
+				AF51CB75222BF07C003051D7 /* LatestUpdatesTableAdapter.swift in Sources */,
+				AF51CB76222BF07C003051D7 /* AddCardPagerViewCell.swift in Sources */,
+				AF51CB77222BF07C003051D7 /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */,
+				AF51CB78222BF07C003051D7 /* AuthenticationContractor.swift in Sources */,
+				AF51CB79222BF07C003051D7 /* BankRepositoryProtocol.swift in Sources */,
+				AF51CB7A222BF07C003051D7 /* BankRealmRepository.swift in Sources */,
+				AF51CB7B222BF07C003051D7 /* SettingAuthenticationDefinitionViewController.swift in Sources */,
+				AF51CB7C222BF07C003051D7 /* SettingsViewController.swift in Sources */,
+				AF51CB7D222BF07C003051D7 /* JwtPersistable.swift in Sources */,
+				AF51CB7E222BF07C003051D7 /* AuthenticationPatternViewController.swift in Sources */,
+				AF51CB7F222BF07C003051D7 /* SnackbarHelper.swift in Sources */,
+				AF51CB80222BF07C003051D7 /* UserRepository.swift in Sources */,
+				AF51CB81222BF07C003051D7 /* BankCollectionViewAdapter.swift in Sources */,
+				AF51CB82222BF07C003051D7 /* ApiHelper.swift in Sources */,
+				AF51CB83222BF07C003051D7 /* RealmConfiguration copy.swift in Sources */,
+				AF51CB84222BF07C003051D7 /* TabbarController.swift in Sources */,
+				AF51CB85222BF07C003051D7 /* ImportTokenViewController.swift in Sources */,
+				AF51CB86222BF07C003051D7 /* MyApplication.swift in Sources */,
+				AF51CB87222BF07C003051D7 /* AuthenticationDefinitionPatternContractor.swift in Sources */,
+				AF51CB88222BF07C003051D7 /* TokenRealmRepository.swift in Sources */,
+				AF51CB89222BF07C003051D7 /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */,
+				AF51CB8A222BF07C003051D7 /* PhoneConfirmationPresenter.swift in Sources */,
+				AF51CB8B222BF07C003051D7 /* BankCollectionViewCell.swift in Sources */,
+				AF51CB8C222BF07C003051D7 /* AuthenticationDefinitionPaswordContractor.swift in Sources */,
+				AF51CB8D222BF07C003051D7 /* SupportTableViewCell.swift in Sources */,
+				AF51CB8E222BF07C003051D7 /* BaseViewController.swift in Sources */,
+				AF51CB8F222BF07C003051D7 /* AuthenticationPasswordViewController.swift in Sources */,
+				AF51CB90222BF07C003051D7 /* Card.swift in Sources */,
+				AF51CB91222BF07C003051D7 /* AppDelegate.swift in Sources */,
+				AF51CB92222BF07C003051D7 /* SettingRepository.swift in Sources */,
+				AF51CB93222BF07C003051D7 /* R.generated.swift in Sources */,
+				AF51CB94222BF07C003051D7 /* HelpTableViewAdapter.swift in Sources */,
+				AF51CB95222BF07C003051D7 /* HelpViewController.swift in Sources */,
+				AF51CB96222BF07C003051D7 /* PhoneConfirmationContractor.swift in Sources */,
+				AF51CB97222BF07C003051D7 /* HideKeyboardWhenTappedAround.swift in Sources */,
+				AF51CB98222BF07C003051D7 /* UIHelper.swift in Sources */,
+				AF51CB99222BF07C003051D7 /* SettingMediator.swift in Sources */,
+				AF51CB9A222BF07C003051D7 /* PhoneInputContractor.swift in Sources */,
+				AF51CB9B222BF07C003051D7 /* TokenRepository.swift in Sources */,
+				AF51CB9C222BF07C003051D7 /* SettingRepositoryProtocol.swift in Sources */,
+				AF51CB9D222BF07C003051D7 /* ImportTokenContractor.swift in Sources */,
+				AF51CB9E222BF07C003051D7 /* CardRealmRepsitory.swift in Sources */,
+				AF51CB9F222BF07C003051D7 /* SettingAuthenticationDefinitionContractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFB39B482189A6A600302624 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1923,6 +2428,114 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AF51CBD3222BF07C003051D7 /* DebugCarreneDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1CDF2D278473F060C92F6AB /* Pods-MobileToken.debugcarrenedev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ir-ba24-mobiletoken-debug";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = DebugCarreneDev;
+		};
+		AF51CBD4222BF07C003051D7 /* DebugISCOP */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ir-ba24-mobiletoken-debug";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = DebugISCOP;
+		};
+		AF51CBD5222BF07C003051D7 /* ReleaseCarreneDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F38F3D73E573C46828A81D82 /* Pods-MobileToken.releasecarrenedev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ir-ba24-mobiletoken-debug";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = ReleaseCarreneDev;
+		};
+		AF51CBD6222BF07C003051D7 /* ReleaseISCOP */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ir-ba24-mobiletoken-debug";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = ReleaseISCOP;
+		};
 		AF67C08922154AE4000DA700 /* DebugISCOP */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF9F2199221451C1005088B9 /* ISCOPDebug.xcconfig */;
@@ -2462,6 +3075,17 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF51CBD2222BF07C003051D7 /* Build configuration list for PBXNativeTarget "MobileTokenDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF51CBD3222BF07C003051D7 /* DebugCarreneDev */,
+				AF51CBD4222BF07C003051D7 /* DebugISCOP */,
+				AF51CBD5222BF07C003051D7 /* ReleaseCarreneDev */,
+				AF51CBD6222BF07C003051D7 /* ReleaseISCOP */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ReleaseCarreneDev;
+		};
 		AFB39B472189A6A600302624 /* Build configuration list for PBXProject "MobileToken" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

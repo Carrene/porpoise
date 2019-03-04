@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         initialTheme()
         initialIQKeyboard()
-        initPrinit()
         initialFirebase(application: application)
         return true
     }
@@ -47,14 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initPrinit() {
+        print(Bundle.main.bundleIdentifier!)
         print("\(String(describing: RealmConfiguration.sensitiveDataConfiguration().fileURL))")
         print((Bundle.main.infoDictionary?["Web service port"] as! String))
         print((Bundle.main.infoDictionary?["Web service host"] as! String).replacingOccurrences(of: "\\", with: ""))
         print(Bundle.main.infoDictionary?["Web service token"] as! String)
         print(Bundle.main.infoDictionary?["Web service scheme"] as! String)
-
+        
         print(Bundle.main.infoDictionary?["Web service self signed"] as! String)
-
+        
     }
     
     func initialFirebase(application: UIApplication) {
@@ -133,7 +133,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Message ID: \(messageID)")
         }
         
-        // Print full message.
         print(userInfo)
     }
     
@@ -207,7 +206,6 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 extension AppDelegate : MessagingDelegate {
     // [START refresh_token]
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        print("Firebase registration token: \(fcmToken)")
         
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
