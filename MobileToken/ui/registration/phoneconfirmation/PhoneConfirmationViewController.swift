@@ -141,7 +141,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         self.startBarButtonRightIndicator(activityIndicator: activityIndicator)
     }
     
-    func EndBarIndicator() {
+    func endBarIndicator() {
         self.stopBarButtonRightIndicator(btNavigationRight: (self.btConfirmation)!, activityIndicator: (self.activityIndicator))
     }
     
@@ -161,8 +161,18 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         dismissKeyboard()
     }
     
+    func showEverywhereError401() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_everywhere_401(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
+    }
+    
     func showServerError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
+    }
+    
+    func showEverywhereFail() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_everywhere_fail(), color: R.color.errorDark()!, duration: .short)
         dismissKeyboard()
     }
     
