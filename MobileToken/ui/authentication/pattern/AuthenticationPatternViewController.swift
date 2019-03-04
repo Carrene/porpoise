@@ -38,7 +38,7 @@ class AuthenticationPatternViewController: UIViewController, AuthenticationPatte
     }
     
     func showWrongPatternError(remainAttemps:Int) {
-        let message = R.string.localizable.sb_wrong_pattern() + ". " + " شما \(remainAttemps) فرصت دیگر دارید "
+        let message = R.string.localizable.sb_wrong_pattern() + " شما \(remainAttemps) فرصت دیگر دارید "
         UIHelper.showSpecificSnackBar(message: message, color: R.color.errorDark()!)
     }
     

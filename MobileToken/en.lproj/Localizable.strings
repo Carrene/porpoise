@@ -7,8 +7,8 @@
 "lb_support" = "پشتیبانی بانک ها";
 
 // snackbar
-"sb_wrong_password" = "رمز اشتباه است";
-"sb_wrong_pattern" = "الگو اشتباه است";
+"sb_wrong_password" = "رمز اشتباه است.";
+"sb_wrong_pattern" = "الگو اشتباه است.";
 "sb_try_for_second_time" = "برای بار دوم انجام دهید";
 "sb_patterns_not_match" = "الگو و تکرار آن مطابقت ندارند، دوباره تلاش کنید";
 "sb_passwords_not_match" = "رمز و تکرار آن برابر نیستند، دوباره تلاش کنید";

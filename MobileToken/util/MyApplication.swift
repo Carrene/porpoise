@@ -31,7 +31,6 @@ class MyApplication: UIApplication {
                     topController = presentedViewController
                 }
                 if(ScreenLocker.isAutoLocked == false && CryptoUtil.keyDrivated == true && ScreenLocker.instance.isRunning() ) {
-                    print("resettttt")
                     let lockerTimeInterval = AuthenticationPatternPresenter.getSetting().lockTimer
                     ScreenLocker.instance.resetTimer(time: lockerTimeInterval)
                 }
