@@ -63,6 +63,7 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
         let appLocked  = ScreenLocker.isAutoLocked
         if appLocked {
             self.dismiss(animated: false, completion: nil)
+            ScreenLocker.isAutoLocked = false
         } else {
             performSegue(withIdentifier: R.segue.authenticationViewController.authenticationToCardList.identifier, sender: self)
         }

@@ -83,14 +83,12 @@ class BankCardPagerViewCell: FSPagerViewCell {
         if timerFirst != nil {
             timerFirst?.invalidate()
             self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerFirst!)
-            print("invalidate 1")
             
         }
         
         if timerSecond != nil {
             timerSecond?.invalidate()
             self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerSecond!)
-            print("invalidate 2")
         }
         
         self.card = card
@@ -126,7 +124,6 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let view = getOtpView()
         initOtpView(token: token, view: view)
         view.lbOtp.text = generateOtp(token: token)
-        print("view.text = "+view.lbOtp.text!)
         initProgressBar(view: view, token: token)
     }
     
@@ -157,11 +154,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func generateOtp(token: Token) -> String{
         var otp = token.generateTotp()
-        print(otp)
-//        otp = otp.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         otp = otp.separate()
-        print("generate "+otp)
-        
         return otp
     }
     
@@ -178,11 +171,9 @@ class BankCardPagerViewCell: FSPagerViewCell {
         if token.cryptoModuleId == Token.CryptoModuleId.one {
             timerFirst = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
             self.bankCardPagerViewDelegate?.saveTimerInstance(timer: timerFirst!)
-            print("new timer1")
         } else if token.cryptoModuleId == Token.CryptoModuleId.two {
             timerSecond = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(BankCardPagerViewCell.timerHandler(timer:))), userInfo: (token: token,view: view, countdownTime: diff), repeats: true)
             self.bankCardPagerViewDelegate?.saveTimerInstance(timer: timerSecond!)
-            print("new timer2")
         }
     }
     
