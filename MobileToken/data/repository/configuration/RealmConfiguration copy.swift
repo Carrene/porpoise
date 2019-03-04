@@ -24,6 +24,7 @@ class RealmConfiguration {
         var config = Realm.Configuration()
         config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("sensitive.realm")
         config.encryptionKey = sensitiveDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        print(config.encryptionKey?.toHexString())
         return config
     }
     
