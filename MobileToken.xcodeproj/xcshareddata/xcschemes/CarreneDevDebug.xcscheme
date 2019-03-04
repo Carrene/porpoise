@@ -20,6 +20,20 @@
                ReferencedContainer = "container:MobileToken.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AF51CB21222BF07C003051D7"
+               BuildableName = "MobileTokenDebug.app"
+               BlueprintName = "MobileTokenDebug"
+               ReferencedContainer = "container:MobileToken.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
