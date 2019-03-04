@@ -5,7 +5,7 @@ class UserRealmRepository:UserRepositoryProtocol {
     
     func get(bank: Bank, onDone: ((RepositoryResponse<User>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-        if let user = realm.objects(User.self).filter("Bank.Name='"+bank.name!+"'").first {
+        if let user = realm.objects(User.self).filter("userBank.Name='"+bank.name!+"'").first {
             onDone?(RepositoryResponse(value:user))
         }
         else {

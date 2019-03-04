@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyBoard = UIStoryboard(resource: R.storyboard.main)
         self.window?.rootViewController = storyBoard.instantiateInitialViewController()
         self.window?.makeKeyAndVisible()
+        initPrinit()
         initialTheme()
         initialIQKeyboard()
         initialFirebase(application: application)

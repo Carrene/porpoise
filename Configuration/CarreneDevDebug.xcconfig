@@ -1,6 +1,6 @@
 #include "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugcarrenedev.xcconfig"
 
-URL_ENDPOINT=192.168.1.57
+URL_ENDPOINT=192.168.1.32
 
 URL_PORT=443
 
