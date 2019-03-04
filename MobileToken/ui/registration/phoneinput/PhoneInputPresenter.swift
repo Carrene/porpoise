@@ -13,19 +13,25 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         self.view.startBarIndicator()
         let user = User(phone: phone, activationCode: nil, bank: bank)
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
-            let statusCode = response.restDataResponse?.response?.statusCode
-            self?.view.EndBarIndicator()
-            switch statusCode {
-            case 200:
-                self?.view.navigateToPhoneConfirmation(phone:phone)
-            case 400:
-                self?.view.showBadRequestError()
-            case 500:
-                self?.view.showServerError()
-            case 502:
-                self?.view.showNetworkError()
-            default:
-                UIHelper.showFailedSnackBar()
+            if let statusCode = response.restDataResponse?.response?.statusCode {
+                self?.view.endBarIndicator()
+                switch statusCode {
+                case 200:
+                    self?.view.navigateToPhoneConfirmation(phone:phone)
+                case 400:
+                    self?.view.showBadRequestError()
+                case 401:
+                    self?.view.showEverywhereError401()
+                case 500:
+                    self?.view.showServerError()
+                case 502:
+                    self?.view.showNetworkError()
+                default:
+                    UIHelper.showFailedSnackBar()
+                }
+            }
+            else {
+                self?.view.showEverywhereFail()
             }
         }
         userRepostiory.claim(user: user, onDone: onDataResponse)

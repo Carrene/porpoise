@@ -5,6 +5,7 @@ import InputMask
 
 class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate,MaskedTextFieldDelegateListener {
     
+    
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
     @IBOutlet var textFieldPhoneNumber: UITextField!
@@ -145,8 +146,13 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.startBarButtonRightIndicator(activityIndicator: activityIndicator)
     }
     
-    func EndBarIndicator() {
+    func endBarIndicator() {
         self.stopBarButtonRightIndicator(btNavigationRight: (self.confirmBarButton)!, activityIndicator: (self.activityIndicator))
+    }
+    
+    func showEverywhereError401() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_everywhere_401(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -165,6 +171,11 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     func showServerError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_server_error(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
+    }
+    
+    func showEverywhereFail() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_everywhere_fail(), color: R.color.errorDark()!, duration: .short)
         dismissKeyboard()
     }
     

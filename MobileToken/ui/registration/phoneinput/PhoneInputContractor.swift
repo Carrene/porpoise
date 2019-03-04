@@ -9,7 +9,9 @@ import Foundation
         func showPhoneInput()
         func showNetworkError()
         func startBarIndicator()
-        func EndBarIndicator()
+        func endBarIndicator()
+        func showEverywhereError401()
+        func showEverywhereFail()
     }
 
     protocol PhoneInputPresenterProtocol {
