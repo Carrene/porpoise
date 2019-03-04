@@ -39,12 +39,13 @@ class User: Object, Mappable, NSCopying {
     var udid: String { return UIDevice.current.identifierForVendor!.uuidString.sha1() }
     var deviceName: String { return Device().description }
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
+   
     override static func ignoredProperties() -> [String] {
         return ["activationCode"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     convenience init( phone: String? = nil, activationCode: String? = nil, bank: Bank? = nil) {

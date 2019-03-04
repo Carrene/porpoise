@@ -33,9 +33,9 @@ class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollection
         else {
             collectionView.bounces = false
         }
-        cell.lbBankName.text = banks![indexPath.row].name!
+        cell.lbBankName.text = BankUtil.getName(bank: banks![indexPath.row])
         
-        if banks![indexPath.row].name! == "آینده" {
+        if banks![indexPath.row].id == 2 {
             cell.lmgLogo.image = R.image.bankAyandehLogo()
         }
         else {

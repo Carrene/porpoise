@@ -35,8 +35,6 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         initUIComponents()
         initListeners()
         initCountryPicker()
-        initBankCollectionView()
-        
         presenter.getBankList()
     }
     
@@ -47,7 +45,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     override func viewWillAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
         //textFieldPhoneNumber.text = ""
-        collectionViewbank.reloadData()
+//        collectionViewbank.reloadData()
     }
     
     func initUIComponents() {
@@ -81,11 +79,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         
     }
     
-    func initBankCollectionView() {
+    func initBankCollectionView(banks: [Bank]) {
         let bankNib = UINib(resource: R.nib.bankCollectionViewCell)
         collectionViewbank.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
         bankCollectionViewAdapter = BankCollectionViewAdapter()
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
+        bankCollectionViewAdapter?.setDataSource(banks: banks)
         collectionViewbank.delegate = bankCollectionViewAdapter
         collectionViewbank.dataSource = bankCollectionViewAdapter
         collectionViewbank.allowsMultipleSelection = false
@@ -185,7 +184,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     func setBankList(banks : [Bank]) {
-        bankCollectionViewAdapter?.setDataSource(banks: banks)
+        initBankCollectionView(banks: banks)
         self.banks = banks
     }
     

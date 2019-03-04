@@ -143,6 +143,8 @@
 		AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
 		AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
 		AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
+		AF378011222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
+		AF378012222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
 		AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AF463BCE218AD11900DC8A3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
@@ -519,6 +521,7 @@
 		AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Light.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSansMobile.ttf; path = MobileToken/assets/fonts/IRANSansMobile.ttf; sourceTree = SOURCE_ROOT; };
 		AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Medium.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		AF378010222D3E4B0097306C /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-r.plist"; sourceTree = "<group>"; };
 		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
 		AF463BCD218AD11900DC8A3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -1128,6 +1131,13 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		AF37800D222D3DA60097306C /* raw */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = raw;
+			sourceTree = "<group>";
+		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,6 +1233,7 @@
 		AF463BCC2189E5F200DC8A3E /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				AF37800D222D3DA60097306C /* raw */,
 				AF28600D219D7ADD00D8C342 /* fonts */,
 				AFB39B562189A6A700302624 /* Assets.xcassets */,
 			);
@@ -1299,6 +1310,7 @@
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
 				AF02085422017D630021856A /* R.generated.swift */,
+				AF378010222D3E4B0097306C /* banks.json */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BC22189D8CF00DC8A3E /* data */,
 				AFE81B372196E10500AA0AF2 /* error */,
@@ -1697,6 +1709,7 @@
 				AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */,
 				AF51CBA6222BF07C003051D7 /* AuthenticationDefinition.storyboard in Resources */,
+				AF378012222D3E4C0097306C /* banks.json in Resources */,
 				AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */,
 				AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */,
 				AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */,
@@ -1761,6 +1774,7 @@
 				AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */,
 				AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
+				AF378011222D3E4C0097306C /* banks.json in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,

@@ -61,7 +61,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
     func setBank(bank:Bank) {
         self.bank = bank
         self.viewCard.imageLogo.image = BankUtil.getLogo(bank: bank)
-        viewCard.labelBankName.text = self.bank!.name
+        viewCard.labelBankName.text = BankUtil.getName(bank: self.bank!)
     }
     
     @IBAction func onAddCardButton(_ sender: UIButton) {
