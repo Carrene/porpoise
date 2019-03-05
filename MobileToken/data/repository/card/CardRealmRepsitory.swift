@@ -5,6 +5,10 @@ class CardRealmRepository: CardRepositoryProtocol {
     
     func addCard(card: Card, bank: Bank, onDone: ((RepositoryResponse<Card>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        print("bank.id = \(bank.id)")
+        let b = realm.object(ofType: Bank.self, forPrimaryKey: bank.id)
+        let id = b?.id
+        print("realm bank \(id)")
         if let bank = realm.objects(Bank.self).filter("Id == \(bank.id)").first?.copy() as? Bank {
             do {
                 

@@ -10,7 +10,7 @@ class Bank: Object, Mappable, NSCopying{
         return "Id"
     }
     
-    @objc private var Id: Int = 0
+    @objc private dynamic var Id: Int = 0
     var id: Int {
         get { return Id}
         set { Id = newValue}
