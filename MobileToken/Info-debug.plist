@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>راز</string>
+	<string>راز-دیباگ</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(BUNDLE_IDENTIFIER_SUFFIX)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,13 +17,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>rc-0.1.0</string>
+	<string>1.0.0-rc</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>InitialToken</key>
 	<string>$(INITIAL_TOKEN)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPrincipalClass</key>
+	<string>MyApplication</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>IRANSansMobile-Bold.ttf</string>
@@ -56,12 +58,16 @@
 	<key>UrlPort</key>
 	<string>$(URL_PORT)</string>
 	<key>Web service host</key>
-	<string>$(WEB_SERVICE_HOST)</string>
+	<string>$(URL_ENDPOINT)</string>
 	<key>Web service port</key>
-	<string>$(WEB_SERVICE_PORT)</string>
+	<string>$(URL_PORT)</string>
 	<key>Web service scheme</key>
-	<string>$(WEB_SERVICE_SCHEME)</string>
+	<string>$(URL_SCHEME)</string>
+	<key>Web service self signed</key>
+	<string>$(SELF_SIGNED)</string>
+	<key>Web service token</key>
+	<string>$(INITIAL_TOKEN)</string>
 	<key>Web service version</key>
-	<string>$(WEB_SERVICE_VERSION)</string>
+	<string>$(VERSION)</string>
 </dict>
 </plist>

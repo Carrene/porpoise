@@ -11,7 +11,9 @@ protocol PhoneConfirmationViewProtocol:class {
     func setCounterTitleTime(time:String)
     func showNetworkError()
     func startBarIndicator()
-    func EndBarIndicator()
+    func endBarIndicator()
+    func showEverywhereFail()
+    func showEverywhereError401()
 }
 
 protocol PhoneConfirmationPresenterProtocol {

@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     
     func getVersion() {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        labelVersion.text =  R.string.localizable.lb_version() + " " + version!
+        labelVersion.text = version!
     }
     
     func initTableView(settingMediator: SettingMediator) {

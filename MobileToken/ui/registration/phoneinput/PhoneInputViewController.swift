@@ -5,6 +5,7 @@ import InputMask
 
 class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,CountryPickerViewDelegate,CountryPickerViewDataSource, PhoneInputViewProtocol,UITextFieldDelegate,MaskedTextFieldDelegateListener {
     
+    
     @IBOutlet var labelEnterYourPhone: UILabel!
     @IBOutlet var labelChooseYourBank: UILabel!
     @IBOutlet var textFieldPhoneNumber: UITextField!
@@ -34,18 +35,17 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         initUIComponents()
         initListeners()
         initCountryPicker()
-        initBankCollectionView()
         presenter.getBankList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
         //textFieldPhoneNumber.text = ""
-        collectionViewbank.reloadData()
+//        collectionViewbank.reloadData()
     }
     
     func initUIComponents() {
@@ -79,11 +79,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         
     }
     
-    func initBankCollectionView() {
+    func initBankCollectionView(banks: [Bank]) {
         let bankNib = UINib(resource: R.nib.bankCollectionViewCell)
         collectionViewbank.register(bankNib, forCellWithReuseIdentifier: R.nib.bankCollectionViewCell.identifier)
         bankCollectionViewAdapter = BankCollectionViewAdapter()
         bankCollectionViewAdapter?.setDelegate(bankPagerViewDelegate: self)
+        bankCollectionViewAdapter?.setDataSource(banks: banks)
         collectionViewbank.delegate = bankCollectionViewAdapter
         collectionViewbank.dataSource = bankCollectionViewAdapter
         collectionViewbank.allowsMultipleSelection = false
@@ -144,8 +145,13 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.startBarButtonRightIndicator(activityIndicator: activityIndicator)
     }
     
-    func EndBarIndicator() {
+    func endBarIndicator() {
         self.stopBarButtonRightIndicator(btNavigationRight: (self.confirmBarButton)!, activityIndicator: (self.activityIndicator))
+    }
+    
+    func showEverywhereError401() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_everywhere_401(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -167,13 +173,18 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         dismissKeyboard()
     }
     
+    func showEverywhereFail() {
+        UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_everywhere_fail(), color: R.color.errorDark()!, duration: .short)
+        dismissKeyboard()
+    }
+    
     func showNetworkError() {
         UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_network_error(), color: R.color.errorDark()!)
         dismissKeyboard()
     }
     
     func setBankList(banks : [Bank]) {
-        bankCollectionViewAdapter?.setDataSource(banks: banks)
+        initBankCollectionView(banks: banks)
         self.banks = banks
     }
     

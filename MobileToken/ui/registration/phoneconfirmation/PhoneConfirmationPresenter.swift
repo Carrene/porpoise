@@ -15,27 +15,35 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     func bind(user:User) {
         self.view.startBarIndicator()
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
-            let statusCode = response.restDataResponse?.response?.statusCode
-            self?.view.EndBarIndicator()
-            switch statusCode {
-            case 200:
-                let responseUser = response.value
-                user.bank?.secret = responseUser!.bank?.secret
-                self?.updateUserInRealm(user: user)
-                self?.invalidateTimer()
-            case 400:
-                self?.view.showBadRequestError()
-            case 801:
-                self?.view.showSSMNotAvailable()
-            case 500:
-                self?.view.showServerError()
-            case 502:
-                self?.view.showNetworkError()
-            default:
-                UIHelper.showFailedSnackBar()
+            if let statusCode = response.restDataResponse?.response?.statusCode {
+                self?.view.endBarIndicator()
+                switch statusCode {
+                case 200:
+                    let responseUser = response.value
+                    user.bank?.secret = responseUser!.bank?.secret
+                    self?.updateUserInRealm(user: user)
+                    self?.invalidateTimer()
+                case 400:
+                    self?.view.showBadRequestError()
+                case 401:
+                    self?.view.showEverywhereError401()
+                case 500:
+                    self?.view.showServerError()
+                case 502:
+                    self?.view.showNetworkError()
+                case 801:
+                    self?.view.showSSMNotAvailable()
+                default:
+                    UIHelper.showFailedSnackBar()
+                }
+            }
+                
+            else {
+                self?.view.showEverywhereFail()
             }
         }
         userRepository.bind(user: user, onDone: onDataResponse)
+        
     }
     
     func updateUserInRealm(user:User) {

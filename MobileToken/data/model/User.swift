@@ -13,10 +13,10 @@ class User: Object, Mappable, NSCopying {
         set { PhoneNumber = newValue }
     }
     
-    @objc private dynamic var Bank : Bank?
+    @objc private dynamic var userBank : Bank?
     var bank : Bank? {
-        get{return Bank}
-        set{Bank = newValue}
+        get{return userBank}
+        set{userBank = newValue}
     }
     
     @objc dynamic var Id: Int = 1
@@ -39,12 +39,13 @@ class User: Object, Mappable, NSCopying {
     var udid: String { return UIDevice.current.identifierForVendor!.uuidString.sha1() }
     var deviceName: String { return Device().description }
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
+   
     override static func ignoredProperties() -> [String] {
         return ["activationCode"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     convenience init( phone: String? = nil, activationCode: String? = nil, bank: Bank? = nil) {
@@ -61,10 +62,12 @@ class User: Object, Mappable, NSCopying {
         if bank != nil {
             bank!.secret <- secret
         }else {
-            self.bank = MobileToken.Bank()
+            self.bank = Bank()
             bank!.secret <- secret
         }
     }
+    
+    
     
     func copy(with zone: NSZone? = nil) -> Any {
         return User(phone: phone, activationCode: nil, bank: bank)

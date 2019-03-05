@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import ObjectMapper
 
 protocol SupportTableViewAdapterProtocol {
     func selectedRow()
@@ -19,7 +20,8 @@ class SupportTableViewAdapter :  NSObject, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        let banks = Mapper<Bank>().mapArray(JSONfile:  "banks.json")
+        return banks?.count ?? 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,19 +34,13 @@ class SupportTableViewAdapter :  NSObject, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.separatorStyle = .none
-        
+        let banks = Mapper<Bank>().mapArray(JSONfile:  "banks.json")
+        let bank = banks![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseSupportTableViewCell" , for: indexPath) as! SupportTableViewCell
-        cell.imageLogo.backgroundColor = R.color.primaryDark()
-        if indexPath.row == 0 {
-            cell.imageLogo.image = UIImage(named: R.image.bankAyandehLogo.name)
-            cell.labelBankName.text = R.string.localizable.ayande()
-            cell.labelPhoneNumber.text = R.string.localizable.ayande_phone()
-        }
-        else {
-            cell.imageLogo.image = UIImage(named: R.image.bankSaderatLogo.name)
-            cell.labelBankName.text = R.string.localizable.saderat()
-            cell.labelPhoneNumber.text = R.string.localizable.saderat_phone()
-        }
+//        cell.imageLogo.backgroundColor = R.color.primaryDark()
+        cell.imageLogo.image = BankUtil.getLightLogo(bank: bank)
+        cell.labelBankName.text = BankUtil.getName(bank: bank)
+        cell.labelPhoneNumber.text = bank.phone
         cell.selectionStyle = .none
         return cell
     }

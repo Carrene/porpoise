@@ -91,7 +91,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         viewCard.backgroundColor = R.color.secondaryDark()
         viewCard.imageLogo.image = BankUtil.getLightLogo(bank: (card?.bank)!)
         viewCard.labelCardName.text = card?.cardName
-        viewCard.labelBankName.text = card?.bank?.name
+        viewCard.labelBankName.text = BankUtil.getName(bank: card!.bank!)
     }
     
     func textViewDidChange(_ textView: UITextView) {

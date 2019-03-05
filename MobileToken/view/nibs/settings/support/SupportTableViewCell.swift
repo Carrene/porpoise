@@ -13,8 +13,8 @@ class SupportTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.view.layer.cornerRadius = 10
         self.imageLogo.layer.cornerRadius = 5
-        self.imageLogo.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        self.imageLogo.tintColor = R.color.primaryLight()
+//        self.imageLogo.layer.backgroundColor = R.color.primaryLight()?.cgColor
+//        self.imageLogo.tintColor = R.color.primaryLight()
         self.buttonCall.layer.cornerRadius = 5
         
         self.view.layer.shadowRadius = 5

@@ -47,7 +47,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
         }
         else {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
-            cell.vCard.labelBankName.text = self.bank.name
+            cell.vCard.labelBankName.text = BankUtil.getName(bank: self.bank)
             cell.vCard.labelCardName.text = self.cardName
             if bank.cardList[index-1].id == updateCard?.id {
                 //pagerView.scrollToItem(at: index, animated: true)
