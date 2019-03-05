@@ -45,8 +45,23 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="buttonColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه ۰.۰.۱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74y-71-IgY" userLabel="labelVersion">
-                                <rect key="frame" x="153" y="572.5" width="69" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه                  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkY-iF-rcV">
+                                <rect key="frame" x="190" y="572.5" width="185" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp5-81-Sio" userLabel="empty">
+                                <rect key="frame" x="185" y="598" width="5" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="32z-sW-nYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74y-71-IgY" userLabel="labelVersion">
+                                <rect key="frame" x="0.0" y="572.5" width="185" height="25.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,12 +69,18 @@
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
+                            <constraint firstItem="74y-71-IgY" firstAttribute="left" secondItem="TiY-NI-XLV" secondAttribute="left" id="4hM-Fu-Iel"/>
+                            <constraint firstItem="Hp5-81-Sio" firstAttribute="left" secondItem="74y-71-IgY" secondAttribute="right" id="Apw-tV-omo"/>
+                            <constraint firstItem="TkY-iF-rcV" firstAttribute="top" secondItem="74y-71-IgY" secondAttribute="top" id="AsE-en-zQ4"/>
+                            <constraint firstItem="TiY-NI-XLV" firstAttribute="right" secondItem="TkY-iF-rcV" secondAttribute="right" id="MxN-Aa-D9w"/>
+                            <constraint firstItem="Hp5-81-Sio" firstAttribute="bottom" secondItem="74y-71-IgY" secondAttribute="bottom" id="PtX-hW-eKi"/>
                             <constraint firstItem="TiY-NI-XLV" firstAttribute="bottom" secondItem="2RQ-2g-WfX" secondAttribute="bottom" constant="40" id="TAR-OC-AVt"/>
+                            <constraint firstItem="Hp5-81-Sio" firstAttribute="centerX" secondItem="2RQ-2g-WfX" secondAttribute="centerX" id="Tfy-TV-AI7"/>
                             <constraint firstItem="2RQ-2g-WfX" firstAttribute="top" secondItem="TiY-NI-XLV" secondAttribute="top" constant="13" id="YNI-KD-QmW"/>
-                            <constraint firstItem="74y-71-IgY" firstAttribute="centerX" secondItem="TiY-NI-XLV" secondAttribute="centerX" id="ZDN-Nl-5GD"/>
                             <constraint firstItem="TiY-NI-XLV" firstAttribute="bottom" secondItem="74y-71-IgY" secondAttribute="bottom" constant="20" id="eGO-3D-kiK"/>
                             <constraint firstItem="2RQ-2g-WfX" firstAttribute="centerX" secondItem="TiY-NI-XLV" secondAttribute="centerX" id="hCa-jj-swW"/>
                             <constraint firstItem="2RQ-2g-WfX" firstAttribute="width" secondItem="o4G-gG-g6c" secondAttribute="width" id="hNb-lo-635"/>
+                            <constraint firstItem="TkY-iF-rcV" firstAttribute="left" secondItem="Hp5-81-Sio" secondAttribute="right" id="uDh-72-hIA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TiY-NI-XLV"/>
                     </view>
