@@ -37,7 +37,7 @@ class SupportTableViewAdapter :  NSObject, UITableViewDelegate, UITableViewDataS
         let banks = Mapper<Bank>().mapArray(JSONfile:  "banks.json")
         let bank = banks![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseSupportTableViewCell" , for: indexPath) as! SupportTableViewCell
-        cell.imageLogo.backgroundColor = R.color.primaryDark()
+//        cell.imageLogo.backgroundColor = R.color.primaryDark()
         cell.imageLogo.image = BankUtil.getLightLogo(bank: bank)
         cell.labelBankName.text = BankUtil.getName(bank: bank)
         cell.labelPhoneNumber.text = bank.phone
