@@ -11,6 +11,7 @@
 		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
+		6B8E8F66433B1748C06A5CD5 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
 		AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
 		AC16D6FF21CA31B70094FBED /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
@@ -109,7 +110,6 @@
 		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
 		ACEC112C222BF87100AF933B /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC112B222BF87100AF933B /* JsonParser.swift */; };
-		ACEC1132222BFAD600AF933B /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEC1131222BFAD600AF933B /* banks.json */; };
 		ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
 		AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
@@ -271,7 +271,6 @@
 		AF51CB9D222BF07C003051D7 /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
 		AF51CB9E222BF07C003051D7 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
 		AF51CB9F222BF07C003051D7 /* SettingAuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */; };
-		AF51CBA1222BF07C003051D7 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		AF51CBA3222BF07C003051D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
 		AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
@@ -378,16 +377,16 @@
 		2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.release.xcconfig"; sourceTree = "<group>"; };
 		21F1664046EEC1F99C53D296 /* Pods-MobileTokenTests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		38C8A63E21C1A933F7AE0560 /* Pods-MobileTokenTests.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.releaseiscop.xcconfig"; sourceTree = "<group>"; };
+		64D6EF2647CA3F4D514A19A8 /* Pods-MobileToken.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		661F34B5E17BD2E4C26CA132 /* Pods-MobileTokenUITests.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7563D318EA877E749AA8A46E /* Pods-MobileTokenTests.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7CA4344788329AD13127CFC2 /* Pods-MobileTokenUITests.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		87A92C3F1D65809F1249CB83 /* Pods-MobileTokenTests.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
+		91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00193DCA7A801AB64FDC97E /* Pods-MobileTokenUITests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
-		A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugiscop.xcconfig"; sourceTree = "<group>"; };
-		AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
 		AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationPresenter.swift; sourceTree = "<group>"; };
 		AC16D6F921CA2F140094FBED /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
@@ -487,7 +486,6 @@
 		ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationContractor.swift; sourceTree = "<group>"; };
 		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		ACEC112B222BF87100AF933B /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
-		ACEC1131222BFAD600AF933B /* banks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AF020850220175E80021856A /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
@@ -573,11 +571,11 @@
 		AFE81B332196E05900AA0AF2 /* RepositoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
 		AFE81B342196E05900AA0AF2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsupportedOperationException.swift; sourceTree = "<group>"; };
-		C1CDF2D278473F060C92F6AB /* Pods-MobileToken.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
+		B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
+		D4F7E48A9147EA2E00B9F254 /* Pods-MobileToken.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F38F3D73E573C46828A81D82 /* Pods-MobileToken.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		F7F43FE380B1AFF618024899 /* Pods-MobileToken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -586,7 +584,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF51CBA1222BF07C003051D7 /* Pods_MobileToken.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */,
+				6B8E8F66433B1748C06A5CD5 /* Pods_MobileToken.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,10 +624,6 @@
 				2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */,
 				E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */,
 				7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */,
-				C1CDF2D278473F060C92F6AB /* Pods-MobileToken.debugcarrenedev.xcconfig */,
-				A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */,
-				F38F3D73E573C46828A81D82 /* Pods-MobileToken.releasecarrenedev.xcconfig */,
-				AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */,
 				87A92C3F1D65809F1249CB83 /* Pods-MobileTokenTests.debugcarrenedev.xcconfig */,
 				7563D318EA877E749AA8A46E /* Pods-MobileTokenTests.debugiscop.xcconfig */,
 				21F1664046EEC1F99C53D296 /* Pods-MobileTokenTests.releasecarrenedev.xcconfig */,
@@ -638,6 +632,10 @@
 				661F34B5E17BD2E4C26CA132 /* Pods-MobileTokenUITests.debugiscop.xcconfig */,
 				A00193DCA7A801AB64FDC97E /* Pods-MobileTokenUITests.releasecarrenedev.xcconfig */,
 				0914356E4BCA5902CACAEB61 /* Pods-MobileTokenUITests.releaseiscop.xcconfig */,
+				D4F7E48A9147EA2E00B9F254 /* Pods-MobileToken.debugcarrenedev.xcconfig */,
+				64D6EF2647CA3F4D514A19A8 /* Pods-MobileToken.debugiscop.xcconfig */,
+				91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */,
+				B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1486,7 +1484,6 @@
 				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
 				AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */,
 				ACEC112B222BF87100AF933B /* JsonParser.swift */,
-				ACEC1131222BFAD600AF933B /* banks.json */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1573,12 +1570,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF51CBD2222BF07C003051D7 /* Build configuration list for PBXNativeTarget "MobileTokenDebug" */;
 			buildPhases = (
-				AF51CB22222BF07C003051D7 /* [CP] Check Pods Manifest.lock */,
 				AF51CB23222BF07C003051D7 /* ShellScript */,
 				AF51CB24222BF07C003051D7 /* Sources */,
 				AF51CBA0222BF07C003051D7 /* Frameworks */,
 				AF51CBA2222BF07C003051D7 /* Resources */,
-				AF51CBCF222BF07C003051D7 /* [CP] Embed Pods Frameworks */,
 				AF51CBD0222BF07C003051D7 /* ShellScript */,
 				AF51CBD1222BF07C003051D7 /* Run Script */,
 			);
@@ -1761,7 +1756,6 @@
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */,
 				AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */,
-				ACEC1132222BFAD600AF933B /* banks.json in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
@@ -1928,24 +1922,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AF51CB22222BF07C003051D7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MobileToken-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF51CB23222BF07C003051D7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1955,79 +1931,11 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		AF51CBCF222BF07C003051D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
-				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
-				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
-				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
-				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
-				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/oath/oath.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/oath.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		AF51CBD0222BF07C003051D7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2094,7 +2002,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2444,7 +2352,6 @@
 /* Begin XCBuildConfiguration section */
 		AF51CBD3222BF07C003051D7 /* DebugCarreneDev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1CDF2D278473F060C92F6AB /* Pods-MobileToken.debugcarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2471,7 +2378,6 @@
 		};
 		AF51CBD4222BF07C003051D7 /* DebugISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2498,7 +2404,6 @@
 		};
 		AF51CBD5222BF07C003051D7 /* ReleaseCarreneDev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F38F3D73E573C46828A81D82 /* Pods-MobileToken.releasecarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
@@ -2525,7 +2430,6 @@
 		};
 		AF51CBD6222BF07C003051D7 /* ReleaseISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
@@ -2619,7 +2523,7 @@
 		};
 		AF67C08A22154AE4000DA700 /* DebugISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3E9C4C28DE57BE2D9B589E8 /* Pods-MobileToken.debugiscop.xcconfig */;
+			baseConfigurationReference = 64D6EF2647CA3F4D514A19A8 /* Pods-MobileToken.debugiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2750,7 +2654,7 @@
 		};
 		AF67C08E22154AFE000DA700 /* ReleaseISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA1908E6377D0AD9433398F9 /* Pods-MobileToken.releaseiscop.xcconfig */;
+			baseConfigurationReference = B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
@@ -2948,7 +2852,7 @@
 		};
 		AFB39B752189A6A700302624 /* DebugCarreneDev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1CDF2D278473F060C92F6AB /* Pods-MobileToken.debugcarrenedev.xcconfig */;
+			baseConfigurationReference = D4F7E48A9147EA2E00B9F254 /* Pods-MobileToken.debugcarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2975,7 +2879,7 @@
 		};
 		AFB39B762189A6A700302624 /* ReleaseCarreneDev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F38F3D73E573C46828A81D82 /* Pods-MobileToken.releasecarrenedev.xcconfig */;
+			baseConfigurationReference = 91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
