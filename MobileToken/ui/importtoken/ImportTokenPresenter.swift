@@ -10,7 +10,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
     }
     
     func importToken(tokenPacket: String, card: Card, cryptoModuleId: Token.CryptoModuleId) {
-        let token = Token(tokenPaket: tokenPacket, bank: card.bank, cryptoModuleId: cryptoModuleId)
+        let token = Token(tokenPaket: tokenPacket, card: card, cryptoModuleId: cryptoModuleId)
        
         do {
             try token.validate()
@@ -33,6 +33,9 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
         } catch ParseTokenException.IllegalStateException {
             SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+            
+        } catch ParseTokenException.InvalidCardNumber {
+            SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidtokenname(), color: R.color.errorDark()!, duration: .middle).show()
         } catch {
             SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
         }

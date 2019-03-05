@@ -29,7 +29,7 @@
 "sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است";
 "sb_tokenimport_invalidcryptomoduleid" = "تفاوت در نوع رمز";
 "sb_tokenimport_invalidchecksum" = "عبارت ارزیابی اشتباه است";
-
+"sb_tokenimport_invalidtokenname" = "رمز وارد شده برای کارت انتخابی معتبر نیست";
 "sb_card_deleted_successfully" = "کارت حذف شد";
 "sb_card_deleted_unsuccessfully" = "حذف کارت با خطا مواجه شد";
 "sb_token_deleted_successfully" = "رمز با موفقیت حذف شد";

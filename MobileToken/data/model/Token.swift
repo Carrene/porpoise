@@ -6,6 +6,7 @@ enum ParseTokenException: Error {
     case InvalidKeyException
     case NoSuchAlgorithmException
     case IllegalStateException
+    case InvalidCardNumber
 }
 
 import Foundation
@@ -45,7 +46,7 @@ class Token: Object, Mappable, NSCopying{
     var timeInterval: Float?
     var otpLength: Int?
     var bankId: Int?
-    var bank: Bank?
+//    var bank: Bank?
     let owners = LinkingObjects(fromType: Card.self, property: "TokenList")
     var card: Card?
     
@@ -60,10 +61,11 @@ class Token: Object, Mappable, NSCopying{
         return ["expireDate", "cryptoModuleId", "CryptoModuleId", "seed", "name", "hashType", "version", "timeInterval", "otpLength", "bankId", "bank", "owner", "card"]
     }
     
-    convenience init(tokenPaket: String? = nil, id: String? = nil, bank: Bank? = nil, cryptoModuleId: CryptoModuleId? = nil) {
+    convenience init(tokenPaket: String? = nil, id: String? = nil, card: Card? = nil, cryptoModuleId: CryptoModuleId? = nil) {
         self.init()
         self.tokenPacket = tokenPaket
-        self.bank = bank
+        self.card = card
+//        self.bank = bank
         self.cryptoModuleId = cryptoModuleId
         if id == nil {
             self.id = NSUUID().uuidString.lowercased()
@@ -83,7 +85,7 @@ class Token: Object, Mappable, NSCopying{
     
         let tokenPlusIvPacketBytes = tokenPacket?.hexaToBytes()
         let iv = Array(tokenPlusIvPacketBytes![0..<16])
-        let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes
+        let secretBytes = Data(base64urlEncoded: self.card!.bank!.secret!)?.bytes
         let tokenPacketEncrypted = Array(tokenPlusIvPacketBytes![16..<tokenPlusIvPacketBytes!.count])
         
         let tokenPacketDecrypted = try! AES(key: secretBytes!, blockMode: CBC(iv: iv), padding: .pkcs5).decrypt(tokenPacketEncrypted)
@@ -123,7 +125,7 @@ class Token: Object, Mappable, NSCopying{
             throw ParseTokenException.NumberFormatException
         }
         
-        guard let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes else{
+        guard let secretBytes = Data(base64urlEncoded: self.card!.bank!.secret!)?.bytes else{
             throw ParseTokenException.InvalidKeyException
         }
 //        let secretBytes = Data(base64urlEncoded: bank!.secret!)?.bytes
@@ -150,8 +152,16 @@ class Token: Object, Mappable, NSCopying{
                 throw ParseTokenException.InvalidCryptoModuleIdException
             }
             self.bankId = Int(tokenPacketDecryptedWithoutChecksum[8])
-            if (self.bankId != self.bank?.id) {
+            if (self.bankId != self.card!.bank?.id) {
                 throw ParseTokenException.InvalidBankIdException
+            }
+            
+            if !(card?.number?.hasPrefix("_"))! {
+                let name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[29 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
+                if card?.number != name {
+                    throw ParseTokenException.InvalidCardNumber
+                }
+                
             }
         }
     }
