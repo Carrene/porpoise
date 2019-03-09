@@ -124,7 +124,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
-        
+        if inputPhone?.first == "0" {
+            inputPhone = inputPhone?.substring(from: (inputPhone?.index((inputPhone?.startIndex)!, offsetBy: 1))!)
+        }
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
