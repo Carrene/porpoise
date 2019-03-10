@@ -106,8 +106,9 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     @objc func resetTimer(_ sender: UITapGestureRecognizer) {
+        
+        presenter?.claim(phone: phoneNumber, bank: selectedBank!)
         presenter?.invalidateTimer()
-        presenter?.initCodeTimer()
     }
     
     @objc func dismiss(_ sender: UITapGestureRecognizer) {

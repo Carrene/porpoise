@@ -3,7 +3,7 @@ import Foundation
 class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     
     private unowned let view : PhoneConfirmationViewProtocol
-    private var userRepository = UserRepository()
+   
     private var timeCount : Int!
     private static let SMS_TIMER = 2 * 60
     private var timer:Timer!
@@ -13,6 +13,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     }
     
     func bind(user:User) {
+        let userRepository = UserRepository()
         self.view.startBarIndicator()
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             if let statusCode = response.restDataResponse?.response?.statusCode {
@@ -86,5 +87,37 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     
     func invalidateTimer() {
         self.timer.invalidate()
+        self.timer = nil
+    }
+    
+    func claim(phone: String,bank:Bank) {
+         self.view.startBarIndicator()
+        let userRepository = UserRepository()
+        self.view.startBarIndicator()
+        let user = User(phone: phone, activationCode: nil, bank: bank)
+        let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            if let statusCode = response.restDataResponse?.response?.statusCode {
+                self?.view.endBarIndicator()
+                switch statusCode {
+                case 200:
+                   self?.view.endBarIndicator()
+                   self?.initCodeTimer()
+                case 400:
+                    self?.view.showBadRequestError()
+                case 401:
+                    self?.view.showEverywhereError401()
+                case 500:
+                    self?.view.showServerError()
+                case 502:
+                    self?.view.showNetworkError()
+                default:
+                    UIHelper.showFailedSnackBar()
+                }
+            }
+            else {
+                self?.view.showEverywhereFail()
+            }
+        }
+        userRepository.claim(user: user, onDone: onDataResponse)
     }
 }
