@@ -54,6 +54,8 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
                 self!.authentication = repoResponse.value
             }
         }
+        let a = UIView()
+        a.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         authenticationRestRepository.update(authentication, onDone: onDataResponse)
     }
     

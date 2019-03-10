@@ -37,10 +37,10 @@ class AddCardPagerViewCell: FSPagerViewCell {
         viewCard.layer.cornerRadius = 10
         viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
         viewCard.layer.shadowRadius = 5
-        viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        viewCard.layer.shadowOpacity = 0.2
+        viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.5)
+        viewCard.layer.shadowOpacity = 0.1
         viewCard.layer.backgroundColor = R.color.primaryLight()?.cgColor
-        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.5).cgColor
+        viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         
         
         viewCard.labelCardName.text = R.string.localizable.lb_cardName()

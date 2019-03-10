@@ -22,4 +22,5 @@ protocol PhoneConfirmationPresenterProtocol {
     func bind(user:User)
     func initCodeTimer()
     func invalidateTimer()
+    func claim(phone: String,bank:Bank)
 }
