@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initialFirebase(application: application)
         return true
     }
-    
+   
     func initialTheme() {
         self.window?.tintColor = R.color.secondary()
         UILabel.appearance().font = R.font.iranSansMobileFaNum(size:16)
