@@ -1,4 +1,4 @@
-#include "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"
+#include "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releaseiscop.xcconfig"
 
 URL_ENDPOINT = raaz.isc.co.ir
 
