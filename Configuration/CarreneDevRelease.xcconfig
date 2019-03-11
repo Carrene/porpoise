@@ -1,4 +1,4 @@
-#include "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releasecarrenedev.xcconfig"
+#include "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releasecarrenedev.xcconfig"
 
 URL_ENDPOINT=192.168.1.57
 
