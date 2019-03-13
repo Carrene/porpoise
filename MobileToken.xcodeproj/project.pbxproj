@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		057924BF219202CB00DFA69F /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* CardListViewController.swift */; };
-		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
-		6B8E8F66433B1748C06A5CD5 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
+		386045522CD01F45D1159594 /* Pods_Common_MobileTokenDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ADCFFACD006BCE53D3AC52 /* Pods_Common_MobileTokenDebug.framework */; };
 		AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
 		AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
 		AC16D6FF21CA31B70094FBED /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
@@ -351,6 +350,7 @@
 		AFE81B352196E05900AA0AF2 /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B332196E05900AA0AF2 /* RepositoryResponse.swift */; };
 		AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B342196E05900AA0AF2 /* Repository.swift */; };
 		AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */; };
+		D02D264433C45264B0D39BC2 /* Pods_Common_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41998B353D8DAEC1D5AC0105 /* Pods_Common_MobileToken.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -373,20 +373,28 @@
 /* Begin PBXFileReference section */
 		057924BE219202CB00DFA69F /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		0914356E4BCA5902CACAEB61 /* Pods-MobileTokenUITests.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.releaseiscop.xcconfig"; sourceTree = "<group>"; };
+		0A1827F399E4964426C6E234 /* Pods-Common-MobileTokenDebug.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenDebug.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		1D9306731899899C0CC5FB63 /* Pods-MobileToken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.release.xcconfig"; sourceTree = "<group>"; };
 		2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.release.xcconfig"; sourceTree = "<group>"; };
 		21F1664046EEC1F99C53D296 /* Pods-MobileTokenTests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
+		234764F4AAE7E5ECFF5AEF41 /* Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
+		2F0F34956AB3C0CDF0E215FA /* Pods-Common-MobileToken.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		38C8A63E21C1A933F7AE0560 /* Pods-MobileTokenTests.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.releaseiscop.xcconfig"; sourceTree = "<group>"; };
+		41998B353D8DAEC1D5AC0105 /* Pods_Common_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4997270133B909FAFCF00328 /* Pods-Common-MobileTokenDebug.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenDebug.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.releaseiscop.xcconfig"; sourceTree = "<group>"; };
 		64D6EF2647CA3F4D514A19A8 /* Pods-MobileToken.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		661F34B5E17BD2E4C26CA132 /* Pods-MobileTokenUITests.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7563D318EA877E749AA8A46E /* Pods-MobileTokenTests.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		7920D509CD7A2AA91738710E /* Pods-MobileTokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7CA4344788329AD13127CFC2 /* Pods-MobileTokenUITests.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
+		86BF6344B2F167670FAD2D06 /* Pods-Common-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
 		87A92C3F1D65809F1249CB83 /* Pods-MobileTokenTests.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98BB68A9AAE0753BA3C52244 /* Pods-Common-MobileToken.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		A00193DCA7A801AB64FDC97E /* Pods-MobileTokenUITests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
+		A8ADCFFACD006BCE53D3AC52 /* Pods_Common_MobileTokenDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_MobileTokenDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationPresenter.swift; sourceTree = "<group>"; };
 		AC16D6F921CA2F140094FBED /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationPatternViewController.swift; sourceTree = "<group>"; };
@@ -572,6 +580,8 @@
 		AFE81B342196E05900AA0AF2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsupportedOperationException.swift; sourceTree = "<group>"; };
 		B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
+		C068EABC6B7054881F5CF8AB /* Pods-Common-MobileToken.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.debugiscop.xcconfig"; sourceTree = "<group>"; };
+		C72B1136ABDEF0040C34202C /* Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		D4F7E48A9147EA2E00B9F254 /* Pods-MobileToken.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -584,6 +594,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386045522CD01F45D1159594 /* Pods_Common_MobileTokenDebug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,8 +602,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */,
-				6B8E8F66433B1748C06A5CD5 /* Pods_MobileToken.framework in Frameworks */,
+				D02D264433C45264B0D39BC2 /* Pods_Common_MobileToken.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +646,14 @@
 				64D6EF2647CA3F4D514A19A8 /* Pods-MobileToken.debugiscop.xcconfig */,
 				91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */,
 				B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */,
+				2F0F34956AB3C0CDF0E215FA /* Pods-Common-MobileToken.debugcarrenedev.xcconfig */,
+				C068EABC6B7054881F5CF8AB /* Pods-Common-MobileToken.debugiscop.xcconfig */,
+				98BB68A9AAE0753BA3C52244 /* Pods-Common-MobileToken.releasecarrenedev.xcconfig */,
+				86BF6344B2F167670FAD2D06 /* Pods-Common-MobileToken.releaseiscop.xcconfig */,
+				C72B1136ABDEF0040C34202C /* Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig */,
+				0A1827F399E4964426C6E234 /* Pods-Common-MobileTokenDebug.debugiscop.xcconfig */,
+				234764F4AAE7E5ECFF5AEF41 /* Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig */,
+				4997270133B909FAFCF00328 /* Pods-Common-MobileTokenDebug.releaseiscop.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -646,6 +664,8 @@
 				EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */,
 				6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */,
 				9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */,
+				41998B353D8DAEC1D5AC0105 /* Pods_Common_MobileToken.framework */,
+				A8ADCFFACD006BCE53D3AC52 /* Pods_Common_MobileTokenDebug.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1570,12 +1590,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF51CBD2222BF07C003051D7 /* Build configuration list for PBXNativeTarget "MobileTokenDebug" */;
 			buildPhases = (
+				A0A120C9E345B0A039F4CF1B /* [CP] Check Pods Manifest.lock */,
 				AF51CB23222BF07C003051D7 /* ShellScript */,
 				AF51CB24222BF07C003051D7 /* Sources */,
 				AF51CBA0222BF07C003051D7 /* Frameworks */,
 				AF51CBA2222BF07C003051D7 /* Resources */,
 				AF51CBD0222BF07C003051D7 /* ShellScript */,
 				AF51CBD1222BF07C003051D7 /* Run Script */,
+				D0B2DA3914311370192EF78E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1842,7 +1864,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
@@ -1901,7 +1923,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A120C9E345B0A039F4CF1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Common-MobileTokenDebug-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ACE9AACB4A470CA74FFC1A53 /* [CP] Check Pods Manifest.lock */ = {
@@ -2019,11 +2059,79 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MobileToken-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Common-MobileToken-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0B2DA3914311370192EF78E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/oath/oath.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/oath.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2352,6 +2460,7 @@
 /* Begin XCBuildConfiguration section */
 		AF51CBD3222BF07C003051D7 /* DebugCarreneDev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C72B1136ABDEF0040C34202C /* Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2378,6 +2487,7 @@
 		};
 		AF51CBD4222BF07C003051D7 /* DebugISCOP */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A1827F399E4964426C6E234 /* Pods-Common-MobileTokenDebug.debugiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2404,6 +2514,7 @@
 		};
 		AF51CBD5222BF07C003051D7 /* ReleaseCarreneDev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 234764F4AAE7E5ECFF5AEF41 /* Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
@@ -2430,6 +2541,7 @@
 		};
 		AF51CBD6222BF07C003051D7 /* ReleaseISCOP */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4997270133B909FAFCF00328 /* Pods-Common-MobileTokenDebug.releaseiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
@@ -2523,7 +2635,7 @@
 		};
 		AF67C08A22154AE4000DA700 /* DebugISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64D6EF2647CA3F4D514A19A8 /* Pods-MobileToken.debugiscop.xcconfig */;
+			baseConfigurationReference = C068EABC6B7054881F5CF8AB /* Pods-Common-MobileToken.debugiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2654,7 +2766,7 @@
 		};
 		AF67C08E22154AFE000DA700 /* ReleaseISCOP */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */;
+			baseConfigurationReference = 86BF6344B2F167670FAD2D06 /* Pods-Common-MobileToken.releaseiscop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
@@ -2852,7 +2964,7 @@
 		};
 		AFB39B752189A6A700302624 /* DebugCarreneDev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4F7E48A9147EA2E00B9F254 /* Pods-MobileToken.debugcarrenedev.xcconfig */;
+			baseConfigurationReference = 2F0F34956AB3C0CDF0E215FA /* Pods-Common-MobileToken.debugcarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
@@ -2879,7 +2991,7 @@
 		};
 		AFB39B762189A6A700302624 /* ReleaseCarreneDev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */;
+			baseConfigurationReference = 98BB68A9AAE0753BA3C52244 /* Pods-Common-MobileToken.releasecarrenedev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;

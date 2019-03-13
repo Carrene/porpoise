@@ -1,6 +1,6 @@
 platform :ios, '9.0'
 
-target 'MobileToken' do
+abstract_target 'Common' do
     
     use_frameworks!
     pod 'ObjectMapper+Realm', '~> 0.6'
@@ -27,7 +27,13 @@ target 'MobileToken' do
     pod 'Fabric', '~> 1.9.0'
     pod 'Crashlytics', '~> 3.12.0'
     pod 'PopupDialog', '~> 0.9'
-
+    
+    target 'MobileToken' do
+    end
+    
+    target 'MobileTokenDebug' do
+    end
+    
     target 'MobileTokenTests' do
         inherit! :search_paths
     end

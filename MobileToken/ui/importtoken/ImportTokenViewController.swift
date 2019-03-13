@@ -95,11 +95,10 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        if textViewAtmCode.text.count != 8 || textViewSmsCode.text.count != 120 {
-//            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
-            btConfirm.isEnabled = false
-        } else {
+        if textViewAtmCode.text.count == 8 && textViewSmsCode.text.count == 120 {
             btConfirm.isEnabled = true
+        } else {
+            btConfirm.isEnabled = false
         }
     }
     
@@ -136,6 +135,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
             smsText.forEach{ splitedText in
                 if splitedText.count == 120 && smsText.count > 1 {
                     textViewSmsCode.text = String(splitedText)
+                    if textViewAtmCode.text.count == 8 {
+                        btConfirm.isEnabled = true
+                    }
                 }
             }
             return numberOfChars < 121

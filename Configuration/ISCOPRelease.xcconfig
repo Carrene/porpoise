@@ -1,4 +1,4 @@
-#include "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"
+#include "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releaseiscop.xcconfig"
 
 URL_ENDPOINT = raaz.isc.co.ir
 
@@ -6,7 +6,7 @@ URL_PORT = 443
 
 URL_SCHEME = https
 
-INITIAL_TOKEN = eyJhbGciOiJIUzI1NiIsImlhdCI6MTU1MjIxMTk3MSwiZXhwIjoxNzA5ODkxOTcxfQ.eyJwbGF0Zm9ybSI6ImlPUyIsInZlcnNpb24iOiIxLjAuMS1yYyIsImluaXRpYWwiOnRydWV9.pEfhdc8NldNaT8WJuUkxmjhBFG6z9csYaN_wUP_Z6As
+INITIAL_TOKEN = eyJhbGciOiJIUzI1NiIsImlhdCI6MTU1MjQ2ODE5MSwiZXhwIjoxNzEwMTQ4MTkxfQ.eyJwbGF0Zm9ybSI6ImlPUyIsInZlcnNpb24iOiIxLjAuMi1yYyIsImluaXRpYWwiOnRydWV9.TbQS89Iw0QL8hzbnLujq66lxZYdH67NxXhsQzcSgvYY
 
 SELF_SIGNED = NO
 
