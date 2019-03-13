@@ -158,7 +158,11 @@ class Token: Object, Mappable, NSCopying{
             
             if !(card?.number?.hasPrefix("_"))! {
                 let name = String(bytes: Array(tokenPacketDecryptedWithoutChecksum[29 ..< tokenPacketDecryptedWithoutChecksum.count]), encoding: .utf8)
-                if card?.number != name {
+                let index  = name?.index((name?.endIndex)!, offsetBy: -4)
+                
+                let tokenName = String(name![...index!])
+                let cardNumber = String((card?.number![...index!])!)
+                if tokenName != cardNumber {
                     throw ParseTokenException.InvalidCardNumber
                 }
                 
