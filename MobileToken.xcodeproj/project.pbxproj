@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		057924BF219202CB00DFA69F /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* CardListViewController.swift */; };
-		0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
 		386045522CD01F45D1159594 /* Pods_Common_MobileTokenDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ADCFFACD006BCE53D3AC52 /* Pods_Common_MobileTokenDebug.framework */; };
-		6B8E8F66433B1748C06A5CD5 /* Pods_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */; };
 		AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
 		AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
 		AC16D6FF21CA31B70094FBED /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
@@ -604,8 +602,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0958FAA06B5F86A1291CA950 /* Pods_MobileToken.framework in Frameworks */,
-				6B8E8F66433B1748C06A5CD5 /* Pods_MobileToken.framework in Frameworks */,
 				D02D264433C45264B0D39BC2 /* Pods_Common_MobileToken.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
