@@ -23,8 +23,18 @@ class IntroViewController {
         
         title = R.string.localizable.intro3Title()
         description = R.string.localizable.intro3Description()
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: nil, action: nil))
+        
+        title = R.string.localizable.intro4Title()
+        description = R.string.localizable.intro4Description()
+        pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: nil, action: nil))
+        
+        title = R.string.localizable.intro5Title()
+        description = R.string.localizable.intro5Description()
         let buttonTitle  = R.string.localizable.lb_enter_program()
         pages.append(OnboardingContentViewController.content(withTitle: title, body: description, image: nil, buttonText: buttonTitle, action: { onIntroEnd() }))
+        
+        
         
         pages.forEach() { element in
             element.bodyLabel.font = R.font.iranSansMobile(size: 16)
@@ -35,34 +45,21 @@ class IntroViewController {
             element.actionButton.setTitleColor(R.color.secondary(), for: .normal)
         }
         
-        let pageColors = [R.color.primary(), R.color.primary(), R.color.primary()]
-        for i in 0..<3 {
+        let pageImages = [UIImage(named:"introDevice"),UIImage(named:"introAtm-screen-menu"),UIImage(named:"introAtm-screen-pass"),UIImage(named:"introReceipt"),UIImage(named:"introDevice-pass")]
+        for i in 0..<5 {
             pages[i].viewWillAppearBlock = {
-                //pages[i].view.backgroundColor = UIColor(netHex: Int(pageColors[i], radix: 16)!)
+                pages[i].iconImageView.image = pageImages[i]
+                
             }
-            pages[i].topPadding = 50
-            pages[i].underIconPadding = 50
-            pages[i].underTitlePadding = 20
+            pages[i].topPadding = 100
+            pages[i].underIconPadding = 70
+            pages[i].underTitlePadding = 16
             pages[i].bottomPadding = 20
             pages[i].iconImageView.backgroundColor = R.color.primary()
-            switch i {
-            case 0:
-                pages[0].iconImageView.image = R.image.noInternet()
-                pages[0].iconHeight = 200
-                pages[0].iconWidth = 200
-                
-            case 2:
-                pages[2].iconImageView.image = R.image.forgetPassword()
-                pages[2].iconHeight = 250
-                pages[2].iconWidth = 250
-            case 1:
-                pages[1].iconImageView.image = R.image.security()
-                pages[1].iconHeight = 250
-                pages[1].iconWidth = 250
-            default:
-                break
-            }
-            pages[i].view.contentMode = .center
+            pages[i].iconHeight = 250
+            pages[i].iconWidth = 250
+            //pages[i].view.contentMode = .center
+            
         }
         
         onboardingVC = OnboardingViewController.onboard(withBackgroundImage: nil, contents: pages)
