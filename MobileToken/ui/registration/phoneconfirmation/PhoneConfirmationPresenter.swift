@@ -16,8 +16,8 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
         let userRepository = UserRepository()
         self.view.startBarIndicator()
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            self?.view.endBarIndicator()
             if let statusCode = response.restDataResponse?.response?.statusCode {
-                self?.view.endBarIndicator()
                 switch statusCode {
                 case 200:
                     let responseUser = response.value
