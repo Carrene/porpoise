@@ -9,32 +9,32 @@
 // snackbar
 "sb_wrong_password" = "رمز اشتباه است.";
 "sb_wrong_pattern" = "الگو اشتباه است.";
-"sb_try_for_second_time" = "برای بار دوم انجام دهید";
-"sb_patterns_not_match" = "الگو و تکرار آن مطابقت ندارند، دوباره تلاش کنید";
-"sb_passwords_not_match" = "رمز و تکرار آن برابر نیستند، دوباره تلاش کنید";
-"sb_pattern_min_point_error" = "حداقل ۴ نقطه را متصل کنید";
-"sb_bad_request" = "مشکلی پیش آمده است";
-"sb_activation_code_is_not_valid" = "کد فعال‌سازی اشتباه است";
+"sb_try_for_second_time" = "برای بار دوم انجام دهید.";
+"sb_patterns_not_match" = "الگو و تکرار آن مطابقت ندارند، دوباره تلاش کنید.";
+"sb_passwords_not_match" = "رمز و تکرار آن برابر نیستند، دوباره تلاش کنید.";
+"sb_pattern_min_point_error" = "حداقل ۴ نقطه را متصل کنید.";
+"sb_bad_request" = "مشکلی پیش آمده است.";
+"sb_activation_code_is_not_valid" = "کد فعال‌سازی اشتباه است.";
 "sb_SSM_is_not_available" = "SSM در دسترس نیست";
 "sb_wrong_phone" = "شماره تلفن اشتباه است";
-"sb_successfully_done" = "با موفقیت انجام شد";
+"sb_successfully_done" = "با موفقیت انجام شد.";
 "sb_server_error" = "خطای سرور";
-"sb_password_copied" = "رمز کپی شد";
-"sb_check_your_input" = "ورودی خود را کنترل کنید";
-"sb_token_added" = "رمز با موفقیت اضافه شد";
+"sb_password_copied" = "رمز کپی شد.";
+"sb_check_your_input" = "ورودی خود را کنترل کنید.";
+"sb_token_added" = "رمز با موفقیت اضافه شد.";
 "sb_everywhere_401" = "دسترسی غیر مجاز";
-"sb_everywhere_fail" = "با خطا مواجه شد";
+"sb_everywhere_fail" = "با خطا مواجه شد.";
 
-"sb_tokenimport_invalidkey" = "کلید اشتباه است";
-"sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است";
+"sb_tokenimport_invalidkey" = "کلید اشتباه است.";
+"sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است.";
 "sb_tokenimport_invalidcryptomoduleid" = "تفاوت در نوع رمز";
-"sb_tokenimport_invalidchecksum" = "عبارت ارزیابی اشتباه است";
-"sb_tokenimport_invalidtokenname" = "رمز وارد شده برای کارت انتخابی معتبر نیست";
-"sb_card_deleted_successfully" = "کارت حذف شد";
-"sb_card_deleted_unsuccessfully" = "حذف کارت با خطا مواجه شد";
-"sb_token_deleted_successfully" = "رمز با موفقیت حذف شد";
-"sb_token_deleted_unsuccessfully" = "حذف رمز با خطا مواجه شد";
-"sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است";
+"sb_tokenimport_invalidchecksum" = "عبارت ارزیابی اشتباه است.";
+"sb_tokenimport_invalidtokenname" = "رمز وارد شده برای کارت انتخابی معتبر نیست.";
+"sb_card_deleted_successfully" = "کارت حذف شد.";
+"sb_card_deleted_unsuccessfully" = "حذف کارت با خطا مواجه شد.";
+"sb_token_deleted_successfully" = "رمز با موفقیت حذف شد.";
+"sb_token_deleted_unsuccessfully" = "حذف رمز با خطا مواجه شد.";
+"sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است.";
 "sb_network_error" = "خطای شبکه";
 
 //passWordHint
@@ -42,17 +42,17 @@
 "enter_at_least_one_capital_letter" = "یک حرف بزرگ";
 "enter_at_least_one_digit" = "یک عدد";
 "enter_at_least_one_special_character" = "یک کاراکتر (؟*_=+%$#@) باشد";
-"lb_passwordHint" = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد";
+"lb_passwordHint" = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد.";
 
 //label
-"lb_enter_pattern" = "الگوی خود را وارد کنید";
-"lb_enter_password" = "رمز خود را وارد کنید";
+"lb_enter_pattern" = "الگوی خود را وارد کنید.";
+"lb_enter_password" = "رمز خود را وارد کنید.";
 "lb_seconds" = "ثانیه ";
 "lb_resend" = "ارسال دوباره کد";
 "lb_pattern" = "الگو";
 "lb_password" = "رمز";
 "lb_cardName" = "نام کارت";
-"lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید";
+"lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید.";
 "lb_desired_card_name" = "نام پیشنهادی کارت  ";
 "lb_are_you_sure" = "آیا مطمئن هستید؟";
 "everywhere_firstpassword" = "رمز اول";
@@ -72,18 +72,22 @@
 "ash_edit_card_name" = "ویرایش نام کارت";
 "ash_delete_card" = "حذف کارت";
 "ash_delete_token" = "حذف رمز";
-"alert_choose_token" = "رمز برای حذف را انتخاب کنید";
+"alert_choose_token" = "رمز برای حذف را انتخاب کنید.";
 "alert_delete_first_token" = "حذف رمز اول کارت";
 "alert_delete_second_token" = "حذف رمز دوم کارت";
-"alert_root_message"="متاسفانه شما نمی توانید از این برنامه استفاده کنید";
-"alert_force_close" = "برنامه به دلیل تغییرات رمز بسته خواهد شد. لطفا برنامه را مجددا اجرا نمایید";
+"alert_root_message"="متاسفانه شما نمی توانید از این برنامه استفاده کنید.";
+"alert_force_close" = "برنامه به دلیل تغییرات رمز بسته خواهد شد. لطفا برنامه را مجددا اجرا نمایید.";
 
-"intro1Title" = "بدون اینترنت";
-"intro1Description" = "بدون نیاز به اینترنت، رمز یکبار مصرف دریافت کنید";
-"intro2Title" = "امنیت بالا";
-"intro2Description" = "هر چند ثانیه رمز یکبار مصرف جدید خواهید داشت";
-"intro3Title" = "نیاز به حفظ کردن نیست";
-"intro3Description" = "دیگر رمز اول، دوم و اینترنت بانک خود را حفظ نکنید، یکبار مصرف دریافت کنید";
+"intro1Title" = "ورود شماره تلفن همراه";
+"intro1Description" = "شماره تلفن همراه ثبت شده در بانک مورد نظر را وارد کنید.";
+"intro2Title" = "مراجعه به خودپرداز بانک مورد نظر";
+"intro2Description" = "در منو خودپرداز بانک، گزینه‌ی عملیات رمز را انتخاب کنید.";
+"intro3Title" = "انتخاب نوع رمز یکبار مصرف";
+"intro3Description" = "یکی از دو گزینه‌ی فعال‌سازی‌ رمز‌اول‌ یکبار‌مصرف یا فعال‌سازی‌ رمزدوم‌ یکبار‌مصرف را انتخاب کنید.";
+"intro4Title" = "دریافت رسید از خودپرداز";
+"intro4Description" = "پس از تأیید عملیات انتخاب رمز، رسید حاوی بخش اول کد فعالسازی رمز انتخابی را دریافت می‌کنید.";
+"intro5Title" = "دریافت رمز یکبار مصرف از برنامه";
+"intro5Description" = "برای فعالسازی رمز، از کد دو بخشی روی فیش بانکی (بخش اول) و پیامک دریافتی (بخش دوم) استفاده کنید.";
 
 "pattern" = "الگو";
 "save" = "ذخیره";
@@ -110,9 +114,9 @@
 "help_edit_phone" = "چطور میتوانم شماره تلفن همراه وارد شده در زمان افزودن بانک را ویرایش کنم؟";
 
 "alert" = "هشدار";
-"alert_set_timezone" = "اگر تنظیمات زمان و تاریخ خودکار دستگاه غیرفعال است، برای کارکرد صحیح برنامه این گزینه را فعال کنید";
+"alert_set_timezone" = "اگر تنظیمات زمان و تاریخ خودکار دستگاه غیرفعال است، برای کارکرد صحیح برنامه این گزینه را فعال کنید.";
 "ok" = "باشد";
 "understand" = "متوجه شدم";
 
 
-"everywhere_fail" = "با خطا مواجه شد";
+"everywhere_fail" = "با خطا مواجه شد.";

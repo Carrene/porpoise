@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -86,8 +85,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnA-qI-CRm" userLabel="lbTitle">
-                                <rect key="frame" x="120.5" y="30" width="134.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز خود را وارد کنید." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnA-qI-CRm" userLabel="lbTitle">
+                                <rect key="frame" x="117.5" y="30" width="140" height="29"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -110,7 +109,7 @@
                                     <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="UVb-Op-tNO"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUl-hy-OU6" userLabel="labelPasswordHint">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUl-hy-OU6" userLabel="labelPasswordHint">
                                 <rect key="frame" x="30" y="121" width="315" height="38.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,8 +126,8 @@
                                 <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز را دوباره وارد کنید" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-XY-O6m" userLabel="labelSecondPassword">
-                                <rect key="frame" x="244.5" y="231.5" width="100.5" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز را دوباره وارد کنید." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-XY-O6m" userLabel="labelSecondPassword">
+                                <rect key="frame" x="241" y="231.5" width="104" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -196,8 +195,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-sE-vYv" userLabel="lbTitle">
-                                <rect key="frame" x="111" y="30" width="153.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-sE-vYv" userLabel="lbTitle">
+                                <rect key="frame" x="108" y="30" width="159" height="29"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
