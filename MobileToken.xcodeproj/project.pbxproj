@@ -2650,9 +2650,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken;
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Raaz Production";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz Carrene Production";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WEB_SERVICE_HOST = raaz.isc.co.ir;
@@ -2781,9 +2781,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken;
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Raaz Production";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz Carrene Production";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WEB_SERVICE_HOST = raaz.isc.co.ir;
@@ -2979,9 +2979,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken;
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Raaz Production";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz Carrene Production";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WEB_SERVICE_HOST = raaz.isc.co.ir;
@@ -3006,9 +3006,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken;
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Raaz Production";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz Carrene Production";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WEB_SERVICE_HOST = raaz.isc.co.ir;

@@ -13,8 +13,8 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         self.view.startBarIndicator()
         let user = User(phone: phone, activationCode: nil, bank: bank)
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
+            self?.view.endBarIndicator()
             if let statusCode = response.restDataResponse?.response?.statusCode {
-                self?.view.endBarIndicator()
                 switch statusCode {
                 case 200:
                     self?.view.navigateToPhoneConfirmation(phone:phone)
