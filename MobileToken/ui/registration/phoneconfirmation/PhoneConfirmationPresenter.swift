@@ -6,7 +6,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
    
     private var timeCount : Int!
     private static let SMS_TIMER = 2 * 60
-    private var timer:Timer!
+    private var timer:Timer?
     
     required init(view: PhoneConfirmationViewProtocol) {
         self.view = view
@@ -75,7 +75,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
         view.setCounterTitleToResend()
         self.timeCount = PhoneConfirmationPresenter.SMS_TIMER
         self.timer = Timer.scheduledTimer(timeInterval:TimeInterval(1), target: self, selector: #selector(update), userInfo: nil, repeats: true)
-        self.timer.fire()
+        self.timer?.fire()
     }
     
     func timeString(time:Double) -> String {
@@ -86,8 +86,10 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     }
     
     func invalidateTimer() {
-        self.timer.invalidate()
-        self.timer = nil
+        if timer != nil {
+            self.timer!.invalidate()
+            self.timer = nil
+        }
     }
     
     func claim(phone: String,bank:Bank) {
