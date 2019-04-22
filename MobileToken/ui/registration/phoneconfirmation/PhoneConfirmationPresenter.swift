@@ -60,7 +60,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     }
     
     @objc func update() {
-        
+
         if(timeCount >= 0) {
             view.setCounterTitleTime(time:String(self.timeString(time: Double(timeCount))))
             if timeCount == 0 {

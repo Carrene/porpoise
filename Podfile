@@ -27,7 +27,8 @@ abstract_target 'Common' do
     pod 'Fabric', '~> 1.9.0'
     pod 'Crashlytics', '~> 3.12.0'
     pod 'PopupDialog', '~> 0.9'
-    
+    pod 'KeychainSwift', '~> 14.0'
+
     target 'MobileToken' do
     end
     

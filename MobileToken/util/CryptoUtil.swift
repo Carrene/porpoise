@@ -14,6 +14,23 @@ class CryptoUtil {
         return  key
     }
     
-    
+    static func generateRandomData(size: Int) throws -> Data {
+        var data = Data(count: size)
+        var d = data
+        let result = d.withUnsafeMutableBytes {
+            (mutableBytes: UnsafeMutablePointer<UInt8>) -> Int32 in
+            SecRandomCopyBytes(kSecRandomDefault, data.count, mutableBytes)
+        }
+        
+        if result != errSecSuccess {
+            throw GenerateRandomDataError.UnableToGenerateRandomData
+        }
+        print(type(of: d))
+        return d
+    }
    
+}
+
+enum GenerateRandomDataError: Error {
+    case UnableToGenerateRandomData
 }

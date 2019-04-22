@@ -350,6 +350,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AF3BAC43226D976D00AE7D2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB39B442189A6A600302624 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF51CB21222BF07C003051D7;
+			remoteInfo = MobileTokenDebug;
+		};
 		AFB39B612189A6A700302624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFB39B442189A6A600302624 /* Project object */;
@@ -1619,6 +1626,7 @@
 			);
 			dependencies = (
 				AFB39B622189A6A700302624 /* PBXTargetDependency */,
+				AF3BAC44226D976D00AE7D2E /* PBXTargetDependency */,
 			);
 			name = MobileTokenTests;
 			productName = MobileTokenTests;
@@ -1664,7 +1672,7 @@
 					};
 					AFB39B5F2189A6A700302624 = {
 						CreatedOnToolsVersion = 10.0;
-						TestTargetID = AFB39B4B2189A6A600302624;
+						TestTargetID = AF51CB21222BF07C003051D7;
 					};
 					AFB39B6A2189A6A700302624 = {
 						CreatedOnToolsVersion = 10.0;
@@ -1852,6 +1860,7 @@
 				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
@@ -1881,6 +1890,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
@@ -2060,6 +2070,7 @@
 				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
@@ -2089,6 +2100,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
@@ -2389,6 +2401,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AF3BAC44226D976D00AE7D2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF51CB21222BF07C003051D7 /* MobileTokenDebug */;
+			targetProxy = AF3BAC43226D976D00AE7D2E /* PBXContainerItemProxy */;
+		};
 		AFB39B622189A6A700302624 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AFB39B4B2189A6A600302624 /* MobileToken */;
@@ -2442,7 +2459,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2469,7 +2486,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2496,7 +2513,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2523,7 +2540,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = "MobileToken/Info-debug.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2650,7 +2667,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileToken.app/MobileToken";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTokenDebug.app/MobileTokenDebug";
 			};
 			name = DebugISCOP;
 		};
@@ -2781,7 +2798,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileToken.app/MobileToken";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTokenDebug.app/MobileTokenDebug";
 			};
 			name = ReleaseISCOP;
 		};
@@ -3006,7 +3023,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileToken.app/MobileToken";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTokenDebug.app/MobileTokenDebug";
 			};
 			name = DebugCarreneDev;
 		};
@@ -3028,7 +3045,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileToken.app/MobileToken";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTokenDebug.app/MobileTokenDebug";
 			};
 			name = ReleaseCarreneDev;
 		};

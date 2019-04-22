@@ -4,6 +4,7 @@ import IQKeyboardManager
 import Firebase
 import Fabric
 import UserNotifications
+import KeychainSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initialTheme()
         initialIQKeyboard()
         initialFirebase(application: application)
+        
+        do {
+            let data = try CryptoUtil.generateRandomData(size: 64)
+            print(data.bytes)
+            let keychain = KeychainSwift()
+            let key = keychain.getData("my key")
+            if key == nil {
+                keychain.set(data, forKey: "my key", withAccess: .accessibleWhenUnlockedThisDeviceOnly)
+            }
+        } catch {
+            
+        }
         return true
     }
    

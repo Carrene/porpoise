@@ -1,6 +1,7 @@
 
 import Foundation
 import RealmSwift
+import KeychainSwift
 
 class RealmConfiguration {
     
@@ -16,14 +17,19 @@ class RealmConfiguration {
     static func insensitiveDataConfiguration() -> Realm.Configuration {
         var config = Realm.Configuration()
         config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("insensitive.realm")
-        config.encryptionKey = insensitiveDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
+//        let key = insensitiveDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        let keychain = KeychainSwift()
+        let key = keychain.getData("my key")
+        print(type(of: key))
+        config.encryptionKey = key
         return config
     }
     
     static func sensitiveDataConfiguration() -> Realm.Configuration {
         var config = Realm.Configuration()
         config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("sensitive.realm")
-        config.encryptionKey = sensitiveDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        let key = sensitiveDataEncryptionKey.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        config.encryptionKey = key
         return config
     }
     

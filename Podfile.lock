@@ -71,6 +71,7 @@ PODS:
   - HUIPatternLockView-Swift (2.0.1)
   - InputMask (3.4.1)
   - IQKeyboardManager (6.0.6)
+  - KeychainSwift (14.0.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -118,6 +119,7 @@ DEPENDENCIES:
   - HUIPatternLockView-Swift (~> 2.0.1)
   - InputMask (~> 3.4.0)
   - IQKeyboardManager (~> 6.0.4)
+  - KeychainSwift
   - oath (from `https://github.com/Carrene/oath.swift.git`, tag `0.4.0`)
   - "ObjectMapper+Realm (~> 0.6)"
   - Onboard (~> 2.3.3)
@@ -152,6 +154,7 @@ SPEC REPOS:
     - HUIPatternLockView-Swift
     - InputMask
     - IQKeyboardManager
+    - KeychainSwift
     - nanopb
     - ObjectMapper
     - "ObjectMapper+Realm"
@@ -199,6 +202,7 @@ SPEC CHECKSUMS:
   HUIPatternLockView-Swift: 0f72d91ff3aeb01f5cad43f6093c5361522bb472
   InputMask: 2c7d3faddbc724a8356a6ea269d60d9d6d7d2423
   IQKeyboardManager: 6b4ecd3e59cf55a26133d802d4678721d7f88499
+  KeychainSwift: d3cce449feb5198907aa3c50ae7409fdbd9d3e20
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   oath: 107b59d360ec1f9f0fce270d32b1e5052a59aa3a
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
@@ -214,6 +218,6 @@ SPEC CHECKSUMS:
   TTGSnackbar: 2cf4e7b6ffbe5cddf248a73f3ee952b71bee8ea3
   XLActionController: d2ab12a967ae0fee0b4563b8d809c8fb13ebc636
 
-PODFILE CHECKSUM: 493aeee52bd58d4b723cd032ec490ac4f1361929
+PODFILE CHECKSUM: d5c3b1e3186bddd2d967b96cb7dc6ef528230ae0
 
 COCOAPODS: 1.5.3
