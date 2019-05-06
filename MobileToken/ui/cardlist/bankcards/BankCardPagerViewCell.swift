@@ -50,6 +50,22 @@ class BankCardPagerViewCell: FSPagerViewCell {
         viewBankCard.layer.borderWidth = 0
         let actionButton = vCard.buttonActionSheet
         actionButton!.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showOrHidePassword(tapGestureRecognizer:)))
+        vCard.imageShowPassword.isUserInteractionEnabled = true
+        vCard.imageShowPassword.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    
+    @objc func showOrHidePassword(tapGestureRecognizer: UITapGestureRecognizer) {
+        for case let view as OtpViewDesignable in viewFirstOtp.subviews {
+            view.lbOtp.isSecureTextEntry = view.lbOtp.isSecureTextEntry ? false : true
+            self.vCard.imageShowPassword.image = view.lbOtp.isSecureTextEntry ? R.image.eyeOn() : R.image.eyeOff()
+        }
+        
+        for case let view as OtpViewDesignable in viewSecondOtp.subviews {
+            view.lbOtp.isSecureTextEntry = view.lbOtp.isSecureTextEntry ? false : true
+            self.vCard.imageShowPassword.image = view.lbOtp.isSecureTextEntry ? R.image.eyeOn() : R.image.eyeOff()
+        }
     }
     
     func initDefaultView() {

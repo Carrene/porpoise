@@ -4,6 +4,7 @@ import UIKit
 
 class CardCellXibView: UIView {
     
+    @IBOutlet weak var imageShowPassword: UIImageView!
     var contentView : UIView!
     @IBOutlet var imageLogo: UIImageView!
     @IBOutlet var labelBankName: UILabel!

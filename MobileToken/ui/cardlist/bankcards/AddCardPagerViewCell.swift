@@ -24,7 +24,7 @@ class AddCardPagerViewCell: FSPagerViewCell {
         buttonAddCard.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         labelTextfield.font = R.font.iranSansMobile(size: 12)
         viewCard.buttonActionSheet.isHidden = true
-        
+        viewCard.imageShowPassword.isHidden = true
         viewAddCard.layer.cornerRadius = 10
         viewAddCard.layer.shadowPath = UIBezierPath(roundedRect: viewAddCard.bounds, cornerRadius: 10).cgPath
         viewAddCard.layer.shadowRadius = 1

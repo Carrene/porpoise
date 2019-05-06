@@ -339,7 +339,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 fsPagerAdapterList[i].setDelegate(cardPagerViewDelegate: self)
                 fsPagerCollectionView[i].delegate = fsPagerAdapterList[i]
                 fsPagerCollectionView[i].dataSource = fsPagerAdapterList[i]
-                fsPagerCollectionView[i].itemSize = CGSize(width: 300, height: 251)
+                fsPagerCollectionView[i].itemSize = CGSize(width: 300, height: 260)
                 fsPagerCollectionView[i].interitemSpacing = 5
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 30))
