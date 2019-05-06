@@ -211,7 +211,6 @@
 		AF51CB62222BF07C003051D7 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A942199A2CE00C44E4B /* Interceptor.swift */; };
 		AF51CB63222BF07C003051D7 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
 		AF51CB64222BF07C003051D7 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* CardListViewController.swift */; };
-		AF51CB65222BF07C003051D7 /* SelectBankViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */; };
 		AF51CB66222BF07C003051D7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
 		AF51CB67222BF07C003051D7 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
 		AF51CB68222BF07C003051D7 /* StringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC60E66222431C200F16215 /* StringSeparator.swift */; };
@@ -290,7 +289,6 @@
 		AF51CBB4222BF07C003051D7 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
 		AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
 		AF51CBB6222BF07C003051D7 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
-		AF51CBB7222BF07C003051D7 /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
 		AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
 		AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
 		AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
@@ -320,8 +318,6 @@
 		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
 		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
-		AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */; };
-		AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
 		AFB39B572189A6A700302624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
@@ -542,8 +538,6 @@
 		AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCertificateToData.swift; sourceTree = "<group>"; };
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
-		AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBankViewDesignable.xib; sourceTree = "<group>"; };
-		AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBankViewDesignable.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B4F2189A6A600302624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB39B542189A6A600302624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -777,9 +771,7 @@
 			isa = PBXGroup;
 			children = (
 				AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */,
-				AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */,
 				AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */,
-				AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */,
 			);
 			path = alerts;
 			sourceTree = "<group>";
@@ -835,6 +827,7 @@
 			children = (
 				AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */,
 				AC5BAB6B221D67A7003F3BE6 /* SupportTableViewAdapter.swift */,
+				AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -842,7 +835,6 @@
 		AC5BAB66221D5390003F3BE6 /* support */ = {
 			isa = PBXGroup;
 			children = (
-				AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */,
 				AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */,
 			);
 			path = support;
@@ -852,8 +844,6 @@
 			isa = PBXGroup;
 			children = (
 				AF020852220177050021856A /* BankCardPagerViewCell.xib */,
-				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
-				AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */,
 			);
 			path = bankcard;
 			sourceTree = "<group>";
@@ -861,7 +851,6 @@
 		AC5E6BDE21E717E200A9D4C3 /* addcard */ = {
 			isa = PBXGroup;
 			children = (
-				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
 				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
 			);
 			path = addcard;
@@ -880,7 +869,15 @@
 		AC5E6BE221E9D07600A9D4C3 /* bankcards */ = {
 			isa = PBXGroup;
 			children = (
+				AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */,
 				AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */,
+				AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */,
+				AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */,
+				AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */,
+				AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */,
+				AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */,
+				AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */,
+				AFE190EB219049030023E785 /* OtpViewDesignable.swift */,
 			);
 			path = bankcards;
 			sourceTree = "<group>";
@@ -901,6 +898,8 @@
 				AC5940C521D219FC00D56840 /* SettingPresenter.swift */,
 				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
 				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
+				ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */,
+				ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */,
 			);
 			path = basic;
 			sourceTree = "<group>";
@@ -1011,7 +1010,6 @@
 		ACAAD86621AE8F36007266F4 /* lockscreentime */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */,
 				ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */,
 			);
 			path = lockscreentime;
@@ -1020,7 +1018,6 @@
 		ACAAD86721AE8F5F007266F4 /* authenticationtype */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */,
 				ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */,
 			);
 			path = authenticationtype;
@@ -1047,7 +1044,6 @@
 		ACDFD8AE21A9836200839F97 /* bank */ = {
 			isa = PBXGroup;
 			children = (
-				AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */,
 				AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */,
 			);
 			path = bank;
@@ -1124,6 +1120,7 @@
 			isa = PBXGroup;
 			children = (
 				AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */,
+				AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */,
 				ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */,
 				ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */,
 				AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */,
@@ -1147,13 +1144,6 @@
 			);
 			name = fonts;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		AF37800D222D3DA60097306C /* raw */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = raw;
 			sourceTree = "<group>";
 		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
@@ -1251,7 +1241,6 @@
 		AF463BCC2189E5F200DC8A3E /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				AF37800D222D3DA60097306C /* raw */,
 				AF28600D219D7ADD00D8C342 /* fonts */,
 				AFB39B562189A6A700302624 /* Assets.xcassets */,
 			);
@@ -1281,18 +1270,8 @@
 			isa = PBXGroup;
 			children = (
 				AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */,
-				AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */,
 			);
 			path = addpassword;
-			sourceTree = "<group>";
-		};
-		AFAD2303219092EA00EC00CB /* selectbank */ = {
-			isa = PBXGroup;
-			children = (
-				AFAD23042190931D00EC00CB /* SelectBankViewDesignable.xib */,
-				AFAD23062190956900EC00CB /* SelectBankViewDesignable.swift */,
-			);
-			path = selectbank;
 			sourceTree = "<group>";
 		};
 		AFB39B432189A6A600302624 = {
@@ -1329,12 +1308,12 @@
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
 				AF02085422017D630021856A /* R.generated.swift */,
 				AF378010222D3E4B0097306C /* banks.json */,
+				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BC22189D8CF00DC8A3E /* data */,
 				AFE81B372196E10500AA0AF2 /* error */,
 				AFE81B0B2196CCDA00AA0AF2 /* extensions */,
 				AC2676BA21B52B6900524636 /* framework */,
-				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AFE81B162196D26C00AA0AF2 /* util */,
 				AF463BCA2189E4E900DC8A3E /* view */,
@@ -1379,7 +1358,6 @@
 				AC5E6BDD21E7175700A9D4C3 /* bankcard */,
 				AFE190E7219029430023E785 /* card */,
 				AFE190E82190296D0023E785 /* otp */,
-				AFAD2303219092EA00EC00CB /* selectbank */,
 				ACAAD86121AE8EDF007266F4 /* settings */,
 			);
 			path = nibs;
@@ -1416,7 +1394,6 @@
 			isa = PBXGroup;
 			children = (
 				AFB9BB27218EE0D7004F16DD /* CardCell.xib */,
-				AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */,
 			);
 			path = card;
 			sourceTree = "<group>";
@@ -1425,7 +1402,6 @@
 			isa = PBXGroup;
 			children = (
 				AFE190E9219029D30023E785 /* OtpViewDesignable.xib */,
-				AFE190EB219049030023E785 /* OtpViewDesignable.swift */,
 			);
 			path = otp;
 			sourceTree = "<group>";
@@ -1743,7 +1719,6 @@
 				AF51CBB4222BF07C003051D7 /* answer.html in Resources */,
 				AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */,
 				AF51CBB6222BF07C003051D7 /* ApplicationLock.storyboard in Resources */,
-				AF51CBB7222BF07C003051D7 /* SelectBankViewDesignable.xib in Resources */,
 				AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */,
 				AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */,
 				AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */,
@@ -1796,7 +1771,6 @@
 				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,
-				AFAD23052190931D00EC00CB /* SelectBankViewDesignable.xib in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
@@ -2205,7 +2179,6 @@
 				AF51CB62222BF07C003051D7 /* Interceptor.swift in Sources */,
 				AF51CB63222BF07C003051D7 /* Bank.swift in Sources */,
 				AF51CB64222BF07C003051D7 /* CardListViewController.swift in Sources */,
-				AF51CB65222BF07C003051D7 /* SelectBankViewDesignable.swift in Sources */,
 				AF51CB66222BF07C003051D7 /* IntroViewController.swift in Sources */,
 				AF51CB67222BF07C003051D7 /* SettingPresenter.swift in Sources */,
 				AF51CB68222BF07C003051D7 /* StringSeparator.swift in Sources */,
@@ -2336,7 +2309,6 @@
 				AF246A962199A2CE00C44E4B /* Interceptor.swift in Sources */,
 				AF246A7C21984A5500C44E4B /* Bank.swift in Sources */,
 				057924BF219202CB00DFA69F /* CardListViewController.swift in Sources */,
-				AFAD23072190956900EC00CB /* SelectBankViewDesignable.swift in Sources */,
 				AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */,
 				AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */,
 				AFC60E67222431C200F16215 /* StringSeparator.swift in Sources */,
