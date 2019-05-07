@@ -31,7 +31,7 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
                 }
             }
             else {
-                self?.view.showEverywhereFail()
+                //self?.view.showEverywhereFail()
             }
         }
         userRepostiory.claim(user: user, onDone: onDataResponse)

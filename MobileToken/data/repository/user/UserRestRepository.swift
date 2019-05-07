@@ -26,6 +26,9 @@ class UserRestRepository: UserRepositoryProtocol {
         request.httpBody = json
         request.httpMethod = ApiHelper.BIND_VERB
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
+            if (NetworkReachabilityManager()?.isReachable)! == false {
+                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
+            }
             if let error = dataResponse.error {
                 onDone?(RepositoryResponse(error: error))
                 return
@@ -50,6 +53,9 @@ class UserRestRepository: UserRepositoryProtocol {
         request.httpBody = json
         request.httpMethod = ApiHelper.CLAIM_VERB
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
+            if (NetworkReachabilityManager()?.isReachable)! == false {
+                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
+            }
             if let error = dataResponse.error {
                 onDone?(RepositoryResponse(error: error))
                 return

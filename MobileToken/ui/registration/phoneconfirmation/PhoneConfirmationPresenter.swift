@@ -40,7 +40,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
             }
                 
             else {
-                self?.view.showEverywhereFail()
+                //self?.view.showEverywhereFail()
             }
         }
         userRepository.bind(user: user, onDone: onDataResponse)
@@ -117,7 +117,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
                 }
             }
             else {
-                self?.view.showEverywhereFail()
+                //self?.view.showEverywhereFail()
             }
         }
         userRepository.claim(user: user, onDone: onDataResponse)
