@@ -32,7 +32,7 @@
 		AC16D71F21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
 		AC16D72A21CA36220094FBED /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72921CA36220094FBED /* CryptoUtil.swift */; };
 		AC16D72C21CA38550094FBED /* ScreenLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72B21CA38550094FBED /* ScreenLocker.swift */; };
-		AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */; };
+		AC16D72E21CA5CE30094FBED /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration.swift */; };
 		AC16D73021CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */; };
 		AC16D73321CA734A0094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */; };
 		AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */; };
@@ -240,7 +240,7 @@
 		AF51CB80222BF07C003051D7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8A21999AE400C44E4B /* UserRepository.swift */; };
 		AF51CB81222BF07C003051D7 /* BankCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */; };
 		AF51CB82222BF07C003051D7 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A932199A2CE00C44E4B /* ApiHelper.swift */; };
-		AF51CB83222BF07C003051D7 /* RealmConfiguration copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */; };
+		AF51CB83222BF07C003051D7 /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration.swift */; };
 		AF51CB84222BF07C003051D7 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
 		AF51CB85222BF07C003051D7 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AF51CB86222BF07C003051D7 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAF7AF21DB6BD20057402B /* MyApplication.swift */; };
@@ -412,7 +412,7 @@
 		AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
 		AC16D72921CA36220094FBED /* CryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
 		AC16D72B21CA38550094FBED /* ScreenLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLocker.swift; sourceTree = "<group>"; };
-		AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmConfiguration copy.swift"; sourceTree = "<group>"; };
+		AC16D72D21CA5CE30094FBED /* RealmConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionContractor.swift; sourceTree = "<group>"; };
 		AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternpresenter.swift; sourceTree = "<group>"; };
 		AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternContractor.swift; sourceTree = "<group>"; };
@@ -1215,7 +1215,7 @@
 		AF463BC72189DD2300DC8A3E /* configuration */ = {
 			isa = PBXGroup;
 			children = (
-				AC16D72D21CA5CE30094FBED /* RealmConfiguration copy.swift */,
+				AC16D72D21CA5CE30094FBED /* RealmConfiguration.swift */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -2208,7 +2208,7 @@
 				AF51CB80222BF07C003051D7 /* UserRepository.swift in Sources */,
 				AF51CB81222BF07C003051D7 /* BankCollectionViewAdapter.swift in Sources */,
 				AF51CB82222BF07C003051D7 /* ApiHelper.swift in Sources */,
-				AF51CB83222BF07C003051D7 /* RealmConfiguration copy.swift in Sources */,
+				AF51CB83222BF07C003051D7 /* RealmConfiguration.swift in Sources */,
 				AF51CB84222BF07C003051D7 /* TabbarController.swift in Sources */,
 				AF51CB85222BF07C003051D7 /* ImportTokenViewController.swift in Sources */,
 				AF51CB86222BF07C003051D7 /* MyApplication.swift in Sources */,
@@ -2338,7 +2338,7 @@
 				AF246A8E21999AE400C44E4B /* UserRepository.swift in Sources */,
 				AF285FF2219C46E300D8C342 /* BankCollectionViewAdapter.swift in Sources */,
 				AF246A952199A2CE00C44E4B /* ApiHelper.swift in Sources */,
-				AC16D72E21CA5CE30094FBED /* RealmConfiguration copy.swift in Sources */,
+				AC16D72E21CA5CE30094FBED /* RealmConfiguration.swift in Sources */,
 				AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */,
 				AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */,
 				ACCAF7B021DB6BD20057402B /* MyApplication.swift in Sources */,
