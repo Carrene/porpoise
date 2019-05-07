@@ -6,7 +6,7 @@ class TokenRepository: TokenRepositoryProtocol {
     let tokenRealmRepository = TokenRealmRepository()
     
     func get(identifier: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+        tokenRealmRepository.get(identifier: identifier, onDone: onDone)
     }
     
     func getAll(onDone: ((RepositoryResponse<[Token]>) -> ())?) {

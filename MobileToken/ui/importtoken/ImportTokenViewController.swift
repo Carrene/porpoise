@@ -60,6 +60,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         viewCard.layer.borderWidth = 0
         viewCard.buttonActionSheet.isHidden = true
+        viewCard.imageShowPassword.isHidden = true
         
         viewCard.labelTokenNumber.isHidden = false
         textViewAtmCode.layer.cornerRadius = 5

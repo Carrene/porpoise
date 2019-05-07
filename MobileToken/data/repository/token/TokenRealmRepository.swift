@@ -5,7 +5,15 @@ import RealmSwift
 class TokenRealmRepository: TokenRepositoryProtocol {
    
     func get(identifier: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
-        onDone?(RepositoryResponse(error: UnsupportedOperationException()))
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        
+        let token = realm.objects(Token.self).filter("TokenPacket == %@", identifier).first?.copy() as? Token
+        if token == nil {
+            onDone?(RepositoryResponse(value: nil))
+        } else {
+            onDone?(RepositoryResponse(value: token))
+        }
+        
     }
     
     func getAll(onDone: ((RepositoryResponse<[Token]>) -> ())?) {
