@@ -9,7 +9,7 @@ class CardRealmRepository: CardRepositoryProtocol {
             do {
                 
                 try realm.write {
-                    bank.cardList.append(card)
+                    bank.CardList.append(card)
                     realm.add(bank.copy() as! Bank, update: true)
 
                 }

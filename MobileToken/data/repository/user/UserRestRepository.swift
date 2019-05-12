@@ -54,6 +54,7 @@ class UserRestRepository: UserRepositoryProtocol {
                 onDone?(RepositoryResponse(error: error))
                 return
             }
+            dataResponse.response?.statusCode
             onDone?(RepositoryResponse(value: dataResponse.value, restDataResponse: dataResponse))
         }
     }

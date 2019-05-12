@@ -24,7 +24,7 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return bank.cardList.count + 1
+        return bank.CardList.count + 1
     }
     
     init(sender:Bank) {
@@ -49,19 +49,19 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.bankCardPagerViewCell.identifier, at: index) as! BankCardPagerViewCell
             cell.vCard.labelBankName.text = BankUtil.getName(bank: self.bank)
             cell.vCard.labelCardName.text = self.cardName
-            if bank.cardList[index-1].id == updateCard?.id {
+            if bank.CardList[index-1].id == updateCard?.id {
                 //pagerView.scrollToItem(at: index, animated: true)
                 cell.setCardName(cardName: (updateCard?.cardName)!)
                 cardPagerViewDelegate?.selectedCard(card: updateCard!)
                 updateCard = nil
             }
             else {
-            cell.setCardName(cardName: bank.cardList[index-1].cardName!)
+            cell.setCardName(cardName: bank.CardList[index-1].cardName!)
             }
 //            cell.vCard.setDelegate(cardCellXibProtocol: self)
             //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             cell.initDefaultView()
-            cell.set(card: bank.cardList[index-1])
+            cell.set(card: bank.CardList[index-1])
             cell.bankCardPagerViewDelegate = self
            
             return cell
@@ -79,13 +79,13 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
         if targetIndex>0 {
-        cardPagerViewDelegate?.selectedCard(card:bank.cardList[targetIndex-1])
+        cardPagerViewDelegate?.selectedCard(card:bank.CardList[targetIndex-1])
         }
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         if index>0 {
-        cardPagerViewDelegate?.selectedCard(card:bank.cardList[index-1])
+        cardPagerViewDelegate?.selectedCard(card:bank.CardList[index-1])
         }
     }
     

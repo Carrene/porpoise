@@ -13,10 +13,10 @@ class User: Object, Mappable, NSCopying {
         set { PhoneNumber = newValue }
     }
     
-    @objc private dynamic var userBank : Bank?
+    @objc private dynamic var UserBank : Bank?
     var bank : Bank? {
-        get{return userBank}
-        set{userBank = newValue}
+        get{return UserBank}
+        set{UserBank = newValue}
     }
     
     @objc dynamic var Id: Int = 1
