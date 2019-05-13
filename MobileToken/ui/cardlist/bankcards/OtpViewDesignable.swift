@@ -5,7 +5,7 @@ import UIKit
 class OtpViewDesignable: UIView {
     
     @IBOutlet weak var vComponent: UIView!
-    @IBOutlet weak var lbOtp: UILabel!
+    @IBOutlet weak var lbOtp: UITextField!
     @IBOutlet weak var lbPassword: UILabel!
     @IBOutlet weak var vProgress: UIProgressView!
     @IBOutlet weak var btCopy: UIButton!
@@ -54,7 +54,7 @@ class OtpViewDesignable: UIView {
         btCopy.layer.cornerRadius = 5
         vProgress.progressViewStyle = .bar
         lbOtp.font = R.font.iranSansMobileFaNum(size: 22)
-        
+        lbOtp.textColor = .red
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.initCopy))
         contentView.addGestureRecognizer(tap)
     }

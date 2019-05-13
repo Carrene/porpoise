@@ -24,7 +24,7 @@ class Bank: Object, Mappable, NSCopying{
         set { Secret=newValue }
     }
     
-    let cardList = List<Card>()
+    let CardList = List<Card>()
     
     override static func ignoredProperties() -> [String] {
         return [ "phone"]
@@ -37,11 +37,11 @@ class Bank: Object, Mappable, NSCopying{
         self.init()
         self.id = id ?? 0
         self.secret = secret
-        self.cardList.removeAll()
+        self.CardList.removeAll()
         if let cards = cardList {
             for card in cards {
                 let bankCard = card.copy() as! Card
-                self.cardList.append(bankCard)
+                self.CardList.append(bankCard)
             }
         }
     }
@@ -52,7 +52,7 @@ class Bank: Object, Mappable, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Bank(id: self.id, cardList: cardList, secret: self.secret)
+        return Bank(id: self.id, cardList: CardList, secret: self.secret)
     }
     
 }

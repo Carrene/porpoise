@@ -6,7 +6,9 @@ protocol ImportToeknDelegate {
 }
 
 class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTokenViewProtocol {
-   
+    
+    @IBOutlet weak var labelAtmCounter: UILabel!
+    @IBOutlet weak var labelSmsCounter: UILabel!
     @IBOutlet weak var btConfirm: UIBarButtonItem!
     @IBOutlet var viewCard: CardCellXibView!
     @IBOutlet var textViewAtmCode: UITextView!
@@ -60,6 +62,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         viewCard.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         viewCard.layer.borderWidth = 0
         viewCard.buttonActionSheet.isHidden = true
+        viewCard.imageShowPassword.isHidden = true
         
         viewCard.labelTokenNumber.isHidden = false
         textViewAtmCode.layer.cornerRadius = 5
@@ -77,6 +80,8 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         labelAtmCode.font = R.font.iranSansMobile(size: 12)
         labelSmsCode.font = R.font.iranSansMobile(size: 12)
+        labelAtmCounter.font = R.font.iranSansMobile(size: 12)
+        labelSmsCounter.font = R.font.iranSansMobile(size: 12)
         textViewSmsCode.layer.borderWidth = 2
         textViewSmsCode.layer.borderColor = R.color.buttonColor()!.cgColor
         self.hideKeyboardWhenTappedAround()
@@ -95,6 +100,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func textViewDidChange(_ textView: UITextView) {
+        updateCounter(textView: textView)
         if textViewAtmCode.text.count == 8 && textViewSmsCode.text.count == 120 {
             btConfirm.isEnabled = true
         } else {
@@ -102,23 +108,29 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         }
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == R.color.buttonColor()?.withAlphaComponent(0.5) {
-            textView.text = nil
-            textView.layer.borderColor = R.color.secondary()?.cgColor
-            textView.textColor = R.color.buttonColor()
+    func updateCounter(textView: UITextView) {
+        if textView == textViewAtmCode {
+            labelAtmCounter.text =  "\(textViewAtmCode.text.count)/8"
         }
+        if textView == textViewSmsCode {
+            labelSmsCounter.text = "\(textViewSmsCode.text.count)/120"
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = nil
+        textView.layer.borderColor = R.color.secondary()?.cgColor
+        textView.textColor = R.color.buttonColor()
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         textView.layer.borderColor = R.color.buttonColor()?.cgColor
+        textView.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         if textViewSmsCode.text.isEmpty {
             textView.text = R.string.localizable.ph_sms_code()
-            textView.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         }
         if textViewAtmCode.text.isEmpty {
             textView.text = R.string.localizable.ph_atm_code()
-            textView.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         }
     }
     

@@ -58,10 +58,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func updateCardList(card: Card) {
         for i in 0 ..< banks!.count {
-            let cardList = banks![i].cardList
+            let cardList = banks![i].CardList
             for j in 0 ..< cardList.count {
                 if cardList[j].id == card.id {
-                    banks![i].cardList[j] = card
+                    banks![i].CardList[j] = card
                     fsPagerCollectionView[i].reloadData()
                 }
             }
@@ -72,10 +72,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func addCard(card: Card) {
         for i in 0 ..< banks!.count {
             if card.bank?.id == banks![i].id {
-                banks![i].cardList.append(card)
+                banks![i].CardList.append(card)
                 fsPagerCollectionView[i].reloadData()
                 fsPagerCollectionView[i].layoutIfNeeded()
-                fsPagerCollectionView[i].scrollToItem(at: banks![i].cardList.count, animated: false)
+                fsPagerCollectionView[i].scrollToItem(at: banks![i].CardList.count, animated: false)
             }
         }
     }
@@ -83,8 +83,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func deleteCard(card: Card) {
         for i in 0 ..< banks!.count {
             if card.bank?.id == banks![i].id {
-                let index = banks![i].cardList.index(where: {$0.id == card.id})
-                banks![i].cardList.remove(at: index!)
+                let index = banks![i].CardList.index(where: {$0.id == card.id})
+                banks![i].CardList.remove(at: index!)
                 fsPagerCollectionView[i].reloadData()
                 fsPagerCollectionView[i].layoutIfNeeded()
                 fsPagerCollectionView[i].scrollToItem(at: index!, animated: false)
@@ -95,13 +95,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     func deleteToken(tokens: [Token]) {
         for token in tokens {
             for i in 0 ..< banks!.count {
-                let cards = banks![i].cardList
+                let cards = banks![i].CardList
                 for j in 0 ..< cards.count{
-                    let tokenList = banks![i].cardList[j].TokenList
+                    let tokenList = banks![i].CardList[j].TokenList
                     for bankToken in tokenList {
                         if let index = tokenList.index(of: bankToken) {
                             if token.id == bankToken.id {
-                            banks![i].cardList[j].TokenList.remove(at: index)
+                            banks![i].CardList[j].TokenList.remove(at: index)
                             
                             //                        if token.id == bankToken.id {
                             //                            let index =
@@ -194,7 +194,9 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             let token = card.TokenList.filter {$0.cryptoModuleId == Token.CryptoModuleId.two}.first
             tokens.append(token!)
         }
-        cardListPresenter?.deleteToken(tokens: tokens)
+        if view.buttonFirstToken?.isSelected == true || view.buttonSecondToken?.isSelected == true {
+            cardListPresenter?.deleteToken(tokens: tokens)
+        }
     }
     
     
@@ -272,13 +274,13 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
             self.cardListPresenter?.deleteCard(card: card)
         }
         
-        var cancelButtonAppearance = CancelButton.appearance()
+        let cancelButtonAppearance = CancelButton.appearance()
         cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         cancelButtonAppearance.titleColor = R.color.secondary()
         cancelButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
         cancelButtonAppearance.buttonColor = R.color.primaryDark()
         
-        var defaultButtonAppearance = DefaultButton.appearance()
+        let defaultButtonAppearance = DefaultButton.appearance()
         defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
         defaultButtonAppearance.titleColor = R.color.primary()
         defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
@@ -339,14 +341,14 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 fsPagerAdapterList[i].setDelegate(cardPagerViewDelegate: self)
                 fsPagerCollectionView[i].delegate = fsPagerAdapterList[i]
                 fsPagerCollectionView[i].dataSource = fsPagerAdapterList[i]
-                fsPagerCollectionView[i].itemSize = CGSize(width: 300, height: 251)
+                fsPagerCollectionView[i].itemSize = CGSize(width: 300, height: 260)
                 fsPagerCollectionView[i].interitemSpacing = 5
                 vScroll.isScrollEnabled = true
                 vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 30))
                 vScroll.addSubview(cardListPagerView)
                 fsPagerCollectionView[i].reloadData()
                 fsPagerCollectionView[i].layoutIfNeeded()
-                if banks![i].cardList.count > 0 {
+                if banks![i].CardList.count > 0 {
                     fsPagerCollectionView[i].scrollToItem(at: 1, animated: false)
                 }
             }

@@ -17,8 +17,8 @@ class BankRealmRepository: BankRepositoryProtocol {
         let bankRealmResult = realm.objects(Bank.self)
         for j in  0 ..< bankRealmResult.count {
             let bank = bankRealmResult[j].detached()
-            for i in 0 ..< bank.cardList.count {
-                bank.cardList[i].bank = bank
+            for i in 0 ..< bank.CardList.count {
+                bank.CardList[i].bank = bank
             }
             banks.append(bank)
         }
