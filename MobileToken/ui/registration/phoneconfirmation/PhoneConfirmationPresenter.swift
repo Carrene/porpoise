@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 
 class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
     
@@ -17,7 +18,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
         self.view.startBarIndicator()
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             self?.view.endBarIndicator()
-            if let statusCode = response.restDataResponse?.response?.statusCode {
+            let statusCode = response.restDataResponse?.response?.statusCode
                 switch statusCode {
                 case 200:
                     let responseUser = response.value
@@ -37,11 +38,10 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
                 default:
                     UIHelper.showFailedSnackBar()
                 }
+            if (NetworkReachabilityManager()?.isReachable)! == false {
+                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
             }
-                
-            else {
-                //self?.view.showEverywhereFail()
-            }
+            
         }
         userRepository.bind(user: user, onDone: onDataResponse)
         

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 class PhoneInputPresenter : PhoneInputPresenterProtocol {
     
     var userRepostiory = UserRepository()
@@ -14,25 +15,26 @@ class PhoneInputPresenter : PhoneInputPresenterProtocol {
         let user = User(phone: phone, activationCode: nil, bank: bank)
         let onDataResponse: ((RepositoryResponse<User>) -> ()) = { [weak self] response in
             self?.view.endBarIndicator()
-            if let statusCode = response.restDataResponse?.response?.statusCode {
-                switch statusCode {
-                case 200:
-                    self?.view.navigateToPhoneConfirmation(phone:phone)
-                case 400:
-                    self?.view.showBadRequestError()
-                case 401:
-                    self?.view.showEverywhereError401()
-                case 500:
-                    self?.view.showServerError()
-                case 502:
-                    self?.view.showNetworkError()
-                default:
-                    UIHelper.showFailedSnackBar()
-                }
+            let statusCode = response.restDataResponse?.response?.statusCode
+            switch statusCode {
+            case 200:
+                self?.view.navigateToPhoneConfirmation(phone:phone)
+            case 400:
+                self?.view.showBadRequestError()
+            case 401:
+                self?.view.showEverywhereError401()
+            case 500:
+                self?.view.showServerError()
+            case 502:
+                self?.view.showNetworkError()
+            default:
+                UIHelper.showFailedSnackBar()
             }
-            else {
-                //self?.view.showEverywhereFail()
+            if (NetworkReachabilityManager()?.isReachable)! == false {
+                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
+                
             }
+
         }
         userRepostiory.claim(user: user, onDone: onDataResponse)
     }

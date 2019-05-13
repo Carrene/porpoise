@@ -26,14 +26,16 @@ class UserRestRepository: UserRepositoryProtocol {
         request.httpBody = json
         request.httpMethod = ApiHelper.BIND_VERB
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
-            if (NetworkReachabilityManager()?.isReachable)! == false {
-                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
-            }
+            
             if let error = dataResponse.error {
                 onDone?(RepositoryResponse(error: error))
                 return
             }
             onDone?(RepositoryResponse(value: dataResponse.value, restDataResponse: dataResponse))
+            if (NetworkReachabilityManager()?.isReachable)! == false {
+                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
+                
+            }
         }
     }
     
@@ -53,14 +55,11 @@ class UserRestRepository: UserRepositoryProtocol {
         request.httpBody = json
         request.httpMethod = ApiHelper.CLAIM_VERB
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
-            if (NetworkReachabilityManager()?.isReachable)! == false {
-                UIHelper.showSpecificSnackBar(message: "به اینترنت وصل نیستید.", color: R.color.errorDark()!)
-            }
+            
             if let error = dataResponse.error {
-                onDone?(RepositoryResponse(error: error))
+                onDone?(RepositoryResponse(value: dataResponse.value, error: error))
                 return
             }
-            dataResponse.response?.statusCode
             onDone?(RepositoryResponse(value: dataResponse.value, restDataResponse: dataResponse))
         }
     }
