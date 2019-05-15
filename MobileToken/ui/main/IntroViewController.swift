@@ -52,9 +52,9 @@ class IntroViewController {
                 
             }
             pages[i].topPadding = 100
-            pages[i].underIconPadding = 70
+            pages[i].underIconPadding = 30
             pages[i].underTitlePadding = 16
-            pages[i].bottomPadding = 20
+            pages[i].bottomPadding = 10
             pages[i].iconImageView.backgroundColor = R.color.primary()
             pages[i].iconHeight = 250
             pages[i].iconWidth = 250
