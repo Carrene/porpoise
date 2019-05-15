@@ -51,10 +51,10 @@ class IntroViewController {
                 pages[i].iconImageView.image = pageImages[i]
                 
             }
-            pages[i].topPadding = 100
-            pages[i].underIconPadding = 70
+            pages[i].topPadding = 90
+            pages[i].underIconPadding = 30
             pages[i].underTitlePadding = 16
-            pages[i].bottomPadding = 20
+            pages[i].bottomPadding = 10
             pages[i].iconImageView.backgroundColor = R.color.primary()
             pages[i].iconHeight = 250
             pages[i].iconWidth = 250
@@ -69,10 +69,10 @@ class IntroViewController {
         onboardingVC.fadePageControlOnLastPage = false
         onboardingVC.pageControl.pageIndicatorTintColor = UIColor.black
         onboardingVC.pageControl.currentPageIndicatorTintColor = R.color.secondaryLight()
-        onboardingVC.skipButton.setTitleColor(R.color.secondary(), for: .normal)
-        onboardingVC.skipButton.setTitle(R.string.localizable.skip(), for: .normal)
-        onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-        onboardingVC.allowSkipping = true
+//        onboardingVC.skipButton.setTitleColor(R.color.secondary(), for: .normal)
+//        onboardingVC.skipButton.setTitle(R.string.localizable.skip(), for: .normal)
+//        onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
+//        onboardingVC.allowSkipping = true
         onboardingVC.fadeSkipButtonOnLastPage = true
         onboardingVC.view.backgroundColor = R.color.primary()
         onboardingVC.skipHandler = { onIntroEnd() }

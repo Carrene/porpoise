@@ -119,6 +119,18 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         self.labelPhoneCode.text = country.phoneCode
     }
     
+    func showOnlyPreferredSection(in countryPickerView: CountryPickerView) -> Bool {
+        return true
+    }
+    
+    func preferredCountries(in countryPickerView: CountryPickerView) -> [Country] {
+        var countries = countryPickerView.countries
+        let index = countries.firstIndex {$0.code == "IL"}
+        countries.remove(at: index!)
+        return countries
+        
+    }
+    
     @IBAction func onDoneKeyboard(_ sender: UITextField) {
 
     }
