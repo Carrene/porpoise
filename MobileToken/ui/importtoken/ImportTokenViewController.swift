@@ -118,7 +118,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = nil
+        if textView.text.contains("کد") {
+            textView.text = nil
+        }
         textView.layer.borderColor = R.color.secondary()?.cgColor
         textView.textColor = R.color.buttonColor()
     }
