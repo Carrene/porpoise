@@ -25,6 +25,7 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
     func checkPatternCorrection(pattern: String) {
         if pattern.sha512() == authentication?.credential {
             authentication?.successAttempt()
+             Logger.instance.logEvent(event: ConstantHelper.AUTHENTICATION_LOG_EVENT, parameters: ["result": true as NSObject])
             DispatchQueue.global(qos: .userInitiated).async {
                
                 RealmConfiguration.sensitiveDataEncryptionKey = (CryptoUtil.keyDerivationBasedOnPBE(pin: pattern.bytes, salt: (self.authentication?.salt!.bytes)!)?.toHexString())!
@@ -35,10 +36,12 @@ class AuthenticationPatternPresenter: AuthenticationPatternPresenterProtocol {
             }
         } else {
             self.authentication?.failAttempt()
+             Logger.instance.logEvent(event: ConstantHelper.AUTHENTICATION_LOG_EVENT, parameters: ["result": false as NSObject])
             updateAuthentication(authentication: self.authentication!)
             self.authenticationPatternView.showWrongPatternError(remainAttemps:(self.authentication?.remainedAttempts)!)
             updateAuthentication(authentication: self.authentication!)
             if (authentication?.isLocked)! {
+                Logger.instance.logEvent(event: ConstantHelper.LOCK_APP_LOG_EVENT, parameters: nil)
                 self.authenticationPatternView.navigateToLockView()
             }
         }

@@ -113,6 +113,10 @@
 		AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
 		AF02085522017D630021856A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
+		AF2420C8228D2C34003D464E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C7228D2C34003D464E /* Logger.swift */; };
+		AF2420CA228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
+		AF2420CB228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
+		AF2420CD228D2FB0003D464E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C7228D2C34003D464E /* Logger.swift */; };
 		AF246A7C21984A5500C44E4B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
 		AF246A7E219852EA00C44E4B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF246A84219948F300C44E4B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A83219948F300C44E4B /* Token.swift */; };
@@ -494,6 +498,8 @@
 		AF020850220175E80021856A /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AF02085422017D630021856A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		AF2420C7228D2C34003D464E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		AF2420C9228D2C6A003D464E /* ConstantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHelper.swift; sourceTree = "<group>"; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		AF246A7D219852EA00C44E4B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AF246A83219948F300C44E4B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -1470,6 +1476,7 @@
 		AFE81B162196D26C00AA0AF2 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				AF2420C7228D2C34003D464E /* Logger.swift */,
 				AC16D72921CA36220094FBED /* CryptoUtil.swift */,
 				AF246A972199A59100C44E4B /* JwtPersistable.swift */,
 				ACCAF7AF21DB6BD20057402B /* MyApplication.swift */,
@@ -1480,6 +1487,7 @@
 				AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */,
 				AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */,
 				ACEC112B222BF87100AF933B /* JsonParser.swift */,
+				AF2420C9228D2C6A003D464E /* ConstantHelper.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -2146,6 +2154,7 @@
 				AF51CB41222BF07C003051D7 /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AF51CB42222BF07C003051D7 /* AuthenticationRealmRepository.swift in Sources */,
 				AF51CB43222BF07C003051D7 /* PasswordValidator.swift in Sources */,
+				AF2420CD228D2FB0003D464E /* Logger.swift in Sources */,
 				AF51CB44222BF07C003051D7 /* Repository.swift in Sources */,
 				AF51CB45222BF07C003051D7 /* EditCardNameAlertViewController.swift in Sources */,
 				AF51CB46222BF07C003051D7 /* MainViewController.swift in Sources */,
@@ -2163,6 +2172,7 @@
 				AF51CB52222BF07C003051D7 /* ActionSheet.swift in Sources */,
 				AF51CB53222BF07C003051D7 /* AuthenticationRepository.swift in Sources */,
 				AF51CB54222BF07C003051D7 /* DeleteTokenAlertViewController.swift in Sources */,
+				AF2420CB228D2C6A003D464E /* ConstantHelper.swift in Sources */,
 				AF51CB55222BF07C003051D7 /* NetHex.swift in Sources */,
 				AF51CB56222BF07C003051D7 /* AuthenticationViewController.swift in Sources */,
 				AF51CB57222BF07C003051D7 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,
@@ -2275,6 +2285,7 @@
 				AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
+				AF2420C8228D2C34003D464E /* Logger.swift in Sources */,
 				AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */,
 				AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */,
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
@@ -2348,6 +2359,7 @@
 				AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */,
 				AF285FF6219C4A3500D8C342 /* BankCollectionViewCell.swift in Sources */,
 				AC16D71D21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift in Sources */,
+				AF2420CA228D2C6A003D464E /* ConstantHelper.swift in Sources */,
 				AC5BAB69221D53BC003F3BE6 /* SupportTableViewCell.swift in Sources */,
 				ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */,
 				AC16D70621CA31CA0094FBED /* AuthenticationPasswordViewController.swift in Sources */,

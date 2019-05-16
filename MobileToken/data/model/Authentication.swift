@@ -102,5 +102,6 @@ class Authentication: Object, Mappable, NSCopying{
     func copy(with zone: NSZone? = nil) -> Any {
         return Authentication(credentials: self.credential!, authenticationType: self.authenticationType!, attemptsNumber: self.attemptsNumber, salt: self.salt)
     }
+
     
 }

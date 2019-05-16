@@ -201,6 +201,7 @@ class Token: Object, Mappable, NSCopying{
     }
     
     func generateTotp() -> String {
+        Logger.instance.logEvent(event: ConstantHelper.GENERATE_OTP_LOG_EVENT, parameters: ["crypto_module_id": "\(self.cryptoModuleId!.rawValue)" as NSObject])
         let otp = Totp(secret: seed!, timeInterval: Int(timeInterval!), otpLength: otpLength!, hashType: hashType!)
         return otp.generateTotp() ?? "Error"
     }
