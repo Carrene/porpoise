@@ -3,13 +3,13 @@ import Foundation
 import UIKit
 
 protocol BankCollectionViewDelegate {
-    func selectedBank(bankIndex: Int)
+    func selectedBank(bankIndex: Int?)
 }
 
 class BankCollectionViewAdapter:NSObject,UICollectionViewDataSource,UICollectionViewDelegate  {
     
     var bankPagerViewDelegate: BankCollectionViewDelegate?
-    var selectedIndex = 0
+    var selectedIndex: Int?
     var banks : [Bank]?
     
     func setDelegate(bankPagerViewDelegate: BankCollectionViewDelegate) {

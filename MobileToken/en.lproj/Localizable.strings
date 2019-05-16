@@ -37,6 +37,7 @@
 "sb_token_deleted_unsuccessfully" = "حذف رمز با خطا مواجه شد.";
 "sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است.";
 "sb_network_error" = "خطای شبکه";
+"sb_select_bank_error" = "بانک مورد نظر را انتخاب کنید";
 
 //passWordHint
 "enter_at_least_eight_characters" = "رمز باید شامل حداقل 8 کاراکتر";

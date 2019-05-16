@@ -22,17 +22,14 @@ class RequestInterceptor: RequestAdapter {
 extension DataRequest {
     func intercept() -> Self {
         let serializedResponse = DataResponseSerializer<Any?> { request, response, data, error in
-            guard error == nil else { return .failure(error!) }
-            if let verb = request?.httpMethod,
-                let statusCode = response?.statusCode,
-                verb == ApiHelper.BIND_VERB && 200 <= statusCode && statusCode < 300,
-                let data = data,
-                let value = try? JSONSerialization.jsonObject(with: data) as! [String : Any?] ,
-                let jwt = value["token"] as? String {
-                _ = ApiHelper.instance.jwtPersistable.save(jwt: jwt)
+            guard error == nil else {
+                if let verb = request?.httpMethod {
+                    Logger.instance.logEvent(event: verb.capitalized, parameters: ["result": "\(error?.localizedDescription ?? "Not Handled")" as NSObject])
+                }
+                return .failure(error!)
             }
-            if let jwt = response?.allHeaderFields["X-New-JWT-Token"] as? String {
-                _ = ApiHelper.instance.jwtPersistable.save(jwt: jwt)
+            if let verb = request?.httpMethod, let statusCode = response?.statusCode {
+                Logger.instance.logEvent(event: verb.capitalized, parameters: ["result": statusCode as NSObject])
             }
             return .success(data)
         }

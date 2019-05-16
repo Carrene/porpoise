@@ -144,9 +144,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
             else {
-                selectedBank = banks.first
-                //UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
-                self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
+                UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_select_bank_error(), color: R.color.errorDark()!)
             }
         }
         else {
@@ -206,9 +204,11 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         performSegue(withIdentifier: R.segue.phoneInputViewController.phoneInputToActivationSegue, sender: self)
     }
     
-    func selectedBank(bankIndex: Int) {
-        presenter.getUser(bank: self.banks[bankIndex])
-        self.selectedBank = self.banks[bankIndex]
+    func selectedBank(bankIndex: Int?) {
+        if let index = bankIndex {
+            presenter.getUser(bank: self.banks[index])
+            self.selectedBank = self.banks[index]
+        }
     }
     
     func showAlreadyRegistered(phone:String) {

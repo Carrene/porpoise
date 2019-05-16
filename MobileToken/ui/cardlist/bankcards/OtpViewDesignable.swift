@@ -62,6 +62,7 @@ class OtpViewDesignable: UIView {
     @objc func initCopy() {
         UIPasteboard.general.string = lbOtp.text!.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
         SnackBarHelper.init(message: R.string.localizable.sb_password_copied(), color: R.color.snackbarColor()!, duration: .short).show()
+        Logger.instance.logEvent(event: ConstantHelper.COPY_OTP_LOG_EVENT, parameters: nil)
     }
 }
 

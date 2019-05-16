@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
         <array key="IRANSansMobile.ttf">
             <string>IRANSansMobile</string>
         </array>
@@ -54,7 +57,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Om5-QV-Vfb" userLabel="labelAtmCounter">
                                 <rect key="frame" x="20" y="218" width="32" height="16"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="10"/>
                                 <color key="textColor" name="borderColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,7 +70,7 @@
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-7O-F3w" userLabel="labelSmsCounter">
                                 <rect key="frame" x="20" y="385.5" width="48" height="16"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="10"/>
                                 <color key="textColor" name="borderColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

@@ -13,15 +13,16 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         
         let tokenRepository = TokenRepository()
         let onDataResponse: ((RepositoryResponse<Token>) -> ()) = { [weak self] response in
+            var result = false
             if response.value == nil {
                 let token = Token(tokenPaket: tokenPacket, card: card, cryptoModuleId: cryptoModuleId)
-                
                 do {
                     try token.validate()
                     card.TokenList.append(token)
                     let _ = token.parse()
                     card.number = token.name
                     self!.updateCard(card: card)
+                    result = true
                     
                 } catch ParseTokenException.InvalidChecksumException{
                     SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
@@ -46,6 +47,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             } else {
                 SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_duplicatetoken(), color: R.color.errorDark()!, duration: .middle).show()
             }
+            Logger.instance.logEvent(event: ConstantHelper.IMPORT_TOKEN_LOG_EVENT, parameters: ["result": result as NSObject])
         }
         tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
     

@@ -3,7 +3,7 @@
 import Foundation
 import RealmSwift
 class TokenRealmRepository: TokenRepositoryProtocol {
-   
+    
     func get(identifier: String, onDone: ((RepositoryResponse<Token>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         
@@ -40,6 +40,7 @@ class TokenRealmRepository: TokenRepositoryProtocol {
     }
     
     func delete(tokens: [Token], onDone: ((RepositoryResponse<[Token]>) -> ())?) {
+        var result = false
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
         var responseTokens = [Token]()
         do {
@@ -49,11 +50,13 @@ class TokenRealmRepository: TokenRepositoryProtocol {
                     let tokenCopy = token?.copy() as! Token
                     responseTokens.append(tokenCopy)
                     realm.delete(token!)
+                    result = true
                 }
-               
+                
             }
             onDone?(RepositoryResponse(value: responseTokens))
-
+            Logger.instance.logEvent(event: ConstantHelper.DELETE_TOKEN_LOG_EVENT, parameters: ["result": result as NSObject])
+            
         } catch {
             onDone?(RepositoryResponse(error: error))
         }
