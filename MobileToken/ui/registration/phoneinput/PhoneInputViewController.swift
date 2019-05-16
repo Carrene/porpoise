@@ -70,7 +70,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewTextfields.layer.shadowOpacity = 0.2
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
         viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
-        
+        labelAlreadyRegistered.isHidden = true
         textFieldPhoneNumber.delegate = self
         inputMask()
     }
@@ -137,7 +137,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
         if inputPhone?.first == "0" {
-            inputPhone = inputPhone?.substring(from: (inputPhone?.index((inputPhone?.startIndex)!, offsetBy: 1))!)
+            inputPhone?.remove(at: inputPhone.startIndex)
         }
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
@@ -148,7 +148,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
             }
         }
         else {
-            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!)
+            UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_check_your_input(), color: R.color.errorDark()!, duration: .middle)
         }
         
     }
