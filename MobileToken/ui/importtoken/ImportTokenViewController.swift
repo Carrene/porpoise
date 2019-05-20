@@ -149,6 +149,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
             smsText.forEach{ splitedText in
                 if splitedText.count == 120 && smsText.count > 1 {
                     textViewSmsCode.text = String(splitedText)
+                    self.updateCounter(textView: textViewSmsCode)
                     if textViewAtmCode.text.count == 8 {
                         btConfirm.isEnabled = true
                     }
