@@ -56,7 +56,6 @@ class UserRestRepository: UserRepositoryProtocol {
         var request = URLRequest(url: url)
         request.httpBody = json
         request.httpMethod = ApiHelper.CLAIM_VERB
-        print(url)
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
             
             if let error = dataResponse.error {

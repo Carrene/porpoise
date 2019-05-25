@@ -13,6 +13,8 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     @IBOutlet var NavigationItemTitle: UINavigationItem!
     @IBOutlet var viewTextfield: UIView!
     @IBOutlet var labelEnterCode: UILabel!
+    @IBOutlet weak var bankNib: BankViewXib!
+    
     
     private var selectedBank : Bank?
     private var presenter:PhoneConfirmationPresenterProtocol?
@@ -29,6 +31,10 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     override func viewDidAppear(_ animated: Bool) {
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        initBankNib(bank: selectedBank!)
     }
     
     func initUIComponents() {
@@ -60,7 +66,10 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         labelEnterCode.font = R.font.iranSansMobile(size: 12)
         textFieldCode.attributedPlaceholder = NSAttributedString(string: "کد فعال سازی",
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
+//        initBankNib(bank:self.selectedBank!)
     }
+    
+    
     
     override func willMove(toParent parent: UIViewController?)
     {
@@ -86,6 +95,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     func setData(phone:String,bank:Bank) {
         self.selectedBank = bank
         self.phoneNumber = phone
+        
+    }
+    
+    func initBankNib(bank:Bank) {
+        self.bankNib.labelBank.text = BankUtil.getName(bank: bank)
+        self.bankNib.imageLogo.image = BankUtil.getLogo(bank: bank)
     }
     
     func showTimer() {
