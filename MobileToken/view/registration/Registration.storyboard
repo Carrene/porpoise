@@ -126,7 +126,7 @@
                                         <rect key="frame" x="16" y="105" width="303" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l93-8h-1tj" userLabel="phoneTextField">
-                                                <rect key="frame" x="50" y="2.6666666666666856" width="243" height="40"/>
+                                                <rect key="frame" x="48.666666666666671" y="2.6666666666666856" width="244.33333333333331" height="40"/>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -138,7 +138,7 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-mU-OoY">
-                                                <rect key="frame" x="16" y="0.0" width="29" height="45"/>
+                                                <rect key="frame" x="16" y="0.0" width="27.666666666666671" height="45"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <nil key="highlightedColor"/>
@@ -188,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
-                                <rect key="frame" x="20" y="328" width="335" height="27"/>
+                                <rect key="frame" x="20" y="331.66666666666669" width="335" height="20"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -264,16 +264,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
-                                <rect key="frame" x="18.666666666666657" y="217" width="337.66666666666674" height="127"/>
+                                <rect key="frame" x="18.666666666666657" y="101" width="337.66666666666674" height="227"/>
                                 <subviews>
+                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bop-sD-gGJ" userLabel="viewBank" customClass="BankViewXib" customModule="MobileToken" customModuleProvider="target">
+                                        <rect key="frame" x="99" y="13" width="140" height="100"/>
+                                        <color key="backgroundColor" name="primary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="3FH-FU-Dfn"/>
+                                            <constraint firstAttribute="height" constant="100" id="teQ-1B-uOr"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
-                                        <rect key="frame" x="155.66666666666669" y="20" width="26.333333333333343" height="27"/>
+                                        <rect key="frame" x="155.66666666666669" y="120" width="26.333333333333343" height="27"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                         <color key="textColor" name="buttonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-Ch-7PK" userLabel="ViewTextField">
-                                        <rect key="frame" x="17" y="52" width="303.66666666666669" height="40"/>
+                                        <rect key="frame" x="17" y="152" width="303.66666666666669" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="کد فعال سازی" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
                                                 <rect key="frame" x="2.3333333333333428" y="5" width="299" height="35"/>
@@ -300,7 +308,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد فعال سازی ارسال شده را وارد کنید." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="332-EN-mwW" userLabel="label enter code">
-                                        <rect key="frame" x="155.66666666666669" y="97" width="165" height="14"/>
+                                        <rect key="frame" x="155.66666666666669" y="197" width="165" height="14"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -309,13 +317,15 @@
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="332-EN-mwW" secondAttribute="bottom" constant="16" id="363-YZ-QK3"/>
-                                    <constraint firstItem="G9q-D2-cf1" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="top" constant="20" id="9jY-w0-7mk"/>
+                                    <constraint firstItem="G9q-D2-cf1" firstAttribute="top" secondItem="bop-sD-gGJ" secondAttribute="bottom" constant="7" id="9jY-w0-7mk"/>
                                     <constraint firstItem="PmH-Ch-7PK" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="DbU-ta-IUZ"/>
                                     <constraint firstItem="332-EN-mwW" firstAttribute="right" secondItem="PmH-Ch-7PK" secondAttribute="right" id="JDV-oO-1rt"/>
                                     <constraint firstItem="G9q-D2-cf1" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="LIP-42-pWd"/>
                                     <constraint firstAttribute="height" constant="110" id="WEk-CA-hH6"/>
+                                    <constraint firstItem="bop-sD-gGJ" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="czZ-bZ-F2K"/>
                                     <constraint firstItem="PmH-Ch-7PK" firstAttribute="top" secondItem="G9q-D2-cf1" secondAttribute="bottom" constant="5" id="phH-MK-fnI"/>
                                     <constraint firstItem="PmH-Ch-7PK" firstAttribute="width" secondItem="zi8-T5-FwR" secondAttribute="width" multiplier="0.9" id="u4Q-lE-yvZ"/>
+                                    <constraint firstItem="bop-sD-gGJ" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="top" constant="13" id="uBK-Kc-Ftf"/>
                                     <constraint firstItem="332-EN-mwW" firstAttribute="top" secondItem="PmH-Ch-7PK" secondAttribute="bottom" constant="5" id="wYv-nQ-APm"/>
                                 </constraints>
                                 <variation key="default">
@@ -325,7 +335,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
-                                <rect key="frame" x="18.666666666666657" y="360" width="337.66666666666674" height="40"/>
+                                <rect key="frame" x="18.666666666666657" y="344" width="337.66666666666674" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="           تغییر شماره            " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
                                         <rect key="frame" x="16" y="0.0" width="169" height="40"/>
@@ -353,25 +363,14 @@
                                     <constraint firstItem="1UJ-1q-E33" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="xtE-0q-D6n"/>
                                 </constraints>
                             </view>
-                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bop-sD-gGJ" userLabel="viewBank" customClass="BankViewXib" customModule="MobileToken" customModuleProvider="target">
-                                <rect key="frame" x="117.66666666666669" y="101" width="140" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="3FH-FU-Dfn"/>
-                                    <constraint firstAttribute="height" constant="100" id="teQ-1B-uOr"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="width" secondItem="oog-9L-98P" secondAttribute="width" multiplier="0.9" id="4gC-Ao-258"/>
                             <constraint firstItem="zi8-T5-FwR" firstAttribute="width" secondItem="oog-9L-98P" secondAttribute="width" multiplier="0.9" id="7z7-bZ-edO"/>
-                            <constraint firstItem="bop-sD-gGJ" firstAttribute="top" secondItem="m28-i2-93v" secondAttribute="top" constant="13" id="8K2-CD-A7o"/>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="8hZ-1P-GLw"/>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="DrW-Ii-H0b"/>
-                            <constraint firstItem="bop-sD-gGJ" firstAttribute="bottom" secondItem="zi8-T5-FwR" secondAttribute="top" constant="-16" id="EFW-FO-9SP"/>
-                            <constraint firstItem="bop-sD-gGJ" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="Igh-5V-C9d"/>
-                            <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="m28-i2-93v" secondAttribute="top" constant="129" id="RQx-Jq-lyF"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="m28-i2-93v" secondAttribute="top" constant="13" id="RQx-Jq-lyF"/>
                             <constraint firstItem="qBh-yJ-CU2" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="bottom" constant="16" id="SG3-Wh-Wmg"/>
                             <constraint firstItem="zi8-T5-FwR" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="Ywe-3J-7H9"/>
                         </constraints>
