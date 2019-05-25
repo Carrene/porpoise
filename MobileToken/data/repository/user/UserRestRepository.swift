@@ -13,6 +13,7 @@ class UserRestRepository: UserRepositoryProtocol {
         let urlComponents = ApiHelper.newUrlComponentsInstance()
         urlComponents.path = "\(urlComponents.path ?? "")/\(ApiHelper.BIND_PATH)"
         let url = urlComponents.url!
+        
         let parameters: [String: Any?] =
         [
             "udid": user.udid,
@@ -23,6 +24,7 @@ class UserRestRepository: UserRepositoryProtocol {
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)
         var request = URLRequest(url: url)
+        print(url)
         request.httpBody = json
         request.httpMethod = ApiHelper.BIND_VERB
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
@@ -54,6 +56,7 @@ class UserRestRepository: UserRepositoryProtocol {
         var request = URLRequest(url: url)
         request.httpBody = json
         request.httpMethod = ApiHelper.CLAIM_VERB
+        print(url)
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
             
             if let error = dataResponse.error {
