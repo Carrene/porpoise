@@ -71,6 +71,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
         viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         labelAlreadyRegistered.isHidden = true
+        viewLine.isHidden = true
         textFieldPhoneNumber.delegate = self
         inputMask()
     }

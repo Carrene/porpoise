@@ -29,7 +29,7 @@ extension DataRequest {
                 return .failure(error!)
             }
             if let verb = request?.httpMethod, let statusCode = response?.statusCode {
-                Logger.instance.logEvent(event: verb.capitalized, parameters: ["result": statusCode as NSObject])
+                Logger.instance.logEvent(event: verb.uppercased(), parameters: ["result": statusCode as NSObject])
             }
             return .success(data)
         }

@@ -69,6 +69,10 @@
 		AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
 		AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */; };
 		AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
+		AC54F38F22991F7A0012BBBA /* BankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54F38E22991F7A0012BBBA /* BankView.xib */; };
+		AC54F39022991F7A0012BBBA /* BankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54F38E22991F7A0012BBBA /* BankView.xib */; };
+		AC54F392229921150012BBBA /* BankViewXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54F391229921150012BBBA /* BankViewXib.swift */; };
+		AC54F393229921150012BBBA /* BankViewXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54F391229921150012BBBA /* BankViewXib.swift */; };
 		AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
 		AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AC57D76421FDA2B500DFDD33 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
@@ -453,6 +457,8 @@
 		AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditCardNameAlert.xib; sourceTree = "<group>"; };
 		AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardNameAlertViewController.swift; sourceTree = "<group>"; };
 		AC54E26921FD94C0008764B8 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		AC54F38E22991F7A0012BBBA /* BankView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankView.xib; sourceTree = "<group>"; };
+		AC54F391229921150012BBBA /* BankViewXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewXib.swift; sourceTree = "<group>"; };
 		AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewAdapter.swift; sourceTree = "<group>"; };
 		AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
@@ -790,6 +796,14 @@
 			path = help;
 			sourceTree = "<group>";
 		};
+		AC54F38D22991F170012BBBA /* bankView */ = {
+			isa = PBXGroup;
+			children = (
+				AC54F38E22991F7A0012BBBA /* BankView.xib */,
+			);
+			path = bankView;
+			sourceTree = "<group>";
+		};
 		AC57D75E21FD9F4000DFDD33 /* help */ = {
 			isa = PBXGroup;
 			children = (
@@ -1118,6 +1132,7 @@
 			children = (
 				ACC902B821A180690072CFD5 /* phoneconfirmation */,
 				AF285FF0219C42D600D8C342 /* phoneinput */,
+				AC54F391229921150012BBBA /* BankViewXib.swift */,
 			);
 			path = registration;
 			sourceTree = "<group>";
@@ -1357,6 +1372,7 @@
 		AFB9BB26218EE0AB004F16DD /* nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AC54F38D22991F170012BBBA /* bankView */,
 				AC54CF9E221AF90F009BF03B /* alerts */,
 				AC5E6BDE21E717E200A9D4C3 /* addcard */,
 				AFAD22FB2190774200EC00CB /* addpassword */,
@@ -1738,6 +1754,7 @@
 				AF51CBC0222BF07C003051D7 /* Registration.storyboard in Resources */,
 				AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
 				AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */,
+				AC54F39022991F7A0012BBBA /* BankView.xib in Resources */,
 				AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */,
 				AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */,
 				AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */,
@@ -1791,6 +1808,7 @@
 				AC353B1021BFA1CF00B80412 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
 				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
+				AC54F38F22991F7A0012BBBA /* BankView.xib in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
@@ -2173,6 +2191,7 @@
 				AF51CB53222BF07C003051D7 /* AuthenticationRepository.swift in Sources */,
 				AF51CB54222BF07C003051D7 /* DeleteTokenAlertViewController.swift in Sources */,
 				AF2420CB228D2C6A003D464E /* ConstantHelper.swift in Sources */,
+				AC54F393229921150012BBBA /* BankViewXib.swift in Sources */,
 				AF51CB55222BF07C003051D7 /* NetHex.swift in Sources */,
 				AF51CB56222BF07C003051D7 /* AuthenticationViewController.swift in Sources */,
 				AF51CB57222BF07C003051D7 /* AuthenticationTypeSettingTableViewCell.swift in Sources */,
@@ -2254,6 +2273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC54F392229921150012BBBA /* BankViewXib.swift in Sources */,
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
 				AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
@@ -2464,6 +2484,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "ir-ba24-mobiletoken-debug";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				URL_PORT = 80;
+				URL_SCHEME = http;
 				WEB_SERVICE_HOST = raaz.isc.co.ir;
 				WEB_SERVICE_PORT = 443;
 			};

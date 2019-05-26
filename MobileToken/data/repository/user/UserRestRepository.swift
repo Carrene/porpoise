@@ -13,6 +13,7 @@ class UserRestRepository: UserRepositoryProtocol {
         let urlComponents = ApiHelper.newUrlComponentsInstance()
         urlComponents.path = "\(urlComponents.path ?? "")/\(ApiHelper.BIND_PATH)"
         let url = urlComponents.url!
+        
         let parameters: [String: Any?] =
         [
             "udid": user.udid,
