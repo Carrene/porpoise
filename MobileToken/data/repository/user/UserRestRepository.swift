@@ -24,7 +24,6 @@ class UserRestRepository: UserRepositoryProtocol {
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)
         var request = URLRequest(url: url)
-        print(url)
         request.httpBody = json
         request.httpMethod = ApiHelper.BIND_VERB
         ApiHelper.instance.alamofire.request(request).intercept().responseObject { (dataResponse: DataResponse<User>) in
