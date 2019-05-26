@@ -66,7 +66,6 @@ class AuthenticationPasswordPresenter: AuthenticationPasswordPresenterProtocol {
             if let error = repoResponse.error {
                 print("\(error)")
             } else {
-//                AuthenticationPatternPresenter.initScreenLocker()
                 if (repoResponse.value?.count)! > 0 {
                     self?.authenticationPasswordView.navigateToCardList()
                 } else {
