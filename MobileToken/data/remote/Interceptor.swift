@@ -24,7 +24,7 @@ extension DataRequest {
         let serializedResponse = DataResponseSerializer<Any?> { request, response, data, error in
             guard error == nil else {
                 if let verb = request?.httpMethod {
-                    Logger.instance.logEvent(event: verb.capitalized, parameters: ["result": "\(error?.localizedDescription ?? "Not Handled")" as NSObject])
+                    Logger.instance.logEvent(event: verb.uppercased(), parameters: ["result": "\(error?.localizedDescription ?? "Not Handled")" as NSObject])
                 }
                 return .failure(error!)
             }
