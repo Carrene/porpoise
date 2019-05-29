@@ -145,7 +145,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )
             }
             else {
-                UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_select_bank_error(), color: R.color.errorDark()!)
+                UIHelper.showSpecificSnackBar(message: R.string.localizable.sb_select_bank_error(), color: R.color.errorDark()!, duration: .middle)
             }
         }
         else {
