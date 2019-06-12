@@ -1,124 +1,125 @@
-"country" = "کشور";
-"backBarItem" = "قبلی";
-"next" = "بعدی";
-"skip" = "رد کن";
-"lb_enter_program" = "ورود به برنامه";
-"lb_version" = "نسخه";
-"lb_support" = "پشتیبانی بانک ها";
+"country" = "Country";
+"backBarItem" = "Back";
+"next" = "Next";
+"skip" = "Skip";
+"lb_enter_program" = "Enter program";
+"lb_version" = "version";
+"lb_support" = "support";
 
 // snackbar
-"sb_wrong_password" = "رمز اشتباه است.";
-"sb_wrong_pattern" = "الگو اشتباه است.";
-"sb_try_for_second_time" = "برای بار دوم انجام دهید.";
-"sb_patterns_not_match" = "الگو و تکرار آن مطابقت ندارند، دوباره تلاش کنید.";
-"sb_passwords_not_match" = "رمز و تکرار آن برابر نیستند، دوباره تلاش کنید.";
-"sb_pattern_min_point_error" = "حداقل ۴ نقطه را متصل کنید.";
-"sb_bad_request" = "مشکلی پیش آمده است.";
-"sb_activation_code_is_not_valid" = "کد فعال‌سازی اشتباه است.";
-"sb_SSM_is_not_available" = "SSM در دسترس نیست";
-"sb_wrong_phone" = "شماره تلفن اشتباه است";
-"sb_successfully_done" = "با موفقیت انجام شد.";
-"sb_server_error" = "خطای سرور";
-"sb_password_copied" = "رمز کپی شد.";
-"sb_check_your_input" = "ورودی خود را کنترل کنید.";
-"sb_token_added" = "رمز با موفقیت اضافه شد.";
-"sb_everywhere_401" = "دسترسی غیر مجاز";
-"sb_everywhere_fail" = "با خطا مواجه شد.";
+"sb_wrong_password" = "Wrong Pattern";
+"sb_wrong_pattern" = "Wrong Password";
+"sb_try_for_second_time" = "Try Again";
+"sb_not_match" = "Not match";
+"sb_pattern_min_point_error" = "Connect 4 points at least";
+"sb_bad_request" = "Bad Request";
+"sb_activation_code_is_not_valid" = "Activation code is not available";
+"sb_SSM_is_not_available" = "SSM is not available";
+"sb_wrong_phone" = "Wrong Phone number";
+"sb_successfully_done" = "Successfully done";
+"sb_remained_Attempt" = "times remained"
+"sb_password_copied" = "Password is copied";
+"sb_server_error" = "Server Error";
+"sb_check_your_input" = "Check your input";
+"sb_token_added" = "Token is added successfully";
+"sb_everywhere_401" = "Access denied";
+"sb_everywhere_fail" = "Failed";
 
-"sb_tokenimport_invalidkey" = "کلید اشتباه است.";
-"sb_tokenimport_invalidbankid" = "شناسه بانک اشتباه است.";
-"sb_tokenimport_invalidcryptomoduleid" = "تفاوت در نوع رمز";
-"sb_tokenimport_invalidchecksum" = "عبارت ارزیابی اشتباه است.";
-"sb_tokenimport_invalidtokenname" = "رمز وارد شده برای کارت انتخابی معتبر نیست.";
-"sb_tokenimport_duplicatetoken" = "رمز تکراری است";
-"sb_card_deleted_successfully" = "کارت حذف شد.";
-"sb_card_deleted_unsuccessfully" = "حذف کارت با خطا مواجه شد.";
-"sb_token_deleted_successfully" = "رمز با موفقیت حذف شد.";
-"sb_token_deleted_unsuccessfully" = "حذف رمز با خطا مواجه شد.";
-"sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است.";
-"sb_network_error" = "خطای شبکه";
-"sb_select_bank_error" = "بانک مورد نظر را انتخاب کنید";
+
+"sb_tokenimport_invalidkey" = "Invalid key";
+"sb_tokenimport_invalidbankid" = "Invalid organization id";
+"sb_tokenimport_invalidcryptomoduleid" = "Different password type";
+"sb_tokenimport_invalidchecksum" = "Invalid checksum";
+"sb_tokenimport_invalidtokenname" = "Invalid token name";
+"sb_tokenimport_duplicatetoken" = "Duplicate token";
+"sb_card_deleted_successfully" = "Card deleted successfully";
+"sb_card_deleted_unsuccessfully" = "Card deleted unsuccessfully";
+"sb_token_deleted_successfully" = "Token deleted successfully";
+"sb_token_deleted_unsuccessfully" = "Token deleted unsuccessfully";
+"sb_get_token_fail" = "Get token failed";
+"sb_network_error" = "Network Error";
+"sb_select_bank" = "Select an organization";
 
 //passWordHint
-"enter_at_least_eight_characters" = "رمز باید شامل حداقل 8 کاراکتر";
-"enter_at_least_one_capital_letter" = "یک حرف بزرگ";
-"enter_at_least_one_digit" = "یک عدد";
-"enter_at_least_one_special_character" = "یک کاراکتر (؟*_=+%$#@) باشد";
-"lb_passwordHint" = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد.";
+"enter_at_least_eight_characters" = "The password must contain at least 8 characters";
+"enter_at_least_one_capital_letter" = "A capital letter";
+"enter_at_least_one_digit" = "A number";
+"enter_at_least_one_special_character" = "A character (? * _ = +% $ # @)";
+"lb_passwordHint" = "The password must contain at least 8 characters, A number, A capital letter, A character (? * _ = +% $ # @)";
 
 //label
-"lb_enter_pattern" = "الگوی خود را وارد کنید.";
-"lb_enter_password" = "رمز خود را وارد کنید.";
-"lb_seconds" = "ثانیه ";
-"lb_resend" = "ارسال دوباره کد";
-"lb_pattern" = "الگو";
-"lb_password" = "رمز";
-"lb_cardName" = "نام کارت";
-"lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید.";
-"lb_desired_card_name" = "نام پیشنهادی کارت  ";
-"lb_are_you_sure" = "آیا مطمئن هستید؟";
-"everywhere_firstpassword" = "رمز اول";
-"everywhere_secondpassword" = "رمز دوم";
-"lb_app_guide" = "راهنمای برنامه";
-"lb_add_new_bank" = "افزودن بانک جدید";
-"lb_add_first_otp" = "افزودن رمز اول";
-"lb_add_second_otp" = "افزودن رمز دوم";
+"lb_enter_pattern" = "Draw pattern";
+"lb_enter_password" = "Enter password";
+"lb_seconds" = "seconds";
+"lb_resend" = "Resend activation code";
+"lb_pattern" = "pattern";
+"lb_password" = "password";
+"lb_cardName" = "card name";
+"lb_add_card_name" = "Add name to card";
+"lb_desired_card_name" = "Add your desired name to card";
+"lb_are_you_sure" = "Are you sure?";
+"everywhere_firstpassword" = "First password";
+"everywhere_secondpassword" = "Second password";
+"lb_app_guide" = "Application guide";
+"lb_add_new_bank" = "Add a new organization";
+"lb_add_first_otp" = "Add first token";
+"lb_add_second_otp" = "Add second token";
 
 //placeholder
-"ph_sms_code" = "کد دریافتی از پیامک";
-"ph_atm_code" = "کد دریافتی از دستگاه";
-"ph_password" = "رمز";
-"ph_confirm_password" = "تکرار رمز";
+"ph_sms_code" = "message code";
+"ph_atm_code" = "device code";
+"ph_password" = "Password";
+"ph_confirm_password" = "Confirm password";
 
 //actionsheet
-"ash_edit_card_name" = "ویرایش نام کارت";
-"ash_delete_card" = "حذف کارت";
-"ash_delete_token" = "حذف رمز";
-"alert_choose_token" = "رمز برای حذف را انتخاب کنید.";
-"alert_delete_first_token" = "حذف رمز اول کارت";
-"alert_delete_second_token" = "حذف رمز دوم کارت";
-"alert_root_message"="متاسفانه شما نمی توانید از این برنامه استفاده کنید.";
-"alert_force_close" = "برنامه به دلیل تغییرات رمز بسته خواهد شد. لطفا برنامه را مجددا اجرا نمایید.";
+"ash_edit_card_name" = "edit card name";
+"ash_delete_card" = "delete card";
+"ash_delete_token" = "delete token";
+"alert_choose_token" = "Select token to delete";
+"alert_delete_first_token" = "Delete first token";
+"alert_delete_second_token" = "Delete second token";
+"alert_root_message"="Unfortunately you can not use this application";
+"alert_force_close" = "Application will be closed for changes. Please run it again.";
 
-"intro1Title" = "ورود شماره تلفن همراه";
-"intro1Description" = "شماره تلفن همراه ثبت شده در بانک مورد نظر را وارد کنید.";
-"intro2Title" = "مراجعه به خودپرداز بانک مورد نظر";
-"intro2Description" = "در منو خودپرداز بانک، گزینه‌ی عملیات رمز را انتخاب کنید.";
-"intro3Title" = "انتخاب نوع رمز یکبار مصرف";
-"intro3Description" = "یکی از دو گزینه‌ی فعال‌سازی‌ رمز‌اول‌ یکبار‌مصرف یا فعال‌سازی‌ رمزدوم‌ یکبار‌مصرف را انتخاب کنید.";
-"intro4Title" = "دریافت رسید از خودپرداز";
-"intro4Description" = "پس از تأیید عملیات انتخاب رمز، رسید حاوی بخش اول کد فعالسازی رمز انتخابی را دریافت می‌کنید.";
-"intro5Title" = "دریافت رمز یکبار مصرف از برنامه";
-"intro5Description" = "برای فعالسازی رمز، از کد دو بخشی روی فیش بانکی (بخش اول) و پیامک دریافتی (بخش دوم) استفاده کنید.";
+"intro1Title" = "Enter phone number";
+"intro1Description" = "Enter the phone number that registered in your organization";
+"intro2Title" = "Organization's device section";
+"intro2Description" = "Select OTP operation in the organization's menu";
+"intro3Title" = "Select OTP type";
+"intro3Description" = "Select one of first or second otp activation";
+"intro4Title" = "Get reciept from device";
+"intro4Description" = "After confirming otp operation, you will get the recipet which contains first activation code.";
+"intro5Title" = "Recieve a token from application";
+"intro5Description" = "To activate otp, use two part reciept.";
 
-"pattern" = "الگو";
-"save" = "ذخیره";
-"cancel" = "انصراف";
-"delete_card" = "حذف کارت";
+"pattern" = "pattern";
+"save" = "save";
+"cancel" = "cancel";
+"delete_card" = "delete card";
 
-"ayande" = "آینده";
-"saderat" = "صادرات";
+"ayande" = "Netalic";
+"saderat" = "New Netalic";
 "ayande_phone" = "02127663200";
 "saderat_phone" = "02109602";
 
 
 //FAQ
-"help_add_bank" = "چطور میتوانم بانک جدید اضافه کنم؟";
-"help_add_card" = "چطور میتوانم کارت جدید اضافه کنم؟";
-"help_edit_cardName" = "چطور میتوانم اسم کارت خود را ویرایش کنم؟";
-"help_delete_card" = "چطور میتوانم کارت خود را حذف کنم؟";
-"help_get_token" = "چطور رمزهای اول و یا دوم کارت خود را به صورت رمز یکبار مصرف دریافت کنم؟";
-"help_add_token" = "یکی از رمزهای کارت را به صورت یکبار مصرف دریافت میکنم، چطور میتوانم رمز دیگر را هم اضافه کنم؟";
-"help_change_token" = "رمز یکبار مصرف هر چند وقت یک بار تغییر کند؟";
-"help_custom_token" = "آیا میتوانم رمز یکبار مصرف خود را دستی تغییر دهم؟";
-"help_copy_token" = "آیا میتوانم رمز یکبار مصرف تولید شده را کپی کنم؟";
-"help_delete_token" = "چطور میتوانم رمزهای یکبار مصرف کارت خود را حذف کنم؟";
-"help_edit_phone" = "چطور میتوانم شماره تلفن همراه وارد شده در زمان افزودن بانک را ویرایش کنم؟";
+"help_add_bank" = "How could I add a new organization?";
+"help_add_card" = "How could I add a new card?";
+"help_edit_cardName" = "How could I edit card name?";
+"help_delete_card" = "How could I delete a card?";
+"help_get_token" = "How could I activate both tokens?";
+"help_add_token" = "I get one of card's token, How could I get another one?";
+"help_change_token" = "How often token change?";
+"help_custom_token" = "Could I change token myself?";"
+"help_copy_token" = "Could I copy tokens?";
+"help_delete_token" = "How could I delete tokens?";
+"help_edit_phone" = "How could I change my phone number?";
 
-"alert" = "هشدار";
-"alert_set_timezone" = "اگر تنظیمات زمان و تاریخ خودکار دستگاه غیرفعال است، برای کارکرد صحیح برنامه این گزینه را فعال کنید.";
-"ok" = "باشد";
-"understand" = "متوجه شدم";
+"alert" = "Alert";
+"alert_set_timezone" = "If the device's auto-time and date settings are disabled, enable this option to function correctly.";
+"ok" = "Okay";
+"understand" = "Got it";
 
 
-"everywhere_fail" = "با خطا مواجه شد.";
+"everywhere_fail" = "Failed";
