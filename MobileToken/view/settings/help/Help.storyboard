@@ -4,14 +4,13 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--راهنمای برنامه-->
+        <!--Guide-->
         <scene sceneID="jYV-Yn-i0U">
             <objects>
                 <viewController storyboardIdentifier="helpNavigation" id="53v-M4-UbE" customClass="HelpViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LfD-IU-t3u"/>
                     </view>
-                    <navigationItem key="navigationItem" title="راهنمای برنامه" id="CBa-pQ-9PU">
+                    <navigationItem key="navigationItem" title="Guide" id="CBa-pQ-9PU">
                         <barButtonItem key="backBarButtonItem" title=" " id="2qt-C5-HFT">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>

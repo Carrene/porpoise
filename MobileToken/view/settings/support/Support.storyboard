@@ -4,14 +4,13 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--پشتیبانی بانک ها-->
+        <!--Support-->
         <scene sceneID="dkx-MZ-Xkw">
             <objects>
                 <viewController storyboardIdentifier="SupportViewController" id="zrz-Rz-z3p" customClass="SupportViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gMS-e3-SKA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="پشتیبانی بانک ها" id="YvJ-X1-u7y">
+                    <navigationItem key="navigationItem" title="Support" id="YvJ-X1-u7y">
                         <barButtonItem key="backBarButtonItem" title=" " id="IKv-w8-AwH">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>

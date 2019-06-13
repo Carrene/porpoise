@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,7 +27,7 @@
                                 <rect key="frame" x="60" y="130" width="200" height="200"/>
                                 <color key="backgroundColor" name="primary"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="برنامه شما به دلایل امنیتی قفل شده است. لطفا به بانک خود مراجعه فرمایید." textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeP-ZH-VA1" userLabel="textViewDescription">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Application is locked. Please contact your organization." textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeP-ZH-VA1" userLabel="textViewDescription">
                                 <rect key="frame" x="16" y="350" width="288" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CXf-iC-JqG"/>

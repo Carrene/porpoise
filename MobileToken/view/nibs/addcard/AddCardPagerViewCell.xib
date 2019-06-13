@@ -37,13 +37,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="141"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="به کارت خود نام دلخواه اختصاص دهید." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzu-YA-pMF">
-                                <rect key="frame" x="71" y="189" width="189" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give your card a name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzu-YA-pMF">
+                                <rect key="frame" x="131" y="189" width="129" height="20"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" نام پیشنهادی کارت" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card name" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-5T-3Eh" userLabel="textFieldCardName">
                                 <rect key="frame" x="20" y="151" width="240" height="36"/>
                                 <color key="backgroundColor" name="primaryLight"/>
                                 <constraints>
@@ -60,9 +60,7 @@
                                     <constraint firstAttribute="height" constant="40" id="To7-8V-VZ6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                <state key="normal">
-                                    <string key="title">افزودن کارت
-</string>
+                                <state key="normal" title="Add card">
                                     <color key="titleColor" name="primary"/>
                                 </state>
                                 <connections>

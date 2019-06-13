@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ویژگی های جدید-->
+        <!--New features-->
         <scene sceneID="Pwm-fc-atc">
             <objects>
                 <viewController id="Op2-uj-cX5" customClass="LatestUpdatesViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,8 +47,8 @@
                                                                 <constraint firstAttribute="height" constant="8" id="me9-bB-fos"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضافه شدن رمزهای دوم و اینترنتی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-LH-UUB">
-                                                            <rect key="frame" x="83" y="3.3333333333333339" width="217" height="25.333333333333329"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adding first and second internet token" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-LH-UUB">
+                                                            <rect key="frame" x="6.3333333333333428" y="3.3333333333333339" width="293.66666666666663" height="25.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
                                                             <color key="textColor" name="buttonColor"/>
                                                             <nil key="highlightedColor"/>
@@ -86,7 +85,7 @@
                                     <constraint firstAttribute="height" constant="48" id="yx0-Lo-1Ac"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                <state key="normal" title="ورود به برنامه">
+                                <state key="normal" title="Enter program">
                                     <color key="titleColor" name="buttonColor"/>
                                 </state>
                             </button>
@@ -105,7 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B5N-fd-tez"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ویژگی های جدید" id="AWV-9p-XHD">
+                    <navigationItem key="navigationItem" title="New features" id="AWV-9p-XHD">
                         <barButtonItem key="backBarButtonItem" title="  " id="Tzn-0x-wI9">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>

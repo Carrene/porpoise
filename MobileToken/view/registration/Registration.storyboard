@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="-857" y="-35"/>
         </scene>
-        <!--ثبت نام از طریق بانک-->
+        <!--Register through organization-->
         <scene sceneID="fHD-NO-6OC">
             <objects>
                 <viewController storyboardIdentifier="PhoneInputViewController" id="t2g-dI-h8H" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,13 +110,13 @@
                                             <constraint firstItem="9Rd-d6-I82" firstAttribute="width" secondItem="bYH-B5-UKm" secondAttribute="width" constant="-15" id="vfM-X1-1rU"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کشور خود را انتخاب کنید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-zz-5hZ" userLabel="label enter country">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your country" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-zz-5hZ" userLabel="label enter country">
                                         <rect key="frame" x="18.666666666666657" y="67" width="298" height="14"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد کنید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRT-Ye-jcl" userLabel="label enter phone">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your phone number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRT-Ye-jcl" userLabel="label enter phone">
                                         <rect key="frame" x="16" y="152" width="303" height="14"/>
                                         <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,7 +178,7 @@
                                     <constraint firstItem="E24-Uc-PUg" firstAttribute="height" secondItem="bYH-B5-UKm" secondAttribute="height" id="y2G-MY-mUH"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بانک مورد نظر برای ثبت‌نام را انتخاب کنید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an organization to register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
                                 <rect key="frame" x="5" y="101" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nkV-SJ-1Xs"/>
@@ -187,8 +187,8 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با این شماره ثبت نام کرده اید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
-                                <rect key="frame" x="20" y="331.66666666666669" width="335" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already registered with this number." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
+                                <rect key="frame" x="20" y="328" width="335" height="27"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -223,9 +223,9 @@
                     <tabBarItem key="tabBarItem" title="افزودن بانک" image="plus-icon" id="fIu-iE-rvY">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="ثبت نام از طریق بانک" id="AMK-zo-eAg">
+                    <navigationItem key="navigationItem" title="Register through organization" id="AMK-zo-eAg">
                         <barButtonItem key="backBarButtonItem" title=" " id="nAV-Jx-a3S"/>
-                        <barButtonItem key="rightBarButtonItem" title="تایید" id="gx1-xG-geb">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="gx1-xG-geb">
                             <color key="tintColor" name="secondary"/>
                             <connections>
                                 <action selector="onButtonRegister:" destination="t2g-dI-h8H" id="2NK-Jb-P3Q"/>

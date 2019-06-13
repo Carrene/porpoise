@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile-Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--احراز هویت-->
+        <scene sceneID="d9R-Dg-sgw">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTa-cp-iyH" customClass="AuthenticationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hvo-1e-Mbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-wi-QKW">
+                                <rect key="frame" x="20" y="64" width="335" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCF-Lj-z7x">
+                                <rect key="frame" x="0.0" y="111" width="375" height="555"/>
+                                <color key="backgroundColor" name="primary"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="O5W-fZ-ZEd" firstAttribute="trailing" secondItem="NCF-Lj-z7x" secondAttribute="trailing" id="4Nu-6i-KBf"/>
+                            <constraint firstItem="NCF-Lj-z7x" firstAttribute="top" secondItem="LYW-wi-QKW" secondAttribute="bottom" constant="20" id="NgZ-F8-CQH"/>
+                            <constraint firstItem="O5W-fZ-ZEd" firstAttribute="trailing" secondItem="LYW-wi-QKW" secondAttribute="trailing" constant="20" id="WSb-Ph-7Lv"/>
+                            <constraint firstItem="O5W-fZ-ZEd" firstAttribute="bottom" secondItem="NCF-Lj-z7x" secondAttribute="bottom" constant="112" id="e16-CF-iZj"/>
+                            <constraint firstItem="LYW-wi-QKW" firstAttribute="top" secondItem="O5W-fZ-ZEd" secondAttribute="top" constant="20" id="fQp-Ni-tnv"/>
+                            <constraint firstItem="LYW-wi-QKW" firstAttribute="leading" secondItem="O5W-fZ-ZEd" secondAttribute="leading" constant="20" id="nqE-43-Tsa"/>
+                            <constraint firstItem="NCF-Lj-z7x" firstAttribute="leading" secondItem="O5W-fZ-ZEd" secondAttribute="leading" id="oWd-q8-Yzr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O5W-fZ-ZEd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="احراز هویت" id="zHT-dW-jVU">
+                        <barButtonItem key="backBarButtonItem" title="  " id="HTn-wE-LdW">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lbTitle" destination="LYW-wi-QKW" id="ed5-Ef-On8"/>
+                        <outlet property="vAuthenticationContainer" destination="NCF-Lj-z7x" id="pAy-Bh-qof"/>
+                        <segue destination="HTl-cV-4Gj" kind="showDetail" identifier="AuthenticationToApplicationLock" id="tat-VG-Qao"/>
+                        <segue destination="WHz-rC-ahz" kind="showDetail" identifier="AuthenticationToCardList" id="2ZA-t0-htw"/>
+                        <segue destination="GVM-Pt-XaU" kind="showDetail" identifier="AuthenticationToRegistration" id="czN-Bh-mwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbP-Yh-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98" y="-1195"/>
+        </scene>
+        <!--Authentication Password View Controller-->
+        <scene sceneID="RRX-Le-XMc">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationPasswordViewController" id="ga8-hu-KSt" customClass="AuthenticationPasswordViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mL-SD-usU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47X-kO-rhi" userLabel="lbTitle">
+                                <rect key="frame" x="120.5" y="20" width="134.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز برنامه" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
+                                <rect key="frame" x="30" y="134" width="315" height="40"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hwx-0B-WkN"/>
+                                </constraints>
+                                <color key="textColor" name="buttonColor"/>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <action selector="onEditDidEnd:" destination="ga8-hu-KSt" eventType="editingDidEnd" id="KlH-Gy-rA9"/>
+                                    <action selector="textFieldPasswordEditingChanged:" destination="ga8-hu-KSt" eventType="editingDidEnd" id="9D3-10-fcE"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="yeM-4x-iKm" firstAttribute="left" secondItem="6DJ-lZ-aNG" secondAttribute="left" constant="30" id="2AD-6r-6WQ"/>
+                            <constraint firstItem="yeM-4x-iKm" firstAttribute="centerX" secondItem="6DJ-lZ-aNG" secondAttribute="centerX" id="4fE-Kx-fjT"/>
+                            <constraint firstItem="6DJ-lZ-aNG" firstAttribute="top" secondItem="47X-kO-rhi" secondAttribute="top" id="Gb2-aY-miS"/>
+                            <constraint firstItem="6DJ-lZ-aNG" firstAttribute="right" secondItem="yeM-4x-iKm" secondAttribute="right" constant="30" id="IV0-CT-srz"/>
+                            <constraint firstItem="47X-kO-rhi" firstAttribute="centerX" secondItem="6DJ-lZ-aNG" secondAttribute="centerX" id="L3h-xl-3UC"/>
+                            <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="6DJ-lZ-aNG" secondAttribute="top" constant="90" id="hx4-zv-d4U"/>
+                            <constraint firstItem="yeM-4x-iKm" firstAttribute="top" secondItem="47X-kO-rhi" secondAttribute="bottom" constant="20" id="tvR-Ri-DSg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6DJ-lZ-aNG"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="47X-kO-rhi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldPassword" destination="yeM-4x-iKm" id="JYj-QG-omK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XG-Fo-HNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="-957"/>
+        </scene>
+        <!--MainTabbar-->
+        <scene sceneID="osd-Q4-Spk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="GVM-Pt-XaU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mz8-Yg-kub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-1454"/>
+        </scene>
+        <!--MainTabbar-->
+        <scene sceneID="tVn-vf-YgA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="WHz-rC-ahz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kng-tA-ttj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="-1196"/>
+        </scene>
+        <!--ApplicationLockViewController-->
+        <scene sceneID="SCT-dU-z2b">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ApplicationLockViewController" storyboardName="ApplicationLock" referencedIdentifier="ApplicationLockViewController" id="HTl-cV-4Gj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWm-Ta-qyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="-930"/>
+        </scene>
+        <!--Authentication Pattern View Controller-->
+        <scene sceneID="g7p-MB-Twu">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationPatternViewController" id="fN7-a2-z60" customClass="AuthenticationPatternViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eXf-aw-cYX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mq-00-gPf" customClass="HUIPatternLockView" customModule="HUIPatternLockView_Swift">
+                                <rect key="frame" x="37.666666666666657" y="144" width="300" height="300"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <color key="tintColor" name="secondary"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" name="secondary"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asb-xx-Mi5" userLabel="lbTitle">
+                                <rect key="frame" x="111" y="20" width="153.5" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="centerX" secondItem="9NJ-SA-kL1" secondAttribute="centerX" id="NQc-so-hVk"/>
+                            <constraint firstItem="Asb-xx-Mi5" firstAttribute="top" secondItem="9NJ-SA-kL1" secondAttribute="top" id="OAD-ue-Jcu"/>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="height" secondItem="9NJ-SA-kL1" secondAttribute="width" multiplier="0.8" id="Oaf-u7-Zzo"/>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="width" secondItem="9NJ-SA-kL1" secondAttribute="width" multiplier="0.8" id="XjW-mz-lV9"/>
+                            <constraint firstItem="3mq-00-gPf" firstAttribute="top" secondItem="9NJ-SA-kL1" secondAttribute="top" constant="100" id="bjz-kJ-MCW"/>
+                            <constraint firstItem="Asb-xx-Mi5" firstAttribute="centerX" secondItem="3mq-00-gPf" secondAttribute="centerX" id="uDN-oG-2Ef"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9NJ-SA-kL1"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Asb-xx-Mi5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="vPattern" destination="3mq-00-gPf" id="2tQ-iX-Ime"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0CG-dI-dZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="-1643"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

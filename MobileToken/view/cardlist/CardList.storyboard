@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="-4" y="910"/>
         </scene>
-        <!--لیست کارت ها-->
+        <!--Card list-->
         <scene sceneID="Owr-MW-4mL">
             <objects>
                 <viewController storyboardIdentifier="TokenListViewController" id="qfI-nN-dBL" customClass="CardListViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,8 +44,8 @@
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="secondary"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ابتدا در یک بانک ثبت نام کنید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-6G-lYZ">
-                                <rect key="frame" x="83.5" y="327.5" width="208" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register in an organization first." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-6G-lYZ">
+                                <rect key="frame" x="57.5" y="327.5" width="260" height="27"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,10 +69,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="کارت ها" image="list-icon" id="TAT-Oz-QT1">
+                    <tabBarItem key="tabBarItem" title="Cards" image="list-icon" id="TAT-Oz-QT1">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="لیست کارت ها" id="TqB-wM-dKr">
+                    <navigationItem key="navigationItem" title="Card list" id="TqB-wM-dKr">
                         <barButtonItem key="backBarButtonItem" title="  " id="tPo-SG-4Yc">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>

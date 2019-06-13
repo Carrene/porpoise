@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--دریافت رمزهای کارت-->
+        <!--Get card tokens-->
         <scene sceneID="HLq-Q3-a8h">
             <objects>
                 <viewController storyboardIdentifier="ImportTokenViewController" id="n0P-EJ-7RH" customClass="ImportTokenViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,13 +33,13 @@
                                     <constraint firstAttribute="height" constant="120" id="SLs-O7-J4I"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد دریافتی از پیامک را وارد نمایید." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter messaged code." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
                                 <rect key="frame" x="78" y="385.5" width="222" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="کد دریافتی از دستگاه" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-aJ-kfa" userLabel="textViewAtmCode">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="code recieved through device" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-aJ-kfa" userLabel="textViewAtmCode">
                                 <rect key="frame" x="20" y="173" width="280" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
@@ -49,7 +49,7 @@
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد دریافتی از دستگاه خودپرداز بانک خود را وارد نمایید." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the code which recieved from device." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
                                 <rect key="frame" x="62" y="218" width="238" height="20"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +61,7 @@
                                 <color key="textColor" name="borderColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کد دریافتی از پیامک" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkF-dm-DBr" userLabel="textViewSmsCode">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Code recieved through message" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkF-dm-DBr" userLabel="textViewSmsCode">
                                 <rect key="frame" x="20" y="253" width="280" height="127.5"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,7 +105,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nDK-RK-Yz7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="دریافت رمزهای کارت" id="fDX-1W-pv6">
+                    <navigationItem key="navigationItem" title="Get card tokens" id="fDX-1W-pv6">
                         <barButtonItem key="backBarButtonItem" title="  " id="Mx0-UL-4yW">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>

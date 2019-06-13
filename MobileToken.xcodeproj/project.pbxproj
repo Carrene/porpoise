@@ -38,13 +38,11 @@
 		AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */; };
 		AC16D73721CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */; };
 		AC16D73821CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */; };
-		AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC16D73921CA8B640094FBED /* Authentication.storyboard */; };
 		AC2676B221B3C23E00524636 /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
 		AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
 		AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
 		AC2676B921B410DC00524636 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
 		AC2676BD21B695E000524636 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
-		AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
 		AC353B0421BEB13C00B80412 /* ApplicationLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */; };
 		AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
 		AC353B0A21BEB94500B80412 /* LatestUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */; };
@@ -244,7 +242,6 @@
 		AC8DA78C22B0FFB300B405E2 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
 		AC8DA78D22B0FFB300B405E2 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
 		AC8DA78E22B0FFB300B405E2 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
-		AC8DA78F22B0FFB300B405E2 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
 		AC8DA79022B0FFB300B405E2 /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
 		AC8DA79122B0FFB300B405E2 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
 		AC8DA79222B0FFB300B405E2 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
@@ -263,12 +260,17 @@
 		AC8DA79F22B0FFB300B405E2 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
 		AC8DA7A022B0FFB300B405E2 /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
 		AC8DA7A122B0FFB300B405E2 /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
-		AC8DA7A222B0FFB300B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC16D73921CA8B640094FBED /* Authentication.storyboard */; };
 		AC8DA7A322B0FFB300B405E2 /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
 		AC8DA7A422B0FFB300B405E2 /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AC8DA7A522B0FFB300B405E2 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		AC8DA7A622B0FFB300B405E2 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
 		AC8DA7A722B0FFB300B405E2 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
+		AC8DA7B322B2194800B405E2 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7B722B2194800B405E2 /* ApplicationLock.storyboard */; };
+		AC8DA7B422B2194800B405E2 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7B722B2194800B405E2 /* ApplicationLock.storyboard */; };
+		AC8DA7B522B2194800B405E2 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7B722B2194800B405E2 /* ApplicationLock.storyboard */; };
+		AC8DA7B922B219CF00B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */; };
+		AC8DA7BA22B219CF00B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */; };
+		AC8DA7BB22B219CF00B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */; };
 		AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
 		ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
 		ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
@@ -469,7 +471,6 @@
 		AF51CBB3222BF07C003051D7 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
 		AF51CBB4222BF07C003051D7 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
 		AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
-		AF51CBB6222BF07C003051D7 /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */; };
 		AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
 		AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
 		AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
@@ -487,7 +488,6 @@
 		AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
 		AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
 		AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
-		AF51CBC9222BF07C003051D7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC16D73921CA8B640094FBED /* Authentication.storyboard */; };
 		AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
 		AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
@@ -599,13 +599,11 @@
 		AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternContractor.swift; sourceTree = "<group>"; };
 		AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPaswordContractor.swift; sourceTree = "<group>"; };
 		AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordPresenter.swift; sourceTree = "<group>"; };
-		AC16D73921CA8B640094FBED /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenViewController.swift; sourceTree = "<group>"; };
 		AC2676B321B40B8B00524636 /* ActionSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
 		AC2676B621B40E4F00524636 /* ActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheet.xib; sourceTree = "<group>"; };
 		AC2676B821B410DC00524636 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		AC2676BC21B695E000524636 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationLock.storyboard; sourceTree = "<group>"; };
 		AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLockViewController.swift; sourceTree = "<group>"; };
 		AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LatestUpdates.storyboard; sourceTree = "<group>"; };
 		AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesViewController.swift; sourceTree = "<group>"; };
@@ -657,6 +655,10 @@
 		AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternViewController.swift; sourceTree = "<group>"; };
 		AC8DA7B022B0FFB300B405E2 /* MobileTokenAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTokenAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8DA7B122B0FFB400B405E2 /* MobileToken copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy-Info.plist"; path = "/Users/fatemekazemi/Documents/Projects/porpoise/MobileToken copy-Info.plist"; sourceTree = "<absolute>"; };
+		AC8DA7B622B2194800B405E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/ApplicationLock.storyboard; sourceTree = "<group>"; };
+		AC8DA7B822B2194F00B405E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ApplicationLock.storyboard; sourceTree = "<group>"; };
+		AC8DA7BC22B219CF00B405E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Authentication.storyboard; sourceTree = "<group>"; };
+		AC8DA7BE22B219D600B405E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankUtil.swift; sourceTree = "<group>"; };
 		ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
@@ -880,7 +882,7 @@
 		AC353AFF21BEB0A900B80412 /* applicationlock */ = {
 			isa = PBXGroup;
 			children = (
-				AC353B0021BEB0DA00B80412 /* ApplicationLock.storyboard */,
+				AC8DA7B722B2194800B405E2 /* ApplicationLock.storyboard */,
 			);
 			path = applicationlock;
 			sourceTree = "<group>";
@@ -1157,7 +1159,7 @@
 		ACAAD85121AC2C95007266F4 /* authentication */ = {
 			isa = PBXGroup;
 			children = (
-				AC16D73921CA8B640094FBED /* Authentication.storyboard */,
+				AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */,
 			);
 			path = authentication;
 			sourceTree = "<group>";
@@ -1951,7 +1953,7 @@
 				AC8DA78C22B0FFB300B405E2 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC8DA78D22B0FFB300B405E2 /* answer.html in Resources */,
 				AC8DA78E22B0FFB300B405E2 /* ActionSheet.xib in Resources */,
-				AC8DA78F22B0FFB300B405E2 /* ApplicationLock.storyboard in Resources */,
+				AC8DA7B522B2194800B405E2 /* ApplicationLock.storyboard in Resources */,
 				AC8DA79022B0FFB300B405E2 /* BankCollectionViewCell.xib in Resources */,
 				AC8DA79122B0FFB300B405E2 /* Tabbar.storyboard in Resources */,
 				AC8DA79222B0FFB300B405E2 /* Settings.storyboard in Resources */,
@@ -1970,7 +1972,7 @@
 				AC8DA79F22B0FFB300B405E2 /* LatestUpdates.storyboard in Resources */,
 				AC8DA7A022B0FFB300B405E2 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC8DA7A122B0FFB300B405E2 /* EditCardNameAlert.xib in Resources */,
-				AC8DA7A222B0FFB300B405E2 /* Authentication.storyboard in Resources */,
+				AC8DA7BB22B219CF00B405E2 /* Authentication.storyboard in Resources */,
 				AC8DA7A322B0FFB300B405E2 /* GoogleService-Info-r.plist in Resources */,
 				AC8DA7A422B0FFB300B405E2 /* GoogleService-Info-d.plist in Resources */,
 				AC8DA7A522B0FFB300B405E2 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
@@ -2003,7 +2005,7 @@
 				AF51CBB3222BF07C003051D7 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AF51CBB4222BF07C003051D7 /* answer.html in Resources */,
 				AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */,
-				AF51CBB6222BF07C003051D7 /* ApplicationLock.storyboard in Resources */,
+				AC8DA7B422B2194800B405E2 /* ApplicationLock.storyboard in Resources */,
 				AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */,
 				AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */,
 				AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */,
@@ -2022,7 +2024,7 @@
 				AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */,
 				AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */,
 				AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */,
-				AF51CBC9222BF07C003051D7 /* Authentication.storyboard in Resources */,
+				AC8DA7BA22B219CF00B405E2 /* Authentication.storyboard in Resources */,
 				AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */,
 				AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */,
 				AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
@@ -2056,7 +2058,7 @@
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
-				AC353B0121BEB0DA00B80412 /* ApplicationLock.storyboard in Resources */,
+				AC8DA7B322B2194800B405E2 /* ApplicationLock.storyboard in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
@@ -2075,7 +2077,7 @@
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
 				AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */,
-				AC16D73A21CA8B640094FBED /* Authentication.storyboard in Resources */,
+				AC8DA7B922B219CF00B405E2 /* Authentication.storyboard in Resources */,
 				AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */,
 				AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */,
 				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
@@ -2957,6 +2959,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AC8DA7B722B2194800B405E2 /* ApplicationLock.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8DA7B622B2194800B405E2 /* en */,
+				AC8DA7B822B2194F00B405E2 /* Base */,
+			);
+			name = ApplicationLock.storyboard;
+			sourceTree = "<group>";
+		};
+		AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8DA7BC22B219CF00B405E2 /* en */,
+				AC8DA7BE22B219D600B405E2 /* Base */,
+			);
+			name = Authentication.storyboard;
+			sourceTree = "<group>";
+		};
 		ACDFD8A521A418BC00839F97 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
