@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -45,7 +44,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="buttonColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه                  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkY-iF-rcV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkY-iF-rcV">
                                 <rect key="frame" x="190" y="572.5" width="185" height="25.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -84,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TiY-NI-XLV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="تنظیمات" image="setting-icon" id="IoS-Md-QM1">
+                    <tabBarItem key="tabBarItem" tag="1" title="Setting" image="setting-icon" id="IoS-Md-QM1">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="تنظیمات" id="Qm1-nC-HGp">

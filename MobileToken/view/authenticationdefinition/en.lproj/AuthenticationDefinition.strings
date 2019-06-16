@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "at least 8 characters"; ObjectID = "0B1-GI-j54"; */
+"0B1-GI-j54.text" = "at least 8 characters";
+
+/* Class = "UITextField"; placeholder = "password again"; ObjectID = "6K0-Ct-2n1"; */
+"6K0-Ct-2n1.placeholder" = "password again";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "G0v-Up-gtc"; */
+"G0v-Up-gtc.placeholder" = "password";
+
+/* Class = "UISegmentedControl"; Hmm-D3-AaW.segmentTitles[0] = "الگو"; ObjectID = "Hmm-D3-AaW"; */
+"Hmm-D3-AaW.segmentTitles[0]" = "الگو";
+
+/* Class = "UISegmentedControl"; Hmm-D3-AaW.segmentTitles[1] = "رمز"; ObjectID = "Hmm-D3-AaW"; */
+"Hmm-D3-AaW.segmentTitles[1]" = "رمز";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "ULQ-dM-OJz"; */
+"ULQ-dM-OJz.title" = "  ";
+
+/* Class = "UILabel"; text = "enter password again"; ObjectID = "Y6w-Si-ccv"; */
+"Y6w-Si-ccv.text" = "enter password again";
+
+/* Class = "UINavigationItem"; title = "روش احراز هویت"; ObjectID = "eiM-J4-X6A"; */
+"eiM-J4-X6A.title" = "روش احراز هویت";

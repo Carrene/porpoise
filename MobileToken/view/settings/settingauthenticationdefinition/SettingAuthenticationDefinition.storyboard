@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--روش احراز هویت-->
+        <!--Authentication type-->
         <scene sceneID="57k-Zk-Y08">
             <objects>
                 <viewController storyboardIdentifier="SettingAuthenticationDefinitionViewController" id="0Wg-PL-C2c" customClass="SettingAuthenticationDefinitionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,8 +36,8 @@
                                     <constraint firstAttribute="height" constant="40" id="H2n-Y6-pxY"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="الگو"/>
-                                    <segment title="رمز"/>
+                                    <segment title="pattern"/>
+                                    <segment title="Password"/>
                                 </segments>
                                 <color key="tintColor" name="secondary"/>
                                 <connections>
@@ -62,7 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GMb-rr-ceF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="روش احراز هویت" id="LHV-zY-pSe">
+                    <navigationItem key="navigationItem" title="Authentication type" id="LHV-zY-pSe">
                         <barButtonItem key="backBarButtonItem" id="Gve-Nw-g66">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
@@ -195,8 +195,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الگوی خود را وارد کنید." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-sE-vYv" userLabel="lbTitle">
-                                <rect key="frame" x="108" y="30" width="159" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw your pattern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-sE-vYv" userLabel="lbTitle">
+                                <rect key="frame" x="110.5" y="30" width="154.5" height="29"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>

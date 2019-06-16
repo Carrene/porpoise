@@ -220,7 +220,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="افزودن بانک" image="plus-icon" id="fIu-iE-rvY">
+                    <tabBarItem key="tabBarItem" title="Add organization" image="plus-icon" id="fIu-iE-rvY">
                         <color key="badgeColor" name="buttonColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Register through organization" id="AMK-zo-eAg">

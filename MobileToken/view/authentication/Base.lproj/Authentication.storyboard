@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--احراز هویت-->
+        <!--Authentication-->
         <scene sceneID="d9R-Dg-sgw">
             <objects>
                 <viewController storyboardIdentifier="AuthenticationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTa-cp-iyH" customClass="AuthenticationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O5W-fZ-ZEd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="احراز هویت" id="zHT-dW-jVU">
+                    <navigationItem key="navigationItem" title="Authentication" id="zHT-dW-jVU">
                         <barButtonItem key="backBarButtonItem" title="  " id="HTn-wE-LdW">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
@@ -80,7 +80,7 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رمز برنامه" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-4x-iKm" userLabel="tfPassword" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="30" y="134" width="315" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>

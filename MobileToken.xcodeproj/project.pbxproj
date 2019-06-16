@@ -54,6 +54,9 @@
 		AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
 		AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
 		AC405AFC221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
+		AC4624C722B60A96001D10BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC4624CB22B60A96001D10BE /* Localizable.strings */; };
+		AC4624C822B60A96001D10BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC4624CB22B60A96001D10BE /* Localizable.strings */; };
+		AC4624C922B60A96001D10BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC4624CB22B60A96001D10BE /* Localizable.strings */; };
 		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC46F6C02225651400BF611A /* HalfColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46F6BF2225651400BF611A /* HalfColorLabel.swift */; };
 		AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
@@ -100,7 +103,6 @@
 		AC8DA6FC22B0FFB300B405E2 /* UnsupportedOperationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */; };
 		AC8DA6FD22B0FFB300B405E2 /* HalfColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46F6BF2225651400BF611A /* HalfColorLabel.swift */; };
 		AC8DA6FE22B0FFB300B405E2 /* AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */; };
-		AC8DA6FF22B0FFB300B405E2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
 		AC8DA70022B0FFB300B405E2 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
 		AC8DA70122B0FFB300B405E2 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */; };
 		AC8DA70222B0FFB300B405E2 /* AuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71021CA322C0094FBED /* AuthenticationDefinitionViewController.swift */; };
@@ -207,7 +209,6 @@
 		AC8DA76722B0FFB300B405E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AC8DA76822B0FFB300B405E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AC8DA76922B0FFB300B405E2 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
-		AC8DA76A22B0FFB300B405E2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
 		AC8DA76B22B0FFB300B405E2 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
 		AC8DA76C22B0FFB300B405E2 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AC8DA76D22B0FFB300B405E2 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
@@ -224,7 +225,6 @@
 		AC8DA77A22B0FFB300B405E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
 		AC8DA77B22B0FFB300B405E2 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AC8DA77C22B0FFB300B405E2 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
-		AC8DA77D22B0FFB300B405E2 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AC8DA77E22B0FFB300B405E2 /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
 		AC8DA77F22B0FFB300B405E2 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AC8DA78022B0FFB300B405E2 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
@@ -253,7 +253,6 @@
 		AC8DA79822B0FFB300B405E2 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC8DA79922B0FFB300B405E2 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */; };
 		AC8DA79A22B0FFB300B405E2 /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
-		AC8DA79B22B0FFB300B405E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		AC8DA79C22B0FFB300B405E2 /* BankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54F38E22991F7A0012BBBA /* BankView.xib */; };
 		AC8DA79D22B0FFB300B405E2 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
 		AC8DA79E22B0FFB300B405E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
@@ -271,6 +270,10 @@
 		AC8DA7B922B219CF00B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */; };
 		AC8DA7BA22B219CF00B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */; };
 		AC8DA7BB22B219CF00B405E2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */; };
+		AC8DA7BF22B22AB300B405E2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
+		AC98374D22B624A300AF6D63 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98375122B624A400AF6D63 /* AuthenticationDefinition.storyboard */; };
+		AC98374E22B624A400AF6D63 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98375122B624A400AF6D63 /* AuthenticationDefinition.storyboard */; };
+		AC98374F22B624A400AF6D63 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98375122B624A400AF6D63 /* AuthenticationDefinition.storyboard */; };
 		AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
 		ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
 		ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
@@ -285,13 +288,13 @@
 		ACCAF7B021DB6BD20057402B /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAF7AF21DB6BD20057402B /* MyApplication.swift */; };
 		ACDFD89F21A4016D00839F97 /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
 		ACDFD8A121A411D700839F97 /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
-		ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
+		ACE1BBE722B61D6A00FBC179 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4624D422B61C99001D10BE /* R.generated.swift */; };
+		ACE1BBE822B61D6B00FBC179 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4624D422B61C99001D10BE /* R.generated.swift */; };
+		ACE1BBE922B61D6C00FBC179 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4624D422B61C99001D10BE /* R.generated.swift */; };
 		ACEC112C222BF87100AF933B /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC112B222BF87100AF933B /* JsonParser.swift */; };
 		ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
-		AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
-		AF02085522017D630021856A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
 		AF2420C8228D2C34003D464E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C7228D2C34003D464E /* Logger.swift */; };
 		AF2420CA228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
 		AF2420CB228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
@@ -439,7 +442,6 @@
 		AF51CB90222BF07C003051D7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF51CB91222BF07C003051D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AF51CB92222BF07C003051D7 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
-		AF51CB93222BF07C003051D7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
 		AF51CB94222BF07C003051D7 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
 		AF51CB95222BF07C003051D7 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AF51CB96222BF07C003051D7 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
@@ -455,7 +457,6 @@
 		AF51CBA3222BF07C003051D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
 		AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
-		AF51CBA6222BF07C003051D7 /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
 		AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
@@ -482,7 +483,6 @@
 		AF51CBC0222BF07C003051D7 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */; };
 		AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
-		AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
 		AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
 		AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
@@ -615,6 +615,12 @@
 		AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesTableAdapter.swift; sourceTree = "<group>"; };
 		AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTokensAlert.xib; sourceTree = "<group>"; };
 		AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenAlertViewController.swift; sourceTree = "<group>"; };
+		AC4624BB22B52E0F001D10BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ApplicationLock.strings; sourceTree = "<group>"; };
+		AC4624BC22B52E0F001D10BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Authentication.strings; sourceTree = "<group>"; };
+		AC4624BD22B52E10001D10BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AC4624BE22B52E10001D10BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AC4624CC22B60A9E001D10BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC4624D422B61C99001D10BE /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC46F6BF2225651400BF611A /* HalfColorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfColorLabel.swift; sourceTree = "<group>"; };
 		AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardList.storyboard; sourceTree = "<group>"; };
@@ -655,10 +661,10 @@
 		AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternViewController.swift; sourceTree = "<group>"; };
 		AC8DA7B022B0FFB300B405E2 /* MobileTokenAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTokenAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8DA7B122B0FFB400B405E2 /* MobileToken copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MobileToken copy-Info.plist"; path = "/Users/fatemekazemi/Documents/Projects/porpoise/MobileToken copy-Info.plist"; sourceTree = "<absolute>"; };
-		AC8DA7B622B2194800B405E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/ApplicationLock.storyboard; sourceTree = "<group>"; };
 		AC8DA7B822B2194F00B405E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ApplicationLock.storyboard; sourceTree = "<group>"; };
-		AC8DA7BC22B219CF00B405E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		AC8DA7BE22B219D600B405E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
+		AC98375022B624A400AF6D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
+		AC98375322B624A800AF6D63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthenticationDefinition.strings; sourceTree = "<group>"; };
 		AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankUtil.swift; sourceTree = "<group>"; };
 		ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
@@ -673,14 +679,10 @@
 		ACCAF7AF21DB6BD20057402B /* MyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
 		ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputPresenter.swift; sourceTree = "<group>"; };
 		ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputContractor.swift; sourceTree = "<group>"; };
-		ACDFD8A421A418BC00839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationContractor.swift; sourceTree = "<group>"; };
-		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		ACEC112B222BF87100AF933B /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		AF020850220175E80021856A /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
-		AF02085422017D630021856A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AF2420C7228D2C34003D464E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		AF2420C9228D2C6A003D464E /* ConstantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHelper.swift; sourceTree = "<group>"; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
@@ -1167,7 +1169,7 @@
 		ACAAD85221AC2CAF007266F4 /* authenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
-				AF020850220175E80021856A /* AuthenticationDefinition.storyboard */,
+				AC98375122B624A400AF6D63 /* AuthenticationDefinition.storyboard */,
 			);
 			path = authenticationdefinition;
 			sourceTree = "<group>";
@@ -1514,9 +1516,8 @@
 				AFB39B5B2189A6A700302624 /* Info.plist */,
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
-				AF02085422017D630021856A /* R.generated.swift */,
+				AC4624D422B61C99001D10BE /* R.generated.swift */,
 				AF378010222D3E4B0097306C /* banks.json */,
-				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
 				AF463BC22189D8CF00DC8A3E /* data */,
 				AFE81B372196E10500AA0AF2 /* error */,
@@ -1525,6 +1526,7 @@
 				AF463BC32189D8DF00DC8A3E /* ui */,
 				AFE81B162196D26C00AA0AF2 /* util */,
 				AF463BCA2189E4E900DC8A3E /* view */,
+				AC4624CB22B60A96001D10BE /* Localizable.strings */,
 			);
 			path = MobileToken;
 			sourceTree = "<group>";
@@ -1910,8 +1912,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
+				de,
 			);
 			mainGroup = AFB39B432189A6A600302624;
 			productRefGroup = AFB39B4D2189A6A600302624 /* Products */;
@@ -1935,7 +1938,7 @@
 				AC8DA77A22B0FFB300B405E2 /* LaunchScreen.storyboard in Resources */,
 				AC8DA77B22B0FFB300B405E2 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AC8DA77C22B0FFB300B405E2 /* html_dots.png in Resources */,
-				AC8DA77D22B0FFB300B405E2 /* AuthenticationDefinition.storyboard in Resources */,
+				AC98374F22B624A400AF6D63 /* AuthenticationDefinition.storyboard in Resources */,
 				AC8DA77E22B0FFB300B405E2 /* IRANSansMobile-Light.ttf in Resources */,
 				AC8DA77F22B0FFB300B405E2 /* OtpViewDesignable.xib in Resources */,
 				AC8DA78022B0FFB300B405E2 /* CardList.storyboard in Resources */,
@@ -1957,6 +1960,7 @@
 				AC8DA79022B0FFB300B405E2 /* BankCollectionViewCell.xib in Resources */,
 				AC8DA79122B0FFB300B405E2 /* Tabbar.storyboard in Resources */,
 				AC8DA79222B0FFB300B405E2 /* Settings.storyboard in Resources */,
+				AC4624C922B60A96001D10BE /* Localizable.strings in Resources */,
 				AC8DA79322B0FFB300B405E2 /* BankCardPagerViewCell.xib in Resources */,
 				AC8DA79422B0FFB300B405E2 /* ImportToken.storyboard in Resources */,
 				AC8DA79522B0FFB300B405E2 /* html_copy.png in Resources */,
@@ -1965,7 +1969,6 @@
 				AC8DA79822B0FFB300B405E2 /* Registration.storyboard in Resources */,
 				AC8DA79922B0FFB300B405E2 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
 				AC8DA79A22B0FFB300B405E2 /* AddPasswordViewDesignable.xib in Resources */,
-				AC8DA79B22B0FFB300B405E2 /* Localizable.strings in Resources */,
 				AC8DA79C22B0FFB300B405E2 /* BankView.xib in Resources */,
 				AC8DA79D22B0FFB300B405E2 /* IRANSansMobile-Medium.ttf in Resources */,
 				AC8DA79E22B0FFB300B405E2 /* Main.storyboard in Resources */,
@@ -1988,10 +1991,10 @@
 				AF51CBA3222BF07C003051D7 /* LaunchScreen.storyboard in Resources */,
 				AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */,
-				AF51CBA6222BF07C003051D7 /* AuthenticationDefinition.storyboard in Resources */,
 				AF378012222D3E4C0097306C /* banks.json in Resources */,
 				AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */,
 				AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */,
+				AC98374E22B624A400AF6D63 /* AuthenticationDefinition.storyboard in Resources */,
 				AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */,
 				AF51CBAA222BF07C003051D7 /* Help.storyboard in Resources */,
 				AF51CBAB222BF07C003051D7 /* SupportTableViewCell.xib in Resources */,
@@ -2018,7 +2021,6 @@
 				AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
 				AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */,
 				AC54F39022991F7A0012BBBA /* BankView.xib in Resources */,
-				AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */,
 				AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */,
 				AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */,
 				AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */,
@@ -2026,6 +2028,7 @@
 				AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */,
 				AC8DA7BA22B219CF00B405E2 /* Authentication.storyboard in Resources */,
 				AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */,
+				AC4624C822B60A96001D10BE /* Localizable.strings in Resources */,
 				AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */,
 				AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
@@ -2040,7 +2043,7 @@
 				AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */,
 				AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
 				AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */,
-				AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */,
+				AC98374D22B624A300AF6D63 /* AuthenticationDefinition.storyboard in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
 				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
 				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
@@ -2062,6 +2065,7 @@
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
 				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
 				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
+				AC4624C722B60A96001D10BE /* Localizable.strings in Resources */,
 				AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */,
 				AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */,
 				AC57D76E21FDD12F00DFDD33 /* html_copy.png in Resources */,
@@ -2070,7 +2074,6 @@
 				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
 				AC353B1021BFA1CF00B80412 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
 				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
-				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
 				AC54F38F22991F7A0012BBBA /* BankView.xib in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
@@ -2539,7 +2542,6 @@
 				AC8DA6FC22B0FFB300B405E2 /* UnsupportedOperationException.swift in Sources */,
 				AC8DA6FD22B0FFB300B405E2 /* HalfColorLabel.swift in Sources */,
 				AC8DA6FE22B0FFB300B405E2 /* AuthenticationRepositoryProtocol.swift in Sources */,
-				AC8DA6FF22B0FFB300B405E2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
 				AC8DA70022B0FFB300B405E2 /* BankUtil.swift in Sources */,
 				AC8DA70122B0FFB300B405E2 /* SupportViewController.swift in Sources */,
 				AC8DA70222B0FFB300B405E2 /* AuthenticationDefinitionViewController.swift in Sources */,
@@ -2562,6 +2564,8 @@
 				AC8DA71322B0FFB300B405E2 /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
 				AC8DA71422B0FFB300B405E2 /* Base64urlEncoded.swift in Sources */,
 				AC8DA71522B0FFB300B405E2 /* CardListContractor.swift in Sources */,
+				AC8DA7BF22B22AB300B405E2 /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
+				ACE1BBE922B61D6C00FBC179 /* R.generated.swift in Sources */,
 				AC8DA71622B0FFB300B405E2 /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AC8DA71722B0FFB300B405E2 /* AuthenticationRealmRepository.swift in Sources */,
 				AC8DA71822B0FFB300B405E2 /* PasswordValidator.swift in Sources */,
@@ -2646,7 +2650,6 @@
 				AC8DA76722B0FFB300B405E2 /* Card.swift in Sources */,
 				AC8DA76822B0FFB300B405E2 /* AppDelegate.swift in Sources */,
 				AC8DA76922B0FFB300B405E2 /* SettingRepository.swift in Sources */,
-				AC8DA76A22B0FFB300B405E2 /* R.generated.swift in Sources */,
 				AC8DA76B22B0FFB300B405E2 /* HelpTableViewAdapter.swift in Sources */,
 				AC8DA76C22B0FFB300B405E2 /* HelpViewController.swift in Sources */,
 				AC8DA76D22B0FFB300B405E2 /* PhoneConfirmationContractor.swift in Sources */,
@@ -2668,6 +2671,7 @@
 			files = (
 				AF51CB25222BF07C003051D7 /* User.swift in Sources */,
 				AF51CB26222BF07C003051D7 /* ActionSheetController.swift in Sources */,
+				ACE1BBE822B61D6B00FBC179 /* R.generated.swift in Sources */,
 				AF51CB27222BF07C003051D7 /* UnsupportedOperationException.swift in Sources */,
 				AF51CB28222BF07C003051D7 /* HalfColorLabel.swift in Sources */,
 				AF51CB29222BF07C003051D7 /* AuthenticationRepositoryProtocol.swift in Sources */,
@@ -2778,7 +2782,6 @@
 				AF51CB90222BF07C003051D7 /* Card.swift in Sources */,
 				AF51CB91222BF07C003051D7 /* AppDelegate.swift in Sources */,
 				AF51CB92222BF07C003051D7 /* SettingRepository.swift in Sources */,
-				AF51CB93222BF07C003051D7 /* R.generated.swift in Sources */,
 				AF51CB94222BF07C003051D7 /* HelpTableViewAdapter.swift in Sources */,
 				AF51CB95222BF07C003051D7 /* HelpViewController.swift in Sources */,
 				AF51CB96222BF07C003051D7 /* PhoneConfirmationContractor.swift in Sources */,
@@ -2827,6 +2830,7 @@
 				AC16D73421CA734A0094FBED /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
 				AFBFE16F21F457F300FDAE4A /* Base64urlEncoded.swift in Sources */,
 				AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */,
+				ACE1BBE722B61D6A00FBC179 /* R.generated.swift in Sources */,
 				AC16D71E21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
@@ -2911,7 +2915,6 @@
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 				AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */,
-				AF02085522017D630021856A /* R.generated.swift in Sources */,
 				AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */,
 				AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */,
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
@@ -2959,11 +2962,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AC4624CB22B60A96001D10BE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4624CC22B60A9E001D10BE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AC8DA7B722B2194800B405E2 /* ApplicationLock.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AC8DA7B622B2194800B405E2 /* en */,
 				AC8DA7B822B2194F00B405E2 /* Base */,
+				AC4624BB22B52E0F001D10BE /* en */,
 			);
 			name = ApplicationLock.storyboard;
 			sourceTree = "<group>";
@@ -2971,25 +2982,26 @@
 		AC8DA7BD22B219CF00B405E2 /* Authentication.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AC8DA7BC22B219CF00B405E2 /* en */,
 				AC8DA7BE22B219D600B405E2 /* Base */,
+				AC4624BC22B52E0F001D10BE /* en */,
 			);
 			name = Authentication.storyboard;
 			sourceTree = "<group>";
 		};
-		ACDFD8A521A418BC00839F97 /* Localizable.strings */ = {
+		AC98375122B624A400AF6D63 /* AuthenticationDefinition.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ACDFD8A421A418BC00839F97 /* en */,
+				AC98375022B624A400AF6D63 /* Base */,
+				AC98375322B624A800AF6D63 /* en */,
 			);
-			name = Localizable.strings;
+			name = AuthenticationDefinition.storyboard;
 			sourceTree = "<group>";
 		};
 		AFB39B532189A6A600302624 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AFB39B542189A6A600302624 /* Base */,
-				ACDFD8AD21A96F4600839F97 /* en */,
+				AC4624BE22B52E10001D10BE /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2998,6 +3010,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AFB39B592189A6A700302624 /* Base */,
+				AC4624BD22B52E10001D10BE /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

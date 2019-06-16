@@ -1,5 +1,5 @@
-"country" = "country";
-"backBarItem" = "back";
+"country" = "Country";
+"backBarItem" = "Back";
 "next" = "Next";
 "skip" = "Skip";
 "lb_enter_program" = "Enter program";
@@ -9,8 +9,6 @@
 // snackbar
 "sb_wrong_password" = "Wrong Pattern";
 "sb_wrong_pattern" = "Wrong Password";
-"sb_passwords_not_match" = "Passwords not match";
-"sb_patterns_not_match" = "Patterns not match";
 "sb_try_for_second_time" = "Try Again";
 "sb_not_match" = "Not match";
 "sb_pattern_min_point_error" = "Connect 4 points at least";
@@ -40,8 +38,7 @@
 "sb_token_deleted_unsuccessfully" = "Token deleted unsuccessfully";
 "sb_get_token_fail" = "Get token failed";
 "sb_network_error" = "Network Error";
-"sb_select_bank_error" = "Select an organization";
-
+"sb_select_bank" = "Select an organization";
 
 //passWordHint
 "enter_at_least_eight_characters" = "The password must contain at least 8 characters";
@@ -114,7 +111,7 @@
 "help_get_token" = "How could I activate both tokens?";
 "help_add_token" = "I get one of card's token, How could I get another one?";
 "help_change_token" = "How often token change?";
-"help_custom_token" = "Could I change token myself?";
+"help_custom_token" = "Could I change token myself?";"
 "help_copy_token" = "Could I copy tokens?";
 "help_delete_token" = "How could I delete tokens?";
 "help_edit_phone" = "How could I change my phone number?";

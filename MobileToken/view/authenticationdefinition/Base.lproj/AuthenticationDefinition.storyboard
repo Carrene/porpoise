@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--روش احراز هویت-->
+        <!--Authentication type-->
         <scene sceneID="fq7-dM-L3c">
             <objects>
                 <viewController storyboardIdentifier="AuthenticationDefinitionViewController" id="88r-3K-z0N" customClass="AuthenticationDefinitionViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,8 +33,8 @@
                                     <constraint firstAttribute="height" constant="40" id="x2S-7u-Bwb"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="الگو"/>
-                                    <segment title="رمز"/>
+                                    <segment title="Pattern"/>
+                                    <segment title="Password"/>
                                 </segments>
                                 <color key="tintColor" name="secondary"/>
                                 <connections>
@@ -59,7 +59,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ytF-C4-ckT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="روش احراز هویت" id="eiM-J4-X6A">
+                    <navigationItem key="navigationItem" title="Authentication type" id="eiM-J4-X6A">
                         <barButtonItem key="backBarButtonItem" title="  " id="ULQ-dM-OJz">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
