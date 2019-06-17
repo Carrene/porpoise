@@ -53,7 +53,7 @@ class OtpViewDesignable: UIView {
         btCopy.layer.masksToBounds = true
         btCopy.layer.cornerRadius = 5
         vProgress.progressViewStyle = .bar
-        lbOtp.font = R.font.iranSansMobileFaNum(size: 22)
+        lbOtp.font = R.font.iranSansMobile(size: 22)
         lbOtp.textColor = .red
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.initCopy))
         contentView.addGestureRecognizer(tap)

@@ -49,7 +49,7 @@ class BankViewXib: UIView {
         vComponent.layer.cornerRadius = 5
         vComponent.layer.borderColor = R.color.secondary()!.cgColor
         vComponent.layer.borderWidth = 2
-        labelBank.font = R.font.iranSansMobileFaNum(size: 22)
+        labelBank.font = R.font.iranSansMobile(size: 22)
     }
 
 }
