@@ -78,6 +78,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         textViewAtmCode.layer.borderWidth = 2
         textViewAtmCode.layer.borderColor = R.color.buttonColor()!.cgColor
         textViewAtmCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
+        
         labelAtmCode.font = R.font.iranSansMobile(size: 12)
         labelSmsCode.font = R.font.iranSansMobile(size: 12)
         labelAtmCounter.font = R.font.iranSansMobile(size: 12)
@@ -118,7 +119,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text.contains("کد") {
+        if textView.text == R.string.localizable.ph_sms_code() ||  textView.text == R.string.localizable.ph_atm_code() {
             textView.text = nil
         }
         textView.layer.borderColor = R.color.secondary()?.cgColor

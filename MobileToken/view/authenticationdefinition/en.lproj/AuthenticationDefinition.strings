@@ -9,10 +9,10 @@
 "G0v-Up-gtc.placeholder" = "password";
 
 /* Class = "UISegmentedControl"; Hmm-D3-AaW.segmentTitles[0] = "الگو"; ObjectID = "Hmm-D3-AaW"; */
-"Hmm-D3-AaW.segmentTitles[0]" = "الگو";
+"Hmm-D3-AaW.segmentTitles[0]" = "Pattern";
 
 /* Class = "UISegmentedControl"; Hmm-D3-AaW.segmentTitles[1] = "رمز"; ObjectID = "Hmm-D3-AaW"; */
-"Hmm-D3-AaW.segmentTitles[1]" = "رمز";
+"Hmm-D3-AaW.segmentTitles[1]" = "Password";
 
 /* Class = "UIBarButtonItem"; title = "  "; ObjectID = "ULQ-dM-OJz"; */
 "ULQ-dM-OJz.title" = "  ";
@@ -21,4 +21,4 @@
 "Y6w-Si-ccv.text" = "enter password again";
 
 /* Class = "UINavigationItem"; title = "روش احراز هویت"; ObjectID = "eiM-J4-X6A"; */
-"eiM-J4-X6A.title" = "روش احراز هویت";
+"eiM-J4-X6A.title" = "Authentication Method";

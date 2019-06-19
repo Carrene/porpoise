@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -40,30 +40,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-s9-Qjj">
                                         <rect key="frame" x="15" y="19.5" width="315" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
+                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="40"/>
                                                 <color key="backgroundColor" name="primaryLight"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                                <state key="normal" title="120">
+                                                <state key="normal" title="30">
                                                     <color key="titleColor" name="buttonColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
-                                                <rect key="frame" x="84" y="0.0" width="63" height="40"/>
-                                                <color key="backgroundColor" name="primaryLight"/>
-                                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                                <state key="normal" title="90">
-                                                    <color key="titleColor" name="buttonColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-2Q-Nbb">
-                                                <rect key="frame" x="168" y="0.0" width="63" height="40"/>
+                                                <rect key="frame" x="84" y="0.0" width="63" height="40"/>
                                                 <color key="backgroundColor" name="primaryLight"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                                 <state key="normal" title="60">
@@ -73,15 +62,26 @@
                                                     <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7S-04-Ix0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-oZ-w8D">
-                                                <rect key="frame" x="252" y="0.0" width="63" height="40"/>
+                                            <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-en-ngd">
+                                                <rect key="frame" x="168" y="0.0" width="63" height="40"/>
                                                 <color key="backgroundColor" name="primaryLight"/>
                                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
-                                                <state key="normal" title="30">
+                                                <state key="normal" title="90">
                                                     <color key="titleColor" name="buttonColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eoZ-pa-5QN"/>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BMJ-FT-FnP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-U2-y2B">
+                                                <rect key="frame" x="252" y="0.0" width="63" height="40"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                                <state key="normal" title="120">
+                                                    <color key="titleColor" name="buttonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zf-di-NcH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -102,39 +102,39 @@
                                     <constraint firstItem="Hfh-s9-Qjj" firstAttribute="centerX" secondItem="xIl-pG-zsS" secondAttribute="centerX" id="zrF-OO-WgC"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-RC-JwO" userLabel="labelSeconds">
-                                <rect key="frame" x="30" y="18" width="65.5" height="25.5"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
-                                <color key="textColor" name="buttonColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock screen timeout" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9y-F9-3pr" userLabel="labelTitle">
-                                <rect key="frame" x="172" y="18" width="158" height="25.5"/>
+                                <rect key="frame" x="45" y="18" width="158" height="25.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-iF-yCq" userLabel="imageTimer">
-                                <rect key="frame" x="340" y="18" width="20" height="20"/>
+                                <rect key="frame" x="15" y="18" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="eqR-jL-Q8c"/>
                                     <constraint firstAttribute="width" constant="20" id="wog-rA-rmZ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-RC-JwO" userLabel="labelSeconds">
+                                <rect key="frame" x="279.5" y="18" width="65.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="xIl-pG-zsS" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="56" id="2JN-T8-YNk"/>
                             <constraint firstItem="jBa-RC-JwO" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="18" id="2T7-T5-Qu2"/>
-                            <constraint firstAttribute="right" secondItem="xIl-pG-zsS" secondAttribute="right" constant="15" id="BRx-Tn-LFm"/>
+                            <constraint firstItem="xIl-pG-zsS" firstAttribute="leading" secondItem="6ET-8m-5lP" secondAttribute="leading" constant="15" id="4bU-fe-Snv"/>
                             <constraint firstItem="j9y-F9-3pr" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="18" id="BtL-dy-it7"/>
-                            <constraint firstItem="lNM-iF-yCq" firstAttribute="left" secondItem="j9y-F9-3pr" secondAttribute="right" constant="10" id="LkQ-Wq-T8t"/>
-                            <constraint firstItem="jBa-RC-JwO" firstAttribute="left" secondItem="6ET-8m-5lP" secondAttribute="left" constant="30" id="QU5-mN-pyw"/>
                             <constraint firstItem="xIl-pG-zsS" firstAttribute="centerX" secondItem="6ET-8m-5lP" secondAttribute="centerX" id="TXQ-Xe-Lf0"/>
-                            <constraint firstItem="xIl-pG-zsS" firstAttribute="left" secondItem="6ET-8m-5lP" secondAttribute="left" constant="15" id="cmD-UY-4h5"/>
+                            <constraint firstItem="j9y-F9-3pr" firstAttribute="leading" secondItem="lNM-iF-yCq" secondAttribute="trailing" constant="10" id="U2H-ql-z2J"/>
+                            <constraint firstAttribute="trailing" secondItem="jBa-RC-JwO" secondAttribute="trailing" constant="30" id="as3-pi-f0S"/>
+                            <constraint firstItem="lNM-iF-yCq" firstAttribute="leading" secondItem="6ET-8m-5lP" secondAttribute="leading" constant="15" id="hdT-m3-wO4"/>
                             <constraint firstItem="lNM-iF-yCq" firstAttribute="top" secondItem="6ET-8m-5lP" secondAttribute="top" constant="18" id="kmV-bt-vFZ"/>
-                            <constraint firstAttribute="right" secondItem="lNM-iF-yCq" secondAttribute="right" constant="15" id="rSK-3M-dd3"/>
                             <constraint firstAttribute="bottom" secondItem="xIl-pG-zsS" secondAttribute="bottom" constant="15" id="sml-nC-wrN"/>
+                            <constraint firstAttribute="trailing" secondItem="xIl-pG-zsS" secondAttribute="trailing" constant="15" id="xdW-cs-LYM"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -156,6 +156,7 @@
                 <outletCollection property="collectionButtonsTime" destination="7H9-en-ngd" collectionClass="NSMutableArray" id="fmM-1b-WEq"/>
                 <outletCollection property="collectionButtonsTime" destination="QQ1-U2-y2B" collectionClass="NSMutableArray" id="mTH-rc-WcW"/>
             </connections>
+            <point key="canvasLocation" x="47.8125" y="65"/>
         </tableViewCell>
     </objects>
     <resources>

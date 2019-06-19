@@ -69,8 +69,8 @@
 "lb_add_second_otp" = "Add second token";
 
 //placeholder
-"ph_sms_code" = "message code";
-"ph_atm_code" = "device code";
+"ph_sms_code" = "code recieved through device";
+"ph_atm_code" = "Code recieved through message";
 "ph_password" = "Password";
 "ph_confirm_password" = "Confirm password";
 

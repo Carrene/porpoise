@@ -110,9 +110,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
         self.card = card
         
         if let cardNumber = UIHelper.getMaskCardNumber(number: card.number!){
-            let reversCards = Array(cardNumber.reversed())
-            for i in 0 ..< reversCards.count {
-                vCard.labelCardNumber[i].text = reversCards[i]
+            for i in 0 ..< cardNumber.count {
+                vCard.labelCardNumber[i].text = cardNumber[i]
             }
         }
         

@@ -102,7 +102,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         countryPickerView.setCountryByPhoneCode("+49")
         let index = countryPickerView.countries.index(where: { (item) -> Bool in
             item.phoneCode == "+98" })!
-        countryPickerView.countries[index].name = "Germany"
+        countryPickerView.countries[index].name = "Iran"
         
     }
     

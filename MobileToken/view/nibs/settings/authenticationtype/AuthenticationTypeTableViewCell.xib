@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,61 +17,62 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseAuthenticationTypeSettingRow" id="KGk-i7-Jjw" customClass="AuthenticationTypeSettingTableViewCell" customModule="MobileToken" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseAuthenticationTypeSettingRow" id="KGk-i7-Jjw" customClass="AuthenticationTypeSettingTableViewCell" customModule="MobileToken" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="55.666666666666664"/>
+                <rect key="frame" x="0.0" y="0.0" width="337" height="55.666666666666664"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFT-nP-W5v" userLabel="viewCell">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="55.666666666666664"/>
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="55.666666666666664"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-aV-gt8" userLabel="labelType">
-                                <rect key="frame" x="30" y="28" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
-                                <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw8-dp-cRT" userLabel="labelTitle">
-                                <rect key="frame" x="179" y="15" width="151" height="26"/>
+                                <rect key="frame" x="47" y="15" width="151" height="26"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-reset" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-sn-6jc" userLabel="imageTimer">
-                                <rect key="frame" x="340" y="18" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="6WB-af-n6e"/>
-                                    <constraint firstAttribute="height" constant="20" id="I5s-mo-RXL"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="DUg-sn-6jc" firstAttribute="left" secondItem="Xw8-dp-cRT" secondAttribute="right" constant="10" id="3dR-LZ-Qwv"/>
-                            <constraint firstItem="DUg-sn-6jc" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="5dN-tU-va5"/>
-                            <constraint firstItem="gtq-aV-gt8" firstAttribute="left" secondItem="xFT-nP-W5v" secondAttribute="left" constant="30" id="EqE-pg-0jt"/>
-                            <constraint firstItem="gtq-aV-gt8" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="bgO-ga-t0d"/>
                             <constraint firstItem="Xw8-dp-cRT" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="jLa-ki-ErD"/>
-                            <constraint firstAttribute="right" secondItem="DUg-sn-6jc" secondAttribute="right" constant="15" id="o4i-2j-KmT"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-reset" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-sn-6jc" userLabel="imageTimer">
+                        <rect key="frame" x="17" y="18" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="6WB-af-n6e"/>
+                            <constraint firstAttribute="height" constant="20" id="I5s-mo-RXL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-rY-Hus" userLabel="labelType">
+                        <rect key="frame" x="280" y="17.333333333333332" width="42" height="20.999999999999996"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" name="primary"/>
                 <constraints>
+                    <constraint firstItem="b6J-rY-Hus" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="Aig-RD-OoD"/>
                     <constraint firstItem="xFT-nP-W5v" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BFW-fF-jVr"/>
+                    <constraint firstItem="DUg-sn-6jc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GLE-x7-bxC"/>
                     <constraint firstItem="xFT-nP-W5v" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QsZ-Np-Mjt"/>
+                    <constraint firstItem="DUg-sn-6jc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="YBQ-sI-hdL"/>
                     <constraint firstItem="xFT-nP-W5v" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="bWZ-h7-L7y"/>
                     <constraint firstItem="xFT-nP-W5v" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="eUR-vp-L8g"/>
+                    <constraint firstItem="Xw8-dp-cRT" firstAttribute="leading" secondItem="DUg-sn-6jc" secondAttribute="trailing" constant="10" id="gf2-i1-Dqt"/>
+                    <constraint firstItem="b6J-rY-Hus" firstAttribute="trailing" secondItem="xFT-nP-W5v" secondAttribute="trailing" constant="-15" id="p1e-sF-MbB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageIcon" destination="DUg-sn-6jc" id="qba-iO-Okr"/>
                 <outlet property="labelTitle" destination="Xw8-dp-cRT" id="kQJ-WI-qIr"/>
-                <outlet property="labelType" destination="gtq-aV-gt8" id="Gna-Ul-jQr"/>
+                <outlet property="labelType" destination="b6J-rY-Hus" id="va6-eK-wIf"/>
             </connections>
+            <point key="canvasLocation" x="131.15942028985509" y="143.47826086956522"/>
         </tableViewCell>
     </objects>
     <resources>
