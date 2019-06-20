@@ -1,13 +1,10 @@
 import UIKit
 
 class HelpTableViewCell: UITableViewCell {
-
+    @IBOutlet var labelQuestion: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.textLabel?.numberOfLines = 0
-        self.textLabel?.textAlignment = .right
-        self.textLabel?.font = R.font.iranSansMobile(size: 16)
-        self.textLabel?.textColor = R.color.buttonColor()
+        labelQuestion.font = UIHelper.getFont(size: 16)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

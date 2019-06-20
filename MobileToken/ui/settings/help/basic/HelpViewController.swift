@@ -2,6 +2,7 @@ import UIKit
 
 class HelpViewController: BaseViewController,HelpTableAdapterProtocol {
     
+    
     @IBOutlet var tableView: UITableView!
     private var adapter : HelpTableViewAdapter?
     private var index : Int?

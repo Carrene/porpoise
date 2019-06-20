@@ -64,7 +64,7 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         labelPhone.text = phoneNumber
         labelChangeNumber.isUserInteractionEnabled = true
         labelEnterCode.font = R.font.iranSansMobile(size: 12)
-        textFieldCode.attributedPlaceholder = NSAttributedString(string: "کد فعال سازی",
+        textFieldCode.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_activation_code(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
 //        initBankNib(bank:self.selectedBank!)
     }

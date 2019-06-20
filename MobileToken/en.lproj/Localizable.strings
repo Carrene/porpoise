@@ -73,6 +73,7 @@
 "ph_atm_code" = "Code recieved through message";
 "ph_password" = "Password";
 "ph_confirm_password" = "Confirm password";
+"ph_activation_code" = "Activation Code";
 
 //actionsheet
 "ash_edit_card_name" = "edit card name";
