@@ -222,7 +222,6 @@
 		AC8DA77422B0FFB300B405E2 /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
 		AC8DA77522B0FFB300B405E2 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
 		AC8DA77622B0FFB300B405E2 /* SettingAuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */; };
-		AC8DA77822B0FFB300B405E2 /* Pods_Common_MobileToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41998B353D8DAEC1D5AC0105 /* Pods_Common_MobileToken.framework */; };
 		AC8DA77A22B0FFB300B405E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
 		AC8DA77B22B0FFB300B405E2 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AC8DA77C22B0FFB300B405E2 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
@@ -785,7 +784,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC8DA77822B0FFB300B405E2 /* Pods_Common_MobileToken.framework in Frameworks */,
 				2133A1D2CC2EEBA984D7964D /* Pods_Common_MobileTokenAppStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2249,7 +2247,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2378,7 +2376,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2449,7 +2447,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
