@@ -15,12 +15,12 @@ class UserRestRepository: UserRepositoryProtocol {
         let url = urlComponents.url!
         
         let parameters: [String: Any?] =
-        [
-            "udid": user.udid,
-            "phone": user.phone,
-            "name": user.deviceName,
-            "activationCode": user.activationCode,
-            "bankId" : user.bank?.id
+            [
+                "udid": user.udid,
+                "phone": user.phone,
+                "name": user.deviceName,
+                "activationCode": user.activationCode,
+                "bankId" : user.bank?.id
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)
         var request = URLRequest(url: url)
@@ -43,13 +43,13 @@ class UserRestRepository: UserRepositoryProtocol {
     func claim(user: User, onDone: ((RepositoryResponse<User>) -> ())?) {
         let urlComponents = ApiHelper.newUrlComponentsInstance()
         urlComponents.path = "\(urlComponents.path ?? "")/\(ApiHelper.CLAIM_PATH)"
-
+        
         let url = urlComponents.url!
         let parameters: [String: Any?] =
-        [
-            "phone": user.phone,
-            "udid": user.udid,
-            "bankId" : user.bank?.id
+            [
+                "phone": user.phone,
+                "udid": user.udid,
+                "bankId" : user.bank?.id
         ]
         let json = try! JSONSerialization.data(withJSONObject: parameters)
         var request = URLRequest(url: url)

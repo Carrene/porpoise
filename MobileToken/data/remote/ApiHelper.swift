@@ -51,9 +51,9 @@ class ApiHelper {
                     }
 
                     let fingerPrints = [
-                        "5C58468D55F58E497E743982D2B50010B6D165374ACF83A7D4A32DB768C4408E".lowercased(),
+                        "9B2801E488DF6C74136D183340CD5B040CFB406665A9DA6B6F8A1A4F83A4AEF4".lowercased(),
                         "129FB5DE501E24041CD14A81075FD1CDE257408D4A353E636912E38BDDA2D3FB".lowercased(),
-                        "31E164412F51F75D6E97A5D5FF4E7E14CE2B470479D7A0986451C6B12BB9D4B7".lowercased()
+                        "5C58468D55F58E497E743982D2B50010B6D165374ACF83A7D4A32DB768C4408E".lowercased()
                     ]
 
                     for index in 0..<SecTrustGetCertificateCount(serverTrust) {

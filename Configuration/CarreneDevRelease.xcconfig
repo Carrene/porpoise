@@ -1,13 +1,13 @@
 #include "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releasecarrenedev.xcconfig"
 
-URL_ENDPOINT=192.168.222.40
+URL_ENDPOINT=agama.carrene.com
 
-URL_PORT=81
+URL_PORT=443
 
-URL_SCHEME=http
+URL_SCHEME=https
 
-INITIAL_TOKEN=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU1NTE1MjgwOCwiZXhwIjoxNTg2Njg4ODA4fQ.e30.B57qgqMYn3KLNtObtw1S3qzClXMn2sm_2qeosf110xQ
-SELF_SIGNED = YES
+INITIAL_TOKEN=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU2MjIyNjMyMiwiZXhwIjoxODE0NTE0MzIyfQ.e30.QFCsgzs-Rkzd4EJz9mWC5KDUIL5o78Fx7jbcyAsHoL8
+SELF_SIGNED = NO
 
 VERSION=1
 
