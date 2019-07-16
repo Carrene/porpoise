@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="88r-3K-z0N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="88r-3K-z0N">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +12,9 @@
     <customFonts key="customFonts">
         <array key="IRANSansMobile(FaNum).ttf">
             <string>IRANSansMobileFaNum</string>
+        </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
         </array>
         <array key="IranSansReqular.ttf">
             <string>IranianSans</string>
@@ -26,8 +29,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="راز اپلیکیشن تولید رمز یکبارمصرف" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZQ-lY-Jo5">
+                                <rect key="frame" x="10" y="40" width="300" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-D3-AaW">
-                                <rect key="frame" x="30" y="40" width="260" height="41"/>
+                                <rect key="frame" x="30" y="87" width="260" height="41"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="x2S-7u-Bwb"/>
@@ -42,20 +51,23 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMi-2b-OMT">
-                                <rect key="frame" x="0.0" y="100" width="320" height="380"/>
+                                <rect key="frame" x="0.0" y="147" width="320" height="333"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <color key="tintColor" name="buttonColor"/>
                         <constraints>
                             <constraint firstItem="Hmm-D3-AaW" firstAttribute="centerX" secondItem="ytF-C4-ckT" secondAttribute="centerX" id="1Sk-N9-OYd"/>
+                            <constraint firstItem="ytF-C4-ckT" firstAttribute="top" secondItem="8ZQ-lY-Jo5" secondAttribute="top" constant="-20" id="1jd-aZ-Rig"/>
+                            <constraint firstItem="Hmm-D3-AaW" firstAttribute="top" secondItem="8ZQ-lY-Jo5" secondAttribute="bottom" constant="20" id="43L-IZ-eCu"/>
+                            <constraint firstItem="8ZQ-lY-Jo5" firstAttribute="leading" secondItem="ytF-C4-ckT" secondAttribute="leading" constant="10" id="Jy9-El-0ra"/>
                             <constraint firstItem="Hmm-D3-AaW" firstAttribute="leading" secondItem="ytF-C4-ckT" secondAttribute="leading" constant="30" id="Jzv-Do-pgd"/>
-                            <constraint firstItem="Hmm-D3-AaW" firstAttribute="top" secondItem="ytF-C4-ckT" secondAttribute="top" constant="20" id="L3c-jQ-Iae"/>
                             <constraint firstItem="ytF-C4-ckT" firstAttribute="trailing" secondItem="Hmm-D3-AaW" secondAttribute="trailing" constant="30" id="Qkn-cN-dmF"/>
                             <constraint firstItem="kMi-2b-OMT" firstAttribute="leading" secondItem="ytF-C4-ckT" secondAttribute="leading" id="XaM-uQ-Fbv"/>
                             <constraint firstItem="kMi-2b-OMT" firstAttribute="top" secondItem="Hmm-D3-AaW" secondAttribute="bottom" constant="20" id="ge0-Ev-AWh"/>
                             <constraint firstItem="ytF-C4-ckT" firstAttribute="trailing" secondItem="kMi-2b-OMT" secondAttribute="trailing" id="hsA-a3-d3z"/>
                             <constraint firstItem="ytF-C4-ckT" firstAttribute="bottom" secondItem="kMi-2b-OMT" secondAttribute="bottom" id="kIM-LA-wXG"/>
+                            <constraint firstItem="ytF-C4-ckT" firstAttribute="trailing" secondItem="8ZQ-lY-Jo5" secondAttribute="trailing" constant="10" id="qvb-bP-cRN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ytF-C4-ckT"/>
                     </view>
@@ -66,6 +78,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="authenticationTypeContainer" destination="kMi-2b-OMT" id="mDC-eB-ddZ"/>
+                        <outlet property="labelAppDescription" destination="8ZQ-lY-Jo5" id="UCf-5I-MXV"/>
                         <outlet property="scAuthenticationType" destination="Hmm-D3-AaW" id="zXt-Kb-DPs"/>
                         <segue destination="kfU-nB-LY7" kind="showDetail" identifier="AuthenticationDefinitionToTabbar" id="DHe-5P-Wbd"/>
                     </connections>
@@ -83,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="تکرار رمز" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6K0-Ct-2n1" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="30" y="160.5" width="260" height="40"/>
+                                <rect key="frame" x="30" y="150" width="260" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
@@ -112,13 +125,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B1-GI-j54" userLabel="labelPasswordHint">
-                                <rect key="frame" x="30" y="92" width="260" height="38.5"/>
+                                <rect key="frame" x="30" y="92" width="260" height="28"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز را دوباره وارد کنید." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6w-Si-ccv" userLabel="labelSecondPassword">
-                                <rect key="frame" x="186" y="202.5" width="104" height="19.5"/>
+                                <rect key="frame" x="194" y="192" width="96" height="14"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

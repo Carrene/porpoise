@@ -63,6 +63,7 @@
 "lb_add_new_bank" = "افزودن بانک جدید";
 "lb_add_first_otp" = "افزودن رمز اول";
 "lb_add_second_otp" = "افزودن رمز دوم";
+"lb_raaz_description" = "راز اپلیکیشن تولید رمز یکبارمصرف";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
