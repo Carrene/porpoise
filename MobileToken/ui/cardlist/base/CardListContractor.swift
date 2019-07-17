@@ -8,6 +8,8 @@ protocol CardListViewProtocol: class {
     func addCard(card: Card)
     func deleteCard(card: Card)
     func deleteToken(tokens: [Token])
+    func bankRemoved(bank: Bank)
+    func deletionError(message: String)
 }
 
 protocol CardListPresenterProtocol {
@@ -16,5 +18,6 @@ protocol CardListPresenterProtocol {
     func editCard(card: Card)
     func deleteCard(card: Card)
     func deleteToken(tokens: [Token])
+    func deleteBank(bank: Bank)
 }
 

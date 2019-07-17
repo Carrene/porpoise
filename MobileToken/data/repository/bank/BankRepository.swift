@@ -3,9 +3,7 @@ import Foundation
 class BankRepository: BankRepositoryProtocol {
     let bankRealmRepository = BankRealmRepository()
     
-    func get(card: Card, onDone: ((RepositoryResponse<Bank>) -> ())?) {
-        
-    }
+    
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Bank>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
@@ -23,4 +21,9 @@ class BankRepository: BankRepositoryProtocol {
             onDone?(realmRepositoryResponse)
         }
     }
+    
+    func delete(bank: Bank, onDone: ((RepositoryResponse<Bank>) -> ())?) {
+        bankRealmRepository.delete(bank: bank, onDone: onDone)
+    }
+   
 }

@@ -26,6 +26,8 @@ class Bank: Object, Mappable, NSCopying{
     
     let CardList = List<Card>()
     
+    let owner = LinkingObjects(fromType: User.self, property: "UserBank")
+    
     override static func ignoredProperties() -> [String] {
         return [ "phone"]
     }

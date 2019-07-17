@@ -4,7 +4,7 @@ import FSPagerView
 import PopupDialog
 
 class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerViewDelegate, ImportToeknDelegate {
-
+    
     
     @IBOutlet weak var vScroll: UIScrollView!
     @IBOutlet var labelFirstRegister: UILabel!
@@ -53,7 +53,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func selectedCard(card: Card) {
-//        self.selectedCard = card
+        //        self.selectedCard = card
     }
     
     func updateCardList(card: Card) {
@@ -93,6 +93,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func deleteToken(tokens: [Token]) {
+        SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.snackbarColor()!, duration: .middle).show()
         for token in tokens {
             for i in 0 ..< banks!.count {
                 let cards = banks![i].CardList
@@ -101,15 +102,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                     for bankToken in tokenList {
                         if let index = tokenList.index(of: bankToken) {
                             if token.id == bankToken.id {
-                            banks![i].CardList[j].TokenList.remove(at: index)
-                            
-                            //                        if token.id == bankToken.id {
-                            //                            let index =
-                            //                            banks![i].cardList[j].TokenList.remove()
-                            //                        }
-                            fsPagerCollectionView[i].reloadData()
-                            fsPagerCollectionView[i].layoutIfNeeded()
-                            fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
+                                banks![i].CardList[j].TokenList.remove(at: index)
+                                fsPagerCollectionView[i].reloadData()
+                                fsPagerCollectionView[i].layoutIfNeeded()
+                                fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
                             }
                         }
                     }
@@ -125,12 +121,18 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let editCardAction = Action(ActionData(title: R.string.localizable.ash_edit_card_name(), image: R.image.cardEdit()!), style: .default, handler: { action in self.editCardAlert(card: card)})
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
         var deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
+        
+        let deleteBankAction = Action(ActionData(title: "حذف بانک", image:R.image.passDelete()! ), style: .default) { action in
+            let bank = self.banks?.filter({$0.CardList.contains(card)}).first
+            self.cardListPresenter?.deleteBank(bank: bank!)
+        }
         if card.TokenList.count == 0 {
             deleteTokenAction.enabled = false
         }
         actionController.addAction(editCardAction)
         actionController.addAction(deleteCardAction)
         actionController.addAction(deleteTokenAction)
+        actionController.addAction(deleteBankAction)
         return actionController
     }
     
@@ -144,10 +146,10 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let deleteTokensVC = DeleteTokenAlertViewController(nib: R.nib.deleteTokensAlert)
         
         let deleteTokensAlert = PopupDialog(viewController: deleteTokensVC,
-                                        buttonAlignment: .horizontal,
-                                        transitionStyle: .zoomIn,
-                                        tapGestureDismissal: true,
-                                        panGestureDismissal: false)
+                                            buttonAlignment: .horizontal,
+                                            transitionStyle: .zoomIn,
+                                            tapGestureDismissal: true,
+                                            panGestureDismissal: false)
         deleteTokensVC.setTokenList(card:card)
         deleteTokensAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
@@ -205,11 +207,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let editCardNameVC = EditCardNameAlertViewController(nibName: R.nib.editCardNameAlert.name, bundle: nil)
         
         let editCardAlert = PopupDialog(viewController: editCardNameVC,
-                                buttonAlignment: .horizontal,
-                                transitionStyle: .zoomIn,
-                                tapGestureDismissal: true,
-                                panGestureDismissal: false)
-
+                                        buttonAlignment: .horizontal,
+                                        transitionStyle: .zoomIn,
+                                        tapGestureDismissal: true,
+                                        panGestureDismissal: false)
+        
         editCardNameVC.editNameTextField.text = card.cardName
         editCardAlert.buttonAlignment = .horizontal
         let dialogAppearance = PopupDialogDefaultView.appearance()
@@ -223,7 +225,6 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         
         let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
-            print("You canceled the dialog.")
         }
         
         let saveButton = DefaultButton(title: R.string.localizable.save(), dismissOnTap: true) {
@@ -231,7 +232,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 let cardForEdit = card
                 cardForEdit.cardName = newCardName
                 self.cardListPresenter?.editCard(card: card)
-
+                
             }
         }
         
@@ -290,7 +291,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         deleteCardAlert.addButtons([deleteButton, cancelButton])
         
         self.present(deleteCardAlert, animated: true, completion: nil)
-      
+        
     }
     
     
@@ -319,38 +320,37 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func initCardListPagerView() {
         var y = 0
-        if fsPagerAdapterList.count > 0 {
-            fsPagerCollectionView.removeAll()
-            labelFirstRegister.isHidden = true
-            vScroll.subviews.forEach({ $0.removeFromSuperview() })
-            for i in fsPagerAdapterList.indices {
-                let screenBounds =  UIScreen.main.bounds
-                //TODO: Scrool view size!!! check
-                let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 251)
-                let cardListPagerView = FSPagerView(frame: frame)
-                y += 270
-                fsPagerCollectionView.append(cardListPagerView)
-                
-                let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
-                fsPagerCollectionView[i].register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
-                
-                let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
-                fsPagerCollectionView[i].register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
-                
-                fsPagerAdapterList[i] = CardPagerViewAdapter(sender: banks![i])
-                fsPagerAdapterList[i].setDelegate(cardPagerViewDelegate: self)
-                fsPagerCollectionView[i].delegate = fsPagerAdapterList[i]
-                fsPagerCollectionView[i].dataSource = fsPagerAdapterList[i]
-                fsPagerCollectionView[i].itemSize = CGSize(width: 300, height: 260)
-                fsPagerCollectionView[i].interitemSpacing = 5
-                vScroll.isScrollEnabled = true
-                vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 30))
-                vScroll.addSubview(cardListPagerView)
-                fsPagerCollectionView[i].reloadData()
-                fsPagerCollectionView[i].layoutIfNeeded()
-                if banks![i].CardList.count > 0 {
-                    fsPagerCollectionView[i].scrollToItem(at: 1, animated: false)
-                }
+        
+        fsPagerCollectionView.removeAll()
+        labelFirstRegister.isHidden = fsPagerAdapterList.count == 0 ? false : true
+        vScroll.subviews.forEach({ $0.removeFromSuperview() })
+        for i in fsPagerAdapterList.indices {
+            let screenBounds =  UIScreen.main.bounds
+            //TODO: Scrool view size!!! check
+            let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 251)
+            let cardListPagerView = FSPagerView(frame: frame)
+            y += 270
+            fsPagerCollectionView.append(cardListPagerView)
+            
+            let addCardNib = UINib(resource: R.nib.addCardPagerViewCell)
+            fsPagerCollectionView[i].register(addCardNib, forCellWithReuseIdentifier: R.nib.addCardPagerViewCell.identifier)
+            
+            let bankCardNib = UINib(resource: R.nib.bankCardPagerViewCell)
+            fsPagerCollectionView[i].register(bankCardNib, forCellWithReuseIdentifier: R.nib.bankCardPagerViewCell.identifier)
+            
+            fsPagerAdapterList[i] = CardPagerViewAdapter(sender: banks![i])
+            fsPagerAdapterList[i].setDelegate(cardPagerViewDelegate: self)
+            fsPagerCollectionView[i].delegate = fsPagerAdapterList[i]
+            fsPagerCollectionView[i].dataSource = fsPagerAdapterList[i]
+            fsPagerCollectionView[i].itemSize = CGSize(width: 300, height: 260)
+            fsPagerCollectionView[i].interitemSpacing = 5
+            vScroll.isScrollEnabled = true
+            vScroll.contentSize = CGSize(width: screenBounds.width, height: CGFloat(y + 30))
+            vScroll.addSubview(cardListPagerView)
+            fsPagerCollectionView[i].reloadData()
+            fsPagerCollectionView[i].layoutIfNeeded()
+            if banks![i].CardList.count > 0 {
+                fsPagerCollectionView[i].scrollToItem(at: 1, animated: false)
             }
         }
     }
@@ -373,10 +373,20 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     }
     
     func removeTimerInstance(timer: Timer) {
-       self.countDownTimer.remove(timer)
+        self.countDownTimer.remove(timer)
     }
     
     func saveTimerInstance(timer: Timer) {
         self.countDownTimer.append(timer)
     }
+    
+    func bankRemoved(bank: Bank) {
+        banks?.remove(bank)
+        initPagerList()
+    }
+    
+    func deletionError(message: String) {
+        SnackBarHelper.init(message: message, color: R.color.errorDark()!, duration: .middle).show()
+    }
+    
 }
