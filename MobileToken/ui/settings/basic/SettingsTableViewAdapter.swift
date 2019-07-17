@@ -5,6 +5,7 @@ protocol SettingsTableAdapterProtocol {
     func changeAuthentication()
     func selectedSegue(identifier:String)
     func updateLockTimer(setting:Setting)
+    func updateShowOTP(setting: Setting)
 }
 
 class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSource,LockScreenTimeSettingTableViewCellProtocol {
@@ -21,7 +22,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func updateLockTimer(lockTimer: Int) {
@@ -57,6 +58,13 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             cell.labelTitle!.text = R.string.localizable.lb_support()
             cell.imageIcon.image = R.image.support()
             return cell
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseEyeSettingTableViewCell.identifier, for: indexPath) as! OTPEyeSettingTableViewCell
+            cell.switchEye.isOn = (settingMediator?.getSetting().isOTPEnable)!
+            cell.otpEyeProtocol = self
+            
+            return cell
+            
         default:
             return UITableViewCell()
         }
@@ -85,3 +93,12 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         }
     }
 }
+
+extension SettingsTableViewAdapter: OTPEyeProtocol {
+    func eyeSwitchChanged(isEyeON: Bool) {
+        let setting = settingMediator?.getSetting()
+        setting?.isOTPEnable = isEyeON
+        settingTableAdapterProtocol?.updateShowOTP(setting: setting!)
+    }
+}
+

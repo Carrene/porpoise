@@ -27,6 +27,7 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     func initTableView(settingMediator: SettingMediator) {
         tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)
         tableView?.register(UINib(nibName:R.nib.authenticationTypeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier)
+        tableView?.register(UINib(nibName: R.nib.otpEyeSettingTableViewCell.name, bundle: nil), forCellReuseIdentifier: R.reuseIdentifier.reuseEyeSettingTableViewCell.identifier)
         adapter = SettingsTableViewAdapter()
         adapter!.setDelegate(settingTableAdapterProtocol: self)
         adapter?.setSettingMediator(settingMediator: settingMediator)
@@ -46,6 +47,10 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     }
     
     func updateLockTimer(setting: Setting) {
+        settingPresenter?.updateSetting(setting: setting)
+    }
+    
+    func updateShowOTP(setting: Setting) {
         settingPresenter?.updateSetting(setting: setting)
     }
     
