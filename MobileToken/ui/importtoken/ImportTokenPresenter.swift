@@ -21,8 +21,17 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                     card.TokenList.append(token)
                     let _ = token.parse()
                     card.number = token.name
-                    self!.updateCard(card: card)
-                    result = true
+                    if let card = self!.isCardValid(card: card) {
+                        for t in card.TokenList {
+                            t.parse()
+                            if t.cryptoModuleId == token.cryptoModuleId {
+                                
+                            }
+                        }
+                    }else {
+                        self!.updateCard(card: card)
+                        result = true
+                    }
                     
                 } catch ParseTokenException.InvalidChecksumException{
                     self?.view.showInvalidChecksumError()
@@ -50,8 +59,6 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             Logger.instance.logEvent(event: ConstantHelper.IMPORT_TOKEN_LOG_EVENT, parameters: ["result": result as NSObject])
         }
         tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
-    
-        
     }
     
     func updateCard(card: Card) {
@@ -84,7 +91,21 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
     }
     
-    func validateAndSaveToken(tokenPacket: String) {
+    func isCardValid(card: Card) -> Card?  {
+        var existCard: Card?
+        let cardRepository = CardRepository()
+        let onDataResponse: ((RepositoryResponse<[Card]>)->()) = { response in
+            for dbCard in response.value! {
+                
+                if dbCard.id != card.id, dbCard.number == card.number {
+                    existCard = dbCard
+                    return
+                }
+            }
+            
+        }
         
+        cardRepository.getAll(onDone: onDataResponse)
+        return existCard
     }
 }

@@ -4,6 +4,8 @@ protocol ImportTokenViewProtocol: class {
     func tokenImported(card: Card)
     func showImportTokenError(message: String)
     func showInvalidChecksumError()
+    func showExistTokenError()
+    func showExistCardError()
 }
 
 

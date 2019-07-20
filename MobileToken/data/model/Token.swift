@@ -165,7 +165,6 @@ class Token: Object, Mappable, NSCopying{
                 if tokenName != cardNumber {
                     throw ParseTokenException.InvalidCardNumber
                 }
-                
             }
         }
     }

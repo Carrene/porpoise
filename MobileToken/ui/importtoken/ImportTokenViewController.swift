@@ -179,4 +179,12 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     func showInvalidChecksumError() {
         SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
     }
+    
+    func showExistCardError() {
+        
+    }
+    
+    func showExistTokenError() {
+        
+    }
 }

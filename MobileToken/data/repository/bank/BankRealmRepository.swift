@@ -47,7 +47,7 @@ class BankRealmRepository: BankRepositoryProtocol {
                         }
                         realm.delete(card)
                     }
-                    let users = existBank.owner
+                    let users = existBank.owners
                     for user in users {
                         realm.delete(user)
                     }
