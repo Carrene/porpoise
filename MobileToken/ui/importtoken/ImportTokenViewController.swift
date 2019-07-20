@@ -160,6 +160,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func tokenImported(card: Card) {
+        SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.snackbarColor()!, duration: .middle).show()
         self.importTokenDelegate?.importedToken(card:card)
         self.navigationController?.popViewController(animated: false)
     }
@@ -169,5 +170,13 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         let atm = textViewAtmCode.text.replacedArabicPersianDigitsWithEnglish
         let tokenPacket = sms + atm
         presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
+    }
+    
+    func showImportTokenError(message: String) {
+        SnackBarHelper.init(message: message, color: R.color.errorDark()!, duration: .middle).show()
+    }
+    
+    func showInvalidChecksumError() {
+        SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
     }
 }

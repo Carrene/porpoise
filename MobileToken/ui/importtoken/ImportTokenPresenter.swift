@@ -25,27 +25,27 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                     result = true
                     
                 } catch ParseTokenException.InvalidChecksumException{
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showInvalidChecksumError()
                 } catch ParseTokenException.InvalidBankIdException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidbankid(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidbankid())
                 } catch ParseTokenException.InvalidCryptoModuleIdException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid())
                 } catch ParseTokenException.NumberFormatException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.InvalidKeyException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                     self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.InvalidKeyException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.IllegalStateException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                     
                 } catch ParseTokenException.InvalidCardNumber {
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidtokenname(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidtokenname())
                 } catch {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                     self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 }
             } else {
-                SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_duplicatetoken(), color: R.color.errorDark()!, duration: .middle).show()
+                self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_duplicatetoken())
             }
             Logger.instance.logEvent(event: ConstantHelper.IMPORT_TOKEN_LOG_EVENT, parameters: ["result": result as NSObject])
         }
@@ -65,7 +65,6 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
 
                 }
                 else {
-                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.snackbarColor()!, duration: .middle).show()
                     self?.view.tokenImported(card: card)
                 }
             }
