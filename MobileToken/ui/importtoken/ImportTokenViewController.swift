@@ -89,7 +89,35 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     }
     
     func initListeners() {
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(onTextView(recognizer:)))
+        textViewSmsCode.addGestureRecognizer(gesture)
+    }
+    
+    @objc func onTextView(recognizer: UILongPressGestureRecognizer) {
         
+        self.view.endEditing(true)
+        guard recognizer.state == .recognized else { return }
+        
+        if let recognizerView = recognizer.view,
+            let recognizerSuperView = recognizerView.superview, recognizerView.becomeFirstResponder()
+        {
+            let menuController = UIMenuController.shared
+            menuController.menuItems = [UIMenuItem(title: "P", action: #selector(pasteText(_:)))]
+            menuController.setTargetRect(recognizerView.frame, in: recognizerSuperView)
+            menuController.setMenuVisible(true, animated:true)
+            
+        }
+        
+    }
+    
+    @objc func pasteText(_ sender: Any?) {
+        let text = UIPasteboard.general.string ?? ""
+        let resualt = textView(textViewSmsCode, shouldChangeTextIn: NSRange(location: 0, length: 0), replacementText: text)
+        if resualt == false, text.count == 120 {
+            self.textViewSmsCode.text = text
+        } else if textViewSmsCode.text.count != 120{
+            SnackBarHelper.init(message: "Text Problem", color: .red, duration: .middle).show()
+        }
     }
     
     func initBankCard() {
@@ -147,6 +175,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         else {
             let smsText = text.components(separatedBy: CharacterSet(charactersIn: "\n "))
             smsText.forEach{ splitedText in
+                print(splitedText.count)
                 if splitedText.count == 120 && smsText.count > 1 {
                     textViewSmsCode.text = String(splitedText)
                     self.updateCounter(textView: textViewSmsCode)
