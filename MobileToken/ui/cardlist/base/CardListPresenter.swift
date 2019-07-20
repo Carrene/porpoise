@@ -38,6 +38,13 @@ class CardListPresenter : CardListPresenterProtocol {
                 self?.view.addCard(card: response.value!)
             }
         }
+        
+        for card in bank.CardList {
+            if card.TokenList.count == 0 {
+                self.view.showEmptyCardExistError()
+                return
+            }
+        }
         repository.addCard(card: card, bank: bank, onDone: onDataResponse)
     }
     

@@ -297,7 +297,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func addCard(cardName:String ,selectedBank:Bank) {
         let card = Card(number: "________________", cardName: cardName, cardType: Card.CardTypeEnum.BANK )
-        cardListPresenter?.addCard(card: card, bank: selectedBank)
+        let bank = banks?.filter({$0.id == selectedBank.id}).first
+        cardListPresenter?.addCard(card: card, bank: bank!)
     }
     
     func reloadCardPager() {
@@ -387,6 +388,11 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
     
     func deletionError(message: String) {
         SnackBarHelper.init(message: message, color: R.color.errorDark()!, duration: .middle).show()
+    }
+    
+    func showEmptyCardExistError() {
+        self.view.endEditing(true)
+        SnackBarHelper.init(message: R.string.localizable.sb_empty_card_exist(), color: R.color.errorDark()!, duration: .middle).show()
     }
     
 }

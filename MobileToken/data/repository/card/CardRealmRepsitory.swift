@@ -70,6 +70,9 @@ class CardRealmRepository: CardRepositoryProtocol {
         let existCard = realm.objects(Card.self).filter("Id='"+identifier+"'").first
         do {
             try realm.write {
+                for token in existCard!.TokenList {
+                    realm.delete(token)
+                }
                 realm.delete(existCard!)
             }
             onDone?(RepositoryResponse(value: (existCard)))

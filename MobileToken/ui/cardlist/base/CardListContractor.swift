@@ -10,6 +10,7 @@ protocol CardListViewProtocol: class {
     func deleteToken(tokens: [Token])
     func bankRemoved(bank: Bank)
     func deletionError(message: String)
+    func showEmptyCardExistError()
 }
 
 protocol CardListPresenterProtocol {
