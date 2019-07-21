@@ -39,11 +39,21 @@ class CardRealmRepository: CardRepositoryProtocol {
     
     func getAll(onDone: ((RepositoryResponse<[Card]>) -> ())?) {
         let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
-        let realmCardResult: [Card]? = realm.objects(Card.self).map{$0.copy() as! Card}
+        var cards = [Card]()
+        let realmCardResult: [Card]? = realm.objects(Card.self).map{
+            $0.bank = ($0.owners.first!.copy() as! Bank)
+            $0.copy()
+            return $0
+        }
+        for card in realmCardResult ?? [Card]() {
+            let copyCard = card.detached()
+            copyCard.bank = card.bank?.detached()
+            cards.append(copyCard)
+        }
         if realmCardResult == nil {
             onDone?(RepositoryResponse(value: nil))
         } else {
-            onDone?(RepositoryResponse(value: realmCardResult))
+            onDone?(RepositoryResponse(value: cards))
         }
     }
     

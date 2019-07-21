@@ -63,6 +63,8 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                 if cardList[j].id == card.id {
                     banks![i].CardList[j] = card
                     fsPagerCollectionView[i].reloadData()
+                    fsPagerCollectionView[i].layoutIfNeeded()
+                    fsPagerCollectionView[i].scrollToItem(at: j+1, animated: false)
                 }
             }
             
@@ -105,7 +107,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
                                 banks![i].CardList[j].TokenList.remove(at: index)
                                 fsPagerCollectionView[i].reloadData()
                                 fsPagerCollectionView[i].layoutIfNeeded()
-                                fsPagerCollectionView[i].scrollToItem(at: j + 1, animated: false)
+                                fsPagerCollectionView[i].scrollToItem(at: j+1, animated: false)
                             }
                         }
                     }
@@ -327,7 +329,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         vScroll.subviews.forEach({ $0.removeFromSuperview() })
         for i in fsPagerAdapterList.indices {
             let screenBounds =  UIScreen.main.bounds
-            //TODO: Scrool view size!!! check
+            //TODO: Scroll view size!!! check
             let frame = CGRect(x: 0, y: y, width: Int(screenBounds.width), height: 251)
             let cardListPagerView = FSPagerView(frame: frame)
             y += 270

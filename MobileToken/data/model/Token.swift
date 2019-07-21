@@ -163,7 +163,11 @@ class Token: Object, Mappable, NSCopying{
                 let tokenName = String(name![...index!])
                 let cardNumber = String((card?.number![...index!])!)
                 if tokenName != cardNumber {
-                    throw ParseTokenException.InvalidCardNumber
+                    if card?.TokenList.count == 0 {
+                        card?.number = name
+                    } else {
+                        throw ParseTokenException.InvalidCardNumber
+                    }
                 }
             }
         }

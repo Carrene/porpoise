@@ -4,7 +4,7 @@ import TTGSnackbar
 class ImportTokenPresenter: ImportTokenPresenterProtokol{
     
     unowned let view: ImportTokenViewProtocol
-
+    
     required init(view: ImportTokenViewProtocol) {
         self.view = view
     }
@@ -21,13 +21,27 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                     card.TokenList.append(token)
                     let _ = token.parse()
                     card.number = token.name
-                    if let card = self!.isCardValid(card: card) {
+                    if let card = self!.isCardExist(card: card) {
+                        var i = 0
                         for t in card.TokenList {
-                            t.parse()
+                            t.card = card
+                            let _ = t.parse()
+                            t.card = nil
+                            
                             if t.cryptoModuleId == token.cryptoModuleId {
-                                
+                                if self!.deleteToken(token: t) {
+                                    
+                                    card.TokenList.remove(at: i)
+                                    card.TokenList.append(token)
+                                    self?.view.showExistTokenAndCardError(current: card)
+                                    return
+                                }
                             }
+                            i += 1
                         }
+                        card.TokenList.append(token)
+                        self?.view.showExistCardError(current: card)
+                        
                     }else {
                         self!.updateCard(card: card)
                         result = true
@@ -42,7 +56,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                 } catch ParseTokenException.NumberFormatException {
                     self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.InvalidKeyException {
-                     self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.InvalidKeyException {
                     self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.IllegalStateException {
@@ -51,7 +65,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                 } catch ParseTokenException.InvalidCardNumber {
                     self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidtokenname())
                 } catch {
-                     self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 }
             } else {
                 self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_duplicatetoken())
@@ -69,7 +83,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             }
             else {
                 if response.value == nil {
-
+                    
                 }
                 else {
                     self?.view.tokenImported(card: card)
@@ -91,13 +105,15 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
     }
     
-    func isCardValid(card: Card) -> Card?  {
+    func isCardExist(card: Card) -> Card?  {
         var existCard: Card?
         let cardRepository = CardRepository()
         let onDataResponse: ((RepositoryResponse<[Card]>)->()) = { response in
             for dbCard in response.value! {
-                
-                if dbCard.id != card.id, dbCard.number == card.number {
+                let index = card.number?.index((card.number?.endIndex)!, offsetBy: -2)
+                if dbCard.id != card.id, dbCard.number?[..<index!] == card.number![..<index!] {
+                    card.TokenList.removeAll()
+                    card.number = "________________"
                     existCard = dbCard
                     return
                 }
@@ -108,4 +124,17 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         cardRepository.getAll(onDone: onDataResponse)
         return existCard
     }
+    
+    func deleteToken(token: Token) -> Bool {
+        var deleted = false
+        let repository = TokenRepository()
+        let onDataResponse : ((RepositoryResponse<Token>) -> ()) =  { [weak self] response in
+            if response.error == nil {
+                deleted = true
+            }
+        }
+        repository.delete(token: token, onDone: onDataResponse)
+        return deleted
+    }
+    
 }

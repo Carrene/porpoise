@@ -1,5 +1,6 @@
 import UIKit
 import XLActionController
+import PopupDialog
 
 protocol ImportToeknDelegate {
     func importedToken(card: Card)
@@ -169,6 +170,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         let sms = textViewSmsCode.text.replacedArabicPersianDigitsWithEnglish
         let atm = textViewAtmCode.text.replacedArabicPersianDigitsWithEnglish
         let tokenPacket = sms + atm
+        let card = self.card
         presenter?.importToken(tokenPacket:  tokenPacket, card: card!, cryptoModuleId: self.cryptoModuleId!)
     }
     
@@ -180,11 +182,50 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
     }
     
-    func showExistCardError() {
-        
+    func showExistCardError(current card: Card) {
+        showExistTokenAndCardErrorDialog(card: card, message: R.string.localizable.alert_add_token_to_another_card())
     }
     
-    func showExistTokenError() {
+    func showExistTokenAndCardError(current card: Card) {
+        showExistTokenAndCardErrorDialog(card: card, message: R.string.localizable.alert_duplicated_token())
+    }
+    
+    func showExistTokenAndCardErrorDialog(card: Card, message: String) {
+        let alert = PopupDialog(title: R.string.localizable.alert() , message: message)
+        alert.transitionStyle = .zoomIn
+        alert.buttonAlignment = .horizontal
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor = R.color.primary()
+        dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        dialogAppearance.titleColor = R.color.buttonColor()
+        dialogAppearance.messageColor = R.color.buttonColor()
+        dialogAppearance.messageFont = R.font.iranSansMobile(size: 14)!
         
+        let containerAppearance = PopupDialogContainerView.appearance()
+        containerAppearance.backgroundColor = R.color.primaryLight()
+        containerAppearance.cornerRadius = 10
+        
+        let cancelButton = DefaultButton(title: R.string.localizable.bt_cancel_otp_alert()) {
+            self.importTokenDelegate?.importedToken(card:self.card!)
+            self.navigationController?.popViewController(animated: false)
+        }
+        
+        let acceptButton = CancelButton(title: R.string.localizable.ok()) {
+            self.presenter?.updateCard(card: card)
+        }
+        
+        let cancelButtonAppearance = CancelButton.appearance()
+        cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        cancelButtonAppearance.titleColor = R.color.primary()
+        cancelButtonAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
+        cancelButtonAppearance.buttonColor = R.color.secondary()
+        
+        let okActionAppearance = DefaultButton.appearance()
+        okActionAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        okActionAppearance.titleColor = R.color.secondary()
+        okActionAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
+        okActionAppearance.buttonColor = R.color.primary()
+        alert.addButtons([cancelButton, acceptButton])
+        self.present(alert, animated: true, completion: nil)
     }
 }

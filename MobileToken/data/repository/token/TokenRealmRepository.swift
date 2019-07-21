@@ -61,4 +61,27 @@ class TokenRealmRepository: TokenRepositoryProtocol {
             onDone?(RepositoryResponse(error: error))
         }
     }
+    
+    func delete(token: Token, onDone: ((RepositoryResponse<Model>) -> ())?) {
+        var result = false
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        var responseToken: Token?
+        do {
+            try realm.write {
+                let token = realm.objects(Token.self).filter("Id='"+token.id!+"'").first
+                let tokenCopy = token?.copy() as! Token
+                responseToken = tokenCopy
+                realm.delete(token!)
+                result = true
+                
+                
+            }
+            onDone?(RepositoryResponse(value: responseToken))
+            Logger.instance.logEvent(event: ConstantHelper.DELETE_TOKEN_LOG_EVENT, parameters: ["result": result as NSObject])
+            
+        } catch {
+            onDone?(RepositoryResponse(error: error))
+        }
+    }
+
 }
