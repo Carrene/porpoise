@@ -251,9 +251,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         defaultButtonAppearance.buttonColor = R.color.secondary()
         
         editCardAlert.addButtons([saveButton, cancelButton])
-        
         self.present(editCardAlert, animated: true, completion: nil)
-        
     }
     
     func deleteBankAlert(bank: Bank) {
