@@ -49,22 +49,21 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             }
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
-            cell.labelTitle!.text = R.string.localizable.lb_app_guide()
-            cell.imageIcon.image = R.image.help()
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
-            cell.labelTitle!.text = R.string.localizable.lb_support()
-            cell.imageIcon.image = R.image.support()
-            return cell
-        case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseEyeSettingTableViewCell.identifier, for: indexPath) as! OTPEyeSettingTableViewCell
             cell.switchEye.isOn = (settingMediator?.getSetting().isOTPEnable)!
             cell.otpEyeProtocol = self
             
             return cell
-            
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            cell.labelTitle!.text = R.string.localizable.lb_app_guide()
+            cell.imageIcon.image = R.image.help()
+            return cell
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseAuthenticationTypeSettingRow.identifier, for: indexPath) as! AuthenticationTypeSettingTableViewCell
+            cell.labelTitle!.text = R.string.localizable.lb_support()
+            cell.imageIcon.image = R.image.support()
+            return cell
         default:
             return UITableViewCell()
         }
@@ -85,10 +84,10 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
         if indexPath.row == 1 {
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToAuthenticationDefinitionSegue.identifier)
         }
-        else if indexPath.row == 2 {
+        else if indexPath.row == 3 {
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToHelp.identifier)
         }
-        else if indexPath.row == 3 {
+        else if indexPath.row == 4 {
             settingTableAdapterProtocol?.selectedSegue(identifier: R.segue.settingsViewController.settingToSupport.identifier)
         }
     }

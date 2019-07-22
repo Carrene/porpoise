@@ -29,13 +29,11 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                             t.card = nil
                             
                             if t.cryptoModuleId == token.cryptoModuleId {
-                                if self!.deleteToken(token: t) {
-                                    
+                                    let currentToken = card.TokenList[i]
                                     card.TokenList.remove(at: i)
                                     card.TokenList.append(token)
-                                    self?.view.showExistTokenAndCardError(current: card)
+                                    self?.view.showExistTokenAndCardError(card: card, current: currentToken)
                                     return
-                                }
                             }
                             i += 1
                         }
@@ -125,16 +123,14 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         return existCard
     }
     
-    func deleteToken(token: Token) -> Bool {
-        var deleted = false
+    func deleteToken(token: Token) {
         let repository = TokenRepository()
         let onDataResponse : ((RepositoryResponse<Token>) -> ()) =  { [weak self] response in
             if response.error == nil {
-                deleted = true
+                print("deleted")
             }
         }
         repository.delete(token: token, onDone: onDataResponse)
-        return deleted
     }
     
 }

@@ -186,11 +186,11 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         showExistTokenAndCardErrorDialog(card: card, message: R.string.localizable.alert_add_token_to_another_card())
     }
     
-    func showExistTokenAndCardError(current card: Card) {
-        showExistTokenAndCardErrorDialog(card: card, message: R.string.localizable.alert_duplicated_token())
+    func showExistTokenAndCardError(card: Card, current token: Token) {
+        showExistTokenAndCardErrorDialog(card: card,token: token, message: R.string.localizable.alert_duplicated_token())
     }
     
-    func showExistTokenAndCardErrorDialog(card: Card, message: String) {
+    func showExistTokenAndCardErrorDialog(card: Card, token: Token? = nil, message: String) {
         let alert = PopupDialog(title: R.string.localizable.alert() , message: message)
         alert.transitionStyle = .zoomIn
         alert.buttonAlignment = .horizontal
@@ -206,11 +206,13 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         containerAppearance.cornerRadius = 10
         
         let cancelButton = DefaultButton(title: R.string.localizable.bt_cancel_otp_alert()) {
-            self.importTokenDelegate?.importedToken(card:self.card!)
             self.navigationController?.popViewController(animated: false)
         }
         
         let acceptButton = CancelButton(title: R.string.localizable.ok()) {
+            if let t = token {
+                self.presenter?.deleteToken(token: t)
+            }
             self.presenter?.updateCard(card: card)
         }
         

@@ -126,7 +126,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         let deleteBankAction = Action(ActionData(title: "حذف بانک", image:R.image.passDelete()! ), style: .default) { action in
             let bank = self.banks?.filter({$0.CardList.contains(card)}).first
-            self.cardListPresenter?.deleteBank(bank: bank!)
+            self.deleteBankAlert(bank: bank!)
         }
         if card.TokenList.count == 0 {
             deleteTokenAction.enabled = false
@@ -254,6 +254,45 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         
         self.present(editCardAlert, animated: true, completion: nil)
         
+    }
+    
+    func deleteBankAlert(bank: Bank) {
+        let deleteCardAlert = PopupDialog(title: R.string.localizable.lb_are_you_sure_delete_bank(), message: "")
+        deleteCardAlert.transitionStyle = .zoomIn
+        deleteCardAlert.buttonAlignment = .horizontal
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor = R.color.primary()
+        dialogAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        dialogAppearance.titleColor = R.color.buttonColor()
+        
+        let containerAppearance = PopupDialogContainerView.appearance()
+        //containerAppearance.backgroundColor = R.color.primaryLight()
+        containerAppearance.cornerRadius = 10
+        
+        let cancelButton = CancelButton(title: R.string.localizable.cancel()) {
+            
+        }
+        
+        let deleteButton = DefaultButton(title: R.string.localizable.ash_delete_bank(), dismissOnTap: true) {
+            self.cardListPresenter?.deleteBank(bank: bank)
+        }
+        
+        let cancelButtonAppearance = CancelButton.appearance()
+        cancelButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        cancelButtonAppearance.titleColor = R.color.secondary()
+        cancelButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        cancelButtonAppearance.buttonColor = R.color.primaryDark()
+        
+        let defaultButtonAppearance = DefaultButton.appearance()
+        defaultButtonAppearance.titleFont = R.font.iranSansMobileBold(size: 16)!
+        defaultButtonAppearance.titleColor = R.color.primary()
+        defaultButtonAppearance.separatorColor = UIColor(white: 0.9, alpha: 0.1)
+        defaultButtonAppearance.backgroundColor = R.color.secondary()
+        defaultButtonAppearance.buttonColor = R.color.secondary()
+        
+        deleteCardAlert.addButtons([deleteButton, cancelButton])
+        
+        self.present(deleteCardAlert, animated: true, completion: nil)
     }
     
     func deleteCardAlert(card: Card) {
