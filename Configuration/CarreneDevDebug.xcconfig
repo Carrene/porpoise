@@ -1,13 +1,13 @@
 #include "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig"
 
-URL_ENDPOINT=192.168.1.32
+URL_ENDPOINT=agama.carrene.com
 
-URL_PORT=80
+URL_PORT=443
 
-URL_SCHEME=http
+URL_SCHEME=https
 
-INITIAL_TOKEN=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU2MDkyNjQ3MSwiZXhwIjoxNTYxMjkzMTM3fQ.e30.Wc3XdwDGlRB_udcX-WZcuW2EMfuZLkNWMe11Ns-jkCs
-
-SELF_SIGNED=YES
+INITIAL_TOKEN=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU2MjIyNjMyMiwiZXhwIjoxODE0NTE0MzIyfQ.e30.QFCsgzs-Rkzd4EJz9mWC5KDUIL5o78Fx7jbcyAsHoL8
+SELF_SIGNED = NO
 
 VERSION=1
+
