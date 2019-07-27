@@ -1,6 +1,7 @@
 platform :ios, '9.0'
 
 abstract_target 'Common' do
+
     
     use_frameworks!
     pod 'ObjectMapper+Realm', '~> 0.6'
