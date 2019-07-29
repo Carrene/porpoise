@@ -10,10 +10,10 @@ class OTPEyeSettingTableViewCell: UITableViewCell {
     var otpEyeProtocol: OTPEyeProtocol?
     @IBOutlet weak var switchEye: UISwitch! 
     @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var ImageCell: UIImageView!
+    @IBOutlet weak var imageCell: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        ImageCell.image = R.image.eyeOn()
+        
     }
 
     @IBAction func switchChanged(_ sender: UISwitch) {

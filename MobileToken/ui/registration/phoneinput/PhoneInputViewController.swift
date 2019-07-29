@@ -114,7 +114,11 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     open func textField(_ textField: UITextField,didFillMandatoryCharacters complete: Bool,didExtractValue value: String) {
         self.inputPhone = value.replacedArabicPersianDigitsWithEnglish
+        if inputPhone?.first == "0" {
+            inputPhone?.removeFirst()
+            textFieldPhoneNumber.text = inputPhone
         }
+    }
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         self.labelPhoneCode.text = country.phoneCode
@@ -137,9 +141,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     }
     
     @IBAction func onButtonRegister(_ sender: UIBarButtonItem) {
-        if inputPhone?.first == "0" {
-            inputPhone?.remove(at: inputPhone.startIndex)
-        }
+        
         if inputPhone != nil && inputPhone.count > 0 {
             if selectedBank != nil {
                 self.presenter.claim(phone: labelPhoneCode.text!+inputPhone, bank: self.selectedBank! )

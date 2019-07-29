@@ -78,7 +78,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="ImageCell" destination="4Em-YQ-z7O" id="2ki-xS-84W"/>
+                <outlet property="imageCell" destination="4Em-YQ-z7O" id="2ki-xS-84W"/>
                 <outlet property="labelTitle" destination="xbJ-3R-aa1" id="1nq-og-dfj"/>
                 <outlet property="switchEye" destination="ZH6-BF-HvZ" id="Qfa-2a-Ov6"/>
             </connections>

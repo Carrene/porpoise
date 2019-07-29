@@ -1,7 +1,7 @@
 import UIKit
 import XLActionController
 import PopupDialog
-
+import IQKeyboardManager
 protocol ImportToeknDelegate {
     func importedToken(card: Card)
 }
@@ -25,6 +25,7 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ImportTokenPresenter(view: self)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,7 +57,6 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         
         viewCard.layer.cornerRadius = 10
         viewCard.layer.borderWidth = 0
-        //viewCard.layer.shadowPath = UIBezierPath(roundedRect: viewCard.bounds, cornerRadius: 10).cgPath
         viewCard.layer.shadowRadius = 5
         viewCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         viewCard.layer.shadowOpacity = 0.5
@@ -75,6 +75,9 @@ class ImportTokenViewController: BaseViewController,UITextViewDelegate, ImportTo
         }
         textViewAtmCode.delegate = self
         textViewSmsCode.delegate = self
+        if #available(iOS 12.0, *) {
+            textViewSmsCode.textContentType = .oneTimeCode
+        }
         textViewSmsCode.textColor = R.color.buttonColor()?.withAlphaComponent(0.5)
         textViewAtmCode.layer.borderWidth = 2
         textViewAtmCode.layer.borderColor = R.color.buttonColor()!.cgColor
