@@ -110,6 +110,7 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             for dbCard in response.value! {
                 let index = card.number?.index((card.number?.endIndex)!, offsetBy: -2)
                 if dbCard.id != card.id, dbCard.number?[..<index!] == card.number![..<index!] {
+                    //This card number exist in db and we did'nt need another one with this number, we romove this card's number and token (this token and numbr did'nt save to db yet) and we should add this token to "\(dbCard)"
                     card.TokenList.removeAll()
                     card.number = "________________"
                     existCard = dbCard
@@ -132,5 +133,4 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         }
         repository.delete(token: token, onDone: onDataResponse)
     }
-    
 }
