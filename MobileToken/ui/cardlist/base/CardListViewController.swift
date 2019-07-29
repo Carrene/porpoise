@@ -124,7 +124,7 @@ class CardListViewController: BaseViewController,CardListViewProtocol,CardPagerV
         let deleteCardAction = Action(ActionData(title: R.string.localizable.ash_delete_card(), image: R.image.cardDelete()!), style: .default, handler: { action in self.deleteCardAlert(card: card)})
         var deleteTokenAction = Action(ActionData(title: R.string.localizable.ash_delete_token(), image: R.image.passDelete()!), style: .default, handler: { action in self.deleteTokenAlert(card: card)})
         
-        let deleteBankAction = Action(ActionData(title: "حذف بانک", image:R.image.passDelete()! ), style: .default) { action in
+        let deleteBankAction = Action(ActionData(title: R.string.localizable.delete_bank(), image:R.image.bankDelete()!), style: .default) { action in
             let bank = self.banks?.filter({$0.CardList.contains(card)}).first
             self.deleteBankAlert(bank: bank!)
         }

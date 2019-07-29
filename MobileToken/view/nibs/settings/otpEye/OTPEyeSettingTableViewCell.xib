@@ -39,7 +39,7 @@
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye-off" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-YQ-z7O" userLabel="imageTimer">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting-eye" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-YQ-z7O" userLabel="imageTimer">
                                 <rect key="frame" x="285" y="12" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="8R4-Hu-Pjy"/>
@@ -48,6 +48,7 @@
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZH6-BF-HvZ">
                                 <rect key="frame" x="8" y="6" width="51" height="31"/>
+                                <color key="onTintColor" name="secondary"/>
                                 <connections>
                                     <action selector="switchChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="h4g-CH-qRR"/>
                                 </connections>
@@ -85,12 +86,15 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="eye-off" width="20" height="20"/>
+        <image name="setting-eye" width="29" height="29"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

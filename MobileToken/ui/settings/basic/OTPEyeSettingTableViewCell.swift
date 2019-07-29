@@ -46,7 +46,7 @@ class OTPEyeSettingTableViewCell: UITableViewCell {
         containerAppearance.cornerRadius = 10
         
         let cancelButton = DefaultButton(title: R.string.localizable.bt_cancel_otp_alert()) {
-           
+            self.switchEye.isOn = false
         }
         
         let okAction = CancelButton(title: R.string.localizable.understand(), dismissOnTap: true) {
@@ -64,7 +64,7 @@ class OTPEyeSettingTableViewCell: UITableViewCell {
         okActionAppearance.titleColor = R.color.secondary()
         okActionAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
         okActionAppearance.buttonColor = R.color.primary()
-        alert.addButtons([cancelButton, okAction])
+        alert.addButtons([okAction, cancelButton])
         topMostController?.present(alert, animated: true, completion: nil)
         
     }
