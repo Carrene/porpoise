@@ -21,12 +21,12 @@ class Setting: Object, Mappable, NSCopying{
         set { LockTimer = newValue }
     }
     
-    @objc dynamic var IsOTPEnable = false
-    public var isOTPEnable: Bool {
+    @objc dynamic var VisibleOtp = false
+    public var visibleOtp: Bool {
         set {
-            IsOTPEnable = newValue
+            VisibleOtp = newValue
         }
-        get {return IsOTPEnable}
+        get {return VisibleOtp}
     }
     
     required convenience init?(map: Map) {
@@ -40,11 +40,11 @@ class Setting: Object, Mappable, NSCopying{
     convenience init(lockTimer: Int, isOTPEnable: Bool) {
         self.init()
         self.lockTimer = lockTimer
-        self.isOTPEnable = isOTPEnable
+        self.visibleOtp = isOTPEnable
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Setting(lockTimer: self.lockTimer, isOTPEnable: self.isOTPEnable)
+        return Setting(lockTimer: self.lockTimer, isOTPEnable: self.visibleOtp)
     }
     
 }

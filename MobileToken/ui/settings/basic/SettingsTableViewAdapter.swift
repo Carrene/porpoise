@@ -96,7 +96,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
 extension SettingsTableViewAdapter: OTPEyeProtocol {
     func eyeSwitchChanged(isEyeON: Bool) {
         let setting = settingMediator?.getSetting()
-        setting?.isOTPEnable = isEyeON
+        setting?.visibleOtp = isEyeON
         settingTableAdapterProtocol?.updateShowOTP(setting: setting!)
     }
 }

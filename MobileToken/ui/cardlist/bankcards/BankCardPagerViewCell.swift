@@ -88,7 +88,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func set(card: Card) {
         self.vCard.imageLogo.image = BankUtil.getLogo(bank: card.bank!)
-        self.vCard.imageShowPassword.image = AuthenticationPatternPresenter.getSetting().isOTPEnable ? R.image.eyeOff() : R.image.eyeOn()
+        self.vCard.imageShowPassword.image = AuthenticationPatternPresenter.getSetting().visibleOtp ? R.image.eyeOff() : R.image.eyeOn()
         if timerFirst != nil {
             timerFirst?.invalidate()
             self.bankCardPagerViewDelegate?.removeTimerInstance(timer: timerFirst!)
@@ -133,8 +133,8 @@ class BankCardPagerViewCell: FSPagerViewCell {
     
     func initOtpView(token: Token, view: OtpViewDesignable) {
         let setting = AuthenticationPatternPresenter.getSetting()
-        if setting.isOTPEnable {
-            view.lbOtp.isSecureTextEntry = !setting.isOTPEnable
+        if setting.visibleOtp {
+            view.lbOtp.isSecureTextEntry = !setting.visibleOtp
         }
         if token.cryptoModuleId == Token.CryptoModuleId.one {
             viewFirstOtp.subviews.forEach { view in
