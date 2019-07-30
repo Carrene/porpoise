@@ -50,7 +50,7 @@ class SettingsTableViewAdapter:NSObject,UITableViewDelegate,UITableViewDataSourc
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reuseEyeSettingTableViewCell.identifier, for: indexPath) as! OTPEyeSettingTableViewCell
-            cell.switchEye.isOn = (settingMediator?.getSetting().isOTPEnable)!
+            cell.switchEye.isOn = (settingMediator?.getSetting().visibleOtp)!
             cell.otpEyeProtocol = self
             
             return cell
