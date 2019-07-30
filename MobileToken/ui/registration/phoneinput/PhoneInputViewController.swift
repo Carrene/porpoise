@@ -32,7 +32,7 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PhoneInputPresenter(view: self)
-        initUIComponents()
+        
         initListeners()
         initCountryPicker()
         presenter.getBankList()
@@ -44,8 +44,9 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
     
     override func viewWillAppear(_ animated: Bool) {
         self.hideKeyboardWhenTappedAround()
-        //textFieldPhoneNumber.text = ""
-//        collectionViewbank.reloadData()
+        presenter.getBankList()
+        initUIComponents()
+       
     }
     
     func initUIComponents() {
@@ -64,15 +65,12 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewPhone.layer.cornerRadius = 5
         
         viewTextfields.layer.cornerRadius = 10
-        //viewTextfields.layer.shadowPath = UIBezierPath(roundedRect: viewTextfields.bounds, cornerRadius: 10).cgPath
         viewTextfields.layer.shadowRadius = 5
-        //viewTextfields.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
         viewTextfields.layer.shadowOpacity = 0.2
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
         viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
-        labelAlreadyRegistered.isHidden = true
-        viewLine.isHidden = true
         textFieldPhoneNumber.delegate = self
+        showPhoneInput()
         inputMask()
     }
     
