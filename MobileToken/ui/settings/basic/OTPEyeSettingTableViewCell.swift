@@ -13,6 +13,7 @@ class OTPEyeSettingTableViewCell: UITableViewCell {
     @IBOutlet weak var imageCell: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         
     }
 
