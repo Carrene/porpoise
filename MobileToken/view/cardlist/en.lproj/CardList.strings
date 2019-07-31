@@ -1,0 +1,12 @@
+
+/* Class = "UITabBarItem"; title = "Cards"; ObjectID = "TAT-Oz-QT1"; */
+"TAT-Oz-QT1.title" = "Organizations";
+
+/* Class = "UINavigationItem"; title = "Card list"; ObjectID = "TqB-wM-dKr"; */
+"TqB-wM-dKr.title" = "Organizations list";
+
+/* Class = "UILabel"; text = "Register in an organization first."; ObjectID = "pQv-6G-lYZ"; */
+"pQv-6G-lYZ.text" = "Register in an organization first.";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "tPo-SG-4Yc"; */
+"tPo-SG-4Yc.title" = "  ";

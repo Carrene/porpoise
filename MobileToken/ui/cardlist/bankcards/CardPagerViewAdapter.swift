@@ -41,7 +41,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: R.nib.addCardPagerViewCell.identifier, at: index) as! AddCardPagerViewCell
             cell.setBank(bank: self.bank)
             cell.setDelegate(addCardPagerViewCellProtocol: self)
-            //cell.viewCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             
             return cell
         }
@@ -50,7 +49,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             cell.vCard.labelBankName.text = BankUtil.getName(bank: self.bank)
             cell.vCard.labelCardName.text = self.cardName
             if bank.CardList[index-1].id == updateCard?.id {
-                //pagerView.scrollToItem(at: index, animated: true)
                 cell.setCardName(cardName: (updateCard?.cardName)!)
                 cardPagerViewDelegate?.selectedCard(card: updateCard!)
                 updateCard = nil
@@ -58,8 +56,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
             else {
             cell.setCardName(cardName: bank.CardList[index-1].cardName!)
             }
-//            cell.vCard.setDelegate(cardCellXibProtocol: self)
-            //cell.vCard.imageLogo.image = UIImage(named: self.bank.logoResourceId!)
             cell.initDefaultView()
             cell.set(card: bank.CardList[index-1])
             cell.bankCardPagerViewDelegate = self
@@ -69,7 +65,6 @@ class CardPagerViewAdapter:NSObject, FSPagerViewDelegate, FSPagerViewDataSource,
     }
     
     func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
-//        pagerView.scrollToItem(at: 1, animated: false)
     }
     
     func addCardDetail(cardName: String, selectedBank: Bank) {

@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "      Change number"; ObjectID = "1UJ-1q-E33"; */
+"1UJ-1q-E33.text" = "      Change number";
+
+/* Class = "UILabel"; text = "Activation code is sent"; ObjectID = "332-EN-mwW"; */
+"332-EN-mwW.text" = "Activation code is sent";
+
+/* Class = "UINavigationItem"; title = "فعال سازی"; ObjectID = "3L1-2P-FFA"; */
+"3L1-2P-FFA.title" = "Activate";
+
+/* Class = "UINavigationItem"; title = "Register through organization"; ObjectID = "AMK-zo-eAg"; */
+"AMK-zo-eAg.title" = "Register through organization";
+
+/* Class = "UILabel"; text = "Already registered with this number."; ObjectID = "CC4-XA-VAv"; */
+"CC4-XA-VAv.text" = "Already registered with this number.";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "DSW-cS-5rQ"; */
+"DSW-cS-5rQ.title" = " ";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "G9q-D2-cf1"; */
+"G9q-D2-cf1.text" = "123";
+
+/* Class = "UIBarButtonItem"; title = "تایید"; ObjectID = "Hmr-eP-5ar"; */
+"Hmr-eP-5ar.title" = "Confirm";
+
+/* Class = "UILabel"; text = "+98"; ObjectID = "Mmg-mU-OoY"; */
+"Mmg-mU-OoY.text" = "+98";
+
+/* Class = "UILabel"; text = "Select an organization to register"; ObjectID = "Olh-5b-lfG"; */
+"Olh-5b-lfG.text" = "Select an organization to register";
+
+/* Class = "UILabel"; text = "Choose your country"; ObjectID = "Xx4-zz-5hZ"; */
+"Xx4-zz-5hZ.text" = "Choose your country";
+
+/* Class = "UITabBarItem"; title = "Add organization"; ObjectID = "fIu-iE-rvY"; */
+"fIu-iE-rvY.title" = "Add organization";
+
+/* Class = "UITextField"; placeholder = "Activation code"; ObjectID = "frk-Zy-hGa"; */
+"frk-Zy-hGa.placeholder" = "Activation code";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "gx1-xG-geb"; */
+"gx1-xG-geb.title" = "Done";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "nAV-Jx-a3S"; */
+"nAV-Jx-a3S.title" = " ";
+
+/* Class = "UILabel"; text = "(۰۵:۰۰)"; ObjectID = "rNP-va-IUg"; */
+"rNP-va-IUg.text" = "(۰۵:۰۰)";
+
+/* Class = "UILabel"; text = "Enter your phone number"; ObjectID = "rRT-Ye-jcl"; */
+"rRT-Ye-jcl.text" = "Enter your phone number";

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WPI-gU-Qux">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Xmc-xJ-6og">
+            <objects>
+                <navigationController storyboardIdentifier="MainCardList" id="WPI-gU-Qux" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ts2-qx-1Nd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qfI-nN-dBL" kind="relationship" relationship="rootViewController" id="vdf-Uj-oMA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fo4-os-hpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="910"/>
+        </scene>
+        <!--Organizations List-->
+        <scene sceneID="Owr-MW-4mL">
+            <objects>
+                <viewController storyboardIdentifier="TokenListViewController" id="qfI-nN-dBL" customClass="CardListViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u52-Pu-UHE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-M4-KV2">
+                                <rect key="frame" x="0.0" y="76" width="375" height="542"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <color key="tintColor" name="secondary"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register in an organization first." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-6G-lYZ">
+                                <rect key="frame" x="57.5" y="327.5" width="260" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <color key="tintColor" name="secondary"/>
+                        <constraints>
+                            <constraint firstItem="pQv-6G-lYZ" firstAttribute="centerX" secondItem="DEU-Kc-QOS" secondAttribute="centerX" id="5W5-57-Xis"/>
+                            <constraint firstItem="DEU-Kc-QOS" firstAttribute="trailing" secondItem="X9c-M4-KV2" secondAttribute="trailing" id="Ta6-WG-SH4"/>
+                            <constraint firstItem="pQv-6G-lYZ" firstAttribute="centerY" secondItem="DEU-Kc-QOS" secondAttribute="centerY" id="TxU-Je-Wfg"/>
+                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="12" id="Zuq-eh-D5N"/>
+                            <constraint firstItem="DEU-Kc-QOS" firstAttribute="bottom" secondItem="X9c-M4-KV2" secondAttribute="bottom" id="iJW-nB-UNj"/>
+                            <constraint firstItem="X9c-M4-KV2" firstAttribute="leading" secondItem="DEU-Kc-QOS" secondAttribute="leading" id="pyK-vq-ipC"/>
+                            <constraint firstItem="X9c-M4-KV2" firstAttribute="top" secondItem="DEU-Kc-QOS" secondAttribute="top" constant="70" id="rtL-GN-R2a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DEU-Kc-QOS"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rtL-GN-R2a"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Organizations" image="list-icon" id="TAT-Oz-QT1">
+                        <color key="badgeColor" name="buttonColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Organizations List" id="TqB-wM-dKr">
+                        <barButtonItem key="backBarButtonItem" title="  " id="tPo-SG-4Yc">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="labelFirstRegister" destination="pQv-6G-lYZ" id="hLU-W8-QZz"/>
+                        <outlet property="vScroll" destination="X9c-M4-KV2" id="0bD-Zt-mgo"/>
+                        <segue destination="CPa-E7-dNy" kind="show" identifier="navigateToImportToken" id="snV-lL-ZJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-vq-qki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="909.89505247376314"/>
+        </scene>
+        <!--ImportToken-->
+        <scene sceneID="uPH-Ro-uuk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImportToken" id="CPa-E7-dNy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJN-Go-QPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="909"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list-icon" width="20" height="20"/>
+        <namedColor name="buttonColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

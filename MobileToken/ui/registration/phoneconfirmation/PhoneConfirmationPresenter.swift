@@ -117,7 +117,7 @@ class PhoneConfirmationPresenter:PhoneConfirmationPresenterProtocol {
                 }
             }
             else {
-                //self?.view.showEverywhereFail()
+                UIHelper.showFailedSnackBar()
             }
         }
         userRepository.claim(user: user, onDone: onDataResponse)

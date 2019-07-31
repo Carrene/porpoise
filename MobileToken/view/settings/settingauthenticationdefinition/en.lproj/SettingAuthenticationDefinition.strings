@@ -1,0 +1,21 @@
+
+/* Class = "UISegmentedControl"; 7E5-fo-Wdo.segmentTitles[0] = "pattern"; ObjectID = "7E5-fo-Wdo"; */
+"7E5-fo-Wdo.segmentTitles[0]" = "pattern";
+
+/* Class = "UISegmentedControl"; 7E5-fo-Wdo.segmentTitles[1] = "Password"; ObjectID = "7E5-fo-Wdo"; */
+"7E5-fo-Wdo.segmentTitles[1]" = "Password";
+
+/* Class = "UILabel"; text = "Draw your pattern"; ObjectID = "Kp7-sE-vYv"; */
+"Kp7-sE-vYv.text" = "Draw your pattern";
+
+/* Class = "UINavigationItem"; title = "Authentication Method"; ObjectID = "LHV-zY-pSe"; */
+"LHV-zY-pSe.title" = "Authentication Method";
+
+/* Class = "UILabel"; text = "Enter your password again"; ObjectID = "Rp7-XY-O6m"; */
+"Rp7-XY-O6m.text" = "Enter your password again";
+
+/* Class = "UILabel"; text = "At least 8 characters."; ObjectID = "fUl-hy-OU6"; */
+"fUl-hy-OU6.text" = "At least 8 characters.";
+
+/* Class = "UILabel"; text = "Enter your password"; ObjectID = "tnA-qI-CRm"; */
+"tnA-qI-CRm.text" = "Enter your password";

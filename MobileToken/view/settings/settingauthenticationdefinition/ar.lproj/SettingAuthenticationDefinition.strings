@@ -1,0 +1,21 @@
+
+/* Class = "UISegmentedControl"; 7E5-fo-Wdo.segmentTitles[0] = "الگو"; ObjectID = "7E5-fo-Wdo"; */
+"7E5-fo-Wdo.segmentTitles[0]" = "الگو";
+
+/* Class = "UISegmentedControl"; 7E5-fo-Wdo.segmentTitles[1] = "رمز"; ObjectID = "7E5-fo-Wdo"; */
+"7E5-fo-Wdo.segmentTitles[1]" = "رمز";
+
+/* Class = "UILabel"; text = "الگوی خود را وارد کنید."; ObjectID = "Kp7-sE-vYv"; */
+"Kp7-sE-vYv.text" = "الگوی خود را وارد کنید.";
+
+/* Class = "UINavigationItem"; title = "روش احراز هویت"; ObjectID = "LHV-zY-pSe"; */
+"LHV-zY-pSe.title" = "روش احراز هویت";
+
+/* Class = "UILabel"; text = "رمز را دوباره وارد کنید."; ObjectID = "Rp7-XY-O6m"; */
+"Rp7-XY-O6m.text" = "رمز را دوباره وارد کنید.";
+
+/* Class = "UILabel"; text = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد."; ObjectID = "fUl-hy-OU6"; */
+"fUl-hy-OU6.text" = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد.";
+
+/* Class = "UILabel"; text = "رمز خود را وارد کنید."; ObjectID = "tnA-qI-CRm"; */
+"tnA-qI-CRm.text" = "رمز خود را وارد کنید.";

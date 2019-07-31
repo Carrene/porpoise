@@ -52,11 +52,8 @@
 		AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
 		AC353B1421BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AC353B1E21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
-		AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
 		AC405AFC221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
-		AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AC46F6C02225651400BF611A /* HalfColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46F6BF2225651400BF611A /* HalfColorLabel.swift */; };
-		AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
 		AC4C4DC121CFB5D700B15B90 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC021CFB5D700B15B90 /* Setting.swift */; };
 		AC4C4DC421CFC87B00B15B90 /* SettingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */; };
 		AC4C4DC621CFC97E00B15B90 /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */; };
@@ -64,9 +61,7 @@
 		AC4C4DCA21D114B400B15B90 /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
 		AC4E1A4121E4CFBC007DEB86 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
 		AC4ECD29222670D400116002 /* ConvertArabicNumbersToEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */; };
-		AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
 		AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */; };
-		AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
 		AC54F38F22991F7A0012BBBA /* BankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54F38E22991F7A0012BBBA /* BankView.xib */; };
 		AC54F39022991F7A0012BBBA /* BankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54F38E22991F7A0012BBBA /* BankView.xib */; };
 		AC54F392229921150012BBBA /* BankViewXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54F391229921150012BBBA /* BankViewXib.swift */; };
@@ -75,12 +70,10 @@
 		AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AC57D76421FDA2B500DFDD33 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
 		AC57D76821FDCC1600DFDD33 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */; };
-		AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
 		AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
 		AC57D76E21FDD12F00DFDD33 /* html_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76D21FDD12F00DFDD33 /* html_copy.png */; };
 		AC5940C421D2190C00D56840 /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
 		AC5940C621D219FC00D56840 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
-		AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */; };
 		AC5BAB65221D4FF6003F3BE6 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */; };
 		AC5BAB69221D53BC003F3BE6 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */; };
 		AC5BAB6A221D53BC003F3BE6 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */; };
@@ -88,21 +81,15 @@
 		AC5E6BE021E9CFAC00A9D4C3 /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
 		AC5E6BE421E9D16400A9D4C3 /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
 		AC5E6BE621EB586800A9D4C3 /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
-		AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AC6D03EF2226BC5A005ECA55 /* BarButtonIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */; };
-		AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AC75A4F321B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
 		AC75A4F721B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
 		AC75A4F921B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */; };
 		AC9DD93A21F6F4E000DC98B3 /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
 		ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
-		ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
-		ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
 		ACAAD86021AE8075007266F4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */; };
 		ACAAD86421AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */; };
-		ACAAD86521AE8F24007266F4 /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */; };
 		ACAAD86A21AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */; };
-		ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
 		ACAAD87321AEBB1C007266F4 /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */; };
 		ACC902BA21A1812A0072CFD5 /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
 		ACCAF7B021DB6BD20057402B /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAF7AF21DB6BD20057402B /* MyApplication.swift */; };
@@ -112,7 +99,6 @@
 		ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
 		ACEC112C222BF87100AF933B /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC112B222BF87100AF933B /* JsonParser.swift */; };
 		ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
-		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
 		AF2420C8228D2C34003D464E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C7228D2C34003D464E /* Logger.swift */; };
 		AF2420CA228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
 		AF2420CB228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
@@ -148,14 +134,50 @@
 		AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
 		AF2D71EF22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */; };
 		AF2D71F022DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */; };
-		AF2D71F122DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */; };
-		AF2D71F222DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */; };
 		AF2F618922F18D0C00B702FD /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F618C22F18D0C00B702FD /* ApplicationLock.storyboard */; };
 		AF2F618A22F18D0C00B702FD /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F618C22F18D0C00B702FD /* ApplicationLock.storyboard */; };
 		AF2F619322F18DB400B702FD /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F619622F18DB400B702FD /* Authentication.storyboard */; };
 		AF2F619422F18DB400B702FD /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F619622F18DB400B702FD /* Authentication.storyboard */; };
 		AF2F61A522F190BF00B702FD /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61A822F190BF00B702FD /* AuthenticationDefinition.storyboard */; };
 		AF2F61A622F190BF00B702FD /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61A822F190BF00B702FD /* AuthenticationDefinition.storyboard */; };
+		AF2F61B822F1A2C800B702FD /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61BB22F1A2C800B702FD /* CardList.storyboard */; };
+		AF2F61B922F1A2C800B702FD /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61BB22F1A2C800B702FD /* CardList.storyboard */; };
+		AF2F61C622F1A37800B702FD /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61C922F1A37800B702FD /* ImportToken.storyboard */; };
+		AF2F61C722F1A37800B702FD /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61C922F1A37800B702FD /* ImportToken.storyboard */; };
+		AF2F61D722F1A78100B702FD /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61DA22F1A78100B702FD /* EditCardNameAlert.xib */; };
+		AF2F61D822F1A78100B702FD /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61DA22F1A78100B702FD /* EditCardNameAlert.xib */; };
+		AF2F61E322F1A7DC00B702FD /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61E622F1A7DC00B702FD /* DeleteTokensAlert.xib */; };
+		AF2F61E422F1A7DC00B702FD /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61E622F1A7DC00B702FD /* DeleteTokensAlert.xib */; };
+		AF2F61ED22F1A83600B702FD /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61F022F1A83600B702FD /* AddCardPagerViewCell.xib */; };
+		AF2F61EE22F1A83600B702FD /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61F022F1A83600B702FD /* AddCardPagerViewCell.xib */; };
+		AF2F61F722F1A90600B702FD /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61FA22F1A90600B702FD /* AddPasswordViewDesignable.xib */; };
+		AF2F61F822F1A90600B702FD /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61FA22F1A90600B702FD /* AddPasswordViewDesignable.xib */; };
+		AF2F620122F1A98500B702FD /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F620422F1A98500B702FD /* BankCardPagerViewCell.xib */; };
+		AF2F620222F1A98500B702FD /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F620422F1A98500B702FD /* BankCardPagerViewCell.xib */; };
+		AF2F621222F1AA1200B702FD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F621522F1AA1200B702FD /* CardCell.xib */; };
+		AF2F621322F1AA1200B702FD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F621522F1AA1200B702FD /* CardCell.xib */; };
+		AF2F621C22F1AA3700B702FD /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F621F22F1AA3700B702FD /* OtpViewDesignable.xib */; };
+		AF2F621D22F1AA3700B702FD /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F621F22F1AA3700B702FD /* OtpViewDesignable.xib */; };
+		AF2F622D22F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F623022F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib */; };
+		AF2F622E22F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F623022F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib */; };
+		AF2F623722F1B13500B702FD /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F623A22F1B13500B702FD /* AuthenticationTypeTableViewCell.xib */; };
+		AF2F623822F1B13500B702FD /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F623A22F1B13500B702FD /* AuthenticationTypeTableViewCell.xib */; };
+		AF2F624122F1B16600B702FD /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F624422F1B16600B702FD /* LockScreenTimeTableViewCell.xib */; };
+		AF2F624222F1B16600B702FD /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F624422F1B16600B702FD /* LockScreenTimeTableViewCell.xib */; };
+		AF2F624B22F1B1DD00B702FD /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F624E22F1B1DD00B702FD /* Registration.storyboard */; };
+		AF2F624C22F1B1DD00B702FD /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F624E22F1B1DD00B702FD /* Registration.storyboard */; };
+		AF2F625522F1B3C000B702FD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F625822F1B3C000B702FD /* Settings.storyboard */; };
+		AF2F625622F1B3C000B702FD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F625822F1B3C000B702FD /* Settings.storyboard */; };
+		AF2F625F22F1B51700B702FD /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F626222F1B51700B702FD /* Help.storyboard */; };
+		AF2F626022F1B51700B702FD /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F626222F1B51700B702FD /* Help.storyboard */; };
+		AF2F626922F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F626C22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard */; };
+		AF2F626A22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F626C22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard */; };
+		AF2F627A22F1B8E800B702FD /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F627D22F1B8E800B702FD /* Support.storyboard */; };
+		AF2F627B22F1B8E800B702FD /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F627D22F1B8E800B702FD /* Support.storyboard */; };
+		AF2F628422F1B96700B702FD /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F628722F1B96700B702FD /* Tabbar.storyboard */; };
+		AF2F628522F1B96700B702FD /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F628722F1B96700B702FD /* Tabbar.storyboard */; };
+		AF2F629722F1C7A100B702FD /* answer-en.html in Resources */ = {isa = PBXBuildFile; fileRef = AF2F629522F1C7A100B702FD /* answer-en.html */; };
+		AF2F629822F1C7A100B702FD /* answer-ar.html in Resources */ = {isa = PBXBuildFile; fileRef = AF2F629622F1C7A100B702FD /* answer-ar.html */; };
 		AF378011222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF378012222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
@@ -286,49 +308,30 @@
 		AF51CBA4222BF07C003051D7 /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
 		AF51CBA5222BF07C003051D7 /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
 		AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
-		AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
-		AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */; };
-		AF51CBAA222BF07C003051D7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54E26921FD94C0008764B8 /* Help.storyboard */; };
 		AF51CBAB222BF07C003051D7 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */; };
-		AF51CBAC222BF07C003051D7 /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */; };
 		AF51CBAD222BF07C003051D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
-		AF51CBAE222BF07C003051D7 /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */; };
 		AF51CBAF222BF07C003051D7 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
-		AF51CBB0222BF07C003051D7 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */; };
-		AF51CBB1222BF07C003051D7 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
 		AF51CBB2222BF07C003051D7 /* IRANSansMobile(FaNum).ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0C21BFA1CE00B80412 /* IRANSansMobile(FaNum).ttf */; };
-		AF51CBB3222BF07C003051D7 /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */; };
-		AF51CBB4222BF07C003051D7 /* answer.html in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76921FDCDD300DFDD33 /* answer.html */; };
 		AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
 		AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
-		AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */; };
-		AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD85C21AE7AED007266F4 /* Settings.storyboard */; };
-		AF51CBBB222BF07C003051D7 /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
-		AF51CBBC222BF07C003051D7 /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC46685621BC053300A0B5BA /* ImportToken.storyboard */; };
 		AF51CBBD222BF07C003051D7 /* html_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76D21FDD12F00DFDD33 /* html_copy.png */; };
 		AF51CBBE222BF07C003051D7 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
-		AF51CBBF222BF07C003051D7 /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */; };
-		AF51CBC0222BF07C003051D7 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64C168219FF9F2007BA829 /* Registration.storyboard */; };
 		AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */; };
-		AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
 		AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
 		AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
 		AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
 		AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
-		AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */; };
 		AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
 		AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
-		AF51CBCE222BF07C003051D7 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
 		AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF51CBD9222BF7C9003051D7 /* Info-debug.plist */; };
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
 		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
 		AFA9038E22EEE9EC00D2A4A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */; };
 		AFA9038F22EEE9EC00D2A4A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */; };
-		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AFB39B552189A6A600302624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
@@ -336,17 +339,14 @@
 		AFB39B5A2189A6A700302624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
 		AFB39B652189A6A700302624 /* TokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B642189A6A700302624 /* TokenTest.swift */; };
 		AFB39B702189A6A700302624 /* MobileTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */; };
-		AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB9BB27218EE0D7004F16DD /* CardCell.xib */; };
 		AFB9BB2A218EFB42004F16DD /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
 		AFBC2ADE21918E6400D37C84 /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
 		AFBC2AE12191936F00D37C84 /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
 		AFBC2AE5219197B000D37C84 /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
-		AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */; };
 		AFBFE16F21F457F300FDAE4A /* Base64urlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */; };
 		AFBFE17321F5DEAB00FDAE4A /* ImportTokenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */; };
 		AFC60E67222431C200F16215 /* StringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC60E66222431C200F16215 /* StringSeparator.swift */; };
 		AFDD174821EDFE3200C975CD /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
-		AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE190E9219029D30023E785 /* OtpViewDesignable.xib */; };
 		AFE190EC219049030023E785 /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
 		AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */; };
 		AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */; };
@@ -444,11 +444,8 @@
 		AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Light.ttf"; sourceTree = "<group>"; };
 		AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_UltraLight.ttf"; sourceTree = "<group>"; };
 		AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestUpdatesTableAdapter.swift; sourceTree = "<group>"; };
-		AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTokensAlert.xib; sourceTree = "<group>"; };
 		AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenAlertViewController.swift; sourceTree = "<group>"; };
-		AC46685621BC053300A0B5BA /* ImportToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImportToken.storyboard; sourceTree = "<group>"; };
 		AC46F6BF2225651400BF611A /* HalfColorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfColorLabel.swift; sourceTree = "<group>"; };
-		AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardList.storyboard; sourceTree = "<group>"; };
 		AC4C4DC021CFB5D700B15B90 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRealmRepository.swift; sourceTree = "<group>"; };
@@ -456,21 +453,17 @@
 		AC4C4DC921D114B400B15B90 /* SettingMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMediator.swift; sourceTree = "<group>"; };
 		AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertArabicNumbersToEnglish.swift; sourceTree = "<group>"; };
-		AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditCardNameAlert.xib; sourceTree = "<group>"; };
 		AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardNameAlertViewController.swift; sourceTree = "<group>"; };
-		AC54E26921FD94C0008764B8 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		AC54F38E22991F7A0012BBBA /* BankView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankView.xib; sourceTree = "<group>"; };
 		AC54F391229921150012BBBA /* BankViewXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewXib.swift; sourceTree = "<group>"; };
 		AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewAdapter.swift; sourceTree = "<group>"; };
 		AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
 		AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		AC57D76921FDCDD300DFDD33 /* answer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = answer.html; sourceTree = "<group>"; };
 		AC57D76B21FDD12500DFDD33 /* html_dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = html_dots.png; sourceTree = "<group>"; };
 		AC57D76D21FDD12F00DFDD33 /* html_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = html_copy.png; sourceTree = "<group>"; };
 		AC5940C321D2190C00D56840 /* SettingContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContractor.swift; sourceTree = "<group>"; };
 		AC5940C521D219FC00D56840 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
-		AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
 		AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportTableViewCell.xib; sourceTree = "<group>"; };
@@ -478,21 +471,15 @@
 		AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
 		AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListContractor.swift; sourceTree = "<group>"; };
 		AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRealmRepsitory.swift; sourceTree = "<group>"; };
-		AC64C168219FF9F2007BA829 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonIndicator.swift; sourceTree = "<group>"; };
-		AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionViewController.swift; sourceTree = "<group>"; };
 		AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPasswordViewController.swift; sourceTree = "<group>"; };
 		AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAuthenticationDefinitionPatternViewController.swift; sourceTree = "<group>"; };
 		AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankUtil.swift; sourceTree = "<group>"; };
 		ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
-		ACAAD85C21AE7AED007266F4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenTimeSettingTableViewCell.swift; sourceTree = "<group>"; };
-		ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockScreenTimeTableViewCell.xib; sourceTree = "<group>"; };
 		ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTypeSettingTableViewCell.swift; sourceTree = "<group>"; };
-		ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationTypeTableViewCell.xib; sourceTree = "<group>"; };
 		ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewAdapter.swift; sourceTree = "<group>"; };
 		ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConfirmationViewController.swift; sourceTree = "<group>"; };
 		ACCAF7AF21DB6BD20057402B /* MyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
@@ -503,7 +490,6 @@
 		ACDFD8AD21A96F4600839F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		ACEC112B222BF87100AF933B /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AF2420C7228D2C34003D464E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		AF2420C9228D2C6A003D464E /* ConstantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHelper.swift; sourceTree = "<group>"; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
@@ -536,7 +522,6 @@
 		AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSansMobile.ttf; path = MobileToken/assets/fonts/IRANSansMobile.ttf; sourceTree = SOURCE_ROOT; };
 		AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Medium.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Medium.ttf"; sourceTree = SOURCE_ROOT; };
 		AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEyeSettingTableViewCell.swift; sourceTree = "<group>"; };
-		AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPEyeSettingTableViewCell.xib; sourceTree = "<group>"; };
 		AF2F618322F1710500B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AF2F618422F1710500B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AF2F618522F1710600B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -555,6 +540,81 @@
 		AF2F61AA22F190CC00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AuthenticationDefinition.strings; sourceTree = "<group>"; };
 		AF2F61AC22F192AC00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthenticationDefinition.strings; sourceTree = "<group>"; };
 		AF2F61AE22F192AD00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/AuthenticationDefinition.strings; sourceTree = "<group>"; };
+		AF2F61B022F1A21100B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AF2F61BA22F1A2C800B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CardList.storyboard; sourceTree = "<group>"; };
+		AF2F61BD22F1A2CE00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CardList.strings; sourceTree = "<group>"; };
+		AF2F61C322F1A33300B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CardList.strings; sourceTree = "<group>"; };
+		AF2F61C522F1A33400B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/CardList.strings; sourceTree = "<group>"; };
+		AF2F61C822F1A37800B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ImportToken.storyboard; sourceTree = "<group>"; };
+		AF2F61CB22F1A38200B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ImportToken.strings; sourceTree = "<group>"; };
+		AF2F61CD22F1A5F400B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ImportToken.strings; sourceTree = "<group>"; };
+		AF2F61CF22F1A5F800B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ImportToken.strings; sourceTree = "<group>"; };
+		AF2F61D922F1A78100B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditCardNameAlert.xib; sourceTree = "<group>"; };
+		AF2F61DE22F1A78D00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EditCardNameAlert.strings; sourceTree = "<group>"; };
+		AF2F61E022F1A7AD00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EditCardNameAlert.strings; sourceTree = "<group>"; };
+		AF2F61E222F1A7B700B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/EditCardNameAlert.strings; sourceTree = "<group>"; };
+		AF2F61E522F1A7DC00B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DeleteTokensAlert.xib; sourceTree = "<group>"; };
+		AF2F61E822F1A7E300B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/DeleteTokensAlert.strings; sourceTree = "<group>"; };
+		AF2F61EA22F1A80C00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DeleteTokensAlert.strings; sourceTree = "<group>"; };
+		AF2F61EC22F1A80E00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/DeleteTokensAlert.strings; sourceTree = "<group>"; };
+		AF2F61EF22F1A83600B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddCardPagerViewCell.xib; sourceTree = "<group>"; };
+		AF2F61F222F1A84600B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddCardPagerViewCell.strings; sourceTree = "<group>"; };
+		AF2F61F422F1A88100B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddCardPagerViewCell.strings; sourceTree = "<group>"; };
+		AF2F61F622F1A88400B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/AddCardPagerViewCell.strings; sourceTree = "<group>"; };
+		AF2F61F922F1A90600B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
+		AF2F61FC22F1A90E00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddPasswordViewDesignable.strings; sourceTree = "<group>"; };
+		AF2F61FE22F1A92500B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddPasswordViewDesignable.strings; sourceTree = "<group>"; };
+		AF2F620022F1A92900B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/AddPasswordViewDesignable.strings; sourceTree = "<group>"; };
+		AF2F620322F1A98500B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BankCardPagerViewCell.xib; sourceTree = "<group>"; };
+		AF2F620622F1A98B00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BankCardPagerViewCell.strings; sourceTree = "<group>"; };
+		AF2F620822F1A98E00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BankCardPagerViewCell.strings; sourceTree = "<group>"; };
+		AF2F620A22F1A99100B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BankCardPagerViewCell.strings; sourceTree = "<group>"; };
+		AF2F621422F1AA1200B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CardCell.xib; sourceTree = "<group>"; };
+		AF2F621722F1AA1A00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CardCell.strings; sourceTree = "<group>"; };
+		AF2F621922F1AA1C00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/CardCell.strings; sourceTree = "<group>"; };
+		AF2F621B22F1AA1E00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CardCell.strings; sourceTree = "<group>"; };
+		AF2F621E22F1AA3700B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtpViewDesignable.xib; sourceTree = "<group>"; };
+		AF2F622822F1AA6E00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtpViewDesignable.strings; sourceTree = "<group>"; };
+		AF2F622A22F1AA7E00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtpViewDesignable.strings; sourceTree = "<group>"; };
+		AF2F622C22F1AA8100B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/OtpViewDesignable.strings; sourceTree = "<group>"; };
+		AF2F622F22F1AA9900B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OTPEyeSettingTableViewCell.xib; sourceTree = "<group>"; };
+		AF2F623222F1AAA100B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OTPEyeSettingTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F623422F1AAC000B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OTPEyeSettingTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F623622F1AAC300B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/OTPEyeSettingTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F623922F1B13500B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AuthenticationTypeTableViewCell.xib; sourceTree = "<group>"; };
+		AF2F623C22F1B13D00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AuthenticationTypeTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F623E22F1B14A00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthenticationTypeTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F624022F1B14D00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/AuthenticationTypeTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F624322F1B16600B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LockScreenTimeTableViewCell.xib; sourceTree = "<group>"; };
+		AF2F624622F1B16C00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LockScreenTimeTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F624822F1B1AB00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LockScreenTimeTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F624A22F1B1AD00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LockScreenTimeTableViewCell.strings; sourceTree = "<group>"; };
+		AF2F624D22F1B1DD00B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
+		AF2F625022F1B1E600B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Registration.strings; sourceTree = "<group>"; };
+		AF2F625222F1B2EC00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Registration.strings; sourceTree = "<group>"; };
+		AF2F625422F1B2F100B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Registration.strings; sourceTree = "<group>"; };
+		AF2F625722F1B3C000B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		AF2F625A22F1B3C500B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Settings.strings; sourceTree = "<group>"; };
+		AF2F625C22F1B40200B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Settings.strings; sourceTree = "<group>"; };
+		AF2F625E22F1B40300B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Settings.strings; sourceTree = "<group>"; };
+		AF2F626122F1B51700B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Help.storyboard; sourceTree = "<group>"; };
+		AF2F626422F1B51D00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Help.strings; sourceTree = "<group>"; };
+		AF2F626622F1B5DD00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Help.strings; sourceTree = "<group>"; };
+		AF2F626822F1B5DF00B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Help.strings; sourceTree = "<group>"; };
+		AF2F626B22F1B7E300B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingAuthenticationDefinition.storyboard; sourceTree = "<group>"; };
+		AF2F626E22F1B7F300B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SettingAuthenticationDefinition.strings; sourceTree = "<group>"; };
+		AF2F627022F1B8B500B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingAuthenticationDefinition.strings; sourceTree = "<group>"; };
+		AF2F627222F1B8B800B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SettingAuthenticationDefinition.strings; sourceTree = "<group>"; };
+		AF2F627C22F1B8E800B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Support.storyboard; sourceTree = "<group>"; };
+		AF2F627F22F1B8ED00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Support.strings; sourceTree = "<group>"; };
+		AF2F628122F1B8F000B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Support.strings; sourceTree = "<group>"; };
+		AF2F628322F1B8F100B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Support.strings; sourceTree = "<group>"; };
+		AF2F628622F1B96700B702FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tabbar.storyboard; sourceTree = "<group>"; };
+		AF2F628922F1B96E00B702FD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Tabbar.strings; sourceTree = "<group>"; };
+		AF2F629222F1B9AE00B702FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tabbar.strings; sourceTree = "<group>"; };
+		AF2F629422F1B9B200B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Tabbar.strings; sourceTree = "<group>"; };
+		AF2F629522F1C7A100B702FD /* answer-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "answer-en.html"; sourceTree = "<group>"; };
+		AF2F629622F1C7A100B702FD /* answer-ar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "answer-ar.html"; sourceTree = "<group>"; };
 		AF378010222D3E4B0097306C /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-r.plist"; sourceTree = "<group>"; };
 		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
@@ -569,7 +629,6 @@
 		AF9F2199221451C1005088B9 /* ISCOPDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPDebug.xcconfig; sourceTree = "<group>"; };
 		AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCertificateToData.swift; sourceTree = "<group>"; };
 		AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B4F2189A6A600302624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -583,18 +642,15 @@
 		AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTokenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB39B6F2189A6A700302624 /* MobileTokenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTokenUITests.swift; sourceTree = "<group>"; };
 		AFB39B712189A6A700302624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFB9BB27218EE0D7004F16DD /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellXibView.swift; sourceTree = "<group>"; };
 		AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagerViewAdapter.swift; sourceTree = "<group>"; };
 		AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardPagerViewCell.swift; sourceTree = "<group>"; };
 		AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardPagerViewCell.swift; sourceTree = "<group>"; };
-		AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardPagerViewCell.xib; sourceTree = "<group>"; };
 		AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64urlEncoded.swift; sourceTree = "<group>"; };
 		AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportTokenPresenter.swift; sourceTree = "<group>"; };
 		AFC60E66222431C200F16215 /* StringSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSeparator.swift; sourceTree = "<group>"; };
 		AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenContractor.swift; sourceTree = "<group>"; };
 		AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileToken.entitlements; sourceTree = "<group>"; };
-		AFE190E9219029D30023E785 /* OtpViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewDesignable.xib; sourceTree = "<group>"; };
 		AFE190EB219049030023E785 /* OtpViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewDesignable.swift; sourceTree = "<group>"; };
 		AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTappedAround.swift; sourceTree = "<group>"; };
 		AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
@@ -751,7 +807,7 @@
 		AC46685521BC050900A0B5BA /* importtoken */ = {
 			isa = PBXGroup;
 			children = (
-				AC46685621BC053300A0B5BA /* ImportToken.storyboard */,
+				AF2F61C922F1A37800B702FD /* ImportToken.storyboard */,
 			);
 			path = importtoken;
 			sourceTree = "<group>";
@@ -777,7 +833,7 @@
 		AC4C4DBD21CE7ADC00B15B90 /* cardlist */ = {
 			isa = PBXGroup;
 			children = (
-				AC4C4DBE21CE7AF300B15B90 /* CardList.storyboard */,
+				AF2F61BB22F1A2C800B702FD /* CardList.storyboard */,
 			);
 			path = cardlist;
 			sourceTree = "<group>";
@@ -803,8 +859,8 @@
 		AC54CF9E221AF90F009BF03B /* alerts */ = {
 			isa = PBXGroup;
 			children = (
-				AC54CF9F221AFA72009BF03B /* EditCardNameAlert.xib */,
-				AC405AF9221BE1DF006F5CFE /* DeleteTokensAlert.xib */,
+				AF2F61DA22F1A78100B702FD /* EditCardNameAlert.xib */,
+				AF2F61E622F1A7DC00B702FD /* DeleteTokensAlert.xib */,
 			);
 			path = alerts;
 			sourceTree = "<group>";
@@ -812,7 +868,7 @@
 		AC54E26821FD9480008764B8 /* help */ = {
 			isa = PBXGroup;
 			children = (
-				AC54E26921FD94C0008764B8 /* Help.storyboard */,
+				AF2F626222F1B51700B702FD /* Help.storyboard */,
 			);
 			path = help;
 			sourceTree = "<group>";
@@ -847,7 +903,8 @@
 		AC57D76621FDCBED00DFDD33 /* questions */ = {
 			isa = PBXGroup;
 			children = (
-				AC57D76921FDCDD300DFDD33 /* answer.html */,
+				AF2F629622F1C7A100B702FD /* answer-ar.html */,
+				AF2F629522F1C7A100B702FD /* answer-en.html */,
 				AC57D76D21FDD12F00DFDD33 /* html_copy.png */,
 				AC57D76B21FDD12500DFDD33 /* html_dots.png */,
 				AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */,
@@ -858,7 +915,7 @@
 		AC5BAB60221D4F9F003F3BE6 /* support */ = {
 			isa = PBXGroup;
 			children = (
-				AC5BAB61221D4FBA003F3BE6 /* Support.storyboard */,
+				AF2F627D22F1B8E800B702FD /* Support.storyboard */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -884,7 +941,7 @@
 		AC5E6BDD21E7175700A9D4C3 /* bankcard */ = {
 			isa = PBXGroup;
 			children = (
-				AF020852220177050021856A /* BankCardPagerViewCell.xib */,
+				AF2F620422F1A98500B702FD /* BankCardPagerViewCell.xib */,
 			);
 			path = bankcard;
 			sourceTree = "<group>";
@@ -892,7 +949,7 @@
 		AC5E6BDE21E717E200A9D4C3 /* addcard */ = {
 			isa = PBXGroup;
 			children = (
-				AFBC2AE4219197B000D37C84 /* AddCardPagerViewCell.xib */,
+				AF2F61F022F1A83600B702FD /* AddCardPagerViewCell.xib */,
 			);
 			path = addcard;
 			sourceTree = "<group>";
@@ -926,7 +983,7 @@
 		AC75A4EA21B26DA1009441C4 /* settingauthenticationdefinition */ = {
 			isa = PBXGroup;
 			children = (
-				AC75A4EB21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard */,
+				AF2F626C22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard */,
 			);
 			path = settingauthenticationdefinition;
 			sourceTree = "<group>";
@@ -988,7 +1045,7 @@
 		AC75A4FA21B270E3009441C4 /* basic */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD85C21AE7AED007266F4 /* Settings.storyboard */,
+				AF2F625822F1B3C000B702FD /* Settings.storyboard */,
 			);
 			path = basic;
 			sourceTree = "<group>";
@@ -1012,7 +1069,7 @@
 		ACAAD85821AD308A007266F4 /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD85921AD30A8007266F4 /* Tabbar.storyboard */,
+				AF2F628722F1B96700B702FD /* Tabbar.storyboard */,
 			);
 			path = tabbar;
 			sourceTree = "<group>";
@@ -1053,7 +1110,7 @@
 		ACAAD86621AE8F36007266F4 /* lockscreentime */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD86321AE8F24007266F4 /* LockScreenTimeTableViewCell.xib */,
+				AF2F624422F1B16600B702FD /* LockScreenTimeTableViewCell.xib */,
 			);
 			path = lockscreentime;
 			sourceTree = "<group>";
@@ -1061,7 +1118,7 @@
 		ACAAD86721AE8F5F007266F4 /* authenticationtype */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAD86921AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib */,
+				AF2F623A22F1B13500B702FD /* AuthenticationTypeTableViewCell.xib */,
 			);
 			path = authenticationtype;
 			sourceTree = "<group>";
@@ -1069,7 +1126,7 @@
 		ACC902B721A0406A0072CFD5 /* registration */ = {
 			isa = PBXGroup;
 			children = (
-				AC64C168219FF9F2007BA829 /* Registration.storyboard */,
+				AF2F624E22F1B1DD00B702FD /* Registration.storyboard */,
 			);
 			path = registration;
 			sourceTree = "<group>";
@@ -1193,7 +1250,7 @@
 		AF2D71EC22DF14860087B9C9 /* otpEye */ = {
 			isa = PBXGroup;
 			children = (
-				AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */,
+				AF2F623022F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib */,
 			);
 			path = otpEye;
 			sourceTree = "<group>";
@@ -1321,7 +1378,7 @@
 		AFAD22FB2190774200EC00CB /* addpassword */ = {
 			isa = PBXGroup;
 			children = (
-				AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */,
+				AF2F61FA22F1A90600B702FD /* AddPasswordViewDesignable.xib */,
 			);
 			path = addpassword;
 			sourceTree = "<group>";
@@ -1446,7 +1503,7 @@
 		AFE190E7219029430023E785 /* card */ = {
 			isa = PBXGroup;
 			children = (
-				AFB9BB27218EE0D7004F16DD /* CardCell.xib */,
+				AF2F621522F1AA1200B702FD /* CardCell.xib */,
 			);
 			path = card;
 			sourceTree = "<group>";
@@ -1454,7 +1511,7 @@
 		AFE190E82190296D0023E785 /* otp */ = {
 			isa = PBXGroup;
 			children = (
-				AFE190E9219029D30023E785 /* OtpViewDesignable.xib */,
+				AF2F621F22F1AA3700B702FD /* OtpViewDesignable.xib */,
 			);
 			path = otp;
 			sourceTree = "<group>";
@@ -1761,46 +1818,45 @@
 				AF2F61A622F190BF00B702FD /* AuthenticationDefinition.storyboard in Resources */,
 				AF378012222D3E4C0097306C /* banks.json in Resources */,
 				AF51CBA7222BF07C003051D7 /* IRANSansMobile-Light.ttf in Resources */,
-				AF51CBA8222BF07C003051D7 /* OtpViewDesignable.xib in Resources */,
-				AF51CBA9222BF07C003051D7 /* CardList.storyboard in Resources */,
-				AF51CBAA222BF07C003051D7 /* Help.storyboard in Resources */,
+				AF2F621D22F1AA3700B702FD /* OtpViewDesignable.xib in Resources */,
+				AF2F61B922F1A2C800B702FD /* CardList.storyboard in Resources */,
+				AF2F626022F1B51700B702FD /* Help.storyboard in Resources */,
 				AF51CBAB222BF07C003051D7 /* SupportTableViewCell.xib in Resources */,
-				AF51CBAC222BF07C003051D7 /* DeleteTokensAlert.xib in Resources */,
+				AF2F61E422F1A7DC00B702FD /* DeleteTokensAlert.xib in Resources */,
 				AF51CBAD222BF07C003051D7 /* Assets.xcassets in Resources */,
-				AF51CBAE222BF07C003051D7 /* SettingAuthenticationDefinition.storyboard in Resources */,
+				AF2F626A22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF51CBAF222BF07C003051D7 /* IRANSansMobile.ttf in Resources */,
-				AF51CBB0222BF07C003051D7 /* Support.storyboard in Resources */,
-				AF51CBB1222BF07C003051D7 /* AddCardPagerViewCell.xib in Resources */,
+				AF2F627B22F1B8E800B702FD /* Support.storyboard in Resources */,
+				AF2F61EE22F1A83600B702FD /* AddCardPagerViewCell.xib in Resources */,
 				AF51CBB2222BF07C003051D7 /* IRANSansMobile(FaNum).ttf in Resources */,
-				AF51CBB3222BF07C003051D7 /* AuthenticationTypeTableViewCell.xib in Resources */,
-				AF51CBB4222BF07C003051D7 /* answer.html in Resources */,
+				AF2F623822F1B13500B702FD /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AF51CBB5222BF07C003051D7 /* ActionSheet.xib in Resources */,
 				AF2F618A22F18D0C00B702FD /* ApplicationLock.storyboard in Resources */,
 				AF51CBB8222BF07C003051D7 /* BankCollectionViewCell.xib in Resources */,
-				AF51CBB9222BF07C003051D7 /* Tabbar.storyboard in Resources */,
-				AF51CBBA222BF07C003051D7 /* Settings.storyboard in Resources */,
-				AF51CBBB222BF07C003051D7 /* BankCardPagerViewCell.xib in Resources */,
-				AF51CBBC222BF07C003051D7 /* ImportToken.storyboard in Resources */,
+				AF2F628522F1B96700B702FD /* Tabbar.storyboard in Resources */,
+				AF2F625622F1B3C000B702FD /* Settings.storyboard in Resources */,
+				AF2F620222F1A98500B702FD /* BankCardPagerViewCell.xib in Resources */,
+				AF2F61C722F1A37800B702FD /* ImportToken.storyboard in Resources */,
 				AF51CBBD222BF07C003051D7 /* html_copy.png in Resources */,
 				AF51CBBE222BF07C003051D7 /* IRANSansMobile-UltraLight.ttf in Resources */,
-				AF51CBBF222BF07C003051D7 /* LockScreenTimeTableViewCell.xib in Resources */,
-				AF51CBC0222BF07C003051D7 /* Registration.storyboard in Resources */,
+				AF2F624222F1B16600B702FD /* LockScreenTimeTableViewCell.xib in Resources */,
+				AF2F624C22F1B1DD00B702FD /* Registration.storyboard in Resources */,
 				AF51CBC1222BF07C003051D7 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
-				AF51CBC2222BF07C003051D7 /* AddPasswordViewDesignable.xib in Resources */,
+				AF2F61F822F1A90600B702FD /* AddPasswordViewDesignable.xib in Resources */,
 				AC54F39022991F7A0012BBBA /* BankView.xib in Resources */,
 				AF51CBC3222BF07C003051D7 /* Localizable.strings in Resources */,
 				AF51CBC4222BF07C003051D7 /* IRANSansMobile-Medium.ttf in Resources */,
 				AF51CBC5222BF07C003051D7 /* Main.storyboard in Resources */,
 				AF51CBC6222BF07C003051D7 /* LatestUpdates.storyboard in Resources */,
 				AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */,
-				AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */,
+				AF2F61D822F1A78100B702FD /* EditCardNameAlert.xib in Resources */,
 				AF2F619422F18DB400B702FD /* Authentication.storyboard in Resources */,
-				AF2D71F222DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */,
+				AF2F622E22F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib in Resources */,
 				AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */,
 				AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */,
 				AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
-				AF51CBCE222BF07C003051D7 /* CardCell.xib in Resources */,
+				AF2F621322F1AA1200B702FD /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1813,48 +1869,49 @@
 				AC57D76C21FDD12600DFDD33 /* html_dots.png in Resources */,
 				AF2F61A522F190BF00B702FD /* AuthenticationDefinition.storyboard in Resources */,
 				AF286014219D7B0700D8C342 /* IRANSansMobile-Light.ttf in Resources */,
-				AFE190EA219029D30023E785 /* OtpViewDesignable.xib in Resources */,
-				AC4C4DBF21CE7AF300B15B90 /* CardList.storyboard in Resources */,
-				AC54E26A21FD94C0008764B8 /* Help.storyboard in Resources */,
+				AF2F621C22F1AA3700B702FD /* OtpViewDesignable.xib in Resources */,
+				AF2F61B822F1A2C800B702FD /* CardList.storyboard in Resources */,
+				AF2F625F22F1B51700B702FD /* Help.storyboard in Resources */,
 				AC5BAB6A221D53BC003F3BE6 /* SupportTableViewCell.xib in Resources */,
-				AC405AFA221BE1DF006F5CFE /* DeleteTokensAlert.xib in Resources */,
+				AF2F61E322F1A7DC00B702FD /* DeleteTokensAlert.xib in Resources */,
+				AF2F629722F1C7A100B702FD /* answer-en.html in Resources */,
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
-				AC75A4EC21B26DF6009441C4 /* SettingAuthenticationDefinition.storyboard in Resources */,
+				AF2F626922F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
 				AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */,
-				AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */,
-				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
+				AF2F627A22F1B8E800B702FD /* Support.storyboard in Resources */,
+				AF2F61ED22F1A83600B702FD /* AddCardPagerViewCell.xib in Resources */,
+				AF2F629822F1C7A100B702FD /* answer-ar.html in Resources */,
 				AF378011222D3E4C0097306C /* banks.json in Resources */,
-				AF2D71F122DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */,
+				AF2F622D22F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
-				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
-				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
+				AF2F623722F1B13500B702FD /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC2676B721B40E5000524636 /* ActionSheet.xib in Resources */,
 				AF2F618922F18D0C00B702FD /* ApplicationLock.storyboard in Resources */,
 				AF285FF4219C498000D8C342 /* BankCollectionViewCell.xib in Resources */,
-				ACAAD85A21AD30A8007266F4 /* Tabbar.storyboard in Resources */,
-				ACAAD85D21AE7AED007266F4 /* Settings.storyboard in Resources */,
-				AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */,
-				AC46685721BC053300A0B5BA /* ImportToken.storyboard in Resources */,
+				AF2F628422F1B96700B702FD /* Tabbar.storyboard in Resources */,
+				AF2F625522F1B3C000B702FD /* Settings.storyboard in Resources */,
+				AF2F620122F1A98500B702FD /* BankCardPagerViewCell.xib in Resources */,
+				AF2F61C622F1A37800B702FD /* ImportToken.storyboard in Resources */,
 				AC57D76E21FDD12F00DFDD33 /* html_copy.png in Resources */,
 				AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */,
-				ACAAD86521AE8F24007266F4 /* LockScreenTimeTableViewCell.xib in Resources */,
-				AC64C169219FF9F2007BA829 /* Registration.storyboard in Resources */,
+				AF2F624122F1B16600B702FD /* LockScreenTimeTableViewCell.xib in Resources */,
+				AF2F624B22F1B1DD00B702FD /* Registration.storyboard in Resources */,
 				AC353B1021BFA1CF00B80412 /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
-				AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */,
+				AF2F61F722F1A90600B702FD /* AddPasswordViewDesignable.xib in Resources */,
 				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
 				AC54F38F22991F7A0012BBBA /* BankView.xib in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
 				AF286013219D7B0400D8C342 /* IRANSansMobile-Bold.ttf in Resources */,
-				AC54CFA0221AFA73009BF03B /* EditCardNameAlert.xib in Resources */,
+				AF2F61D722F1A78100B702FD /* EditCardNameAlert.xib in Resources */,
 				AF2F619322F18DB400B702FD /* Authentication.storyboard in Resources */,
 				AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */,
 				AF3FAB57221992880053C9EE /* GoogleService-Info-d.plist in Resources */,
 				AC353B1221BFA1CF00B80412 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				AC353B1321BFA1CF00B80412 /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
-				AFB9BB28218EE0D7004F16DD /* CardCell.xib in Resources */,
+				AF2F621222F1AA1200B702FD /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2514,6 +2571,204 @@
 			name = AuthenticationDefinition.storyboard;
 			sourceTree = "<group>";
 		};
+		AF2F61BB22F1A2C800B702FD /* CardList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F61BA22F1A2C800B702FD /* Base */,
+				AF2F61BD22F1A2CE00B702FD /* ar */,
+				AF2F61C322F1A33300B702FD /* en */,
+				AF2F61C522F1A33400B702FD /* de */,
+			);
+			name = CardList.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F61C922F1A37800B702FD /* ImportToken.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F61C822F1A37800B702FD /* Base */,
+				AF2F61CB22F1A38200B702FD /* ar */,
+				AF2F61CD22F1A5F400B702FD /* en */,
+				AF2F61CF22F1A5F800B702FD /* de */,
+			);
+			name = ImportToken.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F61DA22F1A78100B702FD /* EditCardNameAlert.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F61D922F1A78100B702FD /* Base */,
+				AF2F61DE22F1A78D00B702FD /* ar */,
+				AF2F61E022F1A7AD00B702FD /* en */,
+				AF2F61E222F1A7B700B702FD /* de */,
+			);
+			name = EditCardNameAlert.xib;
+			sourceTree = "<group>";
+		};
+		AF2F61E622F1A7DC00B702FD /* DeleteTokensAlert.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F61E522F1A7DC00B702FD /* Base */,
+				AF2F61E822F1A7E300B702FD /* ar */,
+				AF2F61EA22F1A80C00B702FD /* en */,
+				AF2F61EC22F1A80E00B702FD /* de */,
+			);
+			name = DeleteTokensAlert.xib;
+			sourceTree = "<group>";
+		};
+		AF2F61F022F1A83600B702FD /* AddCardPagerViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F61EF22F1A83600B702FD /* Base */,
+				AF2F61F222F1A84600B702FD /* ar */,
+				AF2F61F422F1A88100B702FD /* en */,
+				AF2F61F622F1A88400B702FD /* de */,
+			);
+			name = AddCardPagerViewCell.xib;
+			sourceTree = "<group>";
+		};
+		AF2F61FA22F1A90600B702FD /* AddPasswordViewDesignable.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F61F922F1A90600B702FD /* Base */,
+				AF2F61FC22F1A90E00B702FD /* ar */,
+				AF2F61FE22F1A92500B702FD /* en */,
+				AF2F620022F1A92900B702FD /* de */,
+			);
+			name = AddPasswordViewDesignable.xib;
+			sourceTree = "<group>";
+		};
+		AF2F620422F1A98500B702FD /* BankCardPagerViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F620322F1A98500B702FD /* Base */,
+				AF2F620622F1A98B00B702FD /* en */,
+				AF2F620822F1A98E00B702FD /* de */,
+				AF2F620A22F1A99100B702FD /* ar */,
+			);
+			name = BankCardPagerViewCell.xib;
+			sourceTree = "<group>";
+		};
+		AF2F621522F1AA1200B702FD /* CardCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F621422F1AA1200B702FD /* Base */,
+				AF2F621722F1AA1A00B702FD /* en */,
+				AF2F621922F1AA1C00B702FD /* de */,
+				AF2F621B22F1AA1E00B702FD /* ar */,
+			);
+			name = CardCell.xib;
+			sourceTree = "<group>";
+		};
+		AF2F621F22F1AA3700B702FD /* OtpViewDesignable.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F621E22F1AA3700B702FD /* Base */,
+				AF2F622822F1AA6E00B702FD /* ar */,
+				AF2F622A22F1AA7E00B702FD /* en */,
+				AF2F622C22F1AA8100B702FD /* de */,
+			);
+			name = OtpViewDesignable.xib;
+			sourceTree = "<group>";
+		};
+		AF2F623022F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F622F22F1AA9900B702FD /* Base */,
+				AF2F623222F1AAA100B702FD /* ar */,
+				AF2F623422F1AAC000B702FD /* en */,
+				AF2F623622F1AAC300B702FD /* de */,
+			);
+			name = OTPEyeSettingTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		AF2F623A22F1B13500B702FD /* AuthenticationTypeTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F623922F1B13500B702FD /* Base */,
+				AF2F623C22F1B13D00B702FD /* ar */,
+				AF2F623E22F1B14A00B702FD /* en */,
+				AF2F624022F1B14D00B702FD /* de */,
+			);
+			name = AuthenticationTypeTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		AF2F624422F1B16600B702FD /* LockScreenTimeTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F624322F1B16600B702FD /* Base */,
+				AF2F624622F1B16C00B702FD /* ar */,
+				AF2F624822F1B1AB00B702FD /* en */,
+				AF2F624A22F1B1AD00B702FD /* de */,
+			);
+			name = LockScreenTimeTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		AF2F624E22F1B1DD00B702FD /* Registration.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F624D22F1B1DD00B702FD /* Base */,
+				AF2F625022F1B1E600B702FD /* ar */,
+				AF2F625222F1B2EC00B702FD /* en */,
+				AF2F625422F1B2F100B702FD /* de */,
+			);
+			name = Registration.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F625822F1B3C000B702FD /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F625722F1B3C000B702FD /* Base */,
+				AF2F625A22F1B3C500B702FD /* ar */,
+				AF2F625C22F1B40200B702FD /* en */,
+				AF2F625E22F1B40300B702FD /* de */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F626222F1B51700B702FD /* Help.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F626122F1B51700B702FD /* Base */,
+				AF2F626422F1B51D00B702FD /* ar */,
+				AF2F626622F1B5DD00B702FD /* en */,
+				AF2F626822F1B5DF00B702FD /* de */,
+			);
+			name = Help.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F626C22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F626B22F1B7E300B702FD /* Base */,
+				AF2F626E22F1B7F300B702FD /* ar */,
+				AF2F627022F1B8B500B702FD /* en */,
+				AF2F627222F1B8B800B702FD /* de */,
+			);
+			name = SettingAuthenticationDefinition.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F627D22F1B8E800B702FD /* Support.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F627C22F1B8E800B702FD /* Base */,
+				AF2F627F22F1B8ED00B702FD /* en */,
+				AF2F628122F1B8F000B702FD /* de */,
+				AF2F628322F1B8F100B702FD /* ar */,
+			);
+			name = Support.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2F628722F1B96700B702FD /* Tabbar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2F628622F1B96700B702FD /* Base */,
+				AF2F628922F1B96E00B702FD /* ar */,
+				AF2F629222F1B9AE00B702FD /* en */,
+				AF2F629422F1B9B200B702FD /* de */,
+			);
+			name = Tabbar.storyboard;
+			sourceTree = "<group>";
+		};
 		AFB39B532189A6A600302624 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2531,6 +2786,7 @@
 				AFB39B592189A6A700302624 /* Base */,
 				AF2F618322F1710500B702FD /* de */,
 				AF2F618622F1711600B702FD /* ar */,
+				AF2F61B022F1A21100B702FD /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

@@ -14,7 +14,12 @@ class QuestionViewController: BaseViewController,WKNavigationDelegate {
         configuration.preferences = preferences
         webView = WKWebView(frame: view.bounds, configuration: configuration)
         view.addSubview(webView)
-        let url = Bundle.main.url(forResource: "answer", withExtension: "html")
+        var url: URL?
+        if Locale.preferredLanguages[0] == "ar" {
+            url = Bundle.main.url(forResource: "answer-ar", withExtension: "html")
+        }else {
+            url = Bundle.main.url(forResource: "answer-en", withExtension: "html")
+        }
         let request = URLRequest(url: url!)
         webView.backgroundColor = R.color.primary()
         webView.tintColor = R.color.primary()

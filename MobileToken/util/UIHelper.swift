@@ -39,6 +39,14 @@ class UIHelper {
         return R.font.iranSansMobileFaNumMedium(size: size)!
     }
     
+    static func getFont(size: CGFloat)-> UIFont {
+        if Locale.preferredLanguages[0] == "ar" {
+            return R.font.iranSansMobileFaNum(size: size)!
+        } else {
+            return UIFont.systemFont(ofSize: size)
+        }
+    }
+    
     static func showFailedSnackBar() {
         SnackBarHelper.init(message: R.string.localizable.sb_bad_request(),color:R.color.errorDark()!, duration:TTGSnackbarDuration.short).show()
     }

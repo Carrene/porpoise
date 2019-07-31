@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "           تغییر شماره            "; ObjectID = "1UJ-1q-E33"; */
+"1UJ-1q-E33.text" = "           تغییر شماره            ";
+
+/* Class = "UILabel"; text = "کد فعال سازی ارسال شده را وارد کنید."; ObjectID = "332-EN-mwW"; */
+"332-EN-mwW.text" = "کد فعال سازی ارسال شده را وارد کنید.";
+
+/* Class = "UINavigationItem"; title = "فعال سازی"; ObjectID = "3L1-2P-FFA"; */
+"3L1-2P-FFA.title" = "فعال سازی";
+
+/* Class = "UINavigationItem"; title = "ثبت نام از طریق بانک"; ObjectID = "AMK-zo-eAg"; */
+"AMK-zo-eAg.title" = "ثبت نام از طریق بانک";
+
+/* Class = "UILabel"; text = "با این شماره ثبت نام کرده اید."; ObjectID = "CC4-XA-VAv"; */
+"CC4-XA-VAv.text" = "با این شماره ثبت نام کرده اید.";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "DSW-cS-5rQ"; */
+"DSW-cS-5rQ.title" = " ";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "G9q-D2-cf1"; */
+"G9q-D2-cf1.text" = "123";
+
+/* Class = "UIBarButtonItem"; title = "تایید"; ObjectID = "Hmr-eP-5ar"; */
+"Hmr-eP-5ar.title" = "تایید";
+
+/* Class = "UILabel"; text = "+98"; ObjectID = "Mmg-mU-OoY"; */
+"Mmg-mU-OoY.text" = "+98";
+
+/* Class = "UILabel"; text = "بانک مورد نظر برای ثبت‌نام را انتخاب کنید."; ObjectID = "Olh-5b-lfG"; */
+"Olh-5b-lfG.text" = "بانک مورد نظر برای ثبت‌نام را انتخاب کنید.";
+
+/* Class = "UILabel"; text = "کشور خود را انتخاب کنید"; ObjectID = "Xx4-zz-5hZ"; */
+"Xx4-zz-5hZ.text" = "کشور خود را انتخاب کنید";
+
+/* Class = "UITabBarItem"; title = "افزودن بانک"; ObjectID = "fIu-iE-rvY"; */
+"fIu-iE-rvY.title" = "افزودن بانک";
+
+/* Class = "UITextField"; placeholder = "کد فعال سازی"; ObjectID = "frk-Zy-hGa"; */
+"frk-Zy-hGa.placeholder" = "کد فعال سازی";
+
+/* Class = "UIBarButtonItem"; title = "تایید"; ObjectID = "gx1-xG-geb"; */
+"gx1-xG-geb.title" = "تایید";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "nAV-Jx-a3S"; */
+"nAV-Jx-a3S.title" = " ";
+
+/* Class = "UILabel"; text = "(۰۵:۰۰)"; ObjectID = "rNP-va-IUg"; */
+"rNP-va-IUg.text" = "(۰۵:۰۰)";
+
+/* Class = "UILabel"; text = "شماره تلفن همراه خود را وارد کنید"; ObjectID = "rRT-Ye-jcl"; */
+"rRT-Ye-jcl.text" = "شماره تلفن همراه خود را وارد کنید";

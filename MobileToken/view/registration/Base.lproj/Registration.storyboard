@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YO5-0U-gs9">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
+        <array key="IRANSansMobile(FaNum)_Bold.ttf">
+            <string>IRANSansMobileFaNum-Bold</string>
+        </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+        <array key="IranSansReqular.ttf">
+            <string>IranianSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="h8X-t3-itR">
+            <objects>
+                <navigationController storyboardIdentifier="registrationMain" id="YO5-0U-gs9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Tj-D3-wN4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t2g-dI-h8H" kind="relationship" relationship="rootViewController" id="mdH-Fz-ioe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IR-bC-fEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="-35"/>
+        </scene>
+        <!--Register through organization-->
+        <scene sceneID="fHD-NO-6OC">
+            <objects>
+                <viewController storyboardIdentifier="PhoneInputViewController" id="t2g-dI-h8H" customClass="PhoneInputViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R7h-R6-ad1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cui-1P-fqF" userLabel="View bank">
+                                <rect key="frame" x="0.0" y="151" width="375" height="100"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-PK-q7R">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="100"/>
+                                        <color key="backgroundColor" name="primary"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="Qfx-jO-6LW">
+                                            <size key="itemSize" width="140" height="100"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rnE-JR-o7q" customClass="BankCollectionViewCell" customModule="MobileToken" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="centerX" secondItem="cui-1P-fqF" secondAttribute="centerX" id="SNA-9n-Lmh"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="centerY" secondItem="cui-1P-fqF" secondAttribute="centerY" id="Zac-bY-eTg"/>
+                                    <constraint firstAttribute="height" constant="100" id="bMe-ev-IwE"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="height" secondItem="cui-1P-fqF" secondAttribute="height" id="jHL-Ct-Bja"/>
+                                    <constraint firstItem="Me0-PK-q7R" firstAttribute="width" secondItem="cui-1P-fqF" secondAttribute="width" constant="-40" id="z2X-x8-ZxM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-vC-o6G" userLabel="View textfields">
+                                <rect key="frame" x="20" y="299" width="335" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk3-9c-TtT" userLabel="vline">
+                                        <rect key="frame" x="33.666666666666657" y="89" width="268" height="2"/>
+                                        <color key="backgroundColor" red="0.78138738870000002" green="0.78198647499999996" blue="0.78148013350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="lqX-VZ-Ua0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYH-B5-UKm" userLabel="viewCountry">
+                                        <rect key="frame" x="18.666666666666657" y="20" width="298" height="45"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-d6-I82" userLabel="vCountryPicker" customClass="CountryPickerView" customModule="CountryPickerView">
+                                                <rect key="frame" x="10" y="0.0" width="283" height="45"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="tzl-2f-H2m"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9Rd-d6-I82" firstAttribute="centerY" secondItem="bYH-B5-UKm" secondAttribute="centerY" id="6tf-en-7qy"/>
+                                            <constraint firstAttribute="right" secondItem="9Rd-d6-I82" secondAttribute="right" constant="5" id="F0R-G8-RLl"/>
+                                            <constraint firstAttribute="height" constant="45" id="pOw-Uu-DJh"/>
+                                            <constraint firstItem="9Rd-d6-I82" firstAttribute="width" secondItem="bYH-B5-UKm" secondAttribute="width" constant="-15" id="vfM-X1-1rU"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your country" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-zz-5hZ" userLabel="label enter country">
+                                        <rect key="frame" x="18.666666666666657" y="67" width="298" height="14"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your phone number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRT-Ye-jcl" userLabel="label enter phone">
+                                        <rect key="frame" x="16" y="152" width="303" height="14"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Uc-PUg" userLabel="vPhone">
+                                        <rect key="frame" x="16" y="105" width="303" height="45"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l93-8h-1tj" userLabel="phoneTextField">
+                                                <rect key="frame" x="48.666666666666671" y="2.6666666666666856" width="244.33333333333331" height="40"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDoneKeyboard:" destination="t2g-dI-h8H" eventType="editingDidEnd" id="WN7-Ug-2au"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-mU-OoY">
+                                                <rect key="frame" x="16" y="0.0" width="27.666666666666671" height="45"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="l93-8h-1tj" firstAttribute="centerY" secondItem="E24-Uc-PUg" secondAttribute="centerY" id="FhJ-0Z-tN9"/>
+                                            <constraint firstAttribute="height" constant="45" id="OPt-dc-IZa"/>
+                                            <constraint firstItem="Mmg-mU-OoY" firstAttribute="left" secondItem="E24-Uc-PUg" secondAttribute="left" constant="16" id="k0d-4l-cs3"/>
+                                            <constraint firstItem="Mmg-mU-OoY" firstAttribute="height" secondItem="E24-Uc-PUg" secondAttribute="height" id="lUm-Gz-UDw"/>
+                                            <constraint firstAttribute="right" secondItem="l93-8h-1tj" secondAttribute="right" constant="10" id="r1B-39-hjn"/>
+                                            <constraint firstItem="Mmg-mU-OoY" firstAttribute="centerY" secondItem="E24-Uc-PUg" secondAttribute="centerY" id="uH1-RM-s18"/>
+                                            <constraint firstItem="l93-8h-1tj" firstAttribute="height" secondItem="E24-Uc-PUg" secondAttribute="height" constant="-5" id="uuX-UW-OFo"/>
+                                            <constraint firstItem="Mmg-mU-OoY" firstAttribute="right" secondItem="l93-8h-1tj" secondAttribute="left" constant="-5" id="xT0-0p-N38"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstItem="Wk3-9c-TtT" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="044-Oe-ae3"/>
+                                    <constraint firstItem="bYH-B5-UKm" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="091-mj-ONI"/>
+                                    <constraint firstItem="rRT-Ye-jcl" firstAttribute="right" secondItem="E24-Uc-PUg" secondAttribute="right" id="3Cd-YE-rdC"/>
+                                    <constraint firstAttribute="height" constant="180" id="8UA-3B-NWa"/>
+                                    <constraint firstItem="Xx4-zz-5hZ" firstAttribute="right" secondItem="bYH-B5-UKm" secondAttribute="right" id="ASM-JJ-jq5"/>
+                                    <constraint firstItem="bYH-B5-UKm" firstAttribute="top" secondItem="Wp6-vC-o6G" secondAttribute="top" constant="20" id="JVp-Kn-N54"/>
+                                    <constraint firstItem="Wk3-9c-TtT" firstAttribute="width" secondItem="Wp6-vC-o6G" secondAttribute="width" multiplier="0.8" id="Mhm-cG-FX0"/>
+                                    <constraint firstAttribute="trailing" secondItem="E24-Uc-PUg" secondAttribute="trailing" constant="16" id="REC-9b-xEk"/>
+                                    <constraint firstItem="Wk3-9c-TtT" firstAttribute="centerY" secondItem="Wp6-vC-o6G" secondAttribute="centerY" id="T8j-ve-LXe"/>
+                                    <constraint firstItem="E24-Uc-PUg" firstAttribute="top" secondItem="bYH-B5-UKm" secondAttribute="bottom" constant="40" id="We3-cd-4rz"/>
+                                    <constraint firstItem="rRT-Ye-jcl" firstAttribute="top" secondItem="E24-Uc-PUg" secondAttribute="bottom" constant="2" id="XBK-yR-0eo"/>
+                                    <constraint firstItem="E24-Uc-PUg" firstAttribute="width" secondItem="bYH-B5-UKm" secondAttribute="width" constant="5" id="ddT-Dn-YMl"/>
+                                    <constraint firstItem="Xx4-zz-5hZ" firstAttribute="top" secondItem="bYH-B5-UKm" secondAttribute="bottom" constant="2" id="f72-4g-P9e"/>
+                                    <constraint firstItem="E24-Uc-PUg" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="gJ5-TD-Mau"/>
+                                    <constraint firstItem="Xx4-zz-5hZ" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="nq4-bu-y3g"/>
+                                    <constraint firstItem="rRT-Ye-jcl" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="oja-V3-PA7"/>
+                                    <constraint firstItem="E24-Uc-PUg" firstAttribute="leading" secondItem="Wp6-vC-o6G" secondAttribute="leading" constant="16" id="vSm-x3-gJ0"/>
+                                    <constraint firstItem="E24-Uc-PUg" firstAttribute="height" secondItem="bYH-B5-UKm" secondAttribute="height" id="y2G-MY-mUH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an organization to register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-5b-lfG">
+                                <rect key="frame" x="5" y="101" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nkV-SJ-1Xs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="16"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already registered with this number." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-XA-VAv">
+                                <rect key="frame" x="20" y="328" width="335" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzG-7L-ohl" userLabel="labelPhone">
+                                <rect key="frame" x="187.66666666666666" y="426.66666666666669" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                <color key="textColor" name="buttonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="AzG-7L-ohl" firstAttribute="centerY" secondItem="E24-Uc-PUg" secondAttribute="centerY" id="6Ab-wU-NUP"/>
+                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="left" secondItem="rD3-UM-afT" secondAttribute="left" constant="20" id="7Z4-1H-0yY"/>
+                            <constraint firstItem="Olh-5b-lfG" firstAttribute="left" secondItem="rD3-UM-afT" secondAttribute="left" constant="5" id="8Fj-Bt-AaF"/>
+                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="DPY-Rl-4H5"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="centerX" secondItem="rD3-UM-afT" secondAttribute="centerX" id="Hsf-xI-fhB"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="width" secondItem="Wp6-vC-o6G" secondAttribute="width" id="IIn-iZ-1AL"/>
+                            <constraint firstItem="cui-1P-fqF" firstAttribute="top" secondItem="Olh-5b-lfG" secondAttribute="bottom" constant="20" id="KUG-JB-XjB"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="right" secondItem="Wp6-vC-o6G" secondAttribute="right" constant="20" id="dSE-W4-c0L"/>
+                            <constraint firstItem="rD3-UM-afT" firstAttribute="right" secondItem="cui-1P-fqF" secondAttribute="right" id="drx-XH-nAw"/>
+                            <constraint firstItem="CC4-XA-VAv" firstAttribute="centerY" secondItem="bYH-B5-UKm" secondAttribute="centerY" id="ket-mP-DV3"/>
+                            <constraint firstItem="AzG-7L-ohl" firstAttribute="centerX" secondItem="Wp6-vC-o6G" secondAttribute="centerX" id="n5L-2R-cuW"/>
+                            <constraint firstItem="Olh-5b-lfG" firstAttribute="right" secondItem="rD3-UM-afT" secondAttribute="right" constant="5" id="rwN-DB-cdD"/>
+                            <constraint firstItem="Wp6-vC-o6G" firstAttribute="top" secondItem="cui-1P-fqF" secondAttribute="bottom" constant="48" id="sTa-QV-y7L"/>
+                            <constraint firstItem="cui-1P-fqF" firstAttribute="left" secondItem="rD3-UM-afT" secondAttribute="left" id="tHQ-4x-4bc"/>
+                            <constraint firstItem="Olh-5b-lfG" firstAttribute="top" secondItem="rD3-UM-afT" secondAttribute="top" constant="13" id="zdI-ft-Vfn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rD3-UM-afT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add organization" image="plus-icon" id="fIu-iE-rvY">
+                        <color key="badgeColor" name="buttonColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Register through organization" id="AMK-zo-eAg">
+                        <barButtonItem key="backBarButtonItem" title=" " id="nAV-Jx-a3S"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="gx1-xG-geb">
+                            <color key="tintColor" name="secondary"/>
+                            <connections>
+                                <action selector="onButtonRegister:" destination="t2g-dI-h8H" id="2NK-Jb-P3Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionViewbank" destination="Me0-PK-q7R" id="hsV-I3-dgx"/>
+                        <outlet property="confirmBarButton" destination="gx1-xG-geb" id="35l-92-m12"/>
+                        <outlet property="countryPickerView" destination="9Rd-d6-I82" id="TE6-5P-yPy"/>
+                        <outlet property="labelAlreadyRegistered" destination="CC4-XA-VAv" id="B62-Xk-gMO"/>
+                        <outlet property="labelChooseCountry" destination="Xx4-zz-5hZ" id="5vS-G7-pIZ"/>
+                        <outlet property="labelChooseYourBank" destination="Olh-5b-lfG" id="P1R-AU-4Zj"/>
+                        <outlet property="labelEnterYourPhone" destination="rRT-Ye-jcl" id="nQI-LX-dlS"/>
+                        <outlet property="labelPhone" destination="AzG-7L-ohl" id="5Kn-Qg-9rD"/>
+                        <outlet property="labelPhoneCode" destination="Mmg-mU-OoY" id="IjJ-p2-dJ8"/>
+                        <outlet property="textFieldPhoneNumber" destination="l93-8h-1tj" id="Zku-If-riz"/>
+                        <outlet property="viewCountry" destination="bYH-B5-UKm" id="zc6-Ku-c48"/>
+                        <outlet property="viewLine" destination="Wk3-9c-TtT" id="5iq-0t-v3b"/>
+                        <outlet property="viewPhone" destination="E24-Uc-PUg" id="Nt3-Sf-Bhl"/>
+                        <outlet property="viewTextfields" destination="Wp6-vC-o6G" id="feT-ax-fgl"/>
+                        <segue destination="zAA-ph-Mfk" kind="show" identifier="phoneInputToActivationSegue" id="H1o-kK-OwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCl-9k-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-33.733133433283363"/>
+        </scene>
+        <!--Activate-->
+        <scene sceneID="VtY-a8-4gS">
+            <objects>
+                <viewController id="zAA-ph-Mfk" customClass="PhoneConfirmationViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oog-9L-98P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-T5-FwR" userLabel="vCode">
+                                <rect key="frame" x="18.666666666666657" y="101" width="337.66666666666674" height="227"/>
+                                <subviews>
+                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bop-sD-gGJ" userLabel="viewBank" customClass="BankViewXib" customModule="MobileToken" customModuleProvider="target">
+                                        <rect key="frame" x="99" y="13" width="140" height="100"/>
+                                        <color key="backgroundColor" name="primary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="3FH-FU-Dfn"/>
+                                            <constraint firstAttribute="height" constant="100" id="teQ-1B-uOr"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-D2-cf1" userLabel="lbPhone">
+                                        <rect key="frame" x="155.66666666666669" y="120" width="26.333333333333343" height="27"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                        <color key="textColor" name="buttonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-Ch-7PK" userLabel="ViewTextField">
+                                        <rect key="frame" x="17" y="152" width="303.66666666666669" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Activation code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frk-Zy-hGa" userLabel="tfCode">
+                                                <rect key="frame" x="2.3333333333333428" y="5" width="299" height="35"/>
+                                                <color key="backgroundColor" name="primaryLight"/>
+                                                <color key="tintColor" name="buttonColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="rG8-s9-F8q"/>
+                                                </constraints>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" enablesReturnKeyAutomatically="YES" textContentType="one-time-code"/>
+                                                <connections>
+                                                    <action selector="onTfPhoneEditDidChanged:" destination="zAA-ph-Mfk" eventType="editingDidEnd" id="ZwU-6d-nKp"/>
+                                                    <action selector="textFieldDidChanged:" destination="zAA-ph-Mfk" eventType="editingChanged" id="xxG-xe-eLs"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" name="primary"/>
+                                        <constraints>
+                                            <constraint firstItem="frk-Zy-hGa" firstAttribute="width" secondItem="PmH-Ch-7PK" secondAttribute="width" constant="-5" id="4Pq-es-4Wx"/>
+                                            <constraint firstAttribute="bottom" secondItem="frk-Zy-hGa" secondAttribute="bottom" id="Srg-ri-SIS"/>
+                                            <constraint firstItem="frk-Zy-hGa" firstAttribute="centerX" secondItem="PmH-Ch-7PK" secondAttribute="centerX" id="cZc-FA-pt7"/>
+                                            <constraint firstAttribute="height" constant="40" id="sf6-zW-dJR"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activation code is sent" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="332-EN-mwW" userLabel="label enter code">
+                                        <rect key="frame" x="198.66666666666669" y="197" width="122" height="14"/>
+                                        <fontDescription key="fontDescription" name="IranianSans" family="Iranian Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="332-EN-mwW" secondAttribute="bottom" constant="16" id="363-YZ-QK3"/>
+                                    <constraint firstItem="G9q-D2-cf1" firstAttribute="top" secondItem="bop-sD-gGJ" secondAttribute="bottom" constant="7" id="9jY-w0-7mk"/>
+                                    <constraint firstItem="PmH-Ch-7PK" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="DbU-ta-IUZ"/>
+                                    <constraint firstItem="332-EN-mwW" firstAttribute="right" secondItem="PmH-Ch-7PK" secondAttribute="right" id="JDV-oO-1rt"/>
+                                    <constraint firstItem="G9q-D2-cf1" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="LIP-42-pWd"/>
+                                    <constraint firstAttribute="height" constant="110" id="WEk-CA-hH6"/>
+                                    <constraint firstItem="bop-sD-gGJ" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="czZ-bZ-F2K"/>
+                                    <constraint firstItem="PmH-Ch-7PK" firstAttribute="top" secondItem="G9q-D2-cf1" secondAttribute="bottom" constant="5" id="phH-MK-fnI"/>
+                                    <constraint firstItem="PmH-Ch-7PK" firstAttribute="width" secondItem="zi8-T5-FwR" secondAttribute="width" multiplier="0.9" id="u4Q-lE-yvZ"/>
+                                    <constraint firstItem="bop-sD-gGJ" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="top" constant="13" id="uBK-Kc-Ftf"/>
+                                    <constraint firstItem="332-EN-mwW" firstAttribute="top" secondItem="PmH-Ch-7PK" secondAttribute="bottom" constant="5" id="wYv-nQ-APm"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WEk-CA-hH6"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBh-yJ-CU2" userLabel="vChangeNumber">
+                                <rect key="frame" x="18.666666666666657" y="344" width="337.66666666666674" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Change number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-1q-E33" userLabel="lbChangeNumber">
+                                        <rect key="frame" x="16" y="0.0" width="169" height="40"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                        <color key="textColor" name="secondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(۰۵:۰۰)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNP-va-IUg" userLabel="lbCounter">
+                                        <rect key="frame" x="153" y="0.0" width="168.66666666666663" height="40"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="16"/>
+                                        <color key="textColor" name="buttonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstItem="rNP-va-IUg" firstAttribute="width" secondItem="1UJ-1q-E33" secondAttribute="width" id="6ue-9E-iDy"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="width" secondItem="qBh-yJ-CU2" secondAttribute="width" multiplier="0.5" id="790-WT-If3"/>
+                                    <constraint firstItem="rNP-va-IUg" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="LYi-Nx-ITp"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="height" secondItem="qBh-yJ-CU2" secondAttribute="height" id="fJC-Ut-bh2"/>
+                                    <constraint firstAttribute="height" constant="40" id="hZe-wd-Q5U"/>
+                                    <constraint firstAttribute="right" secondItem="rNP-va-IUg" secondAttribute="right" constant="16" id="rd3-Do-fEh"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="left" secondItem="qBh-yJ-CU2" secondAttribute="left" constant="16" id="wWM-pX-Gj8"/>
+                                    <constraint firstItem="rNP-va-IUg" firstAttribute="height" secondItem="1UJ-1q-E33" secondAttribute="height" id="xNv-Jz-HD2"/>
+                                    <constraint firstItem="1UJ-1q-E33" firstAttribute="centerY" secondItem="qBh-yJ-CU2" secondAttribute="centerY" id="xtE-0q-D6n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="width" secondItem="oog-9L-98P" secondAttribute="width" multiplier="0.9" id="4gC-Ao-258"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="width" secondItem="oog-9L-98P" secondAttribute="width" multiplier="0.9" id="7z7-bZ-edO"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="zi8-T5-FwR" secondAttribute="centerX" id="8hZ-1P-GLw"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="DrW-Ii-H0b"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="top" secondItem="m28-i2-93v" secondAttribute="top" constant="13" id="RQx-Jq-lyF"/>
+                            <constraint firstItem="qBh-yJ-CU2" firstAttribute="top" secondItem="zi8-T5-FwR" secondAttribute="bottom" constant="16" id="SG3-Wh-Wmg"/>
+                            <constraint firstItem="zi8-T5-FwR" firstAttribute="centerX" secondItem="m28-i2-93v" secondAttribute="centerX" id="Ywe-3J-7H9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m28-i2-93v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Activate" id="3L1-2P-FFA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="DSW-cS-5rQ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="Hmr-eP-5ar">
+                            <color key="tintColor" name="secondary"/>
+                            <connections>
+                                <action selector="onConfirm:" destination="zAA-ph-Mfk" id="cfP-se-aFR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="NavigationItemTitle" destination="3L1-2P-FFA" id="oEw-YQ-AJJ"/>
+                        <outlet property="bankNib" destination="bop-sD-gGJ" id="odE-Hg-rtM"/>
+                        <outlet property="btConfirmation" destination="Hmr-eP-5ar" id="w13-Bs-Gnk"/>
+                        <outlet property="labelChangeNumber" destination="1UJ-1q-E33" id="dKr-jK-R3A"/>
+                        <outlet property="labelCounter" destination="rNP-va-IUg" id="Onl-Hc-Oc4"/>
+                        <outlet property="labelEnterCode" destination="332-EN-mwW" id="XUI-I5-zmn"/>
+                        <outlet property="labelPhone" destination="G9q-D2-cf1" id="EIh-lD-9yS"/>
+                        <outlet property="textFieldCode" destination="frk-Zy-hGa" id="lPZ-p3-c4e"/>
+                        <outlet property="viewChangeNumber" destination="qBh-yJ-CU2" id="FEz-5z-3Nd"/>
+                        <outlet property="viewCode" destination="zi8-T5-FwR" id="Onm-en-ezx"/>
+                        <outlet property="viewTextfield" destination="PmH-Ch-7PK" id="0lf-Tf-LU3"/>
+                        <segue destination="eNx-MU-pEA" kind="showDetail" identifier="PhoneConfirmationToCardList" id="EJz-of-0od"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9x-k3-vgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-34"/>
+        </scene>
+        <!--MainTabbar-->
+        <scene sceneID="2e5-KZ-59c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabbar" referencedIdentifier="MainTabbar" id="eNx-MU-pEA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYI-Ru-0fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus-icon" width="20" height="20"/>
+        <namedColor name="buttonColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryLight">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

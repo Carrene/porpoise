@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "رمز برای حذف را انتخاب کنید."; ObjectID = "PUL-bx-NIO"; */
+"PUL-bx-NIO.text" = "رمز برای حذف را انتخاب کنید.";
+
+/* Class = "UIButton"; normalTitle = "حذف رمز دوم کارت"; ObjectID = "pcP-W1-faz"; */
+"pcP-W1-faz.normalTitle" = "حذف رمز دوم کارت";
+
+/* Class = "UIButton"; normalTitle = "حذف رمز اول کارت"; ObjectID = "pnI-L7-mq8"; */
+"pnI-L7-mq8.normalTitle" = "حذف رمز اول کارت";

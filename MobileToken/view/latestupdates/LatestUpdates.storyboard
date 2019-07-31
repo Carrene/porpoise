@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Op2-uj-cX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Op2-uj-cX5">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ویژگی های جدید-->
+        <!--New features-->
         <scene sceneID="Pwm-fc-atc">
             <objects>
                 <viewController id="Op2-uj-cX5" customClass="LatestUpdatesViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,8 +47,8 @@
                                                                 <constraint firstAttribute="height" constant="8" id="me9-bB-fos"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضافه شدن رمزهای دوم و اینترنتی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-LH-UUB">
-                                                            <rect key="frame" x="83" y="3.3333333333333339" width="217" height="25.333333333333329"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LatestUpdates.storyboard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-LH-UUB">
+                                                            <rect key="frame" x="101" y="3" width="199" height="26"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
                                                             <color key="textColor" name="buttonColor"/>
                                                             <nil key="highlightedColor"/>
@@ -105,7 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B5N-fd-tez"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ویژگی های جدید" id="AWV-9p-XHD">
+                    <navigationItem key="navigationItem" title="New features" id="AWV-9p-XHD">
                         <barButtonItem key="backBarButtonItem" title="  " id="Tzn-0x-wI9">
                             <color key="tintColor" name="buttonColor"/>
                         </barButtonItem>
@@ -118,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeZ-5R-esH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="164"/>
+            <point key="canvasLocation" x="33.333333333333336" y="163.39285714285714"/>
         </scene>
     </scenes>
     <resources>

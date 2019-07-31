@@ -40,8 +40,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     func initUIComponents() {
         if #available(iOS 12.0, *) {
             textFieldCode.textContentType = .oneTimeCode
-        } else {
-            // Fallback on earlier versions
         }
         self.hideKeyboardWhenTappedAround()
         btConfirmation.isEnabled = false

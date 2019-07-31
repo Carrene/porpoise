@@ -58,8 +58,6 @@ class IntroViewController {
             pages[i].iconImageView.backgroundColor = R.color.primary()
             pages[i].iconHeight = 250
             pages[i].iconWidth = 250
-            //pages[i].view.contentMode = .center
-            
         }
         
         onboardingVC = OnboardingViewController.onboard(withBackgroundImage: nil, contents: pages)
@@ -69,10 +67,6 @@ class IntroViewController {
         onboardingVC.fadePageControlOnLastPage = false
         onboardingVC.pageControl.pageIndicatorTintColor = UIColor.black
         onboardingVC.pageControl.currentPageIndicatorTintColor = R.color.secondaryLight()
-//        onboardingVC.skipButton.setTitleColor(R.color.secondary(), for: .normal)
-//        onboardingVC.skipButton.setTitle(R.string.localizable.skip(), for: .normal)
-//        onboardingVC.skipButton.titleLabel?.font = R.font.iranSansMobileBold(size: 16)
-//        onboardingVC.allowSkipping = true
         onboardingVC.fadeSkipButtonOnLastPage = true
         onboardingVC.view.backgroundColor = R.color.primary()
         onboardingVC.skipHandler = { onIntroEnd() }

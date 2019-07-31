@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "کد دریافتی از دستگاه خودپرداز بانک خود را وارد نمایید."; ObjectID = "3e5-yh-neA"; */
+"3e5-yh-neA.text" = "کد دریافتی از دستگاه خودپرداز بانک خود را وارد نمایید.";
+
+/* Class = "UITextView"; text = "کد دریافتی از دستگاه"; ObjectID = "MqB-aJ-kfa"; */
+"MqB-aJ-kfa.text" = "کد دریافتی از دستگاه";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "Mx0-UL-4yW"; */
+"Mx0-UL-4yW.title" = "  ";
+
+/* Class = "UILabel"; text = "0/8"; ObjectID = "Om5-QV-Vfb"; */
+"Om5-QV-Vfb.text" = "0/8";
+
+/* Class = "UITextView"; text = "کد دریافتی از پیامک"; ObjectID = "PkF-dm-DBr"; */
+"PkF-dm-DBr.text" = "کد دریافتی از پیامک";
+
+/* Class = "UILabel"; text = "0/120"; ObjectID = "ZOn-7O-F3w"; */
+"ZOn-7O-F3w.text" = "0/120";
+
+/* Class = "UINavigationItem"; title = "دریافت رمزهای کارت"; ObjectID = "fDX-1W-pv6"; */
+"fDX-1W-pv6.title" = "دریافت رمزهای کارت";
+
+/* Class = "UILabel"; text = "کد دریافتی از پیامک را وارد نمایید."; ObjectID = "nAm-Ke-r4o"; */
+"nAm-Ke-r4o.text" = "کد دریافتی از پیامک را وارد نمایید.";
+
+/* Class = "UIBarButtonItem"; title = "تایید"; ObjectID = "phF-LE-byL"; */
+"phF-LE-byL.title" = "تایید";

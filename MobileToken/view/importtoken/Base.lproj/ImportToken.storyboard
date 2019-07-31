@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n0P-EJ-7RH">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum).ttf">
+            <string>IRANSansMobileFaNum</string>
+        </array>
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--دریافت رمزهای کارت-->
+        <scene sceneID="HLq-Q3-a8h">
+            <objects>
+                <viewController storyboardIdentifier="ImportTokenViewController" id="n0P-EJ-7RH" customClass="ImportTokenViewController" customModule="MobileToken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bu9-dw-9ay">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlf-W8-eg8" userLabel="viewCard" customClass="CardCellXibView" customModule="MobileToken" customModuleProvider="target">
+                                <rect key="frame" x="20" y="33" width="280" height="120"/>
+                                <color key="backgroundColor" name="primaryLight"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="SLs-O7-J4I"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter messaged code." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Ke-r4o" userLabel="labelSmsCode">
+                                <rect key="frame" x="78" y="385" width="222" height="20"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" text="code recieved through device" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-aJ-kfa" userLabel="textViewAtmCode">
+                                <rect key="frame" x="20" y="173" width="280" height="40"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="klq-pZ-S29"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the code which recieved from device." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-yh-neA" userLabel="labelAtmCode">
+                                <rect key="frame" x="62" y="218" width="238" height="20"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Om5-QV-Vfb" userLabel="labelAtmCounter">
+                                <rect key="frame" x="20" y="218" width="32" height="16"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="10"/>
+                                <color key="textColor" name="borderColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Code recieved through message" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkF-dm-DBr" userLabel="textViewSmsCode">
+                                <rect key="frame" x="20" y="253" width="280" height="127"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-7O-F3w" userLabel="labelSmsCounter">
+                                <rect key="frame" x="20" y="385" width="48" height="16"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="10"/>
+                                <color key="textColor" name="borderColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="1ex-1N-Gxh"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="40" id="4Xq-7N-MxV"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="left" secondItem="Om5-QV-Vfb" secondAttribute="right" constant="10" id="5nv-3Y-Ec3"/>
+                            <constraint firstItem="ZOn-7O-F3w" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="5" id="6TY-BH-gTo"/>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="top" secondItem="nDK-RK-Yz7" secondAttribute="top" constant="13" id="6lX-pA-Npk"/>
+                            <constraint firstItem="Om5-QV-Vfb" firstAttribute="width" secondItem="bu9-dw-9ay" secondAttribute="width" multiplier="0.1" id="7Yw-si-MaE"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" id="7em-Og-ZLb"/>
+                            <constraint firstItem="Om5-QV-Vfb" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="D8f-bO-mbI"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="H7p-7b-vmC"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="Nlf-W8-eg8" secondAttribute="right" constant="20" id="RtH-RS-Xld"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" constant="20" id="SZQ-6T-n8e"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="left" secondItem="ZOn-7O-F3w" secondAttribute="right" constant="10" id="T6b-zH-gm6"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="right" secondItem="PkF-dm-DBr" secondAttribute="right" id="Tim-0J-2Ca"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="top" secondItem="Nlf-W8-eg8" secondAttribute="bottom" constant="20" id="Yys-9h-G82"/>
+                            <constraint firstItem="PkF-dm-DBr" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="cZG-Qb-IE6"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="bottom" secondItem="nAm-Ke-r4o" secondAttribute="bottom" constant="75" id="dbe-ca-7Rh"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="fP6-TX-c2B"/>
+                            <constraint firstItem="Nlf-W8-eg8" firstAttribute="centerX" secondItem="nDK-RK-Yz7" secondAttribute="centerX" id="mSo-ad-6Pk"/>
+                            <constraint firstItem="MqB-aJ-kfa" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="nWI-Vb-9dQ"/>
+                            <constraint firstItem="nAm-Ke-r4o" firstAttribute="top" secondItem="PkF-dm-DBr" secondAttribute="bottom" constant="5" id="psd-ao-QZk"/>
+                            <constraint firstItem="ZOn-7O-F3w" firstAttribute="width" secondItem="bu9-dw-9ay" secondAttribute="width" multiplier="0.15" id="qKk-YK-XTm"/>
+                            <constraint firstItem="3e5-yh-neA" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="5" id="r2M-Kf-bOm"/>
+                            <constraint firstItem="ZOn-7O-F3w" firstAttribute="left" secondItem="nDK-RK-Yz7" secondAttribute="left" constant="20" id="rvJ-jM-K3C"/>
+                            <constraint firstItem="Om5-QV-Vfb" firstAttribute="top" secondItem="MqB-aJ-kfa" secondAttribute="bottom" constant="5" id="wGU-WJ-KVU"/>
+                            <constraint firstItem="nDK-RK-Yz7" firstAttribute="right" secondItem="MqB-aJ-kfa" secondAttribute="right" constant="20" id="ypv-rZ-pHR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nDK-RK-Yz7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="دریافت رمزهای کارت" id="fDX-1W-pv6">
+                        <barButtonItem key="backBarButtonItem" title="  " id="Mx0-UL-4yW">
+                            <color key="tintColor" name="buttonColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="تایید" id="phF-LE-byL">
+                            <color key="tintColor" name="secondary"/>
+                            <connections>
+                                <action selector="onConfirmClicked:" destination="n0P-EJ-7RH" id="cuz-Iw-r2X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btConfirm" destination="phF-LE-byL" id="EU3-fS-HJd"/>
+                        <outlet property="labelAtmCode" destination="3e5-yh-neA" id="sp6-1b-aWb"/>
+                        <outlet property="labelAtmCounter" destination="Om5-QV-Vfb" id="JQR-nP-rd0"/>
+                        <outlet property="labelSmsCode" destination="nAm-Ke-r4o" id="meg-9I-eWk"/>
+                        <outlet property="labelSmsCounter" destination="ZOn-7O-F3w" id="VFs-I9-FJi"/>
+                        <outlet property="textViewAtmCode" destination="MqB-aJ-kfa" id="l82-lT-pvp"/>
+                        <outlet property="textViewSmsCode" destination="PkF-dm-DBr" id="gy8-1d-SvE"/>
+                        <outlet property="viewCard" destination="Nlf-W8-eg8" id="aTI-WH-KnL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20f-EK-V4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3594.375" y="-2858.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="borderColor">
+            <color red="0.058823529411764705" green="0.11764705882352941" blue="0.16470588235294117" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryLight">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -91,18 +91,6 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         repository.update(card, onDone: onDataResponse)
     }
     
-    func getToken(tokenPacket: String) {
-        let tokenRepository = TokenRepository()
-        let onDataResponse: ((RepositoryResponse<Token>) -> ()) = { response in
-            if response.value != nil {
-                //
-            } else {
-                //
-            }
-        }
-        tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
-    }
-    
     func isCardExist(card: Card) -> Card?  {
         var existCard: Card?
         let cardRepository = CardRepository()

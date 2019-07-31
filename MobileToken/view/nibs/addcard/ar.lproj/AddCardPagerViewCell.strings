@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "افزودن کارت\n"; ObjectID = "Ssh-BK-Rl0"; */
+"Ssh-BK-Rl0.normalTitle" = "افزودن کارت\n";
+
+/* Class = "UITextField"; placeholder = " نام پیشنهادی کارت"; ObjectID = "k5A-5T-3Eh"; */
+"k5A-5T-3Eh.placeholder" = " نام پیشنهادی کارت";
+
+/* Class = "UILabel"; text = "به کارت خود نام دلخواه اختصاص دهید."; ObjectID = "qzu-YA-pMF"; */
+"qzu-YA-pMF.text" = "به کارت خود نام دلخواه اختصاص دهید.";

@@ -69,9 +69,7 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
     }
     
     func temptDBCreated() {
-//        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
        
-        
         let realmURL = RealmConfiguration.sensitiveDataConfiguration().fileURL!
         let realmURLs = [
             realmURL,
@@ -83,7 +81,6 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
             do {
                 try FileManager.default.removeItem(at: URL)
             } catch {
-                // handle error
             }
         }
         
@@ -124,15 +121,9 @@ class SettingAuthenticationDefinitionViewController: UIViewController, SettingAu
             cancelButtonAppearance.titleColor = R.color.primary()
             cancelButtonAppearance.separatorColor = R.color.secondary()?.withAlphaComponent(0.25)
             cancelButtonAppearance.buttonColor = R.color.secondary()
-            
-            
             alert.addButtons([cancelButton])
-            
             self.present(alert, animated: true, completion: nil)
-            
         }
-    
-    
 }
 
 

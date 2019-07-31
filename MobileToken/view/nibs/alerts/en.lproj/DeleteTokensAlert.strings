@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Select OTP to delete"; ObjectID = "PUL-bx-NIO"; */
+"PUL-bx-NIO.text" = "Select OTP to delete";
+
+/* Class = "UIButton"; normalTitle = "Delete second token"; ObjectID = "pcP-W1-faz"; */
+"pcP-W1-faz.normalTitle" = "Delete second token";
+
+/* Class = "UIButton"; normalTitle = "Delete first token"; ObjectID = "pnI-L7-mq8"; */
+"pnI-L7-mq8.normalTitle" = "Delete first token";

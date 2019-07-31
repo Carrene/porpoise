@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Enter the code which recieved from device."; ObjectID = "3e5-yh-neA"; */
+"3e5-yh-neA.text" = "Enter the code which recieved from device.";
+
+/* Class = "UITextView"; text = "code recieved through device"; ObjectID = "MqB-aJ-kfa"; */
+"MqB-aJ-kfa.text" = "code recieved through device";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "Mx0-UL-4yW"; */
+"Mx0-UL-4yW.title" = "  ";
+
+/* Class = "UILabel"; text = "0/8"; ObjectID = "Om5-QV-Vfb"; */
+"Om5-QV-Vfb.text" = "0/8";
+
+/* Class = "UITextView"; text = "Code recieved through message"; ObjectID = "PkF-dm-DBr"; */
+"PkF-dm-DBr.text" = "Code recieved through message";
+
+/* Class = "UILabel"; text = "0/120"; ObjectID = "ZOn-7O-F3w"; */
+"ZOn-7O-F3w.text" = "0/120";
+
+/* Class = "UINavigationItem"; title = "Get card tokens"; ObjectID = "fDX-1W-pv6"; */
+"fDX-1W-pv6.title" = "Get card tokens";
+
+/* Class = "UILabel"; text = "Enter messaged code."; ObjectID = "nAm-Ke-r4o"; */
+"nAm-Ke-r4o.text" = "Enter messaged code.";
+
+/* Class = "UIBarButtonItem"; title = "تایید"; ObjectID = "phF-LE-byL"; */
+"phF-LE-byL.title" = "تایید";
