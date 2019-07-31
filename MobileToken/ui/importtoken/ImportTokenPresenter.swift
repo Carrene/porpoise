@@ -4,7 +4,7 @@ import TTGSnackbar
 class ImportTokenPresenter: ImportTokenPresenterProtokol{
     
     unowned let view: ImportTokenViewProtocol
-
+    
     required init(view: ImportTokenViewProtocol) {
         self.view = view
     }
@@ -21,37 +21,56 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
                     card.TokenList.append(token)
                     let _ = token.parse()
                     card.number = token.name
-                    self!.updateCard(card: card)
-                    result = true
+                    if let card = self!.isCardExist(card: card) {
+                        var i = 0
+                        for t in card.TokenList {
+                            t.card = card
+                            let _ = t.parse()
+                            t.card = nil
+                            
+                            if t.cryptoModuleId == token.cryptoModuleId {
+                                    let currentToken = card.TokenList[i]
+                                    card.TokenList.remove(at: i)
+                                    card.TokenList.append(token)
+                                    self?.view.showExistTokenAndCardError(card: card, current: currentToken)
+                                    return
+                            }
+                            i += 1
+                        }
+                        card.TokenList.append(token)
+                        self?.view.showExistCardError(current: card)
+                        
+                    }else {
+                        self!.updateCard(card: card)
+                        result = true
+                    }
                     
                 } catch ParseTokenException.InvalidChecksumException{
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidchecksum(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showInvalidChecksumError()
                 } catch ParseTokenException.InvalidBankIdException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidbankid(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidbankid())
                 } catch ParseTokenException.InvalidCryptoModuleIdException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidcryptomoduleid())
                 } catch ParseTokenException.NumberFormatException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.InvalidKeyException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.InvalidKeyException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 } catch ParseTokenException.IllegalStateException {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                     
                 } catch ParseTokenException.InvalidCardNumber {
-                    SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_invalidtokenname(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_invalidtokenname())
                 } catch {
-                    SnackBarHelper.init(message: R.string.localizable.sb_get_token_fail(), color: R.color.errorDark()!, duration: .middle).show()
+                    self?.view.showImportTokenError(message: R.string.localizable.sb_get_token_fail())
                 }
             } else {
-                SnackBarHelper.init(message: R.string.localizable.sb_tokenimport_duplicatetoken(), color: R.color.errorDark()!, duration: .middle).show()
+                self?.view.showImportTokenError(message: R.string.localizable.sb_tokenimport_duplicatetoken())
             }
             Logger.instance.logEvent(event: ConstantHelper.IMPORT_TOKEN_LOG_EVENT, parameters: ["result": result as NSObject])
         }
         tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
-    
-        
     }
     
     func updateCard(card: Card) {
@@ -62,10 +81,9 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
             }
             else {
                 if response.value == nil {
-
+                    
                 }
                 else {
-                    SnackBarHelper.init(message: R.string.localizable.sb_token_added(), color: R.color.snackbarColor()!, duration: .middle).show()
                     self?.view.tokenImported(card: card)
                 }
             }
@@ -85,7 +103,34 @@ class ImportTokenPresenter: ImportTokenPresenterProtokol{
         tokenRepository.get(identifier: tokenPacket, onDone: onDataResponse)
     }
     
-    func validateAndSaveToken(tokenPacket: String) {
+    func isCardExist(card: Card) -> Card?  {
+        var existCard: Card?
+        let cardRepository = CardRepository()
+        let onDataResponse: ((RepositoryResponse<[Card]>)->()) = { response in
+            for dbCard in response.value! {
+                let index = card.number?.index((card.number?.endIndex)!, offsetBy: -2)
+                if dbCard.id != card.id, dbCard.number?[..<index!] == card.number![..<index!] {
+                    //This card number exist in db and we did'nt need another one with this number, we romove this card's number and token (this token and numbr did'nt save to db yet) and we should add this token to "\(dbCard)"
+                    card.TokenList.removeAll()
+                    card.number = "________________"
+                    existCard = dbCard
+                    return
+                }
+            }
+            
+        }
         
+        cardRepository.getAll(onDone: onDataResponse)
+        return existCard
+    }
+    
+    func deleteToken(token: Token) {
+        let repository = TokenRepository()
+        let onDataResponse : ((RepositoryResponse<Token>) -> ()) =  { [weak self] response in
+            if response.error == nil {
+                print("deleted")
+            }
+        }
+        repository.delete(token: token, onDone: onDataResponse)
     }
 }

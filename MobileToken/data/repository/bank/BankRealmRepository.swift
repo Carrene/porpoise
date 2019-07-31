@@ -3,9 +3,6 @@ import RealmSwift
 
 class BankRealmRepository: BankRepositoryProtocol {
     
-    func get(card: Card, onDone: ((RepositoryResponse<Bank>) -> ())?) {
-        
-    }
     
     func get(identifier: Int, onDone: ((RepositoryResponse<Bank>) -> ())?) {
         onDone?(RepositoryResponse(error: UnsupportedOperationException()))
@@ -18,7 +15,9 @@ class BankRealmRepository: BankRepositoryProtocol {
         for j in  0 ..< bankRealmResult.count {
             let bank = bankRealmResult[j].detached()
             for i in 0 ..< bank.CardList.count {
-                bank.CardList[i].bank = bank
+                let card = bank.CardList[i].detached()
+                card.bank = bank
+                bank.CardList[i] = card
             }
             banks.append(bank)
         }
@@ -37,6 +36,31 @@ class BankRealmRepository: BankRepositoryProtocol {
         catch {
             onDone?(RepositoryResponse(error: error))
         }
+    }
+    
+    func delete(bank: Bank, onDone: ((RepositoryResponse<Bank>) -> ())?) {
+        let realm = try! Realm(configuration: RealmConfiguration.sensitiveDataConfiguration())
+        if let existBank = realm.objects(Bank.self).filter({$0.id == bank.id}).first {
+            do {
+                try realm.write {
+                    for card in existBank.CardList {
+                        for token in card.TokenList {
+                            realm.delete(token)
+                        }
+                        realm.delete(card)
+                    }
+                    let users = existBank.owners
+                    for user in users {
+                        realm.delete(user)
+                    }
+                    realm.delete(existBank)
+                }
+                onDone?(RepositoryResponse(value: bank))
+            } catch {
+                onDone?(RepositoryResponse(error: error))
+            }
+        }
+    
     }
 }
 

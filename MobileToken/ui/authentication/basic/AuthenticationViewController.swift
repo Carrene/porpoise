@@ -5,6 +5,7 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     @IBOutlet weak var vAuthenticationContainer: UIView!
     @IBOutlet weak var lbTitle: UILabel!
     
+    @IBOutlet weak var labelAppDescription: UILabel!
     var authenticationPresenter: AuthenticationPresenterProtocol?
     
     override func viewDidLoad() {
@@ -17,7 +18,7 @@ class AuthenticationViewController: BaseViewController, AuthenticationDelegate, 
     }
     
     func initUIComponents() {
-        
+        labelAppDescription.text = R.string.localizable.lb_raaz_description()
     }
     
     func initListeners() {

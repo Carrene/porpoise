@@ -38,6 +38,8 @@
 "sb_get_token_fail" = "اطلاعات دریافت رمز، اشتباه است.";
 "sb_network_error" = "خطای شبکه";
 "sb_select_bank_error" = "بانک مورد نظر را انتخاب کنید";
+"sb_bank_delete_failed" = "حذف بانک با خطا مواجه شد";
+"sb_empty_card_exist" = "یک کارت خالی برای این بانک وجود دارد";
 
 //passWordHint
 "enter_at_least_eight_characters" = "رمز باید شامل حداقل 8 کاراکتر";
@@ -57,12 +59,14 @@
 "lb_add_card_name" = "به کارت خود نام دلخواه اختصاص دهید.";
 "lb_desired_card_name" = "نام پیشنهادی کارت  ";
 "lb_are_you_sure" = "آیا مطمئن هستید؟";
+"lb_are_you_sure_delete_bank" = "آیا مطمئن هستید؟ بااین کار تمام کارت‌های بانک انتخاب شده حذف می‌شوند";
 "everywhere_firstpassword" = "رمز اول";
 "everywhere_secondpassword" = "رمز دوم";
 "lb_app_guide" = "راهنمای برنامه";
 "lb_add_new_bank" = "افزودن بانک جدید";
 "lb_add_first_otp" = "افزودن رمز اول";
 "lb_add_second_otp" = "افزودن رمز دوم";
+"lb_raaz_description" = "راز اپلیکیشن تولید رمز یکبارمصرف";
 
 //placeholder
 "ph_sms_code" = "کد دریافتی از پیامک";
@@ -74,11 +78,13 @@
 "ash_edit_card_name" = "ویرایش نام کارت";
 "ash_delete_card" = "حذف کارت";
 "ash_delete_token" = "حذف رمز";
+"ash_delete_bank" = "حذف بانک";
 "alert_choose_token" = "رمز برای حذف را انتخاب کنید.";
 "alert_delete_first_token" = "حذف رمز اول کارت";
 "alert_delete_second_token" = "حذف رمز دوم کارت";
 "alert_root_message"="متاسفانه شما نمی توانید از این برنامه استفاده کنید.";
 "alert_force_close" = "برنامه به دلیل تغییرات رمز بسته خواهد شد. لطفا برنامه را مجددا اجرا نمایید.";
+"alert_show_otp_risk" = "چنانچه ریسک نمایش رمز را می‌پذیرید، این گزینه به درخواست شما فعال می‌گردد.";
 
 "intro1Title" = "ورود شماره تلفن همراه";
 "intro1Description" = "شماره تلفن همراه ثبت شده در بانک مورد نظر را وارد کنید.";
@@ -95,8 +101,9 @@
 "save" = "ذخیره";
 "cancel" = "انصراف";
 "delete_card" = "حذف کارت";
+"delete_bank" = "حذف بانک";
 
-"ayande" = "آینده";
+"ayande" = "بانک آینده";
 "saderat" = "صادرات";
 "ayande_phone" = "02127663200";
 "saderat_phone" = "02109602";
@@ -117,8 +124,11 @@
 
 "alert" = "هشدار";
 "alert_set_timezone" = "اگر تنظیمات زمان و تاریخ خودکار دستگاه غیرفعال است، برای کارکرد صحیح برنامه این گزینه را فعال کنید.";
+"alert_add_token_to_another_card" = "این رمز برای شماره‌ی کارتی است که قبلا رمز دوم/اول آن اضافه شده است، شما نمی‌توانید دو کارت با شماره کارت یکسان داشته باشید، اگر مایلید این رمز را به همان کارت اضافه کنم، دکمه 'باشد' را لمس کنید.";
+"alert_duplicated_token" = "این رمز قبلا اضافه شده است، اگر رمز قبلی غیرفعال شده است، و می‌خواهید با این رمز به‌روزرسانی شود، دکمه 'باشد' را لمس کنید";
 "ok" = "باشد";
 "understand" = "متوجه شدم";
+"bt_cancel_otp_alert" = "لغو";
 
 
 "everywhere_fail" = "با خطا مواجه شد.";

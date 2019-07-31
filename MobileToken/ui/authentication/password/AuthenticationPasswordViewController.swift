@@ -38,7 +38,6 @@ class AuthenticationPasswordViewController: UIViewController, UITextFieldDelegat
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.authenticationPasswordPresenter?.checkPasswordCorrection(password: textField.text!)
         self.dismissKeyboard()
         return true
     }

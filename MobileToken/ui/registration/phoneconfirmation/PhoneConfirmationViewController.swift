@@ -38,13 +38,18 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
     }
     
     func initUIComponents() {
+        if #available(iOS 12.0, *) {
+            textFieldCode.textContentType = .oneTimeCode
+        } else {
+            // Fallback on earlier versions
+        }
         self.hideKeyboardWhenTappedAround()
         btConfirmation.isEnabled = false
         viewTextfield.layer.cornerRadius = 5
         viewTextfield.layer.borderColor = R.color.secondary()!.cgColor
         viewTextfield.layer.borderWidth = 2
         activityIndicator.color = R.color.secondary()
-        
+        textFieldCode.becomeFirstResponder()
         viewCode.layer.shadowPath = UIBezierPath(roundedRect: viewCode.bounds, cornerRadius: 10).cgPath
         viewCode.layer.shadowRadius = 3
         viewCode.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
@@ -66,7 +71,6 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         labelEnterCode.font = R.font.iranSansMobile(size: 12)
         textFieldCode.attributedPlaceholder = NSAttributedString(string: "کد فعال سازی",
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
-//        initBankNib(bank:self.selectedBank!)
     }
     
     

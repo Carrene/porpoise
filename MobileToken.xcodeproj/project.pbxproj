@@ -116,7 +116,6 @@
 		ACEF4CCF21C4E62B00CA66A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
 		AF020851220175E80021856A /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF020850220175E80021856A /* AuthenticationDefinition.storyboard */; };
 		AF020853220177050021856A /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF020852220177050021856A /* BankCardPagerViewCell.xib */; };
-		AF02085522017D630021856A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
 		AF2420C8228D2C34003D464E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C7228D2C34003D464E /* Logger.swift */; };
 		AF2420CA228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
 		AF2420CB228D2C6A003D464E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
@@ -150,6 +149,10 @@
 		AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
 		AF286016219D7B0D00D8C342 /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
 		AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
+		AF2D71EF22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */; };
+		AF2D71F022DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */; };
+		AF2D71F122DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */; };
+		AF2D71F222DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */; };
 		AF378011222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF378012222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
@@ -264,7 +267,6 @@
 		AF51CB90222BF07C003051D7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
 		AF51CB91222BF07C003051D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
 		AF51CB92222BF07C003051D7 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
-		AF51CB93222BF07C003051D7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02085422017D630021856A /* R.generated.swift */; };
 		AF51CB94222BF07C003051D7 /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
 		AF51CB95222BF07C003051D7 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
 		AF51CB96222BF07C003051D7 /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
@@ -324,6 +326,8 @@
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
 		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
+		AFA9038E22EEE9EC00D2A4A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */; };
+		AFA9038F22EEE9EC00D2A4A3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */; };
 		AFAD22FD2190777500EC00CB /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */; };
 		AFAD22FF21907B6300EC00CB /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
 		AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
@@ -503,7 +507,6 @@
 		ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AF020850220175E80021856A /* AuthenticationDefinition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationDefinition.storyboard; sourceTree = "<group>"; };
 		AF020852220177050021856A /* BankCardPagerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardPagerViewCell.xib; sourceTree = "<group>"; };
-		AF02085422017D630021856A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AF2420C7228D2C34003D464E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		AF2420C9228D2C6A003D464E /* ConstantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHelper.swift; sourceTree = "<group>"; };
 		AF246A7B21984A5500C44E4B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 		AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Light.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSansMobile.ttf; path = MobileToken/assets/fonts/IRANSansMobile.ttf; sourceTree = SOURCE_ROOT; };
 		AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSansMobile-Medium.ttf"; path = "MobileToken/assets/fonts/IRANSansMobile-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEyeSettingTableViewCell.swift; sourceTree = "<group>"; };
+		AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPEyeSettingTableViewCell.xib; sourceTree = "<group>"; };
 		AF378010222D3E4B0097306C /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-r.plist"; sourceTree = "<group>"; };
 		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
@@ -548,6 +553,7 @@
 		AF9F219822144F08005088B9 /* CarreneDevDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevDebug.xcconfig; sourceTree = "<group>"; };
 		AF9F2199221451C1005088B9 /* ISCOPDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPDebug.xcconfig; sourceTree = "<group>"; };
 		AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCertificateToData.swift; sourceTree = "<group>"; };
+		AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AFAD22FC2190777500EC00CB /* AddPasswordViewDesignable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPasswordViewDesignable.xib; sourceTree = "<group>"; };
 		AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewDesignable.swift; sourceTree = "<group>"; };
 		AFB39B4C2189A6A600302624 /* MobileToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -919,6 +925,7 @@
 				ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */,
 				ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */,
 				ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */,
+				AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */,
 				ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */,
 			);
 			path = basic;
@@ -1020,6 +1027,7 @@
 		ACAAD86121AE8EDF007266F4 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				AF2D71EC22DF14860087B9C9 /* otpEye */,
 				AC5BAB66221D5390003F3BE6 /* support */,
 				ACAAD86721AE8F5F007266F4 /* authenticationtype */,
 				ACAAD86621AE8F36007266F4 /* lockscreentime */,
@@ -1165,6 +1173,14 @@
 			);
 			name = fonts;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AF2D71EC22DF14860087B9C9 /* otpEye */ = {
+			isa = PBXGroup;
+			children = (
+				AF2D71EE22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib */,
+			);
+			path = otpEye;
 			sourceTree = "<group>";
 		};
 		AF463BC22189D8CF00DC8A3E /* data */ = {
@@ -1322,12 +1338,12 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */,
 				AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */,
 				AF51CBD9222BF7C9003051D7 /* Info-debug.plist */,
 				AFB39B5B2189A6A700302624 /* Info.plist */,
 				AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */,
 				AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */,
-				AF02085422017D630021856A /* R.generated.swift */,
 				AF378010222D3E4B0097306C /* banks.json */,
 				ACDFD8A521A418BC00839F97 /* Localizable.strings */,
 				AF463BCC2189E5F200DC8A3E /* assets */,
@@ -1762,6 +1778,7 @@
 				AF51CBC7222BF07C003051D7 /* IRANSansMobile-Bold.ttf in Resources */,
 				AF51CBC8222BF07C003051D7 /* EditCardNameAlert.xib in Resources */,
 				AF51CBC9222BF07C003051D7 /* Authentication.storyboard in Resources */,
+				AF2D71F222DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */,
 				AF51CBCA222BF07C003051D7 /* GoogleService-Info-r.plist in Resources */,
 				AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */,
 				AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
@@ -1791,6 +1808,7 @@
 				AC5BAB62221D4FBA003F3BE6 /* Support.storyboard in Resources */,
 				AFBC2AE6219197B000D37C84 /* AddCardPagerViewCell.xib in Resources */,
 				AF378011222D3E4C0097306C /* banks.json in Resources */,
+				AF2D71F122DF14F80087B9C9 /* OTPEyeSettingTableViewCell.xib in Resources */,
 				AC353B1121BFA1CF00B80412 /* IRANSansMobile(FaNum).ttf in Resources */,
 				ACAAD86B21AE8F99007266F4 /* AuthenticationTypeTableViewCell.xib in Resources */,
 				AC57D76A21FDCDD400DFDD33 /* answer.html in Resources */,
@@ -2170,6 +2188,7 @@
 				AF51CB3F222BF07C003051D7 /* Base64urlEncoded.swift in Sources */,
 				AF51CB40222BF07C003051D7 /* CardListContractor.swift in Sources */,
 				AF51CB41222BF07C003051D7 /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
+				AFA9038F22EEE9EC00D2A4A3 /* R.generated.swift in Sources */,
 				AF51CB42222BF07C003051D7 /* AuthenticationRealmRepository.swift in Sources */,
 				AF51CB43222BF07C003051D7 /* PasswordValidator.swift in Sources */,
 				AF2420CD228D2FB0003D464E /* Logger.swift in Sources */,
@@ -2201,6 +2220,7 @@
 				AF51CB5B222BF07C003051D7 /* BankCardPagerViewCell.swift in Sources */,
 				AF51CB5C222BF07C003051D7 /* HelpTableViewCell.swift in Sources */,
 				AF51CB5D222BF07C003051D7 /* RepositoryResponse.swift in Sources */,
+				AF2D71F022DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */,
 				AF51CB5E222BF07C003051D7 /* AuthenticationDefinitionContractor.swift in Sources */,
 				AF51CB5F222BF07C003051D7 /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */,
 				AF51CB60222BF07C003051D7 /* AuthenticationDefinitionPatternViewController.swift in Sources */,
@@ -2253,7 +2273,6 @@
 				AF51CB90222BF07C003051D7 /* Card.swift in Sources */,
 				AF51CB91222BF07C003051D7 /* AppDelegate.swift in Sources */,
 				AF51CB92222BF07C003051D7 /* SettingRepository.swift in Sources */,
-				AF51CB93222BF07C003051D7 /* R.generated.swift in Sources */,
 				AF51CB94222BF07C003051D7 /* HelpTableViewAdapter.swift in Sources */,
 				AF51CB95222BF07C003051D7 /* HelpViewController.swift in Sources */,
 				AF51CB96222BF07C003051D7 /* PhoneConfirmationContractor.swift in Sources */,
@@ -2275,6 +2294,7 @@
 			files = (
 				AC54F392229921150012BBBA /* BankViewXib.swift in Sources */,
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
+				AF2D71EF22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */,
 				AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AC46F6C02225651400BF611A /* HalfColorLabel.swift in Sources */,
@@ -2386,9 +2406,9 @@
 				AF246A7E219852EA00C44E4B /* Card.swift in Sources */,
 				AFB39B502189A6A600302624 /* AppDelegate.swift in Sources */,
 				AC4C4DC821CFC9CB00B15B90 /* SettingRepository.swift in Sources */,
-				AF02085522017D630021856A /* R.generated.swift in Sources */,
 				AC57D76021FD9F7900DFDD33 /* HelpTableViewAdapter.swift in Sources */,
 				AC57D76221FD9F9900DFDD33 /* HelpViewController.swift in Sources */,
+				AFA9038E22EEE9EC00D2A4A3 /* R.generated.swift in Sources */,
 				ACDFD8A721A5481400839F97 /* PhoneConfirmationContractor.swift in Sources */,
 				AFE81B0E2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				AFE81B1E2196D31700AA0AF2 /* UIHelper.swift in Sources */,

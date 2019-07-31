@@ -21,6 +21,13 @@ class Setting: Object, Mappable, NSCopying{
         set { LockTimer = newValue }
     }
     
+    @objc dynamic var VisibleOtp = false
+    public var visibleOtp: Bool {
+        set {
+            VisibleOtp = newValue
+        }
+        get {return VisibleOtp}
+    }
     
     required convenience init?(map: Map) {
         self.init()
@@ -30,13 +37,14 @@ class Setting: Object, Mappable, NSCopying{
         
     }
     
-    convenience init(lockTimer: Int) {
+    convenience init(lockTimer: Int, isOTPEnable: Bool) {
         self.init()
         self.lockTimer = lockTimer
+        self.visibleOtp = isOTPEnable
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Setting(lockTimer: self.lockTimer)
+        return Setting(lockTimer: self.lockTimer, isOTPEnable: self.visibleOtp)
     }
     
 }

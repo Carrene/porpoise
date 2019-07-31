@@ -4,6 +4,7 @@ import UIKit
 
 class AuthenticationDefinitionViewController: BaseViewController, AuthenticationDefintionDelegate {
     
+    @IBOutlet weak var labelAppDescription: UILabel!
     
     @IBOutlet weak var authenticationTypeContainer: UIView!
     @IBOutlet weak var scAuthenticationType: UISegmentedControl!
@@ -26,6 +27,7 @@ class AuthenticationDefinitionViewController: BaseViewController, Authentication
     
     
     func initUIComponents() {
+        labelAppDescription.text = R.string.localizable.lb_raaz_description()
         self.hideKeyboardWhenTappedAround()
         self.navigationItem.hidesBackButton = true
         let attr = NSDictionary(object: R.font.iranSansMobileBold(size: 16)!, forKey: NSAttributedString.Key.font as NSCopying)

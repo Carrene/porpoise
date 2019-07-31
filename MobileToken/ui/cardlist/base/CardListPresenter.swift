@@ -2,7 +2,8 @@ import Foundation
 import TTGSnackbar
 
 class CardListPresenter : CardListPresenterProtocol {
-
+    
+    
     unowned let view: CardListViewProtocol
     
     required init(view: CardListViewProtocol) {
@@ -35,6 +36,13 @@ class CardListPresenter : CardListPresenterProtocol {
             }
             else {
                 self?.view.addCard(card: response.value!)
+            }
+        }
+        
+        for card in bank.CardList {
+            if card.TokenList.count == 0 {
+                self.view.showEmptyCardExistError()
+                return
             }
         }
         repository.addCard(card: card, bank: bank, onDone: onDataResponse)
@@ -71,12 +79,25 @@ class CardListPresenter : CardListPresenterProtocol {
         let repository = TokenRepository()
         let onDataResponse : ((RepositoryResponse<[Token]>) -> ()) =  { [weak self] response in
             if response.error != nil {
-                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_unsuccessfully(), color: R.color.errorDark()!, duration: .middle).show()
+                self?.view.deletionError(message:  R.string.localizable.sb_token_deleted_unsuccessfully())
             } else {
                 self?.view.deleteToken(tokens: response.value!)
-                SnackBarHelper.init(message: R.string.localizable.sb_token_deleted_successfully(), color: R.color.snackbarColor()!, duration: .middle).show()
+                
             }
         }
         repository.delete(tokens: tokens, onDone: onDataResponse)
+    }
+    
+    func deleteBank(bank: Bank) {
+        let bankRepository = BankRepository()
+        let onDataRespnse: (RepositoryResponse<Bank>) -> () = { [weak self] response in
+            if response.error != nil {
+                self?.view.deletionError(message: R.string.localizable.sb_bank_delete_failed())
+            } else {
+                self?.view.bankRemoved(bank: bank)
+            }
+        }
+        bankRepository.delete(bank: bank, onDone: onDataRespnse)
+        
     }
 }
