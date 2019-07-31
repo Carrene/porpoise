@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "رمز خود را وارد کنید"; ObjectID = "47X-kO-rhi"; */
+"47X-kO-rhi.text" = "رمز خود را وارد کنید";
+
+/* Class = "UILabel"; text = "الگوی خود را وارد کنید"; ObjectID = "Asb-xx-Mi5"; */
+"Asb-xx-Mi5.text" = "الگوی خود را وارد کنید";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "HTn-wE-LdW"; */
+"HTn-wE-LdW.title" = "  ";
+
+/* Class = "UILabel"; text = "Authentication"; ObjectID = "LYW-wi-QKW"; */
+"LYW-wi-QKW.text" = "Authentication";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "yeM-4x-iKm"; */
+"yeM-4x-iKm.placeholder" = "Password";
+
+/* Class = "UINavigationItem"; title = "احراز هویت"; ObjectID = "zHT-dW-jVU"; */
+"zHT-dW-jVU.title" = "Authentication";

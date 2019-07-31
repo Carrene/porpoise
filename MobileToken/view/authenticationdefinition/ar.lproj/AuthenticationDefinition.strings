@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد."; ObjectID = "0B1-GI-j54"; */
+"0B1-GI-j54.text" = "رمز باید شامل حداقل 8 کاراکتر، یک عدد، یک حرف بزرگ، یک کاراکتر (؟*_=+%$#@) باشد.";
+
+/* Class = "UITextField"; placeholder = "تکرار رمز"; ObjectID = "6K0-Ct-2n1"; */
+"6K0-Ct-2n1.placeholder" = "تکرار رمز";
+
+/* Class = "UILabel"; text = "راز اپلیکیشن تولید رمز یکبارمصرف"; ObjectID = "8ZQ-lY-Jo5"; */
+"8ZQ-lY-Jo5.text" = "راز اپلیکیشن تولید رمز یکبارمصرف";
+
+/* Class = "UITextField"; placeholder = "رمز"; ObjectID = "G0v-Up-gtc"; */
+"G0v-Up-gtc.placeholder" = "رمز";
+
+/* Class = "UISegmentedControl"; Hmm-D3-AaW.segmentTitles[0] = "الگو"; ObjectID = "Hmm-D3-AaW"; */
+"Hmm-D3-AaW.segmentTitles[0]" = "الگو";
+
+/* Class = "UISegmentedControl"; Hmm-D3-AaW.segmentTitles[1] = "رمز"; ObjectID = "Hmm-D3-AaW"; */
+"Hmm-D3-AaW.segmentTitles[1]" = "رمز";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "ULQ-dM-OJz"; */
+"ULQ-dM-OJz.title" = "  ";
+
+/* Class = "UILabel"; text = "رمز را دوباره وارد کنید."; ObjectID = "Y6w-Si-ccv"; */
+"Y6w-Si-ccv.text" = "رمز را دوباره وارد کنید.";
+
+/* Class = "UINavigationItem"; title = "روش احراز هویت"; ObjectID = "eiM-J4-X6A"; */
+"eiM-J4-X6A.title" = "روش احراز هویت";
