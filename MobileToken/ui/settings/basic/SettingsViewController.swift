@@ -3,6 +3,7 @@ import UIKit
 
 class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,SettingViewProtocol {
     
+    @IBOutlet weak var labelversionString: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var labelVersion: UILabel!
     var adapter : SettingsTableViewAdapter?
@@ -22,7 +23,9 @@ class SettingsViewController: UIViewController,SettingsTableAdapterProtocol,Sett
     func getVersion() {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         labelVersion.text = version!
+        labelversionString.text = R.string.localizable.lb_version()
     }
+    
     
     func initTableView(settingMediator: SettingMediator) {
         tableView?.register(UINib(nibName:R.nib.lockScreenTimeTableViewCell.name,bundle: nil),forCellReuseIdentifier:R.reuseIdentifier.reuseLockScreenTimerSettingRow.identifier)

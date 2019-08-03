@@ -3,7 +3,7 @@
 "next" = "Next";
 "skip" = "Skip";
 "lb_enter_program" = "Enter program";
-"lb_version" = "version";
+"lb_version" = "";
 "lb_support" = "support";
 
 // snackbar

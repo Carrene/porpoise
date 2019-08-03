@@ -94,6 +94,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="labelVersion" destination="74y-71-IgY" id="Yat-eZ-u1W"/>
+                        <outlet property="labelversionString" destination="TkY-iF-rcV" id="3fe-6V-Kvp"/>
                         <outlet property="tableView" destination="2RQ-2g-WfX" id="v1s-47-0EB"/>
                         <segue destination="CH3-Ix-uEq" kind="show" identifier="settingToAuthenticationDefinitionSegue" id="Ozs-Jd-d0g"/>
                         <segue destination="kd4-Cy-Ix5" kind="show" identifier="settingToHelp" id="14Y-T4-gtp"/>
