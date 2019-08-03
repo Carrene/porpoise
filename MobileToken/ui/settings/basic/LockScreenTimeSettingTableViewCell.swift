@@ -38,6 +38,10 @@ class LockScreenTimeSettingTableViewCell: UITableViewCell {
             button.setTitleColor(R.color.buttonColor(), for: .normal)
             button.tintColor = .clear
         }
+        labelSecond.font = UIHelper.getFont(size: 16)
+        collectionButtonsTime.forEach { button in
+            button.titleLabel?.font = UIHelper.getFont(size: 16)
+        }
     }
     
     func setDelegate(lockScreenTimeProtocol:LockScreenTimeSettingTableViewCellProtocol) {

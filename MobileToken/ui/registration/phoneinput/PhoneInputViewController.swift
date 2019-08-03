@@ -70,6 +70,8 @@ class PhoneInputViewController: UIViewController, BankCollectionViewDelegate,Cou
         viewTextfields.layer.backgroundColor = R.color.primaryLight()?.cgColor
         viewTextfields.layer.shadowColor = R.color.buttonColor()?.withAlphaComponent(0.25).cgColor
         textFieldPhoneNumber.delegate = self
+        textFieldPhoneNumber.font = UIHelper.getFont(size: 15)
+        labelPhoneCode.font = UIHelper.getFont(size: 16)
         showPhoneInput()
         inputMask()
     }

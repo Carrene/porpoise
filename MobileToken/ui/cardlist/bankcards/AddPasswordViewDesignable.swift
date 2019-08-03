@@ -45,6 +45,7 @@ class AddPasswordViewDesignable: UIView {
     func initUIComponent() {
         vBackground.layer.masksToBounds = true
         vBackground.layer.cornerRadius = 5
+        labelAddOtp.font = UIHelper.getFont(size: 14)
     }
 }
 

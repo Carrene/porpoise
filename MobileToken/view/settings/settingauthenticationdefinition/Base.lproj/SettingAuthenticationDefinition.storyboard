@@ -109,14 +109,14 @@
                                     <action selector="onEndEditing:" destination="uiL-k5-FQr" eventType="editingDidEnd" id="UVb-Op-tNO"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At least 8 characters." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUl-hy-OU6" userLabel="labelPasswordHint">
-                                <rect key="frame" x="30" y="121" width="315" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The password must contain at least 8 characters, A number, A capital letter, A character (? * _ = +% $ # @)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUl-hy-OU6" userLabel="labelPasswordHint">
+                                <rect key="frame" x="30" y="121" width="315" height="38.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-Os-O1H" userLabel="tfConfirmPassword" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="30" y="170.5" width="315" height="40"/>
+                                <rect key="frame" x="30" y="189.5" width="315" height="40"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
@@ -127,7 +127,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="light" smartDashesType="no" smartInsertDeleteType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your password again" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-XY-O6m" userLabel="labelSecondPassword">
-                                <rect key="frame" x="191.5" y="212.5" width="153.5" height="19.5"/>
+                                <rect key="frame" x="191.5" y="231.5" width="153.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

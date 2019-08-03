@@ -65,10 +65,12 @@ class PhoneConfirmationViewController: BaseViewController,PhoneConfirmationViewP
         labelChangeNumber.font = UIHelper.iranSansBold(size: 16)
         textFieldCode.delegate = self
         labelPhone.text = phoneNumber
+       labelPhone.font = UIHelper.getFont(size: 17)
         labelChangeNumber.isUserInteractionEnabled = true
-        labelEnterCode.font = R.font.iranSansMobile(size: 12)
+        labelEnterCode.font = UIHelper.getFont(size: 12)
         textFieldCode.attributedPlaceholder = NSAttributedString(string: R.string.localizable.ph_activation_code(),
                                                              attributes: [NSAttributedString.Key.foregroundColor: R.color.buttonColor()!.withAlphaComponent(0.5)])
+        labelCounter.font = UIHelper.getFont(size: 16)
     }
     
     

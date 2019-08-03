@@ -46,6 +46,7 @@ class BankCardPagerViewCell: FSPagerViewCell {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showOrHidePassword(tapGestureRecognizer:)))
         vCard.imageShowPassword.isUserInteractionEnabled = true
         vCard.imageShowPassword.addGestureRecognizer(tapGestureRecognizer)
+        vCard.initUIComponent()
     }
     
     

@@ -22,7 +22,7 @@ class CardCellXibView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
-        initUIComponent()
+        
     }
     
     func xibSetup() {
@@ -30,6 +30,7 @@ class CardCellXibView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         addSubview(contentView)
+        initUIComponent()
     }
     
   
@@ -39,6 +40,11 @@ class CardCellXibView: UIView {
     
     func initUIComponent() {
         imageLogo.layer.cornerRadius = 10
+        labelCardNumber.forEach { label in
+            label.font = UIHelper.getFont(size: 16)
+        }
+        labelCardName.font = UIHelper.getFont(size: 14)
+        labelBankName.font = UIHelper.getFont(size: 16)
     }
     
     func loadViewFromNib() -> UIView! {

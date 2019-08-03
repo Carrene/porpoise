@@ -40,7 +40,7 @@ class UIHelper {
     }
     
     static func getFont(size: CGFloat)-> UIFont {
-        if Locale.preferredLanguages[0] == "ar" {
+        if Locale.preferredLanguages[0].contains("ar") {
             return R.font.iranSansMobileFaNum(size: size)!
         } else {
             return UIFont.systemFont(ofSize: size)
