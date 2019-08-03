@@ -15,7 +15,7 @@ class QuestionViewController: BaseViewController,WKNavigationDelegate {
         webView = WKWebView(frame: view.bounds, configuration: configuration)
         view.addSubview(webView)
         var url: URL?
-        if Locale.preferredLanguages[0] == "ar" {
+        if Locale.preferredLanguages[0].contains("ar") {
             url = Bundle.main.url(forResource: "answer-ar", withExtension: "html")
         }else {
             url = Bundle.main.url(forResource: "answer-en", withExtension: "html")

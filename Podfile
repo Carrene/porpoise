@@ -34,6 +34,9 @@ abstract_target 'Common' do
     target 'MobileTokenDebug' do
     end
     
+    target 'MobileTokenAppStore' do
+    end
+    
     target 'MobileTokenTests' do
         inherit! :search_paths
     end

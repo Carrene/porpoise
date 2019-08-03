@@ -2,6 +2,7 @@ import UIKit
 import DTTJailbreakDetection
 import RealmSwift
 
+
 class MainViewController: UINavigationController {
 
     var hasWizardShown = false
@@ -13,8 +14,29 @@ class MainViewController: UINavigationController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        detectTarget()
         checkIfNewUser()
         initPages()
+    }
+    
+    func detectTarget() {
+        if let isAppStore = Bundle.main.infoDictionary?["APP_STORE"] as? Bool, isAppStore == true {
+            
+            if Locale.preferredLanguages[0] != "ar", !UserDefaults.standard.bool(forKey: "languageChanged"), CoreTelephonyHelper.isSimCardAvailavle(), CoreTelephonyHelper.isIrCardAvailable(code: "ir") {
+                changeAppLanguage()
+            }
+            
+        } else if Locale.preferredLanguages[0] != "ar", !UserDefaults.standard.bool(forKey: "languageChanged") {
+            changeAppLanguage()
+        }
+    }
+    
+    func changeAppLanguage() {
+        UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
+        UserDefaults.standard.set(true, forKey: "languageChanged")
+        self.showForceCloseDialog(title: R.string.localizable.alert_close(), message: R.string.localizable.alert_close_sim(), doneTitle: R.string.localizable.alert_close_ok()) {
+            exit(0)
+        }
     }
    
     func initPages() {

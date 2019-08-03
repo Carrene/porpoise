@@ -11,6 +11,7 @@
 		1CB2330220A217A8F296F2FE /* Pods_MobileTokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */; };
 		3708BCAB95C68AC03F840EBC /* Pods_MobileTokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1C91E9D402BB91531CE29 /* Pods_MobileTokenTests.framework */; };
 		386045522CD01F45D1159594 /* Pods_Common_MobileTokenDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ADCFFACD006BCE53D3AC52 /* Pods_Common_MobileTokenDebug.framework */; };
+		77C3DAF6EE29337E7743042B /* Pods_Common_MobileTokenAppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FE5D3551C1F4D8EB079C0A /* Pods_Common_MobileTokenAppStore.framework */; };
 		AC04FAB021C14DB700A41D9D /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
 		AC16D6FA21CA2F140094FBED /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
 		AC16D6FF21CA31B70094FBED /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
@@ -178,6 +179,180 @@
 		AF2F628522F1B96700B702FD /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F628722F1B96700B702FD /* Tabbar.storyboard */; };
 		AF2F629722F1C7A100B702FD /* answer-en.html in Resources */ = {isa = PBXBuildFile; fileRef = AF2F629522F1C7A100B702FD /* answer-en.html */; };
 		AF2F629822F1C7A100B702FD /* answer-ar.html in Resources */ = {isa = PBXBuildFile; fileRef = AF2F629622F1C7A100B702FD /* answer-ar.html */; };
+		AF2F629D22F5A11F00B702FD /* BankViewXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54F391229921150012BBBA /* BankViewXib.swift */; };
+		AF2F629E22F5A11F00B702FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF463BCD218AD11900DC8A3E /* User.swift */; };
+		AF2F629F22F5A11F00B702FD /* OTPEyeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D71ED22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift */; };
+		AF2F62A022F5A11F00B702FD /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B321B40B8B00524636 /* ActionSheetController.swift */; };
+		AF2F62A122F5A11F00B702FD /* UnsupportedOperationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */; };
+		AF2F62A222F5A11F00B702FD /* HalfColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46F6BF2225651400BF611A /* HalfColorLabel.swift */; };
+		AF2F62A322F5A11F00B702FD /* AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2E2196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift */; };
+		AF2F62A422F5A11F00B702FD /* AuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71C21CA327C0094FBED /* AuthenticationDefinitionPasswordViewController.swift */; };
+		AF2F62A522F5A11F00B702FD /* BankUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD93921F6F4E000DC98B3 /* BankUtil.swift */; };
+		AF2F62A622F5A11F00B702FD /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB64221D4FF6003F3BE6 /* SupportViewController.swift */; };
+		AF2F62A722F5A11F00B702FD /* AuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71021CA322C0094FBED /* AuthenticationDefinitionViewController.swift */; };
+		AF2F62A822F5A11F00B702FD /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
+		AF2F62A922F5A11F00B702FD /* UserRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8C21999AE400C44E4B /* UserRealmRepository.swift */; };
+		AF2F62AA22F5A11F00B702FD /* SettingContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C321D2190C00D56840 /* SettingContractor.swift */; };
+		AF2F62AB22F5A11F00B702FD /* AuthenticationPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FD21CA31B70094FBED /* AuthenticationPatternContractor.swift */; };
+		AF2F62AC22F5A11F00B702FD /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF9219C52F700D8C342 /* PhoneInputViewController.swift */; };
+		AF2F62AD22F5A11F00B702FD /* PhoneInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD89E21A4016D00839F97 /* PhoneInputPresenter.swift */; };
+		AF2F62AE22F5A11F00B702FD /* BarButtonIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */; };
+		AF2F62AF22F5A11F00B702FD /* UserRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8B21999AE400C44E4B /* UserRestRepository.swift */; };
+		AF2F62B022F5A11F00B702FD /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8D21999AE400C44E4B /* UserRepositoryProtocol.swift */; };
+		AF2F62B122F5A11F00B702FD /* AuthenticationPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70221CA31CA0094FBED /* AuthenticationPasswordPresenter.swift */; };
+		AF2F62B222F5A11F00B702FD /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
+		AF2F62B322F5A11F00B702FD /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A83219948F300C44E4B /* Token.swift */; };
+		AF2F62B422F5A11F00B702FD /* CardCellXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9BB29218EFB42004F16DD /* CardCellXibView.swift */; };
+		AF2F62B522F5A11F00B702FD /* CardPagerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADD21918E6400D37C84 /* CardPagerViewAdapter.swift */; };
+		AF2F62B622F5A11F00B702FD /* AuthenticationDefinitionPatternpresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71621CA325C0094FBED /* AuthenticationDefinitionPatternpresenter.swift */; };
+		AF2F62B722F5A11F00B702FD /* AddPasswordViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD22FE21907B6300EC00CB /* AddPasswordViewDesignable.swift */; };
+		AF2F62B822F5A11F00B702FD /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73221CA73490094FBED /* SettingAuthenticationDefinitionPatternContractor.swift */; };
+		AF2F62B922F5A11F00B702FD /* Base64urlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE16E21F457F300FDAE4A /* Base64urlEncoded.swift */; };
+		AF2F62BA22F5A11F00B702FD /* CardListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE321E9D16400A9D4C3 /* CardListContractor.swift */; };
+		AF2F62BB22F5A11F00B702FD /* AuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71B21CA327C0094FBED /* AuthenticationDefinitionPasswordPresenter.swift */; };
+		AF2F62BC22F5A11F00B702FD /* AuthenticationRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B2F2196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift */; };
+		AF2F62BD22F5A11F00B702FD /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B172196D2AE00AA0AF2 /* PasswordValidator.swift */; };
+		AF2F62BE22F5A11F00B702FD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C7228D2C34003D464E /* Logger.swift */; };
+		AF2F62BF22F5A11F00B702FD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B342196E05900AA0AF2 /* Repository.swift */; };
+		AF2F62C022F5A11F00B702FD /* EditCardNameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CFA1221AFC38009BF03B /* EditCardNameAlertViewController.swift */; };
+		AF2F62C122F5A11F00B702FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD84F21AC2BCA007266F4 /* MainViewController.swift */; };
+		AF2F62C222F5A11F00B702FD /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC521CFC97E00B15B90 /* SettingRealmRepository.swift */; };
+		AF2F62C322F5A11F00B702FD /* ConvertArabicNumbersToEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4ECD28222670D400116002 /* ConvertArabicNumbersToEnglish.swift */; };
+		AF2F62C422F5A11F00B702FD /* ImportTokenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFE17221F5DEAB00FDAE4A /* ImportTokenPresenter.swift */; };
+		AF2F62C522F5A11F00B702FD /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76721FDCC1600DFDD33 /* QuestionViewController.swift */; };
+		AF2F62C622F5A11F00B702FD /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD87221AEBB1C007266F4 /* SettingsTableViewAdapter.swift */; };
+		AF2F62C722F5A11F00B702FD /* PhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902B921A1812A0072CFD5 /* PhoneConfirmationViewController.swift */; };
+		AF2F62C822F5A11F00B702FD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6F921CA2F140094FBED /* Authentication.swift */; };
+		AF2F62C922F5A11F00B702FD /* OtpViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE190EB219049030023E785 /* OtpViewDesignable.swift */; };
+		AF2F62CA22F5A11F00B702FD /* AuthenticationPasswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70421CA31CA0094FBED /* AuthenticationPasswordContractor.swift */; };
+		AF2F62CB22F5A11F00B702FD /* ApplicationLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0321BEB13C00B80412 /* ApplicationLockViewController.swift */; };
+		AF2F62CC22F5A11F00B702FD /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72921CA36220094FBED /* CryptoUtil.swift */; };
+		AF2F62CD22F5A11F00B702FD /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B821B410DC00524636 /* ActionSheet.swift */; };
+		AF2F62CE22F5A11F00B702FD /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A852199762700C44E4B /* AuthenticationRepository.swift */; };
+		AF2F62CF22F5A11F00B702FD /* DeleteTokenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC405AFB221BE4CD006F5CFE /* DeleteTokenAlertViewController.swift */; };
+		AF2F62D022F5A11F00B702FD /* NetHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B232196D4E700AA0AF2 /* NetHex.swift */; };
+		AF2F62D122F5A11F00B702FD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70821CA32130094FBED /* AuthenticationViewController.swift */; };
+		AF2F62D222F5A11F00B702FD /* AuthenticationTypeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86821AE8F99007266F4 /* AuthenticationTypeSettingTableViewCell.swift */; };
+		AF2F62D322F5A11F00B702FD /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC021CFB5D700B15B90 /* Setting.swift */; };
+		AF2F62D422F5A11F00B702FD /* AuthenticationPatternPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FE21CA31B70094FBED /* AuthenticationPatternPresenter.swift */; };
+		AF2F62D522F5A11F00B702FD /* LatestUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B0921BEB94500B80412 /* LatestUpdatesViewController.swift */; };
+		AF2F62D622F5A11F00B702FD /* BankCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2ADF2191936F00D37C84 /* BankCardPagerViewCell.swift */; };
+		AF2F62D722F5A11F00B702FD /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76321FDA2B500DFDD33 /* HelpTableViewCell.swift */; };
+		AF2F62D822F5A11F00B702FD /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B332196E05900AA0AF2 /* RepositoryResponse.swift */; };
+		AF2F62D922F5A11F00B702FD /* AuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70F21CA322C0094FBED /* AuthenticationDefinitionContractor.swift */; };
+		AF2F62DA22F5A11F00B702FD /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC112B222BF87100AF933B /* JsonParser.swift */; };
+		AF2F62DB22F5A11F00B702FD /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F821B270B9009441C4 /* SettingAuthenticationDefinitionPatternViewController.swift */; };
+		AF2F62DC22F5A11F00B702FD /* AuthenticationDefinitionPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71521CA325C0094FBED /* AuthenticationDefinitionPatternViewController.swift */; };
+		AF2F62DD22F5A11F00B702FD /* TokenRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAA219ADC3300C44E4B /* TokenRepositoryProtocol.swift */; };
+		AF2F62DE22F5A11F00B702FD /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A942199A2CE00C44E4B /* Interceptor.swift */; };
+		AF2F62DF22F5A11F00B702FD /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7B21984A5500C44E4B /* Bank.swift */; };
+		AF2F62E022F5A11F00B702FD /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057924BE219202CB00DFA69F /* CardListViewController.swift */; };
+		AF2F62E122F5A11F00B702FD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676BC21B695E000524636 /* IntroViewController.swift */; };
+		AF2F62E222F5A11F00B702FD /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5940C521D219FC00D56840 /* SettingPresenter.swift */; };
+		AF2F62E322F5A11F00B702FD /* StringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC60E66222431C200F16215 /* StringSeparator.swift */; };
+		AF2F62E422F5A11F00B702FD /* SupportTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB6B221D67A7003F3BE6 /* SupportTableViewAdapter.swift */; };
+		AF2F62E522F5A11F00B702FD /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F621B27054009441C4 /* SettingAuthenticationDefinitionPasswordViewController.swift */; };
+		AF2F62E622F5A11F00B702FD /* BankRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA0219AB17F00C44E4B /* BankRepository.swift */; };
+		AF2F62E722F5A11F00B702FD /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73621CA73630094FBED /* SettingAuthenticationDefinitionPasswordPresenter.swift */; };
+		AF2F62E822F5A11F00B702FD /* CardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA3219AB91700C44E4B /* CardRepositoryProtocol.swift */; };
+		AF2F62E922F5A11F00B702FD /* ScreenLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72B21CA38550094FBED /* ScreenLocker.swift */; };
+		AF2F62EA22F5A11F00B702FD /* LockScreenTimeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD86221AE8F24007266F4 /* LockScreenTimeSettingTableViewCell.swift */; };
+		AF2F62EB22F5A11F00B702FD /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
+		AF2F62EC22F5A11F00B702FD /* UserDefaultsJwtPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A992199A5DA00C44E4B /* UserDefaultsJwtPersistor.swift */; };
+		AF2F62ED22F5A11F00B702FD /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70A21CA32130094FBED /* AuthenticationPresenter.swift */; };
+		AF2F62EE22F5A11F00B702FD /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BDF21E9CFAC00A9D4C3 /* CardListPresenter.swift */; };
+		AF2F62EF22F5A11F00B702FD /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AA7219ACAC600C44E4B /* CardRepository.swift */; };
+		AF2F62F022F5A11F00B702FD /* LatestUpdatesTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353B1D21C0E5B400B80412 /* LatestUpdatesTableAdapter.swift */; };
+		AF2F62F122F5A11F00B702FD /* AddCardPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBC2AE3219197B000D37C84 /* AddCardPagerViewCell.swift */; };
+		AF2F62F222F5A11F00B702FD /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73521CA73630094FBED /* SettingAuthenticationDefinitionPaswordContractor.swift */; };
+		AF2F62F322F5A11F00B702FD /* AuthenticationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70921CA32130094FBED /* AuthenticationContractor.swift */; };
+		AF2F62F422F5A11F00B702FD /* BankRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9C219AA57B00C44E4B /* BankRepositoryProtocol.swift */; };
+		AF2F62F522F5A11F00B702FD /* BankRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A9E219AAA1700C44E4B /* BankRealmRepository.swift */; };
+		AF2F62F622F5A11F00B702FD /* SettingAuthenticationDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75A4F221B26FC1009441C4 /* SettingAuthenticationDefinitionViewController.swift */; };
+		AF2F62F722F5A11F00B702FD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAD85F21AE8075007266F4 /* SettingsViewController.swift */; };
+		AF2F62F822F5A11F00B702FD /* JwtPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A972199A59100C44E4B /* JwtPersistable.swift */; };
+		AF2F62F922F5A11F00B702FD /* AuthenticationPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D6FC21CA31B70094FBED /* AuthenticationPatternViewController.swift */; };
+		AF2F62FA22F5A11F00B702FD /* SnackbarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B1A2196D31700AA0AF2 /* SnackbarHelper.swift */; };
+		AF2F62FB22F5A11F00B702FD /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A8A21999AE400C44E4B /* UserRepository.swift */; };
+		AF2F62FC22F5A11F00B702FD /* BankCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF1219C46E300D8C342 /* BankCollectionViewAdapter.swift */; };
+		AF2F62FD22F5A11F00B702FD /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A932199A2CE00C44E4B /* ApiHelper.swift */; };
+		AF2F62FE22F5A11F00B702FD /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72D21CA5CE30094FBED /* RealmConfiguration.swift */; };
+		AF2F62FF22F5A11F00B702FD /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E1A4021E4CFBC007DEB86 /* TabbarController.swift */; };
+		AF2F630022F5A11F00B702FD /* ImportTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2676B121B3C23E00524636 /* ImportTokenViewController.swift */; };
+		AF2F630122F5A11F00B702FD /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAF7AF21DB6BD20057402B /* MyApplication.swift */; };
+		AF2F630222F5A11F00B702FD /* AuthenticationDefinitionPatternContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71421CA325C0094FBED /* AuthenticationDefinitionPatternContractor.swift */; };
+		AF2F630322F5A11F00B702FD /* TokenRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAC219ADCC000C44E4B /* TokenRealmRepository.swift */; };
+		AF2F630422F5A11F00B702FD /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D73121CA73490094FBED /* SettingAuthenticationDefinitionPatternpresenter.swift */; };
+		AF2F630522F5A11F00B702FD /* PhoneConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04FAAF21C14DB700A41D9D /* PhoneConfirmationPresenter.swift */; };
+		AF2F630622F5A11F00B702FD /* BankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF285FF5219C4A3500D8C342 /* BankCollectionViewCell.swift */; };
+		AF2F630722F5A11F00B702FD /* AuthenticationDefinitionPaswordContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D71A21CA327C0094FBED /* AuthenticationDefinitionPaswordContractor.swift */; };
+		AF2F630822F5A11F00B702FD /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2420C9228D2C6A003D464E /* ConstantHelper.swift */; };
+		AF2F630922F5A11F00B702FD /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BAB67221D53BC003F3BE6 /* SupportTableViewCell.swift */; };
+		AF2F630A22F5A11F00B702FD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF4CCE21C4E62B00CA66A4 /* BaseViewController.swift */; };
+		AF2F630B22F5A11F00B702FD /* AuthenticationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D70321CA31CA0094FBED /* AuthenticationPasswordViewController.swift */; };
+		AF2F630C22F5A11F00B702FD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246A7D219852EA00C44E4B /* Card.swift */; };
+		AF2F630D22F5A11F00B702FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB39B4F2189A6A600302624 /* AppDelegate.swift */; };
+		AF2F630E22F5A11F00B702FD /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC721CFC9CB00B15B90 /* SettingRepository.swift */; };
+		AF2F630F22F5A11F00B702FD /* HelpTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D75F21FD9F7900DFDD33 /* HelpTableViewAdapter.swift */; };
+		AF2F631022F5A11F00B702FD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D76121FD9F9900DFDD33 /* HelpViewController.swift */; };
+		AF2F631122F5A11F00B702FD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */; };
+		AF2F631222F5A11F00B702FD /* PhoneConfirmationContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A621A5481400839F97 /* PhoneConfirmationContractor.swift */; };
+		AF2F631322F5A11F00B702FD /* HideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */; };
+		AF2F631422F5A11F00B702FD /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE81B1B2196D31700AA0AF2 /* UIHelper.swift */; };
+		AF2F631522F5A11F00B702FD /* SettingMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC921D114B400B15B90 /* SettingMediator.swift */; };
+		AF2F631622F5A11F00B702FD /* PhoneInputContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFD8A021A411D700839F97 /* PhoneInputContractor.swift */; };
+		AF2F631722F5A11F00B702FD /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF246AAE219AE0A500C44E4B /* TokenRepository.swift */; };
+		AF2F631822F5A11F00B702FD /* SettingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C4DC321CFC87B00B15B90 /* SettingRepositoryProtocol.swift */; };
+		AF2F631922F5A11F00B702FD /* ImportTokenContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD174721EDFE3200C975CD /* ImportTokenContractor.swift */; };
+		AF2F631A22F5A11F00B702FD /* CardRealmRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5E6BE521EB586800A9D4C3 /* CardRealmRepsitory.swift */; };
+		AF2F631B22F5A11F00B702FD /* SettingAuthenticationDefinitionContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16D72F21CA731B0094FBED /* SettingAuthenticationDefinitionContractor.swift */; };
+		AF2F631F22F5A11F00B702FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B582189A6A700302624 /* LaunchScreen.storyboard */; };
+		AF2F632022F5A11F00B702FD /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0F21BFA1CF00B80412 /* IRANSansMobile(FaNum)_UltraLight.ttf */; };
+		AF2F632122F5A11F00B702FD /* html_dots.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76B21FDD12500DFDD33 /* html_dots.png */; };
+		AF2F632222F5A11F00B702FD /* AuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61A822F190BF00B702FD /* AuthenticationDefinition.storyboard */; };
+		AF2F632322F5A11F00B702FD /* IRANSansMobile-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286010219D7AFE00D8C342 /* IRANSansMobile-Light.ttf */; };
+		AF2F632422F5A11F00B702FD /* OtpViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F621F22F1AA3700B702FD /* OtpViewDesignable.xib */; };
+		AF2F632522F5A11F00B702FD /* CardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61BB22F1A2C800B702FD /* CardList.storyboard */; };
+		AF2F632622F5A11F00B702FD /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F626222F1B51700B702FD /* Help.storyboard */; };
+		AF2F632722F5A11F00B702FD /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5BAB68221D53BC003F3BE6 /* SupportTableViewCell.xib */; };
+		AF2F632822F5A11F00B702FD /* DeleteTokensAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61E622F1A7DC00B702FD /* DeleteTokensAlert.xib */; };
+		AF2F632922F5A11F00B702FD /* answer-en.html in Resources */ = {isa = PBXBuildFile; fileRef = AF2F629522F1C7A100B702FD /* answer-en.html */; };
+		AF2F632A22F5A11F00B702FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B562189A6A700302624 /* Assets.xcassets */; };
+		AF2F632B22F5A11F00B702FD /* SettingAuthenticationDefinition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F626C22F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard */; };
+		AF2F632C22F5A11F00B702FD /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286011219D7AFE00D8C342 /* IRANSansMobile.ttf */; };
+		AF2F632E22F5A11F00B702FD /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F627D22F1B8E800B702FD /* Support.storyboard */; };
+		AF2F632F22F5A11F00B702FD /* AddCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61F022F1A83600B702FD /* AddCardPagerViewCell.xib */; };
+		AF2F633022F5A11F00B702FD /* answer-ar.html in Resources */ = {isa = PBXBuildFile; fileRef = AF2F629622F1C7A100B702FD /* answer-ar.html */; };
+		AF2F633122F5A11F00B702FD /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
+		AF2F633222F5A11F00B702FD /* OTPEyeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F623022F1AA9900B702FD /* OTPEyeSettingTableViewCell.xib */; };
+		AF2F633322F5A11F00B702FD /* IRANSansMobile(FaNum).ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0C21BFA1CE00B80412 /* IRANSansMobile(FaNum).ttf */; };
+		AF2F633422F5A11F00B702FD /* AuthenticationTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F623A22F1B13500B702FD /* AuthenticationTypeTableViewCell.xib */; };
+		AF2F633522F5A11F00B702FD /* ActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2676B621B40E4F00524636 /* ActionSheet.xib */; };
+		AF2F633622F5A11F00B702FD /* ApplicationLock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F618C22F18D0C00B702FD /* ApplicationLock.storyboard */; };
+		AF2F633722F5A11F00B702FD /* BankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF285FF3219C498000D8C342 /* BankCollectionViewCell.xib */; };
+		AF2F633822F5A11F00B702FD /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F628722F1B96700B702FD /* Tabbar.storyboard */; };
+		AF2F633922F5A11F00B702FD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F625822F1B3C000B702FD /* Settings.storyboard */; };
+		AF2F633A22F5A11F00B702FD /* BankCardPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F620422F1A98500B702FD /* BankCardPagerViewCell.xib */; };
+		AF2F633B22F5A11F00B702FD /* ImportToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61C922F1A37800B702FD /* ImportToken.storyboard */; };
+		AF2F633C22F5A11F00B702FD /* html_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57D76D21FDD12F00DFDD33 /* html_copy.png */; };
+		AF2F633D22F5A11F00B702FD /* IRANSansMobile-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600F219D7AFE00D8C342 /* IRANSansMobile-UltraLight.ttf */; };
+		AF2F633E22F5A11F00B702FD /* LockScreenTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F624422F1B16600B702FD /* LockScreenTimeTableViewCell.xib */; };
+		AF2F633F22F5A11F00B702FD /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F624E22F1B1DD00B702FD /* Registration.storyboard */; };
+		AF2F634022F5A11F00B702FD /* IRANSansMobile(FaNum)_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0B21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Bold.ttf */; };
+		AF2F634122F5A11F00B702FD /* AddPasswordViewDesignable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61FA22F1A90600B702FD /* AddPasswordViewDesignable.xib */; };
+		AF2F634222F5A11F00B702FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACDFD8A521A418BC00839F97 /* Localizable.strings */; };
+		AF2F634322F5A11F00B702FD /* BankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC54F38E22991F7A0012BBBA /* BankView.xib */; };
+		AF2F634422F5A11F00B702FD /* IRANSansMobile-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF286012219D7AFF00D8C342 /* IRANSansMobile-Medium.ttf */; };
+		AF2F634522F5A11F00B702FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB39B532189A6A600302624 /* Main.storyboard */; };
+		AF2F634622F5A11F00B702FD /* LatestUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0621BEB8E800B80412 /* LatestUpdates.storyboard */; };
+		AF2F634722F5A11F00B702FD /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF28600E219D7AFE00D8C342 /* IRANSansMobile-Bold.ttf */; };
+		AF2F634822F5A11F00B702FD /* EditCardNameAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F61DA22F1A78100B702FD /* EditCardNameAlert.xib */; };
+		AF2F634922F5A11F00B702FD /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2F619622F18DB400B702FD /* Authentication.storyboard */; };
+		AF2F634A22F5A11F00B702FD /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
+		AF2F634B22F5A11F00B702FD /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
+		AF2F634C22F5A11F00B702FD /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
+		AF2F634D22F5A11F00B702FD /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
+		AF2F634E22F5A11F00B702FD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2F621522F1AA1200B702FD /* CardCell.xib */; };
 		AF378011222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF378012222D3E4C0097306C /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = AF378010222D3E4B0097306C /* banks.json */; };
 		AF3FAB5522198EEB0053C9EE /* GoogleService-Info-r.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */; };
@@ -326,7 +501,13 @@
 		AF51CBCB222BF07C003051D7 /* GoogleService-Info-d.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */; };
 		AF51CBCC222BF07C003051D7 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0D21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		AF51CBCD222BF07C003051D7 /* IRANSansMobile(FaNum)_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC353B0E21BFA1CE00B80412 /* IRANSansMobile(FaNum)_Light.ttf */; };
-		AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF51CBD9222BF7C9003051D7 /* Info-debug.plist */; };
+		AF54E4BE22F5A85100F0AB5E /* Info-appstore.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF54E4BD22F5A85100F0AB5E /* Info-appstore.plist */; };
+		AF54E4CF22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E4CE22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift */; };
+		AF54E4D022F5B32E00F0AB5E /* ForceColoseAlertExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E4CE22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift */; };
+		AF54E4D122F5B32E00F0AB5E /* ForceColoseAlertExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E4CE22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift */; };
+		AF54E4D322F5B3C300F0AB5E /* CoreTelephonyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E4D222F5B3C300F0AB5E /* CoreTelephonyHelper.swift */; };
+		AF54E4D422F5B3C300F0AB5E /* CoreTelephonyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E4D222F5B3C300F0AB5E /* CoreTelephonyHelper.swift */; };
+		AF54E4D522F5B3C300F0AB5E /* CoreTelephonyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E4D222F5B3C300F0AB5E /* CoreTelephonyHelper.swift */; };
 		AF71578622002A3F00703514 /* ImportTokenTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */; };
 		AF9F2196220AFDA3005088B9 /* RemoveArrayElementExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */; };
 		AFA21F8C221BF8A700643C3E /* SecCertificateToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA21F8B221BF8A700643C3E /* SecCertificateToData.swift */; };
@@ -385,6 +566,7 @@
 		1D9306731899899C0CC5FB63 /* Pods-MobileToken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.release.xcconfig"; sourceTree = "<group>"; };
 		2144BB2A3B47C8CD0710AC23 /* Pods-MobileTokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.release.xcconfig"; sourceTree = "<group>"; };
 		21F1664046EEC1F99C53D296 /* Pods-MobileTokenTests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
+		21FE5D3551C1F4D8EB079C0A /* Pods_Common_MobileTokenAppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_MobileTokenAppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234764F4AAE7E5ECFF5AEF41 /* Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		2F0F34956AB3C0CDF0E215FA /* Pods-Common-MobileToken.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		38C8A63E21C1A933F7AE0560 /* Pods-MobileTokenTests.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.releaseiscop.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +581,7 @@
 		86BF6344B2F167670FAD2D06 /* Pods-Common-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
 		87A92C3F1D65809F1249CB83 /* Pods-MobileTokenTests.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		91FF34E75FB06064EEA35841 /* Pods-MobileToken.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
+		9702E182D0D82FE47DF94EE2 /* Pods-Common-MobileTokenAppStore.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenAppStore.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenAppStore/Pods-Common-MobileTokenAppStore.releaseiscop.xcconfig"; sourceTree = "<group>"; };
 		9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BB68A9AAE0753BA3C52244 /* Pods-Common-MobileToken.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		A00193DCA7A801AB64FDC97E /* Pods-MobileTokenUITests.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
@@ -615,6 +798,7 @@
 		AF2F629422F1B9B200B702FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Tabbar.strings; sourceTree = "<group>"; };
 		AF2F629522F1C7A100B702FD /* answer-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "answer-en.html"; sourceTree = "<group>"; };
 		AF2F629622F1C7A100B702FD /* answer-ar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "answer-ar.html"; sourceTree = "<group>"; };
+		AF2F635722F5A11F00B702FD /* MobileTokenAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTokenAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF378010222D3E4B0097306C /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		AF3FAB5422198EEA0053C9EE /* GoogleService-Info-r.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-r.plist"; sourceTree = "<group>"; };
 		AF3FAB56221992870053C9EE /* GoogleService-Info-d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-d.plist"; sourceTree = "<group>"; };
@@ -623,6 +807,9 @@
 		AF51CBD9222BF7C9003051D7 /* Info-debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
 		AF52C34C22155B8500639DA3 /* CarreneDevRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevRelease.xcconfig; sourceTree = "<group>"; };
 		AF52C34D22155BA800639DA3 /* ISCOPRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ISCOPRelease.xcconfig; sourceTree = "<group>"; };
+		AF54E4BD22F5A85100F0AB5E /* Info-appstore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-appstore.plist"; path = "../../../ios/porpoise/MobileToken/Info-appstore.plist"; sourceTree = "<group>"; };
+		AF54E4CE22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceColoseAlertExtention.swift; sourceTree = "<group>"; };
+		AF54E4D222F5B3C300F0AB5E /* CoreTelephonyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreTelephonyHelper.swift; sourceTree = "<group>"; };
 		AF71578522002A3F00703514 /* ImportTokenTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTokenTapGesture.swift; sourceTree = "<group>"; };
 		AF9F2195220AFDA3005088B9 /* RemoveArrayElementExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveArrayElementExtention.swift; sourceTree = "<group>"; };
 		AF9F219822144F08005088B9 /* CarreneDevDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CarreneDevDebug.xcconfig; sourceTree = "<group>"; };
@@ -663,9 +850,12 @@
 		AFE81B342196E05900AA0AF2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		AFE81B382196E11900AA0AF2 /* UnsupportedOperationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsupportedOperationException.swift; sourceTree = "<group>"; };
 		B1C5002C5F61619375C89691 /* Pods-MobileToken.releaseiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.releaseiscop.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.releaseiscop.xcconfig"; sourceTree = "<group>"; };
+		B5A7F4D412AC6F041D6A2DAB /* Pods-Common-MobileTokenAppStore.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenAppStore.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenAppStore/Pods-Common-MobileTokenAppStore.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		C068EABC6B7054881F5CF8AB /* Pods-Common-MobileToken.debugiscop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileToken.debugiscop.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken.debugiscop.xcconfig"; sourceTree = "<group>"; };
 		C72B1136ABDEF0040C34202C /* Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
+		D0270E2FAA6B3674DB62CB2A /* Pods-Common-MobileTokenAppStore.releasecarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenAppStore.releasecarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenAppStore/Pods-Common-MobileTokenAppStore.releasecarrenedev.xcconfig"; sourceTree = "<group>"; };
 		D4F7E48A9147EA2E00B9F254 /* Pods-MobileToken.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileToken.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-MobileToken/Pods-MobileToken.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
+		DB70489CBD0A4C1E49F37448 /* Pods-Common-MobileTokenAppStore.debugcarrenedev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-MobileTokenAppStore.debugcarrenedev.xcconfig"; path = "Pods/Target Support Files/Pods-Common-MobileTokenAppStore/Pods-Common-MobileTokenAppStore.debugcarrenedev.xcconfig"; sourceTree = "<group>"; };
 		E8A2288F27762FE7AA71A63C /* Pods-MobileTokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenUITests/Pods-MobileTokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1FA22EE60EF74C815B714D /* Pods_MobileToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED130E855374C06F3DA0E42E /* Pods-MobileTokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTokenTests/Pods-MobileTokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -673,6 +863,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF2F631C22F5A11F00B702FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77C3DAF6EE29337E7743042B /* Pods_Common_MobileTokenAppStore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF51CBA0222BF07C003051D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,6 +935,10 @@
 				0A1827F399E4964426C6E234 /* Pods-Common-MobileTokenDebug.debugiscop.xcconfig */,
 				234764F4AAE7E5ECFF5AEF41 /* Pods-Common-MobileTokenDebug.releasecarrenedev.xcconfig */,
 				4997270133B909FAFCF00328 /* Pods-Common-MobileTokenDebug.releaseiscop.xcconfig */,
+				DB70489CBD0A4C1E49F37448 /* Pods-Common-MobileTokenAppStore.debugcarrenedev.xcconfig */,
+				B5A7F4D412AC6F041D6A2DAB /* Pods-Common-MobileTokenAppStore.debugiscop.xcconfig */,
+				D0270E2FAA6B3674DB62CB2A /* Pods-Common-MobileTokenAppStore.releasecarrenedev.xcconfig */,
+				9702E182D0D82FE47DF94EE2 /* Pods-Common-MobileTokenAppStore.releaseiscop.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -749,6 +951,7 @@
 				9707D645D1028E760402A760 /* Pods_MobileTokenUITests.framework */,
 				41998B353D8DAEC1D5AC0105 /* Pods_Common_MobileToken.framework */,
 				A8ADCFFACD006BCE53D3AC52 /* Pods_Common_MobileTokenDebug.framework */,
+				21FE5D3551C1F4D8EB079C0A /* Pods_Common_MobileTokenAppStore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1403,6 +1606,7 @@
 				AFB39B602189A6A700302624 /* MobileTokenTests.xctest */,
 				AFB39B6B2189A6A700302624 /* MobileTokenUITests.xctest */,
 				AF51CBD7222BF07C003051D7 /* MobileTokenDebug.app */,
+				AF2F635722F5A11F00B702FD /* MobileTokenAppStore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1410,6 +1614,7 @@
 		AFB39B4E2189A6A600302624 /* MobileToken */ = {
 			isa = PBXGroup;
 			children = (
+				AF54E4BD22F5A85100F0AB5E /* Info-appstore.plist */,
 				AFA9038D22EEE9EC00D2A4A3 /* R.generated.swift */,
 				AFDF79F2221D4E57003F26D0 /* MobileToken.entitlements */,
 				AF51CBD9222BF7C9003051D7 /* Info-debug.plist */,
@@ -1542,6 +1747,7 @@
 		AFE81B0C2196CD1600AA0AF2 /* uiviewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				AF54E4CE22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift */,
 				AFE81B0D2196CD6400AA0AF2 /* HideKeyboardWhenTappedAround.swift */,
 				AC6D03EE2226BC5A005ECA55 /* BarButtonIndicator.swift */,
 			);
@@ -1580,6 +1786,7 @@
 		AFE81B162196D26C00AA0AF2 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				AF54E4D222F5B3C300F0AB5E /* CoreTelephonyHelper.swift */,
 				AF2420C7228D2C34003D464E /* Logger.swift */,
 				AC16D72921CA36220094FBED /* CryptoUtil.swift */,
 				AF246A972199A59100C44E4B /* JwtPersistable.swift */,
@@ -1674,6 +1881,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF2F629922F5A11F00B702FD /* MobileTokenAppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF2F635222F5A11F00B702FD /* Build configuration list for PBXNativeTarget "MobileTokenAppStore" */;
+			buildPhases = (
+				AF2F629A22F5A11F00B702FD /* [CP] Check Pods Manifest.lock */,
+				AF2F629B22F5A11F00B702FD /* ShellScript */,
+				AF2F629C22F5A11F00B702FD /* Sources */,
+				AF2F631C22F5A11F00B702FD /* Frameworks */,
+				AF2F631E22F5A11F00B702FD /* Resources */,
+				AF2F635022F5A11F00B702FD /* ShellScript */,
+				AF2F635122F5A11F00B702FD /* Run Script */,
+				2C55B76D42F0DF3DD6266A22 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileTokenAppStore;
+			productName = MobileToken;
+			productReference = AF2F635722F5A11F00B702FD /* MobileTokenAppStore.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AF51CB21222BF07C003051D7 /* MobileTokenDebug */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF51CBD2222BF07C003051D7 /* Build configuration list for PBXNativeTarget "MobileTokenDebug" */;
@@ -1683,9 +1912,9 @@
 				AF51CB24222BF07C003051D7 /* Sources */,
 				AF51CBA0222BF07C003051D7 /* Frameworks */,
 				AF51CBA2222BF07C003051D7 /* Resources */,
-				D0B2DA3914311370192EF78E /* [CP] Embed Pods Frameworks */,
 				AF51CBD0222BF07C003051D7 /* ShellScript */,
 				AF51CBD1222BF07C003051D7 /* Run Script */,
+				1DC969EC591246A19382964C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1705,9 +1934,9 @@
 				AFB39B482189A6A600302624 /* Sources */,
 				AFB39B492189A6A600302624 /* Frameworks */,
 				AFB39B4A2189A6A600302624 /* Resources */,
-				9F82A25F7A55F171F9558E22 /* [CP] Embed Pods Frameworks */,
 				AF52C35822182C5B00639DA3 /* ShellScript */,
 				AF52C35C22184A4A00639DA3 /* Run Script */,
+				DC71736D2C5E1009324EA8FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1803,11 +2032,66 @@
 				AFB39B5F2189A6A700302624 /* MobileTokenTests */,
 				AFB39B6A2189A6A700302624 /* MobileTokenUITests */,
 				AF51CB21222BF07C003051D7 /* MobileTokenDebug */,
+				AF2F629922F5A11F00B702FD /* MobileTokenAppStore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF2F631E22F5A11F00B702FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2F631F22F5A11F00B702FD /* LaunchScreen.storyboard in Resources */,
+				AF2F632022F5A11F00B702FD /* IRANSansMobile(FaNum)_UltraLight.ttf in Resources */,
+				AF2F632122F5A11F00B702FD /* html_dots.png in Resources */,
+				AF2F632222F5A11F00B702FD /* AuthenticationDefinition.storyboard in Resources */,
+				AF2F632322F5A11F00B702FD /* IRANSansMobile-Light.ttf in Resources */,
+				AF2F632422F5A11F00B702FD /* OtpViewDesignable.xib in Resources */,
+				AF2F632522F5A11F00B702FD /* CardList.storyboard in Resources */,
+				AF2F632622F5A11F00B702FD /* Help.storyboard in Resources */,
+				AF2F632722F5A11F00B702FD /* SupportTableViewCell.xib in Resources */,
+				AF2F632822F5A11F00B702FD /* DeleteTokensAlert.xib in Resources */,
+				AF2F632922F5A11F00B702FD /* answer-en.html in Resources */,
+				AF2F632A22F5A11F00B702FD /* Assets.xcassets in Resources */,
+				AF2F632B22F5A11F00B702FD /* SettingAuthenticationDefinition.storyboard in Resources */,
+				AF2F632C22F5A11F00B702FD /* IRANSansMobile.ttf in Resources */,
+				AF2F632E22F5A11F00B702FD /* Support.storyboard in Resources */,
+				AF2F632F22F5A11F00B702FD /* AddCardPagerViewCell.xib in Resources */,
+				AF2F633022F5A11F00B702FD /* answer-ar.html in Resources */,
+				AF2F633122F5A11F00B702FD /* banks.json in Resources */,
+				AF2F633222F5A11F00B702FD /* OTPEyeSettingTableViewCell.xib in Resources */,
+				AF2F633322F5A11F00B702FD /* IRANSansMobile(FaNum).ttf in Resources */,
+				AF2F633422F5A11F00B702FD /* AuthenticationTypeTableViewCell.xib in Resources */,
+				AF2F633522F5A11F00B702FD /* ActionSheet.xib in Resources */,
+				AF2F633622F5A11F00B702FD /* ApplicationLock.storyboard in Resources */,
+				AF2F633722F5A11F00B702FD /* BankCollectionViewCell.xib in Resources */,
+				AF2F633822F5A11F00B702FD /* Tabbar.storyboard in Resources */,
+				AF2F633922F5A11F00B702FD /* Settings.storyboard in Resources */,
+				AF2F633A22F5A11F00B702FD /* BankCardPagerViewCell.xib in Resources */,
+				AF2F633B22F5A11F00B702FD /* ImportToken.storyboard in Resources */,
+				AF2F633C22F5A11F00B702FD /* html_copy.png in Resources */,
+				AF2F633D22F5A11F00B702FD /* IRANSansMobile-UltraLight.ttf in Resources */,
+				AF2F633E22F5A11F00B702FD /* LockScreenTimeTableViewCell.xib in Resources */,
+				AF2F633F22F5A11F00B702FD /* Registration.storyboard in Resources */,
+				AF2F634022F5A11F00B702FD /* IRANSansMobile(FaNum)_Bold.ttf in Resources */,
+				AF2F634122F5A11F00B702FD /* AddPasswordViewDesignable.xib in Resources */,
+				AF2F634222F5A11F00B702FD /* Localizable.strings in Resources */,
+				AF2F634322F5A11F00B702FD /* BankView.xib in Resources */,
+				AF2F634422F5A11F00B702FD /* IRANSansMobile-Medium.ttf in Resources */,
+				AF2F634522F5A11F00B702FD /* Main.storyboard in Resources */,
+				AF2F634622F5A11F00B702FD /* LatestUpdates.storyboard in Resources */,
+				AF2F634722F5A11F00B702FD /* IRANSansMobile-Bold.ttf in Resources */,
+				AF2F634822F5A11F00B702FD /* EditCardNameAlert.xib in Resources */,
+				AF2F634922F5A11F00B702FD /* Authentication.storyboard in Resources */,
+				AF2F634A22F5A11F00B702FD /* GoogleService-Info-r.plist in Resources */,
+				AF2F634B22F5A11F00B702FD /* GoogleService-Info-d.plist in Resources */,
+				AF2F634C22F5A11F00B702FD /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
+				AF2F634D22F5A11F00B702FD /* IRANSansMobile(FaNum)_Light.ttf in Resources */,
+				AF2F634E22F5A11F00B702FD /* CardCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF51CBA2222BF07C003051D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1878,7 +2162,6 @@
 				AFB39B572189A6A700302624 /* Assets.xcassets in Resources */,
 				AF2F626922F1B7E300B702FD /* SettingAuthenticationDefinition.storyboard in Resources */,
 				AF286017219D7B1000D8C342 /* IRANSansMobile.ttf in Resources */,
-				AF51CBDA222BF7CA003051D7 /* Info-debug.plist in Resources */,
 				AF2F627A22F1B8E800B702FD /* Support.storyboard in Resources */,
 				AF2F61ED22F1A83600B702FD /* AddCardPagerViewCell.xib in Resources */,
 				AF2F629822F1C7A100B702FD /* answer-ar.html in Resources */,
@@ -1901,6 +2184,7 @@
 				AF2F61F722F1A90600B702FD /* AddPasswordViewDesignable.xib in Resources */,
 				ACDFD8A321A418BC00839F97 /* Localizable.strings in Resources */,
 				AC54F38F22991F7A0012BBBA /* BankView.xib in Resources */,
+				AF54E4BE22F5A85100F0AB5E /* Info-appstore.plist in Resources */,
 				AF286015219D7B0A00D8C342 /* IRANSansMobile-Medium.ttf in Resources */,
 				AFB39B552189A6A600302624 /* Main.storyboard in Resources */,
 				AC353B0721BEB8E800B80412 /* LatestUpdates.storyboard in Resources */,
@@ -1932,31 +2216,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3309101400A58F91E12D440A /* [CP] Check Pods Manifest.lock */ = {
+		1DC969EC591246A19382964C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MobileTokenUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F82A25F7A55F171F9558E22 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
@@ -2015,7 +2281,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C55B76D42F0DF3DD6266A22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenAppStore/Pods-Common-MobileTokenAppStore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/HUIPatternLockView-Swift/HUIPatternLockView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/oath/oath.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUIPatternLockView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/oath.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenAppStore/Pods-Common-MobileTokenAppStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3309101400A58F91E12D440A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileTokenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A0A120C9E345B0A039F4CF1B /* [CP] Check Pods Manifest.lock */ = {
@@ -2053,6 +2405,67 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AF2F629A22F5A11F00B702FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Common-MobileTokenAppStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2F629B22F5A11F00B702FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		AF2F635022F5A11F00B702FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		AF2F635122F5A11F00B702FD /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nPATH_TO_GOOGLE_PLISTS=\"${PROJECT_DIR}/MobileToken\"\n\necho \"HhhhhHH\"\nif [ \"${CONFIGURATION}\" = \"ReleaseCarreneDev\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-r.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: RRRRRRRRR\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"ReleaseISCOP\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-r.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: RRRRRRRRR\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"DebugCarreneDev\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-d.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: DDDDDD\"\nfi\n\nif [ \"${CONFIGURATION}\" = \"DebugISCOP\" ]; then\ncp -r \"$PATH_TO_GOOGLE_PLISTS/GoogleService-Info-d.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"warning: DDDDDD\"\nfi\n";
 		};
 		AF51CB23222BF07C003051D7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2158,13 +2571,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0B2DA3914311370192EF78E /* [CP] Embed Pods Frameworks */ = {
+		DC71736D2C5E1009324EA8FA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
@@ -2223,12 +2636,148 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileTokenDebug/Pods-Common-MobileTokenDebug-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-MobileToken/Pods-Common-MobileToken-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF2F629C22F5A11F00B702FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2F629D22F5A11F00B702FD /* BankViewXib.swift in Sources */,
+				AF2F629E22F5A11F00B702FD /* User.swift in Sources */,
+				AF2F629F22F5A11F00B702FD /* OTPEyeSettingTableViewCell.swift in Sources */,
+				AF2F62A022F5A11F00B702FD /* ActionSheetController.swift in Sources */,
+				AF54E4D122F5B32E00F0AB5E /* ForceColoseAlertExtention.swift in Sources */,
+				AF2F62A122F5A11F00B702FD /* UnsupportedOperationException.swift in Sources */,
+				AF2F62A222F5A11F00B702FD /* HalfColorLabel.swift in Sources */,
+				AF2F62A322F5A11F00B702FD /* AuthenticationRepositoryProtocol.swift in Sources */,
+				AF2F62A422F5A11F00B702FD /* AuthenticationDefinitionPasswordViewController.swift in Sources */,
+				AF2F62A522F5A11F00B702FD /* BankUtil.swift in Sources */,
+				AF2F62A622F5A11F00B702FD /* SupportViewController.swift in Sources */,
+				AF2F62A722F5A11F00B702FD /* AuthenticationDefinitionViewController.swift in Sources */,
+				AF2F62A822F5A11F00B702FD /* ImportTokenTapGesture.swift in Sources */,
+				AF2F62A922F5A11F00B702FD /* UserRealmRepository.swift in Sources */,
+				AF2F62AA22F5A11F00B702FD /* SettingContractor.swift in Sources */,
+				AF2F62AB22F5A11F00B702FD /* AuthenticationPatternContractor.swift in Sources */,
+				AF2F62AC22F5A11F00B702FD /* PhoneInputViewController.swift in Sources */,
+				AF2F62AD22F5A11F00B702FD /* PhoneInputPresenter.swift in Sources */,
+				AF2F62AE22F5A11F00B702FD /* BarButtonIndicator.swift in Sources */,
+				AF2F62AF22F5A11F00B702FD /* UserRestRepository.swift in Sources */,
+				AF2F62B022F5A11F00B702FD /* UserRepositoryProtocol.swift in Sources */,
+				AF2F62B122F5A11F00B702FD /* AuthenticationPasswordPresenter.swift in Sources */,
+				AF2F62B222F5A11F00B702FD /* SecCertificateToData.swift in Sources */,
+				AF2F62B322F5A11F00B702FD /* Token.swift in Sources */,
+				AF2F62B422F5A11F00B702FD /* CardCellXibView.swift in Sources */,
+				AF2F62B522F5A11F00B702FD /* CardPagerViewAdapter.swift in Sources */,
+				AF2F62B622F5A11F00B702FD /* AuthenticationDefinitionPatternpresenter.swift in Sources */,
+				AF2F62B722F5A11F00B702FD /* AddPasswordViewDesignable.swift in Sources */,
+				AF2F62B822F5A11F00B702FD /* SettingAuthenticationDefinitionPatternContractor.swift in Sources */,
+				AF2F62B922F5A11F00B702FD /* Base64urlEncoded.swift in Sources */,
+				AF2F62BA22F5A11F00B702FD /* CardListContractor.swift in Sources */,
+				AF2F62BB22F5A11F00B702FD /* AuthenticationDefinitionPasswordPresenter.swift in Sources */,
+				AF2F62BC22F5A11F00B702FD /* AuthenticationRealmRepository.swift in Sources */,
+				AF2F62BD22F5A11F00B702FD /* PasswordValidator.swift in Sources */,
+				AF2F62BE22F5A11F00B702FD /* Logger.swift in Sources */,
+				AF54E4D522F5B3C300F0AB5E /* CoreTelephonyHelper.swift in Sources */,
+				AF2F62BF22F5A11F00B702FD /* Repository.swift in Sources */,
+				AF2F62C022F5A11F00B702FD /* EditCardNameAlertViewController.swift in Sources */,
+				AF2F62C122F5A11F00B702FD /* MainViewController.swift in Sources */,
+				AF2F62C222F5A11F00B702FD /* SettingRealmRepository.swift in Sources */,
+				AF2F62C322F5A11F00B702FD /* ConvertArabicNumbersToEnglish.swift in Sources */,
+				AF2F62C422F5A11F00B702FD /* ImportTokenPresenter.swift in Sources */,
+				AF2F62C522F5A11F00B702FD /* QuestionViewController.swift in Sources */,
+				AF2F62C622F5A11F00B702FD /* SettingsTableViewAdapter.swift in Sources */,
+				AF2F62C722F5A11F00B702FD /* PhoneConfirmationViewController.swift in Sources */,
+				AF2F62C822F5A11F00B702FD /* Authentication.swift in Sources */,
+				AF2F62C922F5A11F00B702FD /* OtpViewDesignable.swift in Sources */,
+				AF2F62CA22F5A11F00B702FD /* AuthenticationPasswordContractor.swift in Sources */,
+				AF2F62CB22F5A11F00B702FD /* ApplicationLockViewController.swift in Sources */,
+				AF2F62CC22F5A11F00B702FD /* CryptoUtil.swift in Sources */,
+				AF2F62CD22F5A11F00B702FD /* ActionSheet.swift in Sources */,
+				AF2F62CE22F5A11F00B702FD /* AuthenticationRepository.swift in Sources */,
+				AF2F62CF22F5A11F00B702FD /* DeleteTokenAlertViewController.swift in Sources */,
+				AF2F62D022F5A11F00B702FD /* NetHex.swift in Sources */,
+				AF2F62D122F5A11F00B702FD /* AuthenticationViewController.swift in Sources */,
+				AF2F62D222F5A11F00B702FD /* AuthenticationTypeSettingTableViewCell.swift in Sources */,
+				AF2F62D322F5A11F00B702FD /* Setting.swift in Sources */,
+				AF2F62D422F5A11F00B702FD /* AuthenticationPatternPresenter.swift in Sources */,
+				AF2F62D522F5A11F00B702FD /* LatestUpdatesViewController.swift in Sources */,
+				AF2F62D622F5A11F00B702FD /* BankCardPagerViewCell.swift in Sources */,
+				AF2F62D722F5A11F00B702FD /* HelpTableViewCell.swift in Sources */,
+				AF2F62D822F5A11F00B702FD /* RepositoryResponse.swift in Sources */,
+				AF2F62D922F5A11F00B702FD /* AuthenticationDefinitionContractor.swift in Sources */,
+				AF2F62DA22F5A11F00B702FD /* JsonParser.swift in Sources */,
+				AF2F62DB22F5A11F00B702FD /* SettingAuthenticationDefinitionPatternViewController.swift in Sources */,
+				AF2F62DC22F5A11F00B702FD /* AuthenticationDefinitionPatternViewController.swift in Sources */,
+				AF2F62DD22F5A11F00B702FD /* TokenRepositoryProtocol.swift in Sources */,
+				AF2F62DE22F5A11F00B702FD /* Interceptor.swift in Sources */,
+				AF2F62DF22F5A11F00B702FD /* Bank.swift in Sources */,
+				AF2F62E022F5A11F00B702FD /* CardListViewController.swift in Sources */,
+				AF2F62E122F5A11F00B702FD /* IntroViewController.swift in Sources */,
+				AF2F62E222F5A11F00B702FD /* SettingPresenter.swift in Sources */,
+				AF2F62E322F5A11F00B702FD /* StringSeparator.swift in Sources */,
+				AF2F62E422F5A11F00B702FD /* SupportTableViewAdapter.swift in Sources */,
+				AF2F62E522F5A11F00B702FD /* SettingAuthenticationDefinitionPasswordViewController.swift in Sources */,
+				AF2F62E622F5A11F00B702FD /* BankRepository.swift in Sources */,
+				AF2F62E722F5A11F00B702FD /* SettingAuthenticationDefinitionPasswordPresenter.swift in Sources */,
+				AF2F62E822F5A11F00B702FD /* CardRepositoryProtocol.swift in Sources */,
+				AF2F62E922F5A11F00B702FD /* ScreenLocker.swift in Sources */,
+				AF2F62EA22F5A11F00B702FD /* LockScreenTimeSettingTableViewCell.swift in Sources */,
+				AF2F62EB22F5A11F00B702FD /* RemoveArrayElementExtention.swift in Sources */,
+				AF2F62EC22F5A11F00B702FD /* UserDefaultsJwtPersistor.swift in Sources */,
+				AF2F62ED22F5A11F00B702FD /* AuthenticationPresenter.swift in Sources */,
+				AF2F62EE22F5A11F00B702FD /* CardListPresenter.swift in Sources */,
+				AF2F62EF22F5A11F00B702FD /* CardRepository.swift in Sources */,
+				AF2F62F022F5A11F00B702FD /* LatestUpdatesTableAdapter.swift in Sources */,
+				AF2F62F122F5A11F00B702FD /* AddCardPagerViewCell.swift in Sources */,
+				AF2F62F222F5A11F00B702FD /* SettingAuthenticationDefinitionPaswordContractor.swift in Sources */,
+				AF2F62F322F5A11F00B702FD /* AuthenticationContractor.swift in Sources */,
+				AF2F62F422F5A11F00B702FD /* BankRepositoryProtocol.swift in Sources */,
+				AF2F62F522F5A11F00B702FD /* BankRealmRepository.swift in Sources */,
+				AF2F62F622F5A11F00B702FD /* SettingAuthenticationDefinitionViewController.swift in Sources */,
+				AF2F62F722F5A11F00B702FD /* SettingsViewController.swift in Sources */,
+				AF2F62F822F5A11F00B702FD /* JwtPersistable.swift in Sources */,
+				AF2F62F922F5A11F00B702FD /* AuthenticationPatternViewController.swift in Sources */,
+				AF2F62FA22F5A11F00B702FD /* SnackbarHelper.swift in Sources */,
+				AF2F62FB22F5A11F00B702FD /* UserRepository.swift in Sources */,
+				AF2F62FC22F5A11F00B702FD /* BankCollectionViewAdapter.swift in Sources */,
+				AF2F62FD22F5A11F00B702FD /* ApiHelper.swift in Sources */,
+				AF2F62FE22F5A11F00B702FD /* RealmConfiguration.swift in Sources */,
+				AF2F62FF22F5A11F00B702FD /* TabbarController.swift in Sources */,
+				AF2F630022F5A11F00B702FD /* ImportTokenViewController.swift in Sources */,
+				AF2F630122F5A11F00B702FD /* MyApplication.swift in Sources */,
+				AF2F630222F5A11F00B702FD /* AuthenticationDefinitionPatternContractor.swift in Sources */,
+				AF2F630322F5A11F00B702FD /* TokenRealmRepository.swift in Sources */,
+				AF2F630422F5A11F00B702FD /* SettingAuthenticationDefinitionPatternpresenter.swift in Sources */,
+				AF2F630522F5A11F00B702FD /* PhoneConfirmationPresenter.swift in Sources */,
+				AF2F630622F5A11F00B702FD /* BankCollectionViewCell.swift in Sources */,
+				AF2F630722F5A11F00B702FD /* AuthenticationDefinitionPaswordContractor.swift in Sources */,
+				AF2F630822F5A11F00B702FD /* ConstantHelper.swift in Sources */,
+				AF2F630922F5A11F00B702FD /* SupportTableViewCell.swift in Sources */,
+				AF2F630A22F5A11F00B702FD /* BaseViewController.swift in Sources */,
+				AF2F630B22F5A11F00B702FD /* AuthenticationPasswordViewController.swift in Sources */,
+				AF2F630C22F5A11F00B702FD /* Card.swift in Sources */,
+				AF2F630D22F5A11F00B702FD /* AppDelegate.swift in Sources */,
+				AF2F630E22F5A11F00B702FD /* SettingRepository.swift in Sources */,
+				AF2F630F22F5A11F00B702FD /* HelpTableViewAdapter.swift in Sources */,
+				AF2F631022F5A11F00B702FD /* HelpViewController.swift in Sources */,
+				AF2F631122F5A11F00B702FD /* R.generated.swift in Sources */,
+				AF2F631222F5A11F00B702FD /* PhoneConfirmationContractor.swift in Sources */,
+				AF2F631322F5A11F00B702FD /* HideKeyboardWhenTappedAround.swift in Sources */,
+				AF2F631422F5A11F00B702FD /* UIHelper.swift in Sources */,
+				AF2F631522F5A11F00B702FD /* SettingMediator.swift in Sources */,
+				AF2F631622F5A11F00B702FD /* PhoneInputContractor.swift in Sources */,
+				AF2F631722F5A11F00B702FD /* TokenRepository.swift in Sources */,
+				AF2F631822F5A11F00B702FD /* SettingRepositoryProtocol.swift in Sources */,
+				AF2F631922F5A11F00B702FD /* ImportTokenContractor.swift in Sources */,
+				AF2F631A22F5A11F00B702FD /* CardRealmRepsitory.swift in Sources */,
+				AF2F631B22F5A11F00B702FD /* SettingAuthenticationDefinitionContractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF51CB24222BF07C003051D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2254,6 +2803,7 @@
 				AF51CB37222BF07C003051D7 /* AuthenticationPasswordPresenter.swift in Sources */,
 				AF51CB38222BF07C003051D7 /* SecCertificateToData.swift in Sources */,
 				AF51CB39222BF07C003051D7 /* Token.swift in Sources */,
+				AF54E4D422F5B3C300F0AB5E /* CoreTelephonyHelper.swift in Sources */,
 				AF51CB3A222BF07C003051D7 /* CardCellXibView.swift in Sources */,
 				AF51CB3B222BF07C003051D7 /* CardPagerViewAdapter.swift in Sources */,
 				AF51CB3C222BF07C003051D7 /* AuthenticationDefinitionPatternpresenter.swift in Sources */,
@@ -2266,6 +2816,7 @@
 				AF51CB42222BF07C003051D7 /* AuthenticationRealmRepository.swift in Sources */,
 				AF51CB43222BF07C003051D7 /* PasswordValidator.swift in Sources */,
 				AF2420CD228D2FB0003D464E /* Logger.swift in Sources */,
+				AF54E4D022F5B32E00F0AB5E /* ForceColoseAlertExtention.swift in Sources */,
 				AF51CB44222BF07C003051D7 /* Repository.swift in Sources */,
 				AF51CB45222BF07C003051D7 /* EditCardNameAlertViewController.swift in Sources */,
 				AF51CB46222BF07C003051D7 /* MainViewController.swift in Sources */,
@@ -2370,6 +2921,7 @@
 				AF463BCE218AD11900DC8A3E /* User.swift in Sources */,
 				AF2D71EF22DF14F80087B9C9 /* OTPEyeSettingTableViewCell.swift in Sources */,
 				AC2676B421B40B8B00524636 /* ActionSheetController.swift in Sources */,
+				AF54E4CF22F5B32E00F0AB5E /* ForceColoseAlertExtention.swift in Sources */,
 				AFE81B3B2196E11A00AA0AF2 /* UnsupportedOperationException.swift in Sources */,
 				AC46F6C02225651400BF611A /* HalfColorLabel.swift in Sources */,
 				AFE81B302196DD2E00AA0AF2 /* AuthenticationRepositoryProtocol.swift in Sources */,
@@ -2400,6 +2952,7 @@
 				AFE81B312196DD2E00AA0AF2 /* AuthenticationRealmRepository.swift in Sources */,
 				AFE81B182196D2AE00AA0AF2 /* PasswordValidator.swift in Sources */,
 				AF2420C8228D2C34003D464E /* Logger.swift in Sources */,
+				AF54E4D322F5B3C300F0AB5E /* CoreTelephonyHelper.swift in Sources */,
 				AFE81B362196E05900AA0AF2 /* Repository.swift in Sources */,
 				AC54CFA2221AFC38009BF03B /* EditCardNameAlertViewController.swift in Sources */,
 				ACAAD85021AC2BCA007266F4 /* MainViewController.swift in Sources */,
@@ -2794,6 +3347,114 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AF2F635322F5A11F00B702FD /* DebugCarreneDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB70489CBD0A4C1E49F37448 /* Pods-Common-MobileTokenAppStore.debugcarrenedev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-appstore.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.appstore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz App Store";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = DebugCarreneDev;
+		};
+		AF2F635422F5A11F00B702FD /* DebugISCOP */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A7F4D412AC6F041D6A2DAB /* Pods-Common-MobileTokenAppStore.debugiscop.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken.debug;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-appstore.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.appstore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz App Store";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = DebugISCOP;
+		};
+		AF2F635522F5A11F00B702FD /* ReleaseCarreneDev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0270E2FAA6B3674DB62CB2A /* Pods-Common-MobileTokenAppStore.releasecarrenedev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-appstore.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.appstore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz App Store";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = ReleaseCarreneDev;
+		};
+		AF2F635622F5A11F00B702FD /* ReleaseISCOP */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9702E182D0D82FE47DF94EE2 /* Pods-Common-MobileTokenAppStore.releaseiscop.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_IDENTIFIER_SUFFIX = ir.ba24.mobiletoken;
+				CODE_SIGN_ENTITLEMENTS = MobileToken/MobileToken.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E8R89PF79F;
+				INFOPLIST_FILE = "MobileToken/Info-appstore.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ir.ba24.mobiletoken.appstore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Raaz App Store";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WEB_SERVICE_HOST = raaz.isc.co.ir;
+				WEB_SERVICE_PORT = 443;
+			};
+			name = ReleaseISCOP;
+		};
 		AF51CBD3222BF07C003051D7 /* DebugCarreneDev */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C72B1136ABDEF0040C34202C /* Pods-Common-MobileTokenDebug.debugcarrenedev.xcconfig */;
@@ -3443,6 +4104,17 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF2F635222F5A11F00B702FD /* Build configuration list for PBXNativeTarget "MobileTokenAppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF2F635322F5A11F00B702FD /* DebugCarreneDev */,
+				AF2F635422F5A11F00B702FD /* DebugISCOP */,
+				AF2F635522F5A11F00B702FD /* ReleaseCarreneDev */,
+				AF2F635622F5A11F00B702FD /* ReleaseISCOP */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ReleaseCarreneDev;
+		};
 		AF51CBD2222BF07C003051D7 /* Build configuration list for PBXNativeTarget "MobileTokenDebug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -135,3 +135,8 @@
 "everywhere_fail" = "Failed";
 
 "remainingـopportunities" = "remaining opportunities";
+
+
+"alert_close_sim" = "اپلیکیشن به دلیل تغییر زبان باید بسته شود، لطفاً مجدداً اپلیکیشن را باز کنید.";
+"alert_close" = "هشدار";
+"alert_close_ok" = "متوجه شدم";
