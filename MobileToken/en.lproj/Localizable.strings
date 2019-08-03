@@ -85,7 +85,7 @@
 "alert_delete_second_token" = "Delete second token";
 "alert_root_message"="Unfortunately you can not use this application";
 "alert_force_close" = "Application will be closed for changes. Please run it again.";
-"alert_show_otp_risk" = "Are you sure";
+"alert_show_otp_risk" = "Are you sure you want to showing passwords?";
 
 //intro
 "intro1Title" = "Enter phone number";

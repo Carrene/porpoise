@@ -28,33 +28,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="55.666666666666664"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-aV-gt8" userLabel="labelType">
-                                <rect key="frame" x="30" y="28" width="0.0" height="0.0"/>
+                                <rect key="frame" x="367" y="28" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                                 <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-reset" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-sn-6jc" userLabel="imageTimer">
+                                <rect key="frame" x="15" y="13" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6WB-af-n6e"/>
+                                    <constraint firstAttribute="height" constant="30" id="I5s-mo-RXL"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw8-dp-cRT" userLabel="labelTitle">
-                                <rect key="frame" x="179" y="15" width="151" height="26"/>
+                                <rect key="frame" x="55" y="15" width="151" height="26"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="16"/>
                                 <color key="textColor" name="buttonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-reset" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-sn-6jc" userLabel="imageTimer">
-                                <rect key="frame" x="340" y="18" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="6WB-af-n6e"/>
-                                    <constraint firstAttribute="height" constant="20" id="I5s-mo-RXL"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="DUg-sn-6jc" firstAttribute="left" secondItem="Xw8-dp-cRT" secondAttribute="right" constant="10" id="3dR-LZ-Qwv"/>
+                            <constraint firstAttribute="trailing" secondItem="gtq-aV-gt8" secondAttribute="trailing" constant="8" id="0AB-0x-Tuy"/>
                             <constraint firstItem="DUg-sn-6jc" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="5dN-tU-va5"/>
-                            <constraint firstItem="gtq-aV-gt8" firstAttribute="left" secondItem="xFT-nP-W5v" secondAttribute="left" constant="30" id="EqE-pg-0jt"/>
+                            <constraint firstItem="Xw8-dp-cRT" firstAttribute="leading" secondItem="DUg-sn-6jc" secondAttribute="trailing" constant="10" id="8iT-Vx-6n7"/>
+                            <constraint firstItem="DUg-sn-6jc" firstAttribute="leading" secondItem="xFT-nP-W5v" secondAttribute="leading" constant="15" id="ZE2-Hn-WP9"/>
                             <constraint firstItem="gtq-aV-gt8" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="bgO-ga-t0d"/>
                             <constraint firstItem="Xw8-dp-cRT" firstAttribute="centerY" secondItem="xFT-nP-W5v" secondAttribute="centerY" id="jLa-ki-ErD"/>
-                            <constraint firstAttribute="right" secondItem="DUg-sn-6jc" secondAttribute="right" constant="15" id="o4i-2j-KmT"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -72,6 +72,7 @@
                 <outlet property="labelTitle" destination="Xw8-dp-cRT" id="kQJ-WI-qIr"/>
                 <outlet property="labelType" destination="gtq-aV-gt8" id="Gna-Ul-jQr"/>
             </connections>
+            <point key="canvasLocation" x="35.507246376811594" y="41.576086956521742"/>
         </tableViewCell>
     </objects>
     <resources>
